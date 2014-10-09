@@ -1,6 +1,6 @@
 
 import unittest
-import json
+import density
 
 
 class TestingTemplate(unittest.TestCase):
@@ -8,7 +8,7 @@ class TestingTemplate(unittest.TestCase):
     @classmethod
     def setUpClass(self):
         """ Instantiates a test instance of the app before each test """
-        self.app = data.app.test_client()
+        self.app = density.app.test_client()
         # TODO: any db standardization
 
     @classmethod
@@ -16,4 +16,3 @@ class TestingTemplate(unittest.TestCase):
         """ clean up databases """
         # TODO: any db sanitization
         pass
-

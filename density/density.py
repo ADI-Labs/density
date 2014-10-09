@@ -1,5 +1,5 @@
 
-from flask import Flask, g, request
+from flask import Flask, g
 app = Flask(__name__)
 # do import early to check that all env variables are present
 app.config.from_object('config.flask_config')
@@ -8,7 +8,6 @@ app.config.from_object('config.flask_config')
 import psycopg2
 import psycopg2.pool
 import psycopg2.extras
-from os import environ
 from datetime import datetime
 
 

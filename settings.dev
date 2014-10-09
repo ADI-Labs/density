@@ -1,0 +1,28 @@
+#!bin/sh
+
+# flask
+export PORT=5000
+export HOST=0.0.0.0
+export DEBUG=TRUE
+export SECRET_KEY=abc123   # don't share production secret
+
+
+# Postgres connection
+export PG_HOST=localhost
+export PG_PORT=5432
+export PG_USER=adi
+export PG_PASSWORD=adi
+export PG_DB=data2
+export PG_PAGE_LIMIT=250
+export PG_DEFAULT=20
+export RATE_LIMIT=200   # 60 minute window
+
+# Redis connection
+export REDIS_HOST=localhost
+export REDIS_PORT=6379
+export REDIS_DB=1
+
+# Google credentials
+export GOOGLE_CLIENT_ID=client_id_here
+export GOOGLE_CLIENT_SECRET=client_secret_here
+export REDIRECT_URI=authorized

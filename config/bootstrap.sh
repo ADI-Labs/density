@@ -5,42 +5,39 @@ install () {
     package=$1
     dpkg-query -l $package &> /dev/null
     if [ $? -ne 0 ]; then
-        apt-get -y install $package 
+        apt-get -y install $package
     fi
 }
+
+apt-get update
 
 # install git
 install git-core
 install git
 
 
-# install python
-install python
-install python-pip
-install python-dev
-install python-software-properties
-install libpq-dev
-pip install flake8  # for local testing
-pip install -r /vagrant/config/requirements.txt
-
-
 # install postgres
 install postgresql
-sudo -u postgres psql -c "create schema public;"
 # TODO: setup database and insert any data that is necessary
 
 
-# install redis
-install redis-server
-# TODO: necessary setups for dev with Redis
+# install python
+apt-get install -y python \
+    python-pip \
+    python-dev \
+    python-software-properties \
+    libpq-dev
+apt-get update
+pip install -r /vagrant/config/requirements.txt
+pip install flake8  # for local testing
 
 
 # install vim
 install vim
 
 
-# set up supervisord
-install supervisord
+# set up supervisor
+install supervisor
 
 
 if [ ! -a /etc/supervisor/conf.d/data.conf ]; then

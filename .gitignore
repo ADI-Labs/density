@@ -20,8 +20,8 @@ include
 share
 lib/python2.7
 
-!config/settings.example
 config/settings.*
+!config/settings.dev
 
 bin/activate*
 bin/easy_install*
