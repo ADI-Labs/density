@@ -54,5 +54,7 @@ TODO
 ```
 
 # List of Developers
-Brian Zeng
-Sungwoo Bae
+
+- Brian Zeng
+- David Hao
+- Sungwoo Bae
