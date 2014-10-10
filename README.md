@@ -53,4 +53,5 @@ TODO
     |-- tests/      (unittest scripts that should be used during development)
 ```
 
-
+# List of Developers
+Brian Zeng
