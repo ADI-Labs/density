@@ -1,5 +1,5 @@
 
-[![Build Status](https://travis-ci.org/adicu/density.png?branch=travis)](https://travis-ci.org/adicu/data.adicu.com)
+[![Build Status](https://travis-ci.org/adicu/density.png?branch=travis)](https://travis-ci.org/adicu/density)
 
 Density
 ---
