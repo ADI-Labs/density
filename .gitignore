@@ -10,7 +10,9 @@ lib-cov
 *.pyc
 *.swp
 .DS_Store
+
 .vagrant
+.idea
 
 .Python
 pids
