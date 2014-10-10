@@ -1,0 +1,42 @@
+language: python
+
+python:
+    - "2.7"
+
+env:
+  global:
+    # general settings
+    - PORT=5000
+    - HOST=0.0.0.0
+    - DEBUG=TRUE
+    - SECRET_KEY=abc123
+    - TESTING=TRUE
+
+    # postgres settings
+    - PG_HOST=127.0.0.1
+    - PG_PORT=5432
+    - PG_USER=adi
+    - PG_PASSWORD=adi
+    - PG_DB=data2
+    - PG_PAGE_LIMIT=250
+    - PG_DEFAULT=20
+    - RATE_LIMIT=200
+
+install:
+    - pip install -r config/requirements.txt
+    - pip install flake8
+
+services:
+    - postgresql
+
+before_script:
+    - echo 'testing'
+    # setup dev database
+
+script:
+    - flake8 density/density.py
+    - flake8 density/tests
+    - cd density && nosetests -sv tests/
+
+notifications:
+      slack: adi-labs:tCeqXPsLSyIFe3yjfWfKLRYg
