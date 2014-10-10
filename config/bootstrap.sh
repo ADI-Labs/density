@@ -18,8 +18,35 @@ install git
 
 # install postgres
 install postgresql
-# TODO: setup database and insert any data that is necessary
 
+# check if user adicu has been created
+echo Check for adicu database user
+echo \\dg | sudo -u postgres psql | grep adicu
+if [ 0 -ne $? ]; then
+    cat | sudo -u postgres psql <<EOF
+CREATE USER adicu with password 'adicu';
+EOF
+fi
+
+echo
+
+# check if database has been created
+echo Check for density database
+echo \\l | sudo -u postgres psql | grep density
+if [ 0 -ne $? ]; then
+    cat | sudo -u postgres psql <<EOF
+CREATE DATABASE density WITH
+OWNER adicu
+ENCODING 'UTF-8'
+LC_CTYPE 'en_US.utf8'
+LC_COLLATE 'en_US.utf8'
+TEMPLATE template0;
+-- Create the schema
+\c density
+CREATE SCHEMA schema;
+ALTER SCHEMA schema OWNER TO adicu;
+EOF
+fi
 
 # install python
 apt-get install -y python \
