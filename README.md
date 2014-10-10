@@ -54,4 +54,5 @@ TODO
 ```
 
 # List of Developers
-Brian Zeng
+- Brian Zeng
+- David Hao
