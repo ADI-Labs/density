@@ -1,5 +1,5 @@
 
-from flask import Flask, g
+from flask import Flask, g, render_template
 app = Flask(__name__)
 # do import early to check that all env variables are present
 app.config.from_object('config.flask_config')
@@ -49,8 +49,20 @@ def log_outcome(resp):
 
 @app.route('/')
 def home():
-    with open('static/index.html') as f:
-        return f.read()
+    return render_template('index.html')
+
+
+@app.route('/docs')
+def docs():
+    return render_template('docs.html')
+
+
+@app.route('/auth')
+def auth():
+    # TODO: Authenticate user and return page based on whether authentication
+    # was successful
+    return render_template('auth.html')
+
 
 if __name__ == '__main__':
     app.run(host=app.config['HOST'])
