@@ -91,10 +91,10 @@ aggregate views
 ```
 // data returned in ordered lists of objects, example below
 {
-"start_time": "some time",
-"average": 10,
-"minimum": 0,
-"maximum": 100,
+  "start_time": "some time",
+  "average": 10,
+  "minimum": 0,
+  "maximum": 100,
 }
 ```
 
@@ -121,13 +121,15 @@ Flask allows simple monkey patching of [Gevent](http://www.gevent.org/) for perf
 
 #### Database
 
-Due to the reliance on materialized views for the aggregate endpoint a modern RDBMS will suite the workload well.
-Many ADI members have experience with Postgres so it will be used.
+All queries returning stats for windows of time are expensive as they must find aggregates for a large section of the data.
+By using a relational database, we can leverage [materialized views](http://en.wikipedia.org/wiki/Materialized_view) to minimize repeated work to find these aggregates.
+Postgres has [materialized views](https://wiki.postgresql.org/wiki/Materialized_Views) and many ADI members have experience so it will be used.
 
 #### Authentication
 
 The data is given to us with the understanding that we will only allow access to users with a Columbia UNI.
 This can be easily accomplished with Google Oauth and a check for "@columbia.edu" / "@barnard.edu" ending the address.
+This will be implemented using a [Google+ OAuth](https://developers.google.com/+/web/signin/) flow.
 
 
 
@@ -149,7 +151,7 @@ An added benefit of building clients is that we can implement the caching for th
 #### Streaming
 
 A streaming endpoint would emit fresh data every time it is acquired.
-This data would reflect the same data found in /latest.
+This data would reflect the same data found in `/latest`.
 Equivalent functionality could easily be implemented in client libraries.
 
 Flask comes with streaming functionality built in (http://flask.pocoo.org/docs/0.10/patterns/streaming/).
