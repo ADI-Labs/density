@@ -4,7 +4,7 @@
 Density
 ---
 
-Density is a project to provide easy acess to the Wireless Density data from Columbia.
+Density is a project to provide easy access to the Wireless Density data from Columbia.
 For more details on the project, please view the [spec](SPEC.md).
 
 

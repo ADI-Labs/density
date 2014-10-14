@@ -71,18 +71,18 @@ The average/minimum/maximum will be calculated from the 15 minute windows.
 
 latest data
 
-- /latest
+- `/latest`
   - latest dump of data for all endpoints
-- /latest/group/< group >
+- `/latest/group/< group >`
   - latest dump of data for the specified group
-- /latest/building/< building >
+- `/latest/building/< building >`
   - latest dump of data for the specified building
 
 data from exact window
 
-- /day/< day >/group/< group >
+- `/day/< day >/group/< group >`
   - specify syntax for a day, get all info for that day
-- /day/< day >/building/< building >
+- `/day/< day >/building/< building >`
   - specify syntax for a day, get all info for that building
 
 
@@ -98,9 +98,9 @@ aggregate views
 }
 ```
 
-- /window/< time >/group/< group >
+- `/window/< time >/group/< group >`
   - list of objects for a group split by the specified time delimiter
-- /window/< time >/building/< building >
+- `/window/< time >/building/< building >`
   - list of objects for a building split by the specified time delimiter
 
 
@@ -115,8 +115,8 @@ aggregate views
 
 #### Language
 
-For ease of development we will use Python with the Flask framework.
-Flask allows simple monkey patching of Gevent for performance.
+For ease of development we will use Python with the [Flask framework](http://flask.pocoo.org/).
+Flask allows simple monkey patching of [Gevent](http://www.gevent.org/) for performance.
 
 
 #### Database
