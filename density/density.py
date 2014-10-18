@@ -52,5 +52,93 @@ def home():
     with open('static/index.html') as f:
         return f.read()
 
+
+@app.route('/latest')
+def get_latest_data():
+    """
+    Gets latest dump of data for all endpoints.
+
+    :return: Latest JSON
+    :rtype: flask.Response (assuming we end up using jsonify or something)
+    """
+    return "latest data"
+
+
+@app.route('/latest/group/<group_id>')
+def get_latest_group_data(group_id):
+    """
+    Gets latest dump of data for the specified group.
+
+    :param int group_id: id of the group requested
+    :return: Latest JSON corresponding to the requested group
+    :rtype: flask.Response (assuming we end up using jsonify or something)
+    """
+    return group_id
+
+
+@app.route('/latest/building/<building_id>')
+def get_latest_building_data(building_id):
+    """
+    Gets latest dump of data for the specified building.
+
+    :param int building_id: id of the building requested
+    :return: Latest JSON corresponding to the requested building
+    :rtype: flask.Response (assuming we end up using jsonify or something)
+    """
+    return building_id
+
+
+@app.route('/day/<day>/group/<group_id>')
+def get_day_group_data(day, group_id):
+    """
+    Gets specified group data for specified day
+
+    :param str day: the day requested in ET format YYYY-MM-DD
+    :param int group_id: id of the group requested
+    :return: JSON corresponding to the requested day and group
+    :rtype: flask.Response (assuming we end up using jsonify or something)
+    """
+    return day + " " + group_id
+
+
+@app.route('/day/<day>/building/<building_id>')
+def get_day_building_data(day, building_id):
+    """
+    Gets specified building data for specified day
+
+    :param str day: the day requested in ET format YYYY-MM-DD
+    :param int building_id: id of the building requested
+    :return: JSON corresponding to the requested day and building
+    :rtype: flask.Response (assuming we end up using jsonify or something)
+    """
+    return day + " " + building_id
+
+
+@app.route('/window/<time>/group/<group_id>')
+def get_time_group_data(time, group_id):
+    """
+    Gets specified group data split by the specified time delimiter
+
+    :param str time: ? (TODO : need to specify time format)
+    :param int group_id: id of the group requested
+    :return: JSON corresponding to the requested time and group
+    :rtype: flask.Response (assuming we end up using jsonify or something)
+    """
+    return time + " " + group_id
+
+
+@app.route('/window/<time>/building/<building_id>')
+def get_time_building_data(time, building_id):
+    """
+    Gets specified building data split by the specified time delimiter
+
+    :param str time: ? (TODO : need to specify time format)
+    :param int building_id: id of the building requested
+    :return: JSON corresponding to the requested time and building
+    :rtype: flask.Response (assuming we end up using jsonify or something)
+    """
+    return time + " " + building_id
+
+
 if __name__ == '__main__':
     app.run(host=app.config['HOST'])
