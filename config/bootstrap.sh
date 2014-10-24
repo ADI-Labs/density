@@ -18,8 +18,7 @@ install git
 
 # install postgres
 install postgresql
-# TODO: setup database and insert any data that is necessary
-
+sudo -u postgres psql -f /vagrant/scripts/database.sql
 
 # install python
 apt-get install -y python \
