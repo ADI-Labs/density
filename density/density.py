@@ -1,5 +1,6 @@
 
 from flask import Flask, g
+
 app = Flask(__name__)
 # do import early to check that all env variables are present
 app.config.from_object('config.flask_config')
@@ -9,6 +10,8 @@ import psycopg2
 import psycopg2.pool
 import psycopg2.extras
 from datetime import datetime
+
+import db
 
 
 # create a pool of postgres connections
@@ -43,7 +46,6 @@ def log_outcome(resp):
     # return db connections first
     return_connections()
     # TODO: log the request and its outcome
-
     return resp
 
 
@@ -51,6 +53,7 @@ def log_outcome(resp):
 def home():
     with open('static/index.html') as f:
         return f.read()
+
 
 if __name__ == '__main__':
     app.run(host=app.config['HOST'])
