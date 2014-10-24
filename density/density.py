@@ -1,5 +1,5 @@
+from flask import Flask, g, jsonify
 
-from flask import Flask, g
 app = Flask(__name__)
 # do import early to check that all env variables are present
 app.config.from_object('config.flask_config')
@@ -9,7 +9,6 @@ import psycopg2
 import psycopg2.pool
 import psycopg2.extras
 from datetime import datetime
-
 
 # create a pool of postgres connections
 pg_pool = psycopg2.pool.SimpleConnectionPool(
@@ -61,7 +60,21 @@ def get_latest_data():
     :return: Latest JSON
     :rtype: flask.Response (assuming we end up using jsonify or something)
     """
-    return "latest data"
+
+    # create fakeData for testing
+    # dump_time type is in str for now
+    fakeData = [{"dump_time": "9999-12-31 23:59:59", "group_id": 152,
+                 "group_name": "Lerner 3", "parent_id": "84",
+                 "parent_name": "Lerner", "client_count": "70"},
+                {"dump_time": "9999-12-31 23:59:59", "group_id": 131,
+                 "group_name": "Butler Library 3", "parent_id": 103,
+                 "parent_name": "Butler", "client_count": 328}]
+
+    # jsonify doesn't let you convert a list of dict into json.
+    # adding something = data solves it.
+    # Another solution would be using json.dump() and adding the
+    # application/json header and then returning  response(json.dump(data))
+    return jsonify(results=fakeData)
 
 
 @app.route('/latest/group/<group_id>')
