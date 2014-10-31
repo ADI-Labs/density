@@ -58,23 +58,24 @@ def get_latest_data():
     Gets latest dump of data for all endpoints.
 
     :return: Latest JSON
-    :rtype: flask.Response (assuming we end up using jsonify or something)
+    :rtype: flask.Response
     """
 
     # create fakeData for testing
-    # dump_time type is in str for now
-    fakeData = [{"dump_time": "9999-12-31 23:59:59", "group_id": 152,
-                 "group_name": "Lerner 3", "parent_id": "84",
-                 "parent_name": "Lerner", "client_count": "70"},
-                {"dump_time": "9999-12-31 23:59:59", "group_id": 131,
-                 "group_name": "Butler Library 3", "parent_id": 103,
-                 "parent_name": "Butler", "client_count": 328}]
+    fakeData = [{"dump_time": "9999-12-31 23:59:59",
+                 "group_id": 152,
+                 "group_name": "Lerner 3",
+                 "parent_id": "84",
+                 "parent_name": "Lerner",
+                 "client_count": "70"},
+                {"dump_time": '0000-01-01 00:00:00',
+                 "group_id": 131,
+                 "group_name": "Butler Library 3",
+                 "parent_id": 103,
+                 "parent_name": "Butler",
+                 "client_count": 328}]
 
-    # jsonify doesn't let you convert a list of dict into json.
-    # adding something = data solves it.
-    # Another solution would be using json.dump() and adding the
-    # application/json header and then returning  response(json.dump(data))
-    return jsonify(results=fakeData)
+    return jsonify(data=fakeData)
 
 
 @app.route('/latest/group/<group_id>')
@@ -84,7 +85,7 @@ def get_latest_group_data(group_id):
 
     :param int group_id: id of the group requested
     :return: Latest JSON corresponding to the requested group
-    :rtype: flask.Response (assuming we end up using jsonify or something)
+    :rtype: flask.Response
     """
     return group_id
 
@@ -96,7 +97,7 @@ def get_latest_building_data(building_id):
 
     :param int building_id: id of the building requested
     :return: Latest JSON corresponding to the requested building
-    :rtype: flask.Response (assuming we end up using jsonify or something)
+    :rtype: flask.Response
     """
     return building_id
 
@@ -109,7 +110,7 @@ def get_day_group_data(day, group_id):
     :param str day: the day requested in ET format YYYY-MM-DD
     :param int group_id: id of the group requested
     :return: JSON corresponding to the requested day and group
-    :rtype: flask.Response (assuming we end up using jsonify or something)
+    :rtype: flask.Response
     """
     return day + " " + group_id
 
@@ -122,35 +123,37 @@ def get_day_building_data(day, building_id):
     :param str day: the day requested in ET format YYYY-MM-DD
     :param int building_id: id of the building requested
     :return: JSON corresponding to the requested day and building
-    :rtype: flask.Response (assuming we end up using jsonify or something)
+    :rtype: flask.Response
     """
     return day + " " + building_id
 
 
-@app.route('/window/<time>/group/<group_id>')
-def get_time_group_data(time, group_id):
+@app.route('/window/<start_time>/<end_time>/group/<group_id>')
+def get_window_group_data(start_time, end_time, group_id):
     """
-    Gets specified group data split by the specified time delimiter
+    Gets specified group data split by the specified time delimiter.
 
-    :param str time: ? (TODO : need to specify time format)
+    :param str start_time: start time in ET format YYYY-MM-DDThh:mm
+    :param str end_time: end time in ET format YYYY-MM-DDThh:mm
     :param int group_id: id of the group requested
-    :return: JSON corresponding to the requested time and group
-    :rtype: flask.Response (assuming we end up using jsonify or something)
+    :return: JSON corresponding to the requested window and group
+    :rtype: flask.Response
     """
-    return time + " " + group_id
+    return start_time + " " + end_time + " " + group_id
 
 
-@app.route('/window/<time>/building/<building_id>')
-def get_time_building_data(time, building_id):
+@app.route('/window/<start_time>/<end_time>/building/<building_id>')
+def get_window_building_data(start_time, end_time, building_id):
     """
-    Gets specified building data split by the specified time delimiter
+    Gets specified building data split by the specified time delimiter.
 
-    :param str time: ? (TODO : need to specify time format)
+    :param str start_time: start time in ET format YYYY-MM-DDThh:mm
+    :param str end_time: end time in ET format YYYY-MM-DDThh:mm
     :param int building_id: id of the building requested
-    :return: JSON corresponding to the requested time and building
-    :rtype: flask.Response (assuming we end up using jsonify or something)
+    :return: JSON corresponding to the requested window and building
+    :rtype: flask.Response
     """
-    return time + " " + building_id
+    return start_time + " " + end_time + " " + building_id
 
 
 if __name__ == '__main__':
