@@ -10,10 +10,7 @@ import psycopg2.pool
 import psycopg2.extras
 from datetime import datetime
 
-<<<<<<< HEAD
-=======
 
->>>>>>> Created db module and get_latest_data function
 # create a pool of postgres connections
 pg_pool = psycopg2.pool.SimpleConnectionPool(
     5,      # min connections
