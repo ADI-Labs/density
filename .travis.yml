@@ -40,3 +40,5 @@ script:
 
 notifications:
       slack: adi-labs:tCeqXPsLSyIFe3yjfWfKLRYg
+      on_success: never
+      on_failure: change
