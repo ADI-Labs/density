@@ -31,3 +31,4 @@ bin/pip*
 bin/python*
 local
 
+scripts/density_dump.sql
