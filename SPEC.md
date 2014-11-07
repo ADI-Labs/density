@@ -57,17 +57,74 @@ The details of this implementation are very flexible.
 In the proposed endpoints:
 
 - `group` refers to a group of endpoints i.e. "Lerner 3".
+  - this is specified using the ID number.
 - `building` refers to the aggregate of group of endpoints with the same parent_id i.e. 103 for Butler
-- `time` refers to a time window i.e. hour / day / week / month
-
-TODO: clarify if `group` and `building` are significed by id number or by name.
+  - this is specified using the ID number.
+- `time_window` refers to a time window
+  - options: [ hour , day , week , month ]
 
 
 All endpoints involving a time delimiter will include total, average, minimum and maximum values as well as the start time for each window.
 The average/minimum/maximum will be calculated from the 15 minute windows.
 
 
-#### Endpoints:
+All data from ranges wil be returned from newest to oldest data.
+
+
+
+### Response Format:
+
+
+
+
+
+#### Individual Queries
+
+
+```
+{
+  "time": "2014-02-28T15:15:00",
+  "group_id": "butler-3",
+  "count": 58
+}
+```
+
+
+#### Ranged Queries
+
+Keys:
+
+- `next_start_time`: The value to use in the next query's parameter of `start_time`
+- `< ID >`: (`groupID` or `buildingID`) refers to the group or building that is being queried.
+- `count`: the number of results in the array
+- `results`: holds the list of results
+
+
+```
+{
+  "next_start_time: "2014-02-28"
+  "< ID >": "butler-3",
+  "count": 100,
+  "results": [
+    {
+      "start_time": "2014-03-28",
+      "average": 10,
+      "minimum": 0,
+      "maximum": 100
+    },
+    {
+      "start_time": "2014-03-27",
+      "average": 10,
+      "minimum": 0,
+      "maximum": 100
+    },
+    ....
+  ]
+}
+```
+
+
+### Endpoints:
 
 latest data
 
@@ -78,6 +135,7 @@ latest data
 - `/latest/building/< building >`
   - latest dump of data for the specified building
 
+
 data from exact window
 
 - `/day/< day >/group/< group >`
@@ -86,28 +144,23 @@ data from exact window
   - specify syntax for a day, get all info for that building
 
 
+range
+
+- `/range/< start_time >/< start_time >/group/< group >`
+- `/range/< start_time >/< start_time >/building/< group >`
+
+
 aggregate views
 
-```
-// data returned in ordered lists of objects, example below
-{
-  "start_time": "some time",
-  "average": 10,
-  "minimum": 0,
-  "maximum": 100,
-}
-```
 
-- `/window/< time >/group/< group >`
+- `/window/< time_window >/group/< group >`
   - list of objects for a group split by the specified time delimiter
-- `/window/< time >/building/< building >`
+  - query parameters:
+    - `start_time`: ISO 8601 start time
+- `/window/< time_window >/building/< building >`
   - list of objects for a building split by the specified time delimiter
-
-
-
-
-
-
+  - query parameters:
+    - `start_time`: ISO 8601 start time
 
 
 
