@@ -10,6 +10,7 @@ import psycopg2.pool
 import psycopg2.extras
 from datetime import datetime
 
+
 # create a pool of postgres connections
 pg_pool = psycopg2.pool.SimpleConnectionPool(
     5,      # min connections
