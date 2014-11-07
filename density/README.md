@@ -15,12 +15,13 @@ This is the executable file for the project.
 - Inputs
   - group_id
     - The numerical ID of the router group.
-    - **TODO**: Figure out how to give group id's to users.
+    - A table of id's will be given to the user when a bad id is provided.
   - building_id
     - The numerical ID of the building.
-    - **TODO**: Figure out how to give id's to users
+    - A table of id's will be given to the user when a bad id is provided.
   - day
-    - **TODO**: Figure out the format of the date (Currently using ISO 8601)
+    - Use ISO 8601 formatting!
+    - http://en.wikipedia.org/wiki/ISO_8601
   - time
     - **TODO**: Figure out the format of the time range
 - Outputs
@@ -30,9 +31,9 @@ This is the executable file for the project.
 - Latest Data
   - **/latest**
     - Returns the most recent data.
-  - **/latest/group/&lt;group_id&gt;**
+  - **/latest/group/\<group_id\>**
     - Returns the most recent data for the specified group.
-  - **/latest/building/&lt;building_id&gt;**
+  - **/latest/building/\<building_id\>**
     - Returns the most recent data for the speciifed building.
   - **Return Format**
     - Dictionary with router group ID as the key.
@@ -58,9 +59,9 @@ This is the executable file for the project.
     ```
 
 - Day Aggregate
-  - **/day/&lt;day&gt;/group/&lt;group_id&gt;**
+  - **/day/\<day\>/group/\<group_id\>**
     - Returns the aggregate data for the specified day and group.
-  - **/day/&lt;day&gt;/building/&lt;building_id&gt;**
+  - **/day/\<day\>/building/\<building_id\<**
     - Returns the aggregate data for the specified day and building.
   - **Return Format (TENTATIVE)**
     - start_time - The start of the time frame.
@@ -77,9 +78,9 @@ This is the executable file for the project.
     ```
 
 - Custom Time Frame Aggregate
-  - **/window/&lt;time&gt;/group/&lt;group_id&gt;**
+  - **/window/\<time\>/group/\<group_id\>**
     - Returns the aggregate data for the specified time range and group.
-  - **/window/&lt;time&gt;/building/&lt;building_id&gt;**
+  - **/window/\<time\>/building/\<building_id\>**
     - Returns the aggregate data for the specified time range and building.
   - **Return Format**
     - See Day Aggregate
