@@ -15,10 +15,19 @@ apt-get update
 install git-core
 install git
 
+# install postgresql-9.3
+PG_REPO_APT_SOURCE=/etc/apt/sources.list.d/pgdg.list
+if [ ! -f "$PG_REPO_APT_SOURCE" ]
+then
+    echo "deb http://apt.postgresql.org/pub/repos/apt/ precise-pgdg main" > "$PG_REPO_APT_SOURCE"
+    wget --quiet -O - http://apt.postgresql.org/pub/repos/apt/ACCC4CF8.asc | apt-key add -
+    apt-get update
+fi
 
-# install postgres
-install postgresql
-sudo -u postgres psql -f /vagrant/scripts/database.sql
+apt-get -y install postgresql-9.3
+
+# ADD DENSITY_DUMP.SQL AT THIS LOCATION.
+sudo -u postgres psql < /vagrant/scripts/density_dump.sql
 
 # install python
 apt-get install -y python \
