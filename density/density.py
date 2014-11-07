@@ -42,7 +42,6 @@ def log_outcome(resp):
     # return db connections first
     return_connections()
     # TODO: log the request and its outcome
-
     return resp
 
 
