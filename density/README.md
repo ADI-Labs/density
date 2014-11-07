@@ -57,6 +57,31 @@ This is the executable file for the project.
       }
     }
     ```
+- Ranged Data
+  - **/range/\<start_time\>/\<end_time\>/group/\<group_id\>**
+    - Returns the data points within the specified range of times for the group.
+  - **/range/\<start_time\>/\<end_time\>/building/\<building_id\>**
+    - Returns the data points within the specified range of times for the building.
+  - ** Return Format **
+    - next_start_time - The next time (for pagination)
+    - < ID > - the building or group ID
+    - count - number of data points
+    ```
+    {
+      "next_start_time": "2014-10-27",
+      "< ID >": 152,
+      "count": 100,
+      "results": [
+        {
+          "start_time": "2014-10-20",
+          "average": 10,
+          "minimum": 0,
+          "maximum": 100
+        },
+        ...
+      ]
+    }
+    ```
 
 - Day Aggregate
   - **/day/\<day\>/group/\<group_id\>**
