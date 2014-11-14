@@ -43,23 +43,4 @@ pip install flake8  # for local testing
 # install vim
 install vim
 
-
-# set up supervisor
-install supervisor
-
-
-if [ ! -a /etc/supervisor/conf.d/data.conf ]; then
-    cat > /etc/supervisor/conf.d/data.conf << EOF
-[program:data]
-directory=/vagrant/
-command=/vagrant/scripts/start_server_supervisor.sh /vagrant/config/settings.dev
-autostart=true
-autorestart=true
-EOF
-fi
-
-service supervisor stop
-sleep 3
-service supervisor start
-
 exit 0
