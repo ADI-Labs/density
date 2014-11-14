@@ -1,0 +1,48 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.navbar {
+    background-color: #A1FFB8;
+    border-radius: 0px;
+
+}
+
+.navbar-default .navbar-brand {
+    color: black;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: black;
+}
+
+.navbar-default .navbar-toggle:focus {
+    background-color: #A1FFB8;
+}
+
+.navbar-default .navbar-toggle:hover {
+    background-color: #61F785;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 970px;
+  }
+}
+
+.main-body {
+    height: auto;
+    min-height: 90%;
+}
+
+.footer {
+    clear: both;
+    position: relative;
+    z-index: 10;
+    height: 3em;
+    margin-top: -3em;
+}

@@ -1,4 +1,4 @@
-from flask import Flask, g, jsonify
+from flask import Flask, g, jsonify, render_template
 
 app = Flask(__name__)
 # do import early to check that all env variables are present
@@ -47,8 +47,19 @@ def log_outcome(resp):
 
 @app.route('/')
 def home():
-    with open('static/index.html') as f:
-        return f.read()
+    return render_template('index.html')
+
+
+@app.route('/docs')
+def docs():
+    return render_template('docs.html')
+
+
+@app.route('/auth')
+def auth():
+    # TODO: Authenticate user and return page based on whether authentication
+    # was successful
+    return render_template('auth.html')
 
 
 @app.route('/latest')

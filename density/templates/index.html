@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block body %}
+<div class="container main-body">
+    <h1>Wireless Density Data for Columbia University</h1>
+    <p>Welcome to Density, an API that gives Columbia developers access to wireless density data.
+        We currently have a feed of data that updates every 15 minutes.
+    </p>
+
+    <h3>Getting access to the API</h3>
+    <p>
+        To use the API, you will need a Columbia or Barnard e-mail address.
+    </p>
+    <button>
+        Get access
+    </button>
+    <h3>How to use the API</h3>
+    <p>
+        Let's say we want to get the all the wireless density data across Columbia in the last 15 minutes.
+        Just use the endpoint: density.com/latest.
+    </p>
+    <p>
+        This will give you JSON containing the latest information in the following format:
+    </p>
+</div>
+{% endblock %}
