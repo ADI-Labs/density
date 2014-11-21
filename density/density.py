@@ -13,7 +13,7 @@ from oauth2client.client import flow_from_clientsecrets
 import httplib2
 import json
 from db import db
-
+import re
 
 # create a pool of postgres connections
 pg_pool = psycopg2.pool.SimpleConnectionPool(
@@ -96,16 +96,19 @@ def auth():
         data = json.loads(content)
         email = data["emails"][0]["value"]
 
-        # Verify that the email is from the Columbia domain.
-        if email.split('@')[1] != 'columbia.edu':
+        # Verify email is valid.
+        regex = re.match("^(?P<uni>[\w_\d]+)@(columbia|barnard)\.edu$", email)
+
+        if not regex:
             return render_template('auth.html',
                                    success=False,
                                    reason="You need to log in with your"
-                                   + "Columbia email! You logged in with: "
+                                   + "Columbia or Barnard email! You logged "
+                                   + "in with: "
                                    + email)
 
         # Get UNI and ask database for code.
-        uni = email.split('@')[0]
+        uni = regex.group('uni')
         code = db.get_oauth_code_for_uni(g.cursor, uni)
         return render_template('auth.html', success=True, uni=uni, code=code)
     except:
