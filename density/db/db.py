@@ -1,4 +1,6 @@
 import psycopg2
+import random
+import string
 
 
 TABLE_NAME = 'density_data'
@@ -120,3 +122,39 @@ def get_window_based_on_parent(cursor, parent_id, start_time, end_time):
     return cursor.fetchall()
 
 
+def get_oauth_code_for_uni(cursor, uni):
+    """
+    :param str uni: UNI
+    :return: code for the user (generates new code if doesn't exist)
+    :rtype: str
+    """
+    # Try getting the code from the database.
+    query = """SELECT * FROM oauth_data
+               WHERE uni=%s;"""
+    cursor.execute(query, [uni])
+    results = cursor.fetchall()
+
+    if results:
+      return results[0]['code']
+    else:
+      # If the code doesn't exist, create a new one and insert into the database.
+      new_code = ''.join(random.choice(string.ascii_uppercase + string.digits) for x in xrange(32))
+      query = """INSERT INTO oauth_data (uni, code) VALUES (%s, %s);"""
+      cursor.execute(query, [uni, new_code])
+      return new_code
+
+
+def get_uni_for_code(cursor, code):
+    """
+    :param str code: oauth code
+    :return: the uni for the user, or None if oauth code doesn't exist
+    :rtype: str
+    """
+    query = """SELECT * FROM oauth_data
+               WHERE code=%s;"""
+    cursor.execute(query, [code])
+    results = cursor.fetchall()
+    if results:
+      return results[0]
+    else:
+      return None
