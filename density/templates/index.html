@@ -29,6 +29,7 @@
 </div>
 <script>
 function login() {
+    // Send params to Google+ API.
     var params = {
         'callback': signinCallback,
         'clientid': '115421531871-jj9kl2nsp4ebjv26ggms597jq7s529b6.apps.googleusercontent.com',
@@ -40,8 +41,7 @@ function login() {
 }
 function signinCallback(authResult) {
     if (authResult['status']['signed_in']) {
-    // Update the app to reflect a signed in user
-    // Hide the sign-in button now that the user is authorized, for example:
+    // Redirect to auth page.
     document.location.href = '/auth?code=' + authResult.code
   }
 }
