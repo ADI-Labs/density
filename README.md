@@ -19,7 +19,6 @@ Once vagrant is installed, you can run `vagrant up`, and vagrant will provision 
 To run the app, follow the these steps:
 
     vagrant ssh
-    sudo service supervisor stop
     cd /vagrant
     source config/settings.dev
     cd density
