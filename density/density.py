@@ -57,11 +57,11 @@ def authorization_required(func):
     def authorization_checker(*args, **kwargs):
         token = request.headers.get('Authorization-Token')
         if not token:
-            return jsonify(error = "No authorization token provided.")
+            return jsonify(error="No authorization token provided.")
 
         uni = db.get_uni_for_code(g.cursor, token)
         if not uni:
-            return jsonify(error = "Invalid authorization token.")
+            return jsonify(error="Invalid authorization token.")
 
         # TODO: Some logging right here. We can log which user is using what.
         return func(*args, **kwargs)
