@@ -14,6 +14,7 @@ import httplib2
 import json
 from db import db
 import re
+from functools import wraps
 
 # create a pool of postgres connections
 pg_pool = psycopg2.pool.SimpleConnectionPool(
@@ -50,8 +51,10 @@ def log_outcome(resp):
     # TODO: log the request and its outcome
     return resp
 
+
 def authorization_required(func):
-    def checker():
+    @wraps(func)
+    def authorization_checker(*args, **kwargs):
         token = request.headers.get('Authorization-Token')
         if not token:
             return jsonify(data={"error": "No authorization token provided."})
@@ -61,8 +64,9 @@ def authorization_required(func):
             return jsonify(data={"error": "Invalid authorization token."})
 
         # TODO: Some logging right here. We can log which user is using what.
-        return func()
-    return checker
+        return func(*args, **kwargs)
+    return authorization_checker
+
 
 @app.route('/')
 def home():
