@@ -50,6 +50,19 @@ def log_outcome(resp):
     # TODO: log the request and its outcome
     return resp
 
+def authorization_required(func):
+    def checker():
+        token = request.headers.get('Authorization-Token')
+        if not token:
+            return jsonify(data={"error": "No authorization token provided."})
+
+        uni = db.get_uni_for_code(g.cursor, token)
+        if not uni:
+            return jsonify(data={"error": "Invalid authorization token."})
+
+        # TODO: Some logging right here. We can log which user is using what.
+        return func()
+    return checker
 
 @app.route('/')
 def home():
@@ -119,6 +132,7 @@ def auth():
 
 
 @app.route('/latest')
+@authorization_required
 def get_latest_data():
     """
     Gets latest dump of data for all endpoints.
@@ -133,6 +147,7 @@ def get_latest_data():
 
 
 @app.route('/latest/group/<group_id>')
+@authorization_required
 def get_latest_group_data(group_id):
     """
     Gets latest dump of data for the specified group.
@@ -148,6 +163,7 @@ def get_latest_group_data(group_id):
 
 
 @app.route('/latest/building/<parent_id>')
+@authorization_required
 def get_latest_building_data(parent_id):
     """
     Gets latest dump of data for the specified building.
@@ -163,6 +179,7 @@ def get_latest_building_data(parent_id):
 
 
 @app.route('/day/<day>/group/<group_id>')
+@authorization_required
 def get_day_group_data(day, group_id):
     """
     Gets specified group data for specified day
@@ -184,6 +201,7 @@ def get_day_group_data(day, group_id):
 
 
 @app.route('/day/<day>/building/<parent_id>')
+@authorization_required
 def get_day_building_data(day, parent_id):
     """
     Gets specified building data for specified day
@@ -205,6 +223,7 @@ def get_day_building_data(day, parent_id):
 
 
 @app.route('/window/<start_time>/<end_time>/group/<group_id>')
+@authorization_required
 def get_window_group_data(start_time, end_time, group_id):
     """
     Gets specified group data split by the specified time delimiter.
@@ -223,6 +242,7 @@ def get_window_group_data(start_time, end_time, group_id):
 
 
 @app.route('/window/<start_time>/<end_time>/building/<parent_id>')
+@authorization_required
 def get_window_building_data(start_time, end_time, parent_id):
     """
     Gets specified building data split by the specified time delimiter.
