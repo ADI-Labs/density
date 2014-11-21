@@ -66,7 +66,8 @@ def auth():
     """
     Returns an auth code after user logs in through Google+.
 
-    :param string code: code that is passed in through Google+. Do not provide this yourself.
+    :param string code: code that is passed in through Google+.
+                        Do not provide this yourself.
     :return: An html page with an auth code.
     :rtype: flask.Response
     """
@@ -74,7 +75,9 @@ def auth():
     # Get code from params.
     code = request.args.get('code')
     if not code:
-        return render_template('auth.html', success=False, reason="You need to log in!")
+        return render_template('auth.html',
+                               success=False,
+                               reason="You need to log in!")
 
     try:
         # Exchange code for email address.
@@ -87,15 +90,19 @@ def auth():
         # Get first email address from Google+ ID.
         http = httplib2.Http()
         http = credentials.authorize(http)
-        (headers, content) = http.request('https://www.googleapis.com/plus/v1/people/' + gplus_id, 'GET')
+
+        h, content = http.request('https://www.googleapis.com/plus/v1/people/'
+                                  + gplus_id, 'GET')
         data = json.loads(content)
         email = data["emails"][0]["value"]
 
         # Verify that the email is from the Columbia domain.
         if email.split('@')[1] != 'columbia.edu':
             return render_template('auth.html',
-                success=False,
-                reason="You need to log in with your Columbia email! You logged in with: " + email)
+                                   success=False,
+                                   reason="You need to log in with your"
+                                   + "Columbia email! You logged in with: "
+                                   + email)
 
         # Get UNI and ask database for code.
         uni = email.split('@')[0]
@@ -103,8 +110,10 @@ def auth():
         return render_template('auth.html', success=True, uni=uni, code=code)
     except:
         return render_template('auth.html',
-            success=False,
-            reason="An error occurred. Please try again later.")
+                               success=False,
+                               reason="An error occurred. Please try again"
+                               + "later.")
+
 
 @app.route('/latest')
 def get_latest_data():
