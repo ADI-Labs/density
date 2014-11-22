@@ -35,6 +35,7 @@ TODO
 We use a partial dump of our data for quick-and-easy development.
 This gets loaded on VM provision by our Vagrant setup scripts.
 It contains a small subset and is not updated frequently, but is sufficient for most feature development and bug squashing.
+Please create a scripts folder and add density_dump.sql inside scripts to load the data.
 
 
 
