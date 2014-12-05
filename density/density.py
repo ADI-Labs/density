@@ -1,4 +1,4 @@
-from flask import Flask, g, jsonify, render_template
+from flask import Flask, g, jsonify, render_template, request
 
 app = Flask(__name__)
 # do import early to check that all env variables are present
@@ -9,8 +9,12 @@ import psycopg2
 import psycopg2.pool
 import psycopg2.extras
 import datetime
-import db.db as db
-
+from oauth2client.client import flow_from_clientsecrets
+import httplib2
+import json
+from db import db
+import re
+from functools import wraps
 
 # create a pool of postgres connections
 pg_pool = psycopg2.pool.SimpleConnectionPool(
@@ -42,9 +46,26 @@ def return_connections():
 def log_outcome(resp):
     """ Outputs to a specified logging file """
     # return db connections first
+    g.pg_conn.commit()
     return_connections()
     # TODO: log the request and its outcome
     return resp
+
+
+def authorization_required(func):
+    @wraps(func)
+    def authorization_checker(*args, **kwargs):
+        token = request.headers.get('Authorization-Token')
+        if not token:
+            return jsonify(error="No authorization token provided.")
+
+        uni = db.get_uni_for_code(g.cursor, token)
+        if not uni:
+            return jsonify(error="Invalid authorization token.")
+
+        # TODO: Some logging right here. We can log which user is using what.
+        return func(*args, **kwargs)
+    return authorization_checker
 
 
 @app.route('/')
@@ -59,12 +80,64 @@ def docs():
 
 @app.route('/auth')
 def auth():
-    # TODO: Authenticate user and return page based on whether authentication
-    # was successful
-    return render_template('auth.html')
+    """
+    Returns an auth code after user logs in through Google+.
+
+    :param string code: code that is passed in through Google+.
+                        Do not provide this yourself.
+    :return: An html page with an auth code.
+    :rtype: flask.Response
+    """
+
+    # Get code from params.
+    code = request.args.get('code')
+    if not code:
+        return render_template('auth.html',
+                               success=False,
+                               reason="You need to log in!")
+
+    try:
+        # Exchange code for email address.
+        # Get Google+ ID.
+        oauth_flow = flow_from_clientsecrets('client_secrets.json', scope='')
+        oauth_flow.redirect_uri = 'postmessage'
+        credentials = oauth_flow.step2_exchange(code)
+        gplus_id = credentials.id_token['sub']
+
+        # Get first email address from Google+ ID.
+        http = httplib2.Http()
+        http = credentials.authorize(http)
+
+        h, content = http.request('https://www.googleapis.com/plus/v1/people/'
+                                  + gplus_id, 'GET')
+        data = json.loads(content)
+        email = data["emails"][0]["value"]
+
+        # Verify email is valid.
+        regex = re.match("^(?P<uni>[a-z\d]+)@.*(columbia|barnard)\.edu$",
+                         email)
+
+        if not regex:
+            return render_template('auth.html',
+                                   success=False,
+                                   reason="You need to log in with your"
+                                   + "Columbia or Barnard email! You logged "
+                                   + "in with: "
+                                   + email)
+
+        # Get UNI and ask database for code.
+        uni = regex.group('uni')
+        code = db.get_oauth_code_for_uni(g.cursor, uni)
+        return render_template('auth.html', success=True, uni=uni, code=code)
+    except:
+        return render_template('auth.html',
+                               success=False,
+                               reason="An error occurred. Please try again"
+                               + "later.")
 
 
 @app.route('/latest')
+@authorization_required
 def get_latest_data():
     """
     Gets latest dump of data for all endpoints.
@@ -79,6 +152,7 @@ def get_latest_data():
 
 
 @app.route('/latest/group/<group_id>')
+@authorization_required
 def get_latest_group_data(group_id):
     """
     Gets latest dump of data for the specified group.
@@ -94,6 +168,7 @@ def get_latest_group_data(group_id):
 
 
 @app.route('/latest/building/<parent_id>')
+@authorization_required
 def get_latest_building_data(parent_id):
     """
     Gets latest dump of data for the specified building.
@@ -109,6 +184,7 @@ def get_latest_building_data(parent_id):
 
 
 @app.route('/day/<day>/group/<group_id>')
+@authorization_required
 def get_day_group_data(day, group_id):
     """
     Gets specified group data for specified day
@@ -130,6 +206,7 @@ def get_day_group_data(day, group_id):
 
 
 @app.route('/day/<day>/building/<parent_id>')
+@authorization_required
 def get_day_building_data(day, parent_id):
     """
     Gets specified building data for specified day
@@ -151,6 +228,7 @@ def get_day_building_data(day, parent_id):
 
 
 @app.route('/window/<start_time>/<end_time>/group/<group_id>')
+@authorization_required
 def get_window_group_data(start_time, end_time, group_id):
     """
     Gets specified group data split by the specified time delimiter.
@@ -169,6 +247,7 @@ def get_window_group_data(start_time, end_time, group_id):
 
 
 @app.route('/window/<start_time>/<end_time>/building/<parent_id>')
+@authorization_required
 def get_window_building_data(start_time, end_time, parent_id):
     """
     Gets specified building data split by the specified time delimiter.

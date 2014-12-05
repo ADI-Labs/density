@@ -28,6 +28,7 @@ apt-get -y install postgresql-9.3
 
 # ADD DENSITY_DUMP.SQL AT THIS LOCATION.
 sudo -u postgres psql < /vagrant/scripts/density_dump.sql
+sudo -u postgres psql < /vagrant/scripts/oauth.sql
 
 # install python
 apt-get install -y python \

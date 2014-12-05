@@ -1,4 +1,9 @@
 {% extends "layout.html" %}
+{% block head %}
+    {{ super() }}
+    <script src="https://apis.google.com/js/client:platform.js" async defer></script>
+{% endblock %}
+
 {% block body %}
 <div class="container main-body">
     <h1>Wireless Density Data for Columbia University</h1>
@@ -10,7 +15,7 @@
     <p>
         To use the API, you will need a Columbia or Barnard e-mail address.
     </p>
-    <button>
+    <button id='signinButton' onclick='login()'>
         Get access
     </button>
     <h3>How to use the API</h3>
@@ -22,4 +27,24 @@
         This will give you JSON containing the latest information in the following format:
     </p>
 </div>
+<script>
+function login() {
+    // Send params to Google+ API.
+    var params = {
+        'callback': signinCallback,
+        'clientid': '115421531871-jj9kl2nsp4ebjv26ggms597jq7s529b6.apps.googleusercontent.com',
+        'scope': 'https://www.googleapis.com/auth/plus.profile.emails.read',
+        'requestvisibleactions': 'http://schema.org/AddAction',
+        'cookiepolicy': 'single_host_origin'
+    };
+    gapi.auth.signIn(params);
+}
+function signinCallback(authResult) {
+    if (authResult['status']['signed_in']) {
+    // Redirect to auth page.
+    document.location.href = '/auth?code=' + authResult.code
+  }
+}
+</script>
 {% endblock %}
+
