@@ -1,4 +1,4 @@
-from flask import Flask, g, jsonify, render_template
+from flask import Flask, g, jsonify, render_template, json
 
 app = Flask(__name__)
 # do import early to check that all env variables are present
@@ -190,6 +190,51 @@ def get_window_building_data(start_time, end_time, parent_id):
                                                  start_time, end_time)
 
     return jsonify(data=fetched_data)
+
+
+@app.route('/capacity/group')
+def get_cap_group():
+    """
+    Return capacity of all groups.
+
+    :return: List of dictionaries having keys "group_name", "capacity",
+    "group_id"
+    :rtype: List of dictionaries
+    """
+
+    fetched_data = db.get_cap_group(g.cursor)
+
+    return jsonify(data=fetched_data)
+
+
+@app.route('/capacity')
+def capacity():
+    """Render and show capacity page """
+
+    # Read capacity of groups from json file
+    json_data = open('data/capacity_group.json')
+    cap_data = json.load(json_data)['data']
+    # Read current data
+    cur_data = db.get_latest_data(g.cursor)
+    locations = []
+
+    # Loop to find corresponding cur_client_count with capacity
+    # and store it in locations
+    for cap in cap_data:
+
+        groupName = cap['group_name']
+        capacity = cap['capacity']
+
+        for latest in cur_data:
+            if latest['group_name'] == groupName:
+                cur_client_count = latest['client_count']
+                break
+        # Cast one of the numbers into a float, get a percentile by multiplying
+        # 100, round the percentage and cast it back into a int.
+        percent_full = int(round(float(cur_client_count)/capacity*100))
+        locations.append({"name": groupName, "fullness": percent_full})
+
+    return render_template('capacity.html', locations=locations)
 
 
 if __name__ == '__main__':
