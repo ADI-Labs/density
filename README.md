@@ -64,3 +64,4 @@ TODO
 - Sungwoo Bae
 - Nate Brennand
 - Jessica Forde
+- Jessica Valarezo
