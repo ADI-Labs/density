@@ -129,7 +129,8 @@ def get_oauth_code_for_uni(cursor, uni):
     :rtype: str
     """
     # Try getting the code from the database.
-    query = """SELECT * FROM oauth_data
+    query = """SELECT code
+               FROM oauth_data
                WHERE uni=%s;"""
     cursor.execute(query, [uni])
     results = cursor.fetchall()
@@ -150,11 +151,12 @@ def get_uni_for_code(cursor, code):
     :return: the uni for the user, or None if oauth code doesn't exist
     :rtype: str
     """
-    query = """SELECT * FROM oauth_data
+    query = """SELECT uni
+               FROM oauth_data
                WHERE code=%s;"""
     cursor.execute(query, [code])
     results = cursor.fetchall()
     if results:
-      return results[0]
+      return results[0]['uni']
     else:
       return None

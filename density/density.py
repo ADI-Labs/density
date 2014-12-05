@@ -114,7 +114,7 @@ def auth():
         email = data["emails"][0]["value"]
 
         # Verify email is valid.
-        regex = re.match("^(?P<uni>[\w_\d]+)@(columbia|barnard)\.edu$", email)
+        regex = re.match("^(?P<uni>[a-z\d]+)@.*(columbia|barnard)\.edu$", email)
 
         if not regex:
             return render_template('auth.html',

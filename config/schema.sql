@@ -95,10 +95,18 @@ CREATE MATERIALIZED VIEW month_window AS (
         date_trunc('month', dump_time)
 );
 
+DROP TABLE oauth_data CASCADE;
+
+
+CREATE TABLE oauth_data (
+    uni             text,
+    code            text
+);
 
 AlTER TABLE density_data OWNER TO adicu;
 AlTER TABLE hour_window  OWNER TO adicu;
 AlTER TABLE day_window   OWNER TO adicu;
 AlTER TABLE week_window  OWNER TO adicu;
 AlTER TABLE month_window OWNER TO adicu;
+ALTER TABLE oauth_data   OWNER TO adicu;
 
