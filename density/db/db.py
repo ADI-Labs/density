@@ -137,6 +137,7 @@ def get_cap_group(cursor):
                        )  as capacity, group_id, group_name
                FROM {table_name}
                GROUP BY group_name, group_id
+               ORDER BY group_name
                ;""".format(table_name=TABLE_NAME)
     cursor.execute(query)
     return cursor.fetchall()
