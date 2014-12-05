@@ -56,6 +56,12 @@ def home():
 def docs():
     return render_template('docs.html')
 
+@app.route('/docs/building_info')
+def building_info():
+    fetched_data = db.get_building_info(g.cursor)
+
+    return jsonify(data=fetched_data)
+
 
 @app.route('/auth')
 def auth():
