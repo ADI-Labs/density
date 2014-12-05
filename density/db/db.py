@@ -142,15 +142,15 @@ def get_cap_group(cursor):
     return cursor.fetchall()
 
 def get_building_info(cursor):
-  """
-  Gets a basic table showing names and ids for groups and parents
+    """
+    Gets names and ids for groups and parents
 
-  :param cursor:
-  """
-  query = """SELECT DISTINCT
-               group_name, group_id, parent_name, parent_id
-               FROM {table_name}
-               ORDER BY parent_name, group_name;
-               ;""".format(table_name=TABLE_NAME)
-  cursor.execute(query)
-  return cursor.fetchall()
+    :param cursor:
+    """
+    query = """SELECT DISTINCT
+                 group_name, group_id, parent_name, parent_id
+                 FROM {table_name}
+                 ORDER BY parent_name, group_name;
+                 ;""".format(table_name=TABLE_NAME)
+    cursor.execute(query)
+    return cursor.fetchall()

@@ -59,6 +59,10 @@ def docs():
 
 @app.route('/docs/building_info')
 def building_info():
+    """
+    Gets a json with the group ids, group names, parent ids, and parent names
+    """
+    
     fetched_data = db.get_building_info(g.cursor)
 
     return jsonify(data=fetched_data)
