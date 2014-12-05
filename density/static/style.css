@@ -1,5 +1,5 @@
 html, body {
-    height: 100%;
+    min-height: 100%;
     background: rgb(214,249,255); /* Old browsers */
     background: -moz-linear-gradient(top,  rgba(214,249,255,1) 0%, rgba(158,232,250,1) 100%); /* FF3.6+ */
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(214,249,255,1)), color-stop(100%,rgba(158,232,250,1))); /* Chrome,Safari4+ */

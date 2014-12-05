@@ -226,6 +226,9 @@ def capacity():
         # Cast one of the numbers into a float, get a percentile by multiplying
         # 100, round the percentage and cast it back into a int.
         percent_full = int(round(float(cur_client_count)/capacity*100))
+        if percent_full > 100:
+            percent_full = 100
+
         locations.append({"name": groupName, "fullness": percent_full})
 
     return render_template('capacity.html', locations=locations)
