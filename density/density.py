@@ -229,6 +229,9 @@ def capacity():
         if percent_full > 100:
             percent_full = 100
 
+        if groupName == 'Butler Library stk':
+            groupName = 'Butler Library Stacks'
+
         locations.append({"name": groupName, "fullness": percent_full})
 
     return render_template('capacity.html', locations=locations)
