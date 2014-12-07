@@ -10,14 +10,21 @@ html, body {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d6f9ff', endColorstr='#9ee8fa',GradientType=0 ); /* IE6-9 */
 }
 
-body {
-    font-family: 'Open Sans', sans-serif;
-}
-
 .navbar {
     background-color: #A1FFB8;
     border-radius: 0px;
+}
 
+a, a:hover {
+    color: inherit;
+    text-decoration: underline;
+}
+
+.right { float: right;}
+
+.logo {
+    height: 8rem;
+    margin: 2rem 0;
 }
 
 .navbar-default .navbar-brand {
