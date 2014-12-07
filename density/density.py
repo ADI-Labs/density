@@ -64,20 +64,20 @@ def log_outcome(resp):
 #     return render_template('auth.html')
 #
 #
-# @app.route('/latest')
-# def get_latest_data():
-#     """
-#     Gets latest dump of data for all endpoints.
-#
-#     :return: Latest JSON
-#     :rtype: flask.Response
-#     """
-#
-#     fetched_data = db.get_latest_data(g.cursor)
-#
-#     return jsonify(data=fetched_data)
-#
-#
+@app.route('/latest')
+def get_latest_data():
+    """
+    Gets latest dump of data for all endpoints.
+
+    :return: Latest JSON
+    :rtype: flask.Response
+    """
+
+    fetched_data = db.get_latest_data(g.cursor)
+
+    return jsonify(data=fetched_data)
+
+
 # @app.route('/latest/group/<group_id>')
 # def get_latest_group_data(group_id):
 #     """
