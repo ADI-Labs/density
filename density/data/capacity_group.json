@@ -1,112 +1,112 @@
 {
   "data": [
     {
-      "capacity": 7.9574468085,
+      "capacity": 22, 
       "group_id": 147, 
       "group_name": "Architectural and Fine Arts Library 1"
     }, 
     {
-      "capacity": 152.6170212766,
+      "capacity": 272, 
       "group_id": 148, 
       "group_name": "Architectural and Fine Arts Library 2"
     }, 
     {
-      "capacity": 104.7021276596,
+      "capacity": 133, 
       "group_id": 149, 
       "group_name": "Architectural and Fine Arts Library 3"
     }, 
     {
-      "capacity": 464.5319148936,
+      "capacity": 573, 
       "group_id": 130, 
       "group_name": "Butler Library 2"
     }, 
     {
-      "capacity": 352.1276595745,
+      "capacity": 413, 
       "group_id": 131, 
       "group_name": "Butler Library 3"
     }, 
     {
-      "capacity": 260.2978723404,
+      "capacity": 346, 
       "group_id": 132, 
       "group_name": "Butler Library 4"
     }, 
     {
-      "capacity": 103.3191489362,
+      "capacity": 157, 
       "group_id": 133, 
       "group_name": "Butler Library 5"
     }, 
     {
-      "capacity": 150.3829787234,
+      "capacity": 220, 
       "group_id": 134, 
       "group_name": "Butler Library 6"
     }, 
     {
-      "capacity": 30.6808510638,
+      "capacity": 80, 
       "group_id": 138, 
       "group_name": "Butler Library stk"
     }, 
     {
-      "capacity": 71.8085106383,
+      "capacity": 129, 
       "group_id": 155, 
       "group_name": "JJ's Place"
     }, 
     {
-      "capacity": 113.1063829787,
+      "capacity": 200, 
       "group_id": 125, 
       "group_name": "John Jay Dining Hall"
     }, 
     {
-      "capacity": 80.829787234,
+      "capacity": 178, 
       "group_id": 139, 
       "group_name": "Lehman Library 2"
     }, 
     {
-      "capacity": 363.9787234043,
+      "capacity": 570, 
       "group_id": 140, 
       "group_name": "Lehman Library 3"
     }, 
     {
-      "capacity": 21.085106383,
+      "capacity": 138, 
       "group_id": 150, 
       "group_name": "Lerner 1"
     }, 
     {
-      "capacity": 114.9574468085,
+      "capacity": 224, 
       "group_id": 151, 
       "group_name": "Lerner 2"
     }, 
     {
-      "capacity": 158.7234042553,
+      "capacity": 248, 
       "group_id": 152, 
       "group_name": "Lerner 3"
     }, 
     {
-      "capacity": 154.170212766,
+      "capacity": 243, 
       "group_id": 153, 
       "group_name": "Lerner 4"
     }, 
     {
-      "capacity": 113.7872340426,
+      "capacity": 206, 
       "group_id": 154, 
       "group_name": "Lerner 5"
     }, 
     {
-      "capacity": 903,
+      "capacity": 497, 
       "group_id": 85, 
       "group_name": "Roone Arledge Auditorium"
     }, 
     {
-      "capacity": 113.8085106383,
+      "capacity": 154, 
       "group_id": 145, 
       "group_name": "Science and Engineering Library"
     }, 
     {
-      "capacity": 128.2765957447,
+      "capacity": 197, 
       "group_id": 144, 
       "group_name": "Starr East Asian Library"
     }, 
     {
-      "capacity": 682.5957446809,
+      "capacity": 992, 
       "group_id": 23, 
       "group_name": "Uris/Watson Library"
     }
