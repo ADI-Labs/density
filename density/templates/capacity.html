@@ -2,17 +2,11 @@
 {% block body %}
 <div class="container main-body">
     <div class="text-center">
-        <h1>Density <small>by ADI Labs</small></h1>
-        <br>
-        <p>
-            <h4>How full is Butler right now?</h4>
-            <h4>Where should I go to study?</h4>
-            <h4>These are types of question that Density seeks to answer.</h4>
-        </p>
-        <p>* Density currently updates every 15 minutes.</p>
+        <img class="logo" src="{{ url_for('static', filename='logo.svg')}}">
+        <p>Density by ADI is built and maintained by <a href="https://adicu.com/labs">ADI Labs</a> in collaboration with <a href="http://columbiaesc.com/">ESC</a> and <a href="https://cuit.columbia.edu/">CUIT</a>.</p>
+        <p>Density estimates how full study spaces are on campus, using a live feed of Wi-Fi access data that updates every 15 minutes.</p>
     </div>
 
-    <h1>List of Locations</h1>
     <ul class="list-group">
         {% for location in locations %}
         <li class="list-group-item"><h4>{{ location['name'] }}</h4>

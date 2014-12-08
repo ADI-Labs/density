@@ -1,5 +1,5 @@
 html, body {
-    height: 100%;
+    min-height: 100%;
     background: rgb(214,249,255); /* Old browsers */
     background: -moz-linear-gradient(top,  rgba(214,249,255,1) 0%, rgba(158,232,250,1) 100%); /* FF3.6+ */
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(214,249,255,1)), color-stop(100%,rgba(158,232,250,1))); /* Chrome,Safari4+ */
@@ -10,14 +10,21 @@ html, body {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d6f9ff', endColorstr='#9ee8fa',GradientType=0 ); /* IE6-9 */
 }
 
-body {
-    font-family: 'Open Sans', sans-serif;
-}
-
 .navbar {
     background-color: #A1FFB8;
     border-radius: 0px;
+}
 
+a, a:hover {
+    color: inherit;
+    text-decoration: underline;
+}
+
+.right { float: right;}
+
+.logo {
+    height: 8rem;
+    margin: 2rem 0;
 }
 
 .navbar-default .navbar-brand {
