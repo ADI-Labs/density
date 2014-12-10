@@ -15,16 +15,36 @@ html, body {
     border-radius: 0px;
 }
 
-a, a:hover {
-    color: inherit;
-    text-decoration: underline;
+a {
+    color: #f3bebd;
+}
+
+a:hover {
+    color: #f8725d;
+    text-decoration: none;
+}
+
+p {
+    color: #ffffff;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+}
+
+.about {
+    font-size: 18px;
 }
 
 .right { float: right;}
+.left { float: left;}
 
 .logo {
-    height: 8rem;
-    margin: 2rem 0;
+    height: 10rem;
+}
+
+.escLogo {
+    height: 5rem;
+    padding-left: 0.4em;
 }
 
 .navbar-default .navbar-brand {
@@ -45,7 +65,7 @@ a, a:hover {
 
 @media (min-width: 1200px) {
   .container {
-    width: 970px;
+    width: 800px;
   }
 }
 
@@ -56,5 +76,59 @@ a, a:hover {
 .footer {
     clear: both;
     z-index: 10;
-    height: 3em;
+    background-color: #3e4953;
+    color: #ffffff;
+    padding: 50px 0 40px;
+}
+
+.logoContainer {
+    background-color: #2285c6;
+    padding: 50px;
+}
+
+.textContainer {
+    background-color: #468fcc;
+    padding: 50px 0 40px;
+    text-align: center;
+}
+
+.listContainer {
+    background-color: #f4f4f4;
+    padding: 50px;
+}
+
+.thanksContainer {
+    background-color: #f8725d;
+    color: #ffffff;
+    font-family: 'Lato', sans-serif;
+    padding: 50px;
+    text-align: center;
+}
+
+.thanksContainer h4 {
+    font-weight: 300;
+}
+
+.list-group {
+    margin-bottom: 0;
+}
+
+.list-group-item {
+    font-family: 'Lato', sans-serif;
+    border: 0;
+    margin-bottom: 30px;
+    padding: 15px 30px;
+}
+
+.progress {
+    height: 25px;
+    border-radius: 14px;
+}
+
+.progress-bar {
+    line-height: 2;
+}
+
+.progress-bar-info {
+    background-color: #468fcc;
 }
