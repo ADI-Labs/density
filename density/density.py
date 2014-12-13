@@ -47,23 +47,23 @@ def log_outcome(resp):
     return resp
 
 
-@app.route('/')
-def home():
-    return render_template('index.html')
-
-
-@app.route('/docs')
-def docs():
-    return render_template('docs.html')
-
-
-@app.route('/auth')
-def auth():
-    # TODO: Authenticate user and return page based on whether authentication
-    # was successful
-    return render_template('auth.html')
-
-
+# @app.route('/')
+# def home():
+#     return render_template('index.html')
+#
+#
+# @app.route('/docs')
+# def docs():
+#     return render_template('docs.html')
+#
+#
+# @app.route('/auth')
+# def auth():
+#     # TODO: Authenticate user and return page based on whether authentication
+#     # was successful
+#     return render_template('auth.html')
+#
+#
 @app.route('/latest')
 def get_latest_data():
     """
@@ -78,112 +78,112 @@ def get_latest_data():
     return jsonify(data=fetched_data)
 
 
-@app.route('/latest/group/<group_id>')
-def get_latest_group_data(group_id):
-    """
-    Gets latest dump of data for the specified group.
-
-    :param int group_id: id of the group requested
-    :return: Latest JSON corresponding to the requested group
-    :rtype: flask.Response
-    """
-
-    fetched_data = db.get_latest_group_data(g.cursor, group_id)
-
-    return jsonify(data=fetched_data)
-
-
-@app.route('/latest/building/<parent_id>')
-def get_latest_building_data(parent_id):
-    """
-    Gets latest dump of data for the specified building.
-
-    :param int parent_id: id of the building requested
-    :return: Latest JSON corresponding to the requested building
-    :rtype: flask.Response
-    """
-
-    fetched_data = db.get_latest_building_data(g.cursor, parent_id)
-
-    return jsonify(data=fetched_data)
-
-
-@app.route('/day/<day>/group/<group_id>')
-def get_day_group_data(day, group_id):
-    """
-    Gets specified group data for specified day
-
-    :param str day: the day requested in EST format YYYY-MM-DD
-    :param int group_id: id of the group requested
-    :return: JSON corresponding to the requested day and group
-    :rtype: flask.Response
-    """
-
-    # Convert to datetime object
-    start_day = datetime.datetime.strptime(day, "%Y-%m-%d")
-    end_day = start_day + datetime.timedelta(1)
-
-    fetched_data = db.get_window_based_on_group(g.cursor, group_id, start_day,
-                                                end_day)
-
-    return jsonify(data=fetched_data)
-
-
-@app.route('/day/<day>/building/<parent_id>')
-def get_day_building_data(day, parent_id):
-    """
-    Gets specified building data for specified day
-
-    :param str day: the day requested in EST format YYYY-MM-DD
-    :param int parent_id: id of the building requested
-    :return: JSON corresponding to the requested day and building
-    :rtype: flask.Response
-    """
-
-    # Convert to datetime object
-    start_day = datetime.datetime.strptime(day, "%Y-%m-%d")
-    end_day = start_day + datetime.timedelta(1)
-
-    fetched_data = db.get_window_based_on_parent(g.cursor, parent_id,
-                                                 start_day, end_day)
-
-    return jsonify(data=fetched_data)
-
-
-@app.route('/window/<start_time>/<end_time>/group/<group_id>')
-def get_window_group_data(start_time, end_time, group_id):
-    """
-    Gets specified group data split by the specified time delimiter.
-
-    :param str start_time: start time in EST format YYYY-MM-DDThh:mm
-    :param str end_time: end time in EST format YYYY-MM-DDThh:mm
-    :param int group_id: id of the group requested
-    :return: JSON corresponding to the requested window and group
-    :rtype: flask.Response
-    """
-
-    fetched_data = db.get_window_based_on_group(g.cursor, group_id, start_time,
-                                                end_time)
-
-    return jsonify(data=fetched_data)
-
-
-@app.route('/window/<start_time>/<end_time>/building/<parent_id>')
-def get_window_building_data(start_time, end_time, parent_id):
-    """
-    Gets specified building data split by the specified time delimiter.
-
-    :param str start_time: start time in EST format YYYY-MM-DDThh:mm
-    :param str end_time: end time in EST format YYYY-MM-DDThh:mm
-    :param int parent_id: id of the building requested
-    :return: JSON corresponding to the requested window and building
-    :rtype: flask.Response
-    """
-
-    fetched_data = db.get_window_based_on_parent(g.cursor, parent_id,
-                                                 start_time, end_time)
-
-    return jsonify(data=fetched_data)
+# @app.route('/latest/group/<group_id>')
+# def get_latest_group_data(group_id):
+#     """
+#     Gets latest dump of data for the specified group.
+#
+#     :param int group_id: id of the group requested
+#     :return: Latest JSON corresponding to the requested group
+#     :rtype: flask.Response
+#     """
+#
+#     fetched_data = db.get_latest_group_data(g.cursor, group_id)
+#
+#     return jsonify(data=fetched_data)
+#
+#
+# @app.route('/latest/building/<parent_id>')
+# def get_latest_building_data(parent_id):
+#     """
+#     Gets latest dump of data for the specified building.
+#
+#     :param int parent_id: id of the building requested
+#     :return: Latest JSON corresponding to the requested building
+#     :rtype: flask.Response
+#     """
+#
+#     fetched_data = db.get_latest_building_data(g.cursor, parent_id)
+#
+#     return jsonify(data=fetched_data)
+#
+#
+# @app.route('/day/<day>/group/<group_id>')
+# def get_day_group_data(day, group_id):
+#     """
+#     Gets specified group data for specified day
+#
+#     :param str day: the day requested in EST format YYYY-MM-DD
+#     :param int group_id: id of the group requested
+#     :return: JSON corresponding to the requested day and group
+#     :rtype: flask.Response
+#     """
+#
+#     # Convert to datetime object
+#     start_day = datetime.datetime.strptime(day, "%Y-%m-%d")
+#     end_day = start_day + datetime.timedelta(1)
+#
+#     fetched_data = db.get_window_based_on_group(g.cursor, group_id, start_day,
+#                                                 end_day)
+#
+#     return jsonify(data=fetched_data)
+#
+#
+# @app.route('/day/<day>/building/<parent_id>')
+# def get_day_building_data(day, parent_id):
+#     """
+#     Gets specified building data for specified day
+#
+#     :param str day: the day requested in EST format YYYY-MM-DD
+#     :param int parent_id: id of the building requested
+#     :return: JSON corresponding to the requested day and building
+#     :rtype: flask.Response
+#     """
+#
+#     # Convert to datetime object
+#     start_day = datetime.datetime.strptime(day, "%Y-%m-%d")
+#     end_day = start_day + datetime.timedelta(1)
+#
+#     fetched_data = db.get_window_based_on_parent(g.cursor, parent_id,
+#                                                  start_day, end_day)
+#
+#     return jsonify(data=fetched_data)
+#
+#
+# @app.route('/window/<start_time>/<end_time>/group/<group_id>')
+# def get_window_group_data(start_time, end_time, group_id):
+#     """
+#     Gets specified group data split by the specified time delimiter.
+#
+#     :param str start_time: start time in EST format YYYY-MM-DDThh:mm
+#     :param str end_time: end time in EST format YYYY-MM-DDThh:mm
+#     :param int group_id: id of the group requested
+#     :return: JSON corresponding to the requested window and group
+#     :rtype: flask.Response
+#     """
+#
+#     fetched_data = db.get_window_based_on_group(g.cursor, group_id, start_time,
+#                                                 end_time)
+#
+#     return jsonify(data=fetched_data)
+#
+#
+# @app.route('/window/<start_time>/<end_time>/building/<parent_id>')
+# def get_window_building_data(start_time, end_time, parent_id):
+#     """
+#     Gets specified building data split by the specified time delimiter.
+#
+#     :param str start_time: start time in EST format YYYY-MM-DDThh:mm
+#     :param str end_time: end time in EST format YYYY-MM-DDThh:mm
+#     :param int parent_id: id of the building requested
+#     :return: JSON corresponding to the requested window and building
+#     :rtype: flask.Response
+#     """
+#
+#     fetched_data = db.get_window_based_on_parent(g.cursor, parent_id,
+#                                                  start_time, end_time)
+#
+#     return jsonify(data=fetched_data)
 
 
 @app.route('/capacity/group')
@@ -201,7 +201,7 @@ def get_cap_group():
     return jsonify(data=fetched_data)
 
 
-@app.route('/capacity')
+@app.route('/')
 def capacity():
     """Render and show capacity page """
 
@@ -226,6 +226,12 @@ def capacity():
         # Cast one of the numbers into a float, get a percentile by multiplying
         # 100, round the percentage and cast it back into a int.
         percent_full = int(round(float(cur_client_count)/capacity*100))
+        if percent_full > 100:
+            percent_full = 100
+
+        if groupName == 'Butler Library stk':
+            groupName = 'Butler Library Stacks'
+
         locations.append({"name": groupName, "fullness": percent_full})
 
     return render_template('capacity.html', locations=locations)

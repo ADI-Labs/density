@@ -132,11 +132,12 @@ def get_cap_group(cursor):
     """
 
     query = """SELECT cast(
-                          round(avg(client_count) + (stddev(client_count) * 2))
+                          max(client_count)
                           as int
                        )  as capacity, group_id, group_name
                FROM {table_name}
                GROUP BY group_name, group_id
+               ORDER BY group_name
                ;""".format(table_name=TABLE_NAME)
     cursor.execute(query)
     return cursor.fetchall()
