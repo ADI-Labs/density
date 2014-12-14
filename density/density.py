@@ -61,7 +61,7 @@ def log_outcome(resp):
 #    """
 #    Gets a json with the group ids, group names, parent ids, and parent names
 #    """
-# 
+#
 #    fetched_data = db.get_building_info(g.cursor)
 #
 #    return jsonify(data=fetched_data)
