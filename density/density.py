@@ -61,7 +61,7 @@ def log_outcome(resp):
 #    """
 #    Gets a json with the group ids, group names, parent ids, and parent names
 #    """
-#    
+# 
 #    fetched_data = db.get_building_info(g.cursor)
 #
 #    return jsonify(data=fetched_data)
@@ -132,7 +132,7 @@ def get_latest_data():
 #     start_day = datetime.datetime.strptime(day, "%Y-%m-%d")
 #     end_day = start_day + datetime.timedelta(1)
 #
-#     fetched_data = db.get_window_based_on_group(g.cursor, group_id, 
+#     fetched_data = db.get_window_based_on_group(g.cursor, group_id,
 #                                                 start_day, end_day)
 #
 #     return jsonify(data=fetched_data)
@@ -171,7 +171,7 @@ def get_latest_data():
 #     :rtype: flask.Response
 #     """
 #
-#     fetched_data = db.get_window_based_on_group(g.cursor, group_id, 
+#     fetched_data = db.get_window_based_on_group(g.cursor, group_id,
 #                                                 start_time, end_time)
 #
 #     return jsonify(data=fetched_data)
