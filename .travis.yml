@@ -23,29 +23,29 @@ env:
     - RATE_LIMIT=200
 
 install:
-    - pip install -r config/requirements.txt
-    - pip install flake8
+  - pip install -r config/requirements.txt
+  - pip install flake8
 
 services:
-    - postgresql
+  - postgresql
 
 addons:
-    postgresql: 9.3  # avoid default of postgres 9.1
+  postgresql: 9.3  # avoid default of postgres 9.1
 
 before_script:
-    - psql --version
-    - sudo -u postgres psql -c "CREATE USER adi WITH PASSWORD 'adi';"
-    - sudo -u postgres psql -c "CREATE DATABASE density;"
-    - sudo -u postgres psql -c "GRANT CONNECT ON DATABASE density TO adi;"
-    - sudo -u postgres psql density < ./config/density_dump.sql
-    - sudo -u postgres psql -c "GRANT SELECT ON ALL TABLES IN SCHEMA public TO adi;"
+  - psql --version
+  - sudo -u postgres psql -c "CREATE USER adi WITH PASSWORD 'adi';"
+  - sudo -u postgres psql -c "CREATE DATABASE density;"
+  - sudo -u postgres psql -c "GRANT CONNECT ON DATABASE density TO adi;"
+  - sudo -u postgres psql density < ./config/density_dump.sql
+  - sudo -u postgres psql -c "GRANT ALL ON density TO adi;"
 
 script:
-    - flake8 density/density.py
-    - flake8 density/tests
-    - cd density && nosetests
+  - flake8 density/density.py
+  - flake8 density/tests
+  - cd density && nosetests
 
 notifications:
-      slack: adi-labs:tCeqXPsLSyIFe3yjfWfKLRYg
-      on_success: never
-      on_failure: change
+ slack: adi-labs:tCeqXPsLSyIFe3yjfWfKLRYg
+ on_success: never
+ on_failure: change

@@ -30,7 +30,6 @@ def get_connections():
     g.pg_conn = pg_pool.getconn()
     g.cursor = g.pg_conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
     g.start_time = datetime.datetime.now()
-    print 'finished "before_request"'
 
 
 def return_connections():
@@ -45,7 +44,6 @@ def log_outcome(resp):
     # return db connections first
     return_connections()
     # TODO: log the request and its outcome
-    print 'reached "after_request"'
     return resp
 
 
@@ -75,7 +73,6 @@ def get_latest_data():
     :rtype: flask.Response
     """
 
-    print 'in "/latest"'
     fetched_data = db.get_latest_data(g.cursor)
     return jsonify(data=fetched_data)
 
