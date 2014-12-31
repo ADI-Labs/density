@@ -41,13 +41,12 @@ SELECT pg_terminate_backend(pg_stat_activity.pid)
 FROM pg_stat_activity
 WHERE pg_stat_activity.datname = 'density' AND pid <> pg_backend_pid();
 
-DROP DATABASE IF EXISTS density;
 CREATE DATABASE density WITH OWNER adicu;
 \connect density;
 --
 -- Name: density_data; Type: TABLE; Schema: public; Owner: adicu; Tablespace: 
 --
-DROP TABLE density_data CASCADE;
+DROP TABLE IF EXISTS density_data CASCADE;
 CREATE TABLE density_data (
     dump_time timestamp without time zone NOT NULL,
     group_id integer NOT NULL,
