@@ -33,6 +33,7 @@ before_script:
     - echo 'testing'
     - sudo -u postgres psql -c "CREATE USER adi WITH PASSWORD 'adi';"
     - sudo -u postgres psql -c "CREATE DATABASE density;"
+    - sudo -u postgres psql -c "GRANT CONNECT ON DATABASE density TO adi;"
     - sudo -u postgres psql -c "GRANT SELECT ON ALL TABLES IN SCHEMA public TO adi;"
     - sudo -u postgres psql density < ./config/density_dump.sql
 
