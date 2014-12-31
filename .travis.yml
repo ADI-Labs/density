@@ -17,7 +17,7 @@ env:
     - PG_PORT=5432
     - PG_USER=adi
     - PG_PASSWORD=adi
-    - PG_DB=data2
+    - PG_DB=density
     - PG_PAGE_LIMIT=250
     - PG_DEFAULT=20
     - RATE_LIMIT=200
@@ -26,12 +26,15 @@ install:
     - pip install -r config/requirements.txt
     - pip install flake8
 
-services:
-    - postgresql
+addons:
+    - postgresql: "9.3"
 
 before_script:
     - echo 'testing'
-    # setup dev database
+    - sudo -u postgres psql -c "CREATE USER adi WITH PASSWORD 'adi';"
+    - sudo -u postgres psql -c "CREATE DATABASE density;"
+    - sudo -u postgres psql -c "GRANT SELECT ON ALL TABLES IN SCHEMA public TO adi;"
+    - sudo -u postgres psql density < ./config/density_dump.sql
 
 script:
     - flake8 density/density.py
