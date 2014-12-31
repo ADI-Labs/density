@@ -38,7 +38,7 @@ before_script:
   - sudo -u postgres psql -c "CREATE DATABASE density;"
   - sudo -u postgres psql -c "GRANT CONNECT ON DATABASE density TO adi;"
   - sudo -u postgres psql density < ./config/density_dump.sql
-  - sudo -u postgres psql -c "GRANT ALL ON density TO adi;"
+  - sudo -u postgres psql -c "GRANT SELECT ON ALL TABLES IN SCHEMA public TO adi;"
 
 script:
   - flake8 density/density.py

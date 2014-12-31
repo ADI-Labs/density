@@ -30,9 +30,9 @@ SET default_tablespace = '';
 SET default_with_oids = false;
 
 --
--- Name: adicu; Type: ROLE;
+-- Name: adi; Type: ROLE;
 --
-CREATE ROLE adicu LOGIN PASSWORD 'adicu';
+CREATE ROLE adi LOGIN PASSWORD 'adi';
 
 --
 -- Name: density; Type: DB;
@@ -41,10 +41,10 @@ SELECT pg_terminate_backend(pg_stat_activity.pid)
 FROM pg_stat_activity
 WHERE pg_stat_activity.datname = 'density' AND pid <> pg_backend_pid();
 
-CREATE DATABASE density WITH OWNER adicu;
+CREATE DATABASE density WITH OWNER adi;
 \connect density;
 --
--- Name: density_data; Type: TABLE; Schema: public; Owner: adicu; Tablespace: 
+-- Name: density_data; Type: TABLE; Schema: public; Owner: adi; Tablespace: 
 --
 DROP TABLE IF EXISTS density_data CASCADE;
 CREATE TABLE density_data (
@@ -57,10 +57,10 @@ CREATE TABLE density_data (
 );
 
 
-ALTER TABLE public.density_data OWNER TO adicu;
+ALTER TABLE public.density_data OWNER TO adi;
 
 --
--- Name: day_window; Type: MATERIALIZED VIEW; Schema: public; Owner: adicu; Tablespace: 
+-- Name: day_window; Type: MATERIALIZED VIEW; Schema: public; Owner: adi; Tablespace: 
 --
 
 CREATE MATERIALIZED VIEW day_window AS
@@ -77,10 +77,10 @@ CREATE MATERIALIZED VIEW day_window AS
   WITH NO DATA;
 
 
-ALTER TABLE public.day_window OWNER TO adicu;
+ALTER TABLE public.day_window OWNER TO adi;
 
 --
--- Name: hour_window; Type: MATERIALIZED VIEW; Schema: public; Owner: adicu; Tablespace: 
+-- Name: hour_window; Type: MATERIALIZED VIEW; Schema: public; Owner: adi; Tablespace: 
 --
 
 CREATE MATERIALIZED VIEW hour_window AS
@@ -97,10 +97,10 @@ CREATE MATERIALIZED VIEW hour_window AS
   WITH NO DATA;
 
 
-ALTER TABLE public.hour_window OWNER TO adicu;
+ALTER TABLE public.hour_window OWNER TO adi;
 
 --
--- Name: month_window; Type: MATERIALIZED VIEW; Schema: public; Owner: adicu; Tablespace: 
+-- Name: month_window; Type: MATERIALIZED VIEW; Schema: public; Owner: adi; Tablespace: 
 --
 
 CREATE MATERIALIZED VIEW month_window AS
@@ -117,10 +117,10 @@ CREATE MATERIALIZED VIEW month_window AS
   WITH NO DATA;
 
 
-ALTER TABLE public.month_window OWNER TO adicu;
+ALTER TABLE public.month_window OWNER TO adi;
 
 --
--- Name: week_window; Type: MATERIALIZED VIEW; Schema: public; Owner: adicu; Tablespace: 
+-- Name: week_window; Type: MATERIALIZED VIEW; Schema: public; Owner: adi; Tablespace: 
 --
 
 CREATE MATERIALIZED VIEW week_window AS
@@ -137,10 +137,10 @@ CREATE MATERIALIZED VIEW week_window AS
   WITH NO DATA;
 
 
-ALTER TABLE public.week_window OWNER TO adicu;
+ALTER TABLE public.week_window OWNER TO adi;
 
 --
--- Data for Name: density_data; Type: TABLE DATA; Schema: public; Owner: adicu
+-- Data for Name: density_data; Type: TABLE DATA; Schema: public; Owner: adi
 --
 
 COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, client_count) FROM stdin;
@@ -27252,7 +27252,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 
 
 --
--- Name: density_data_pkey; Type: CONSTRAINT; Schema: public; Owner: adicu; Tablespace: 
+-- Name: density_data_pkey; Type: CONSTRAINT; Schema: public; Owner: adi; Tablespace: 
 --
 
 ALTER TABLE ONLY density_data
@@ -27260,42 +27260,42 @@ ALTER TABLE ONLY density_data
 
 
 --
--- Name: density_data_group_id_dump_time_idx; Type: INDEX; Schema: public; Owner: adicu; Tablespace: 
+-- Name: density_data_group_id_dump_time_idx; Type: INDEX; Schema: public; Owner: adi; Tablespace: 
 --
 
 CREATE INDEX density_data_group_id_dump_time_idx ON density_data USING btree (group_id, dump_time);
 
 
 --
--- Name: density_data_parent_id_idx; Type: INDEX; Schema: public; Owner: adicu; Tablespace: 
+-- Name: density_data_parent_id_idx; Type: INDEX; Schema: public; Owner: adi; Tablespace: 
 --
 
 CREATE INDEX density_data_parent_id_idx ON density_data USING btree (parent_id);
 
 
 --
--- Name: day_window; Type: MATERIALIZED VIEW DATA; Schema: public; Owner: adicu
+-- Name: day_window; Type: MATERIALIZED VIEW DATA; Schema: public; Owner: adi
 --
 
 REFRESH MATERIALIZED VIEW day_window;
 
 
 --
--- Name: hour_window; Type: MATERIALIZED VIEW DATA; Schema: public; Owner: adicu
+-- Name: hour_window; Type: MATERIALIZED VIEW DATA; Schema: public; Owner: adi
 --
 
 REFRESH MATERIALIZED VIEW hour_window;
 
 
 --
--- Name: month_window; Type: MATERIALIZED VIEW DATA; Schema: public; Owner: adicu
+-- Name: month_window; Type: MATERIALIZED VIEW DATA; Schema: public; Owner: adi
 --
 
 REFRESH MATERIALIZED VIEW month_window;
 
 
 --
--- Name: week_window; Type: MATERIALIZED VIEW DATA; Schema: public; Owner: adicu
+-- Name: week_window; Type: MATERIALIZED VIEW DATA; Schema: public; Owner: adi
 --
 
 REFRESH MATERIALIZED VIEW week_window;
