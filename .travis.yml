@@ -39,7 +39,7 @@ before_script:
 script:
     - flake8 density/density.py
     - flake8 density/tests
-    - cd density && nosetests -sv tests/
+    - cd density && nosetests
 
 notifications:
       slack: adi-labs:tCeqXPsLSyIFe3yjfWfKLRYg
