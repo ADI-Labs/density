@@ -1,7 +1,13 @@
 {% extends "layout.html" %}
 {% block body %}
+
 <div class="container main-body">
-    <h1>Authentication successful!</h1>
+  {% if success %}
+    <h1> Welcome {{ uni }}! </h1>
+    <p> Your code is: {{ code }} </p>
+  {% else %}
+    <h1> {{ reason }} </h1>
+  {% endif %}
 </div>
 
 {% endblock %}

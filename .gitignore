@@ -32,3 +32,4 @@ bin/python*
 local
 
 scripts/density_dump.sql
+density/client_secrets.json
