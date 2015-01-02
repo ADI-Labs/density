@@ -10,7 +10,7 @@ CREATE TABLE oauth_data (
   code text NOT NULL
 );
 
-ALTER TABLE public.oauth_data OWNER to adicu;
+ALTER TABLE public.oauth_data OWNER to adi;
 
 COPY oauth_data (uni, code) FROM stdin;
 abc1234	abcdefghjijklmnopqrstuvwxyz
