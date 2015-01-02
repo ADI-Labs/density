@@ -13,6 +13,6 @@ flake8 density/density.py
 echo '--------------------------------------'
 echo '    unit testing'
 echo '--------------------------------------'
-cd /vagrant/density && nosetests -sv tests/
+nosetests -sv density/tests/
 
 

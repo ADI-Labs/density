@@ -74,7 +74,6 @@ def get_latest_data():
     """
 
     fetched_data = db.get_latest_data(g.cursor)
-
     return jsonify(data=fetched_data)
 
 
@@ -89,7 +88,6 @@ def get_latest_group_data(group_id):
     """
 
     fetched_data = db.get_latest_group_data(g.cursor, group_id)
-
     return jsonify(data=fetched_data)
 
 
@@ -203,11 +201,11 @@ def get_cap_group():
 
 @app.route('/capacity')
 def capacity():
-    """Render and show capacity page """
+    """ Render and show capacity page """
 
     # Read capacity of groups from json file
-    json_data = open('data/capacity_group.json')
-    cap_data = json.load(json_data)['data']
+    with open('data/capacity_group.json') as json_data:
+        cap_data = json.load(json_data)['data']
     # Read current data
     cur_data = db.get_latest_data(g.cursor)
     locations = []

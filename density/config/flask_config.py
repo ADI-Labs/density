@@ -1,4 +1,4 @@
- 
+
 """
 Collects settings from the environment and adds them to the app configuration.
 
@@ -33,5 +33,6 @@ except KeyError as e:
     """ Throw an error if a setting is missing """
     print "ERR MSG: {}".format(e.message)
     print ("Some of your settings aren't in the environment."
-           "You probably need to run:\n\n\tsource config/<your settings file>")
+           "You probably need to run:"
+           "\n\n\tsource config/<your settings file>")
     exit(1)
