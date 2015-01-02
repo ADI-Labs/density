@@ -6,9 +6,9 @@ DROP TABLE density_data CASCADE;
 CREATE TABLE density_data (
     dump_time       timestamp,
     group_id        integer,
-    group_name      text,
+    group_name      text NOT NULL,
     parent_id       integer,
-    parent_name     text,
+    parent_name     text NOT NULL,
     client_count    integer,
     PRIMARY KEY(dump_time, group_id)
 );
@@ -99,8 +99,8 @@ DROP TABLE oauth_data CASCADE;
 
 
 CREATE TABLE oauth_data (
-    uni             text,
-    code            text
+    uni  text NOT NULL,
+    code text NOT NULL
 );
 
 AlTER TABLE density_data OWNER TO adicu;

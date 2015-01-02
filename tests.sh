@@ -8,11 +8,11 @@ echo '    pep 8 complicance testing'
 echo '--------------------------------------'
 
 flake8 density/tests
-flake8 density/density.py
+flake8 density/
 
 echo '--------------------------------------'
 echo '    unit testing'
 echo '--------------------------------------'
-nosetests -sv density/tests/
+cd density && nosetests
 
 

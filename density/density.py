@@ -69,8 +69,8 @@ def authorization_required(func):
 
 @app.route('/home')
 def home():
-    return render_template('index.html', client_id=app.config['GOOGLE_CLIENT_ID'])
-    # return render_template('index.html', client_id="TEST TEST")
+    return render_template('index.html',
+                           client_id=app.config['GOOGLE_CLIENT_ID'])
 
 
 @app.route('/docs')
@@ -80,13 +80,13 @@ def docs():
 
 @app.route('/docs/building_info')
 def building_info():
-   """
-   Gets a json with the group ids, group names, parent ids, and parent names
-   """
+    """
+    Gets a json with the group ids, group names, parent ids, and parent names
+    """
 
-   fetched_data = db.get_building_info(g.cursor)
+    fetched_data = db.get_building_info(g.cursor)
 
-   return jsonify(data=fetched_data)
+    return jsonify(data=fetched_data)
 
 
 @app.route('/auth')
@@ -141,6 +141,7 @@ def auth():
         code = db.get_oauth_code_for_uni(g.cursor, uni)
         return render_template('auth.html', success=True, uni=uni, code=code)
     except:
+        # TODO: log errors
         return render_template('auth.html',
                                success=False,
                                reason="An error occurred. Please try again"
