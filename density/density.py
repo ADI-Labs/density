@@ -15,6 +15,9 @@ from db import db
 import re
 from functools import wraps
 
+
+cu_email_regex = "^(?P<uni>[a-z\d]+)@.*(columbia|barnard)\.edu$"
+
 # create a pool of postgres connections
 pg_pool = psycopg2.pool.SimpleConnectionPool(
     5,      # min connections
@@ -125,8 +128,7 @@ def auth():
         email = data["emails"][0]["value"]
 
         # Verify email is valid.
-        regex = re.match("^(?P<uni>[a-z\d]+)@.*(columbia|barnard)\.edu$",
-                         email)
+        regex = re.match(cu_email_regex, email)
 
         if not regex:
             return render_template('auth.html',

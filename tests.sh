@@ -7,8 +7,8 @@ echo '--------------------------------------'
 echo '    pep 8 complicance testing'
 echo '--------------------------------------'
 
-flake8 density/tests
 flake8 density/
+flake8 density/tests
 
 echo '--------------------------------------'
 echo '    unit testing'
