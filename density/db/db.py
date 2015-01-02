@@ -1,4 +1,3 @@
-import psycopg2
 import random
 import string
 
@@ -121,6 +120,7 @@ def get_window_based_on_parent(cursor, parent_id, start_time, end_time):
     cursor.execute(query, [start_time, end_time, parent_id, QUERY_LIMIT])
     return cursor.fetchall()
 
+
 def get_cap_group(cursor):
     """
     Gets the max capacity of all groups. Equation for max capacity is average +
@@ -143,6 +143,7 @@ def get_cap_group(cursor):
     cursor.execute(query)
     return cursor.fetchall()
 
+
 def get_building_info(cursor):
     """
     Gets names and ids for groups and parents
@@ -156,6 +157,7 @@ def get_building_info(cursor):
                  ;""".format(table_name=TABLE_NAME)
     cursor.execute(query)
     return cursor.fetchall()
+
 
 def get_oauth_code_for_uni(cursor, uni):
     """
@@ -171,14 +173,15 @@ def get_oauth_code_for_uni(cursor, uni):
     results = cursor.fetchall()
 
     if results:
-      return results[0]['code']
+        return results[0]['code']
     else:
-      # If the code doesn't exist, create a new one and insert into the database.
-      new_code = ''.join(random.choice(string.ascii_uppercase + string.digits) for x in xrange(32))
-      query = """INSERT INTO oauth_data (uni, code)
-                 VALUES (%s, %s);"""
-      cursor.execute(query, [uni, new_code])
-      return new_code
+        # If the code DNE, create a new one and insert into the database.
+        new_code = ''.join(random.choice(
+            string.ascii_uppercase + string.digits) for x in xrange(32))
+        query = """INSERT INTO oauth_data (uni, code)
+                   VALUES (%s, %s);"""
+        cursor.execute(query, [uni, new_code])
+        return new_code
 
 
 def get_uni_for_code(cursor, code):
@@ -193,6 +196,6 @@ def get_uni_for_code(cursor, code):
     cursor.execute(query, [code])
     results = cursor.fetchall()
     if results:
-      return results[0]['uni']
+        return results[0]['uni']
     else:
-      return None
+        return None
