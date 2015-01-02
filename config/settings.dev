@@ -11,11 +11,6 @@ export PG_PASSWORD="adicu"
 export PG_DB="density"
 export PG_HOST="localhost"
 export PG_PORT="5432"
-export PG_PAGE_LIMIT=250
-export PG_DEFAULT=20
-export RATE_LIMIT=200   # 60 minute window
 
-export PG_LIMIT="200"
-export PG_DEFAULT="200"
-
+export GOOGLE_CLIENT_ID="115421531871-jj9kl2nsp4ebjv26ggms597jq7s529b6.apps.googleusercontent.com"
 

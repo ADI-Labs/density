@@ -69,7 +69,8 @@ def authorization_required(func):
 
 @app.route('/home')
 def home():
-    return render_template('index.html')
+    return render_template('index.html', client_id=app.config['GOOGLE_CLIENT_ID'])
+    # return render_template('index.html', client_id="TEST TEST")
 
 
 @app.route('/docs')

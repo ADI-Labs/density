@@ -25,6 +25,9 @@ try:
     PG_HOST = environ['PG_HOST']
     PG_PORT = environ['PG_PORT']
 
+    # oauth settings
+    GOOGLE_CLIENT_ID = environ['GOOGLE_CLIENT_ID']
+
 except KeyError as e:
     """ Throw an error if a setting is missing """
     print "ERR MSG: {}".format(e.message)

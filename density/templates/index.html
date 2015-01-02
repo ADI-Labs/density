@@ -32,7 +32,7 @@ function login() {
     // Send params to Google+ API.
     var params = {
         'callback': signinCallback,
-        'clientid': '115421531871-jj9kl2nsp4ebjv26ggms597jq7s529b6.apps.googleusercontent.com',
+        'clientid': '{{ client_id }}',
         'scope': 'https://www.googleapis.com/auth/plus.profile.emails.read',
         'requestvisibleactions': 'http://schema.org/AddAction',
         'cookiepolicy': 'single_host_origin'
