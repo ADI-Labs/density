@@ -6,9 +6,9 @@ DROP TABLE density_data CASCADE;
 CREATE TABLE density_data (
     dump_time       timestamp,
     group_id        integer,
-    group_name      text,
+    group_name      text NOT NULL,
     parent_id       integer,
-    parent_name     text,
+    parent_name     text NOT NULL,
     client_count    integer,
     PRIMARY KEY(dump_time, group_id)
 );
@@ -95,10 +95,18 @@ CREATE MATERIALIZED VIEW month_window AS (
         date_trunc('month', dump_time)
 );
 
+DROP TABLE oauth_data CASCADE;
+
+
+CREATE TABLE oauth_data (
+    uni  text NOT NULL,
+    code text NOT NULL
+);
 
 AlTER TABLE density_data OWNER TO adicu;
 AlTER TABLE hour_window  OWNER TO adicu;
 AlTER TABLE day_window   OWNER TO adicu;
 AlTER TABLE week_window  OWNER TO adicu;
 AlTER TABLE month_window OWNER TO adicu;
+ALTER TABLE oauth_data   OWNER TO adicu;
 

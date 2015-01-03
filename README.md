@@ -18,11 +18,13 @@ Once vagrant is installed, you can run `vagrant up`, and vagrant will provision 
 
 To run the app, follow the these steps:
 
-    vagrant ssh
-    cd /vagrant
-    source config/settings.dev
-    cd density
-    python density.py
+```bash
+vagrant ssh
+cd /vagrant
+source config/settings.dev
+cd density
+python density.py
+```
 
 
 
@@ -30,14 +32,24 @@ To run the app, follow the these steps:
 
 ## Importing Dev Data
 
-TODO
-
 We use a partial dump of our data for quick-and-easy development.
 This gets loaded on VM provision by our Vagrant setup scripts.
 It contains a small subset and is not updated frequently, but is sufficient for most feature development and bug squashing.
-Please create a scripts folder and add density_dump.sql inside scripts to load the data.
+
+Be sure to also insert the [Oauth table](config/oauth_dev_dump.sql) so that you can make authenticated requests against the API.
 
 
+
+
+## Routes
+
+Supported routes currently include:
+
+```
+/       : Density homepage with "fullness" graphic
+/latest : APi endpoint providing the latest data available
+/home   : future API homepage that allows a user to obtain an API token
+```
 
 
 
@@ -69,3 +81,4 @@ TODO
 - Jessica Valarezo
 - Maclyn Brandwein
 - Jackie Ho
+- Dan Schlosser
