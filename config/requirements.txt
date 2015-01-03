@@ -9,4 +9,4 @@ pep8==1.5.7
 psycopg2==2.5.4
 pyflakes==0.8.1
 wsgiref==0.1.2
-gunicorn==19.1.1
+oauth2client==1.4.1

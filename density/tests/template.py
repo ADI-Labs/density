@@ -1,4 +1,3 @@
-
 import unittest
 import density
 
@@ -14,3 +13,8 @@ class TestingTemplate(unittest.TestCase):
     def tearDownClass(self):
         """ clean up databases """
         pass
+
+    @classmethod
+    def authenticated_get(self, url):
+        return self.app.get(url, headers={'Authorization-Token':
+                                          'abcdefghjijklmnopqrstuvwxyz'})

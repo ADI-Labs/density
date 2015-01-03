@@ -26,6 +26,7 @@ fi
 
 apt-get -y install postgresql-9.3
 sudo -u postgres psql < /vagrant/config/density_dump.sql
+sudo -u postgres psql < /vagrant/config/oauth_dev_dump.sql
 
 # install python
 apt-get install -y python \

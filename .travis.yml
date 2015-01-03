@@ -21,6 +21,7 @@ env:
     - PG_PAGE_LIMIT=250
     - PG_DEFAULT=20
     - RATE_LIMIT=200
+    - GOOGLE_CLIENT_ID="123.apps.googleusercontent.com"
 
 install:
   - pip install -r config/requirements.txt
@@ -38,6 +39,7 @@ before_script:
   - sudo -u postgres psql -c "CREATE DATABASE density;"
   - sudo -u postgres psql -c "GRANT CONNECT ON DATABASE density TO adi;"
   - sudo -u postgres psql density < ./config/density_dump.sql
+  - sudo -u postgres psql density < ./config/oauth_dev_dump.sql
   - sudo -u postgres psql -c "GRANT SELECT ON ALL TABLES IN SCHEMA public TO adi;"
 
 script:

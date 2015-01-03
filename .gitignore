@@ -30,5 +30,8 @@ bin/easy_install*
 bin/pip*
 bin/python*
 local
+man
+pip-selfcheck.json
 
 scripts/density_dump.sql
+density/client_secrets.json

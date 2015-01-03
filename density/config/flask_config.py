@@ -24,10 +24,9 @@ try:
     PG_DB = environ['PG_DB']
     PG_HOST = environ['PG_HOST']
     PG_PORT = environ['PG_PORT']
-    PG_PAGE_LIMIT = environ['PG_PAGE_LIMIT']
-    PG_DEFAULT = environ['PG_DEFAULT']
 
-    environ['RATE_LIMIT'] # check for existance
+    # oauth settings
+    GOOGLE_CLIENT_ID = environ['GOOGLE_CLIENT_ID']
 
 except KeyError as e:
     """ Throw an error if a setting is missing """
