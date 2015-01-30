@@ -28,6 +28,23 @@ try:
     # oauth settings
     GOOGLE_CLIENT_ID = environ['GOOGLE_CLIENT_ID']
 
+    if not DEBUG:
+        MAIL_SERVER = 'smtp.gmail.com'
+        MAIL_PORT = 465
+        MAIL_USE_SSL = True
+        MAIL_USE_TLS = False
+        MAIL_DEFAULT_SENDER = 'densitylogger@gmail.com'
+        MAIL_USERNAME = 'densitylogger@gmail.com'
+        MAIL_PASSWORD = environ['MAIL_PASSWORD']
+
+    # administrator list
+    ADMINS = ['bz2231@columbia.edu',
+        'dzh2101@columbia.edu',
+        'jgv2108@columbia.edu',
+        'sb3657@columbia.edu',
+        'mgb2163@columbia.edu',
+        'jzf2101@columbia.edu']
+
 except KeyError as e:
     """ Throw an error if a setting is missing """
     print "ERR MSG: {}".format(e.message)
