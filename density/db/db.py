@@ -86,7 +86,7 @@ def get_window_based_on_group(cursor, group_id, start_time, end_time):
                FROM {table_name}
                WHERE (
                     dump_time >= %s
-                    AND dump_time <= %s
+                    AND dump_time < %s
                ) AND group_id=%s
                ORDER BY dump_time DESC
                LIMIT %s
@@ -112,7 +112,7 @@ def get_window_based_on_parent(cursor, parent_id, start_time, end_time):
                FROM {table_name}
                WHERE (
                     dump_time >= %s
-                    AND dump_time <= %s
+                    AND dump_time < %s
                ) AND parent_id=%s
                ORDER BY dump_time DESC
                LIMIT %s
