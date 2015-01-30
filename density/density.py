@@ -214,7 +214,8 @@ def get_day_group_data(day, group_id):
 
     fetched_data = db.get_window_based_on_group(g.cursor, group_id, start_day,
                                                 end_day)
-
+    # Pop off first result because it corresponds to 00:00 of the next day
+    fetched_data = fetched_data[1:]
     return jsonify(data=fetched_data)
 
 
@@ -236,7 +237,8 @@ def get_day_building_data(day, parent_id):
 
     fetched_data = db.get_window_based_on_parent(g.cursor, parent_id,
                                                  start_day, end_day)
-
+    # Pop off first result because it corresponds to 00:00 of the next day
+    fetched_data = fetched_data[1:]
     return jsonify(data=fetched_data)
 
 
