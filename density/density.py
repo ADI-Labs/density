@@ -1,14 +1,17 @@
 from flask import Flask, g, jsonify, render_template, json, request
-
+from flask_mail import Message, Mail
 app = Flask(__name__)
+
 # do import early to check that all env variables are present
 app.config.from_object('config.flask_config')
+mail = Mail(app)
 
 # library imports
 import psycopg2
 import psycopg2.pool
 import psycopg2.extras
 import datetime
+import traceback
 from oauth2client.client import flow_from_clientsecrets
 import httplib2
 from db import db
@@ -53,6 +56,17 @@ def log_outcome(resp):
     # TODO: log the request and its outcome
     return resp
 
+@app.errorhandler(404)
+def page_not_found(e):
+    return jsonify(error="Page not found")
+
+@app.errorhandler(500)
+@app.errorhandler(Exception)
+def internal_error(e):
+    msg = Message("DENSITY ERROR", recipients = app.config['ADMINS'])
+    msg.body = traceback.format_exc()
+    mail.send(msg)
+    return jsonify(error="Something went wrong, the admins were notified.")
 
 def authorization_required(func):
     @wraps(func)
