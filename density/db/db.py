@@ -69,7 +69,7 @@ def get_latest_building_data(cursor, parent_id):
     return cursor.fetchall()
 
 
-def get_window_based_on_group(cursor, group_id, start_time, end_time):
+def get_window_based_on_group(cursor, group_id, start_time, end_time, offset):
     """
     Gets all data for a group within a window. It will return the latest 100
     rows starting with the most recent ones.
@@ -78,6 +78,7 @@ def get_window_based_on_group(cursor, group_id, start_time, end_time):
     :param int group_id: id of the group requested
     :param str start_time: start time of window
     :param str end_time: end time of the window
+    :param int offset: how much to offset the query by
     :return: list of dictionaries representing the rows corresponding to the
     query
     :rtype: list of dict
@@ -90,12 +91,13 @@ def get_window_based_on_group(cursor, group_id, start_time, end_time):
                ) AND group_id=%s
                ORDER BY dump_time DESC
                LIMIT %s
+               OFFSET %s
                ;""".format(table_name=TABLE_NAME)
-    cursor.execute(query, [start_time, end_time, group_id, QUERY_LIMIT])
+    cursor.execute(query, [start_time, end_time, group_id, QUERY_LIMIT, offset])
     return cursor.fetchall()
 
 
-def get_window_based_on_parent(cursor, parent_id, start_time, end_time):
+def get_window_based_on_parent(cursor, parent_id, start_time, end_time, offset):
     """
     Gets all data for a parent id (building) within a window. It will return
     the latest rows starting with the most recent ones.
@@ -104,6 +106,7 @@ def get_window_based_on_parent(cursor, parent_id, start_time, end_time):
     :param int parent_id: id of the group requested
     :param str start_time: start time of window
     :param str end_time: end time of the window
+    :param int offset: how much to offset the query by
     :return: list of dictionaries representing the rows corresponding to the
     query
     :rtype: list of dict
@@ -116,8 +119,10 @@ def get_window_based_on_parent(cursor, parent_id, start_time, end_time):
                ) AND parent_id=%s
                ORDER BY dump_time DESC
                LIMIT %s
+               OFFSET %s
                ;""".format(table_name=TABLE_NAME)
-    cursor.execute(query, [start_time, end_time, parent_id, QUERY_LIMIT])
+    cursor.execute(query, [start_time, end_time, parent_id, QUERY_LIMIT,
+                           offset])
     return cursor.fetchall()
 
 

@@ -252,11 +252,15 @@ def get_window_group_data(start_time, end_time, group_id):
     :return: JSON corresponding to the requested window and group
     :rtype: flask.Response
     """
-
+    offset = request.args.get('offset', type=int)
     fetched_data = db.get_window_based_on_group(g.cursor, group_id, start_time,
-                                                end_time)
-
-    return jsonify(data=fetched_data)
+                                                end_time, offset)
+    next_page_url = None
+    if len(fetched_data) == db.QUERY_LIMIT:
+        new_offset = offset + db.QUERY_LIMIT
+        next_page_url = request.base_url + '?auth_token=' + request.args.get(
+            'auth_token') + '&offset=' + str(new_offset)
+    return jsonify(data=fetched_data, next_page=next_page_url)
 
 
 @app.route('/window/<start_time>/<end_time>/building/<parent_id>')
@@ -271,11 +275,15 @@ def get_window_building_data(start_time, end_time, parent_id):
     :return: JSON corresponding to the requested window and building
     :rtype: flask.Response
     """
-
+    offset = request.args.get('offset', type=int)
     fetched_data = db.get_window_based_on_parent(g.cursor, parent_id,
-                                                 start_time, end_time)
-
-    return jsonify(data=fetched_data)
+                                                 start_time, end_time, offset)
+    next_page_url = None
+    if len(fetched_data) == db.QUERY_LIMIT:
+        new_offset = offset + db.QUERY_LIMIT
+        next_page_url = request.base_url + '?auth_token=' + request.args.get(
+            'auth_token') + '&offset=' + str(new_offset)
+    return jsonify(data=fetched_data, next_page=next_page_url)
 
 
 @app.route('/capacity/group')
