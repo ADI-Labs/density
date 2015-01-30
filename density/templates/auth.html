@@ -1,4 +1,4 @@
-{% extends "layout.html" %}
+{% extends "layout_no_header.html" %}
 
 {% block head %}
     {{ super() }}
@@ -6,7 +6,24 @@
 {% endblock %}
 
 {% block body %}
-
+<div class="logoContainer">
+    <div class="container">
+        <div class="text-center">
+            <img class="logo" src="{{ url_for('static', filename='logo.svg')}}">
+        </div>
+    </div>
+</div>
+{% if success %}
+{% else %}
+<div class="textContainer">
+	<div class="container">
+		<div>
+			<p class="about">Wireless Density Data for Columbia University</p>
+			<p>Welcome to Density, an API that gives Columbia developers access to wireless density data.</p>
+		</div>
+	</div>
+</div>
+{% endif %}
 <div class="container main-body">
   {% if success %}
     <h1> Welcome {{ uni }}! </h1>
@@ -15,12 +32,10 @@
     {% if reason %}
       <h1 style="color:red"> {{ reason }} </h1>
     {% endif %}
-    <h1>Wireless Density Data for Columbia University</h1>
-    <h5>Welcome to Density, an API that gives Columbia developers access to wireless density data.</h5>
 
     <h3>Getting access to the API</h3>
     <h5>To use the API, you will need a Columbia or Barnard e-mail address.</h5>
-    <button id='signinButton' onclick='login()'>
+    <button id='signinButton' onclick='login()' style="margin-bottom: 1em;">
         Get access
     </button>
 
@@ -46,5 +61,5 @@
 
   {% endif %}
 </div>
-
+</div>
 {% endblock %}
