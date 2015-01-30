@@ -57,18 +57,21 @@ def log_outcome(resp):
     # TODO: log the request and its outcome
     return resp
 
+
 @app.errorhandler(404)
 def page_not_found(e):
     return jsonify(error="Page not found")
+
 
 @app.errorhandler(500)
 @app.errorhandler(Exception)
 def internal_error(e):
     if not app.debug:
-        msg = Message("DENSITY ERROR", recipients = app.config['ADMINS'])
+        msg = Message("DENSITY ERROR", recipients=app.config['ADMINS'])
         msg.body = traceback.format_exc()
         mail.send(msg)
     return jsonify(error="Something went wrong, the admins were notified.")
+
 
 def authorization_required(func):
     @wraps(func)
