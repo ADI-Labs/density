@@ -38,13 +38,12 @@ try:
         MAIL_PASSWORD = environ['MAIL_PASSWORD']
 
     # administrator list
-    ADMINS = ['thebrianzeng@gmail.com',
+    ADMINS = ['bz2231@columbia.edu',
         'dzh2101@columbia.edu',
         'jgv2108@columbia.edu',
         'sb3657@columbia.edu',
-        'maclyn@maclyn.me',
-        'jzf2101@columbia.edu',
-        'benlowkh@gmail.com']
+        'mgb2163@columbia.edu',
+        'jzf2101@columbia.edu']
 
 except KeyError as e:
     """ Throw an error if a setting is missing """
