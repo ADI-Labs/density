@@ -2,13 +2,13 @@
 Columbia has shared with ADI a live stream of the nubmer of devices connected to routers at various locations on campus. New counts are added every fifteen minutes. 
 
 ###Get an API Key
-API keys are [available](density.adicu.com/auth) for Columbia univserity affiliates with valid email addresses `uni@*.columbia.edu` `uni@barnard.edu`
+API keys are [available](http://density.adicu.com/auth) for Columbia univserity affiliates with valid email addresses `uni@*.columbia.edu` `uni@barnard.edu`
 
 Visit [density.adicu.com/auth](density.adicu.com/auth) and click on `get access`
 
 
 ###Definitions
-Please see [desnity.adicu.com/docs/building_info](desnity.adicu.com/docs/building_info) for a table of the available building names, group names, building id's and group id's. 
+Please see [http://desnity.adicu.com/docs/building_info](http://desnity.adicu.com/docs/building_info) for a table of the available building names, group names, building id's and group id's. 
 
 - Building
   - Lerner, John Jay, etc.
@@ -18,10 +18,8 @@ Please see [desnity.adicu.com/docs/building_info](desnity.adicu.com/docs/buildin
 - Inputs
   - group_id
     - The numerical ID of the router group.
-    - A table of id's will be given to the user when a bad id is provided.
-  - building_id
-    - The numerical ID of the building.
-    - A table of id's will be given to the user when a bad id is provided.
+  - building_id a.k.a. parent_id   
+    - The numerical ID of the building.        
   - time
   	- Times are in Eastern Standard Time
   	- Please use [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601) formatting: `YYYY-MM-DDThh:mm`
@@ -57,9 +55,9 @@ Please see [desnity.adicu.com/docs/building_info](desnity.adicu.com/docs/buildin
     }
     ```
 - Ranged Data
-  - **/range/\<start_time\>/\<end_time\>/group/\<group_id\>**
+  - **/window/\<start_time\>/\<end_time\>/group/\<group_id\>**
     - Returns the data points within the specified range of times for the group.
-  - **/range/\<start_time\>/\<end_time\>/building/\<building_id\>**
+  - **/window/\<start_time\>/\<end_time\>/building/\<building_id\>**
     - Returns the data points within the specified range of times for the building.
   - ** Return Format **
     - next_start_time - The next time (for pagination)
@@ -101,20 +99,10 @@ Please see [desnity.adicu.com/docs/building_info](desnity.adicu.com/docs/buildin
     }
     ```
 
-- Custom Time Frame Aggregate
-  - **/window/\<time\>/group/\<group_id\>**
-    - Returns the aggregate data for the specified time range and group.
-  - **/window/\<time\>/building/\<building_id\>**
-    - Returns the aggregate data for the specified time range and building.
-  - **Return Format**
-    - See Day Aggregate
-
 ###Errors
-
-Not implemented yet!
-
-
-###Rate limiting
-
-Not implemented yet!
+- Authentication
+  - "No authorization token provided."
+	- No authentication token was provided with your request. API requests must include authentication tokens, acquired at http://density.adicu.com/auth
+  - "Invalid authentication token."
+    - An expired or improper authentication token was used with your request. Ensure you're using the most recent token generated with your e-mail. 
 
