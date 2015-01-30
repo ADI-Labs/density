@@ -11,10 +11,10 @@ Visit [density.adicu.com/auth](density.adicu.com/auth) and click on `get access`
 Please see [desnity.adicu.com/docs/building_info](desnity.adicu.com/docs/building_info) for a table of the available building names, group names, building id's and group id's. 
 
 - Building
-  - Lerner Hall, Hamilton Hall, etc.
+  - Lerner, John Jay, etc.
 - Group
-  - Some buildings have multiple routers, which are grouped together.
-  - Lerner-1, Hamilton-3, etc.
+  - Some buildings have multiple routers which are grouped together, typically by floor.
+  - Lerner-1, Butler-2, etc.
 - Inputs
   - group_id
     - The numerical ID of the router group.
