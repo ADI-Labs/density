@@ -89,6 +89,14 @@ p {
     padding: 50px;
 }
 
+.docs-formatting  p {
+	color: #000000;
+}
+
+.docs-formatting a {
+	color: #D75F5D;
+}
+
 .thanksContainer {
     background-color: #f8725d;
     color: #ffffff;
