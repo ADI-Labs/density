@@ -54,7 +54,7 @@ Please see [http://density.adicu.com/docs/building_info](http://density.adicu.co
     - Returns the aggregate data for the specified day and building.
  - **Return Format**	
   	
-  	- Dictionary of data with client_count, dumptime, group_id, group_name, parent_id, and parent_name 	
+  	- JSON with client_count, dumptime, group_id, group_name, parent_id, and parent_name 	
     
     ```
 	{
