@@ -1,12 +1,19 @@
+##Overview
+Columbia has shared with ADI a live stream of the nubmer of devices connected to routers at various locations on campus. New counts are added every fifteen minutes. 
+
 ###Get an API Key
-API keys are available for Columbia univserity affiliates with valid email addresses `uni@*.columbia.edu` `uni@barnard.edu`
+API keys are [available](density.adicu.com/auth) for Columbia univserity affiliates with valid email addresses `uni@*.columbia.edu` `uni@barnard.edu`
+
+Visit [density.adicu.com/auth](density.adicu.com/auth) and click on `get access`
 
 
 ###Definitions
+Please see [desnity.adicu.com/docs/building_info](desnity.adicu.com/docs/building_info) for a table of the available building names, group names, building id's and group id's. 
+
 - Building
   - Lerner Hall, Hamilton Hall, etc.
 - Group
-  - Each building has multiple routers, which are grouped together.
+  - Some buildings have multiple routers, which are grouped together.
   - Lerner-1, Hamilton-3, etc.
 - Inputs
   - group_id
@@ -15,13 +22,9 @@ API keys are available for Columbia univserity affiliates with valid email addre
   - building_id
     - The numerical ID of the building.
     - A table of id's will be given to the user when a bad id is provided.
-  - day
-    - Use ISO 8601 formatting!
-    - http://en.wikipedia.org/wiki/ISO_8601
   - time
-    - **TODO**: Figure out the format of the time range
-- Outputs
-  - **TODO**: Figure out output format.
+  	- Times are in Eastern Standard Time
+  	- Please use [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601) formatting: `YYYY-MM-DDThh:mm`
 
 ###Routes
 - Latest Data
