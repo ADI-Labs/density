@@ -150,9 +150,13 @@ def get_building_info(cursor):
 
     :param cursor:
     """
-    query = """SELECT DISTINCT
+    query = """SELECT
                  group_name, group_id, parent_name, parent_id
                  FROM {table_name}
+                 WHERE dump_time=(
+                    SELECT MAX(dump_time)
+                    FROM {table_name}
+                 )
                  ORDER BY parent_name, group_name;
                  ;""".format(table_name=TABLE_NAME)
     cursor.execute(query)
