@@ -59,7 +59,9 @@ def authorization_required(func):
     def authorization_checker(*args, **kwargs):
         token = request.headers.get('Authorization-Token')
         if not token:
-            return jsonify(error="No authorization token provided.")
+            token = request.args.get('auth_token')
+            if not token:
+                return jsonify(error="No authorization token provided.")
 
         uni = db.get_uni_for_code(g.cursor, token)
         if not uni:
@@ -107,8 +109,7 @@ def auth():
     code = request.args.get('code')
     if not code:
         return render_template('auth.html',
-                               success=False,
-                               reason="You need to log in!")
+                               success=False)
 
     try:
         # Exchange code for email address.
@@ -133,7 +134,7 @@ def auth():
         if not regex:
             return render_template('auth.html',
                                    success=False,
-                                   reason="You need to log in with your"
+                                   reason="You need to log in with your "
                                    + "Columbia or Barnard email! You logged "
                                    + "in with: "
                                    + email)
@@ -146,8 +147,7 @@ def auth():
         # TODO: log errors
         return render_template('auth.html',
                                success=False,
-                               reason="An error occurred. Please try again"
-                               + "later.")
+                               reason="An error occurred. Please try again.")
 
 
 @app.route('/latest')
