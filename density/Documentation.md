@@ -2,13 +2,13 @@
 Columbia has shared with ADI a live stream of the nubmer of devices connected to routers at various locations on campus. New counts are added every fifteen minutes. 
 
 ###Get an API Key
-API keys are [available](http://density.adicu.com/auth) for Columbia univserity affiliates with valid email addresses `uni@*.columbia.edu` `uni@barnard.edu`
+API keys are [available](http://density.adicu.com/auth) for Columbia univserity affiliates with valid email addresses `uni@*.columbia.edu` `uni@barnard.edu`.
 
-Visit [density.adicu.com/auth](density.adicu.com/auth) and click on `get access`
+Visit [density.adicu.com/auth](density.adicu.com/auth) and click on `get access`.
 
 
 ###Definitions
-Please see [http://desnity.adicu.com/docs/building_info](http://desnity.adicu.com/docs/building_info) for a table of the available building names, group names, building id's and group id's. 
+Please see [http://density.adicu.com/docs/building_info](http://density.adicu.com/docs/building_info) for a table of the available building names, group names, building id's and group id's. 
 
 - Building
   - Lerner, John Jay, etc.
@@ -37,6 +37,7 @@ Please see [http://desnity.adicu.com/docs/building_info](http://desnity.adicu.co
     - name - Name of router group
     - client_count - Number of devices connected
     - parent_id - Building ID.
+    
     ```
     {
       "results": {
@@ -63,6 +64,7 @@ Please see [http://desnity.adicu.com/docs/building_info](http://desnity.adicu.co
     - next_start_time - The next time (for pagination)
     - < ID > - the building or group ID
     - count - number of data points
+    
     ```
     {
       "next_start_time": "2014-10-27",
@@ -90,6 +92,7 @@ Please see [http://desnity.adicu.com/docs/building_info](http://desnity.adicu.co
     - average - Average number of devices connected.
     - minimum - Minimum number of devices connected.
     - maximum - Maximum number of devices connected.
+    
     ```
     {
       "start_time": "2014-03-28",
