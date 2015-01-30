@@ -18,5 +18,5 @@ class TestAuth(unittest.TestCase):
 
         for email, res in cases:
             self.assertEqual(
-                bool(re.match(density.cu_email_regex, email)),
+                bool(re.match(density.CU_EMAIL_REGEX, email)),
                 res)

@@ -143,8 +143,9 @@ def auth():
         uni = regex.group('uni')
         code = db.get_oauth_code_for_uni(g.cursor, uni)
         return render_template('auth.html', success=True, uni=uni, code=code)
-    except:
+    except Exception as e:
         # TODO: log errors
+        print e
         return render_template('auth.html',
                                success=False,
                                reason="An error occurred. Please try again.")
