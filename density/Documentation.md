@@ -4,7 +4,16 @@ Columbia has shared with ADI a live stream of the number of devices connected to
 ###Get an API Key
 API keys are [available](http://density.adicu.com/auth) for Columbia University affiliates with valid email addresses `uni@*.columbia.edu` `uni@barnard.edu`.
 
-Visit [density.adicu.com/auth](density.adicu.com/auth) and click on `get access`.
+Visit [density.adicu.com/auth](density.adicu.com/auth) and click on `get access`. 
+
+###Using API Keys
+Most routes require an API key to return data. Without the API key, you'll get an error (described under errors). 
+
+To include the API key in your request, you can either:
+   
+   - Append `?auth_token=[your auth token]` to your query URL.
+    
+   - Include a header parameter `Authorization-Token` with your auth token in your request. 
 
 
 ###Definitions
@@ -32,74 +41,32 @@ Please see [http://density.adicu.com/docs/building_info](http://density.adicu.co
     - Returns the most recent data for the specified group.
   - **/latest/building/\<building_id\>**
     - Returns the most recent data for the speciifed building.
-  - **Return Format**
-    - Dictionary with router group ID as the key.
-    - name - Name of router group
-    - client_count - Number of devices connected
-    - parent_id - Building ID.
-    
-    ```
-    {
-      "results": {
-        "152": {
-          "name": "Lerner 3",
-          "client_count": 70,
-          "parent_id": 84
-        }.
-        "130": {
-          "name": "Butler Library 3",
-          "client_count": 328,
-          "parent_id": 103
-        }
-        ...
-      }
-    }
-    ```
 - Ranged Data
   - **/window/\<start_time\>/\<end_time\>/group/\<group_id\>**
     - Returns the data points within the specified range of times for the group.
   - **/window/\<start_time\>/\<end_time\>/building/\<building_id\>**
     - Returns the data points within the specified range of times for the building.
-  - ** Return Format **
-    - next_start_time - The next time (for pagination)
-    - < ID > - the building or group ID
-    - count - number of data points
-    
-    ```
-    {
-      "next_start_time": "2014-10-27",
-      "< ID >": 152,
-      "count": 100,
-      "results": [
-        {
-          "start_time": "2014-10-20",
-          "average": 10,
-          "minimum": 0,
-          "maximum": 100
-        },
-        ...
-      ]
-    }
-    ```
 
 - Day Aggregate
   - **/day/\<day\>/group/\<group_id\>**
     - Returns the aggregate data for the specified day and group.
   - **/day/\<day\>/building/\<building_id\<**
     - Returns the aggregate data for the specified day and building.
-  - **Return Format (TENTATIVE)**
-    - start_time - The start of the time frame.
-    - average - Average number of devices connected.
-    - minimum - Minimum number of devices connected.
-    - maximum - Maximum number of devices connected.
+ - **Return Format**	
+  	
+  	- JSON with client_count, dumptime, group_id, group_name, parent_id, and parent_name 	
     
     ```
+	{
+  "data": [
     {
-      "start_time": "2014-03-28",
-      "average": 10,
-      "minimum": 0,
-      "maximum": 100
-    }
+      "client_count": 2, 
+      "dump_time": "Fri, 02 Jan 2015 00:00:00 GMT", 
+      "group_id": 23, 
+      "group_name": "Uris/Watson Library", 
+      "parent_id": 2, 
+      "parent_name": "Uris"
+    }, 
     ```
 
 ###Errors
