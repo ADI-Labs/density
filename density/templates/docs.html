@@ -77,8 +77,8 @@
 <li>time
 
 <ul>
-<li>Times are in Eastern Standard Time</li>
-<li>Please use <a href="http://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a> formatting: <code>YYYY-MM-DDThh:mm</code></li>
+<li>Times are in <strong>Eastern Standard Time</strong>.  See Errors below for timezone issues. </li>
+<li>Please use <a href="http://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a> formatting: <code>YYYY-MM-DD</code> or <code>YYYY-MM-DDThh:mm</code></li>
 </ul>
 </li>
 </ul>
@@ -112,9 +112,10 @@
 </li>
 </ul>
 </li>
-<li><p>Ranged Data</p>
+<li>Ranged Data
 
 <ul>
+  <li>Ranged data includes data up to <strong>but not including</strong> the end time</li>
 <li><strong>/window/&lt;start_time>/&lt;end_time>/group/&lt;group_id></strong>
 
 <ul>
@@ -124,12 +125,25 @@
 <li><strong>/window/&lt;start_time>/&lt;end_time>/building/&lt;building_id></strong>
 
 <ul>
-<li>Returns the data points within the specified range of times for the building.</li>
+<li>Returns the data points within the specified range of times for the building.</li></li></ul>
+<li>For longer time ranges, the API returns paginated data for every 100 entries.
+In order to get to the next hundred entries, we provide a url at the end of the page.</li>
+
 </ul>
-</li>
-</ul>
-</li>
-<li><p>Day Aggregate</p>
+
+<pre><code> {
+    client_count: 699,
+    dump_time: "Wed, 29 Oct 2014 16:45:00 GMT",
+    group_id: 23,
+    group_name: "Uris/Watson Library",
+    parent_id: 2,
+    parent_name: "Uris"
+  }
+],
+next_page: "http://density.adicu.com/window/2014-10-29T05:00/2014-11-29T15:45/building/2?auth_token=your_token&offset=301"
+</code></pre>
+
+<li>Day Aggregate
 
 <ul>
 <li><strong>/day/&lt;day>/group/&lt;group_id></strong>
@@ -138,7 +152,7 @@
 <li>Returns the aggregate data for the specified day and group.</li>
 </ul>
 </li>
-<li><strong>/day/&lt;day>/building/&lt;building_id&lt;</strong>
+<li><strong>/day/&lt;day>/building/&lt;building_id></strong>
 
 <ul>
 <li>Returns the aggregate data for the specified day and building.</li>
@@ -146,7 +160,7 @@
 </li>
 </ul>
 </li>
-<li><p><strong>Return Format</strong></p>
+<li>Return Format
 
 <ul>
 <li>JSON with client_count, dumptime, group_id, group_name, parent_id, and parent_name</li>
@@ -172,6 +186,8 @@
 <p>Parameter errors will be returned in JSON format with a string representation of the error under the field <code>error</code>.</p>
 
 <ul>
+<li>JSON responses list dump_time as being in GMT when the times are in <strong>EST</strong></li>
+
 <li>Authentication
 
 <ul>
