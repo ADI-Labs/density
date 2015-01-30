@@ -14,5 +14,182 @@
             <p>To access this API, you'll need to <a href="https://density.adicu.com/auth">get an API key</a> by logging in with your Columbia-affiliated email.</p>
         </div>
     </div>
-</div>	
+</div>
+<div class="listContainer">
+<div class="container">
+<div class="list-group">
+<h2>Overview</h2>
+
+<p>Columbia has shared with ADI a live stream of the number of devices connected to routers at various locations on campus. New counts are added every fifteen minutes.</p>
+
+<h3>Get an API Key</h3>
+
+<p>API keys are <a href="http://density.adicu.com/auth">available</a> for Columbia University affiliates with valid email addresses <code>uni@*.columbia.edu</code> <code>uni@barnard.edu</code>.</p>
+
+<p>Visit <a href="density.adicu.com/auth">density.adicu.com/auth</a> and click on <code>get access</code>.</p>
+
+<h3>Using API Keys</h3>
+
+<p>Most routes require an API key to return data. Without the API key, you'll get an error (described under errors).</p>
+
+<p>To include the API key in your request, you can either:</p>
+
+<ul>
+<li><p> Append <code>?auth_token=[your auth token]</code> to your query URL.</p></li>
+<li><p> Include a header parameter <code>Authorization-Token</code> with your auth token in your request.</p></li>
+</ul>
+
+
+<h3>Definitions</h3>
+
+<p>Please see <a href="http://density.adicu.com/docs/building_info">http://density.adicu.com/docs/building_info</a> for a table of the available building names, group names, building ids and group ids.</p>
+
+<ul>
+<li>Building
+
+<ul>
+<li>Lerner, John Jay, etc.</li>
+</ul>
+</li>
+<li>Group
+
+<ul>
+<li>Some buildings have multiple routers which are grouped together, typically by floor.</li>
+<li>Lerner-1, Butler-2, etc.</li>
+</ul>
+</li>
+<li>Inputs
+
+<ul>
+<li>group_id
+
+<ul>
+<li>The numerical ID of the router group.</li>
+</ul>
+</li>
+<li>building_id a.k.a. parent_id
+
+<ul>
+<li>The numerical ID of the building.</li>
+</ul>
+</li>
+<li>time
+
+<ul>
+<li>Times are in Eastern Standard Time</li>
+<li>Please use <a href="http://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a> formatting: <code>YYYY-MM-DDThh:mm</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+
+<h3>Routes</h3>
+
+<ul>
+<li>Latest Data
+
+<ul>
+<li><strong>/latest</strong>
+
+<ul>
+<li>Returns the most recent data.</li>
+</ul>
+</li>
+<li><strong>/latest/group/&lt;group_id></strong>
+
+<ul>
+<li>Returns the most recent data for the specified group.</li>
+</ul>
+</li>
+<li><strong>/latest/building/&lt;building_id></strong>
+
+<ul>
+<li>Returns the most recent data for the speciifed building.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Ranged Data</p>
+
+<ul>
+<li><strong>/window/&lt;start_time>/&lt;end_time>/group/&lt;group_id></strong>
+
+<ul>
+<li>Returns the data points within the specified range of times for the group.</li>
+</ul>
+</li>
+<li><strong>/window/&lt;start_time>/&lt;end_time>/building/&lt;building_id></strong>
+
+<ul>
+<li>Returns the data points within the specified range of times for the building.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Day Aggregate</p>
+
+<ul>
+<li><strong>/day/&lt;day>/group/&lt;group_id></strong>
+
+<ul>
+<li>Returns the aggregate data for the specified day and group.</li>
+</ul>
+</li>
+<li><strong>/day/&lt;day>/building/&lt;building_id&lt;</strong>
+
+<ul>
+<li>Returns the aggregate data for the specified day and building.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Return Format</strong></p>
+
+<ul>
+<li>JSON with client_count, dumptime, group_id, group_name, parent_id, and parent_name</li>
+</ul>
+
+
+<pre><code> {
+"data": [
+ {
+   "client_count": 2, 
+   "dump_time": "Fri, 02 Jan 2015 00:00:00 GMT", 
+   "group_id": 23, 
+   "group_name": "Uris/Watson Library", 
+   "parent_id": 2, 
+   "parent_name": "Uris"
+ }, 
+</code></pre></li>
+</ul>
+
+
+<h3>Errors</h3>
+
+<p>Parameter errors will be returned in JSON format with a string representation of the error under the field <code>error</code>.</p>
+
+<ul>
+<li>Authentication
+
+<ul>
+<li>"No authorization token provided."
+
+<ul>
+<li>No authentication token was provided with your request. API requests must include authentication tokens, acquired at http://density.adicu.com/auth.</li>
+</ul>
+</li>
+<li>"Invalid authentication token."
+
+<ul>
+<li>An expired or improper authentication token was used with your request. Ensure you're using the most recent token generated with your e-mail.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>	
+</div>
+</div>
+</div>
 {% endblock %}
