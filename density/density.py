@@ -210,12 +210,13 @@ def get_day_group_data(day, group_id):
 
     # Convert to datetime object
     start_day = datetime.datetime.strptime(day, "%Y-%m-%d")
-    end_day = start_day + datetime.timedelta(1)
+    # Add a day and subtract a minute so midnight of the next day is not
+    # included
+    end_day = start_day + datetime.timedelta(days=1) - datetime.timedelta(
+        minutes=1)
 
     fetched_data = db.get_window_based_on_group(g.cursor, group_id, start_day,
                                                 end_day)
-    # Pop off first result because it corresponds to 00:00 of the next day
-    fetched_data = fetched_data[1:]
     return jsonify(data=fetched_data)
 
 
@@ -233,12 +234,13 @@ def get_day_building_data(day, parent_id):
 
     # Convert to datetime object
     start_day = datetime.datetime.strptime(day, "%Y-%m-%d")
-    end_day = start_day + datetime.timedelta(1)
+    # Add a day and subtract a minute so midnight of the next day is not
+    # included
+    end_day = start_day + datetime.timedelta(days=1) - datetime.timedelta(
+        minutes=1)
 
     fetched_data = db.get_window_based_on_parent(g.cursor, parent_id,
                                                  start_day, end_day)
-    # Pop off first result because it corresponds to 00:00 of the next day
-    fetched_data = fetched_data[1:]
     return jsonify(data=fetched_data)
 
 
