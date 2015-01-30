@@ -6,8 +6,8 @@ export DEBUG=TRUE
 export SECRET_KEY=abc123   # don't share production secret
 
 
-export PG_USER="adicu"
-export PG_PASSWORD="adicu"
+export PG_USER="adi"
+export PG_PASSWORD="adi"
 export PG_DB="density"
 export PG_HOST="localhost"
 export PG_PORT="5432"
