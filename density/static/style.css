@@ -1,5 +1,6 @@
 html, body {
     min-height: 100%;
+    background-color: #F0F0F0;
 }
 
 .navbar {
@@ -63,6 +64,7 @@ p {
 
 .main-body {
     min-height: 90%;
+    height: 24em;
 }
 
 .footer {
