@@ -308,11 +308,11 @@ def capacity():
     # and store it in locations
     for cap in cap_data:
 
-        groupName = cap['group_name']
+        group_name = cap['group_name']
         capacity = cap['capacity']
 
         for latest in cur_data:
-            if latest['group_name'] == groupName:
+            if latest['group_name'] == group_name:
                 cur_client_count = latest['client_count']
                 break
         # Cast one of the numbers into a float, get a percentile by multiplying
@@ -321,10 +321,10 @@ def capacity():
         if percent_full > 100:
             percent_full = 100
 
-        if groupName == 'Butler Library stk':
-            groupName = 'Butler Library Stacks'
+        if group_name == 'Butler Library stk':
+            group_name = 'Butler Library Stacks'
 
-        locations.append({"name": groupName, "fullness": percent_full})
+        locations.append({"name": group_name, "fullness": percent_full})
 
     return render_template('capacity.html', locations=locations)
 
