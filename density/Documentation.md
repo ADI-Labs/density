@@ -1,14 +1,14 @@
 ##Overview
-Columbia has shared with ADI a live stream of the nubmer of devices connected to routers at various locations on campus. New counts are added every fifteen minutes. 
+Columbia has shared with ADI a live stream of the number of devices connected to routers at various locations on campus. New counts are added every fifteen minutes. 
 
 ###Get an API Key
-API keys are [available](http://density.adicu.com/auth) for Columbia univserity affiliates with valid email addresses `uni@*.columbia.edu` `uni@barnard.edu`.
+API keys are [available](http://density.adicu.com/auth) for Columbia University affiliates with valid email addresses `uni@*.columbia.edu` `uni@barnard.edu`.
 
 Visit [density.adicu.com/auth](density.adicu.com/auth) and click on `get access`.
 
 
 ###Definitions
-Please see [http://density.adicu.com/docs/building_info](http://density.adicu.com/docs/building_info) for a table of the available building names, group names, building id's and group id's. 
+Please see [http://density.adicu.com/docs/building_info](http://density.adicu.com/docs/building_info) for a table of the available building names, group names, building ids and group ids. 
 
 - Building
   - Lerner, John Jay, etc.
@@ -103,9 +103,11 @@ Please see [http://density.adicu.com/docs/building_info](http://density.adicu.co
     ```
 
 ###Errors
+Parameter errors will be returned in JSON format with a string representation of the error under the field `error`.
+
 - Authentication
   - "No authorization token provided."
-	- No authentication token was provided with your request. API requests must include authentication tokens, acquired at http://density.adicu.com/auth
+	- No authentication token was provided with your request. API requests must include authentication tokens, acquired at http://density.adicu.com/auth.
   - "Invalid authentication token."
     - An expired or improper authentication token was used with your request. Ensure you're using the most recent token generated with your e-mail. 
 
