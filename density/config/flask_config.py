@@ -28,13 +28,14 @@ try:
     # oauth settings
     GOOGLE_CLIENT_ID = environ['GOOGLE_CLIENT_ID']
 
-    MAIL_SERVER = 'smtp.gmail.com'
-    MAIL_PORT = 465
-    MAIL_USE_SSL = True
-    MAIL_USE_TLS = False
-    MAIL_DEFAULT_SENDER = 'densitylogger@gmail.com'
-    MAIL_USERNAME = 'densitylogger@gmail.com'
-    MAIL_PASSWORD = 'adicudensity'
+    if not DEBUG:
+        MAIL_SERVER = 'smtp.gmail.com'
+        MAIL_PORT = 465
+        MAIL_USE_SSL = True
+        MAIL_USE_TLS = False
+        MAIL_DEFAULT_SENDER = 'densitylogger@gmail.com'
+        MAIL_USERNAME = 'densitylogger@gmail.com'
+        MAIL_PASSWORD = environ['MAIL_PASSWORD']
 
     # administrator list
     ADMINS = ['thebrianzeng@gmail.com',
