@@ -355,6 +355,7 @@ def capacity():
 
     return render_template('capacity.html', locations=locations)
 
+
 @app.route('/map')
 def map():
     """ Render and show maps page """
@@ -392,7 +393,7 @@ def map():
                           "parentId": parentId, "parentName": parentName})
 
     # Render template has an SVG image whose colors are changed by % full
-    return render_template('map.html', locations=locations);
+    return render_template('map.html', locations=locations)
 
 if __name__ == '__main__':
     app.run(host=app.config['HOST'])
