@@ -11,7 +11,7 @@
     <div class="container">
         <div>
             <p class="about">This is the <strong>documentation</strong> page for the Density API.</p>
-            <p>To access this API, you'll need to <a href="https://density.adicu.com/auth">get an API key</a> by logging in with your Columbia-affiliated email.</p>
+            <p>To access this API, you'll need to <a href="http://density.adicu.com/auth">get an API key</a> by logging in with your Columbia-affiliated email.</p>
         </div>
     </div>
 </div>
@@ -166,7 +166,6 @@ next_page: "http://density.adicu.com/window/2014-10-29T05:00/2014-11-29T15:45/bu
 <li>JSON with client_count, dumptime, group_id, group_name, parent_id, and parent_name</li>
 </ul>
 
-
 <pre><code> {
 "data": [
  {
@@ -180,6 +179,47 @@ next_page: "http://density.adicu.com/window/2014-10-29T05:00/2014-11-29T15:45/bu
 </code></pre></li>
 </ul>
 
+<h3>Example</h3>
+
+<p>This example grabs data from January 14th at 8:00 AM to 9:30 PM using a <code>window</code> endpoint query.</p>
+
+<ul>
+<li>Input URL</li>
+<pre><code>http://density.adicu.com/window/2014-10-10T08:00/2014-10-10T21:30/building/75?auth_token=[auth token]
+</code></pre>
+<li>Result</li>
+<pre><code>{
+  "data": [
+    {
+      "client_count": 4, 
+      "dump_time": "Fri, 10 Oct 2014 21:15:00 GMT", 
+      "group_id": 155, 
+      "group_name": "JJ's Place", 
+      "parent_id": 75, 
+      "parent_name": "John Jay"
+    }, 
+    {
+      "client_count": 3, 
+      "dump_time": "Fri, 10 Oct 2014 21:15:00 GMT", 
+      "group_id": 125, 
+      "group_name": "John Jay Dining Hall", 
+      "parent_id": 75, 
+      "parent_name": "John Jay"
+    }, 
+    ...
+    {
+      "client_count": 6, 
+      "dump_time": "Fri, 10 Oct 2014 09:00:00 GMT", 
+      "group_id": 125, 
+      "group_name": "John Jay Dining Hall", 
+      "parent_id": 75, 
+      "parent_name": "John Jay"
+    }
+  ], 
+  "next_page": "http://density.adicu.com/window/2014-10-10T08:00/2014-10-10T21:30/building/75?auth_token=[auth token]&offset=100"
+} 
+</code></pre>
+</ul>
 
 <h3>Errors</h3>
 
