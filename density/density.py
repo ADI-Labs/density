@@ -232,7 +232,7 @@ def get_day_group_data(day, group_id):
     end_day = start_day + datetime.timedelta(days=1)
 
     fetched_data = db.get_window_based_on_group(g.cursor, group_id, start_day,
-                                                end_day)
+                                                end_day, offset=0)
     return jsonify(data=fetched_data)
 
 
@@ -253,7 +253,7 @@ def get_day_building_data(day, parent_id):
     end_day = start_day + datetime.timedelta(days=1)
 
     fetched_data = db.get_window_based_on_parent(g.cursor, parent_id,
-                                                 start_day, end_day)
+                                                 start_day, end_day, offset=0)
     return jsonify(data=fetched_data)
 
 
@@ -269,7 +269,8 @@ def get_window_group_data(start_time, end_time, group_id):
     :return: JSON corresponding to the requested window and group
     :rtype: flask.Response
     """
-    offset = request.args.get('offset', type=int)
+    offset = request.args.get('offset', type=int) if request.args.get(
+        'offset') else 0
     fetched_data = db.get_window_based_on_group(g.cursor, group_id, start_time,
                                                 end_time, offset)
     next_page_url = None
@@ -292,7 +293,8 @@ def get_window_building_data(start_time, end_time, parent_id):
     :return: JSON corresponding to the requested window and building
     :rtype: flask.Response
     """
-    offset = request.args.get('offset', type=int)
+    offset = request.args.get('offset', type=int) if request.args.get(
+        'offset') else 0
     fetched_data = db.get_window_based_on_parent(g.cursor, parent_id,
                                                  start_time, end_time, offset)
     next_page_url = None
