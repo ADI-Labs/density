@@ -36,8 +36,8 @@ document.getElementById('map').addEventListener("load", function(){
 	var defs = document.getElementById('gradientFills');
 	var popup = document.getElementById('locationPopup');
 
-	var initialOffsetTop = map.getBoundingClientRect().top;
-	var initialOffsetLeft = map.getBoundingClientRect().left;
+	var initialOffsetTop = map.getBoundingClientRect().top + window.scrollY;
+	var initialOffsetLeft = map.getBoundingClientRect().left + window.scrollX;
 	
 	//Create a mapping from parent_id --> text representation
 	var parentToText = new Object();
