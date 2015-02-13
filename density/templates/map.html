@@ -1,0 +1,131 @@
+{% extends "layout_no_header.html" %}
+{% block body %}
+<div class="logoContainer">
+    <div class="container">
+        <div class="text-center">
+            <img class="logo" src="{{ url_for('static', filename='logo.svg')}}">
+        </div>
+    </div>
+</div>
+<div class="textContainer">
+    <div class="container">
+        <div>
+            <p class="about"><strong>DENSITY</strong> estimates how full study spaces are on campus, using a live feed of Wi-Fi access data that updates every 15 minutes.</p>
+            <p><strong>DENSITY</strong> by ADI is built and maintained by <a href="https://adicu.com/labs">ADI Labs</a> in collaboration with <a href="http://columbiaesc.com/">ESC</a> and <a href="https://cuit.columbia.edu/">CUIT</a>.</p>
+            <p>Map image by <a href="http://www.columbia.edu/files/columbia/content/walking-tour-and-map-3.pdf">Columbia University</a>.</p>
+        </div>
+    </div>
+</div>
+<div class="listContainer">
+    <div class="container">
+		<object id="map" data="{{ url_for('static', filename='map.svg') }}">
+		</object>
+
+		<!-- Definition for a mouseover popup that appears when you're over a valid map element -->
+		<div id="locationPopup" class="popup" />
+    </div>
+</div>
+
+<!-- Script for populating map colors -->
+<script type="text/javascript">
+document.getElementById('map').addEventListener("load", function(){
+	//Iterate through locations and display their data
+	var locations = {{ locations|tojson }};
+	var map = document.getElementById('map');
+	var innerSvg = map.contentDocument;
+	var defs = document.getElementById('gradientFills');
+	var popup = document.getElementById('locationPopup');
+
+	var initialOffsetTop = map.getBoundingClientRect().top;
+	var initialOffsetLeft = map.getBoundingClientRect().left;
+	
+	//Create a mapping from parent_id --> text representation
+	var parentToText = new Object();
+	//Create a mapping from parent_id --> list full %s for elements inside (e.g. floors of a building)
+	var parentToList = new Object();
+	//Create a mapping from parent_id --> query (http://....hours)
+	var parentToQuery = new Object();
+	
+	for(var i = 0; i < locations.length; i++){ 
+		if(locations[i].name != "Butler Library stk"){ //We're skipping this out of non-use]
+			if(parentToList[locations[i].parentId] == null){
+				parentToList[locations[i].parentId] = new Object();
+			}
+			if(parentToText[locations[i].parentId] == null){
+				parentToText[locations[i].parentId] = "<b>" + locations[i].parentName + "</b><br /><br />";
+			}
+			if(parentToQuery[locations[i].parentId] == null){
+				parentToQuery[locations[i].parentId] = "https://www.google.com/#q=" + escape("Columbia University " + locations[i].parentName + " hours");
+			}
+			
+			parentToList[locations[i].parentId][locations[i].name] = locations[i].fullness;
+			parentToText[locations[i].parentId] += locations[i].name + ": " + locations[i].fullness + "%" + "<br />";
+		}
+	}
+	
+	//Iterate through mappings keys to set opacity for the element by fullness and better data on mouseover
+	var keySet = Object.keys(parentToList);
+	for(var key in keySet){
+		var keyValue = keySet[key];
+		var list = parentToList[keyValue];
+		
+		var count = 0;
+		var totalFullness = 0;
+		for(var entry in list){
+			totalFullness += parentToList[keyValue][entry];
+			count++;
+		}
+		
+		if(count != 0){
+			var percent = (totalFullness / count); //Should be from [0, 100]
+			var buildingElement = innerSvg.getElementById('parent_' + keyValue); //i.e. parent_43
+			if(buildingElement != null){
+				buildingElement.style.opacity = percent / 100;
+			}
+			
+			buildingElement.onmousedown = function(event){
+				var location = this.id.replace("parent_", "");
+				var query = parentToQuery[location];
+				window.open(query);
+			}
+
+			buildingElement.onmouseenter = function(event){
+				popup.style.visibility = 'visible';
+				var leftPosition = (initialOffsetLeft + event.clientX - 
+					(popup.offsetWidth/2)).toString() + "px";
+				var topPosition = (initialOffsetTop - 4 + event.clientY -
+					(popup.offsetHeight)).toString() + "px";
+				popup.style.top = topPosition;
+				popup.style.left = leftPosition;
+				var location = this.id.replace("parent_", "");
+				popup.innerHTML = (parentToText[location]);
+			}
+
+			buildingElement.onmouseout = function(){
+				// Mouseout took place when mouse actually left layer
+				// Handle event
+				//console.log("real mouseout");
+				//popup.style.visibility = 'hidden';
+			}
+
+			buildingElement.onmousemove = function(event){
+				var leftPosition = (initialOffsetLeft + event.clientX - 
+					(popup.offsetWidth/2)).toString() + "px";
+				var topPosition = (initialOffsetTop - 4 + event.clientY -
+					(popup.offsetHeight)).toString() + "px";
+				popup.style.top = topPosition;
+				popup.style.left = leftPosition;
+			}
+		}
+	}
+});
+</script>
+
+
+<div class="thanksContainer">
+    <div class="container">
+        <h4>Special thanks to <img class="logo escLogo" src="{{ url_for('static', filename='esc.png')}}">
+        </h4>
+    </div>
+</div>
+{% endblock %}
