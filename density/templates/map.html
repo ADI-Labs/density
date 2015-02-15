@@ -52,7 +52,8 @@ document.getElementById('map').addEventListener("load", function(){
 				parentToList[locations[i].parentId] = new Object();
 			}
 			if(parentToText[locations[i].parentId] == null){
-				parentToText[locations[i].parentId] = "<b>" + locations[i].parentName + "</b><br /><br />";
+				parentToText[locations[i].parentId] = "<b>" + locations[i].parentName + "</b><br />" +
+					"<em>Click to view hours</em><br /><br />";
 			}
 			if(parentToQuery[locations[i].parentId] == null){
 				parentToQuery[locations[i].parentId] = "https://www.google.com/#q=" + escape("Columbia University " + locations[i].parentName + " hours");
@@ -98,14 +99,11 @@ document.getElementById('map').addEventListener("load", function(){
 				popup.style.top = topPosition;
 				popup.style.left = leftPosition;
 				var location = this.id.replace("parent_", "");
-				popup.innerHTML = (parentToText[location]);
+				popup.innerHTML = parentToText[location];
 			}
 
 			buildingElement.onmouseout = function(){
-				// Mouseout took place when mouse actually left layer
-				// Handle event
-				//console.log("real mouseout");
-				//popup.style.visibility = 'hidden';
+				popup.style.visibility = 'hidden';
 			}
 
 			buildingElement.onmousemove = function(event){

@@ -137,11 +137,10 @@ p {
 
 .popup {
     visibility: hidden;
+    background-color: #468fcc;
+    color: #fff;
     padding: 1em;
-    border-style: solid;
-    border-width: 0.25em;
     max-width: 30em;
     max-height: 100em;
     position: absolute;
-    background-color: white;
 }
