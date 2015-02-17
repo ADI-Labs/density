@@ -58,8 +58,7 @@ def unsafe_date(*keys):
                 arg_date = request.view_args.get(dt)
                 try:
                     datetime.datetime.strptime(arg_date, request_date_format)
-                except ValueError as e:
-                    print e
+                except ValueError:
                     return jsonify(error=("Invalid datetime format, "
                                           "'{}', please use YYYY-MM-DD format")
                                    .format(arg_date)), 400
