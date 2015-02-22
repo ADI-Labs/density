@@ -41,6 +41,38 @@ Be sure to also insert the [Oauth table](config/oauth_dev_dump.sql) so that you 
 
 
 
+
+
+## Docker
+
+The Docker container requires that either the port for the Postgres instance is forward or that the host is set to an exact IP or domain.
+
+Using Docker:
+
+```bash
+# enter the project directory
+cd density
+
+# builds a Docker image
+#   -t dictates that the image is tagged as 'density'
+docker build -t density .
+
+# runs a docker container tagged as 'density'
+#   --net=host forwards all ports from the host to the container
+#       this allows docker to access the Postres port, 5432
+#   -e allows setting environment variables within the container
+#   -d detaches the process and runs the container like a daemon
+docker run --net=host -e SECRET_KEY=abc -d density
+
+# ps shows all docker containers currently running
+docker ps
+```
+
+
+
+
+
+
 ## Routes
 
 Supported routes currently include:

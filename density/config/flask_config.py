@@ -13,10 +13,10 @@ from sys import exit
 
 try:
     # flask settings
-    HOST = environ['HOST']
-    PORT = environ['PORT']
+    HOST = environ.get('HOST', '0.0.0.0')
+    PORT = environ.get('PORT', 5000)
     SECRET_KEY = environ['SECRET_KEY']
-    DEBUG = True if environ['DEBUG'] == 'TRUE' else False
+    DEBUG = True if environ.get('DEBUG') == 'TRUE' else False
 
     # postgres settings
     PG_USER = environ['PG_USER']
