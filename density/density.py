@@ -21,6 +21,7 @@ from functools import wraps
 
 
 CU_EMAIL_REGEX = r"^(?P<uni>[a-z\d]+)@.*(columbia|barnard)\.edu$"
+request_date_format = '%Y-%m-%d'
 
 # create a pool of postgres connections
 pg_pool = psycopg2.pool.SimpleConnectionPool(
@@ -46,6 +47,25 @@ def return_connections():
     """ Return the connection to the Postgres connection pool. """
     g.cursor.close()
     pg_pool.putconn(g.pg_conn)
+
+
+def unsafe_date(*keys):
+    """ Takes URL parameters to filter as an argument """
+    def dec(fn):
+        @wraps(fn)
+        def validate_datetime(*args, **kwargs):
+            for dt in keys:
+                arg_date = request.view_args.get(dt)
+                try:
+                    datetime.datetime.strptime(arg_date, request_date_format)
+                except ValueError:
+                    return jsonify(error=("Invalid datetime format, "
+                                          "'{}', please use YYYY-MM-DD format")
+                                   .format(arg_date)), 400
+
+            return fn(*args, **kwargs)
+        return validate_datetime
+    return dec
 
 
 @app.after_request
@@ -216,6 +236,7 @@ def get_latest_building_data(parent_id):
 
 
 @app.route('/day/<day>/group/<group_id>')
+@unsafe_date('day')
 @authorization_required
 def get_day_group_data(day, group_id):
     """
@@ -237,6 +258,7 @@ def get_day_group_data(day, group_id):
 
 
 @app.route('/day/<day>/building/<parent_id>')
+@unsafe_date('day')
 @authorization_required
 def get_day_building_data(day, parent_id):
     """

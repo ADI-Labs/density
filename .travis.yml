@@ -43,7 +43,7 @@ before_script:
   - sudo -u postgres psql -c "GRANT SELECT ON ALL TABLES IN SCHEMA public TO adi;"
 
 script:
-  - flake8 density/density.py
+  - flake8 density/
   - flake8 density/tests
   - cd density && nosetests
 

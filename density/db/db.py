@@ -93,11 +93,13 @@ def get_window_based_on_group(cursor, group_id, start_time, end_time, offset):
                LIMIT %s
                OFFSET %s
                ;""".format(table_name=TABLE_NAME)
-    cursor.execute(query, [start_time, end_time, group_id, QUERY_LIMIT, offset])
+    cursor.execute(query, [start_time, end_time, group_id, QUERY_LIMIT,
+                           offset])
     return cursor.fetchall()
 
 
-def get_window_based_on_parent(cursor, parent_id, start_time, end_time, offset):
+def get_window_based_on_parent(cursor, parent_id, start_time, end_time,
+                               offset):
     """
     Gets all data for a parent id (building) within a window. It will return
     the latest rows starting with the most recent ones.

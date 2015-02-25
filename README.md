@@ -82,4 +82,6 @@ TODO
 - Maclyn Brandwein
 - Jackie Ho
 - Dan Schlosser
+- Terra Blevins
+- Evan Tarrh
 - Raymond Xu
