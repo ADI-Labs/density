@@ -64,6 +64,10 @@ document.getElementById('map').addEventListener("load", function(){
 		}
 	}
 	
+	console.dir(parentToList);
+	console.dir(parentToText);
+	console.dir(parentToQuery);
+
 	//Iterate through mappings keys to set opacity for the element by fullness and better data on mouseover
 	var keySet = Object.keys(parentToList);
 	for(var key in keySet){
@@ -80,6 +84,8 @@ document.getElementById('map').addEventListener("load", function(){
 		if(count != 0){
 			var percent = (totalFullness / count); //Should be from [0, 100]
 			var buildingElement = innerSvg.getElementById('parent_' + keyValue); //i.e. parent_43
+			console.log(parentToText[keyValue]);
+			console.log(keyValue);
 			if(buildingElement != null){
 				buildingElement.style.opacity = percent / 100;
 			}
