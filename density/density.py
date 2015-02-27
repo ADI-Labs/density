@@ -329,6 +329,13 @@ def capacity():
         cap_data = json.load(json_data)['data']
     # Read current data
     cur_data = db.get_latest_data(g.cursor)
+    locations = calculate_capacity(cap_data, cur_data)
+    return render_template('capacity.html', locations=locations)
+
+#Calculates capacity with cap_data and cur_data and puts with respective
+#group_name into locations
+def calculate_capacity(cap_data, cur_data):
+    
     locations = []
 
     # Loop to find corresponding cur_client_count with capacity
@@ -352,9 +359,7 @@ def capacity():
             group_name = 'Butler Library Stacks'
 
         locations.append({"name": group_name, "fullness": percent_full})
-
-    return render_template('capacity.html', locations=locations)
-
+    return locations
 
 if __name__ == '__main__':
     app.run(host=app.config['HOST'])
