@@ -134,3 +134,41 @@ p {
 .progress-bar-info {
     background-color: #468fcc;
 }
+
+
+@media screen and (max-width: 640px) {
+	.listContainer {
+		width: 100%;
+		padding: 0;
+	}
+
+	.container {
+		width: 100%;
+		padding: 0;
+	}
+
+	.logo {
+		max-width: 100%;
+        max-height: 100%;
+	}
+
+	.list-group-item {
+		margin-bottom: 10px;
+	}
+
+	p {
+		padding: 0px 15px;
+	}
+
+    .left {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    .right {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+}
