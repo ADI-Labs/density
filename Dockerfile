@@ -1,4 +1,3 @@
-
 # use Docker's provided python image
 FROM python:2.7
 MAINTAINER natebrennand <natebrennand@gmail.com>
@@ -13,4 +12,4 @@ WORKDIR /density
 
 # expose the port and start the server
 EXPOSE 5000
-CMD python density.py
+CMD gunicorn density
