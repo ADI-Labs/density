@@ -1,5 +1,17 @@
 #!/usr/bin/env bash
 
+
+# add swap if DNE
+# swap is necessary for using Docker
+if [ $(sudo swapon -s | wc -l) -eq 1 ]
+then
+    fallocate -l 2G /swapfile
+    chmod 600 /swapfile
+    mkswap /swapfile
+    swapon /swapfile
+fi
+
+
 # installs the package passed in if it's not installed
 install () {
     package=$1
@@ -41,5 +53,11 @@ pip install flake8  # for local testing
 
 # install vim
 install vim
+
+# install docker
+install docker.io
+
+
+
 
 exit 0
