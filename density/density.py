@@ -3,9 +3,13 @@ from flask_mail import Message, Mail
 app = Flask(__name__)
 
 # do import early to check that all env variables are present
-app.config.from_object('config.flask_config')
 if not app.debug:
     mail = Mail(app)
+
+# change the default JSON encoder to handle datetime's properly
+from config import flask_config
+app.config.from_object('config.flask_config')
+app.json_encoder = flask_config.CustomJSONEncoder
 
 # library imports
 import psycopg2
