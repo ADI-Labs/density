@@ -60,7 +60,10 @@ except KeyError as e:
 """ Creates a json encoder that returns ISO 8601 strings for datetimes
     http://flask.pocoo.org/snippets/119/ """
 from flask.json import JSONEncoder
+
+
 class CustomJSONEncoder(JSONEncoder):
+
     def default(self, obj):
         try:
             if isinstance(obj, datetime):
