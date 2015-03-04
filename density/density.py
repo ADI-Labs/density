@@ -1,14 +1,6 @@
 from flask import Flask, g, jsonify, render_template, json, request
 from flask_mail import Message, Mail
-app = Flask(__name__)
 
-# do import early to check that all env variables are present
-from config import flask_config
-app.config.update(**flask_config.config)
-if not app.debug:
-    mail = Mail(app)
-
-# library imports
 import psycopg2
 import psycopg2.pool
 import psycopg2.extras
@@ -19,6 +11,12 @@ import httplib2
 from db import db
 import re
 from functools import wraps
+
+from config import flask_config
+app = Flask(__name__)
+app.config.update(**flask_config.config)
+if not app.debug:
+    mail = Mail(app)
 
 
 CU_EMAIL_REGEX = r"^(?P<uni>[a-z\d]+)@.*(columbia|barnard)\.edu$"
@@ -163,8 +161,8 @@ def auth():
         http = httplib2.Http()
         http = credentials.authorize(http)
 
-        h, content = http.request('https://www.googleapis.com/plus/v1/people/'
-                                  + gplus_id, 'GET')
+        h, content = http.request(
+            'https://www.googleapis.com/plus/v1/people/' + gplus_id, 'GET')
         data = json.loads(content)
         email = data["emails"][0]["value"]
 
@@ -174,10 +172,9 @@ def auth():
         if not regex:
             return render_template('auth.html',
                                    success=False,
-                                   reason="You need to log in with your "
-                                   + "Columbia or Barnard email! You logged "
-                                   + "in with: "
-                                   + email)
+                                   reason="You need to log in with your " +
+                                   "Columbia or Barnard email! You logged " +
+                                   "in with: " + email)
 
         # Get UNI and ask database for code.
         uni = regex.group('uni')
