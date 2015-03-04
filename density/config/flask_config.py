@@ -40,7 +40,7 @@ consul_configurations = [  # consul key --> config key
 if config.get('DEBUG'):
 
     try:  # use local settings
-        for k, v in config:
+        for k, v in config.iteritems():
             if not v:
                 config[k] = environ[k]
 
