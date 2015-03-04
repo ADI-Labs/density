@@ -9,7 +9,7 @@ if not app.debug:
 # change the default JSON encoder to handle datetime's properly
 from config import flask_config
 app.config.from_object('config.flask_config')
-app.json_encoder = flask_config.CustomJSONEncoder
+app.json_encoder = flask_config.ISO8601Encoder
 
 # library imports
 import psycopg2

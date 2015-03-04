@@ -62,7 +62,7 @@ except KeyError as e:
 from flask.json import JSONEncoder
 
 
-class CustomJSONEncoder(JSONEncoder):
+class ISO8601Encoder(JSONEncoder):
 
     def default(self, obj):
         try:
