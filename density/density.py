@@ -172,9 +172,9 @@ def auth():
         if not regex:
             return render_template('auth.html',
                                    success=False,
-                                   reason="You need to log in with your " +
-                                   "Columbia or Barnard email! You logged " +
-                                   "in with: " + email)
+                                   reason=("You need to log in with your "
+                                           "Columbia or Barnard email! You "
+                                           "logged in with: " + email))
 
         # Get UNI and ask database for code.
         uni = regex.group('uni')
