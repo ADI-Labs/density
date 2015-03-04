@@ -56,8 +56,26 @@ install vim
 
 # install docker
 install docker.io
+service restart docker.io
 
+install curl
+install unzip
 
+# install consul if it is not already present
+if [[ ! $(which consul) ]]
+then
+    mkdir -p /var/lib/consul
+    mkdir -p /usr/share/consul
+    mkdir -p /etc/consul/conf.d
+
+    curl -OL https://dl.bintray.com/mitchellh/consul/0.5.0_linux_amd64.zip
+    unzip 0.5.0_linux_amd64.zip
+    mv consul /usr/local/bin/consul
+
+    curl -OL https://dl.bintray.com/mitchellh/consul/0.5.0_web_ui.zip
+    unzip 0.5.0_web_ui.zip
+    mv dist /usr/share/consul/ui
+fi
 
 
 exit 0

@@ -72,6 +72,21 @@ docker ps
 
 
 
+## Consul
+
+[Consul](https://consul.io/) is a distributed key/value store that we are using to configure Density in production.
+You should not need to intereact with Consul unless you are attempting to deploy it.
+
+Consul is installed within the Vagrant VM automatically.
+It can be started with the script at `config/run_consul.sh`.
+The web UI is located at [port 8500](http://localhost:8500).
+
+
+
+
+
+
+
 
 ## Routes
 
