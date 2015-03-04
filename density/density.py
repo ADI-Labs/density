@@ -3,7 +3,8 @@ from flask_mail import Message, Mail
 app = Flask(__name__)
 
 # do import early to check that all env variables are present
-app.config.from_object('config.flask_config')
+from config import flask_config
+app.config.update(**flask_config.config)
 if not app.debug:
     mail = Mail(app)
 
