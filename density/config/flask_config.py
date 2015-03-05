@@ -38,11 +38,10 @@ consul_configurations = [  # consul key --> config key
 ]
 
 if config.get('DEBUG'):
-
     try:  # use local settings
-        for k, v in config.iteritems():
-            if not v:
-                config[k] = environ[k]
+        for env_key, value in config.iteritems():
+            if not value:
+                config[env_key] = environ[env_key]
 
     except KeyError as e:
         """ Throw an error if a setting is missing """
@@ -56,12 +55,13 @@ else:  # prod w/ consul
     from consul import Consul
     kv = Consul().kv  # initalize client to KV store
 
-    for k, v in consul_configurations:
-        _, tmp = kv.get("density/{}".format(k))  # density is the root key
+    for consul_key, config_key in consul_configurations:
+        _, tmp = kv.get("density/{}".format(consul_key))
         val = tmp.get('Value')
-        config[v] = val
         if not val:
-            raise Exception("no val found in Consul for density/{}".format(k))
+            config[config_key] = val
+            raise Exception(("no value found in Consul for key "
+                             "density/{}").format(consul_key))
 
     # mail settings
     MAIL_SERVER = 'smtp.gmail.com'
