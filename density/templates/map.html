@@ -16,14 +16,11 @@
         </div>
     </div>
 </div>
-<div class="listContainer">
-    <div class="container">
-		<object id="map" data="{{ url_for('static', filename='map.svg') }}">
-		</object>
-
-		<!-- Definition for a mouseover popup that appears when you're over a valid map element -->
-		<div id="locationPopup" class="popup"></div>
-</div>
+<div id="mapContainer">
+	<object id="map" data="{{ url_for('static', filename='map.svg') }}">
+	</object>
+	<!-- Definition for a mouseover popup that appears when you're over a valid map element -->
+	<div id="locationPopup" class="popup"></div>
 </div>
 
 <!-- Script for populating map colors -->

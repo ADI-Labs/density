@@ -91,6 +91,16 @@ p {
     padding: 50px;
 }
 
+#mapContainer {
+    width: 100%;
+    padding: 50px 0;
+    text-align: center;
+}
+
+#map {
+    max-width: 100%;
+}
+
 .docs-formatting  p {
 	color: #000000;
 }
