@@ -427,17 +427,12 @@ def capacity():
 def map():
     """ Render and show maps page """
 
-    # This part behaves like the capacity function
-    # Read capacity of groups from json file
-    with open('data/capacity_group.json') as json_data:
-        cap_data = json.load(json_data)['data']
-    # Read current data
     cur_data = db.get_latest_data(g.cursor)
     locations = []
 
     # Loop to find corresponding cur_client_count with capacity
     # and store it in locations
-    for cap in cap_data:
+    for cap in FULL_CAP_DATA:
         groupName = cap['group_name']
         capacity = cap['capacity']
         parentId = cap['parent_id']
