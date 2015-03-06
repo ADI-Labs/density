@@ -139,6 +139,14 @@ p {
     display: none;
 }
 
+.mobile {
+    display: none;
+}
+
+.nomobile {
+    display: block;
+}
+
 @media screen and (max-width: 640px) {
     .logoContainer {
         padding: 10px;
@@ -162,17 +170,34 @@ p {
 		padding: 0;
 	}
 
+    #expandable {
+        max-height: 0;
+        overflow: hidden;
+        -webkit-transition: 0.6s ease max-height;
+        -moz-transition: 0.6s ease max-height;
+        -o-transition: 0.6s ease max-height;
+        transition: 0.6s ease max-height;
+    }
+
+    #expandable.expanded {
+        max-height: 10rem;
+    }
+
 	.logo {
 		max-width: 100%;
         max-height: 100%;
 	}
 
-    .about {
-        font-size: 14px;
+    .mobile {
+        display: block;
+    }
+
+    .nomobile {
+        display: none;
     }
 
 	.list-group-item {
-		margin-bottom: 10px;
+		margin-bottom: 1px;
         padding: 8px 30px;
     }
 
@@ -188,8 +213,7 @@ p {
         display: none;
     }
 
-    .footer-text-mobile {
-        display: block;
+    .footer-text {
         text-align: center;
     }
 
