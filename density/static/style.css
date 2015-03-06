@@ -135,12 +135,27 @@ p {
     background-color: #468fcc;
 }
 
+.footer-text-mobile {
+    display: none;
+}
 
 @media screen and (max-width: 640px) {
+    .logoContainer {
+        padding: 10px;
+    }
+
+    .textContainer {
+        padding: 10px 0px;
+    }
+
 	.listContainer {
 		width: 100%;
 		padding: 0;
 	}
+
+    .thanksContainer {
+        padding: 10px 0px;
+    }
 
 	.container {
 		width: 100%;
@@ -152,23 +167,33 @@ p {
         max-height: 100%;
 	}
 
+    .about {
+        font-size: 14px;
+    }
+
 	.list-group-item {
 		margin-bottom: 10px;
-	}
+        padding: 8px 30px;
+    }
 
 	p {
 		padding: 0px 15px;
 	}
 
     .left {
-        margin-left: auto;
-        margin-right: auto;
-        text-align: center;
+        display: none;
     }
 
     .right {
-        margin-left: auto;
-        margin-right: auto;
+        display: none;
+    }
+
+    .footer-text-mobile {
+        display: block;
         text-align: center;
+    }
+
+    .footer {
+        padding: 15px 20px;
     }
 }
