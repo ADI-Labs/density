@@ -58,8 +58,8 @@ else:  # prod w/ consul
     for consul_key, config_key in consul_configurations:
         _, tmp = kv.get("density/{}".format(consul_key))
         val = tmp.get('Value')
+        config[config_key] = val
         if not val:
-            config[config_key] = val
             raise Exception(("no value found in Consul for key "
                              "density/{}").format(consul_key))
 

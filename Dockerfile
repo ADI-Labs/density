@@ -12,4 +12,4 @@ WORKDIR /density
 
 # expose the port and start the server
 EXPOSE 5000
-CMD gunicorn density
+CMD gunicorn density:app -b 0.0.0.0:5000 --log-level debug
