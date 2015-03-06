@@ -70,31 +70,37 @@ document.getElementById('map').addEventListener("load", function(){
 		var keyValue = keySet[key];
 		var list = parentToList[keyValue];
 		
+		//find average fullness for location (this is for locations w/ multiple floors)
 		var count = 0;
 		var totalFullness = 0;
 		for(var entry in list){
 			totalFullness += parentToList[keyValue][entry];
 			count++;
 		}
+
+		//number of pixels offset to separate popup from mouse
+		var mouseOffset = 4;
 		
 		if(count != 0){
 			var percent = (totalFullness / count); //Should be from [0, 100]
-			var buildingElement = innerSvg.getElementById('parent_' + keyValue); //i.e. parent_43
+			var buildingElement = innerSvg.getElementById('parent_' + keyValue); //e.g. parent_43
 			if(buildingElement != null){
 				buildingElement.style.opacity = percent / 100;
 			}
 			
+			//opens new window with google search for hours
 			buildingElement.onmousedown = function(event){
 				var location = this.id.replace("parent_", "");
 				var query = parentToQuery[location];
 				window.open(query);
 			}
 
+			//displays popup at location of mouse
 			buildingElement.onmouseenter = function(event){
 				popup.style.visibility = 'visible';
 				var leftPosition = (initialOffsetLeft + event.clientX - 
 					(popup.offsetWidth/2)).toString() + "px";
-				var topPosition = (initialOffsetTop - 4 + event.clientY -
+				var topPosition = (initialOffsetTop - mouseOffset + event.clientY -
 					(popup.offsetHeight)).toString() + "px";
 				popup.style.top = topPosition;
 				popup.style.left = leftPosition;
@@ -106,10 +112,11 @@ document.getElementById('map').addEventListener("load", function(){
 				popup.style.visibility = 'hidden';
 			}
 
+			//moves popup with mouse
 			buildingElement.onmousemove = function(event){
 				var leftPosition = (initialOffsetLeft + event.clientX - 
 					(popup.offsetWidth/2)).toString() + "px";
-				var topPosition = (initialOffsetTop - 4 + event.clientY -
+				var topPosition = (initialOffsetTop - mouseOffset + event.clientY -
 					(popup.offsetHeight)).toString() + "px";
 				popup.style.top = topPosition;
 				popup.style.left = leftPosition;
