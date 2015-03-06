@@ -62,11 +62,13 @@ docker build -t density .
 #       this allows docker to access the Postres port, 5432
 #   -e allows setting environment variables within the container
 #   -d detaches the process and runs the container like a daemon
-docker run --net=host -e SECRET_KEY=abc -d density
+docker run --net=host -d density
 
 # ps shows all docker containers currently running
 docker ps
 ```
+
+Running Density within Docker relies on an instance of Consul being run on `localhost:8500` which is used to configure the settings.
 
 
 

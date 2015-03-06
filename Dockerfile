@@ -11,5 +11,5 @@ ADD ./density /density
 WORKDIR /density
 
 # expose the port and start the server
-EXPOSE 5000
-CMD gunicorn density
+EXPOSE 6002
+CMD gunicorn density:app -b 0.0.0.0:6002 --log-file /opt/logs/gunicorn.log --log-level debug
