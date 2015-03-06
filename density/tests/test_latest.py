@@ -26,7 +26,13 @@ class TestLatestRoute(template.TestingTemplate):
             "parent_id": 146,
             "parent_name": "Avery"
         }]
-        result_percent = 5 / 22.0 * 100
+        # Extract capacity of lib from FULL_CAP_DATA
+        AFALibrary1_capacity = 0
+        for cap in density.FULL_CAP_DATA:
+            if cap['group_id'] == 147:
+                AFALibrary1_capacity = cap['capacity']
+                break
+        result_percent = 5.0 / AFALibrary1_capacity * 100
         result_data = [{
             "client_count": 5,
             "dump_time": "Sat, 01 Nov 2014 19:45:00 GMT",
