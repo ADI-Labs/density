@@ -146,6 +146,7 @@ p {
 }
 
 .popup {
+    text-align: left;
     visibility: hidden;
     background-color: #468fcc;
     color: #fff;
