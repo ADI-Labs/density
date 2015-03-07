@@ -9,6 +9,7 @@ in the config object as well.
 
 from os import environ
 from sys import exit
+from datetime import datetime
 
 
 try:
@@ -54,3 +55,22 @@ except KeyError as e:
            "You probably need to run:"
            "\n\n\tsource config/<your settings file>")
     exit(1)
+
+
+""" Creates a json encoder that returns ISO 8601 strings for datetimes
+    http://flask.pocoo.org/snippets/119/ """
+from flask.json import JSONEncoder
+
+
+class ISO8601Encoder(JSONEncoder):
+
+    def default(self, obj):
+        try:
+            if isinstance(obj, datetime):
+                return obj.isoformat()
+            iterable = iter(obj)
+        except TypeError:
+            pass
+        else:
+            return list(iterable)
+        return JSONEncoder.default(self, obj)
