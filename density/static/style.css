@@ -91,6 +91,16 @@ p {
     padding: 50px;
 }
 
+#mapContainer {
+    width: 100%;
+    padding: 50px 0;
+    text-align: center;
+}
+
+#map {
+    max-width: 100%;
+}
+
 .docs-formatting  p {
 	color: #000000;
 }
@@ -133,4 +143,15 @@ p {
 
 .progress-bar-info {
     background-color: #468fcc;
+}
+
+.popup {
+    text-align: left;
+    visibility: hidden;
+    background-color: #468fcc;
+    color: #fff;
+    padding: 1em;
+    max-width: 30em;
+    max-height: 100em;
+    position: absolute;
 }

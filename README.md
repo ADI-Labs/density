@@ -55,14 +55,14 @@ cd density
 
 # builds a Docker image
 #   -t dictates that the image is tagged as 'density'
-docker build -t density .
+sudo docker build -t density .
 
 # runs a docker container tagged as 'density'
 #   --net=host forwards all ports from the host to the container
 #       this allows docker to access the Postres port, 5432
 #   -e allows setting environment variables within the container
 #   -d detaches the process and runs the container like a daemon
-docker run --net=host -d density
+sudo docker run --net=host -d density
 
 # ps shows all docker containers currently running
 docker ps
