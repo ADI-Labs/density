@@ -20,6 +20,7 @@ def get_latest_data(cursor):
                    SELECT MAX(dump_time)
                    FROM {table_name}
                )
+               ORDER BY group_name
                ;""".format(table_name=TABLE_NAME)
     cursor.execute(query)
     return cursor.fetchall()

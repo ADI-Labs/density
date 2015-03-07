@@ -17,12 +17,15 @@ import psycopg2.pool
 import psycopg2.extras
 import datetime
 import traceback
+import copy
 from oauth2client.client import flow_from_clientsecrets
 import httplib2
 from db import db
 import re
 from functools import wraps
 
+with open('data/capacity_group.json') as json_data:
+    FULL_CAP_DATA = json.load(json_data)['data']
 
 CU_EMAIL_REGEX = r"^(?P<uni>[a-z\d]+)@.*(columbia|barnard)\.edu$"
 request_date_format = '%Y-%m-%d'
@@ -115,6 +118,37 @@ def authorization_required(func):
     return authorization_checker
 
 
+def annotate_fullness_percentage(cur_data):
+    """
+    Calculates percent fullness of all groups and adds them to the data in
+    the key 'percent_full'. The original data file is not modified.
+
+    :param list of dictionaries cur_data: data to calculate fullness percentage
+    :return: list of dictionaries with added pecent_full data
+    :rtype: list of dictionaries
+    """
+
+    # copy so that original list is not affected
+    cur_data_copy = copy.copy(cur_data)
+
+    for data in cur_data_copy:
+
+        group_name = data['group_name']
+        cur_client_count = data['client_count']
+
+        for cap in FULL_CAP_DATA:
+            if cap['group_name'] == group_name:
+                capacity = cap['capacity']
+                break
+
+        # Percent full in float
+        percent_full = float(cur_client_count)/capacity*100
+        data["percent_full"] = percent_full
+
+    # Match percentage and group by order of list
+    return cur_data_copy
+
+
 @app.route('/home')
 def home():
     return render_template('index.html',
@@ -205,6 +239,10 @@ def get_latest_data():
     """
 
     fetched_data = db.get_latest_data(g.cursor)
+
+    # Add percentage_full
+    fetched_data = annotate_fullness_percentage(fetched_data)
+
     return jsonify(data=fetched_data)
 
 
@@ -220,6 +258,10 @@ def get_latest_group_data(group_id):
     """
 
     fetched_data = db.get_latest_group_data(g.cursor, group_id)
+
+    # Add percentage_full
+    fetched_data = annotate_fullness_percentage(fetched_data)
+
     return jsonify(data=fetched_data)
 
 
@@ -235,6 +277,9 @@ def get_latest_building_data(parent_id):
     """
 
     fetched_data = db.get_latest_building_data(g.cursor, parent_id)
+
+    # Add percentage_full
+    fetched_data = annotate_fullness_percentage(fetched_data)
 
     return jsonify(data=fetched_data)
 
@@ -258,6 +303,9 @@ def get_day_group_data(day, group_id):
 
     fetched_data = db.get_window_based_on_group(g.cursor, group_id, start_day,
                                                 end_day, offset=0)
+    # Add percentage_full
+    fetched_data = annotate_fullness_percentage(fetched_data)
+
     return jsonify(data=fetched_data)
 
 
@@ -280,6 +328,10 @@ def get_day_building_data(day, parent_id):
 
     fetched_data = db.get_window_based_on_parent(g.cursor, parent_id,
                                                  start_day, end_day, offset=0)
+
+    # Add percentage_full
+    fetched_data = annotate_fullness_percentage(fetched_data)
+
     return jsonify(data=fetched_data)
 
 
@@ -299,11 +351,15 @@ def get_window_group_data(start_time, end_time, group_id):
         'offset') else 0
     fetched_data = db.get_window_based_on_group(g.cursor, group_id, start_time,
                                                 end_time, offset)
+    # Add percentage_full
+    fetched_data = annotate_fullness_percentage(fetched_data)
+
     next_page_url = None
     if len(fetched_data) == db.QUERY_LIMIT:
         new_offset = offset + db.QUERY_LIMIT
         next_page_url = request.base_url + '?auth_token=' + request.args.get(
             'auth_token') + '&offset=' + str(new_offset)
+
     return jsonify(data=fetched_data, next_page=next_page_url)
 
 
@@ -323,6 +379,9 @@ def get_window_building_data(start_time, end_time, parent_id):
         'offset') else 0
     fetched_data = db.get_window_based_on_parent(g.cursor, parent_id,
                                                  start_time, end_time, offset)
+    # Add percentage_full
+    fetched_data = annotate_fullness_percentage(fetched_data)
+
     next_page_url = None
     if len(fetched_data) == db.QUERY_LIMIT:
         new_offset = offset + db.QUERY_LIMIT
@@ -350,22 +409,41 @@ def get_cap_group():
 def capacity():
     """ Render and show capacity page """
 
-    # Read capacity of groups from json file
-    with open('data/capacity_group.json') as json_data:
-        cap_data = json.load(json_data)['data']
-    # Read current data
+    fetched_data = db.get_latest_data(g.cursor)
+    locations = []
+
+    # Add percentage_full
+    fetched_data = annotate_fullness_percentage(fetched_data)
+
+    for data in fetched_data:
+
+        capacity = int(round(data["percent_full"]))
+
+        if data['group_name'] == 'Butler Library stk':
+            data['group_name'] = 'Butler Library Stacks'
+
+        locations.append({"name": data['group_name'], "fullness": capacity})
+
+    return render_template('capacity.html', locations=locations)
+
+
+@app.route('/map')
+def map():
+    """ Render and show maps page """
+
     cur_data = db.get_latest_data(g.cursor)
     locations = []
 
     # Loop to find corresponding cur_client_count with capacity
     # and store it in locations
-    for cap in cap_data:
-
-        group_name = cap['group_name']
+    for cap in FULL_CAP_DATA:
+        groupName = cap['group_name']
         capacity = cap['capacity']
+        parentId = cap['parent_id']
+        parentName = cap['parent_name']
 
         for latest in cur_data:
-            if latest['group_name'] == group_name:
+            if latest['group_name'] == groupName:
                 cur_client_count = latest['client_count']
                 break
         # Cast one of the numbers into a float, get a percentile by multiplying
@@ -374,13 +452,14 @@ def capacity():
         if percent_full > 100:
             percent_full = 100
 
-        if group_name == 'Butler Library stk':
-            group_name = 'Butler Library Stacks'
+        if groupName == 'Butler Library stk':
+            groupName = 'Butler Library Stacks'
 
-        locations.append({"name": group_name, "fullness": percent_full})
+        locations.append({"name": groupName, "fullness": percent_full,
+                          "parentId": parentId, "parentName": parentName})
 
-    return render_template('capacity.html', locations=locations)
-
+    # Render template has an SVG image whose colors are changed by % full
+    return render_template('map.html', locations=locations)
 
 if __name__ == '__main__':
     app.run(host=app.config['HOST'])
