@@ -41,6 +41,55 @@ Be sure to also insert the [Oauth table](config/oauth_dev_dump.sql) so that you 
 
 
 
+
+
+## Docker
+
+The Docker container requires that either the port for the Postgres instance is forward or that the host is set to an exact IP or domain.
+
+Using Docker:
+
+```bash
+# enter the project directory
+cd density
+
+# builds a Docker image
+#   -t dictates that the image is tagged as 'density'
+sudo docker build -t density .
+
+# runs a docker container tagged as 'density'
+#   --net=host forwards all ports from the host to the container
+#       this allows docker to access the Postres port, 5432
+#   -e allows setting environment variables within the container
+#   -d detaches the process and runs the container like a daemon
+sudo docker run --net=host -d density
+
+# ps shows all docker containers currently running
+docker ps
+```
+
+Running Density within Docker relies on an instance of Consul being run on `localhost:8500` which is used to configure the settings.
+
+
+
+
+
+## Consul
+
+[Consul](https://consul.io/) is a distributed key/value store that we are using to configure Density in production.
+You should not need to intereact with Consul unless you are attempting to deploy it.
+
+Consul is installed within the Vagrant VM automatically.
+It can be started with the script at `config/run_consul.sh`.
+The web UI is located at [port 8500](http://localhost:8500).
+
+
+
+
+
+
+
+
 ## Routes
 
 Supported routes currently include:
