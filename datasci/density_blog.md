@@ -93,6 +93,6 @@ Notice the spike in Butler 2 around midnight.
 ##For more tools with the Density API, check out Chris Mulligan's [Relative Density App!](https://chmullig.shinyapps.io/relative_density/)
 
 
-#To see the code that generated check out our [ipython notebook!](https://github.com/adicu/density)
+#To see the code that generated check out our [ipython notebook!](http://nbviewer.ipython.org/github/jzf2101/density/blob/master/datasci/density_demo.ipynb)
 
 #Check out our [API](http://density.adicu.com/docs) to use our data!
