@@ -48,10 +48,12 @@ Density assumes that capacity is relative to fullness on an average day, not on 
 ###This is Butler:
 
 ![alt text](Butler_day.png)
+
 People tend to come in after lunch, take a break for dinner, and work late into the night.
 
 ###This is John Jay:
 ![alt text](JJ_day.png)
+
 The dining halls are most crowded around mealtimes.
 
 ---
@@ -87,4 +89,10 @@ We see multiple spikes in Arledge Auditorium around the same time as orientation
 ![alt text](orgonight.png)
 
 Notice the spike in Butler 2 around midnight.
+
+##For more tools with the Density API, check out Chris Mulligan's [Relative Density App!](https://chmullig.shinyapps.io/relative_density/)
+
+
+#To see the code that generated check out our [ipython notebook!](https://github.com/adicu/density)
+
 #Check out our [API](http://density.adicu.com/docs) to use our data!
