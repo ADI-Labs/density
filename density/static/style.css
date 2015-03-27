@@ -134,3 +134,94 @@ p {
 .progress-bar-info {
     background-color: #468fcc;
 }
+
+.footer-text-mobile {
+    display: none;
+}
+
+.mobile {
+    display: none;
+}
+
+.nomobile {
+    display: block;
+}
+
+@media screen and (max-width: 640px) {
+    .logoContainer {
+        padding: 10px;
+    }
+
+    .textContainer {
+        padding: 10px 0px;
+    }
+
+	.listContainer {
+		width: 100%;
+		padding: 0;
+	}
+
+    .thanksContainer {
+        padding: 10px 0px;
+    }
+
+	.container {
+		width: 100%;
+		padding: 0;
+	}
+
+    .about {
+        font-size: 14px;
+    }
+
+    #expandable {
+        max-height: 0;
+        overflow: hidden;
+        -webkit-transition: 0.6s ease max-height;
+        -moz-transition: 0.6s ease max-height;
+        -o-transition: 0.6s ease max-height;
+        transition: 0.6s ease max-height;
+    }
+
+    #expandable.expanded {
+        max-height: 10rem;
+    }
+
+	.logo {
+		max-width: 100%;
+        max-height: 100%;
+	}
+
+    .mobile {
+        display: block;
+    }
+
+    .nomobile {
+        display: none;
+    }
+
+	.list-group-item {
+		margin-bottom: 1px;
+        padding: 8px 30px;
+    }
+
+	p {
+		padding: 0px 15px;
+	}
+
+    .left {
+        display: none;
+    }
+
+    .right {
+        display: none;
+    }
+
+    .footer-text {
+        text-align: center;
+    }
+
+    .footer {
+        padding: 15px 20px;
+    }
+}
