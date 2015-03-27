@@ -9,6 +9,7 @@ in the config object as well.
 
 from os import environ
 from sys import exit
+from datetime import datetime
 
 
 try:
@@ -38,12 +39,14 @@ try:
         MAIL_PASSWORD = environ['MAIL_PASSWORD']
 
     # administrator list
-    ADMINS = ['bz2231@columbia.edu',
+    ADMINS = [
+        'bz2231@columbia.edu',
         'dzh2101@columbia.edu',
         'jgv2108@columbia.edu',
         'sb3657@columbia.edu',
         'mgb2163@columbia.edu',
-        'jzf2101@columbia.edu']
+        'jzf2101@columbia.edu'
+    ]
 
 except KeyError as e:
     """ Throw an error if a setting is missing """
@@ -52,3 +55,22 @@ except KeyError as e:
            "You probably need to run:"
            "\n\n\tsource config/<your settings file>")
     exit(1)
+
+
+""" Creates a json encoder that returns ISO 8601 strings for datetimes
+    http://flask.pocoo.org/snippets/119/ """
+from flask.json import JSONEncoder
+
+
+class ISO8601Encoder(JSONEncoder):
+
+    def default(self, obj):
+        try:
+            if isinstance(obj, datetime):
+                return obj.isoformat()
+            iterable = iter(obj)
+        except TypeError:
+            pass
+        else:
+            return list(iterable)
+        return JSONEncoder.default(self, obj)
