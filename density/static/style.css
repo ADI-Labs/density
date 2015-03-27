@@ -158,9 +158,10 @@ p {
 
 .not-found {
     text-align: center;
-    padding: 20px;
+    padding: 15px;
     font-size: 18px;
     font-family: Lato, sans-serif;
+    line-height: 25px;
 }
 
 img {
