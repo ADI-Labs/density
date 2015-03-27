@@ -1,8 +1,8 @@
 
+# Density
+
 [![Build Status](https://travis-ci.org/adicu/density.svg?branch=master)](https://travis-ci.org/adicu/density)
 
-Density
----
 
 Density is a project to provide easy access to the Wireless Density data from Columbia.
 For more details on the project, please view the [spec](SPEC.md).
@@ -53,9 +53,15 @@ Supported routes currently include:
 
 
 
+
 ## Data Sources
 
-TODO
+Data for density is provided by CUIT in coordination with ESC.
+
+
+
+
+
 
 # app structure
 
@@ -70,6 +76,15 @@ TODO
 ```
 
 
+
+# Changelog
+
+0.1.1: Datetime formatting changed to ISO 8601.
+0.1.0: Basic API up and stable.
+
+
+
+
 # List of Developers
 
 - Brian Zeng
@@ -82,4 +97,6 @@ TODO
 - Maclyn Brandwein
 - Jackie Ho
 - Dan Schlosser
+- Terra Blevins
+- Evan Tarrh
 - Raymond Xu
