@@ -3,6 +3,7 @@
     {% block head %}
     <title>Density</title>
     <!--CSS files-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
@@ -26,10 +27,13 @@
         <div class="container">
             <p class="left">Maintained by <a href="https://adicu.com/labs">ADI Labs</a></p>
             <p class="right"><a href="mailto:labs@adicu.com?subject=[ADI Density]">Report a bug or suggest a feature</a></p>
+            <p class="footer-text mobile">Maintained by <a href="https://adicu.com/labs">ADI Labs</a></p>
+            <p class="footer-text mobile"><a href="mailto:labs@adicu.com?subject=[ADI Density]">Report a bug or suggest a feature</a></p>
         </div>
     </footer>
     <!--Javascript Files-->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="{{ url_for('static', filename='expand.js') }}"></script>
 </body>
 
