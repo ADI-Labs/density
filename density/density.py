@@ -89,6 +89,7 @@ def log_outcome(resp):
 def page_not_found(e):
     return render_template('404.html')
 
+
 @app.errorhandler(500)
 @app.errorhandler(Exception)
 def internal_error(e):
