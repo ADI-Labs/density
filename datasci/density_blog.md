@@ -83,7 +83,7 @@ Our plots show the days with the max. number of devices recorded at any time at 
 ##Like NSOP
 ![alt text](nsop.png)
 
-We see multiple spikes in Arledge Auditorium around the same time as orientation.
+We see multiple spikes in Roone Arledge Auditorium around the same time as orientation.
 
 ##And Orgo Night!
 ![alt text](orgonight.png)
