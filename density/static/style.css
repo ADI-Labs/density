@@ -11,6 +11,9 @@ html, body {
 .wrapper {
     min-height: 100%;
     position: relative;
+}
+
+.content {
     padding-bottom: 122px; /* Height of footer */
 }
 
@@ -173,6 +176,10 @@ p {
 
     .textContainer {
         padding: 10px 0px;
+    }
+
+    .content {
+        padding-bottom: 94px; /* height of footer */
     }
 
     .listContainer {
