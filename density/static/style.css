@@ -1,11 +1,20 @@
 html, body {
-    min-height: 100%;
+    height: 100%;
     background-color: #F0F0F0;
 }
 
 .navbar {
     background-color: #A1FFB8;
     border-radius: 0px;
+}
+
+.wrapper {
+    min-height: 100%;
+    position: relative;
+}
+
+.content {
+    padding-bottom: 122px; /* Height of footer */
 }
 
 a {
@@ -73,6 +82,9 @@ p {
     background-color: #3e4953;
     color: #ffffff;
     padding: 50px 0 40px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
 }
 
 .logoContainer {
@@ -102,11 +114,11 @@ p {
 }
 
 .docs-formatting  p {
-	color: #000000;
+    color: #000000;
 }
 
 .docs-formatting a {
-	color: #D75F5D;
+    color: #D75F5D;
 }
 
 .thanksContainer {
@@ -166,19 +178,23 @@ p {
         padding: 10px 0px;
     }
 
-	.listContainer {
-		width: 100%;
-		padding: 0;
-	}
+    .content {
+        padding-bottom: 94px; /* height of footer */
+    }
+
+    .listContainer {
+        width: 100%;
+        padding: 0;
+    }
 
     .thanksContainer {
         padding: 10px 0px;
     }
 
-	.container {
-		width: 100%;
-		padding: 0;
-	}
+    .container {
+        width: 100%;
+        padding: 0;
+    }
 
     .about {
         font-size: 14px;
@@ -197,10 +213,10 @@ p {
         max-height: 10rem;
     }
 
-	.logo {
-		max-width: 100%;
+    .logo {
+        max-width: 100%;
         max-height: 100%;
-	}
+    }
 
     .mobile {
         display: block;
@@ -210,14 +226,14 @@ p {
         display: none;
     }
 
-	.list-group-item {
-		margin-bottom: 1px;
+    .list-group-item {
+        margin-bottom: 1px;
         padding: 8px 30px;
     }
 
-	p {
-		padding: 0px 15px;
-	}
+    p {
+        padding: 0px 15px;
+    }
 
     .left {
         display: none;
