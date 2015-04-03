@@ -3,14 +3,13 @@
 // the reveal additional information available on
 // a non-mobile view.
 $("#expand-collapse").click(function() {
-	if(! $("#learn-more").hasClass("open")) {
-		$("#learn-more").html("<strong>COLLAPSE</strong>");
-		$("#learn-more").addClass("open");
-		$("#expandable").addClass("expanded");
-	}
-	else {
-		$("#learn-more").html("<strong>LEARN MORE</strong>");
-		$("#learn-more").removeClass("open");
-		$("#expandable").removeClass("expanded");
-	}
+    if(! $("#learn-more").hasClass("open")) {
+        $("#learn-more").html("<strong>COLLAPSE</strong>");
+        $("#learn-more").addClass("open");
+        $("#expandable").addClass("expanded");
+    } else {
+        $("#learn-more").html("<strong>LEARN MORE</strong>");
+        $("#learn-more").removeClass("open");
+        $("#expandable").removeClass("expanded");
+    }
 });

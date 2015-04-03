@@ -1,6 +1,15 @@
 {% extends "layout.html" %}
 {% block body %}
 
+<div class="alert-container">
+    <div class="alert">
+        Check out our new <a href="/map">map</a> feature!
+    </div>
+    <div id="alert-close">
+        &times;
+    </div>
+</div>
+
 <div class="logoContainer">
     <div class="container">
         <div class="text-center">
@@ -53,4 +62,7 @@
     </div>
 </div>
 
+{% endblock %}
+{% block scripts %}
+    <script src="{{ url_for('static', filename='capacity.js') }}"></script>
 {% endblock %}
