@@ -332,10 +332,13 @@ def capacity():
     locations = calculate_capacity(cap_data, cur_data)
     return render_template('capacity.html', locations=locations)
 
-#Calculates capacity with cap_data and cur_data and puts with respective
-#group_name into locations
+
 def calculate_capacity(cap_data, cur_data):
-    
+    """
+    Calculates capacity with cap_data and cur_data and puts
+    with respective group_name into locations
+    """
+
     locations = []
 
     # Loop to find corresponding cur_client_count with capacity
