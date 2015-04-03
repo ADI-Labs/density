@@ -21,16 +21,16 @@ document.addEventListener('DOMContentLoaded', function() {
     //Create a mapping from parent_id --> query (http://....hours)
     var parentToQuery = {};
     
-    for(var i = 0; i < locations.length; i++) { 
-      if(locations[i].name != 'Butler Library stk') { //We're skipping this out of non-use]
-        if(parentToList[locations[i].parentId] == null) {
+    for (var i = 0; i < locations.length; i++) { 
+      if (locations[i].name != 'Butler Library stk') { //We're skipping this out of non-use]
+        if (parentToList[locations[i].parentId] == null) {
           parentToList[locations[i].parentId] = {};
         }
-        if(parentToText[locations[i].parentId] == null) {
+        if (parentToText[locations[i].parentId] == null) {
           parentToText[locations[i].parentId] = '<b>' + locations[i].parentName + '</b><br />' +
             '<em>Click to view hours</em><br /><br />';
         }
-        if(parentToQuery[locations[i].parentId] == null) {
+        if (parentToQuery[locations[i].parentId] == null) {
           parentToQuery[locations[i].parentId] = 'https://www.google.com/#q=' + escape('Columbia University ' + locations[i].parentName + ' hours');
         }
         
@@ -42,14 +42,14 @@ document.addEventListener('DOMContentLoaded', function() {
     //Iterate through mappings keys to set opacity for the element by fullness and better data on mouseover
     var keySet = Object.keys(parentToList);
 
-    for(var key in keySet) {
+    for (var key in keySet) {
       var keyValue = keySet[key];
       var list = parentToList[keyValue];
       
       //find average fullness for location (this is for locations w/ multiple floors)
       var count = 0;
       var totalFullness = 0;
-      for(var entry in list){
+      for (var entry in list){
         totalFullness += parentToList[keyValue][entry];
         count++;
       }
@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function() {
       //number of pixels offset to separate popup from mouse
       var mouseOffset = 4;
       
-      if(count != 0) {
+      if (count != 0) {
         var percent = (totalFullness / count); //Should be from [0, 100]
         var buildingElement = innerSvg.getElementById('parent_' + keyValue); //e.g. parent_43
         if(buildingElement != null) {
