@@ -8,6 +8,51 @@ html, body {
     border-radius: 0px;
 }
 
+.alert-container {
+    font-family: 'Lato', sans-serif;
+    position: relative;
+    width: 100%;
+    background-color: #fff;
+    color: #468fcc;
+    line-height: 1.5rem;
+    text-align: center;
+    font-size: 18px;
+    max-height: 47px;
+    -webkit-transition: 0.6s ease max-height;
+    -moz-transition: 0.6s ease max-height;
+    -o-transition: 0.6s ease max-height;
+    transition: 0.6s ease max-height;
+}
+
+.alert {
+    display: inline-block;
+    max-width: 85%;
+    margin-bottom: 0;
+}
+
+.alert > a {
+    color: #F85B48;
+}
+
+.alert > a:hover {
+    opacity: 0.75;
+}
+
+#alert-close {
+    display: inline-block;
+    position: absolute;
+    right: 26px;
+    top: 16px;
+    font-size: 24px;
+    float: right;
+    color: #468fcc;
+}
+
+#alert-close:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
+
 .wrapper {
     min-height: 100%;
     position: relative;
