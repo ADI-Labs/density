@@ -94,22 +94,6 @@ p {
     padding-left: 0.4em;
 }
 
-.navbar-default .navbar-brand {
-    color: black;
-}
-
-.navbar-default .navbar-nav>li>a {
-    color: black;
-}
-
-.navbar-default .navbar-toggle:focus {
-    background-color: #A1FFB8;
-}
-
-.navbar-default .navbar-toggle:hover {
-    background-color: #61F785;
-}
-
 @media (min-width: 1200px) {
   .container {
     width: 800px;
@@ -135,6 +119,15 @@ p {
 .logoContainer {
     background-color: #2285c6;
     padding: 50px;
+    padding-bottom: 20px;
+}
+
+.navContainer {
+    padding-top: 20px;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
 }
 
 .textContainer {
@@ -156,6 +149,10 @@ p {
 
 #map {
     max-width: 100%;
+}
+
+.navItem {
+    padding: 0px 30px;
 }
 
 .docs-formatting  p {
