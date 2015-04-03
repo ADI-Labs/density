@@ -3,11 +3,6 @@ html, body {
     background-color: #F0F0F0;
 }
 
-.navbar {
-    background-color: #A1FFB8;
-    border-radius: 0px;
-}
-
 .alert-container {
     font-family: 'Lato', sans-serif;
     position: relative;
@@ -127,7 +122,7 @@ p {
 }
 
 .navContainer {
-    padding: 1rem;
+    padding: 1rem 0rem;
     font-family: 'Lato', sans-serif;
     font-weight: 300;
     font-size: 18px;
@@ -156,7 +151,7 @@ p {
 }
 
 .navItem {
-    padding: 0px 30px;
+    padding: 1.15rem 30px;
 }
 
 .docs-formatting  p {

@@ -33,9 +33,9 @@
       </div>
       <div class="navContainer">
         <div class="container">
-          <span class="navItem"><a href="/">HOME</a></span>
-          <span class="navItem"><a href="/map">MAP</a></span>
-          <span class="navItem"><a href="/docs">API</a></span>
+          <span id="nav-home" class="navItem"><a href="/">HOME</a></span>
+          <span id="nav-map" class="navItem"><a href="/map">MAP</a></span>
+          <span id="nav-api" class="navItem"><a href="/docs">API</a></span>
         </div>
       </div>
       {% block body %}{% endblock %}
@@ -50,7 +50,7 @@
       <!--Javascript Files-->
       <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-      <script src="{{ url_for('static', filename='expand.js') }}"
+      <script src="{{ url_for('static', filename='base.js') }}"></script>
       {% block scripts %}{% endblock %}
     </div>
   </div>
