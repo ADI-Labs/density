@@ -30,10 +30,12 @@
             <a href="/"><img class="logo" src="{{ url_for('static', filename='logo.svg')}}"></a>
           </div>
         </div>
-        <div class="navContainer">
-        <span class="navItem"><a href="/">HOME</a></span>
+      </div>
+      <div class="navContainer">
+        <div class="container">
+          <span class="navItem"><a href="/">HOME</a></span>
           <span class="navItem"><a href="/map">MAP</a></span>
-          <span class="navItem"><a href="/docs">DOCS</a></span>
+          <span class="navItem"><a href="/docs">API</a></span>
         </div>
       </div>
       {% block body %}{% endblock %}

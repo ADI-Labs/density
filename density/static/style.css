@@ -66,6 +66,10 @@ a {
     color: #f3bebd;
 }
 
+.navItem > a {
+    color: white;
+}
+
 a:hover {
     color: #f8725d;
     text-decoration: none;
@@ -119,15 +123,15 @@ p {
 .logoContainer {
     background-color: #2285c6;
     padding: 50px;
-    padding-bottom: 20px;
+    padding-top: 25px;
 }
 
 .navContainer {
-    padding-top: 20px;
-    text-align: center;
+    padding: 1rem;
     font-family: 'Lato', sans-serif;
     font-weight: 300;
     font-size: 18px;
+    background-color: #468fcc;
 }
 
 .textContainer {
