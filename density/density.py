@@ -211,8 +211,8 @@ def auth():
         if not regex:
             return render_template('auth.html',
                                    success=False,
-                                   reason="You need to log in with your "
-                                   + "Columbia or Barnard email! You logged "
+                                   reason="Please log in with your "
+                                   + "Columbia or Barnard email. \n \nYou logged "
                                    + "in with: "
                                    + email)
 
