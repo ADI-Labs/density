@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
   document.getElementById('map').addEventListener('load', function() {
     
     //Iterate through locations and display their data
-    var data = document.querySelector('#data');
+    var data = document.getElementById('data');
     var locations = JSON.parse(data.dataset.locations);
     var map = document.getElementById('map');
     var innerSvg = map.contentDocument;
@@ -22,33 +22,35 @@ document.addEventListener('DOMContentLoaded', function() {
     var buildingHours = {};
     
     locations.forEach(function(location) {
-      if (location.name != 'Butler Library stk') { //We're skipping this out of non-use]
-        if (buildingFloors[location.parentId] == null) {
-          buildingFloors[location.parentId] = {};
-        }
-        if (buildingStrings[location.parentId] == null) {
-          buildingStrings[location.parentId] = '<b>' + location.parentName + '</b><br />' +
-            '<em>Click to view hours</em><br /><br />';
-        }
-        if (buildingHours[location.parentId] == null) {
-          buildingHours[location.parentId] = 'https://www.google.com/#q=' + escape('Columbia University ' + location.parentName + ' hours');
-        }
-        
-        buildingFloors[location.parentId][location.name] = location.fullness;
-        buildingStrings[location.parentId] += location.name + ': ' + location.fullness + '%' + '<br />';
+
+      // We're skipping this out of non-use
+      if (location.name === 'Butler Library stk') {
+        return;
       }
+      if (buildingFloors[location.parentId] == null) {
+        buildingFloors[location.parentId] = {};
+      }
+      if (buildingStrings[location.parentId] == null) {
+        buildingStrings[location.parentId] = '<b>' + location.parentName + '</b><br />' +
+          '<em>Click to view hours</em><br /><br />';
+      }
+      if (buildingHours[location.parentId] == null) {
+        buildingHours[location.parentId] = 'https://www.google.com/#q=' + escape('Columbia University ' + location.parentName + ' hours');
+      }
+      
+      buildingFloors[location.parentId][location.name] = location.fullness;
+      buildingStrings[location.parentId] += location.name + ': ' + location.fullness + '%' + '<br />';
     });
 
     //Iterate through mappings keys to set opacity for the element by fullness and better data on mouseover
     var buildings = Object.keys(buildingFloors);
 
-    for (var i in buildings) {
-      var building = buildings[i];
+    buildings.forEach(function(building) {
       var list = buildingFloors[building];
       
       //find average fullness for location (this is for locations w/ multiple floors)
       var totalFullness = 0;
-      for (var entry in list){
+      for (var entry in list) {
         totalFullness += buildingFloors[building][entry];
       }
 
@@ -95,6 +97,6 @@ document.addEventListener('DOMContentLoaded', function() {
         popup.style.top = topPosition;
         popup.style.left = leftPosition;
       }
-    }
+    });
   });
 });
