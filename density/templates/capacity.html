@@ -15,7 +15,7 @@
 <div class="logoContainer">
     <div class="container">
         <div class="text-center">
-            <img class="logo" src="{{ url_for('static', filename='logo.svg')}}">
+            <img class="logo" src="{{ url_for('static', filename='img/logo.svg')}}">
         </div>
     </div>
 </div>
@@ -59,12 +59,12 @@
 </div>
 <div class="thanksContainer">
     <div class="container">
-        <h4>Special thanks to <img class="logo escLogo" src="{{ url_for('static', filename='esc.png')}}">
+        <h4>Special thanks to <img class="logo escLogo" src="{{ url_for('static', filename='img/esc.png')}}">
         </h4>
     </div>
 </div>
 
 {% endblock %}
 {% block scripts %}
-    <script src="{{ url_for('static', filename='capacity.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/capacity.js') }}"></script>
 {% endblock %}
