@@ -41,6 +41,7 @@ pg_pool = psycopg2.pool.SimpleConnectionPool(
     port=app.config['PG_PORT'],
 )
 
+
 @app.before_request
 def get_connections():
     """ Get connections from the Postgres pool. """
