@@ -223,6 +223,10 @@ p {
         padding: 10px 0px;
     }
 
+    .alert {
+        font-size: 15px;
+    }
+
     .content {
         padding-bottom: 94px; /* height of footer */
     }
