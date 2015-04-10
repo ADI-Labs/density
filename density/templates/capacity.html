@@ -1,6 +1,7 @@
 {% extends "layout.html" %}
 {% block body %}
 
+{% if map_alert %}
 <div class="alert-container">
     <div class="alert">
         Check out our new <a href="/map">map</a> feature!
@@ -9,6 +10,7 @@
         &times;
     </div>
 </div>
+{% endif %}
 
 <div class="logoContainer">
     <div class="container">

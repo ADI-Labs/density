@@ -1,4 +1,4 @@
-from flask import Flask, g, jsonify, render_template, json, request
+from flask import Flask, g, jsonify, render_template, json, request, make_response
 from flask_mail import Message, Mail
 app = Flask(__name__)
 
@@ -40,7 +40,6 @@ pg_pool = psycopg2.pool.SimpleConnectionPool(
     host=app.config['PG_HOST'],
     port=app.config['PG_PORT'],
 )
-
 
 @app.before_request
 def get_connections():
@@ -415,6 +414,10 @@ def capacity():
     # Add percentage_full
     fetched_data = annotate_fullness_percentage(fetched_data)
 
+    show_map_alert = True
+    if request.cookies.get('map_alert') == "no":
+        show_map_alert = False
+
     for data in fetched_data:
 
         capacity = int(round(data["percent_full"]))
@@ -424,7 +427,13 @@ def capacity():
 
         locations.append({"name": data['group_name'], "fullness": capacity})
 
-    return render_template('capacity.html', locations=locations)
+    resp = make_response(render_template('capacity.html',
+                            locations=locations,
+                            map_alert=show_map_alert))
+
+    resp.set_cookie('map_alert', 'no')
+
+    return resp
 
 
 @app.route('/map')
