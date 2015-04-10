@@ -8,6 +8,7 @@ in the config object as well.
 
 from os import environ
 from sys import exit
+from datetime import datetime
 
 
 # dictionary the flask app configures itself from
@@ -83,3 +84,21 @@ else:  # prod w/ consul
         'mgb2163@columbia.edu',
         'jzf2101@columbia.edu'
     ]
+
+""" Creates a json encoder that returns ISO 8601 strings for datetimes
+    http://flask.pocoo.org/snippets/119/ """
+from flask.json import JSONEncoder
+
+
+class ISO8601Encoder(JSONEncoder):
+
+    def default(self, obj):
+        try:
+            if isinstance(obj, datetime):
+                return obj.isoformat()
+            iterable = iter(obj)
+        except TypeError:
+            pass
+        else:
+            return list(iterable)
+        return JSONEncoder.default(self, obj)

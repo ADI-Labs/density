@@ -1,9 +1,9 @@
-{% extends "layout_no_header.html" %}
+{% extends "layout.html" %}
 {% block body %}
 <div class="logoContainer">
     <div class="container">
         <div class="text-center">
-            <img class="logo" src="{{ url_for('static', filename='logo.svg')}}">
+            <img class="logo" src="{{ url_for('static', filename='img/logo.svg')}}">
         </div>
     </div>
 </div>
@@ -11,7 +11,7 @@
     <div class="container">
         <div>
             <p class="about">This is the <strong>documentation</strong> page for the Density API.</p>
-            <p>To access this API, you'll need to <a href="http://density.adicu.com/auth">get an API key</a> by logging in with your Columbia-affiliated email.</p>
+            <p>To access this API, you'll need to <a href="/auth">get an API key</a> by logging in with your Columbia-affiliated email.</p>
         </div>
     </div>
 </div>
@@ -25,9 +25,9 @@
 
 <h3>Get an API Key</h3>
 
-<p>API keys are <a href="http://density.adicu.com/auth">available</a> for Columbia University affiliates with valid email addresses <code>uni@*.columbia.edu</code> <code>uni@barnard.edu</code>.</p>
+<p>API keys are <a href="/auth">available</a> for Columbia University affiliates with valid email addresses <code>uni@*.columbia.edu</code> <code>uni@barnard.edu</code>.</p>
 
-<p>Visit <a href="density.adicu.com/auth">density.adicu.com/auth</a> and click on <code>get access</code>.</p>
+<p>Visit <a href="/auth">density.adicu.com/auth</a> and click on <code>get access</code>.</p>
 
 <h3>Using API Keys</h3>
 
@@ -43,7 +43,7 @@
 
 <h3>Definitions</h3>
 
-<p>Please see <a href="http://density.adicu.com/docs/building_info">http://density.adicu.com/docs/building_info</a> for a table of the available building names, group names, building ids and group ids.</p>
+<p>Please see <a href="/docs/building_info">http://density.adicu.com/docs/building_info</a> for a table of the available building names, group names, building ids and group ids.</p>
 
 <ul>
 <li>Building
