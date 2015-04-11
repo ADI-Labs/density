@@ -212,7 +212,7 @@ def auth():
             return render_template('auth.html',
                                    success=False,
                                    reason="Please log in with your " +
-                                   "Columbia or Barnard email. You logged " +
+                                   "Columbia or Barnard e-mail. You logged " +
                                    "in with: " +
                                    email)
 
