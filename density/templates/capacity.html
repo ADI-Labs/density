@@ -9,9 +9,6 @@
 {% extends "layout.html" %}
 {% block body %}
 <div class="listContainer">
-  <div>
-  <pstyle="color:black"><center>Last updated {{last_updated}}</center></p>
-  </div>
     <div class="container">
         <ul class="list-group">
             {% for location in locations %}
@@ -37,6 +34,10 @@
             {% endfor %}
         </ul>
     </div>
+    <br>
+  <div>
+  <pstyle="color:black"><center>Last updated {{last_updated}}</center></p>
+  </div>
 </div>
 <div class="thanksContainer">
     <div class="container">
