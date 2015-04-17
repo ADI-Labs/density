@@ -21,12 +21,12 @@ $("#expand-collapse").click(function() {
  * Uses URL string parsing to determine which page the user is on.
  */
 $(document).ready(function() {
-	var url = window.location.href;
+  var url = window.location.href;
   var darken = function darken(id) {
     document.getElementById(id).style.backgroundColor = "#2285c6";
   }
 
-	if (url.indexOf("map") != -1) {
+  if (url.indexOf("map") != -1) {
     darken("nav-map");
   } else if (url.indexOf("docs") != -1) {
     darken("nav-api");

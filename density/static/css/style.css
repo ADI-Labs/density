@@ -174,7 +174,7 @@ p {
     background-color: #f8725d;
     color: #ffffff;
     font-family: 'Lato', sans-serif;
-    padding: 50px;
+    padding: 30px;
     text-align: center;
 }
 
@@ -318,7 +318,7 @@ p {
 
 .not-found {
     text-align: center;
-    padding: 15px;
+    padding-top: 50px;
     font-size: 18px;
     font-family: Lato, sans-serif;
     line-height: 25px;
