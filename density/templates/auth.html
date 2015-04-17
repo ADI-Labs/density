@@ -4,9 +4,6 @@
     {{ super() }}
     <script src="https://apis.google.com/js/client:platform.js" async defer></script>
 {% endblock %}
-
-{% block body %}
-
 {% if success %}
 {% else %}
 <div class="textContainer">
@@ -29,7 +26,7 @@
 
     <h3>Getting access to the API</h3>
     <h5>To use the API, you will need a Columbia or Barnard e-mail address.</h5>
-    <button id='signinButton' onclick='login()' style="margin-bottom: 1em;">
+    <button id='signinButton' class="btn btn-primary blue-btn" onclick='login()' style="margin-bottom: 1em;">
         Get access
     </button>
     <script>

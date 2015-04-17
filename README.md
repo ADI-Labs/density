@@ -61,6 +61,10 @@ Data for density is provided by CUIT in coordination with ESC.
 
 
 
+## Style guide
+
+Make sure to conform to [AirBnb's brilliant style guide](https://github.com/airbnb/javascript) when writing javascript.
+
 
 
 # app structure
