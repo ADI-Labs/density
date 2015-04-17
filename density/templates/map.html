@@ -2,7 +2,7 @@
 {% block body %}
 <article id="data" data-locations='{{locations|tojson}}'></article>
 <div id="mapContainer">
-	<object id="map" data="{{ url_for('static', filename='img/map.svg') }}">
+	<object id="map" data="{{ url_for('static', filename='img/map.svg') }}" type="image/svg+xml">
 	</object>
 	<!-- Definition for a mouseover popup that appears when you're over a valid map element -->
 	<div id="locationPopup" class="popup"></div>

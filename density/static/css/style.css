@@ -303,6 +303,14 @@ p {
     .footer {
         padding: 15px 20px;
     }
+
+    .navItem {
+        font-size: 14px;
+        padding-top: 1.4rem;
+        padding-bottom: 1.3rem;
+        padding-left: 14px;
+        padding-right: 14px;
+    }
 }
 
 .popup {
