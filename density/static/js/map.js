@@ -1,7 +1,20 @@
 // vanilla js document.ready bc we are kool kids
 document.addEventListener('DOMContentLoaded', function() {
-  document.getElementById('map').addEventListener('load', function() {
-    
+  console.log(document.getElementById('map'));
+
+  // This recursive function waits until the SVG is fully loaded
+  // before executing the relevant javascript. This solves
+  // the issue of the javascript not being run on Safari.
+  function checkReady() {
+    if (document.getElementById('map').getSVGDocument() == null) {
+      setTimeout(checkReady, 5);
+    }
+    else {
+      run();
+    }
+  }
+  
+  var run = function() {
     //Iterate through locations and display their data
     var data = document.getElementById('data');
     var locations = JSON.parse(data.dataset.locations);
@@ -14,9 +27,11 @@ document.addEventListener('DOMContentLoaded', function() {
     
     //Create a mapping from parent_id --> text representation
     var buildingStrings = {};
+    console.log(buildingStrings);
     
     //Create a mapping from parent_id --> list full %s for elements inside (e.g. floors of a building)
     var buildingFloors = {};
+    console.log(buildingFloors);
 
     //Create a mapping from parent_id --> query (http://....hours)
     var buildingHours = {};
@@ -98,5 +113,6 @@ document.addEventListener('DOMContentLoaded', function() {
         popup.style.left = leftPosition;
       }
     });
-  });
+  };
+  checkReady();
 });

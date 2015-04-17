@@ -4,15 +4,6 @@
     {{ super() }}
     <script src="https://apis.google.com/js/client:platform.js" async defer></script>
 {% endblock %}
-
-{% block body %}
-<div class="logoContainer">
-    <div class="container">
-        <div class="text-center">
-            <img class="logo" src="{{ url_for('static', filename='img/logo.svg')}}">
-        </div>
-    </div>
-</div>
 {% if success %}
 {% else %}
 <div class="textContainer">

@@ -24,6 +24,21 @@
 <body>
   <div class="wrapper">
     <div class="content">
+      <div class="logoContainer">
+        <div class="container">
+          <div class="text-center">
+            <a href="/"><img class="logo" src="{{ url_for('static', filename='img/logo.svg')}}"></a>
+          </div>
+        </div>
+      </div>
+      <div class="navContainer">
+        <div class="container">
+          <span id="nav-home" class="navItem"><a href="/">HOME</a></span>
+          <span id="nav-map" class="navItem"><a href="/map">MAP</a></span>
+          <span id="nav-about" class="navItem"><a href="/about">ABOUT</a></span>
+          <span id="nav-api" class="navItem"><a href="/docs">API</a></span>
+        </div>
+      </div>
       {% block body %}{% endblock %}
       <footer class="footer">
           <div class="container">
@@ -36,7 +51,7 @@
       <!--Javascript Files-->
       <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-      <script src="{{ url_for('static', filename='js/expand.js') }}"></script>
+      <script src="{{ url_for('static', filename='js/base.js') }}"></script>
       {% block scripts %}{% endblock %}
     </div>
   </div>
