@@ -26,8 +26,11 @@ cd density
 python density.py
 ```
 
+To access the database from vagrant call:
 
+`sudo -u postgres psql density`
 
+The data table is under the name `density_data`
 
 
 ## Importing Dev Data
