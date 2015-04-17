@@ -409,7 +409,6 @@ def get_cap_group():
 def capacity():
     """ Render and show capacity page """
 
-    isofmt = '%Y-%m-%d %H:%M:%S'
     normfmt = '%B %d %Y, %I:%M %p'
     fetched_data = db.get_latest_data(g.cursor)
     locations = []
@@ -417,7 +416,7 @@ def capacity():
     last_updated = fetched_data[0]['dump_time']
     last_updated = last_updated.strftime(normfmt)
 
-    # Add percentage_full
+    # Add percentage_full`
     fetched_data = annotate_fullness_percentage(fetched_data)
 
     for data in fetched_data:
@@ -430,7 +429,7 @@ def capacity():
         locations.append({"name": data['group_name'], "fullness": capacity})
 
     return render_template('capacity.html', locations=locations,
-                            last_updated=last_updated)
+                           last_updated=last_updated)
 
 
 @app.route('/map')
