@@ -25,7 +25,6 @@ def get_latest_data(cursor):
     cursor.execute(query)
     return cursor.fetchall()
 
-
 def get_latest_group_data(cursor, group_id):
     """
     Gets latest dump of data for the specified group.

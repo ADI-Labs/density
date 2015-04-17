@@ -412,6 +412,8 @@ def capacity():
     fetched_data = db.get_latest_data(g.cursor)
     locations = []
 
+    last_updated = fetched_data[0]['dump_time']
+
     # Add percentage_full
     fetched_data = annotate_fullness_percentage(fetched_data)
 
@@ -424,7 +426,7 @@ def capacity():
 
         locations.append({"name": data['group_name'], "fullness": capacity})
 
-    return render_template('capacity.html', locations=locations)
+    return render_template('capacity.html', locations=locations, last_updated = last_updated)
 
 
 @app.route('/map')
