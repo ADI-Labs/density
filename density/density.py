@@ -403,11 +403,13 @@ def get_cap_group():
 @app.route('/')
 def capacity():
     """ Render and show capacity page """
-
-    # Read current data
+    normfmt = '%B %d %Y, %I:%M %p'
     cur_data = db.get_latest_data(g.cursor)
+    last_updated = cur_data[0]['dump_time']
+    last_updated = last_updated.strftime(normfmt)
     locations = calculate_capacity(FULL_CAP_DATA, cur_data)
-    return render_template('capacity.html', locations=locations)
+    return render_template('capacity.html', locations=locations,
+                           last_updated=last_updated)
 
 
 def calculate_capacity(cap_data, cur_data):

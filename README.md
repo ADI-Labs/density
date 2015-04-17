@@ -16,18 +16,28 @@ This is the recommend means of setting up Density for development.
 Next, install [vagrant](http://www.vagrantup.com/).
 Once vagrant is installed, you can run `vagrant up`, and vagrant will provision the virtual machine for you.
 
-To run the app, follow the these steps:
+To start, log into vagrant by following the these steps:
 
 ```bash
 vagrant ssh
 cd /vagrant
 source config/settings.dev
+```
+
+To run the app after you've logged into vagrant, follow these steps:
+
+```bash
 cd density
 python density.py
 ```
 
+To access the database after you've logged call:
 
+`sudo -u postgres psql density`
 
+The data table is under the name `density_data`
+
+[Click here for the PostgeSQL tutorial](http://www.postgresql.org/docs/8.0/static/tutorial.html)
 
 
 ## Importing Dev Data

@@ -13,7 +13,7 @@ $('#expand-collapse').click(function() {
     $('#learn-more').html('<strong>LEARN MORE</strong>');
     $('#learn-more').removeClass('open');
     $('#expandable').removeClass('expanded');
-  }x
+  }
 });
 
 /**
