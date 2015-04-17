@@ -3,11 +3,6 @@ html, body {
     background-color: #F0F0F0;
 }
 
-.navbar {
-    background-color: #A1FFB8;
-    border-radius: 0px;
-}
-
 .alert-container {
     font-family: 'Lato', sans-serif;
     position: relative;
@@ -66,6 +61,10 @@ a {
     color: #f3bebd;
 }
 
+.navItem > a {
+    color: white;
+}
+
 a:hover {
     color: #f8725d;
     text-decoration: none;
@@ -80,6 +79,11 @@ p {
 
 .about {
     font-size: 18px;
+    color: #000000;
+}
+
+.aboutContainer {
+    background-color: #ffffff;
 }
 
 .right { float: right;}
@@ -92,22 +96,6 @@ p {
 .escLogo {
     height: 5rem;
     padding-left: 0.4em;
-}
-
-.navbar-default .navbar-brand {
-    color: black;
-}
-
-.navbar-default .navbar-nav>li>a {
-    color: black;
-}
-
-.navbar-default .navbar-toggle:focus {
-    background-color: #A1FFB8;
-}
-
-.navbar-default .navbar-toggle:hover {
-    background-color: #61F785;
 }
 
 @media (min-width: 1200px) {
@@ -134,7 +122,15 @@ p {
 
 .logoContainer {
     background-color: #2285c6;
-    padding: 50px;
+    padding: 30px;
+}
+
+.navContainer {
+    padding: 1rem 0rem;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    background-color: #468fcc;
 }
 
 .textContainer {
@@ -150,7 +146,7 @@ p {
 
 #mapContainer {
     width: 100%;
-    padding: 50px 0;
+    padding: 25px 0;
     text-align: center;
 }
 
@@ -158,7 +154,15 @@ p {
     max-width: 100%;
 }
 
-.docs-formatting  p {
+.navItem {
+    padding: 1.15rem 30px;
+}
+
+.docs-formatting {
+    padding: 50px 15px;
+}
+
+.docs-formatting p {
     color: #000000;
 }
 
@@ -170,7 +174,7 @@ p {
     background-color: #f8725d;
     color: #ffffff;
     font-family: 'Lato', sans-serif;
-    padding: 50px;
+    padding: 30px;
     text-align: center;
 }
 
@@ -299,6 +303,14 @@ p {
     .footer {
         padding: 15px 20px;
     }
+
+    .navItem {
+        font-size: 14px;
+        padding-top: 1.4rem;
+        padding-bottom: 1.3rem;
+        padding-left: 14px;
+        padding-right: 14px;
+    }
 }
 
 .popup {
@@ -314,7 +326,7 @@ p {
 
 .not-found {
     text-align: center;
-    padding: 15px;
+    padding-top: 50px;
     font-size: 18px;
     font-family: Lato, sans-serif;
     line-height: 25px;
