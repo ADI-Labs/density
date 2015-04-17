@@ -3,9 +3,13 @@ from flask_mail import Message, Mail
 app = Flask(__name__)
 
 # do import early to check that all env variables are present
-app.config.from_object('config.flask_config')
 if not app.debug:
     mail = Mail(app)
+
+# change the default JSON encoder to handle datetime's properly
+from config import flask_config
+app.config.from_object('config.flask_config')
+app.json_encoder = flask_config.ISO8601Encoder
 
 # library imports
 import psycopg2
@@ -13,14 +17,18 @@ import psycopg2.pool
 import psycopg2.extras
 import datetime
 import traceback
+import copy
 from oauth2client.client import flow_from_clientsecrets
 import httplib2
 from db import db
 import re
 from functools import wraps
 
+with open('data/capacity_group.json') as json_data:
+    FULL_CAP_DATA = json.load(json_data)['data']
 
 CU_EMAIL_REGEX = r"^(?P<uni>[a-z\d]+)@.*(columbia|barnard)\.edu$"
+request_date_format = '%Y-%m-%d'
 
 # create a pool of postgres connections
 pg_pool = psycopg2.pool.SimpleConnectionPool(
@@ -48,6 +56,25 @@ def return_connections():
     pg_pool.putconn(g.pg_conn)
 
 
+def unsafe_date(*keys):
+    """ Takes URL parameters to filter as an argument """
+    def dec(fn):
+        @wraps(fn)
+        def validate_datetime(*args, **kwargs):
+            for dt in keys:
+                arg_date = request.view_args.get(dt)
+                try:
+                    datetime.datetime.strptime(arg_date, request_date_format)
+                except ValueError:
+                    return jsonify(error=("Invalid datetime format, "
+                                          "'{}', please use YYYY-MM-DD format")
+                                   .format(arg_date)), 400
+
+            return fn(*args, **kwargs)
+        return validate_datetime
+    return dec
+
+
 @app.after_request
 def log_outcome(resp):
     """ Outputs to a specified logging file """
@@ -60,7 +87,7 @@ def log_outcome(resp):
 
 @app.errorhandler(404)
 def page_not_found(e):
-    return jsonify(error="Page not found")
+    return render_template('404.html')
 
 
 @app.errorhandler(500)
@@ -89,6 +116,37 @@ def authorization_required(func):
         # TODO: Some logging right here. We can log which user is using what.
         return func(*args, **kwargs)
     return authorization_checker
+
+
+def annotate_fullness_percentage(cur_data):
+    """
+    Calculates percent fullness of all groups and adds them to the data in
+    the key 'percent_full'. The original data file is not modified.
+
+    :param list of dictionaries cur_data: data to calculate fullness percentage
+    :return: list of dictionaries with added pecent_full data
+    :rtype: list of dictionaries
+    """
+
+    # copy so that original list is not affected
+    cur_data_copy = copy.copy(cur_data)
+
+    for data in cur_data_copy:
+
+        group_name = data['group_name']
+        cur_client_count = data['client_count']
+
+        for cap in FULL_CAP_DATA:
+            if cap['group_name'] == group_name:
+                capacity = cap['capacity']
+                break
+
+        # Percent full in float
+        percent_full = float(cur_client_count)/capacity*100
+        data["percent_full"] = percent_full
+
+    # Match percentage and group by order of list
+    return cur_data_copy
 
 
 @app.route('/home')
@@ -181,6 +239,10 @@ def get_latest_data():
     """
 
     fetched_data = db.get_latest_data(g.cursor)
+
+    # Add percentage_full
+    fetched_data = annotate_fullness_percentage(fetched_data)
+
     return jsonify(data=fetched_data)
 
 
@@ -196,6 +258,10 @@ def get_latest_group_data(group_id):
     """
 
     fetched_data = db.get_latest_group_data(g.cursor, group_id)
+
+    # Add percentage_full
+    fetched_data = annotate_fullness_percentage(fetched_data)
+
     return jsonify(data=fetched_data)
 
 
@@ -212,10 +278,14 @@ def get_latest_building_data(parent_id):
 
     fetched_data = db.get_latest_building_data(g.cursor, parent_id)
 
+    # Add percentage_full
+    fetched_data = annotate_fullness_percentage(fetched_data)
+
     return jsonify(data=fetched_data)
 
 
 @app.route('/day/<day>/group/<group_id>')
+@unsafe_date('day')
 @authorization_required
 def get_day_group_data(day, group_id):
     """
@@ -233,10 +303,14 @@ def get_day_group_data(day, group_id):
 
     fetched_data = db.get_window_based_on_group(g.cursor, group_id, start_day,
                                                 end_day, offset=0)
+    # Add percentage_full
+    fetched_data = annotate_fullness_percentage(fetched_data)
+
     return jsonify(data=fetched_data)
 
 
 @app.route('/day/<day>/building/<parent_id>')
+@unsafe_date('day')
 @authorization_required
 def get_day_building_data(day, parent_id):
     """
@@ -254,6 +328,10 @@ def get_day_building_data(day, parent_id):
 
     fetched_data = db.get_window_based_on_parent(g.cursor, parent_id,
                                                  start_day, end_day, offset=0)
+
+    # Add percentage_full
+    fetched_data = annotate_fullness_percentage(fetched_data)
+
     return jsonify(data=fetched_data)
 
 
@@ -273,11 +351,15 @@ def get_window_group_data(start_time, end_time, group_id):
         'offset') else 0
     fetched_data = db.get_window_based_on_group(g.cursor, group_id, start_time,
                                                 end_time, offset)
+    # Add percentage_full
+    fetched_data = annotate_fullness_percentage(fetched_data)
+
     next_page_url = None
     if len(fetched_data) == db.QUERY_LIMIT:
         new_offset = offset + db.QUERY_LIMIT
         next_page_url = request.base_url + '?auth_token=' + request.args.get(
             'auth_token') + '&offset=' + str(new_offset)
+
     return jsonify(data=fetched_data, next_page=next_page_url)
 
 
@@ -297,6 +379,9 @@ def get_window_building_data(start_time, end_time, parent_id):
         'offset') else 0
     fetched_data = db.get_window_based_on_parent(g.cursor, parent_id,
                                                  start_time, end_time, offset)
+    # Add percentage_full
+    fetched_data = annotate_fullness_percentage(fetched_data)
+
     next_page_url = None
     if len(fetched_data) == db.QUERY_LIMIT:
         new_offset = offset + db.QUERY_LIMIT
@@ -331,6 +416,40 @@ def capacity():
     cur_data = db.get_latest_data(g.cursor)
     locations = calculate_capacity(cap_data, cur_data)
     return render_template('capacity.html', locations=locations)
+
+@app.route('/map')
+def map():
+    """ Render and show maps page """
+
+    cur_data = db.get_latest_data(g.cursor)
+    locations = []
+
+    # Loop to find corresponding cur_client_count with capacity
+    # and store it in locations
+    for cap in FULL_CAP_DATA:
+        groupName = cap['group_name']
+        capacity = cap['capacity']
+        parentId = cap['parent_id']
+        parentName = cap['parent_name']
+
+        for latest in cur_data:
+            if latest['group_name'] == groupName:
+                cur_client_count = latest['client_count']
+                break
+        # Cast one of the numbers into a float, get a percentile by multiplying
+        # 100, round the percentage and cast it back into a int.
+        percent_full = int(round(float(cur_client_count)/capacity*100))
+        if percent_full > 100:
+            percent_full = 100
+
+        if groupName == 'Butler Library stk':
+            groupName = 'Butler Library Stacks'
+
+        locations.append({"name": groupName, "fullness": percent_full,
+                          "parentId": parentId, "parentName": parentName})
+
+    # Render template has an SVG image whose colors are changed by % full
+    return render_template('map.html', locations=locations)
 
 
 def calculate_capacity(cap_data, cur_data):
