@@ -154,6 +154,7 @@ def home():
     return render_template('index.html',
                            client_id=app.config['GOOGLE_CLIENT_ID'])
 
+
 @app.route('/about')
 def about():
     return render_template('about.html')
