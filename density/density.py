@@ -399,12 +399,9 @@ def get_cap_group():
 def capacity():
     """ Render and show capacity page """
 
-    # Read capacity of groups from json file
-    with open('data/capacity_group.json') as json_data:
-        cap_data = json.load(json_data)['data']
     # Read current data
     cur_data = db.get_latest_data(g.cursor)
-    locations = calculate_capacity(cap_data, cur_data)
+    locations = calculate_capacity(FULL_CAP_DATA, cur_data)
     return render_template('capacity.html', locations=locations)
 
 
