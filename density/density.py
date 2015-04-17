@@ -1,16 +1,6 @@
 from flask import Flask, g, jsonify, render_template, json, request
 from flask_mail import Message, Mail
-
 from config import flask_config
-app = Flask(__name__)
-app.config.update(**flask_config.config)
-
-# do import early to check that all env variables are present
-if not app.debug:
-    mail = Mail(app)
-
-# change the default JSON encoder to handle datetime's properly
-app.json_encoder = flask_config.ISO8601Encoder
 
 # library imports
 import psycopg2
@@ -24,6 +14,14 @@ import httplib2
 from db import db
 import re
 from functools import wraps
+
+app = Flask(__name__)
+app.config.update(**flask_config.config)
+if not app.debug:
+    mail = Mail(app)
+
+# change the default JSON encoder to handle datetime's properly
+app.json_encoder = flask_config.ISO8601Encoder
 
 with open('data/capacity_group.json') as json_data:
     FULL_CAP_DATA = json.load(json_data)['data']
@@ -212,9 +210,9 @@ def auth():
         if not regex:
             return render_template('auth.html',
                                    success=False,
-                                   reason=("You need to log in with your "
-                                           "Columbia or Barnard email! You "
-                                           "logged in with: " + email))
+                                   reason="Please log in with your " +
+                                   "Columbia or Barnard email. You logged " +
+                                   "in with: " + email)
 
         # Get UNI and ask database for code.
         uni = regex.group('uni')

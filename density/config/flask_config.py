@@ -10,6 +10,8 @@ from os import environ
 from sys import exit
 from datetime import datetime
 
+from consul import Consul
+from flask.json import JSONEncoder
 
 # dictionary the flask app configures itself from
 config = {
@@ -53,7 +55,6 @@ if config.get('DEBUG'):
         exit(1)
 
 else:  # prod w/ consul
-    from consul import Consul
     kv = Consul().kv  # initalize client to KV store
 
     for consul_key, config_key in consul_configurations:
@@ -87,7 +88,6 @@ else:  # prod w/ consul
 
 """ Creates a json encoder that returns ISO 8601 strings for datetimes
     http://flask.pocoo.org/snippets/119/ """
-from flask.json import JSONEncoder
 
 
 class ISO8601Encoder(JSONEncoder):
