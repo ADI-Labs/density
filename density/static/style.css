@@ -79,6 +79,11 @@ p {
 
 .about {
     font-size: 18px;
+    color: #000000;
+}
+
+.aboutContainer {
+    background-color: #ffffff;
 }
 
 .right { float: right;}

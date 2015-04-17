@@ -17,7 +17,7 @@ $("#expand-collapse").click(function() {
 });
 
 /**
- * Darkens the button corresponding to the current page in the nav bar.
+ * Darkens a button in the nav bar corresponding to the current page.
  * Uses URL string parsing to determine which page the user is on.
  */
 $(document).ready(function() {
@@ -30,6 +30,8 @@ $(document).ready(function() {
     darken("nav-map");
   } else if (url.indexOf("docs") != -1) {
     darken("nav-api");
+  } else if (url.indexOf("about") != -1) {
+    darken("nav-about");
   } else {
     darken("nav-home");
   }
