@@ -6,7 +6,17 @@
 {% endblock %}
 
 {% block body %}
+<<<<<<< HEAD
 
+=======
+<div class="logoContainer">
+    <div class="container">
+        <div class="text-center">
+            <img class="logo" src="{{ url_for('static', filename='img/logo.svg')}}">
+        </div>
+    </div>
+</div>
+>>>>>>> upstream/master
 {% if success %}
 {% else %}
 <div class="textContainer">
@@ -29,7 +39,7 @@
 
     <h3>Getting access to the API</h3>
     <h5>To use the API, you will need a Columbia or Barnard e-mail address.</h5>
-    <button id='signinButton' onclick='login()' style="margin-bottom: 1em;">
+    <button id='signinButton' class="btn btn-primary blue-btn" onclick='login()' style="margin-bottom: 1em;">
         Get access
     </button>
     <script>
