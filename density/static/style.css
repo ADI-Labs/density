@@ -158,7 +158,11 @@ p {
     padding: 1.15rem 30px;
 }
 
-.docs-formatting  p {
+.docs-formatting {
+    padding: 50px 10px;
+}
+
+.docs-formatting p {
     color: #000000;
 }
 
