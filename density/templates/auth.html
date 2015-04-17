@@ -1,4 +1,4 @@
-{% extends "layout_no_header.html" %}
+{% extends "layout.html" %}
 
 {% block head %}
     {{ super() }}
@@ -9,7 +9,7 @@
 <div class="logoContainer">
     <div class="container">
         <div class="text-center">
-            <img class="logo" src="{{ url_for('static', filename='logo.svg')}}">
+            <img class="logo" src="{{ url_for('static', filename='img/logo.svg')}}">
         </div>
     </div>
 </div>
@@ -30,12 +30,12 @@
     <h5> Your code is: {{ code }} </h5>
   {% else %}
     {% if reason %}
-      <h1 style="color:red"> {{ reason }} </h1>
+      <h3> {{ reason }} </h3>
     {% endif %}
 
     <h3>Getting access to the API</h3>
-    <h5>To use the API, you will need a Columbia or Barnard e-mail address.</h5>
-    <button id='signinButton' onclick='login()' style="margin-bottom: 1em;">
+    <h5>To use the API, you will need a Columbia or Barnard email address.</h5>
+    <button id='signinButton' class="btn btn-primary blue-btn" onclick='login()' style="margin-bottom: 1em;">
         Get access
     </button>
     <script>
