@@ -64,7 +64,8 @@ The dining halls are most crowded around mealtimes.
 ![alt text](dev_series.png)
 There's a clear weekly cycle in the number of devices connected across campus.  Let's remove the weekly cycle by grouping the data into weeks. Smoothing out the data by grouping by week allows us to see differences in semesters and holidays more clearly e.g. the big drop around Thanksgiving and the following spike for Finals.
 ![alt text](weekly_count.png)
-Aggregating the data by week allows us to see that there's a jump in the number of devices when the semester starts.  We also see a dip for fall break and Thanksgiving and a spike for finals.  Winter break is also visible following the dramatic drop in device count.
+
+Aggregating the data by week allows us to see that there's a jump in the number of devices when the semester starts.  We also see dips for fall break, spring break, and Thanksgiving.  Thanksgiving is followed by a spike for finals.  Winter break is also visible following the dramatic drop in device count.
 
 ---
 
