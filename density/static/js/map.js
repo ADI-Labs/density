@@ -4,13 +4,15 @@ document.addEventListener('DOMContentLoaded', function() {
   // before executing the relevant javascript. This solves
   // the issue of the javascript not being run on Safari.
 
+  var loading_check_interval = 5;
+
   function checkReady() {
     if (document.getElementById('map').getSVGDocument() == null) {
-      setTimeout(checkReady, 5);
+      setTimeout(checkReady, loading_check_interval);
     }
     // we still need to check to see if all of the elements of the SVG have been loaded
     else if (document.getElementById('map').contentDocument.getElementById('parent_2') == null) {
-      setTimeout(checkReady, 5);      
+      setTimeout(checkReady, loading_check_interval);
     }
     else {
       run();
@@ -92,7 +94,7 @@ document.addEventListener('DOMContentLoaded', function() {
       buildingElement.onmouseenter = function(event) {
         popup.style.visibility = 'visible';
         var leftPosition = (initialOffsetLeft + event.clientX - 
-          (popup.offsetWidth/2)).toString() + 'px'; // divide by 2 centers it (half of width)
+          (popup.offsetWidth / 2)).toString() + 'px'; // divide by 2 centers it (half of width)
         var topPosition = (initialOffsetTop - mouseOffset + event.clientY -
           (popup.offsetHeight)).toString() + 'px';
         popup.style.top = topPosition;
@@ -108,7 +110,7 @@ document.addEventListener('DOMContentLoaded', function() {
       //moves popup with mouse
       buildingElement.onmousemove = function(event) {
         var leftPosition = (initialOffsetLeft + event.clientX - 
-          (popup.offsetWidth/2)).toString() + 'px'; // divide by 2 centers it (half of width)
+          (popup.offsetWidth / 2)).toString() + 'px'; // divide by 2 centers it (half of width)
         var topPosition = (initialOffsetTop - mouseOffset + event.clientY -
           (popup.offsetHeight)).toString() + 'px';
         popup.style.top = topPosition;
