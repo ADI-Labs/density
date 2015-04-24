@@ -24,13 +24,14 @@ config = {
     'PG_HOST': None,
     'PG_PORT': None,
     'GOOGLE_CLIENT_ID': None,
-    'DEBUG': True if environ.get('DEBUG') == 'TRUE' else False
+    'DEBUG': None
 }
 
 # consul_configurations contains equivalent keys that will be used to extract
 # configuration values from Consul.
 consul_configurations = [  # consul key --> config key
     ('flask_port', 'PORT'),
+    ('flask_debug', 'DEBUG'),
     ('secret_key', 'SECRET_KEY'),
     ('postgres_user', 'PG_USER'),
     ('postgres_password', 'PG_PASSWORD'),
@@ -40,7 +41,7 @@ consul_configurations = [  # consul key --> config key
     ('google_client_id', 'GOOGLE_CLIENT_ID'),
 ]
 
-if config.get('DEBUG'):
+if environ.get('USE_ENV_VARS') == 'TRUE':
     try:  # use local settings
         for env_key, value in config.iteritems():
             if not value:
@@ -54,7 +55,7 @@ if config.get('DEBUG'):
                "\n\n\tsource config/<your settings file>")
         exit(1)
 
-else:  # prod w/ consul
+else:  # use consul
     kv = Consul().kv  # initalize client to KV store
 
     for consul_key, config_key in consul_configurations:
@@ -85,6 +86,8 @@ else:  # prod w/ consul
         'mgb2163@columbia.edu',
         'jzf2101@columbia.edu'
     ]
+
+config['DEBUG'] = (config['DEBUG'] == 'TRUE')
 
 """ Creates a json encoder that returns ISO 8601 strings for datetimes
     http://flask.pocoo.org/snippets/119/ """
