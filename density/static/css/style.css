@@ -129,7 +129,13 @@ p {
     padding: 1rem 0rem;
     font-family: 'Lato', sans-serif;
     font-weight: 300;
-    font-size: 18px;
+    font-size: 0px;
+    /*
+    Removes space between inline-block items. In this case,
+    the space between the navItems.
+    https://css-tricks.com/fighting-the-space-between-inline-block-elements/
+    */
+
     background-color: #468fcc;
 }
 
@@ -141,7 +147,7 @@ p {
 
 .listContainer {
     background-color: #f0f0f0;
-    padding: 50px;
+    padding: 50px 50px 30px 50px;
 }
 
 #mapContainer {
@@ -155,7 +161,9 @@ p {
 }
 
 .navItem {
-    padding: 1.15rem 30px;
+    font-size: 18px;
+    height: 100%;
+    padding: 12px 30px;
 }
 
 .docs-formatting {
@@ -218,6 +226,44 @@ p {
     display: block;
 }
 
+.popup {
+    text-align: left;
+    visibility: hidden;
+    background-color: #468fcc;
+    color: #fff;
+    padding: 1em;
+    max-width: 30em;
+    max-height: 100em;
+    position: absolute;
+}
+
+.not-found {
+    text-align: center;
+    padding-top: 50px;
+    font-size: 18px;
+    font-family: Lato, sans-serif;
+    line-height: 25px;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.blue-btn {
+    background-color: #468fcc;
+    border-color: #2285c6;
+}
+.blue-btn:hover {
+    background-color: #2285c6;
+}
+
+.update {
+    color: gray;
+    padding: 30px 0px 0px 0px;
+    text-align: center;
+}
+
 @media screen and (max-width: 640px) {
     .logoContainer {
         padding: 10px;
@@ -237,7 +283,7 @@ p {
 
     .listContainer {
         width: 100%;
-        padding: 0;
+        padding: 0px;
     }
 
     .thanksContainer {
@@ -305,42 +351,12 @@ p {
     }
 
     .navItem {
-        font-size: 14px;
-        padding-top: 1.4rem;
-        padding-bottom: 1.3rem;
-        padding-left: 14px;
-        padding-right: 14px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .update {
+        padding: 10px;
     }
 }
 
-.popup {
-    text-align: left;
-    visibility: hidden;
-    background-color: #468fcc;
-    color: #fff;
-    padding: 1em;
-    max-width: 30em;
-    max-height: 100em;
-    position: absolute;
-}
-
-.not-found {
-    text-align: center;
-    padding-top: 50px;
-    font-size: 18px;
-    font-family: Lato, sans-serif;
-    line-height: 25px;
-}
-
-img {
-    max-width: 100%;
-    max-height: 100%;
-}
-
-.blue-btn {
-    background-color: #468fcc;
-    border-color: #2285c6;
-}
-.blue-btn:hover {
-    background-color: #2285c6;
-}
