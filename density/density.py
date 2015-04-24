@@ -122,7 +122,6 @@ def annotate_fullness_percentage(cur_data):
     """
     Calculates percent fullness of all groups and adds them to the data in
     the key 'percent_full'. The original data file is not modified.
-
     :param list of dictionaries cur_data: data to calculate fullness percentage
     :return: list of dictionaries with added pecent_full data
     :rtype: list of dictionaries
@@ -155,6 +154,11 @@ def home():
                            client_id=app.config['GOOGLE_CLIENT_ID'])
 
 
+@app.route('/about')
+def about():
+    return render_template('about.html')
+
+
 @app.route('/docs')
 def docs():
     return render_template('docs.html')
@@ -175,7 +179,6 @@ def building_info():
 def auth():
     """
     Returns an auth code after user logs in through Google+.
-
     :param string code: code that is passed in through Google+.
                         Do not provide this yourself.
     :return: An html page with an auth code.
@@ -211,10 +214,10 @@ def auth():
         if not regex:
             return render_template('auth.html',
                                    success=False,
-                                   reason="You need to log in with your "
-                                   + "Columbia or Barnard email! You logged "
-                                   + "in with: "
-                                   + email)
+                                   reason="Please log in with your " +
+                                   "Columbia or Barnard email. You logged " +
+                                   "in with: " +
+                                   email)
 
         # Get UNI and ask database for code.
         uni = regex.group('uni')
@@ -233,7 +236,6 @@ def auth():
 def get_latest_data():
     """
     Gets latest dump of data for all endpoints.
-
     :return: Latest JSON
     :rtype: flask.Response
     """
@@ -251,7 +253,6 @@ def get_latest_data():
 def get_latest_group_data(group_id):
     """
     Gets latest dump of data for the specified group.
-
     :param int group_id: id of the group requested
     :return: Latest JSON corresponding to the requested group
     :rtype: flask.Response
@@ -270,7 +271,6 @@ def get_latest_group_data(group_id):
 def get_latest_building_data(parent_id):
     """
     Gets latest dump of data for the specified building.
-
     :param int parent_id: id of the building requested
     :return: Latest JSON corresponding to the requested building
     :rtype: flask.Response
@@ -290,7 +290,6 @@ def get_latest_building_data(parent_id):
 def get_day_group_data(day, group_id):
     """
     Gets specified group data for specified day
-
     :param str day: the day requested in EST format YYYY-MM-DD
     :param int group_id: id of the group requested
     :return: JSON corresponding to the requested day and group
@@ -315,7 +314,6 @@ def get_day_group_data(day, group_id):
 def get_day_building_data(day, parent_id):
     """
     Gets specified building data for specified day
-
     :param str day: the day requested in EST format YYYY-MM-DD
     :param int parent_id: id of the building requested
     :return: JSON corresponding to the requested day and building
@@ -340,7 +338,6 @@ def get_day_building_data(day, parent_id):
 def get_window_group_data(start_time, end_time, group_id):
     """
     Gets specified group data split by the specified time delimiter.
-
     :param str start_time: start time in EST format YYYY-MM-DDThh:mm
     :param str end_time: end time in EST format YYYY-MM-DDThh:mm
     :param int group_id: id of the group requested
@@ -368,7 +365,6 @@ def get_window_group_data(start_time, end_time, group_id):
 def get_window_building_data(start_time, end_time, parent_id):
     """
     Gets specified building data split by the specified time delimiter.
-
     :param str start_time: start time in EST format YYYY-MM-DDThh:mm
     :param str end_time: end time in EST format YYYY-MM-DDThh:mm
     :param int parent_id: id of the building requested
@@ -394,7 +390,6 @@ def get_window_building_data(start_time, end_time, parent_id):
 def get_cap_group():
     """
     Return capacity of all groups.
-
     :return: List of dictionaries having keys "group_name", "capacity",
     "group_id"
     :rtype: List of dictionaries
@@ -408,23 +403,45 @@ def get_cap_group():
 @app.route('/')
 def capacity():
     """ Render and show capacity page """
+    normfmt = '%B %d %Y, %I:%M %p'
+    cur_data = db.get_latest_data(g.cursor)
+    last_updated = cur_data[0]['dump_time']
+    last_updated = last_updated.strftime(normfmt)
+    locations = calculate_capacity(FULL_CAP_DATA, cur_data)
+    return render_template('capacity.html', locations=locations,
+                           last_updated=last_updated)
 
-    fetched_data = db.get_latest_data(g.cursor)
+
+def calculate_capacity(cap_data, cur_data):
+    """
+    Calculates capacity with cap_data and cur_data and puts
+    with respective group_name into locations
+    """
+
     locations = []
 
-    # Add percentage_full
-    fetched_data = annotate_fullness_percentage(fetched_data)
+    # Loop to find corresponding cur_client_count with capacity
+    # and store it in locations
+    for cap in cap_data:
 
-    for data in fetched_data:
+        group_name = cap['group_name']
+        capacity = cap['capacity']
 
-        capacity = int(round(data["percent_full"]))
+        for latest in cur_data:
+            if latest['group_name'] == group_name:
+                cur_client_count = latest['client_count']
+                break
+        # Cast one of the numbers into a float, get a percentile by multiplying
+        # 100, round the percentage and cast it back into a int.
+        percent_full = int(round(float(cur_client_count)/capacity*100))
+        if percent_full > 100:
+            percent_full = 100
 
-        if data['group_name'] == 'Butler Library stk':
-            data['group_name'] = 'Butler Library Stacks'
+        if group_name == 'Butler Library stk':
+            group_name = 'Butler Library Stacks'
 
-        locations.append({"name": data['group_name'], "fullness": capacity})
-
-    return render_template('capacity.html', locations=locations)
+        locations.append({"name": group_name, "fullness": percent_full})
+    return locations
 
 
 @app.route('/map')

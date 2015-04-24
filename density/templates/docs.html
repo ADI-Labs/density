@@ -1,24 +1,12 @@
 {% extends "layout.html" %}
 {% block body %}
-<div class="logoContainer">
-    <div class="container">
-        <div class="text-center">
-            <img class="logo" src="{{ url_for('static', filename='img/logo.svg')}}">
-        </div>
-    </div>
-</div>
-<div class="textContainer">
-    <div class="container">
-        <div>
-            <p class="about">This is the <strong>documentation</strong> page for the Density API.</p>
-            <p>To access this API, you'll need to <a href="/auth">get an API key</a> by logging in with your Columbia-affiliated email.</p>
-        </div>
-    </div>
-</div>
-<div class="listContainer">
 <div class="container">
 <div class="list-group">
 <div class="docs-formatting">
+
+<p class="about">This is the <strong>documentation</strong> page for the Density API.</p>
+<p>To access this API, you'll need to <a href="/auth">get an API key</a> by logging in with your Columbia-affiliated email.</p>
+
 <h2>Overview</h2>
 
 <p>Columbia has shared with ADI a live stream of the number of devices connected to routers at various locations on campus. New counts are added every fifteen minutes.</p>
@@ -240,13 +228,12 @@ next_page: "http://density.adicu.com/window/2014-10-29T05:00/2014-11-29T15:45/bu
 <li>"Invalid authentication token."
 
 <ul>
-<li>An expired or improper authentication token was used with your request. Ensure you're using the most recent token generated with your e-mail.</li>
+<li>An expired or improper authentication token was used with your request. Ensure you're using the most recent token generated with your email.</li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>	
-</div>
 </div>
 </div>
 </div>
