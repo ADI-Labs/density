@@ -166,7 +166,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-20 00:00:00	149	Architectural and Fine Arts Library 3	146	Avery	2
 2014-10-20 00:00:00	134	Butler Library 6	103	Butler	3
 2014-10-20 00:00:00	138	Butler Library stk	103	Butler	40
-2014-10-20 00:00:00	145	Science and Engineering Library	15	Mudd	53
+2014-10-20 00:00:00	145	Science and Engineering Library	15	Northwest Corner Building	53
 2014-10-20 00:15:00	131	Butler Library 3	103	Butler	337
 2014-10-20 00:15:00	139	Lehman Library 2	79	Lehman LIbrary	2
 2014-10-20 00:15:00	144	Starr East Asian Library	62	East Asian Library	6
@@ -188,13 +188,13 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-20 00:15:00	149	Architectural and Fine Arts Library 3	146	Avery	3
 2014-10-20 00:15:00	134	Butler Library 6	103	Butler	5
 2014-10-20 00:15:00	138	Butler Library stk	103	Butler	39
-2014-10-20 00:15:00	145	Science and Engineering Library	15	Mudd	48
+2014-10-20 00:15:00	145	Science and Engineering Library	15	Northwest Corner Building	48
 2014-10-20 00:30:00	152	Lerner 3	84	Lerner	15
 2014-10-20 00:30:00	130	Butler Library 2	103	Butler	423
 2014-10-20 00:30:00	149	Architectural and Fine Arts Library 3	146	Avery	2
 2014-10-20 00:30:00	134	Butler Library 6	103	Butler	8
 2014-10-20 00:30:00	138	Butler Library stk	103	Butler	40
-2014-10-20 00:30:00	145	Science and Engineering Library	15	Mudd	37
+2014-10-20 00:30:00	145	Science and Engineering Library	15	Northwest Corner Building	37
 2014-10-20 00:30:00	155	JJ's Place	75	John Jay	26
 2014-10-20 00:30:00	133	Butler Library 5	103	Butler	13
 2014-10-20 00:30:00	151	Lerner 2	84	Lerner	31
@@ -228,7 +228,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-20 00:45:00	149	Architectural and Fine Arts Library 3	146	Avery	2
 2014-10-20 00:45:00	134	Butler Library 6	103	Butler	7
 2014-10-20 00:45:00	138	Butler Library stk	103	Butler	39
-2014-10-20 00:45:00	145	Science and Engineering Library	15	Mudd	41
+2014-10-20 00:45:00	145	Science and Engineering Library	15	Northwest Corner Building	41
 2014-10-20 00:45:00	155	JJ's Place	75	John Jay	33
 2014-10-20 00:45:00	133	Butler Library 5	103	Butler	15
 2014-10-20 00:45:00	151	Lerner 2	84	Lerner	28
@@ -253,7 +253,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-20 01:00:00	149	Architectural and Fine Arts Library 3	146	Avery	3
 2014-10-20 01:00:00	134	Butler Library 6	103	Butler	8
 2014-10-20 01:00:00	138	Butler Library stk	103	Butler	37
-2014-10-20 01:00:00	145	Science and Engineering Library	15	Mudd	39
+2014-10-20 01:00:00	145	Science and Engineering Library	15	Northwest Corner Building	39
 2014-10-20 01:15:00	155	JJ's Place	75	John Jay	28
 2014-10-20 01:15:00	133	Butler Library 5	103	Butler	10
 2014-10-20 01:15:00	151	Lerner 2	84	Lerner	21
@@ -275,7 +275,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-20 01:15:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-20 01:15:00	134	Butler Library 6	103	Butler	7
 2014-10-20 01:15:00	138	Butler Library stk	103	Butler	43
-2014-10-20 01:15:00	145	Science and Engineering Library	15	Mudd	38
+2014-10-20 01:15:00	145	Science and Engineering Library	15	Northwest Corner Building	38
 2014-10-20 01:30:00	155	JJ's Place	75	John Jay	9
 2014-10-20 01:30:00	133	Butler Library 5	103	Butler	9
 2014-10-20 01:30:00	151	Lerner 2	84	Lerner	12
@@ -297,7 +297,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-20 01:30:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-20 01:30:00	134	Butler Library 6	103	Butler	8
 2014-10-20 01:30:00	138	Butler Library stk	103	Butler	39
-2014-10-20 01:30:00	145	Science and Engineering Library	15	Mudd	23
+2014-10-20 01:30:00	145	Science and Engineering Library	15	Northwest Corner Building	23
 2014-10-20 01:45:00	155	JJ's Place	75	John Jay	3
 2014-10-20 01:45:00	133	Butler Library 5	103	Butler	9
 2014-10-20 01:45:00	151	Lerner 2	84	Lerner	12
@@ -319,13 +319,13 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-20 01:45:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-20 01:45:00	134	Butler Library 6	103	Butler	10
 2014-10-20 01:45:00	138	Butler Library stk	103	Butler	37
-2014-10-20 01:45:00	145	Science and Engineering Library	15	Mudd	20
+2014-10-20 01:45:00	145	Science and Engineering Library	15	Northwest Corner Building	20
 2014-10-20 02:00:00	152	Lerner 3	84	Lerner	7
 2014-10-20 02:00:00	130	Butler Library 2	103	Butler	228
 2014-10-20 02:00:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-20 02:00:00	134	Butler Library 6	103	Butler	7
 2014-10-20 02:00:00	138	Butler Library stk	103	Butler	31
-2014-10-20 02:00:00	145	Science and Engineering Library	15	Mudd	19
+2014-10-20 02:00:00	145	Science and Engineering Library	15	Northwest Corner Building	19
 2014-10-20 02:00:00	131	Butler Library 3	103	Butler	215
 2014-10-20 02:00:00	139	Lehman Library 2	79	Lehman LIbrary	2
 2014-10-20 02:00:00	144	Starr East Asian Library	62	East Asian Library	7
@@ -347,7 +347,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-20 02:15:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-20 02:15:00	134	Butler Library 6	103	Butler	6
 2014-10-20 02:15:00	138	Butler Library stk	103	Butler	27
-2014-10-20 02:15:00	145	Science and Engineering Library	15	Mudd	17
+2014-10-20 02:15:00	145	Science and Engineering Library	15	Northwest Corner Building	17
 2014-10-20 02:15:00	155	JJ's Place	75	John Jay	1
 2014-10-20 02:15:00	133	Butler Library 5	103	Butler	9
 2014-10-20 02:15:00	151	Lerner 2	84	Lerner	7
@@ -385,7 +385,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-20 02:30:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-20 02:30:00	134	Butler Library 6	103	Butler	5
 2014-10-20 02:30:00	138	Butler Library stk	103	Butler	22
-2014-10-20 02:30:00	145	Science and Engineering Library	15	Mudd	11
+2014-10-20 02:30:00	145	Science and Engineering Library	15	Northwest Corner Building	11
 2014-10-20 02:45:00	155	JJ's Place	75	John Jay	2
 2014-10-20 02:45:00	133	Butler Library 5	103	Butler	9
 2014-10-20 02:45:00	151	Lerner 2	84	Lerner	8
@@ -407,13 +407,13 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-20 02:45:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-20 02:45:00	134	Butler Library 6	103	Butler	3
 2014-10-20 02:45:00	138	Butler Library stk	103	Butler	25
-2014-10-20 02:45:00	145	Science and Engineering Library	15	Mudd	8
+2014-10-20 02:45:00	145	Science and Engineering Library	15	Northwest Corner Building	8
 2014-10-20 03:00:00	152	Lerner 3	84	Lerner	2
 2014-10-20 03:00:00	130	Butler Library 2	103	Butler	139
 2014-10-20 03:00:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-20 03:00:00	134	Butler Library 6	103	Butler	2
 2014-10-20 03:00:00	138	Butler Library stk	103	Butler	21
-2014-10-20 03:00:00	145	Science and Engineering Library	15	Mudd	5
+2014-10-20 03:00:00	145	Science and Engineering Library	15	Northwest Corner Building	5
 2014-10-20 03:00:00	131	Butler Library 3	103	Butler	131
 2014-10-20 03:00:00	139	Lehman Library 2	79	Lehman LIbrary	2
 2014-10-20 07:30:00	152	Lerner 3	84	Lerner	6
@@ -444,7 +444,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-20 03:15:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-20 03:15:00	134	Butler Library 6	103	Butler	3
 2014-10-20 03:15:00	138	Butler Library stk	103	Butler	20
-2014-10-20 03:15:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-20 03:15:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-20 03:15:00	155	JJ's Place	75	John Jay	2
 2014-10-20 03:15:00	133	Butler Library 5	103	Butler	9
 2014-10-20 03:15:00	151	Lerner 2	84	Lerner	6
@@ -474,7 +474,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-20 03:30:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-20 03:30:00	134	Butler Library 6	103	Butler	3
 2014-10-20 03:30:00	138	Butler Library stk	103	Butler	21
-2014-10-20 03:30:00	145	Science and Engineering Library	15	Mudd	1
+2014-10-20 03:30:00	145	Science and Engineering Library	15	Northwest Corner Building	1
 2014-10-20 03:45:00	155	JJ's Place	75	John Jay	2
 2014-10-20 03:45:00	133	Butler Library 5	103	Butler	9
 2014-10-20 03:45:00	151	Lerner 2	84	Lerner	6
@@ -496,7 +496,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-20 03:45:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-20 03:45:00	134	Butler Library 6	103	Butler	3
 2014-10-20 03:45:00	138	Butler Library stk	103	Butler	17
-2014-10-20 03:45:00	145	Science and Engineering Library	15	Mudd	1
+2014-10-20 03:45:00	145	Science and Engineering Library	15	Northwest Corner Building	1
 2014-10-20 04:00:00	154	Lerner 5	84	Lerner	0
 2014-10-20 04:00:00	125	John Jay Dining Hall	75	John Jay	1
 2014-10-20 04:00:00	147	Architectural and Fine Arts Library 1	146	Avery	1
@@ -512,7 +512,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-20 04:00:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-20 04:00:00	134	Butler Library 6	103	Butler	3
 2014-10-20 04:00:00	138	Butler Library stk	103	Butler	13
-2014-10-20 04:00:00	145	Science and Engineering Library	15	Mudd	1
+2014-10-20 04:00:00	145	Science and Engineering Library	15	Northwest Corner Building	1
 2014-10-20 04:00:00	131	Butler Library 3	103	Butler	83
 2014-10-20 04:00:00	139	Lehman Library 2	79	Lehman LIbrary	2
 2014-10-20 04:00:00	144	Starr East Asian Library	62	East Asian Library	2
@@ -532,7 +532,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-20 04:15:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-20 04:15:00	134	Butler Library 6	103	Butler	6
 2014-10-20 04:15:00	138	Butler Library stk	103	Butler	6
-2014-10-20 04:15:00	145	Science and Engineering Library	15	Mudd	1
+2014-10-20 04:15:00	145	Science and Engineering Library	15	Northwest Corner Building	1
 2014-10-20 04:15:00	155	JJ's Place	75	John Jay	1
 2014-10-20 04:15:00	133	Butler Library 5	103	Butler	8
 2014-10-20 04:15:00	151	Lerner 2	84	Lerner	7
@@ -546,7 +546,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-20 04:30:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-20 04:30:00	134	Butler Library 6	103	Butler	3
 2014-10-20 04:30:00	138	Butler Library stk	103	Butler	5
-2014-10-20 04:30:00	145	Science and Engineering Library	15	Mudd	1
+2014-10-20 04:30:00	145	Science and Engineering Library	15	Northwest Corner Building	1
 2014-10-20 04:30:00	131	Butler Library 3	103	Butler	70
 2014-10-20 04:30:00	139	Lehman Library 2	79	Lehman LIbrary	2
 2014-10-20 04:30:00	144	Starr East Asian Library	62	East Asian Library	2
@@ -584,7 +584,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-20 04:45:00	149	Architectural and Fine Arts Library 3	146	Avery	2
 2014-10-20 04:45:00	134	Butler Library 6	103	Butler	1
 2014-10-20 04:45:00	138	Butler Library stk	103	Butler	4
-2014-10-20 04:45:00	145	Science and Engineering Library	15	Mudd	1
+2014-10-20 04:45:00	145	Science and Engineering Library	15	Northwest Corner Building	1
 2014-10-20 05:00:00	155	JJ's Place	75	John Jay	1
 2014-10-20 05:00:00	133	Butler Library 5	103	Butler	6
 2014-10-20 05:00:00	151	Lerner 2	84	Lerner	5
@@ -606,7 +606,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-20 05:00:00	149	Architectural and Fine Arts Library 3	146	Avery	2
 2014-10-20 05:00:00	134	Butler Library 6	103	Butler	1
 2014-10-20 05:00:00	138	Butler Library stk	103	Butler	2
-2014-10-20 05:00:00	145	Science and Engineering Library	15	Mudd	1
+2014-10-20 05:00:00	145	Science and Engineering Library	15	Northwest Corner Building	1
 2014-10-20 05:15:00	155	JJ's Place	75	John Jay	1
 2014-10-20 05:15:00	133	Butler Library 5	103	Butler	8
 2014-10-20 05:15:00	151	Lerner 2	84	Lerner	5
@@ -628,13 +628,13 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-20 05:15:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-20 05:15:00	134	Butler Library 6	103	Butler	2
 2014-10-20 05:15:00	138	Butler Library stk	103	Butler	2
-2014-10-20 05:15:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-20 05:15:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-20 05:30:00	152	Lerner 3	84	Lerner	3
 2014-10-20 05:30:00	130	Butler Library 2	103	Butler	55
 2014-10-20 05:30:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-20 05:30:00	134	Butler Library 6	103	Butler	1
 2014-10-20 05:30:00	138	Butler Library stk	103	Butler	2
-2014-10-20 05:30:00	145	Science and Engineering Library	15	Mudd	1
+2014-10-20 05:30:00	145	Science and Engineering Library	15	Northwest Corner Building	1
 2014-10-20 05:30:00	131	Butler Library 3	103	Butler	47
 2014-10-20 05:30:00	139	Lehman Library 2	79	Lehman LIbrary	3
 2014-10-20 05:30:00	144	Starr East Asian Library	62	East Asian Library	1
@@ -656,7 +656,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-20 05:45:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-20 05:45:00	134	Butler Library 6	103	Butler	0
 2014-10-20 05:45:00	138	Butler Library stk	103	Butler	3
-2014-10-20 05:45:00	145	Science and Engineering Library	15	Mudd	1
+2014-10-20 05:45:00	145	Science and Engineering Library	15	Northwest Corner Building	1
 2014-10-20 05:45:00	155	JJ's Place	75	John Jay	1
 2014-10-20 05:45:00	133	Butler Library 5	103	Butler	8
 2014-10-20 05:45:00	151	Lerner 2	84	Lerner	5
@@ -694,13 +694,13 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-20 06:00:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-20 06:00:00	134	Butler Library 6	103	Butler	0
 2014-10-20 06:00:00	138	Butler Library stk	103	Butler	1
-2014-10-20 06:00:00	145	Science and Engineering Library	15	Mudd	1
+2014-10-20 06:00:00	145	Science and Engineering Library	15	Northwest Corner Building	1
 2014-10-20 06:15:00	152	Lerner 3	84	Lerner	5
 2014-10-20 06:15:00	130	Butler Library 2	103	Butler	54
 2014-10-20 06:15:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-20 06:15:00	134	Butler Library 6	103	Butler	0
 2014-10-20 06:15:00	138	Butler Library stk	103	Butler	0
-2014-10-20 06:15:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-20 06:15:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-20 06:15:00	155	JJ's Place	75	John Jay	1
 2014-10-20 06:15:00	133	Butler Library 5	103	Butler	9
 2014-10-20 06:15:00	151	Lerner 2	84	Lerner	5
@@ -727,7 +727,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-20 06:30:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-20 06:30:00	134	Butler Library 6	103	Butler	0
 2014-10-20 06:30:00	138	Butler Library stk	103	Butler	0
-2014-10-20 06:30:00	145	Science and Engineering Library	15	Mudd	1
+2014-10-20 06:30:00	145	Science and Engineering Library	15	Northwest Corner Building	1
 2014-10-20 06:30:00	131	Butler Library 3	103	Butler	43
 2014-10-20 06:30:00	139	Lehman Library 2	79	Lehman LIbrary	2
 2014-10-20 06:30:00	144	Starr East Asian Library	62	East Asian Library	2
@@ -744,7 +744,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-20 06:45:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-20 06:45:00	134	Butler Library 6	103	Butler	0
 2014-10-20 06:45:00	138	Butler Library stk	103	Butler	0
-2014-10-20 06:45:00	145	Science and Engineering Library	15	Mudd	1
+2014-10-20 06:45:00	145	Science and Engineering Library	15	Northwest Corner Building	1
 2014-10-20 06:45:00	155	JJ's Place	75	John Jay	2
 2014-10-20 06:45:00	133	Butler Library 5	103	Butler	10
 2014-10-20 06:45:00	151	Lerner 2	84	Lerner	9
@@ -782,13 +782,13 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-20 07:00:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-20 07:00:00	134	Butler Library 6	103	Butler	0
 2014-10-20 07:00:00	138	Butler Library stk	103	Butler	0
-2014-10-20 07:00:00	145	Science and Engineering Library	15	Mudd	1
+2014-10-20 07:00:00	145	Science and Engineering Library	15	Northwest Corner Building	1
 2014-10-20 07:15:00	152	Lerner 3	84	Lerner	5
 2014-10-20 07:15:00	130	Butler Library 2	103	Butler	36
 2014-10-20 07:15:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-20 07:15:00	134	Butler Library 6	103	Butler	0
 2014-10-20 07:15:00	138	Butler Library stk	103	Butler	0
-2014-10-20 07:15:00	145	Science and Engineering Library	15	Mudd	1
+2014-10-20 07:15:00	145	Science and Engineering Library	15	Northwest Corner Building	1
 2014-10-20 07:15:00	131	Butler Library 3	103	Butler	33
 2014-10-20 07:15:00	139	Lehman Library 2	79	Lehman LIbrary	3
 2014-10-20 07:15:00	144	Starr East Asian Library	62	East Asian Library	1
@@ -825,7 +825,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-20 07:30:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-20 07:30:00	134	Butler Library 6	103	Butler	0
 2014-10-20 07:30:00	138	Butler Library stk	103	Butler	0
-2014-10-20 07:30:00	145	Science and Engineering Library	15	Mudd	1
+2014-10-20 07:30:00	145	Science and Engineering Library	15	Northwest Corner Building	1
 2014-10-20 07:45:00	131	Butler Library 3	103	Butler	22
 2014-10-20 07:45:00	139	Lehman Library 2	79	Lehman LIbrary	6
 2014-10-20 07:45:00	144	Starr East Asian Library	62	East Asian Library	2
@@ -847,7 +847,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-20 07:45:00	149	Architectural and Fine Arts Library 3	146	Avery	2
 2014-10-20 07:45:00	134	Butler Library 6	103	Butler	0
 2014-10-20 07:45:00	138	Butler Library stk	103	Butler	0
-2014-10-20 07:45:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-20 07:45:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-20 08:00:00	131	Butler Library 3	103	Butler	25
 2014-10-20 08:00:00	139	Lehman Library 2	79	Lehman LIbrary	6
 2014-10-20 08:00:00	144	Starr East Asian Library	62	East Asian Library	2
@@ -869,13 +869,13 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-20 08:00:00	149	Architectural and Fine Arts Library 3	146	Avery	2
 2014-10-20 08:00:00	134	Butler Library 6	103	Butler	0
 2014-10-20 08:00:00	138	Butler Library stk	103	Butler	1
-2014-10-20 08:00:00	145	Science and Engineering Library	15	Mudd	1
+2014-10-20 08:00:00	145	Science and Engineering Library	15	Northwest Corner Building	1
 2014-10-20 08:15:00	152	Lerner 3	84	Lerner	46
 2014-10-20 08:15:00	130	Butler Library 2	103	Butler	60
 2014-10-20 08:15:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-20 08:15:00	134	Butler Library 6	103	Butler	1
 2014-10-20 08:15:00	138	Butler Library stk	103	Butler	0
-2014-10-20 08:15:00	145	Science and Engineering Library	15	Mudd	3
+2014-10-20 08:15:00	145	Science and Engineering Library	15	Northwest Corner Building	3
 2014-10-20 08:15:00	155	JJ's Place	75	John Jay	2
 2014-10-20 08:15:00	133	Butler Library 5	103	Butler	7
 2014-10-20 08:15:00	151	Lerner 2	84	Lerner	15
@@ -897,7 +897,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-20 08:30:00	149	Architectural and Fine Arts Library 3	146	Avery	2
 2014-10-20 08:30:00	134	Butler Library 6	103	Butler	2
 2014-10-20 08:30:00	138	Butler Library stk	103	Butler	1
-2014-10-20 08:30:00	145	Science and Engineering Library	15	Mudd	1
+2014-10-20 08:30:00	145	Science and Engineering Library	15	Northwest Corner Building	1
 2014-10-20 08:30:00	131	Butler Library 3	103	Butler	34
 2014-10-20 08:30:00	139	Lehman Library 2	79	Lehman LIbrary	9
 2014-10-20 08:30:00	144	Starr East Asian Library	62	East Asian Library	3
@@ -935,7 +935,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-20 08:45:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-20 08:45:00	134	Butler Library 6	103	Butler	4
 2014-10-20 08:45:00	138	Butler Library stk	103	Butler	1
-2014-10-20 08:45:00	145	Science and Engineering Library	15	Mudd	5
+2014-10-20 08:45:00	145	Science and Engineering Library	15	Northwest Corner Building	5
 2014-10-20 09:00:00	131	Butler Library 3	103	Butler	57
 2014-10-20 09:00:00	139	Lehman Library 2	79	Lehman LIbrary	13
 2014-10-20 09:00:00	144	Starr East Asian Library	62	East Asian Library	19
@@ -949,7 +949,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-20 09:00:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-20 09:00:00	134	Butler Library 6	103	Butler	6
 2014-10-20 09:00:00	138	Butler Library stk	103	Butler	1
-2014-10-20 09:00:00	145	Science and Engineering Library	15	Mudd	7
+2014-10-20 09:00:00	145	Science and Engineering Library	15	Northwest Corner Building	7
 2014-10-20 09:00:00	155	JJ's Place	75	John Jay	4
 2014-10-20 09:00:00	133	Butler Library 5	103	Butler	9
 2014-10-20 09:00:00	151	Lerner 2	84	Lerner	35
@@ -976,7 +976,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-20 09:15:00	149	Architectural and Fine Arts Library 3	146	Avery	4
 2014-10-20 09:15:00	134	Butler Library 6	103	Butler	4
 2014-10-20 09:15:00	138	Butler Library stk	103	Butler	2
-2014-10-20 09:15:00	145	Science and Engineering Library	15	Mudd	21
+2014-10-20 09:15:00	145	Science and Engineering Library	15	Northwest Corner Building	21
 2014-10-20 09:15:00	155	JJ's Place	75	John Jay	4
 2014-10-20 09:15:00	133	Butler Library 5	103	Butler	8
 2014-10-20 09:15:00	151	Lerner 2	84	Lerner	33
@@ -1001,13 +1001,13 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-20 09:30:00	149	Architectural and Fine Arts Library 3	146	Avery	14
 2014-10-20 09:30:00	134	Butler Library 6	103	Butler	11
 2014-10-20 09:30:00	138	Butler Library stk	103	Butler	3
-2014-10-20 09:30:00	145	Science and Engineering Library	15	Mudd	30
+2014-10-20 09:30:00	145	Science and Engineering Library	15	Northwest Corner Building	30
 2014-10-20 09:45:00	152	Lerner 3	84	Lerner	58
 2014-10-20 09:45:00	130	Butler Library 2	103	Butler	231
 2014-10-20 09:45:00	149	Architectural and Fine Arts Library 3	146	Avery	25
 2014-10-20 09:45:00	134	Butler Library 6	103	Butler	15
 2014-10-20 09:45:00	138	Butler Library stk	103	Butler	8
-2014-10-20 09:45:00	145	Science and Engineering Library	15	Mudd	52
+2014-10-20 09:45:00	145	Science and Engineering Library	15	Northwest Corner Building	52
 2014-10-20 09:45:00	155	JJ's Place	75	John Jay	5
 2014-10-20 09:45:00	133	Butler Library 5	103	Butler	23
 2014-10-20 09:45:00	151	Lerner 2	84	Lerner	25
@@ -1035,7 +1035,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-20 10:00:00	149	Architectural and Fine Arts Library 3	146	Avery	30
 2014-10-20 10:00:00	134	Butler Library 6	103	Butler	27
 2014-10-20 10:00:00	138	Butler Library stk	103	Butler	12
-2014-10-20 10:00:00	145	Science and Engineering Library	15	Mudd	57
+2014-10-20 10:00:00	145	Science and Engineering Library	15	Northwest Corner Building	57
 2014-10-20 10:00:00	131	Butler Library 3	103	Butler	181
 2014-10-20 10:00:00	139	Lehman Library 2	79	Lehman LIbrary	27
 2014-10-20 10:00:00	144	Starr East Asian Library	62	East Asian Library	62
@@ -1065,7 +1065,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-20 10:15:00	149	Architectural and Fine Arts Library 3	146	Avery	33
 2014-10-20 10:15:00	134	Butler Library 6	103	Butler	31
 2014-10-20 10:15:00	138	Butler Library stk	103	Butler	11
-2014-10-20 10:15:00	145	Science and Engineering Library	15	Mudd	57
+2014-10-20 10:15:00	145	Science and Engineering Library	15	Northwest Corner Building	57
 2014-10-20 10:15:00	155	JJ's Place	75	John Jay	7
 2014-10-20 10:15:00	133	Butler Library 5	103	Butler	36
 2014-10-20 10:15:00	151	Lerner 2	84	Lerner	51
@@ -1090,7 +1090,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-20 10:30:00	149	Architectural and Fine Arts Library 3	146	Avery	50
 2014-10-20 10:30:00	134	Butler Library 6	103	Butler	45
 2014-10-20 10:30:00	138	Butler Library stk	103	Butler	12
-2014-10-20 10:30:00	145	Science and Engineering Library	15	Mudd	70
+2014-10-20 10:30:00	145	Science and Engineering Library	15	Northwest Corner Building	70
 2014-10-20 10:45:00	154	Lerner 5	84	Lerner	46
 2014-10-20 10:45:00	125	John Jay Dining Hall	75	John Jay	6
 2014-10-20 10:45:00	147	Architectural and Fine Arts Library 1	146	Avery	8
@@ -1109,7 +1109,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-20 10:45:00	149	Architectural and Fine Arts Library 3	146	Avery	60
 2014-10-20 10:45:00	134	Butler Library 6	103	Butler	45
 2014-10-20 10:45:00	138	Butler Library stk	103	Butler	10
-2014-10-20 10:45:00	145	Science and Engineering Library	15	Mudd	84
+2014-10-20 10:45:00	145	Science and Engineering Library	15	Northwest Corner Building	84
 2014-10-20 10:45:00	155	JJ's Place	75	John Jay	5
 2014-10-20 10:45:00	133	Butler Library 5	103	Butler	31
 2014-10-20 10:45:00	151	Lerner 2	84	Lerner	41
@@ -1118,7 +1118,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-20 11:00:00	149	Architectural and Fine Arts Library 3	146	Avery	62
 2014-10-20 11:00:00	134	Butler Library 6	103	Butler	39
 2014-10-20 11:00:00	138	Butler Library stk	103	Butler	13
-2014-10-20 11:00:00	145	Science and Engineering Library	15	Mudd	78
+2014-10-20 11:00:00	145	Science and Engineering Library	15	Northwest Corner Building	78
 2014-10-20 11:00:00	155	JJ's Place	75	John Jay	7
 2014-10-20 11:00:00	133	Butler Library 5	103	Butler	45
 2014-10-20 11:00:00	151	Lerner 2	84	Lerner	43
@@ -1153,7 +1153,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-20 11:15:00	149	Architectural and Fine Arts Library 3	146	Avery	66
 2014-10-20 11:15:00	134	Butler Library 6	103	Butler	60
 2014-10-20 11:15:00	138	Butler Library stk	103	Butler	20
-2014-10-20 11:15:00	145	Science and Engineering Library	15	Mudd	78
+2014-10-20 11:15:00	145	Science and Engineering Library	15	Northwest Corner Building	78
 2014-10-20 11:15:00	155	JJ's Place	75	John Jay	6
 2014-10-20 11:15:00	133	Butler Library 5	103	Butler	61
 2014-10-20 11:15:00	151	Lerner 2	84	Lerner	73
@@ -1175,7 +1175,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-20 11:30:00	149	Architectural and Fine Arts Library 3	146	Avery	80
 2014-10-20 11:30:00	134	Butler Library 6	103	Butler	62
 2014-10-20 11:30:00	138	Butler Library stk	103	Butler	18
-2014-10-20 11:30:00	145	Science and Engineering Library	15	Mudd	78
+2014-10-20 11:30:00	145	Science and Engineering Library	15	Northwest Corner Building	78
 2014-10-20 11:30:00	155	JJ's Place	75	John Jay	16
 2014-10-20 11:30:00	133	Butler Library 5	103	Butler	68
 2014-10-20 11:30:00	151	Lerner 2	84	Lerner	76
@@ -1184,7 +1184,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-20 11:45:00	149	Architectural and Fine Arts Library 3	146	Avery	84
 2014-10-20 11:45:00	134	Butler Library 6	103	Butler	72
 2014-10-20 11:45:00	138	Butler Library stk	103	Butler	18
-2014-10-20 11:45:00	145	Science and Engineering Library	15	Mudd	75
+2014-10-20 11:45:00	145	Science and Engineering Library	15	Northwest Corner Building	75
 2014-10-20 11:45:00	155	JJ's Place	75	John Jay	14
 2014-10-20 11:45:00	133	Butler Library 5	103	Butler	75
 2014-10-20 11:45:00	151	Lerner 2	84	Lerner	108
@@ -1214,7 +1214,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-20 12:00:00	149	Architectural and Fine Arts Library 3	146	Avery	88
 2014-10-20 12:00:00	134	Butler Library 6	103	Butler	85
 2014-10-20 12:00:00	138	Butler Library stk	103	Butler	17
-2014-10-20 12:00:00	145	Science and Engineering Library	15	Mudd	87
+2014-10-20 12:00:00	145	Science and Engineering Library	15	Northwest Corner Building	87
 2014-10-20 12:00:00	155	JJ's Place	75	John Jay	18
 2014-10-20 12:00:00	133	Butler Library 5	103	Butler	78
 2014-10-20 12:00:00	151	Lerner 2	84	Lerner	93
@@ -1239,7 +1239,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-20 12:15:00	149	Architectural and Fine Arts Library 3	146	Avery	79
 2014-10-20 12:15:00	134	Butler Library 6	103	Butler	109
 2014-10-20 12:15:00	138	Butler Library stk	103	Butler	19
-2014-10-20 12:15:00	145	Science and Engineering Library	15	Mudd	101
+2014-10-20 12:15:00	145	Science and Engineering Library	15	Northwest Corner Building	101
 2014-10-20 12:15:00	131	Butler Library 3	103	Butler	304
 2014-10-20 12:15:00	139	Lehman Library 2	79	Lehman LIbrary	84
 2014-10-20 12:15:00	144	Starr East Asian Library	62	East Asian Library	98
@@ -1267,7 +1267,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-20 12:30:00	149	Architectural and Fine Arts Library 3	146	Avery	88
 2014-10-20 12:30:00	134	Butler Library 6	103	Butler	89
 2014-10-20 12:30:00	138	Butler Library stk	103	Butler	12
-2014-10-20 12:30:00	145	Science and Engineering Library	15	Mudd	98
+2014-10-20 12:30:00	145	Science and Engineering Library	15	Northwest Corner Building	98
 2014-10-20 12:45:00	155	JJ's Place	75	John Jay	25
 2014-10-20 12:45:00	23	Uris/Watson Library	2	Uris	358
 2014-10-20 12:45:00	133	Butler Library 5	103	Butler	101
@@ -1278,7 +1278,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-20 12:45:00	149	Architectural and Fine Arts Library 3	146	Avery	96
 2014-10-20 12:45:00	134	Butler Library 6	103	Butler	105
 2014-10-20 12:45:00	138	Butler Library stk	103	Butler	28
-2014-10-20 12:45:00	145	Science and Engineering Library	15	Mudd	105
+2014-10-20 12:45:00	145	Science and Engineering Library	15	Northwest Corner Building	105
 2014-10-20 12:45:00	131	Butler Library 3	103	Butler	308
 2014-10-20 12:45:00	139	Lehman Library 2	79	Lehman LIbrary	82
 2014-10-20 12:45:00	144	Starr East Asian Library	62	East Asian Library	99
@@ -1308,7 +1308,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-20 13:00:00	149	Architectural and Fine Arts Library 3	146	Avery	98
 2014-10-20 13:00:00	134	Butler Library 6	103	Butler	116
 2014-10-20 13:00:00	138	Butler Library stk	103	Butler	32
-2014-10-20 13:00:00	145	Science and Engineering Library	15	Mudd	114
+2014-10-20 13:00:00	145	Science and Engineering Library	15	Northwest Corner Building	114
 2014-10-20 13:00:00	155	JJ's Place	75	John Jay	22
 2014-10-20 13:00:00	133	Butler Library 5	103	Butler	84
 2014-10-20 13:00:00	151	Lerner 2	84	Lerner	95
@@ -1317,7 +1317,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-20 13:15:00	149	Architectural and Fine Arts Library 3	146	Avery	101
 2014-10-20 13:15:00	134	Butler Library 6	103	Butler	95
 2014-10-20 13:15:00	138	Butler Library stk	103	Butler	32
-2014-10-20 13:15:00	145	Science and Engineering Library	15	Mudd	106
+2014-10-20 13:15:00	145	Science and Engineering Library	15	Northwest Corner Building	106
 2014-10-20 13:15:00	131	Butler Library 3	103	Butler	291
 2014-10-20 13:15:00	139	Lehman Library 2	79	Lehman LIbrary	83
 2014-10-20 13:15:00	144	Starr East Asian Library	62	East Asian Library	109
@@ -1355,7 +1355,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-20 13:30:00	149	Architectural and Fine Arts Library 3	146	Avery	91
 2014-10-20 13:30:00	134	Butler Library 6	103	Butler	111
 2014-10-20 13:30:00	138	Butler Library stk	103	Butler	31
-2014-10-20 13:30:00	145	Science and Engineering Library	15	Mudd	97
+2014-10-20 13:30:00	145	Science and Engineering Library	15	Northwest Corner Building	97
 2014-10-20 13:45:00	154	Lerner 5	84	Lerner	71
 2014-10-20 13:45:00	125	John Jay Dining Hall	75	John Jay	140
 2014-10-20 13:45:00	147	Architectural and Fine Arts Library 1	146	Avery	8
@@ -1374,7 +1374,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-20 13:45:00	149	Architectural and Fine Arts Library 3	146	Avery	91
 2014-10-20 13:45:00	134	Butler Library 6	103	Butler	115
 2014-10-20 13:45:00	138	Butler Library stk	103	Butler	30
-2014-10-20 13:45:00	145	Science and Engineering Library	15	Mudd	95
+2014-10-20 13:45:00	145	Science and Engineering Library	15	Northwest Corner Building	95
 2014-10-20 13:45:00	155	JJ's Place	75	John Jay	29
 2014-10-20 13:45:00	133	Butler Library 5	103	Butler	100
 2014-10-20 13:45:00	151	Lerner 2	84	Lerner	130
@@ -1383,7 +1383,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-20 14:00:00	149	Architectural and Fine Arts Library 3	146	Avery	95
 2014-10-20 14:00:00	134	Butler Library 6	103	Butler	125
 2014-10-20 14:00:00	138	Butler Library stk	103	Butler	25
-2014-10-20 14:00:00	145	Science and Engineering Library	15	Mudd	102
+2014-10-20 14:00:00	145	Science and Engineering Library	15	Northwest Corner Building	102
 2014-10-20 14:00:00	155	JJ's Place	75	John Jay	32
 2014-10-20 14:00:00	133	Butler Library 5	103	Butler	98
 2014-10-20 14:00:00	151	Lerner 2	84	Lerner	114
@@ -1421,13 +1421,13 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-20 14:15:00	149	Architectural and Fine Arts Library 3	146	Avery	101
 2014-10-20 14:15:00	134	Butler Library 6	103	Butler	133
 2014-10-20 14:15:00	138	Butler Library stk	103	Butler	21
-2014-10-20 14:15:00	145	Science and Engineering Library	15	Mudd	113
+2014-10-20 14:15:00	145	Science and Engineering Library	15	Northwest Corner Building	113
 2014-10-20 14:30:00	152	Lerner 3	84	Lerner	120
 2014-10-20 14:30:00	130	Butler Library 2	103	Butler	517
 2014-10-20 14:30:00	149	Architectural and Fine Arts Library 3	146	Avery	110
 2014-10-20 14:30:00	134	Butler Library 6	103	Butler	153
 2014-10-20 14:30:00	138	Butler Library stk	103	Butler	32
-2014-10-20 14:30:00	145	Science and Engineering Library	15	Mudd	112
+2014-10-20 14:30:00	145	Science and Engineering Library	15	Northwest Corner Building	112
 2014-10-20 14:30:00	131	Butler Library 3	103	Butler	340
 2014-10-20 14:30:00	139	Lehman Library 2	79	Lehman LIbrary	116
 2014-10-20 14:30:00	144	Starr East Asian Library	62	East Asian Library	126
@@ -1457,7 +1457,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-20 14:45:00	149	Architectural and Fine Arts Library 3	146	Avery	110
 2014-10-20 14:45:00	134	Butler Library 6	103	Butler	165
 2014-10-20 14:45:00	138	Butler Library stk	103	Butler	30
-2014-10-20 14:45:00	145	Science and Engineering Library	15	Mudd	129
+2014-10-20 14:45:00	145	Science and Engineering Library	15	Northwest Corner Building	129
 2014-10-20 14:45:00	155	JJ's Place	75	John Jay	29
 2014-10-20 14:45:00	133	Butler Library 5	103	Butler	101
 2014-10-20 14:45:00	151	Lerner 2	84	Lerner	111
@@ -1484,7 +1484,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-20 15:00:00	149	Architectural and Fine Arts Library 3	146	Avery	101
 2014-10-20 15:00:00	134	Butler Library 6	103	Butler	172
 2014-10-20 15:00:00	138	Butler Library stk	103	Butler	31
-2014-10-20 15:00:00	145	Science and Engineering Library	15	Mudd	133
+2014-10-20 15:00:00	145	Science and Engineering Library	15	Northwest Corner Building	133
 2014-10-20 15:00:00	155	JJ's Place	75	John Jay	32
 2014-10-20 15:00:00	133	Butler Library 5	103	Butler	117
 2014-10-20 15:00:00	151	Lerner 2	84	Lerner	124
@@ -1493,7 +1493,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-20 15:15:00	149	Architectural and Fine Arts Library 3	146	Avery	115
 2014-10-20 15:15:00	134	Butler Library 6	103	Butler	175
 2014-10-20 15:15:00	138	Butler Library stk	103	Butler	36
-2014-10-20 15:15:00	145	Science and Engineering Library	15	Mudd	129
+2014-10-20 15:15:00	145	Science and Engineering Library	15	Northwest Corner Building	129
 2014-10-20 15:15:00	155	JJ's Place	75	John Jay	35
 2014-10-20 15:15:00	133	Butler Library 5	103	Butler	109
 2014-10-20 15:15:00	151	Lerner 2	84	Lerner	103
@@ -1531,7 +1531,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-20 15:30:00	149	Architectural and Fine Arts Library 3	146	Avery	98
 2014-10-20 15:30:00	134	Butler Library 6	103	Butler	182
 2014-10-20 15:30:00	138	Butler Library stk	103	Butler	38
-2014-10-20 15:30:00	145	Science and Engineering Library	15	Mudd	128
+2014-10-20 15:30:00	145	Science and Engineering Library	15	Northwest Corner Building	128
 2014-10-20 15:45:00	131	Butler Library 3	103	Butler	362
 2014-10-20 15:45:00	139	Lehman Library 2	79	Lehman LIbrary	137
 2014-10-20 15:45:00	144	Starr East Asian Library	62	East Asian Library	129
@@ -1553,7 +1553,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-20 15:45:00	149	Architectural and Fine Arts Library 3	146	Avery	108
 2014-10-20 15:45:00	134	Butler Library 6	103	Butler	193
 2014-10-20 15:45:00	138	Butler Library stk	103	Butler	43
-2014-10-20 15:45:00	145	Science and Engineering Library	15	Mudd	139
+2014-10-20 15:45:00	145	Science and Engineering Library	15	Northwest Corner Building	139
 2014-10-20 16:00:00	155	JJ's Place	75	John Jay	19
 2014-10-20 16:00:00	133	Butler Library 5	103	Butler	117
 2014-10-20 16:00:00	151	Lerner 2	84	Lerner	120
@@ -1575,7 +1575,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-20 16:00:00	149	Architectural and Fine Arts Library 3	146	Avery	108
 2014-10-20 16:00:00	134	Butler Library 6	103	Butler	159
 2014-10-20 16:00:00	138	Butler Library stk	103	Butler	49
-2014-10-20 16:00:00	145	Science and Engineering Library	15	Mudd	144
+2014-10-20 16:00:00	145	Science and Engineering Library	15	Northwest Corner Building	144
 2014-10-20 16:15:00	155	JJ's Place	75	John Jay	15
 2014-10-20 16:15:00	133	Butler Library 5	103	Butler	121
 2014-10-20 16:15:00	151	Lerner 2	84	Lerner	111
@@ -1597,7 +1597,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-20 16:15:00	149	Architectural and Fine Arts Library 3	146	Avery	106
 2014-10-20 16:15:00	134	Butler Library 6	103	Butler	160
 2014-10-20 16:15:00	138	Butler Library stk	103	Butler	37
-2014-10-20 16:15:00	145	Science and Engineering Library	15	Mudd	130
+2014-10-20 16:15:00	145	Science and Engineering Library	15	Northwest Corner Building	130
 2014-10-20 16:30:00	155	JJ's Place	75	John Jay	25
 2014-10-20 16:30:00	23	Uris/Watson Library	2	Uris	556
 2014-10-20 16:30:00	133	Butler Library 5	103	Butler	115
@@ -1608,7 +1608,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-20 16:30:00	149	Architectural and Fine Arts Library 3	146	Avery	89
 2014-10-20 16:30:00	134	Butler Library 6	103	Butler	167
 2014-10-20 16:30:00	138	Butler Library stk	103	Butler	39
-2014-10-20 16:30:00	145	Science and Engineering Library	15	Mudd	120
+2014-10-20 16:30:00	145	Science and Engineering Library	15	Northwest Corner Building	120
 2014-10-20 16:30:00	131	Butler Library 3	103	Butler	350
 2014-10-20 16:30:00	139	Lehman Library 2	79	Lehman LIbrary	105
 2014-10-20 16:30:00	144	Starr East Asian Library	62	East Asian Library	123
@@ -1635,7 +1635,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-20 16:45:00	149	Architectural and Fine Arts Library 3	146	Avery	96
 2014-10-20 16:45:00	134	Butler Library 6	103	Butler	189
 2014-10-20 16:45:00	138	Butler Library stk	103	Butler	36
-2014-10-20 16:45:00	145	Science and Engineering Library	15	Mudd	121
+2014-10-20 16:45:00	145	Science and Engineering Library	15	Northwest Corner Building	121
 2014-10-20 16:45:00	131	Butler Library 3	103	Butler	369
 2014-10-20 16:45:00	139	Lehman Library 2	79	Lehman LIbrary	111
 2014-10-20 16:45:00	144	Starr East Asian Library	62	East Asian Library	123
@@ -1655,7 +1655,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-20 17:00:00	149	Architectural and Fine Arts Library 3	146	Avery	94
 2014-10-20 17:00:00	134	Butler Library 6	103	Butler	188
 2014-10-20 17:00:00	138	Butler Library stk	103	Butler	47
-2014-10-20 17:00:00	145	Science and Engineering Library	15	Mudd	132
+2014-10-20 17:00:00	145	Science and Engineering Library	15	Northwest Corner Building	132
 2014-10-20 17:00:00	155	JJ's Place	75	John Jay	12
 2014-10-20 17:00:00	133	Butler Library 5	103	Butler	120
 2014-10-20 17:00:00	151	Lerner 2	84	Lerner	105
@@ -1682,7 +1682,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-20 17:15:00	149	Architectural and Fine Arts Library 3	146	Avery	92
 2014-10-20 17:15:00	134	Butler Library 6	103	Butler	189
 2014-10-20 17:15:00	138	Butler Library stk	103	Butler	35
-2014-10-20 17:15:00	145	Science and Engineering Library	15	Mudd	128
+2014-10-20 17:15:00	145	Science and Engineering Library	15	Northwest Corner Building	128
 2014-10-20 17:15:00	155	JJ's Place	75	John Jay	21
 2014-10-20 17:15:00	133	Butler Library 5	103	Butler	106
 2014-10-20 17:15:00	151	Lerner 2	84	Lerner	130
@@ -1691,7 +1691,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-20 17:30:00	149	Architectural and Fine Arts Library 3	146	Avery	97
 2014-10-20 17:30:00	134	Butler Library 6	103	Butler	180
 2014-10-20 17:30:00	138	Butler Library stk	103	Butler	32
-2014-10-20 17:30:00	145	Science and Engineering Library	15	Mudd	122
+2014-10-20 17:30:00	145	Science and Engineering Library	15	Northwest Corner Building	122
 2014-10-20 17:30:00	155	JJ's Place	75	John Jay	22
 2014-10-20 17:30:00	133	Butler Library 5	103	Butler	111
 2014-10-20 17:30:00	151	Lerner 2	84	Lerner	115
@@ -1723,7 +1723,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-20 17:45:00	149	Architectural and Fine Arts Library 3	146	Avery	89
 2014-10-20 17:45:00	134	Butler Library 6	103	Butler	155
 2014-10-20 17:45:00	138	Butler Library stk	103	Butler	39
-2014-10-20 17:45:00	145	Science and Engineering Library	15	Mudd	124
+2014-10-20 17:45:00	145	Science and Engineering Library	15	Northwest Corner Building	124
 2014-10-20 17:45:00	131	Butler Library 3	103	Butler	317
 2014-10-20 17:45:00	139	Lehman Library 2	79	Lehman LIbrary	89
 2014-10-20 17:45:00	144	Starr East Asian Library	62	East Asian Library	139
@@ -1752,7 +1752,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-20 18:00:00	149	Architectural and Fine Arts Library 3	146	Avery	92
 2014-10-20 18:00:00	134	Butler Library 6	103	Butler	145
 2014-10-20 18:00:00	138	Butler Library stk	103	Butler	40
-2014-10-20 18:00:00	145	Science and Engineering Library	15	Mudd	108
+2014-10-20 18:00:00	145	Science and Engineering Library	15	Northwest Corner Building	108
 2014-10-20 18:15:00	131	Butler Library 3	103	Butler	307
 2014-10-20 18:15:00	139	Lehman Library 2	79	Lehman LIbrary	59
 2014-10-20 18:15:00	144	Starr East Asian Library	62	East Asian Library	107
@@ -1774,7 +1774,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-20 18:15:00	149	Architectural and Fine Arts Library 3	146	Avery	90
 2014-10-20 18:15:00	134	Butler Library 6	103	Butler	126
 2014-10-20 18:15:00	138	Butler Library stk	103	Butler	41
-2014-10-20 18:15:00	145	Science and Engineering Library	15	Mudd	107
+2014-10-20 18:15:00	145	Science and Engineering Library	15	Northwest Corner Building	107
 2014-10-20 18:30:00	155	JJ's Place	75	John Jay	47
 2014-10-20 18:30:00	133	Butler Library 5	103	Butler	91
 2014-10-20 18:30:00	151	Lerner 2	84	Lerner	194
@@ -1796,7 +1796,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-20 18:30:00	149	Architectural and Fine Arts Library 3	146	Avery	90
 2014-10-20 18:30:00	134	Butler Library 6	103	Butler	110
 2014-10-20 18:30:00	138	Butler Library stk	103	Butler	30
-2014-10-20 18:30:00	145	Science and Engineering Library	15	Mudd	89
+2014-10-20 18:30:00	145	Science and Engineering Library	15	Northwest Corner Building	89
 2014-10-20 18:45:00	131	Butler Library 3	103	Butler	280
 2014-10-20 18:45:00	139	Lehman Library 2	79	Lehman LIbrary	44
 2014-10-20 18:45:00	144	Starr East Asian Library	62	East Asian Library	90
@@ -1818,13 +1818,13 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-20 18:45:00	149	Architectural and Fine Arts Library 3	146	Avery	90
 2014-10-20 18:45:00	134	Butler Library 6	103	Butler	102
 2014-10-20 18:45:00	138	Butler Library stk	103	Butler	29
-2014-10-20 18:45:00	145	Science and Engineering Library	15	Mudd	82
+2014-10-20 18:45:00	145	Science and Engineering Library	15	Northwest Corner Building	82
 2014-10-20 19:00:00	152	Lerner 3	84	Lerner	176
 2014-10-20 19:00:00	130	Butler Library 2	103	Butler	442
 2014-10-20 19:00:00	149	Architectural and Fine Arts Library 3	146	Avery	87
 2014-10-20 19:00:00	134	Butler Library 6	103	Butler	102
 2014-10-20 19:00:00	138	Butler Library stk	103	Butler	33
-2014-10-20 19:00:00	145	Science and Engineering Library	15	Mudd	79
+2014-10-20 19:00:00	145	Science and Engineering Library	15	Northwest Corner Building	79
 2014-10-20 19:00:00	131	Butler Library 3	103	Butler	305
 2014-10-20 19:00:00	139	Lehman Library 2	79	Lehman LIbrary	39
 2014-10-20 19:00:00	144	Starr East Asian Library	62	East Asian Library	80
@@ -1862,13 +1862,13 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-20 19:15:00	149	Architectural and Fine Arts Library 3	146	Avery	81
 2014-10-20 19:15:00	134	Butler Library 6	103	Butler	108
 2014-10-20 19:15:00	138	Butler Library stk	103	Butler	34
-2014-10-20 19:15:00	145	Science and Engineering Library	15	Mudd	78
+2014-10-20 19:15:00	145	Science and Engineering Library	15	Northwest Corner Building	78
 2014-10-20 19:30:00	152	Lerner 3	84	Lerner	182
 2014-10-20 19:30:00	130	Butler Library 2	103	Butler	477
 2014-10-20 19:30:00	149	Architectural and Fine Arts Library 3	146	Avery	79
 2014-10-20 19:30:00	134	Butler Library 6	103	Butler	121
 2014-10-20 19:30:00	138	Butler Library stk	103	Butler	40
-2014-10-20 19:30:00	145	Science and Engineering Library	15	Mudd	78
+2014-10-20 19:30:00	145	Science and Engineering Library	15	Northwest Corner Building	78
 2014-10-20 19:30:00	155	JJ's Place	75	John Jay	59
 2014-10-20 19:30:00	133	Butler Library 5	103	Butler	65
 2014-10-20 19:30:00	151	Lerner 2	84	Lerner	171
@@ -1900,7 +1900,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-20 19:45:00	149	Architectural and Fine Arts Library 3	146	Avery	80
 2014-10-20 19:45:00	134	Butler Library 6	103	Butler	106
 2014-10-20 19:45:00	138	Butler Library stk	103	Butler	39
-2014-10-20 19:45:00	145	Science and Engineering Library	15	Mudd	77
+2014-10-20 19:45:00	145	Science and Engineering Library	15	Northwest Corner Building	77
 2014-10-20 19:45:00	131	Butler Library 3	103	Butler	307
 2014-10-20 19:45:00	139	Lehman Library 2	79	Lehman LIbrary	50
 2014-10-20 19:45:00	144	Starr East Asian Library	62	East Asian Library	62
@@ -1912,7 +1912,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-20 20:00:00	149	Architectural and Fine Arts Library 3	146	Avery	78
 2014-10-20 20:00:00	134	Butler Library 6	103	Butler	104
 2014-10-20 20:00:00	138	Butler Library stk	103	Butler	41
-2014-10-20 20:00:00	145	Science and Engineering Library	15	Mudd	75
+2014-10-20 20:00:00	145	Science and Engineering Library	15	Northwest Corner Building	75
 2014-10-20 20:00:00	155	JJ's Place	75	John Jay	48
 2014-10-20 20:00:00	133	Butler Library 5	103	Butler	60
 2014-10-20 20:00:00	151	Lerner 2	84	Lerner	134
@@ -1939,7 +1939,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-20 20:15:00	149	Architectural and Fine Arts Library 3	146	Avery	78
 2014-10-20 20:15:00	134	Butler Library 6	103	Butler	131
 2014-10-20 20:15:00	138	Butler Library stk	103	Butler	45
-2014-10-20 20:15:00	145	Science and Engineering Library	15	Mudd	69
+2014-10-20 20:15:00	145	Science and Engineering Library	15	Northwest Corner Building	69
 2014-10-20 20:15:00	131	Butler Library 3	103	Butler	339
 2014-10-20 20:15:00	139	Lehman Library 2	79	Lehman LIbrary	45
 2014-10-20 20:15:00	144	Starr East Asian Library	62	East Asian Library	64
@@ -1966,7 +1966,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-20 20:30:00	149	Architectural and Fine Arts Library 3	146	Avery	76
 2014-10-20 20:30:00	134	Butler Library 6	103	Butler	137
 2014-10-20 20:30:00	138	Butler Library stk	103	Butler	37
-2014-10-20 20:30:00	145	Science and Engineering Library	15	Mudd	74
+2014-10-20 20:30:00	145	Science and Engineering Library	15	Northwest Corner Building	74
 2014-10-20 20:30:00	131	Butler Library 3	103	Butler	345
 2014-10-20 20:30:00	139	Lehman Library 2	79	Lehman LIbrary	59
 2014-10-20 20:30:00	144	Starr East Asian Library	62	East Asian Library	70
@@ -1988,7 +1988,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-20 20:45:00	149	Architectural and Fine Arts Library 3	146	Avery	80
 2014-10-20 20:45:00	134	Butler Library 6	103	Butler	178
 2014-10-20 20:45:00	138	Butler Library stk	103	Butler	45
-2014-10-20 20:45:00	145	Science and Engineering Library	15	Mudd	74
+2014-10-20 20:45:00	145	Science and Engineering Library	15	Northwest Corner Building	74
 2014-10-20 20:45:00	131	Butler Library 3	103	Butler	385
 2014-10-20 20:45:00	139	Lehman Library 2	79	Lehman LIbrary	58
 2014-10-20 20:45:00	144	Starr East Asian Library	62	East Asian Library	63
@@ -2005,7 +2005,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-20 21:00:00	149	Architectural and Fine Arts Library 3	146	Avery	69
 2014-10-20 21:00:00	134	Butler Library 6	103	Butler	178
 2014-10-20 21:00:00	138	Butler Library stk	103	Butler	51
-2014-10-20 21:00:00	145	Science and Engineering Library	15	Mudd	69
+2014-10-20 21:00:00	145	Science and Engineering Library	15	Northwest Corner Building	69
 2014-10-20 21:00:00	131	Butler Library 3	103	Butler	380
 2014-10-20 21:00:00	139	Lehman Library 2	79	Lehman LIbrary	56
 2014-10-20 21:00:00	144	Starr East Asian Library	62	East Asian Library	65
@@ -2022,7 +2022,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-20 21:15:00	149	Architectural and Fine Arts Library 3	146	Avery	61
 2014-10-20 21:15:00	134	Butler Library 6	103	Butler	176
 2014-10-20 21:15:00	138	Butler Library stk	103	Butler	55
-2014-10-20 21:15:00	145	Science and Engineering Library	15	Mudd	76
+2014-10-20 21:15:00	145	Science and Engineering Library	15	Northwest Corner Building	76
 2014-10-20 21:15:00	155	JJ's Place	75	John Jay	63
 2014-10-20 21:15:00	133	Butler Library 5	103	Butler	98
 2014-10-20 21:15:00	151	Lerner 2	84	Lerner	108
@@ -2044,7 +2044,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-20 21:30:00	149	Architectural and Fine Arts Library 3	146	Avery	64
 2014-10-20 21:30:00	134	Butler Library 6	103	Butler	179
 2014-10-20 21:30:00	138	Butler Library stk	103	Butler	51
-2014-10-20 21:30:00	145	Science and Engineering Library	15	Mudd	70
+2014-10-20 21:30:00	145	Science and Engineering Library	15	Northwest Corner Building	70
 2014-10-20 21:30:00	131	Butler Library 3	103	Butler	378
 2014-10-20 21:30:00	139	Lehman Library 2	79	Lehman LIbrary	58
 2014-10-20 21:30:00	144	Starr East Asian Library	62	East Asian Library	75
@@ -2066,7 +2066,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-20 21:45:00	149	Architectural and Fine Arts Library 3	146	Avery	52
 2014-10-20 21:45:00	134	Butler Library 6	103	Butler	162
 2014-10-20 21:45:00	138	Butler Library stk	103	Butler	61
-2014-10-20 21:45:00	145	Science and Engineering Library	15	Mudd	71
+2014-10-20 21:45:00	145	Science and Engineering Library	15	Northwest Corner Building	71
 2014-10-20 21:45:00	155	JJ's Place	75	John Jay	70
 2014-10-20 21:45:00	133	Butler Library 5	103	Butler	95
 2014-10-20 21:45:00	151	Lerner 2	84	Lerner	110
@@ -2093,7 +2093,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-20 22:00:00	149	Architectural and Fine Arts Library 3	146	Avery	54
 2014-10-20 22:00:00	134	Butler Library 6	103	Butler	163
 2014-10-20 22:00:00	138	Butler Library stk	103	Butler	55
-2014-10-20 22:00:00	145	Science and Engineering Library	15	Mudd	68
+2014-10-20 22:00:00	145	Science and Engineering Library	15	Northwest Corner Building	68
 2014-10-20 22:00:00	131	Butler Library 3	103	Butler	395
 2014-10-20 22:00:00	139	Lehman Library 2	79	Lehman LIbrary	50
 2014-10-20 22:00:00	144	Starr East Asian Library	62	East Asian Library	68
@@ -2126,7 +2126,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-20 22:15:00	149	Architectural and Fine Arts Library 3	146	Avery	43
 2014-10-20 22:15:00	134	Butler Library 6	103	Butler	168
 2014-10-20 22:15:00	138	Butler Library stk	103	Butler	58
-2014-10-20 22:15:00	145	Science and Engineering Library	15	Mudd	72
+2014-10-20 22:15:00	145	Science and Engineering Library	15	Northwest Corner Building	72
 2014-10-20 22:30:00	131	Butler Library 3	103	Butler	387
 2014-10-20 22:30:00	139	Lehman Library 2	79	Lehman LIbrary	39
 2014-10-20 22:30:00	144	Starr East Asian Library	62	East Asian Library	62
@@ -2148,7 +2148,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-20 22:30:00	149	Architectural and Fine Arts Library 3	146	Avery	40
 2014-10-20 22:30:00	134	Butler Library 6	103	Butler	155
 2014-10-20 22:30:00	138	Butler Library stk	103	Butler	63
-2014-10-20 22:30:00	145	Science and Engineering Library	15	Mudd	75
+2014-10-20 22:30:00	145	Science and Engineering Library	15	Northwest Corner Building	75
 2014-10-20 22:45:00	131	Butler Library 3	103	Butler	383
 2014-10-20 22:45:00	139	Lehman Library 2	79	Lehman LIbrary	40
 2014-10-20 22:45:00	144	Starr East Asian Library	62	East Asian Library	61
@@ -2170,13 +2170,13 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-20 22:45:00	149	Architectural and Fine Arts Library 3	146	Avery	31
 2014-10-20 22:45:00	134	Butler Library 6	103	Butler	145
 2014-10-20 22:45:00	138	Butler Library stk	103	Butler	65
-2014-10-20 22:45:00	145	Science and Engineering Library	15	Mudd	66
+2014-10-20 22:45:00	145	Science and Engineering Library	15	Northwest Corner Building	66
 2014-10-20 23:00:00	152	Lerner 3	84	Lerner	53
 2014-10-20 23:00:00	130	Butler Library 2	103	Butler	552
 2014-10-20 23:00:00	149	Architectural and Fine Arts Library 3	146	Avery	27
 2014-10-20 23:00:00	134	Butler Library 6	103	Butler	100
 2014-10-20 23:00:00	138	Butler Library stk	103	Butler	53
-2014-10-20 23:00:00	145	Science and Engineering Library	15	Mudd	64
+2014-10-20 23:00:00	145	Science and Engineering Library	15	Northwest Corner Building	64
 2014-10-20 23:00:00	131	Butler Library 3	103	Butler	381
 2014-10-20 23:00:00	139	Lehman Library 2	79	Lehman LIbrary	39
 2014-10-20 23:00:00	144	Starr East Asian Library	62	East Asian Library	48
@@ -2203,7 +2203,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-20 23:15:00	149	Architectural and Fine Arts Library 3	146	Avery	2
 2014-10-20 23:15:00	134	Butler Library 6	103	Butler	58
 2014-10-20 23:15:00	138	Butler Library stk	103	Butler	49
-2014-10-20 23:15:00	145	Science and Engineering Library	15	Mudd	65
+2014-10-20 23:15:00	145	Science and Engineering Library	15	Northwest Corner Building	65
 2014-10-20 23:15:00	131	Butler Library 3	103	Butler	379
 2014-10-20 23:15:00	139	Lehman Library 2	79	Lehman LIbrary	32
 2014-10-20 23:15:00	144	Starr East Asian Library	62	East Asian Library	16
@@ -2225,7 +2225,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-20 23:30:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-20 23:30:00	134	Butler Library 6	103	Butler	11
 2014-10-20 23:30:00	138	Butler Library stk	103	Butler	46
-2014-10-20 23:30:00	145	Science and Engineering Library	15	Mudd	62
+2014-10-20 23:30:00	145	Science and Engineering Library	15	Northwest Corner Building	62
 2014-10-20 23:30:00	131	Butler Library 3	103	Butler	387
 2014-10-20 23:30:00	139	Lehman Library 2	79	Lehman LIbrary	24
 2014-10-20 23:30:00	144	Starr East Asian Library	62	East Asian Library	6
@@ -2241,7 +2241,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-20 23:45:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-20 23:45:00	134	Butler Library 6	103	Butler	8
 2014-10-20 23:45:00	138	Butler Library stk	103	Butler	47
-2014-10-20 23:45:00	145	Science and Engineering Library	15	Mudd	62
+2014-10-20 23:45:00	145	Science and Engineering Library	15	Northwest Corner Building	62
 2014-10-20 23:45:00	155	JJ's Place	75	John Jay	50
 2014-10-20 23:45:00	133	Butler Library 5	103	Butler	8
 2014-10-20 23:45:00	151	Lerner 2	84	Lerner	65
@@ -2268,7 +2268,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-21 00:00:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-21 00:00:00	134	Butler Library 6	103	Butler	7
 2014-10-21 00:00:00	138	Butler Library stk	103	Butler	45
-2014-10-21 00:00:00	145	Science and Engineering Library	15	Mudd	67
+2014-10-21 00:00:00	145	Science and Engineering Library	15	Northwest Corner Building	67
 2014-10-21 00:00:00	131	Butler Library 3	103	Butler	364
 2014-10-21 00:00:00	139	Lehman Library 2	79	Lehman LIbrary	21
 2014-10-21 00:00:00	144	Starr East Asian Library	62	East Asian Library	5
@@ -2301,7 +2301,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-21 00:15:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-21 00:15:00	134	Butler Library 6	103	Butler	7
 2014-10-21 00:15:00	138	Butler Library stk	103	Butler	47
-2014-10-21 00:15:00	145	Science and Engineering Library	15	Mudd	57
+2014-10-21 00:15:00	145	Science and Engineering Library	15	Northwest Corner Building	57
 2014-10-21 00:30:00	131	Butler Library 3	103	Butler	349
 2014-10-21 00:30:00	139	Lehman Library 2	79	Lehman LIbrary	1
 2014-10-21 00:30:00	144	Starr East Asian Library	62	East Asian Library	8
@@ -2323,13 +2323,13 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-21 00:30:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-21 00:30:00	134	Butler Library 6	103	Butler	5
 2014-10-21 00:30:00	138	Butler Library stk	103	Butler	47
-2014-10-21 00:30:00	145	Science and Engineering Library	15	Mudd	58
+2014-10-21 00:30:00	145	Science and Engineering Library	15	Northwest Corner Building	58
 2014-10-21 00:45:00	152	Lerner 3	84	Lerner	22
 2014-10-21 00:45:00	130	Butler Library 2	103	Butler	377
 2014-10-21 00:45:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-21 00:45:00	134	Butler Library 6	103	Butler	4
 2014-10-21 00:45:00	138	Butler Library stk	103	Butler	45
-2014-10-21 00:45:00	145	Science and Engineering Library	15	Mudd	56
+2014-10-21 00:45:00	145	Science and Engineering Library	15	Northwest Corner Building	56
 2014-10-21 00:45:00	131	Butler Library 3	103	Butler	325
 2014-10-21 00:45:00	139	Lehman Library 2	79	Lehman LIbrary	1
 2014-10-21 21:15:00	154	Lerner 5	84	Lerner	142
@@ -2360,7 +2360,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-21 01:00:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-21 01:00:00	134	Butler Library 6	103	Butler	5
 2014-10-21 01:00:00	138	Butler Library stk	103	Butler	34
-2014-10-21 01:00:00	145	Science and Engineering Library	15	Mudd	52
+2014-10-21 01:00:00	145	Science and Engineering Library	15	Northwest Corner Building	52
 2014-10-21 01:00:00	155	JJ's Place	75	John Jay	77
 2014-10-21 01:00:00	133	Butler Library 5	103	Butler	9
 2014-10-21 01:00:00	151	Lerner 2	84	Lerner	32
@@ -2384,7 +2384,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-21 01:15:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-21 01:15:00	134	Butler Library 6	103	Butler	3
 2014-10-21 01:15:00	138	Butler Library stk	103	Butler	31
-2014-10-21 01:15:00	145	Science and Engineering Library	15	Mudd	47
+2014-10-21 01:15:00	145	Science and Engineering Library	15	Northwest Corner Building	47
 2014-10-21 01:15:00	131	Butler Library 3	103	Butler	278
 2014-10-21 01:15:00	139	Lehman Library 2	79	Lehman LIbrary	1
 2014-10-21 01:15:00	144	Starr East Asian Library	62	East Asian Library	5
@@ -2396,7 +2396,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-21 01:30:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-21 01:30:00	134	Butler Library 6	103	Butler	0
 2014-10-21 01:30:00	138	Butler Library stk	103	Butler	30
-2014-10-21 01:30:00	145	Science and Engineering Library	15	Mudd	38
+2014-10-21 01:30:00	145	Science and Engineering Library	15	Northwest Corner Building	38
 2014-10-21 01:30:00	155	JJ's Place	75	John Jay	2
 2014-10-21 01:30:00	133	Butler Library 5	103	Butler	11
 2014-10-21 01:30:00	151	Lerner 2	84	Lerner	9
@@ -2418,7 +2418,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-21 01:45:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-21 01:45:00	134	Butler Library 6	103	Butler	0
 2014-10-21 01:45:00	138	Butler Library stk	103	Butler	28
-2014-10-21 01:45:00	145	Science and Engineering Library	15	Mudd	36
+2014-10-21 01:45:00	145	Science and Engineering Library	15	Northwest Corner Building	36
 2014-10-21 01:45:00	155	JJ's Place	75	John Jay	2
 2014-10-21 01:45:00	133	Butler Library 5	103	Butler	9
 2014-10-21 01:45:00	151	Lerner 2	84	Lerner	11
@@ -2448,7 +2448,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-21 02:00:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-21 02:00:00	134	Butler Library 6	103	Butler	0
 2014-10-21 02:00:00	138	Butler Library stk	103	Butler	24
-2014-10-21 02:00:00	145	Science and Engineering Library	15	Mudd	33
+2014-10-21 02:00:00	145	Science and Engineering Library	15	Northwest Corner Building	33
 2014-10-21 02:00:00	155	JJ's Place	75	John Jay	1
 2014-10-21 02:00:00	133	Butler Library 5	103	Butler	7
 2014-10-21 02:00:00	151	Lerner 2	84	Lerner	10
@@ -2470,7 +2470,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-21 02:15:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-21 02:15:00	134	Butler Library 6	103	Butler	0
 2014-10-21 02:15:00	138	Butler Library stk	103	Butler	23
-2014-10-21 02:15:00	145	Science and Engineering Library	15	Mudd	28
+2014-10-21 02:15:00	145	Science and Engineering Library	15	Northwest Corner Building	28
 2014-10-21 02:15:00	155	JJ's Place	75	John Jay	2
 2014-10-21 02:15:00	133	Butler Library 5	103	Butler	9
 2014-10-21 02:15:00	151	Lerner 2	84	Lerner	10
@@ -2484,7 +2484,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-21 02:30:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-21 02:30:00	134	Butler Library 6	103	Butler	0
 2014-10-21 02:30:00	138	Butler Library stk	103	Butler	16
-2014-10-21 02:30:00	145	Science and Engineering Library	15	Mudd	27
+2014-10-21 02:30:00	145	Science and Engineering Library	15	Northwest Corner Building	27
 2014-10-21 02:30:00	131	Butler Library 3	103	Butler	164
 2014-10-21 02:30:00	139	Lehman Library 2	79	Lehman LIbrary	1
 2014-10-21 02:30:00	144	Starr East Asian Library	62	East Asian Library	3
@@ -2506,7 +2506,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-21 02:45:00	149	Architectural and Fine Arts Library 3	146	Avery	2
 2014-10-21 02:45:00	134	Butler Library 6	103	Butler	0
 2014-10-21 02:45:00	138	Butler Library stk	103	Butler	17
-2014-10-21 02:45:00	145	Science and Engineering Library	15	Mudd	22
+2014-10-21 02:45:00	145	Science and Engineering Library	15	Northwest Corner Building	22
 2014-10-21 02:45:00	155	JJ's Place	75	John Jay	2
 2014-10-21 02:45:00	133	Butler Library 5	103	Butler	8
 2014-10-21 02:45:00	151	Lerner 2	84	Lerner	7
@@ -2545,13 +2545,13 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-21 03:00:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-21 03:00:00	134	Butler Library 6	103	Butler	0
 2014-10-21 03:00:00	138	Butler Library stk	103	Butler	16
-2014-10-21 03:00:00	145	Science and Engineering Library	15	Mudd	21
+2014-10-21 03:00:00	145	Science and Engineering Library	15	Northwest Corner Building	21
 2014-10-21 03:15:00	152	Lerner 3	84	Lerner	7
 2014-10-21 03:15:00	130	Butler Library 2	103	Butler	177
 2014-10-21 03:15:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-21 03:15:00	134	Butler Library 6	103	Butler	0
 2014-10-21 03:15:00	138	Butler Library stk	103	Butler	15
-2014-10-21 03:15:00	145	Science and Engineering Library	15	Mudd	8
+2014-10-21 03:15:00	145	Science and Engineering Library	15	Northwest Corner Building	8
 2014-10-21 03:15:00	155	JJ's Place	75	John Jay	2
 2014-10-21 03:15:00	133	Butler Library 5	103	Butler	9
 2014-10-21 03:15:00	151	Lerner 2	84	Lerner	3
@@ -2578,7 +2578,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-21 03:30:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-21 03:30:00	134	Butler Library 6	103	Butler	0
 2014-10-21 03:30:00	138	Butler Library stk	103	Butler	15
-2014-10-21 03:30:00	145	Science and Engineering Library	15	Mudd	1
+2014-10-21 03:30:00	145	Science and Engineering Library	15	Northwest Corner Building	1
 2014-10-21 03:30:00	131	Butler Library 3	103	Butler	100
 2014-10-21 03:30:00	139	Lehman Library 2	79	Lehman LIbrary	1
 2014-10-21 03:30:00	144	Starr East Asian Library	62	East Asian Library	1
@@ -2605,7 +2605,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-21 03:45:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-21 03:45:00	134	Butler Library 6	103	Butler	0
 2014-10-21 03:45:00	138	Butler Library stk	103	Butler	8
-2014-10-21 03:45:00	145	Science and Engineering Library	15	Mudd	1
+2014-10-21 03:45:00	145	Science and Engineering Library	15	Northwest Corner Building	1
 2014-10-21 03:45:00	131	Butler Library 3	103	Butler	90
 2014-10-21 03:45:00	139	Lehman Library 2	79	Lehman LIbrary	1
 2014-10-21 03:45:00	144	Starr East Asian Library	62	East Asian Library	1
@@ -2622,7 +2622,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-21 04:00:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-21 04:00:00	134	Butler Library 6	103	Butler	0
 2014-10-21 04:00:00	138	Butler Library stk	103	Butler	8
-2014-10-21 04:00:00	145	Science and Engineering Library	15	Mudd	1
+2014-10-21 04:00:00	145	Science and Engineering Library	15	Northwest Corner Building	1
 2014-10-21 04:00:00	131	Butler Library 3	103	Butler	80
 2014-10-21 04:00:00	139	Lehman Library 2	79	Lehman LIbrary	1
 2014-10-21 04:00:00	144	Starr East Asian Library	62	East Asian Library	2
@@ -2652,7 +2652,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-21 04:15:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-21 04:15:00	134	Butler Library 6	103	Butler	0
 2014-10-21 04:15:00	138	Butler Library stk	103	Butler	8
-2014-10-21 04:15:00	145	Science and Engineering Library	15	Mudd	1
+2014-10-21 04:15:00	145	Science and Engineering Library	15	Northwest Corner Building	1
 2014-10-21 04:15:00	155	JJ's Place	75	John Jay	1
 2014-10-21 04:15:00	133	Butler Library 5	103	Butler	7
 2014-10-21 04:15:00	151	Lerner 2	84	Lerner	5
@@ -2661,7 +2661,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-21 04:30:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-21 04:30:00	134	Butler Library 6	103	Butler	1
 2014-10-21 04:30:00	138	Butler Library stk	103	Butler	6
-2014-10-21 04:30:00	145	Science and Engineering Library	15	Mudd	1
+2014-10-21 04:30:00	145	Science and Engineering Library	15	Northwest Corner Building	1
 2014-10-21 04:30:00	155	JJ's Place	75	John Jay	1
 2014-10-21 04:30:00	133	Butler Library 5	103	Butler	7
 2014-10-21 04:30:00	151	Lerner 2	84	Lerner	7
@@ -2699,13 +2699,13 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-21 04:45:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-21 04:45:00	134	Butler Library 6	103	Butler	0
 2014-10-21 04:45:00	138	Butler Library stk	103	Butler	6
-2014-10-21 04:45:00	145	Science and Engineering Library	15	Mudd	1
+2014-10-21 04:45:00	145	Science and Engineering Library	15	Northwest Corner Building	1
 2014-10-21 05:00:00	152	Lerner 3	84	Lerner	3
 2014-10-21 05:00:00	130	Butler Library 2	103	Butler	74
 2014-10-21 05:00:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-21 05:00:00	134	Butler Library 6	103	Butler	0
 2014-10-21 05:00:00	138	Butler Library stk	103	Butler	5
-2014-10-21 05:00:00	145	Science and Engineering Library	15	Mudd	1
+2014-10-21 05:00:00	145	Science and Engineering Library	15	Northwest Corner Building	1
 2014-10-21 05:00:00	155	JJ's Place	75	John Jay	1
 2014-10-21 05:00:00	133	Butler Library 5	103	Butler	6
 2014-10-21 05:00:00	151	Lerner 2	84	Lerner	3
@@ -2737,7 +2737,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-21 05:15:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-21 05:15:00	134	Butler Library 6	103	Butler	0
 2014-10-21 05:15:00	138	Butler Library stk	103	Butler	5
-2014-10-21 05:15:00	145	Science and Engineering Library	15	Mudd	1
+2014-10-21 05:15:00	145	Science and Engineering Library	15	Northwest Corner Building	1
 2014-10-21 05:15:00	131	Butler Library 3	103	Butler	51
 2014-10-21 05:15:00	139	Lehman Library 2	79	Lehman LIbrary	2
 2014-10-21 05:15:00	144	Starr East Asian Library	62	East Asian Library	1
@@ -2754,7 +2754,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-21 05:30:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-21 05:30:00	134	Butler Library 6	103	Butler	0
 2014-10-21 05:30:00	138	Butler Library stk	103	Butler	4
-2014-10-21 05:30:00	145	Science and Engineering Library	15	Mudd	1
+2014-10-21 05:30:00	145	Science and Engineering Library	15	Northwest Corner Building	1
 2014-10-21 05:30:00	131	Butler Library 3	103	Butler	47
 2014-10-21 05:30:00	139	Lehman Library 2	79	Lehman LIbrary	3
 2014-10-21 05:30:00	144	Starr East Asian Library	62	East Asian Library	2
@@ -2784,7 +2784,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-21 05:45:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-21 05:45:00	134	Butler Library 6	103	Butler	0
 2014-10-21 05:45:00	138	Butler Library stk	103	Butler	4
-2014-10-21 05:45:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-21 05:45:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-21 05:45:00	155	JJ's Place	75	John Jay	1
 2014-10-21 05:45:00	133	Butler Library 5	103	Butler	6
 2014-10-21 05:45:00	151	Lerner 2	84	Lerner	4
@@ -2803,7 +2803,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-21 06:00:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-21 06:00:00	134	Butler Library 6	103	Butler	1
 2014-10-21 06:00:00	138	Butler Library stk	103	Butler	3
-2014-10-21 06:00:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-21 06:00:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-21 06:00:00	131	Butler Library 3	103	Butler	39
 2014-10-21 06:00:00	139	Lehman Library 2	79	Lehman LIbrary	2
 2014-10-21 06:00:00	144	Starr East Asian Library	62	East Asian Library	1
@@ -2831,7 +2831,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-21 06:15:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-21 06:15:00	134	Butler Library 6	103	Butler	1
 2014-10-21 06:15:00	138	Butler Library stk	103	Butler	2
-2014-10-21 06:15:00	145	Science and Engineering Library	15	Mudd	1
+2014-10-21 06:15:00	145	Science and Engineering Library	15	Northwest Corner Building	1
 2014-10-21 06:30:00	154	Lerner 5	84	Lerner	0
 2014-10-21 06:30:00	125	John Jay Dining Hall	75	John Jay	3
 2014-10-21 06:30:00	147	Architectural and Fine Arts Library 1	146	Avery	3
@@ -2850,7 +2850,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-21 06:30:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-21 06:30:00	134	Butler Library 6	103	Butler	1
 2014-10-21 06:30:00	138	Butler Library stk	103	Butler	3
-2014-10-21 06:30:00	145	Science and Engineering Library	15	Mudd	1
+2014-10-21 06:30:00	145	Science and Engineering Library	15	Northwest Corner Building	1
 2014-10-21 06:30:00	155	JJ's Place	75	John Jay	1
 2014-10-21 06:30:00	133	Butler Library 5	103	Butler	7
 2014-10-21 06:30:00	151	Lerner 2	84	Lerner	5
@@ -2869,7 +2869,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-21 06:45:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-21 06:45:00	134	Butler Library 6	103	Butler	1
 2014-10-21 06:45:00	138	Butler Library stk	103	Butler	1
-2014-10-21 06:45:00	145	Science and Engineering Library	15	Mudd	1
+2014-10-21 06:45:00	145	Science and Engineering Library	15	Northwest Corner Building	1
 2014-10-21 06:45:00	131	Butler Library 3	103	Butler	29
 2014-10-21 06:45:00	139	Lehman Library 2	79	Lehman LIbrary	3
 2014-10-21 06:45:00	144	Starr East Asian Library	62	East Asian Library	4
@@ -2886,7 +2886,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-21 07:00:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-21 07:00:00	134	Butler Library 6	103	Butler	1
 2014-10-21 07:00:00	138	Butler Library stk	103	Butler	1
-2014-10-21 07:00:00	145	Science and Engineering Library	15	Mudd	1
+2014-10-21 07:00:00	145	Science and Engineering Library	15	Northwest Corner Building	1
 2014-10-21 07:00:00	131	Butler Library 3	103	Butler	31
 2014-10-21 07:00:00	139	Lehman Library 2	79	Lehman LIbrary	2
 2014-10-21 07:00:00	144	Starr East Asian Library	62	East Asian Library	1
@@ -2913,7 +2913,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-21 07:15:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-21 07:15:00	134	Butler Library 6	103	Butler	2
 2014-10-21 07:15:00	138	Butler Library stk	103	Butler	1
-2014-10-21 07:15:00	145	Science and Engineering Library	15	Mudd	1
+2014-10-21 07:15:00	145	Science and Engineering Library	15	Northwest Corner Building	1
 2014-10-21 07:15:00	131	Butler Library 3	103	Butler	30
 2014-10-21 07:15:00	139	Lehman Library 2	79	Lehman LIbrary	2
 2014-10-21 07:15:00	144	Starr East Asian Library	62	East Asian Library	4
@@ -2941,7 +2941,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-21 07:30:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-21 07:30:00	134	Butler Library 6	103	Butler	3
 2014-10-21 07:30:00	138	Butler Library stk	103	Butler	2
-2014-10-21 07:30:00	145	Science and Engineering Library	15	Mudd	1
+2014-10-21 07:30:00	145	Science and Engineering Library	15	Northwest Corner Building	1
 2014-10-21 07:45:00	154	Lerner 5	84	Lerner	2
 2014-10-21 07:45:00	125	John Jay Dining Hall	75	John Jay	1
 2014-10-21 07:45:00	147	Architectural and Fine Arts Library 1	146	Avery	2
@@ -2960,7 +2960,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-21 07:45:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-21 07:45:00	134	Butler Library 6	103	Butler	0
 2014-10-21 07:45:00	138	Butler Library stk	103	Butler	2
-2014-10-21 07:45:00	145	Science and Engineering Library	15	Mudd	1
+2014-10-21 07:45:00	145	Science and Engineering Library	15	Northwest Corner Building	1
 2014-10-21 07:45:00	155	JJ's Place	75	John Jay	6
 2014-10-21 07:45:00	133	Butler Library 5	103	Butler	8
 2014-10-21 07:45:00	151	Lerner 2	84	Lerner	3
@@ -2969,7 +2969,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-21 08:00:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-21 08:00:00	134	Butler Library 6	103	Butler	0
 2014-10-21 08:00:00	138	Butler Library stk	103	Butler	3
-2014-10-21 08:00:00	145	Science and Engineering Library	15	Mudd	3
+2014-10-21 08:00:00	145	Science and Engineering Library	15	Northwest Corner Building	3
 2014-10-21 08:00:00	155	JJ's Place	75	John Jay	5
 2014-10-21 08:00:00	133	Butler Library 5	103	Butler	11
 2014-10-21 08:00:00	151	Lerner 2	84	Lerner	8
@@ -3001,7 +3001,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-21 08:15:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-21 08:15:00	134	Butler Library 6	103	Butler	1
 2014-10-21 08:15:00	138	Butler Library stk	103	Butler	1
-2014-10-21 08:15:00	145	Science and Engineering Library	15	Mudd	1
+2014-10-21 08:15:00	145	Science and Engineering Library	15	Northwest Corner Building	1
 2014-10-21 08:15:00	131	Butler Library 3	103	Butler	41
 2014-10-21 08:15:00	139	Lehman Library 2	79	Lehman LIbrary	7
 2014-10-21 08:15:00	144	Starr East Asian Library	62	East Asian Library	1
@@ -3021,7 +3021,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-21 08:30:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-21 08:30:00	134	Butler Library 6	103	Butler	1
 2014-10-21 08:30:00	138	Butler Library stk	103	Butler	2
-2014-10-21 08:30:00	145	Science and Engineering Library	15	Mudd	6
+2014-10-21 08:30:00	145	Science and Engineering Library	15	Northwest Corner Building	6
 2014-10-21 08:30:00	155	JJ's Place	75	John Jay	5
 2014-10-21 08:30:00	133	Butler Library 5	103	Butler	14
 2014-10-21 08:30:00	151	Lerner 2	84	Lerner	24
@@ -3051,7 +3051,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-21 08:45:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-21 08:45:00	134	Butler Library 6	103	Butler	2
 2014-10-21 08:45:00	138	Butler Library stk	103	Butler	1
-2014-10-21 08:45:00	145	Science and Engineering Library	15	Mudd	6
+2014-10-21 08:45:00	145	Science and Engineering Library	15	Northwest Corner Building	6
 2014-10-21 09:00:00	154	Lerner 5	84	Lerner	13
 2014-10-21 09:00:00	125	John Jay Dining Hall	75	John Jay	10
 2014-10-21 09:00:00	147	Architectural and Fine Arts Library 1	146	Avery	2
@@ -3067,7 +3067,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-21 09:00:00	149	Architectural and Fine Arts Library 3	146	Avery	2
 2014-10-21 09:00:00	134	Butler Library 6	103	Butler	2
 2014-10-21 09:00:00	138	Butler Library stk	103	Butler	2
-2014-10-21 09:00:00	145	Science and Engineering Library	15	Mudd	9
+2014-10-21 09:00:00	145	Science and Engineering Library	15	Northwest Corner Building	9
 2014-10-21 09:00:00	131	Butler Library 3	103	Butler	63
 2014-10-21 09:00:00	139	Lehman Library 2	79	Lehman LIbrary	7
 2014-10-21 09:00:00	144	Starr East Asian Library	62	East Asian Library	4
@@ -3089,7 +3089,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-21 09:15:00	149	Architectural and Fine Arts Library 3	146	Avery	3
 2014-10-21 09:15:00	134	Butler Library 6	103	Butler	4
 2014-10-21 09:15:00	138	Butler Library stk	103	Butler	2
-2014-10-21 09:15:00	145	Science and Engineering Library	15	Mudd	12
+2014-10-21 09:15:00	145	Science and Engineering Library	15	Northwest Corner Building	12
 2014-10-21 09:15:00	131	Butler Library 3	103	Butler	69
 2014-10-21 09:15:00	139	Lehman Library 2	79	Lehman LIbrary	14
 2014-10-21 09:15:00	144	Starr East Asian Library	62	East Asian Library	8
@@ -3109,7 +3109,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-21 09:30:00	149	Architectural and Fine Arts Library 3	146	Avery	8
 2014-10-21 09:30:00	134	Butler Library 6	103	Butler	15
 2014-10-21 09:30:00	138	Butler Library stk	103	Butler	3
-2014-10-21 09:30:00	145	Science and Engineering Library	15	Mudd	34
+2014-10-21 09:30:00	145	Science and Engineering Library	15	Northwest Corner Building	34
 2014-10-21 09:30:00	155	JJ's Place	75	John Jay	6
 2014-10-21 09:30:00	133	Butler Library 5	103	Butler	24
 2014-10-21 09:30:00	151	Lerner 2	84	Lerner	30
@@ -3140,7 +3140,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-21 09:45:00	134	Butler Library 6	103	Butler	18
 2014-10-21 09:45:00	138	Butler Library stk	103	Butler	3
 2014-10-21 22:30:00	152	Lerner 3	84	Lerner	30
-2014-10-21 09:45:00	145	Science and Engineering Library	15	Mudd	15
+2014-10-21 09:45:00	145	Science and Engineering Library	15	Northwest Corner Building	15
 2014-10-21 10:00:00	154	Lerner 5	84	Lerner	31
 2014-10-21 10:00:00	125	John Jay Dining Hall	75	John Jay	16
 2014-10-21 10:00:00	147	Architectural and Fine Arts Library 1	146	Avery	7
@@ -3156,7 +3156,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-21 10:00:00	149	Architectural and Fine Arts Library 3	146	Avery	26
 2014-10-21 10:00:00	134	Butler Library 6	103	Butler	19
 2014-10-21 10:00:00	138	Butler Library stk	103	Butler	4
-2014-10-21 10:00:00	145	Science and Engineering Library	15	Mudd	30
+2014-10-21 10:00:00	145	Science and Engineering Library	15	Northwest Corner Building	30
 2014-10-21 10:00:00	131	Butler Library 3	103	Butler	161
 2014-10-21 10:00:00	139	Lehman Library 2	79	Lehman LIbrary	28
 2014-10-21 10:00:00	144	Starr East Asian Library	62	East Asian Library	32
@@ -3168,7 +3168,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-21 10:15:00	149	Architectural and Fine Arts Library 3	146	Avery	37
 2014-10-21 10:15:00	134	Butler Library 6	103	Butler	34
 2014-10-21 10:15:00	138	Butler Library stk	103	Butler	9
-2014-10-21 10:15:00	145	Science and Engineering Library	15	Mudd	45
+2014-10-21 10:15:00	145	Science and Engineering Library	15	Northwest Corner Building	45
 2014-10-21 10:15:00	131	Butler Library 3	103	Butler	188
 2014-10-21 10:15:00	139	Lehman Library 2	79	Lehman LIbrary	29
 2014-10-21 10:15:00	144	Starr East Asian Library	62	East Asian Library	47
@@ -3195,7 +3195,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-21 10:30:00	149	Architectural and Fine Arts Library 3	146	Avery	46
 2014-10-21 10:30:00	134	Butler Library 6	103	Butler	36
 2014-10-21 10:30:00	138	Butler Library stk	103	Butler	8
-2014-10-21 10:30:00	145	Science and Engineering Library	15	Mudd	51
+2014-10-21 10:30:00	145	Science and Engineering Library	15	Northwest Corner Building	51
 2014-10-21 10:30:00	131	Butler Library 3	103	Butler	231
 2014-10-21 10:30:00	139	Lehman Library 2	79	Lehman LIbrary	42
 2014-10-21 10:30:00	144	Starr East Asian Library	62	East Asian Library	69
@@ -3222,7 +3222,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-21 10:45:00	149	Architectural and Fine Arts Library 3	146	Avery	68
 2014-10-21 10:45:00	134	Butler Library 6	103	Butler	51
 2014-10-21 10:45:00	138	Butler Library stk	103	Butler	6
-2014-10-21 10:45:00	145	Science and Engineering Library	15	Mudd	60
+2014-10-21 10:45:00	145	Science and Engineering Library	15	Northwest Corner Building	60
 2014-10-21 10:45:00	131	Butler Library 3	103	Butler	267
 2014-10-21 10:45:00	139	Lehman Library 2	79	Lehman LIbrary	46
 2014-10-21 10:45:00	144	Starr East Asian Library	62	East Asian Library	85
@@ -3234,7 +3234,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-21 11:00:00	149	Architectural and Fine Arts Library 3	146	Avery	70
 2014-10-21 11:00:00	134	Butler Library 6	103	Butler	53
 2014-10-21 11:00:00	138	Butler Library stk	103	Butler	12
-2014-10-21 11:00:00	145	Science and Engineering Library	15	Mudd	76
+2014-10-21 11:00:00	145	Science and Engineering Library	15	Northwest Corner Building	76
 2014-10-21 11:00:00	131	Butler Library 3	103	Butler	270
 2014-10-21 11:00:00	139	Lehman Library 2	79	Lehman LIbrary	53
 2014-10-21 11:00:00	144	Starr East Asian Library	62	East Asian Library	102
@@ -3261,7 +3261,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-21 11:15:00	149	Architectural and Fine Arts Library 3	146	Avery	75
 2014-10-21 11:15:00	134	Butler Library 6	103	Butler	66
 2014-10-21 11:15:00	138	Butler Library stk	103	Butler	10
-2014-10-21 11:15:00	145	Science and Engineering Library	15	Mudd	93
+2014-10-21 11:15:00	145	Science and Engineering Library	15	Northwest Corner Building	93
 2014-10-21 11:15:00	131	Butler Library 3	103	Butler	284
 2014-10-21 11:15:00	139	Lehman Library 2	79	Lehman LIbrary	50
 2014-10-21 11:15:00	144	Starr East Asian Library	62	East Asian Library	109
@@ -3286,7 +3286,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-21 11:30:00	149	Architectural and Fine Arts Library 3	146	Avery	84
 2014-10-21 11:30:00	134	Butler Library 6	103	Butler	71
 2014-10-21 11:30:00	138	Butler Library stk	103	Butler	10
-2014-10-21 11:30:00	145	Science and Engineering Library	15	Mudd	94
+2014-10-21 11:30:00	145	Science and Engineering Library	15	Northwest Corner Building	94
 2014-10-21 11:30:00	155	JJ's Place	75	John Jay	5
 2014-10-21 11:30:00	133	Butler Library 5	103	Butler	72
 2014-10-21 11:30:00	151	Lerner 2	84	Lerner	58
@@ -3316,7 +3316,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-21 11:45:00	149	Architectural and Fine Arts Library 3	146	Avery	86
 2014-10-21 11:45:00	134	Butler Library 6	103	Butler	73
 2014-10-21 11:45:00	138	Butler Library stk	103	Butler	11
-2014-10-21 11:45:00	145	Science and Engineering Library	15	Mudd	94
+2014-10-21 11:45:00	145	Science and Engineering Library	15	Northwest Corner Building	94
 2014-10-21 12:00:00	154	Lerner 5	84	Lerner	59
 2014-10-21 12:00:00	125	John Jay Dining Hall	75	John Jay	81
 2014-10-21 12:00:00	147	Architectural and Fine Arts Library 1	146	Avery	7
@@ -3335,7 +3335,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-21 12:00:00	149	Architectural and Fine Arts Library 3	146	Avery	80
 2014-10-21 12:00:00	134	Butler Library 6	103	Butler	80
 2014-10-21 12:00:00	138	Butler Library stk	103	Butler	13
-2014-10-21 12:00:00	145	Science and Engineering Library	15	Mudd	97
+2014-10-21 12:00:00	145	Science and Engineering Library	15	Northwest Corner Building	97
 2014-10-21 12:00:00	155	JJ's Place	75	John Jay	14
 2014-10-21 12:00:00	133	Butler Library 5	103	Butler	72
 2014-10-21 12:00:00	151	Lerner 2	84	Lerner	89
@@ -3354,7 +3354,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-21 12:15:00	149	Architectural and Fine Arts Library 3	146	Avery	80
 2014-10-21 12:15:00	134	Butler Library 6	103	Butler	86
 2014-10-21 12:15:00	138	Butler Library stk	103	Butler	9
-2014-10-21 12:15:00	145	Science and Engineering Library	15	Mudd	103
+2014-10-21 12:15:00	145	Science and Engineering Library	15	Northwest Corner Building	103
 2014-10-21 12:15:00	131	Butler Library 3	103	Butler	293
 2014-10-21 12:15:00	139	Lehman Library 2	79	Lehman LIbrary	57
 2014-10-21 12:15:00	144	Starr East Asian Library	62	East Asian Library	111
@@ -3382,13 +3382,13 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-21 12:30:00	149	Architectural and Fine Arts Library 3	146	Avery	92
 2014-10-21 12:30:00	134	Butler Library 6	103	Butler	81
 2014-10-21 12:30:00	138	Butler Library stk	103	Butler	20
-2014-10-21 12:30:00	145	Science and Engineering Library	15	Mudd	113
+2014-10-21 12:30:00	145	Science and Engineering Library	15	Northwest Corner Building	113
 2014-10-21 12:45:00	152	Lerner 3	84	Lerner	103
 2014-10-21 12:45:00	130	Butler Library 2	103	Butler	390
 2014-10-21 12:45:00	149	Architectural and Fine Arts Library 3	146	Avery	100
 2014-10-21 12:45:00	134	Butler Library 6	103	Butler	88
 2014-10-21 12:45:00	138	Butler Library stk	103	Butler	18
-2014-10-21 12:45:00	145	Science and Engineering Library	15	Mudd	106
+2014-10-21 12:45:00	145	Science and Engineering Library	15	Northwest Corner Building	106
 2014-10-21 12:45:00	131	Butler Library 3	103	Butler	290
 2014-10-21 12:45:00	139	Lehman Library 2	79	Lehman LIbrary	50
 2014-10-21 12:45:00	144	Starr East Asian Library	62	East Asian Library	95
@@ -3410,7 +3410,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-21 13:00:00	149	Architectural and Fine Arts Library 3	146	Avery	94
 2014-10-21 13:00:00	134	Butler Library 6	103	Butler	96
 2014-10-21 13:00:00	138	Butler Library stk	103	Butler	20
-2014-10-21 13:00:00	145	Science and Engineering Library	15	Mudd	104
+2014-10-21 13:00:00	145	Science and Engineering Library	15	Northwest Corner Building	104
 2014-10-21 13:00:00	131	Butler Library 3	103	Butler	307
 2014-10-21 13:00:00	139	Lehman Library 2	79	Lehman LIbrary	59
 2014-10-21 13:00:00	144	Starr East Asian Library	62	East Asian Library	103
@@ -3445,7 +3445,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-21 13:15:00	149	Architectural and Fine Arts Library 3	146	Avery	90
 2014-10-21 13:15:00	134	Butler Library 6	103	Butler	96
 2014-10-21 13:15:00	138	Butler Library stk	103	Butler	20
-2014-10-21 13:15:00	145	Science and Engineering Library	15	Mudd	112
+2014-10-21 13:15:00	145	Science and Engineering Library	15	Northwest Corner Building	112
 2014-10-21 13:15:00	155	JJ's Place	75	John Jay	33
 2014-10-21 13:15:00	133	Butler Library 5	103	Butler	73
 2014-10-21 13:15:00	151	Lerner 2	84	Lerner	63
@@ -3462,7 +3462,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-21 13:30:00	149	Architectural and Fine Arts Library 3	146	Avery	98
 2014-10-21 13:30:00	134	Butler Library 6	103	Butler	91
 2014-10-21 13:30:00	138	Butler Library stk	103	Butler	20
-2014-10-21 13:30:00	145	Science and Engineering Library	15	Mudd	118
+2014-10-21 13:30:00	145	Science and Engineering Library	15	Northwest Corner Building	118
 2014-10-21 13:30:00	155	JJ's Place	75	John Jay	43
 2014-10-21 13:30:00	133	Butler Library 5	103	Butler	70
 2014-10-21 13:30:00	151	Lerner 2	84	Lerner	102
@@ -3486,7 +3486,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-21 13:45:00	149	Architectural and Fine Arts Library 3	146	Avery	96
 2014-10-21 13:45:00	134	Butler Library 6	103	Butler	96
 2014-10-21 13:45:00	138	Butler Library stk	103	Butler	27
-2014-10-21 13:45:00	145	Science and Engineering Library	15	Mudd	111
+2014-10-21 13:45:00	145	Science and Engineering Library	15	Northwest Corner Building	111
 2014-10-21 13:45:00	131	Butler Library 3	103	Butler	272
 2014-10-21 13:45:00	139	Lehman Library 2	79	Lehman LIbrary	86
 2014-10-21 13:45:00	144	Starr East Asian Library	62	East Asian Library	165
@@ -3498,7 +3498,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-21 14:00:00	149	Architectural and Fine Arts Library 3	146	Avery	91
 2014-10-21 14:00:00	134	Butler Library 6	103	Butler	107
 2014-10-21 14:00:00	138	Butler Library stk	103	Butler	24
-2014-10-21 14:00:00	145	Science and Engineering Library	15	Mudd	123
+2014-10-21 14:00:00	145	Science and Engineering Library	15	Northwest Corner Building	123
 2014-10-21 14:00:00	131	Butler Library 3	103	Butler	293
 2014-10-21 14:00:00	139	Lehman Library 2	79	Lehman LIbrary	87
 2014-10-21 14:00:00	144	Starr East Asian Library	62	East Asian Library	145
@@ -3520,7 +3520,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-21 14:15:00	149	Architectural and Fine Arts Library 3	146	Avery	102
 2014-10-21 14:15:00	134	Butler Library 6	103	Butler	115
 2014-10-21 14:15:00	138	Butler Library stk	103	Butler	25
-2014-10-21 14:15:00	145	Science and Engineering Library	15	Mudd	127
+2014-10-21 14:15:00	145	Science and Engineering Library	15	Northwest Corner Building	127
 2014-10-21 14:15:00	155	JJ's Place	75	John Jay	20
 2014-10-21 14:15:00	133	Butler Library 5	103	Butler	68
 2014-10-21 14:15:00	151	Lerner 2	84	Lerner	101
@@ -3547,7 +3547,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-21 14:30:00	149	Architectural and Fine Arts Library 3	146	Avery	106
 2014-10-21 14:30:00	134	Butler Library 6	103	Butler	141
 2014-10-21 14:30:00	138	Butler Library stk	103	Butler	20
-2014-10-21 14:30:00	145	Science and Engineering Library	15	Mudd	120
+2014-10-21 14:30:00	145	Science and Engineering Library	15	Northwest Corner Building	120
 2014-10-21 14:30:00	131	Butler Library 3	103	Butler	324
 2014-10-21 14:30:00	139	Lehman Library 2	79	Lehman LIbrary	111
 2014-10-21 14:30:00	144	Starr East Asian Library	62	East Asian Library	173
@@ -3572,7 +3572,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-21 14:45:00	149	Architectural and Fine Arts Library 3	146	Avery	110
 2014-10-21 14:45:00	134	Butler Library 6	103	Butler	135
 2014-10-21 14:45:00	138	Butler Library stk	103	Butler	24
-2014-10-21 14:45:00	145	Science and Engineering Library	15	Mudd	128
+2014-10-21 14:45:00	145	Science and Engineering Library	15	Northwest Corner Building	128
 2014-10-21 14:45:00	155	JJ's Place	75	John Jay	11
 2014-10-21 14:45:00	133	Butler Library 5	103	Butler	96
 2014-10-21 14:45:00	151	Lerner 2	84	Lerner	116
@@ -3596,7 +3596,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-21 15:00:00	149	Architectural and Fine Arts Library 3	146	Avery	109
 2014-10-21 15:00:00	134	Butler Library 6	103	Butler	135
 2014-10-21 15:00:00	138	Butler Library stk	103	Butler	33
-2014-10-21 15:00:00	145	Science and Engineering Library	15	Mudd	119
+2014-10-21 15:00:00	145	Science and Engineering Library	15	Northwest Corner Building	119
 2014-10-21 15:00:00	131	Butler Library 3	103	Butler	349
 2014-10-21 15:00:00	139	Lehman Library 2	79	Lehman LIbrary	103
 2014-10-21 15:00:00	144	Starr East Asian Library	62	East Asian Library	142
@@ -3621,7 +3621,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-21 15:15:00	149	Architectural and Fine Arts Library 3	146	Avery	98
 2014-10-21 15:15:00	134	Butler Library 6	103	Butler	158
 2014-10-21 15:15:00	138	Butler Library stk	103	Butler	32
-2014-10-21 15:15:00	145	Science and Engineering Library	15	Mudd	123
+2014-10-21 15:15:00	145	Science and Engineering Library	15	Northwest Corner Building	123
 2014-10-21 15:15:00	155	JJ's Place	75	John Jay	27
 2014-10-21 15:15:00	133	Butler Library 5	103	Butler	112
 2014-10-21 15:15:00	151	Lerner 2	84	Lerner	113
@@ -3647,7 +3647,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-21 15:30:00	149	Architectural and Fine Arts Library 3	146	Avery	116
 2014-10-21 15:30:00	134	Butler Library 6	103	Butler	169
 2014-10-21 15:30:00	138	Butler Library stk	103	Butler	30
-2014-10-21 15:30:00	145	Science and Engineering Library	15	Mudd	131
+2014-10-21 15:30:00	145	Science and Engineering Library	15	Northwest Corner Building	131
 2014-10-21 15:45:00	131	Butler Library 3	103	Butler	356
 2014-10-21 15:45:00	139	Lehman Library 2	79	Lehman LIbrary	101
 2014-10-21 15:45:00	144	Starr East Asian Library	62	East Asian Library	149
@@ -3661,7 +3661,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-21 15:45:00	149	Architectural and Fine Arts Library 3	146	Avery	114
 2014-10-21 15:45:00	134	Butler Library 6	103	Butler	176
 2014-10-21 15:45:00	138	Butler Library stk	103	Butler	35
-2014-10-21 15:45:00	145	Science and Engineering Library	15	Mudd	123
+2014-10-21 15:45:00	145	Science and Engineering Library	15	Northwest Corner Building	123
 2014-10-21 15:45:00	155	JJ's Place	75	John Jay	22
 2014-10-21 15:45:00	133	Butler Library 5	103	Butler	124
 2014-10-21 15:45:00	151	Lerner 2	84	Lerner	106
@@ -3691,7 +3691,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-21 16:00:00	149	Architectural and Fine Arts Library 3	146	Avery	123
 2014-10-21 16:00:00	134	Butler Library 6	103	Butler	184
 2014-10-21 16:00:00	138	Butler Library stk	103	Butler	38
-2014-10-21 16:00:00	145	Science and Engineering Library	15	Mudd	122
+2014-10-21 16:00:00	145	Science and Engineering Library	15	Northwest Corner Building	122
 2014-10-21 16:15:00	131	Butler Library 3	103	Butler	344
 2014-10-21 16:15:00	139	Lehman Library 2	79	Lehman LIbrary	104
 2014-10-21 16:15:00	144	Starr East Asian Library	62	East Asian Library	166
@@ -3705,7 +3705,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-21 16:15:00	149	Architectural and Fine Arts Library 3	146	Avery	119
 2014-10-21 16:15:00	134	Butler Library 6	103	Butler	178
 2014-10-21 16:15:00	138	Butler Library stk	103	Butler	39
-2014-10-21 16:15:00	145	Science and Engineering Library	15	Mudd	124
+2014-10-21 16:15:00	145	Science and Engineering Library	15	Northwest Corner Building	124
 2014-10-21 16:15:00	155	JJ's Place	75	John Jay	17
 2014-10-21 16:15:00	133	Butler Library 5	103	Butler	126
 2014-10-21 16:15:00	151	Lerner 2	84	Lerner	114
@@ -3724,7 +3724,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-21 16:30:00	149	Architectural and Fine Arts Library 3	146	Avery	111
 2014-10-21 16:30:00	134	Butler Library 6	103	Butler	158
 2014-10-21 16:30:00	138	Butler Library stk	103	Butler	44
-2014-10-21 16:30:00	145	Science and Engineering Library	15	Mudd	127
+2014-10-21 16:30:00	145	Science and Engineering Library	15	Northwest Corner Building	127
 2014-10-21 16:30:00	131	Butler Library 3	103	Butler	326
 2014-10-21 16:30:00	139	Lehman Library 2	79	Lehman LIbrary	94
 2014-10-21 16:30:00	144	Starr East Asian Library	62	East Asian Library	136
@@ -3748,7 +3748,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-21 16:45:00	149	Architectural and Fine Arts Library 3	146	Avery	114
 2014-10-21 16:45:00	134	Butler Library 6	103	Butler	158
 2014-10-21 16:45:00	138	Butler Library stk	103	Butler	37
-2014-10-21 16:45:00	145	Science and Engineering Library	15	Mudd	137
+2014-10-21 16:45:00	145	Science and Engineering Library	15	Northwest Corner Building	137
 2014-10-21 16:45:00	155	JJ's Place	75	John Jay	31
 2014-10-21 16:45:00	133	Butler Library 5	103	Butler	113
 2014-10-21 16:45:00	151	Lerner 2	84	Lerner	102
@@ -3762,7 +3762,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-21 17:00:00	149	Architectural and Fine Arts Library 3	146	Avery	104
 2014-10-21 17:00:00	134	Butler Library 6	103	Butler	157
 2014-10-21 17:00:00	138	Butler Library stk	103	Butler	41
-2014-10-21 17:00:00	145	Science and Engineering Library	15	Mudd	123
+2014-10-21 17:00:00	145	Science and Engineering Library	15	Northwest Corner Building	123
 2014-10-21 17:00:00	155	JJ's Place	75	John Jay	29
 2014-10-21 17:00:00	133	Butler Library 5	103	Butler	106
 2014-10-21 17:00:00	151	Lerner 2	84	Lerner	96
@@ -3789,7 +3789,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-21 17:15:00	149	Architectural and Fine Arts Library 3	146	Avery	115
 2014-10-21 17:15:00	134	Butler Library 6	103	Butler	134
 2014-10-21 17:15:00	138	Butler Library stk	103	Butler	36
-2014-10-21 17:15:00	145	Science and Engineering Library	15	Mudd	131
+2014-10-21 17:15:00	145	Science and Engineering Library	15	Northwest Corner Building	131
 2014-10-21 17:15:00	131	Butler Library 3	103	Butler	328
 2014-10-21 17:15:00	139	Lehman Library 2	79	Lehman LIbrary	105
 2014-10-21 17:15:00	144	Starr East Asian Library	62	East Asian Library	116
@@ -3814,7 +3814,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-21 17:30:00	149	Architectural and Fine Arts Library 3	146	Avery	111
 2014-10-21 17:30:00	134	Butler Library 6	103	Butler	134
 2014-10-21 17:30:00	138	Butler Library stk	103	Butler	35
-2014-10-21 17:30:00	145	Science and Engineering Library	15	Mudd	126
+2014-10-21 17:30:00	145	Science and Engineering Library	15	Northwest Corner Building	126
 2014-10-21 17:30:00	155	JJ's Place	75	John Jay	19
 2014-10-21 17:30:00	133	Butler Library 5	103	Butler	112
 2014-10-21 17:30:00	151	Lerner 2	84	Lerner	82
@@ -3828,7 +3828,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-21 17:45:00	149	Architectural and Fine Arts Library 3	146	Avery	116
 2014-10-21 17:45:00	134	Butler Library 6	103	Butler	129
 2014-10-21 17:45:00	138	Butler Library stk	103	Butler	38
-2014-10-21 17:45:00	145	Science and Engineering Library	15	Mudd	112
+2014-10-21 17:45:00	145	Science and Engineering Library	15	Northwest Corner Building	112
 2014-10-21 17:45:00	155	JJ's Place	75	John Jay	34
 2014-10-21 17:45:00	133	Butler Library 5	103	Butler	98
 2014-10-21 17:45:00	151	Lerner 2	84	Lerner	102
@@ -3866,13 +3866,13 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-21 18:00:00	149	Architectural and Fine Arts Library 3	146	Avery	116
 2014-10-21 18:00:00	134	Butler Library 6	103	Butler	135
 2014-10-21 18:00:00	138	Butler Library stk	103	Butler	35
-2014-10-21 18:00:00	145	Science and Engineering Library	15	Mudd	101
+2014-10-21 18:00:00	145	Science and Engineering Library	15	Northwest Corner Building	101
 2014-10-21 18:15:00	152	Lerner 3	84	Lerner	175
 2014-10-21 18:15:00	130	Butler Library 2	103	Butler	459
 2014-10-21 18:15:00	149	Architectural and Fine Arts Library 3	146	Avery	95
 2014-10-21 18:15:00	134	Butler Library 6	103	Butler	142
 2014-10-21 18:15:00	138	Butler Library stk	103	Butler	31
-2014-10-21 18:15:00	145	Science and Engineering Library	15	Mudd	85
+2014-10-21 18:15:00	145	Science and Engineering Library	15	Northwest Corner Building	85
 2014-10-21 18:15:00	155	JJ's Place	75	John Jay	49
 2014-10-21 18:15:00	133	Butler Library 5	103	Butler	71
 2014-10-21 18:15:00	151	Lerner 2	84	Lerner	128
@@ -3910,7 +3910,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-21 18:30:00	149	Architectural and Fine Arts Library 3	146	Avery	84
 2014-10-21 18:30:00	134	Butler Library 6	103	Butler	131
 2014-10-21 18:30:00	138	Butler Library stk	103	Butler	24
-2014-10-21 18:30:00	145	Science and Engineering Library	15	Mudd	68
+2014-10-21 18:30:00	145	Science and Engineering Library	15	Northwest Corner Building	68
 2014-10-21 18:45:00	155	JJ's Place	75	John Jay	47
 2014-10-21 18:45:00	133	Butler Library 5	103	Butler	63
 2014-10-21 18:45:00	151	Lerner 2	84	Lerner	85
@@ -3932,13 +3932,13 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-21 18:45:00	149	Architectural and Fine Arts Library 3	146	Avery	72
 2014-10-21 18:45:00	134	Butler Library 6	103	Butler	120
 2014-10-21 18:45:00	138	Butler Library stk	103	Butler	32
-2014-10-21 18:45:00	145	Science and Engineering Library	15	Mudd	75
+2014-10-21 18:45:00	145	Science and Engineering Library	15	Northwest Corner Building	75
 2014-10-21 19:00:00	152	Lerner 3	84	Lerner	118
 2014-10-21 19:00:00	130	Butler Library 2	103	Butler	378
 2014-10-21 19:00:00	149	Architectural and Fine Arts Library 3	146	Avery	66
 2014-10-21 19:00:00	134	Butler Library 6	103	Butler	124
 2014-10-21 19:00:00	138	Butler Library stk	103	Butler	32
-2014-10-21 19:00:00	145	Science and Engineering Library	15	Mudd	76
+2014-10-21 19:00:00	145	Science and Engineering Library	15	Northwest Corner Building	76
 2014-10-21 19:00:00	155	JJ's Place	75	John Jay	55
 2014-10-21 19:00:00	133	Butler Library 5	103	Butler	60
 2014-10-21 19:00:00	151	Lerner 2	84	Lerner	93
@@ -3964,7 +3964,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-21 19:15:00	149	Architectural and Fine Arts Library 3	146	Avery	61
 2014-10-21 19:15:00	134	Butler Library 6	103	Butler	118
 2014-10-21 19:15:00	138	Butler Library stk	103	Butler	27
-2014-10-21 19:15:00	145	Science and Engineering Library	15	Mudd	98
+2014-10-21 19:15:00	145	Science and Engineering Library	15	Northwest Corner Building	98
 2014-10-21 19:15:00	131	Butler Library 3	103	Butler	280
 2014-10-21 19:15:00	139	Lehman Library 2	79	Lehman LIbrary	67
 2014-10-21 19:15:00	144	Starr East Asian Library	62	East Asian Library	99
@@ -3989,7 +3989,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-21 19:30:00	149	Architectural and Fine Arts Library 3	146	Avery	55
 2014-10-21 19:30:00	134	Butler Library 6	103	Butler	122
 2014-10-21 19:30:00	138	Butler Library stk	103	Butler	29
-2014-10-21 19:30:00	145	Science and Engineering Library	15	Mudd	80
+2014-10-21 19:30:00	145	Science and Engineering Library	15	Northwest Corner Building	80
 2014-10-21 19:30:00	155	JJ's Place	75	John Jay	48
 2014-10-21 19:30:00	133	Butler Library 5	103	Butler	58
 2014-10-21 19:30:00	151	Lerner 2	84	Lerner	101
@@ -4008,7 +4008,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-21 19:45:00	149	Architectural and Fine Arts Library 3	146	Avery	59
 2014-10-21 19:45:00	134	Butler Library 6	103	Butler	119
 2014-10-21 19:45:00	138	Butler Library stk	103	Butler	27
-2014-10-21 19:45:00	145	Science and Engineering Library	15	Mudd	74
+2014-10-21 19:45:00	145	Science and Engineering Library	15	Northwest Corner Building	74
 2014-10-21 19:45:00	131	Butler Library 3	103	Butler	279
 2014-10-21 19:45:00	139	Lehman Library 2	79	Lehman LIbrary	49
 2014-10-21 19:45:00	144	Starr East Asian Library	62	East Asian Library	99
@@ -4035,7 +4035,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-21 20:00:00	149	Architectural and Fine Arts Library 3	146	Avery	49
 2014-10-21 20:00:00	134	Butler Library 6	103	Butler	132
 2014-10-21 20:00:00	138	Butler Library stk	103	Butler	30
-2014-10-21 20:00:00	145	Science and Engineering Library	15	Mudd	87
+2014-10-21 20:00:00	145	Science and Engineering Library	15	Northwest Corner Building	87
 2014-10-21 20:00:00	131	Butler Library 3	103	Butler	272
 2014-10-21 20:00:00	139	Lehman Library 2	79	Lehman LIbrary	48
 2014-10-21 20:00:00	144	Starr East Asian Library	62	East Asian Library	107
@@ -4063,7 +4063,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-21 20:15:00	149	Architectural and Fine Arts Library 3	146	Avery	50
 2014-10-21 20:15:00	134	Butler Library 6	103	Butler	141
 2014-10-21 20:15:00	138	Butler Library stk	103	Butler	30
-2014-10-21 20:15:00	145	Science and Engineering Library	15	Mudd	83
+2014-10-21 20:15:00	145	Science and Engineering Library	15	Northwest Corner Building	83
 2014-10-21 20:30:00	154	Lerner 5	84	Lerner	169
 2014-10-21 20:30:00	125	John Jay Dining Hall	75	John Jay	44
 2014-10-21 20:30:00	147	Architectural and Fine Arts Library 1	146	Avery	11
@@ -4079,7 +4079,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-21 20:30:00	149	Architectural and Fine Arts Library 3	146	Avery	52
 2014-10-21 20:30:00	134	Butler Library 6	103	Butler	147
 2014-10-21 20:30:00	138	Butler Library stk	103	Butler	37
-2014-10-21 20:30:00	145	Science and Engineering Library	15	Mudd	69
+2014-10-21 20:30:00	145	Science and Engineering Library	15	Northwest Corner Building	69
 2014-10-21 20:30:00	131	Butler Library 3	103	Butler	325
 2014-10-21 20:30:00	139	Lehman Library 2	79	Lehman LIbrary	53
 2014-10-21 20:30:00	144	Starr East Asian Library	62	East Asian Library	83
@@ -4091,7 +4091,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-21 20:45:00	149	Architectural and Fine Arts Library 3	146	Avery	59
 2014-10-21 20:45:00	134	Butler Library 6	103	Butler	147
 2014-10-21 20:45:00	138	Butler Library stk	103	Butler	38
-2014-10-21 20:45:00	145	Science and Engineering Library	15	Mudd	80
+2014-10-21 20:45:00	145	Science and Engineering Library	15	Northwest Corner Building	80
 2014-10-21 20:45:00	155	JJ's Place	75	John Jay	44
 2014-10-21 20:45:00	133	Butler Library 5	103	Butler	75
 2014-10-21 20:45:00	151	Lerner 2	84	Lerner	84
@@ -4118,7 +4118,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-21 21:00:00	149	Architectural and Fine Arts Library 3	146	Avery	56
 2014-10-21 21:00:00	134	Butler Library 6	103	Butler	148
 2014-10-21 21:00:00	138	Butler Library stk	103	Butler	46
-2014-10-21 21:00:00	145	Science and Engineering Library	15	Mudd	73
+2014-10-21 21:00:00	145	Science and Engineering Library	15	Northwest Corner Building	73
 2014-10-21 21:00:00	131	Butler Library 3	103	Butler	362
 2014-10-21 21:00:00	139	Lehman Library 2	79	Lehman LIbrary	57
 2014-10-21 21:00:00	144	Starr East Asian Library	62	East Asian Library	73
@@ -4140,7 +4140,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-21 21:15:00	149	Architectural and Fine Arts Library 3	146	Avery	55
 2014-10-21 21:15:00	134	Butler Library 6	103	Butler	146
 2014-10-21 21:15:00	138	Butler Library stk	103	Butler	54
-2014-10-21 21:15:00	145	Science and Engineering Library	15	Mudd	74
+2014-10-21 21:15:00	145	Science and Engineering Library	15	Northwest Corner Building	74
 2014-10-21 21:15:00	131	Butler Library 3	103	Butler	348
 2014-10-21 21:15:00	139	Lehman Library 2	79	Lehman LIbrary	49
 2014-10-21 21:15:00	144	Starr East Asian Library	62	East Asian Library	91
@@ -4156,7 +4156,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-21 21:30:00	149	Architectural and Fine Arts Library 3	146	Avery	56
 2014-10-21 21:30:00	134	Butler Library 6	103	Butler	149
 2014-10-21 21:30:00	138	Butler Library stk	103	Butler	49
-2014-10-21 21:30:00	145	Science and Engineering Library	15	Mudd	76
+2014-10-21 21:30:00	145	Science and Engineering Library	15	Northwest Corner Building	76
 2014-10-21 21:30:00	131	Butler Library 3	103	Butler	357
 2014-10-21 21:30:00	139	Lehman Library 2	79	Lehman LIbrary	63
 2014-10-21 21:30:00	144	Starr East Asian Library	62	East Asian Library	84
@@ -4194,13 +4194,13 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-21 21:45:00	149	Architectural and Fine Arts Library 3	146	Avery	48
 2014-10-21 21:45:00	134	Butler Library 6	103	Butler	166
 2014-10-21 21:45:00	138	Butler Library stk	103	Butler	53
-2014-10-21 21:45:00	145	Science and Engineering Library	15	Mudd	75
+2014-10-21 21:45:00	145	Science and Engineering Library	15	Northwest Corner Building	75
 2014-10-21 22:00:00	152	Lerner 3	84	Lerner	47
 2014-10-21 22:00:00	130	Butler Library 2	103	Butler	467
 2014-10-21 22:00:00	149	Architectural and Fine Arts Library 3	146	Avery	49
 2014-10-21 22:00:00	134	Butler Library 6	103	Butler	163
 2014-10-21 22:00:00	138	Butler Library stk	103	Butler	47
-2014-10-21 22:00:00	145	Science and Engineering Library	15	Mudd	82
+2014-10-21 22:00:00	145	Science and Engineering Library	15	Northwest Corner Building	82
 2014-10-21 22:00:00	155	JJ's Place	75	John Jay	62
 2014-10-21 22:00:00	133	Butler Library 5	103	Butler	83
 2014-10-21 22:00:00	151	Lerner 2	84	Lerner	67
@@ -4235,7 +4235,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-21 22:15:00	149	Architectural and Fine Arts Library 3	146	Avery	42
 2014-10-21 22:15:00	134	Butler Library 6	103	Butler	167
 2014-10-21 22:15:00	138	Butler Library stk	103	Butler	47
-2014-10-21 22:15:00	145	Science and Engineering Library	15	Mudd	82
+2014-10-21 22:15:00	145	Science and Engineering Library	15	Northwest Corner Building	82
 2014-10-21 22:15:00	155	JJ's Place	75	John Jay	43
 2014-10-21 22:15:00	133	Butler Library 5	103	Butler	83
 2014-10-21 22:15:00	151	Lerner 2	84	Lerner	77
@@ -4252,7 +4252,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-21 22:30:00	149	Architectural and Fine Arts Library 3	146	Avery	38
 2014-10-21 22:30:00	134	Butler Library 6	103	Butler	174
 2014-10-21 22:30:00	138	Butler Library stk	103	Butler	44
-2014-10-21 22:30:00	145	Science and Engineering Library	15	Mudd	73
+2014-10-21 22:30:00	145	Science and Engineering Library	15	Northwest Corner Building	73
 2014-10-21 22:30:00	131	Butler Library 3	103	Butler	350
 2014-10-21 22:30:00	139	Lehman Library 2	79	Lehman LIbrary	55
 2014-10-21 22:30:00	144	Starr East Asian Library	62	East Asian Library	79
@@ -4264,7 +4264,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-21 22:45:00	149	Architectural and Fine Arts Library 3	146	Avery	39
 2014-10-21 22:45:00	134	Butler Library 6	103	Butler	158
 2014-10-21 22:45:00	138	Butler Library stk	103	Butler	44
-2014-10-21 22:45:00	145	Science and Engineering Library	15	Mudd	73
+2014-10-21 22:45:00	145	Science and Engineering Library	15	Northwest Corner Building	73
 2014-10-21 22:45:00	131	Butler Library 3	103	Butler	346
 2014-10-21 22:45:00	139	Lehman Library 2	79	Lehman LIbrary	48
 2014-10-21 22:45:00	144	Starr East Asian Library	62	East Asian Library	68
@@ -4296,7 +4296,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-21 23:00:00	149	Architectural and Fine Arts Library 3	146	Avery	39
 2014-10-21 23:00:00	134	Butler Library 6	103	Butler	132
 2014-10-21 23:00:00	138	Butler Library stk	103	Butler	38
-2014-10-21 23:00:00	145	Science and Engineering Library	15	Mudd	72
+2014-10-21 23:00:00	145	Science and Engineering Library	15	Northwest Corner Building	72
 2014-10-21 23:00:00	131	Butler Library 3	103	Butler	373
 2014-10-21 23:00:00	139	Lehman Library 2	79	Lehman LIbrary	39
 2014-10-21 23:00:00	144	Starr East Asian Library	62	East Asian Library	56
@@ -4324,13 +4324,13 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-21 23:15:00	149	Architectural and Fine Arts Library 3	146	Avery	10
 2014-10-21 23:15:00	134	Butler Library 6	103	Butler	36
 2014-10-21 23:15:00	138	Butler Library stk	103	Butler	29
-2014-10-21 23:15:00	145	Science and Engineering Library	15	Mudd	71
+2014-10-21 23:15:00	145	Science and Engineering Library	15	Northwest Corner Building	71
 2014-10-21 23:30:00	152	Lerner 3	84	Lerner	55
 2014-10-21 23:30:00	130	Butler Library 2	103	Butler	448
 2014-10-21 23:30:00	149	Architectural and Fine Arts Library 3	146	Avery	3
 2014-10-21 23:30:00	134	Butler Library 6	103	Butler	3
 2014-10-21 23:30:00	138	Butler Library stk	103	Butler	25
-2014-10-21 23:30:00	145	Science and Engineering Library	15	Mudd	64
+2014-10-21 23:30:00	145	Science and Engineering Library	15	Northwest Corner Building	64
 2014-10-21 23:30:00	131	Butler Library 3	103	Butler	389
 2014-10-21 23:30:00	139	Lehman Library 2	79	Lehman LIbrary	36
 2014-10-21 23:30:00	144	Starr East Asian Library	62	East Asian Library	10
@@ -4360,7 +4360,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-21 23:45:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-21 23:45:00	134	Butler Library 6	103	Butler	3
 2014-10-21 23:45:00	138	Butler Library stk	103	Butler	21
-2014-10-21 23:45:00	145	Science and Engineering Library	15	Mudd	60
+2014-10-21 23:45:00	145	Science and Engineering Library	15	Northwest Corner Building	60
 2014-10-21 23:45:00	155	JJ's Place	75	John Jay	56
 2014-10-21 23:45:00	133	Butler Library 5	103	Butler	11
 2014-10-21 23:45:00	151	Lerner 2	84	Lerner	70
@@ -4382,7 +4382,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-22 00:00:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-22 00:00:00	134	Butler Library 6	103	Butler	1
 2014-10-22 00:00:00	138	Butler Library stk	103	Butler	21
-2014-10-22 00:00:00	145	Science and Engineering Library	15	Mudd	55
+2014-10-22 00:00:00	145	Science and Engineering Library	15	Northwest Corner Building	55
 2014-10-22 00:00:00	155	JJ's Place	75	John Jay	66
 2014-10-22 00:00:00	133	Butler Library 5	103	Butler	10
 2014-10-22 00:00:00	151	Lerner 2	84	Lerner	63
@@ -4401,7 +4401,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-22 00:15:00	149	Architectural and Fine Arts Library 3	146	Avery	2
 2014-10-22 00:15:00	134	Butler Library 6	103	Butler	1
 2014-10-22 00:15:00	138	Butler Library stk	103	Butler	13
-2014-10-22 00:15:00	145	Science and Engineering Library	15	Mudd	54
+2014-10-22 00:15:00	145	Science and Engineering Library	15	Northwest Corner Building	54
 2014-10-22 00:15:00	131	Butler Library 3	103	Butler	353
 2014-10-22 00:15:00	139	Lehman Library 2	79	Lehman LIbrary	6
 2014-10-22 00:15:00	144	Starr East Asian Library	62	East Asian Library	7
@@ -4426,7 +4426,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-22 00:30:00	149	Architectural and Fine Arts Library 3	146	Avery	2
 2014-10-22 00:30:00	134	Butler Library 6	103	Butler	2
 2014-10-22 00:30:00	138	Butler Library stk	103	Butler	15
-2014-10-22 00:30:00	145	Science and Engineering Library	15	Mudd	57
+2014-10-22 00:30:00	145	Science and Engineering Library	15	Northwest Corner Building	57
 2014-10-22 00:30:00	155	JJ's Place	75	John Jay	63
 2014-10-22 00:30:00	133	Butler Library 5	103	Butler	7
 2014-10-22 00:30:00	151	Lerner 2	84	Lerner	43
@@ -4450,7 +4450,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-22 00:45:00	149	Architectural and Fine Arts Library 3	146	Avery	3
 2014-10-22 00:45:00	134	Butler Library 6	103	Butler	2
 2014-10-22 00:45:00	138	Butler Library stk	103	Butler	17
-2014-10-22 00:45:00	145	Science and Engineering Library	15	Mudd	48
+2014-10-22 00:45:00	145	Science and Engineering Library	15	Northwest Corner Building	48
 2014-10-22 00:45:00	131	Butler Library 3	103	Butler	328
 2014-10-22 00:45:00	139	Lehman Library 2	79	Lehman LIbrary	4
 2014-10-22 00:45:00	144	Starr East Asian Library	62	East Asian Library	7
@@ -4470,7 +4470,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-22 01:00:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-22 01:00:00	134	Butler Library 6	103	Butler	2
 2014-10-22 01:00:00	138	Butler Library stk	103	Butler	18
-2014-10-22 01:00:00	145	Science and Engineering Library	15	Mudd	42
+2014-10-22 01:00:00	145	Science and Engineering Library	15	Northwest Corner Building	42
 2014-10-22 01:00:00	155	JJ's Place	75	John Jay	60
 2014-10-22 01:00:00	133	Butler Library 5	103	Butler	7
 2014-10-22 01:00:00	151	Lerner 2	84	Lerner	27
@@ -4484,7 +4484,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-22 01:15:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-22 01:15:00	134	Butler Library 6	103	Butler	2
 2014-10-22 01:15:00	138	Butler Library stk	103	Butler	15
-2014-10-22 01:15:00	145	Science and Engineering Library	15	Mudd	38
+2014-10-22 01:15:00	145	Science and Engineering Library	15	Northwest Corner Building	38
 2014-10-22 01:15:00	131	Butler Library 3	103	Butler	303
 2014-10-22 01:15:00	139	Lehman Library 2	79	Lehman LIbrary	4
 2014-10-22 01:15:00	144	Starr East Asian Library	62	East Asian Library	4
@@ -4522,7 +4522,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-22 01:30:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-22 01:30:00	134	Butler Library 6	103	Butler	2
 2014-10-22 01:30:00	138	Butler Library stk	103	Butler	16
-2014-10-22 01:30:00	145	Science and Engineering Library	15	Mudd	40
+2014-10-22 01:30:00	145	Science and Engineering Library	15	Northwest Corner Building	40
 2014-10-22 01:45:00	154	Lerner 5	84	Lerner	3
 2014-10-22 01:45:00	125	John Jay Dining Hall	75	John Jay	4
 2014-10-22 01:45:00	147	Architectural and Fine Arts Library 1	146	Avery	1
@@ -4538,7 +4538,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-22 01:45:00	149	Architectural and Fine Arts Library 3	146	Avery	3
 2014-10-22 01:45:00	134	Butler Library 6	103	Butler	2
 2014-10-22 01:45:00	138	Butler Library stk	103	Butler	19
-2014-10-22 01:45:00	145	Science and Engineering Library	15	Mudd	28
+2014-10-22 01:45:00	145	Science and Engineering Library	15	Northwest Corner Building	28
 2014-10-22 01:45:00	131	Butler Library 3	103	Butler	284
 2014-10-22 01:45:00	139	Lehman Library 2	79	Lehman LIbrary	4
 2014-10-22 01:45:00	144	Starr East Asian Library	62	East Asian Library	3
@@ -4566,7 +4566,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-22 02:00:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-22 02:00:00	134	Butler Library 6	103	Butler	2
 2014-10-22 02:00:00	138	Butler Library stk	103	Butler	18
-2014-10-22 02:00:00	145	Science and Engineering Library	15	Mudd	20
+2014-10-22 02:00:00	145	Science and Engineering Library	15	Northwest Corner Building	20
 2014-10-22 02:15:00	131	Butler Library 3	103	Butler	218
 2014-10-22 02:15:00	139	Lehman Library 2	79	Lehman LIbrary	4
 2014-10-22 02:15:00	144	Starr East Asian Library	62	East Asian Library	3
@@ -4580,7 +4580,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-22 02:15:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-22 02:15:00	134	Butler Library 6	103	Butler	2
 2014-10-22 02:15:00	138	Butler Library stk	103	Butler	15
-2014-10-22 02:15:00	145	Science and Engineering Library	15	Mudd	28
+2014-10-22 02:15:00	145	Science and Engineering Library	15	Northwest Corner Building	28
 2014-10-22 02:15:00	155	JJ's Place	75	John Jay	3
 2014-10-22 02:15:00	133	Butler Library 5	103	Butler	7
 2014-10-22 02:15:00	151	Lerner 2	84	Lerner	6
@@ -4599,7 +4599,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-22 02:30:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-22 02:30:00	134	Butler Library 6	103	Butler	2
 2014-10-22 02:30:00	138	Butler Library stk	103	Butler	13
-2014-10-22 02:30:00	145	Science and Engineering Library	15	Mudd	23
+2014-10-22 02:30:00	145	Science and Engineering Library	15	Northwest Corner Building	23
 2014-10-22 02:30:00	131	Butler Library 3	103	Butler	198
 2014-10-22 02:30:00	139	Lehman Library 2	79	Lehman LIbrary	4
 2014-10-22 02:30:00	144	Starr East Asian Library	62	East Asian Library	5
@@ -4616,7 +4616,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-22 02:45:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-22 02:45:00	134	Butler Library 6	103	Butler	2
 2014-10-22 02:45:00	138	Butler Library stk	103	Butler	13
-2014-10-22 02:45:00	145	Science and Engineering Library	15	Mudd	17
+2014-10-22 02:45:00	145	Science and Engineering Library	15	Northwest Corner Building	17
 2014-10-22 02:45:00	131	Butler Library 3	103	Butler	179
 2014-10-22 02:45:00	139	Lehman Library 2	79	Lehman LIbrary	3
 2014-10-22 02:45:00	144	Starr East Asian Library	62	East Asian Library	4
@@ -4646,7 +4646,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-22 03:00:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-22 03:00:00	134	Butler Library 6	103	Butler	2
 2014-10-22 03:00:00	138	Butler Library stk	103	Butler	12
-2014-10-22 03:00:00	145	Science and Engineering Library	15	Mudd	16
+2014-10-22 03:00:00	145	Science and Engineering Library	15	Northwest Corner Building	16
 2014-10-22 03:00:00	155	JJ's Place	75	John Jay	2
 2014-10-22 03:00:00	133	Butler Library 5	103	Butler	6
 2014-10-22 03:00:00	151	Lerner 2	84	Lerner	2
@@ -4672,7 +4672,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-22 03:15:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-22 03:15:00	134	Butler Library 6	103	Butler	3
 2014-10-22 03:15:00	138	Butler Library stk	103	Butler	11
-2014-10-22 03:15:00	145	Science and Engineering Library	15	Mudd	14
+2014-10-22 03:15:00	145	Science and Engineering Library	15	Northwest Corner Building	14
 2014-10-22 03:15:00	155	JJ's Place	75	John Jay	2
 2014-10-22 03:15:00	133	Butler Library 5	103	Butler	8
 2014-10-22 03:15:00	151	Lerner 2	84	Lerner	2
@@ -4686,7 +4686,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-22 03:30:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-22 03:30:00	134	Butler Library 6	103	Butler	2
 2014-10-22 03:30:00	138	Butler Library stk	103	Butler	5
-2014-10-22 03:30:00	145	Science and Engineering Library	15	Mudd	1
+2014-10-22 03:30:00	145	Science and Engineering Library	15	Northwest Corner Building	1
 2014-10-22 03:30:00	131	Butler Library 3	103	Butler	128
 2014-10-22 03:30:00	139	Lehman Library 2	79	Lehman LIbrary	3
 2014-10-22 03:30:00	144	Starr East Asian Library	62	East Asian Library	4
@@ -4719,7 +4719,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-22 03:45:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-22 03:45:00	134	Butler Library 6	103	Butler	2
 2014-10-22 03:45:00	138	Butler Library stk	103	Butler	1
-2014-10-22 03:45:00	145	Science and Engineering Library	15	Mudd	1
+2014-10-22 03:45:00	145	Science and Engineering Library	15	Northwest Corner Building	1
 2014-10-22 04:00:00	155	JJ's Place	75	John Jay	1
 2014-10-22 04:00:00	133	Butler Library 5	103	Butler	6
 2014-10-22 04:00:00	151	Lerner 2	84	Lerner	3
@@ -4741,7 +4741,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-22 04:00:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-22 04:00:00	134	Butler Library 6	103	Butler	2
 2014-10-22 04:00:00	138	Butler Library stk	103	Butler	0
-2014-10-22 04:00:00	145	Science and Engineering Library	15	Mudd	1
+2014-10-22 04:00:00	145	Science and Engineering Library	15	Northwest Corner Building	1
 2014-10-22 04:15:00	154	Lerner 5	84	Lerner	0
 2014-10-22 04:15:00	125	John Jay Dining Hall	75	John Jay	0
 2014-10-22 04:15:00	147	Architectural and Fine Arts Library 1	146	Avery	1
@@ -4760,7 +4760,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-22 04:15:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-22 04:15:00	134	Butler Library 6	103	Butler	1
 2014-10-22 04:15:00	138	Butler Library stk	103	Butler	0
-2014-10-22 04:15:00	145	Science and Engineering Library	15	Mudd	1
+2014-10-22 04:15:00	145	Science and Engineering Library	15	Northwest Corner Building	1
 2014-10-22 04:15:00	155	JJ's Place	75	John Jay	1
 2014-10-22 04:15:00	133	Butler Library 5	103	Butler	6
 2014-10-22 04:15:00	151	Lerner 2	84	Lerner	3
@@ -4779,7 +4779,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-22 04:30:00	149	Architectural and Fine Arts Library 3	146	Avery	2
 2014-10-22 04:30:00	134	Butler Library 6	103	Butler	1
 2014-10-22 04:30:00	138	Butler Library stk	103	Butler	0
-2014-10-22 04:30:00	145	Science and Engineering Library	15	Mudd	1
+2014-10-22 04:30:00	145	Science and Engineering Library	15	Northwest Corner Building	1
 2014-10-22 04:30:00	131	Butler Library 3	103	Butler	78
 2014-10-22 04:30:00	139	Lehman Library 2	79	Lehman LIbrary	3
 2014-10-22 04:30:00	144	Starr East Asian Library	62	East Asian Library	3
@@ -4791,7 +4791,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-22 04:45:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-22 04:45:00	134	Butler Library 6	103	Butler	1
 2014-10-22 04:45:00	138	Butler Library stk	103	Butler	0
-2014-10-22 04:45:00	145	Science and Engineering Library	15	Mudd	1
+2014-10-22 04:45:00	145	Science and Engineering Library	15	Northwest Corner Building	1
 2014-10-22 04:45:00	131	Butler Library 3	103	Butler	59
 2014-10-22 04:45:00	139	Lehman Library 2	79	Lehman LIbrary	3
 2014-10-22 04:45:00	144	Starr East Asian Library	62	East Asian Library	3
@@ -4818,7 +4818,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-22 05:00:00	149	Architectural and Fine Arts Library 3	146	Avery	2
 2014-10-22 05:00:00	134	Butler Library 6	103	Butler	1
 2014-10-22 05:00:00	138	Butler Library stk	103	Butler	0
-2014-10-22 05:00:00	145	Science and Engineering Library	15	Mudd	1
+2014-10-22 05:00:00	145	Science and Engineering Library	15	Northwest Corner Building	1
 2014-10-22 05:00:00	131	Butler Library 3	103	Butler	59
 2014-10-22 05:00:00	139	Lehman Library 2	79	Lehman LIbrary	3
 2014-10-22 05:00:00	144	Starr East Asian Library	62	East Asian Library	3
@@ -4851,7 +4851,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-22 05:15:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-22 05:15:00	134	Butler Library 6	103	Butler	1
 2014-10-22 05:15:00	138	Butler Library stk	103	Butler	0
-2014-10-22 05:15:00	145	Science and Engineering Library	15	Mudd	1
+2014-10-22 05:15:00	145	Science and Engineering Library	15	Northwest Corner Building	1
 2014-10-22 05:30:00	154	Lerner 5	84	Lerner	0
 2014-10-22 05:30:00	125	John Jay Dining Hall	75	John Jay	0
 2014-10-22 05:30:00	147	Architectural and Fine Arts Library 1	146	Avery	1
@@ -4870,7 +4870,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-22 05:30:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-22 05:30:00	134	Butler Library 6	103	Butler	1
 2014-10-22 05:30:00	138	Butler Library stk	103	Butler	0
-2014-10-22 05:30:00	145	Science and Engineering Library	15	Mudd	1
+2014-10-22 05:30:00	145	Science and Engineering Library	15	Northwest Corner Building	1
 2014-10-22 05:30:00	155	JJ's Place	75	John Jay	1
 2014-10-22 05:30:00	133	Butler Library 5	103	Butler	5
 2014-10-22 05:30:00	151	Lerner 2	84	Lerner	4
@@ -4887,7 +4887,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-22 05:45:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-22 05:45:00	134	Butler Library 6	103	Butler	2
 2014-10-22 05:45:00	138	Butler Library stk	103	Butler	0
-2014-10-22 05:45:00	145	Science and Engineering Library	15	Mudd	1
+2014-10-22 05:45:00	145	Science and Engineering Library	15	Northwest Corner Building	1
 2014-10-22 05:45:00	155	JJ's Place	75	John Jay	1
 2014-10-22 05:45:00	133	Butler Library 5	103	Butler	6
 2014-10-22 05:45:00	151	Lerner 2	84	Lerner	3
@@ -4906,7 +4906,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-22 06:00:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-22 06:00:00	134	Butler Library 6	103	Butler	1
 2014-10-22 06:00:00	138	Butler Library stk	103	Butler	0
-2014-10-22 06:00:00	145	Science and Engineering Library	15	Mudd	1
+2014-10-22 06:00:00	145	Science and Engineering Library	15	Northwest Corner Building	1
 2014-10-22 06:00:00	131	Butler Library 3	103	Butler	44
 2014-10-22 06:00:00	139	Lehman Library 2	79	Lehman LIbrary	3
 2014-10-22 06:00:00	144	Starr East Asian Library	62	East Asian Library	3
@@ -4928,7 +4928,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-22 06:15:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-22 06:15:00	134	Butler Library 6	103	Butler	2
 2014-10-22 06:15:00	138	Butler Library stk	103	Butler	1
-2014-10-22 06:15:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-22 06:15:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-22 06:15:00	131	Butler Library 3	103	Butler	45
 2014-10-22 06:15:00	139	Lehman Library 2	79	Lehman LIbrary	4
 2014-10-22 06:15:00	144	Starr East Asian Library	62	East Asian Library	3
@@ -4961,7 +4961,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-22 06:30:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-22 06:30:00	134	Butler Library 6	103	Butler	2
 2014-10-22 06:30:00	138	Butler Library stk	103	Butler	2
-2014-10-22 06:30:00	145	Science and Engineering Library	15	Mudd	1
+2014-10-22 06:30:00	145	Science and Engineering Library	15	Northwest Corner Building	1
 2014-10-22 06:45:00	154	Lerner 5	84	Lerner	1
 2014-10-22 06:45:00	125	John Jay Dining Hall	75	John Jay	2
 2014-10-22 06:45:00	147	Architectural and Fine Arts Library 1	146	Avery	5
@@ -4980,7 +4980,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-22 06:45:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-22 06:45:00	134	Butler Library 6	103	Butler	3
 2014-10-22 06:45:00	138	Butler Library stk	103	Butler	1
-2014-10-22 06:45:00	145	Science and Engineering Library	15	Mudd	1
+2014-10-22 06:45:00	145	Science and Engineering Library	15	Northwest Corner Building	1
 2014-10-22 06:45:00	155	JJ's Place	75	John Jay	1
 2014-10-22 06:45:00	133	Butler Library 5	103	Butler	6
 2014-10-22 06:45:00	151	Lerner 2	84	Lerner	3
@@ -5005,7 +5005,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-22 07:00:00	149	Architectural and Fine Arts Library 3	146	Avery	2
 2014-10-22 07:00:00	134	Butler Library 6	103	Butler	3
 2014-10-22 07:00:00	138	Butler Library stk	103	Butler	1
-2014-10-22 07:00:00	145	Science and Engineering Library	15	Mudd	1
+2014-10-22 07:00:00	145	Science and Engineering Library	15	Northwest Corner Building	1
 2014-10-22 07:15:00	155	JJ's Place	75	John Jay	4
 2014-10-22 07:15:00	23	Uris/Watson Library	2	Uris	9
 2014-10-22 07:15:00	133	Butler Library 5	103	Butler	6
@@ -5016,7 +5016,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-22 07:15:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-22 07:15:00	134	Butler Library 6	103	Butler	3
 2014-10-22 07:15:00	138	Butler Library stk	103	Butler	0
-2014-10-22 07:15:00	145	Science and Engineering Library	15	Mudd	1
+2014-10-22 07:15:00	145	Science and Engineering Library	15	Northwest Corner Building	1
 2014-10-22 07:15:00	131	Butler Library 3	103	Butler	38
 2014-10-22 07:15:00	139	Lehman Library 2	79	Lehman LIbrary	4
 2014-10-22 07:15:00	144	Starr East Asian Library	62	East Asian Library	4
@@ -5049,7 +5049,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-22 07:30:00	149	Architectural and Fine Arts Library 3	146	Avery	3
 2014-10-22 07:30:00	134	Butler Library 6	103	Butler	2
 2014-10-22 07:30:00	138	Butler Library stk	103	Butler	0
-2014-10-22 07:30:00	145	Science and Engineering Library	15	Mudd	1
+2014-10-22 07:30:00	145	Science and Engineering Library	15	Northwest Corner Building	1
 2014-10-22 07:45:00	155	JJ's Place	75	John Jay	3
 2014-10-22 07:45:00	133	Butler Library 5	103	Butler	8
 2014-10-22 07:45:00	151	Lerner 2	84	Lerner	10
@@ -5071,7 +5071,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-22 07:45:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-22 07:45:00	134	Butler Library 6	103	Butler	2
 2014-10-22 07:45:00	138	Butler Library stk	103	Butler	0
-2014-10-22 07:45:00	145	Science and Engineering Library	15	Mudd	1
+2014-10-22 07:45:00	145	Science and Engineering Library	15	Northwest Corner Building	1
 2014-10-22 08:00:00	154	Lerner 5	84	Lerner	7
 2014-10-22 08:00:00	125	John Jay Dining Hall	75	John Jay	0
 2014-10-22 08:00:00	147	Architectural and Fine Arts Library 1	146	Avery	1
@@ -5087,7 +5087,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-22 08:00:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-22 08:00:00	134	Butler Library 6	103	Butler	1
 2014-10-22 08:00:00	138	Butler Library stk	103	Butler	0
-2014-10-22 08:00:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-22 08:00:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-22 08:00:00	131	Butler Library 3	103	Butler	33
 2014-10-22 08:00:00	139	Lehman Library 2	79	Lehman LIbrary	6
 2014-10-22 08:00:00	144	Starr East Asian Library	62	East Asian Library	3
@@ -5109,7 +5109,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-22 08:15:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-22 08:15:00	134	Butler Library 6	103	Butler	4
 2014-10-22 08:15:00	138	Butler Library stk	103	Butler	0
-2014-10-22 08:15:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-22 08:15:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-22 08:15:00	131	Butler Library 3	103	Butler	41
 2014-10-22 08:15:00	139	Lehman Library 2	79	Lehman LIbrary	8
 2014-10-22 08:15:00	144	Starr East Asian Library	62	East Asian Library	3
@@ -5134,7 +5134,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-22 08:30:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-22 08:30:00	134	Butler Library 6	103	Butler	4
 2014-10-22 08:30:00	138	Butler Library stk	103	Butler	2
-2014-10-22 08:30:00	145	Science and Engineering Library	15	Mudd	4
+2014-10-22 08:30:00	145	Science and Engineering Library	15	Northwest Corner Building	4
 2014-10-22 08:30:00	155	JJ's Place	75	John Jay	4
 2014-10-22 08:30:00	133	Butler Library 5	103	Butler	7
 2014-10-22 08:30:00	151	Lerner 2	84	Lerner	18
@@ -5159,7 +5159,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-22 08:45:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-22 08:45:00	134	Butler Library 6	103	Butler	2
 2014-10-22 08:45:00	138	Butler Library stk	103	Butler	2
-2014-10-22 08:45:00	145	Science and Engineering Library	15	Mudd	7
+2014-10-22 08:45:00	145	Science and Engineering Library	15	Northwest Corner Building	7
 2014-10-22 09:00:00	154	Lerner 5	84	Lerner	10
 2014-10-22 09:00:00	125	John Jay Dining Hall	75	John Jay	4
 2014-10-22 09:00:00	147	Architectural and Fine Arts Library 1	146	Avery	4
@@ -5178,7 +5178,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-22 09:00:00	149	Architectural and Fine Arts Library 3	146	Avery	3
 2014-10-22 09:00:00	134	Butler Library 6	103	Butler	5
 2014-10-22 09:00:00	138	Butler Library stk	103	Butler	2
-2014-10-22 09:00:00	145	Science and Engineering Library	15	Mudd	9
+2014-10-22 09:00:00	145	Science and Engineering Library	15	Northwest Corner Building	9
 2014-10-22 09:00:00	155	JJ's Place	75	John Jay	5
 2014-10-22 09:00:00	133	Butler Library 5	103	Butler	8
 2014-10-22 09:00:00	151	Lerner 2	84	Lerner	30
@@ -5203,7 +5203,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-22 09:15:00	149	Architectural and Fine Arts Library 3	146	Avery	4
 2014-10-22 09:15:00	134	Butler Library 6	103	Butler	4
 2014-10-22 09:15:00	138	Butler Library stk	103	Butler	2
-2014-10-22 09:15:00	145	Science and Engineering Library	15	Mudd	13
+2014-10-22 09:15:00	145	Science and Engineering Library	15	Northwest Corner Building	13
 2014-10-22 09:30:00	131	Butler Library 3	103	Butler	98
 2014-10-22 09:30:00	139	Lehman Library 2	79	Lehman LIbrary	6
 2014-10-22 09:30:00	144	Starr East Asian Library	62	East Asian Library	61
@@ -5217,7 +5217,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-22 09:30:00	149	Architectural and Fine Arts Library 3	146	Avery	22
 2014-10-22 09:30:00	134	Butler Library 6	103	Butler	17
 2014-10-22 09:30:00	138	Butler Library stk	103	Butler	8
-2014-10-22 09:30:00	145	Science and Engineering Library	15	Mudd	30
+2014-10-22 09:30:00	145	Science and Engineering Library	15	Northwest Corner Building	30
 2014-10-22 09:30:00	155	JJ's Place	75	John Jay	6
 2014-10-22 09:30:00	133	Butler Library 5	103	Butler	19
 2014-10-22 09:30:00	151	Lerner 2	84	Lerner	36
@@ -5231,7 +5231,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-22 09:45:00	149	Architectural and Fine Arts Library 3	146	Avery	29
 2014-10-22 09:45:00	134	Butler Library 6	103	Butler	19
 2014-10-22 09:45:00	138	Butler Library stk	103	Butler	9
-2014-10-22 09:45:00	145	Science and Engineering Library	15	Mudd	40
+2014-10-22 09:45:00	145	Science and Engineering Library	15	Northwest Corner Building	40
 2014-10-22 09:45:00	155	JJ's Place	75	John Jay	8
 2014-10-22 09:45:00	133	Butler Library 5	103	Butler	25
 2014-10-22 09:45:00	151	Lerner 2	84	Lerner	44
@@ -5253,7 +5253,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-22 10:00:00	149	Architectural and Fine Arts Library 3	146	Avery	36
 2014-10-22 10:00:00	134	Butler Library 6	103	Butler	24
 2014-10-22 10:00:00	138	Butler Library stk	103	Butler	8
-2014-10-22 10:00:00	145	Science and Engineering Library	15	Mudd	47
+2014-10-22 10:00:00	145	Science and Engineering Library	15	Northwest Corner Building	47
 2014-10-22 10:00:00	155	JJ's Place	75	John Jay	6
 2014-10-22 10:00:00	133	Butler Library 5	103	Butler	41
 2014-10-22 10:00:00	151	Lerner 2	84	Lerner	73
@@ -5291,13 +5291,13 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-22 10:15:00	149	Architectural and Fine Arts Library 3	146	Avery	43
 2014-10-22 10:15:00	134	Butler Library 6	103	Butler	28
 2014-10-22 10:15:00	138	Butler Library stk	103	Butler	9
-2014-10-22 10:15:00	145	Science and Engineering Library	15	Mudd	56
+2014-10-22 10:15:00	145	Science and Engineering Library	15	Northwest Corner Building	56
 2014-10-22 10:30:00	152	Lerner 3	84	Lerner	110
 2014-10-22 10:30:00	130	Butler Library 2	103	Butler	247
 2014-10-22 10:30:00	149	Architectural and Fine Arts Library 3	146	Avery	50
 2014-10-22 10:30:00	134	Butler Library 6	103	Butler	39
 2014-10-22 10:30:00	138	Butler Library stk	103	Butler	9
-2014-10-22 10:30:00	145	Science and Engineering Library	15	Mudd	64
+2014-10-22 10:30:00	145	Science and Engineering Library	15	Northwest Corner Building	64
 2014-10-22 10:30:00	131	Butler Library 3	103	Butler	166
 2014-10-22 10:30:00	139	Lehman Library 2	79	Lehman LIbrary	27
 2014-10-22 10:30:00	144	Starr East Asian Library	62	East Asian Library	76
@@ -5324,7 +5324,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-22 10:45:00	149	Architectural and Fine Arts Library 3	146	Avery	62
 2014-10-22 10:45:00	134	Butler Library 6	103	Butler	40
 2014-10-22 10:45:00	138	Butler Library stk	103	Butler	12
-2014-10-22 10:45:00	145	Science and Engineering Library	15	Mudd	81
+2014-10-22 10:45:00	145	Science and Engineering Library	15	Northwest Corner Building	81
 2014-10-22 10:45:00	131	Butler Library 3	103	Butler	193
 2014-10-22 10:45:00	139	Lehman Library 2	79	Lehman LIbrary	28
 2014-10-22 10:45:00	144	Starr East Asian Library	62	East Asian Library	75
@@ -5354,7 +5354,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-22 11:00:00	149	Architectural and Fine Arts Library 3	146	Avery	72
 2014-10-22 11:00:00	134	Butler Library 6	103	Butler	46
 2014-10-22 11:00:00	138	Butler Library stk	103	Butler	12
-2014-10-22 11:00:00	145	Science and Engineering Library	15	Mudd	91
+2014-10-22 11:00:00	145	Science and Engineering Library	15	Northwest Corner Building	91
 2014-10-22 14:30:00	152	Lerner 3	84	Lerner	144
 2014-10-22 11:00:00	155	JJ's Place	75	John Jay	10
 2014-10-22 11:00:00	133	Butler Library 5	103	Butler	49
@@ -5364,7 +5364,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-22 11:15:00	149	Architectural and Fine Arts Library 3	146	Avery	81
 2014-10-22 11:15:00	134	Butler Library 6	103	Butler	53
 2014-10-22 11:15:00	138	Butler Library stk	103	Butler	11
-2014-10-22 11:15:00	145	Science and Engineering Library	15	Mudd	94
+2014-10-22 11:15:00	145	Science and Engineering Library	15	Northwest Corner Building	94
 2014-10-22 11:15:00	155	JJ's Place	75	John Jay	10
 2014-10-22 11:15:00	133	Butler Library 5	103	Butler	65
 2014-10-22 11:15:00	151	Lerner 2	84	Lerner	65
@@ -5402,7 +5402,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-22 11:30:00	149	Architectural and Fine Arts Library 3	146	Avery	76
 2014-10-22 11:30:00	134	Butler Library 6	103	Butler	52
 2014-10-22 11:30:00	138	Butler Library stk	103	Butler	18
-2014-10-22 11:30:00	145	Science and Engineering Library	15	Mudd	93
+2014-10-22 11:30:00	145	Science and Engineering Library	15	Northwest Corner Building	93
 2014-10-22 11:45:00	131	Butler Library 3	103	Butler	255
 2014-10-22 11:45:00	139	Lehman Library 2	79	Lehman LIbrary	53
 2014-10-22 11:45:00	144	Starr East Asian Library	62	East Asian Library	104
@@ -5416,7 +5416,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-22 11:45:00	149	Architectural and Fine Arts Library 3	146	Avery	80
 2014-10-22 11:45:00	134	Butler Library 6	103	Butler	64
 2014-10-22 11:45:00	138	Butler Library stk	103	Butler	16
-2014-10-22 11:45:00	145	Science and Engineering Library	15	Mudd	107
+2014-10-22 11:45:00	145	Science and Engineering Library	15	Northwest Corner Building	107
 2014-10-22 11:45:00	155	JJ's Place	75	John Jay	11
 2014-10-22 11:45:00	133	Butler Library 5	103	Butler	58
 2014-10-22 11:45:00	151	Lerner 2	84	Lerner	71
@@ -5430,7 +5430,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-22 12:00:00	149	Architectural and Fine Arts Library 3	146	Avery	90
 2014-10-22 12:00:00	134	Butler Library 6	103	Butler	59
 2014-10-22 12:00:00	138	Butler Library stk	103	Butler	15
-2014-10-22 12:00:00	145	Science and Engineering Library	15	Mudd	92
+2014-10-22 12:00:00	145	Science and Engineering Library	15	Northwest Corner Building	92
 2014-10-22 12:00:00	131	Butler Library 3	103	Butler	230
 2014-10-22 12:00:00	139	Lehman Library 2	79	Lehman LIbrary	42
 2014-10-22 12:00:00	144	Starr East Asian Library	62	East Asian Library	121
@@ -5462,7 +5462,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-22 12:15:00	149	Architectural and Fine Arts Library 3	146	Avery	90
 2014-10-22 12:15:00	134	Butler Library 6	103	Butler	72
 2014-10-22 12:15:00	138	Butler Library stk	103	Butler	15
-2014-10-22 12:15:00	145	Science and Engineering Library	15	Mudd	85
+2014-10-22 12:15:00	145	Science and Engineering Library	15	Northwest Corner Building	85
 2014-10-22 12:15:00	131	Butler Library 3	103	Butler	244
 2014-10-22 12:15:00	139	Lehman Library 2	79	Lehman LIbrary	45
 2014-10-22 12:15:00	144	Starr East Asian Library	62	East Asian Library	103
@@ -5484,7 +5484,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-22 12:30:00	149	Architectural and Fine Arts Library 3	146	Avery	97
 2014-10-22 12:30:00	134	Butler Library 6	103	Butler	71
 2014-10-22 12:30:00	138	Butler Library stk	103	Butler	15
-2014-10-22 12:30:00	145	Science and Engineering Library	15	Mudd	91
+2014-10-22 12:30:00	145	Science and Engineering Library	15	Northwest Corner Building	91
 2014-10-22 12:30:00	131	Butler Library 3	103	Butler	249
 2014-10-22 12:30:00	139	Lehman Library 2	79	Lehman LIbrary	57
 2014-10-22 12:30:00	144	Starr East Asian Library	62	East Asian Library	81
@@ -5506,7 +5506,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-22 12:45:00	149	Architectural and Fine Arts Library 3	146	Avery	91
 2014-10-22 12:45:00	134	Butler Library 6	103	Butler	70
 2014-10-22 12:45:00	138	Butler Library stk	103	Butler	14
-2014-10-22 12:45:00	145	Science and Engineering Library	15	Mudd	95
+2014-10-22 12:45:00	145	Science and Engineering Library	15	Northwest Corner Building	95
 2014-10-22 12:45:00	131	Butler Library 3	103	Butler	276
 2014-10-22 12:45:00	139	Lehman Library 2	79	Lehman LIbrary	59
 2014-10-22 12:45:00	144	Starr East Asian Library	62	East Asian Library	80
@@ -5518,7 +5518,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-22 13:00:00	149	Architectural and Fine Arts Library 3	146	Avery	91
 2014-10-22 13:00:00	134	Butler Library 6	103	Butler	69
 2014-10-22 13:00:00	138	Butler Library stk	103	Butler	20
-2014-10-22 13:00:00	145	Science and Engineering Library	15	Mudd	102
+2014-10-22 13:00:00	145	Science and Engineering Library	15	Northwest Corner Building	102
 2014-10-22 13:00:00	131	Butler Library 3	103	Butler	266
 2014-10-22 13:00:00	139	Lehman Library 2	79	Lehman LIbrary	60
 2014-10-22 13:00:00	144	Starr East Asian Library	62	East Asian Library	96
@@ -5556,7 +5556,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-22 13:15:00	149	Architectural and Fine Arts Library 3	146	Avery	90
 2014-10-22 13:15:00	134	Butler Library 6	103	Butler	90
 2014-10-22 13:15:00	138	Butler Library stk	103	Butler	19
-2014-10-22 13:15:00	145	Science and Engineering Library	15	Mudd	109
+2014-10-22 13:15:00	145	Science and Engineering Library	15	Northwest Corner Building	109
 2014-10-22 13:30:00	154	Lerner 5	84	Lerner	58
 2014-10-22 13:30:00	125	John Jay Dining Hall	75	John Jay	129
 2014-10-22 13:30:00	147	Architectural and Fine Arts Library 1	146	Avery	15
@@ -5575,7 +5575,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-22 13:30:00	149	Architectural and Fine Arts Library 3	146	Avery	90
 2014-10-22 13:30:00	134	Butler Library 6	103	Butler	95
 2014-10-22 13:30:00	138	Butler Library stk	103	Butler	19
-2014-10-22 13:30:00	145	Science and Engineering Library	15	Mudd	100
+2014-10-22 13:30:00	145	Science and Engineering Library	15	Northwest Corner Building	100
 2014-10-22 13:30:00	155	JJ's Place	75	John Jay	51
 2014-10-22 13:30:00	133	Butler Library 5	103	Butler	75
 2014-10-22 13:30:00	151	Lerner 2	84	Lerner	120
@@ -5584,7 +5584,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-22 13:45:00	149	Architectural and Fine Arts Library 3	146	Avery	98
 2014-10-22 13:45:00	134	Butler Library 6	103	Butler	106
 2014-10-22 13:45:00	138	Butler Library stk	103	Butler	23
-2014-10-22 13:45:00	145	Science and Engineering Library	15	Mudd	96
+2014-10-22 13:45:00	145	Science and Engineering Library	15	Northwest Corner Building	96
 2014-10-22 13:45:00	131	Butler Library 3	103	Butler	307
 2014-10-22 13:45:00	139	Lehman Library 2	79	Lehman LIbrary	78
 2014-10-22 13:45:00	144	Starr East Asian Library	62	East Asian Library	95
@@ -5616,7 +5616,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-22 14:00:00	149	Architectural and Fine Arts Library 3	146	Avery	103
 2014-10-22 14:00:00	134	Butler Library 6	103	Butler	114
 2014-10-22 14:00:00	138	Butler Library stk	103	Butler	25
-2014-10-22 14:00:00	145	Science and Engineering Library	15	Mudd	113
+2014-10-22 14:00:00	145	Science and Engineering Library	15	Northwest Corner Building	113
 2014-10-22 14:00:00	131	Butler Library 3	103	Butler	309
 2014-10-22 14:00:00	139	Lehman Library 2	79	Lehman LIbrary	88
 2014-10-22 14:00:00	144	Starr East Asian Library	62	East Asian Library	102
@@ -5628,7 +5628,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-22 14:15:00	149	Architectural and Fine Arts Library 3	146	Avery	114
 2014-10-22 14:15:00	134	Butler Library 6	103	Butler	125
 2014-10-22 14:15:00	138	Butler Library stk	103	Butler	30
-2014-10-22 14:15:00	145	Science and Engineering Library	15	Mudd	104
+2014-10-22 14:15:00	145	Science and Engineering Library	15	Northwest Corner Building	104
 2014-10-22 14:15:00	155	JJ's Place	75	John Jay	27
 2014-10-22 14:15:00	133	Butler Library 5	103	Butler	79
 2014-10-22 14:15:00	151	Lerner 2	84	Lerner	94
@@ -5662,7 +5662,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-22 14:30:00	149	Architectural and Fine Arts Library 3	146	Avery	112
 2014-10-22 14:30:00	134	Butler Library 6	103	Butler	134
 2014-10-22 14:30:00	138	Butler Library stk	103	Butler	28
-2014-10-22 14:30:00	145	Science and Engineering Library	15	Mudd	104
+2014-10-22 14:30:00	145	Science and Engineering Library	15	Northwest Corner Building	104
 2014-10-22 14:30:00	155	JJ's Place	75	John Jay	24
 2014-10-22 14:30:00	133	Butler Library 5	103	Butler	82
 2014-10-22 14:30:00	151	Lerner 2	84	Lerner	120
@@ -5676,7 +5676,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-22 14:45:00	149	Architectural and Fine Arts Library 3	146	Avery	119
 2014-10-22 14:45:00	134	Butler Library 6	103	Butler	130
 2014-10-22 14:45:00	138	Butler Library stk	103	Butler	25
-2014-10-22 14:45:00	145	Science and Engineering Library	15	Mudd	110
+2014-10-22 14:45:00	145	Science and Engineering Library	15	Northwest Corner Building	110
 2014-10-22 14:45:00	131	Butler Library 3	103	Butler	352
 2014-10-22 14:45:00	139	Lehman Library 2	79	Lehman LIbrary	77
 2014-10-22 14:45:00	144	Starr East Asian Library	62	East Asian Library	134
@@ -5698,7 +5698,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-22 15:00:00	149	Architectural and Fine Arts Library 3	146	Avery	111
 2014-10-22 15:00:00	134	Butler Library 6	103	Butler	137
 2014-10-22 15:00:00	138	Butler Library stk	103	Butler	21
-2014-10-22 15:00:00	145	Science and Engineering Library	15	Mudd	110
+2014-10-22 15:00:00	145	Science and Engineering Library	15	Northwest Corner Building	110
 2014-10-22 15:00:00	131	Butler Library 3	103	Butler	355
 2014-10-22 15:00:00	139	Lehman Library 2	79	Lehman LIbrary	93
 2014-10-22 15:00:00	144	Starr East Asian Library	62	East Asian Library	126
@@ -5728,7 +5728,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-22 15:15:00	149	Architectural and Fine Arts Library 3	146	Avery	113
 2014-10-22 15:15:00	134	Butler Library 6	103	Butler	138
 2014-10-22 15:15:00	138	Butler Library stk	103	Butler	24
-2014-10-22 15:15:00	145	Science and Engineering Library	15	Mudd	114
+2014-10-22 15:15:00	145	Science and Engineering Library	15	Northwest Corner Building	114
 2014-10-22 15:15:00	155	JJ's Place	75	John Jay	37
 2014-10-22 15:15:00	133	Butler Library 5	103	Butler	88
 2014-10-22 15:15:00	151	Lerner 2	84	Lerner	94
@@ -5753,7 +5753,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-22 15:30:00	149	Architectural and Fine Arts Library 3	146	Avery	109
 2014-10-22 15:30:00	134	Butler Library 6	103	Butler	154
 2014-10-22 15:30:00	138	Butler Library stk	103	Butler	27
-2014-10-22 15:30:00	145	Science and Engineering Library	15	Mudd	109
+2014-10-22 15:30:00	145	Science and Engineering Library	15	Northwest Corner Building	109
 2014-10-22 15:45:00	155	JJ's Place	75	John Jay	31
 2014-10-22 15:45:00	23	Uris/Watson Library	2	Uris	647
 2014-10-22 15:45:00	133	Butler Library 5	103	Butler	98
@@ -5764,7 +5764,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-22 15:45:00	149	Architectural and Fine Arts Library 3	146	Avery	121
 2014-10-22 15:45:00	134	Butler Library 6	103	Butler	153
 2014-10-22 15:45:00	138	Butler Library stk	103	Butler	24
-2014-10-22 15:45:00	145	Science and Engineering Library	15	Mudd	129
+2014-10-22 15:45:00	145	Science and Engineering Library	15	Northwest Corner Building	129
 2014-10-22 15:45:00	131	Butler Library 3	103	Butler	360
 2014-10-22 15:45:00	139	Lehman Library 2	79	Lehman LIbrary	108
 2014-10-22 15:45:00	144	Starr East Asian Library	62	East Asian Library	132
@@ -5781,7 +5781,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-22 16:00:00	149	Architectural and Fine Arts Library 3	146	Avery	117
 2014-10-22 16:00:00	134	Butler Library 6	103	Butler	157
 2014-10-22 16:00:00	138	Butler Library stk	103	Butler	34
-2014-10-22 16:00:00	145	Science and Engineering Library	15	Mudd	115
+2014-10-22 16:00:00	145	Science and Engineering Library	15	Northwest Corner Building	115
 2014-10-22 16:00:00	155	JJ's Place	75	John Jay	21
 2014-10-22 16:00:00	133	Butler Library 5	103	Butler	102
 2014-10-22 16:00:00	151	Lerner 2	84	Lerner	109
@@ -5803,7 +5803,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-22 16:15:00	149	Architectural and Fine Arts Library 3	146	Avery	120
 2014-10-22 16:15:00	134	Butler Library 6	103	Butler	148
 2014-10-22 16:15:00	138	Butler Library stk	103	Butler	34
-2014-10-22 16:15:00	145	Science and Engineering Library	15	Mudd	126
+2014-10-22 16:15:00	145	Science and Engineering Library	15	Northwest Corner Building	126
 2014-10-22 16:15:00	131	Butler Library 3	103	Butler	366
 2014-10-22 16:15:00	139	Lehman Library 2	79	Lehman LIbrary	117
 2014-10-22 16:15:00	144	Starr East Asian Library	62	East Asian Library	129
@@ -5841,13 +5841,13 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-22 16:30:00	149	Architectural and Fine Arts Library 3	146	Avery	105
 2014-10-22 16:30:00	134	Butler Library 6	103	Butler	143
 2014-10-22 16:30:00	138	Butler Library stk	103	Butler	26
-2014-10-22 16:30:00	145	Science and Engineering Library	15	Mudd	120
+2014-10-22 16:30:00	145	Science and Engineering Library	15	Northwest Corner Building	120
 2014-10-22 16:45:00	152	Lerner 3	84	Lerner	128
 2014-10-22 16:45:00	130	Butler Library 2	103	Butler	446
 2014-10-22 16:45:00	149	Architectural and Fine Arts Library 3	146	Avery	103
 2014-10-22 16:45:00	134	Butler Library 6	103	Butler	157
 2014-10-22 16:45:00	138	Butler Library stk	103	Butler	26
-2014-10-22 16:45:00	145	Science and Engineering Library	15	Mudd	129
+2014-10-22 16:45:00	145	Science and Engineering Library	15	Northwest Corner Building	129
 2014-10-22 16:45:00	155	JJ's Place	75	John Jay	27
 2014-10-22 16:45:00	133	Butler Library 5	103	Butler	99
 2014-10-22 16:45:00	151	Lerner 2	84	Lerner	87
@@ -5885,7 +5885,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-22 17:00:00	149	Architectural and Fine Arts Library 3	146	Avery	110
 2014-10-22 17:00:00	134	Butler Library 6	103	Butler	157
 2014-10-22 17:00:00	138	Butler Library stk	103	Butler	16
-2014-10-22 17:00:00	145	Science and Engineering Library	15	Mudd	122
+2014-10-22 17:00:00	145	Science and Engineering Library	15	Northwest Corner Building	122
 2014-10-22 17:15:00	154	Lerner 5	84	Lerner	107
 2014-10-22 17:15:00	125	John Jay Dining Hall	75	John Jay	14
 2014-10-22 17:15:00	147	Architectural and Fine Arts Library 1	146	Avery	10
@@ -5904,7 +5904,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-22 17:15:00	149	Architectural and Fine Arts Library 3	146	Avery	111
 2014-10-22 17:15:00	134	Butler Library 6	103	Butler	152
 2014-10-22 17:15:00	138	Butler Library stk	103	Butler	17
-2014-10-22 17:15:00	145	Science and Engineering Library	15	Mudd	117
+2014-10-22 17:15:00	145	Science and Engineering Library	15	Northwest Corner Building	117
 2014-10-22 17:15:00	155	JJ's Place	75	John Jay	11
 2014-10-22 17:15:00	133	Butler Library 5	103	Butler	91
 2014-10-22 17:15:00	151	Lerner 2	84	Lerner	103
@@ -5913,7 +5913,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-22 17:30:00	149	Architectural and Fine Arts Library 3	146	Avery	105
 2014-10-22 17:30:00	134	Butler Library 6	103	Butler	147
 2014-10-22 17:30:00	138	Butler Library stk	103	Butler	18
-2014-10-22 17:30:00	145	Science and Engineering Library	15	Mudd	110
+2014-10-22 17:30:00	145	Science and Engineering Library	15	Northwest Corner Building	110
 2014-10-22 17:30:00	155	JJ's Place	75	John Jay	21
 2014-10-22 17:30:00	133	Butler Library 5	103	Butler	97
 2014-10-22 17:30:00	151	Lerner 2	84	Lerner	99
@@ -5951,7 +5951,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-22 17:45:00	149	Architectural and Fine Arts Library 3	146	Avery	105
 2014-10-22 17:45:00	134	Butler Library 6	103	Butler	144
 2014-10-22 17:45:00	138	Butler Library stk	103	Butler	19
-2014-10-22 17:45:00	145	Science and Engineering Library	15	Mudd	129
+2014-10-22 17:45:00	145	Science and Engineering Library	15	Northwest Corner Building	129
 2014-10-22 18:00:00	155	JJ's Place	75	John Jay	57
 2014-10-22 18:00:00	23	Uris/Watson Library	2	Uris	573
 2014-10-22 18:00:00	133	Butler Library 5	103	Butler	84
@@ -5962,7 +5962,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-22 18:00:00	149	Architectural and Fine Arts Library 3	146	Avery	118
 2014-10-22 18:00:00	134	Butler Library 6	103	Butler	147
 2014-10-22 18:00:00	138	Butler Library stk	103	Butler	20
-2014-10-22 18:00:00	145	Science and Engineering Library	15	Mudd	109
+2014-10-22 18:00:00	145	Science and Engineering Library	15	Northwest Corner Building	109
 2014-10-22 18:00:00	131	Butler Library 3	103	Butler	314
 2014-10-22 18:00:00	139	Lehman Library 2	79	Lehman LIbrary	111
 2014-10-22 18:00:00	144	Starr East Asian Library	62	East Asian Library	118
@@ -5984,7 +5984,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-22 18:15:00	149	Architectural and Fine Arts Library 3	146	Avery	90
 2014-10-22 18:15:00	134	Butler Library 6	103	Butler	133
 2014-10-22 18:15:00	138	Butler Library stk	103	Butler	13
-2014-10-22 18:15:00	145	Science and Engineering Library	15	Mudd	74
+2014-10-22 18:15:00	145	Science and Engineering Library	15	Northwest Corner Building	74
 2014-10-22 18:15:00	131	Butler Library 3	103	Butler	271
 2014-10-22 18:15:00	139	Lehman Library 2	79	Lehman LIbrary	80
 2014-10-22 18:15:00	144	Starr East Asian Library	62	East Asian Library	109
@@ -6001,7 +6001,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-22 18:30:00	149	Architectural and Fine Arts Library 3	146	Avery	83
 2014-10-22 18:30:00	134	Butler Library 6	103	Butler	132
 2014-10-22 18:30:00	138	Butler Library stk	103	Butler	19
-2014-10-22 18:30:00	145	Science and Engineering Library	15	Mudd	80
+2014-10-22 18:30:00	145	Science and Engineering Library	15	Northwest Corner Building	80
 2014-10-22 18:30:00	131	Butler Library 3	103	Butler	271
 2014-10-22 18:30:00	139	Lehman Library 2	79	Lehman LIbrary	63
 2014-10-22 18:30:00	144	Starr East Asian Library	62	East Asian Library	118
@@ -6023,7 +6023,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-22 18:45:00	149	Architectural and Fine Arts Library 3	146	Avery	72
 2014-10-22 18:45:00	134	Butler Library 6	103	Butler	104
 2014-10-22 18:45:00	138	Butler Library stk	103	Butler	20
-2014-10-22 18:45:00	145	Science and Engineering Library	15	Mudd	80
+2014-10-22 18:45:00	145	Science and Engineering Library	15	Northwest Corner Building	80
 2014-10-22 18:45:00	131	Butler Library 3	103	Butler	280
 2014-10-22 18:45:00	139	Lehman Library 2	79	Lehman LIbrary	54
 2014-10-22 18:45:00	144	Starr East Asian Library	62	East Asian Library	104
@@ -6062,7 +6062,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-22 19:00:00	134	Butler Library 6	103	Butler	102
 2014-10-22 19:00:00	138	Butler Library stk	103	Butler	31
 2014-10-23 00:45:00	153	Lerner 4	84	Lerner	22
-2014-10-22 19:00:00	145	Science and Engineering Library	15	Mudd	79
+2014-10-22 19:00:00	145	Science and Engineering Library	15	Northwest Corner Building	79
 2014-10-22 19:15:00	154	Lerner 5	84	Lerner	54
 2014-10-22 19:15:00	125	John Jay Dining Hall	75	John Jay	110
 2014-10-22 19:15:00	147	Architectural and Fine Arts Library 1	146	Avery	9
@@ -6078,7 +6078,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-22 19:15:00	149	Architectural and Fine Arts Library 3	146	Avery	46
 2014-10-22 19:15:00	134	Butler Library 6	103	Butler	103
 2014-10-22 19:15:00	138	Butler Library stk	103	Butler	27
-2014-10-22 19:15:00	145	Science and Engineering Library	15	Mudd	93
+2014-10-22 19:15:00	145	Science and Engineering Library	15	Northwest Corner Building	93
 2014-10-22 19:15:00	131	Butler Library 3	103	Butler	279
 2014-10-22 19:15:00	139	Lehman Library 2	79	Lehman LIbrary	38
 2014-10-22 19:15:00	144	Starr East Asian Library	62	East Asian Library	97
@@ -6100,7 +6100,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-22 19:30:00	149	Architectural and Fine Arts Library 3	146	Avery	57
 2014-10-22 19:30:00	134	Butler Library 6	103	Butler	112
 2014-10-22 19:30:00	138	Butler Library stk	103	Butler	26
-2014-10-22 19:30:00	145	Science and Engineering Library	15	Mudd	81
+2014-10-22 19:30:00	145	Science and Engineering Library	15	Northwest Corner Building	81
 2014-10-22 19:30:00	131	Butler Library 3	103	Butler	305
 2014-10-22 19:30:00	139	Lehman Library 2	79	Lehman LIbrary	43
 2014-10-22 19:30:00	144	Starr East Asian Library	62	East Asian Library	83
@@ -6112,7 +6112,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-22 19:45:00	149	Architectural and Fine Arts Library 3	146	Avery	47
 2014-10-22 19:45:00	134	Butler Library 6	103	Butler	119
 2014-10-22 19:45:00	138	Butler Library stk	103	Butler	30
-2014-10-22 19:45:00	145	Science and Engineering Library	15	Mudd	65
+2014-10-22 19:45:00	145	Science and Engineering Library	15	Northwest Corner Building	65
 2014-10-22 19:45:00	131	Butler Library 3	103	Butler	295
 2014-10-22 19:45:00	139	Lehman Library 2	79	Lehman LIbrary	36
 2014-10-22 19:45:00	144	Starr East Asian Library	62	East Asian Library	75
@@ -6139,7 +6139,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-22 20:00:00	149	Architectural and Fine Arts Library 3	146	Avery	49
 2014-10-22 20:00:00	134	Butler Library 6	103	Butler	116
 2014-10-22 20:00:00	138	Butler Library stk	103	Butler	27
-2014-10-22 20:00:00	145	Science and Engineering Library	15	Mudd	60
+2014-10-22 20:00:00	145	Science and Engineering Library	15	Northwest Corner Building	60
 2014-10-22 20:00:00	131	Butler Library 3	103	Butler	310
 2014-10-22 20:00:00	139	Lehman Library 2	79	Lehman LIbrary	44
 2014-10-22 20:00:00	144	Starr East Asian Library	62	East Asian Library	84
@@ -6170,7 +6170,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-22 20:15:00	149	Architectural and Fine Arts Library 3	146	Avery	52
 2014-10-22 20:15:00	134	Butler Library 6	103	Butler	114
 2014-10-22 20:15:00	138	Butler Library stk	103	Butler	23
-2014-10-22 20:15:00	145	Science and Engineering Library	15	Mudd	62
+2014-10-22 20:15:00	145	Science and Engineering Library	15	Northwest Corner Building	62
 2014-10-22 20:15:00	155	JJ's Place	75	John Jay	65
 2014-10-22 20:15:00	133	Butler Library 5	103	Butler	51
 2014-10-22 20:15:00	151	Lerner 2	84	Lerner	107
@@ -6179,7 +6179,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-22 20:30:00	149	Architectural and Fine Arts Library 3	146	Avery	56
 2014-10-22 20:30:00	134	Butler Library 6	103	Butler	112
 2014-10-22 20:30:00	138	Butler Library stk	103	Butler	22
-2014-10-22 20:30:00	145	Science and Engineering Library	15	Mudd	74
+2014-10-22 20:30:00	145	Science and Engineering Library	15	Northwest Corner Building	74
 2014-10-22 20:30:00	131	Butler Library 3	103	Butler	310
 2014-10-22 20:30:00	139	Lehman Library 2	79	Lehman LIbrary	43
 2014-10-22 20:30:00	144	Starr East Asian Library	62	East Asian Library	70
@@ -6201,7 +6201,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-22 20:45:00	149	Architectural and Fine Arts Library 3	146	Avery	61
 2014-10-22 20:45:00	134	Butler Library 6	103	Butler	119
 2014-10-22 20:45:00	138	Butler Library stk	103	Butler	19
-2014-10-22 20:45:00	145	Science and Engineering Library	15	Mudd	74
+2014-10-22 20:45:00	145	Science and Engineering Library	15	Northwest Corner Building	74
 2014-10-22 20:45:00	155	JJ's Place	75	John Jay	79
 2014-10-22 20:45:00	133	Butler Library 5	103	Butler	54
 2014-10-22 20:45:00	151	Lerner 2	84	Lerner	88
@@ -6239,7 +6239,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-22 21:00:00	149	Architectural and Fine Arts Library 3	146	Avery	63
 2014-10-22 21:00:00	134	Butler Library 6	103	Butler	119
 2014-10-22 21:00:00	138	Butler Library stk	103	Butler	21
-2014-10-22 21:00:00	145	Science and Engineering Library	15	Mudd	76
+2014-10-22 21:00:00	145	Science and Engineering Library	15	Northwest Corner Building	76
 2014-10-22 21:15:00	155	JJ's Place	75	John Jay	86
 2014-10-22 21:15:00	23	Uris/Watson Library	2	Uris	363
 2014-10-22 21:15:00	133	Butler Library 5	103	Butler	53
@@ -6250,7 +6250,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-22 21:15:00	149	Architectural and Fine Arts Library 3	146	Avery	58
 2014-10-22 21:15:00	134	Butler Library 6	103	Butler	112
 2014-10-22 21:15:00	138	Butler Library stk	103	Butler	23
-2014-10-22 21:15:00	145	Science and Engineering Library	15	Mudd	72
+2014-10-22 21:15:00	145	Science and Engineering Library	15	Northwest Corner Building	72
 2014-10-22 21:15:00	131	Butler Library 3	103	Butler	316
 2014-10-22 21:15:00	139	Lehman Library 2	79	Lehman LIbrary	47
 2014-10-22 21:15:00	144	Starr East Asian Library	62	East Asian Library	57
@@ -6277,7 +6277,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-22 21:30:00	149	Architectural and Fine Arts Library 3	146	Avery	56
 2014-10-22 21:30:00	134	Butler Library 6	103	Butler	98
 2014-10-22 21:30:00	138	Butler Library stk	103	Butler	26
-2014-10-22 21:30:00	145	Science and Engineering Library	15	Mudd	74
+2014-10-22 21:30:00	145	Science and Engineering Library	15	Northwest Corner Building	74
 2014-10-22 21:30:00	131	Butler Library 3	103	Butler	323
 2014-10-22 21:30:00	139	Lehman Library 2	79	Lehman LIbrary	31
 2014-10-22 21:30:00	144	Starr East Asian Library	62	East Asian Library	63
@@ -6297,7 +6297,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-22 21:45:00	149	Architectural and Fine Arts Library 3	146	Avery	51
 2014-10-22 21:45:00	134	Butler Library 6	103	Butler	99
 2014-10-22 21:45:00	138	Butler Library stk	103	Butler	22
-2014-10-22 21:45:00	145	Science and Engineering Library	15	Mudd	73
+2014-10-22 21:45:00	145	Science and Engineering Library	15	Northwest Corner Building	73
 2014-10-22 21:45:00	155	JJ's Place	75	John Jay	76
 2014-10-22 21:45:00	133	Butler Library 5	103	Butler	49
 2014-10-22 21:45:00	151	Lerner 2	84	Lerner	111
@@ -6327,7 +6327,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-22 22:00:00	149	Architectural and Fine Arts Library 3	146	Avery	43
 2014-10-22 22:00:00	134	Butler Library 6	103	Butler	87
 2014-10-22 22:00:00	138	Butler Library stk	103	Butler	27
-2014-10-22 22:00:00	145	Science and Engineering Library	15	Mudd	72
+2014-10-22 22:00:00	145	Science and Engineering Library	15	Northwest Corner Building	72
 2014-10-22 22:15:00	131	Butler Library 3	103	Butler	337
 2014-10-22 22:15:00	139	Lehman Library 2	79	Lehman LIbrary	41
 2014-10-22 22:15:00	144	Starr East Asian Library	62	East Asian Library	41
@@ -6349,7 +6349,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-22 22:15:00	149	Architectural and Fine Arts Library 3	146	Avery	41
 2014-10-22 22:15:00	134	Butler Library 6	103	Butler	96
 2014-10-22 22:15:00	138	Butler Library stk	103	Butler	28
-2014-10-22 22:15:00	145	Science and Engineering Library	15	Mudd	70
+2014-10-22 22:15:00	145	Science and Engineering Library	15	Northwest Corner Building	70
 2014-10-22 22:30:00	154	Lerner 5	84	Lerner	139
 2014-10-22 22:30:00	125	John Jay Dining Hall	75	John Jay	4
 2014-10-22 22:30:00	147	Architectural and Fine Arts Library 1	146	Avery	7
@@ -6368,7 +6368,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-22 22:30:00	149	Architectural and Fine Arts Library 3	146	Avery	38
 2014-10-22 22:30:00	134	Butler Library 6	103	Butler	93
 2014-10-22 22:30:00	138	Butler Library stk	103	Butler	28
-2014-10-22 22:30:00	145	Science and Engineering Library	15	Mudd	65
+2014-10-22 22:30:00	145	Science and Engineering Library	15	Northwest Corner Building	65
 2014-10-22 22:30:00	155	JJ's Place	75	John Jay	52
 2014-10-22 22:30:00	133	Butler Library 5	103	Butler	42
 2014-10-22 22:30:00	151	Lerner 2	84	Lerner	71
@@ -6385,7 +6385,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-22 22:45:00	149	Architectural and Fine Arts Library 3	146	Avery	29
 2014-10-22 22:45:00	134	Butler Library 6	103	Butler	81
 2014-10-22 22:45:00	138	Butler Library stk	103	Butler	32
-2014-10-22 22:45:00	145	Science and Engineering Library	15	Mudd	59
+2014-10-22 22:45:00	145	Science and Engineering Library	15	Northwest Corner Building	59
 2014-10-22 22:45:00	155	JJ's Place	75	John Jay	68
 2014-10-22 22:45:00	133	Butler Library 5	103	Butler	33
 2014-10-22 22:45:00	151	Lerner 2	84	Lerner	80
@@ -6415,7 +6415,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-22 23:00:00	149	Architectural and Fine Arts Library 3	146	Avery	24
 2014-10-22 23:00:00	134	Butler Library 6	103	Butler	58
 2014-10-22 23:00:00	138	Butler Library stk	103	Butler	26
-2014-10-22 23:00:00	145	Science and Engineering Library	15	Mudd	62
+2014-10-22 23:00:00	145	Science and Engineering Library	15	Northwest Corner Building	62
 2014-10-22 23:15:00	131	Butler Library 3	103	Butler	341
 2014-10-22 23:15:00	139	Lehman Library 2	79	Lehman LIbrary	30
 2014-10-22 23:15:00	144	Starr East Asian Library	62	East Asian Library	9
@@ -6429,7 +6429,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-22 23:15:00	149	Architectural and Fine Arts Library 3	146	Avery	12
 2014-10-22 23:15:00	134	Butler Library 6	103	Butler	20
 2014-10-22 23:15:00	138	Butler Library stk	103	Butler	36
-2014-10-22 23:15:00	145	Science and Engineering Library	15	Mudd	66
+2014-10-22 23:15:00	145	Science and Engineering Library	15	Northwest Corner Building	66
 2014-10-22 23:15:00	155	JJ's Place	75	John Jay	58
 2014-10-22 23:15:00	133	Butler Library 5	103	Butler	15
 2014-10-22 23:15:00	151	Lerner 2	84	Lerner	67
@@ -6456,7 +6456,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-22 23:30:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-22 23:30:00	134	Butler Library 6	103	Butler	0
 2014-10-22 23:30:00	138	Butler Library stk	103	Butler	25
-2014-10-22 23:30:00	145	Science and Engineering Library	15	Mudd	46
+2014-10-22 23:30:00	145	Science and Engineering Library	15	Northwest Corner Building	46
 2014-10-22 23:30:00	155	JJ's Place	75	John Jay	58
 2014-10-22 23:30:00	133	Butler Library 5	103	Butler	8
 2014-10-22 23:30:00	151	Lerner 2	84	Lerner	58
@@ -6478,7 +6478,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-22 23:45:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-22 23:45:00	134	Butler Library 6	103	Butler	1
 2014-10-22 23:45:00	138	Butler Library stk	103	Butler	18
-2014-10-22 23:45:00	145	Science and Engineering Library	15	Mudd	45
+2014-10-22 23:45:00	145	Science and Engineering Library	15	Northwest Corner Building	45
 2014-10-22 23:45:00	155	JJ's Place	75	John Jay	69
 2014-10-22 23:45:00	133	Butler Library 5	103	Butler	10
 2014-10-22 23:45:00	151	Lerner 2	84	Lerner	53
@@ -6503,7 +6503,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-23 00:00:00	149	Architectural and Fine Arts Library 3	146	Avery	3
 2014-10-23 00:00:00	134	Butler Library 6	103	Butler	2
 2014-10-23 00:00:00	138	Butler Library stk	103	Butler	20
-2014-10-23 00:00:00	145	Science and Engineering Library	15	Mudd	39
+2014-10-23 00:00:00	145	Science and Engineering Library	15	Northwest Corner Building	39
 2014-10-23 00:15:00	131	Butler Library 3	103	Butler	275
 2014-10-23 00:15:00	139	Lehman Library 2	79	Lehman LIbrary	9
 2014-10-23 00:15:00	144	Starr East Asian Library	62	East Asian Library	4
@@ -6517,7 +6517,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-23 00:15:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-23 00:15:00	134	Butler Library 6	103	Butler	0
 2014-10-23 00:15:00	138	Butler Library stk	103	Butler	25
-2014-10-23 00:15:00	145	Science and Engineering Library	15	Mudd	39
+2014-10-23 00:15:00	145	Science and Engineering Library	15	Northwest Corner Building	39
 2014-10-23 00:15:00	155	JJ's Place	75	John Jay	69
 2014-10-23 00:15:00	133	Butler Library 5	103	Butler	16
 2014-10-23 00:15:00	151	Lerner 2	84	Lerner	46
@@ -6547,13 +6547,13 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-23 00:30:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-23 00:30:00	134	Butler Library 6	103	Butler	1
 2014-10-23 00:30:00	138	Butler Library stk	103	Butler	22
-2014-10-23 00:30:00	145	Science and Engineering Library	15	Mudd	44
+2014-10-23 00:30:00	145	Science and Engineering Library	15	Northwest Corner Building	44
 2014-10-23 00:45:00	152	Lerner 3	84	Lerner	28
 2014-10-23 00:45:00	130	Butler Library 2	103	Butler	340
 2014-10-23 00:45:00	149	Architectural and Fine Arts Library 3	146	Avery	2
 2014-10-23 00:45:00	134	Butler Library 6	103	Butler	0
 2014-10-23 00:45:00	138	Butler Library stk	103	Butler	23
-2014-10-23 00:45:00	145	Science and Engineering Library	15	Mudd	37
+2014-10-23 00:45:00	145	Science and Engineering Library	15	Northwest Corner Building	37
 2014-10-23 00:45:00	155	JJ's Place	75	John Jay	74
 2014-10-23 00:45:00	133	Butler Library 5	103	Butler	12
 2014-10-23 00:45:00	151	Lerner 2	84	Lerner	29
@@ -6579,7 +6579,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-23 01:00:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-23 01:00:00	134	Butler Library 6	103	Butler	0
 2014-10-23 01:00:00	138	Butler Library stk	103	Butler	22
-2014-10-23 01:00:00	145	Science and Engineering Library	15	Mudd	37
+2014-10-23 01:00:00	145	Science and Engineering Library	15	Northwest Corner Building	37
 2014-10-23 01:00:00	131	Butler Library 3	103	Butler	236
 2014-10-23 01:00:00	139	Lehman Library 2	79	Lehman LIbrary	5
 2014-10-23 01:00:00	144	Starr East Asian Library	62	East Asian Library	5
@@ -6612,7 +6612,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-23 01:15:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-23 01:15:00	134	Butler Library 6	103	Butler	0
 2014-10-23 01:15:00	138	Butler Library stk	103	Butler	19
-2014-10-23 01:15:00	145	Science and Engineering Library	15	Mudd	26
+2014-10-23 01:15:00	145	Science and Engineering Library	15	Northwest Corner Building	26
 2014-10-23 01:30:00	131	Butler Library 3	103	Butler	209
 2014-10-23 01:30:00	139	Lehman Library 2	79	Lehman LIbrary	5
 2014-10-23 01:30:00	144	Starr East Asian Library	62	East Asian Library	3
@@ -6626,7 +6626,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-23 01:30:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-23 01:30:00	134	Butler Library 6	103	Butler	1
 2014-10-23 01:30:00	138	Butler Library stk	103	Butler	20
-2014-10-23 01:30:00	145	Science and Engineering Library	15	Mudd	25
+2014-10-23 01:30:00	145	Science and Engineering Library	15	Northwest Corner Building	25
 2014-10-23 01:30:00	155	JJ's Place	75	John Jay	41
 2014-10-23 01:30:00	133	Butler Library 5	103	Butler	11
 2014-10-23 01:30:00	151	Lerner 2	84	Lerner	11
@@ -6640,7 +6640,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-23 01:45:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-23 01:45:00	134	Butler Library 6	103	Butler	0
 2014-10-23 01:45:00	138	Butler Library stk	103	Butler	16
-2014-10-23 01:45:00	145	Science and Engineering Library	15	Mudd	20
+2014-10-23 01:45:00	145	Science and Engineering Library	15	Northwest Corner Building	20
 2014-10-23 01:45:00	155	JJ's Place	75	John Jay	3
 2014-10-23 01:45:00	133	Butler Library 5	103	Butler	10
 2014-10-23 01:45:00	151	Lerner 2	84	Lerner	7
@@ -6662,7 +6662,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-23 02:00:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-23 02:00:00	134	Butler Library 6	103	Butler	0
 2014-10-23 02:00:00	138	Butler Library stk	103	Butler	12
-2014-10-23 02:00:00	145	Science and Engineering Library	15	Mudd	22
+2014-10-23 02:00:00	145	Science and Engineering Library	15	Northwest Corner Building	22
 2014-10-23 02:00:00	131	Butler Library 3	103	Butler	172
 2014-10-23 02:00:00	139	Lehman Library 2	79	Lehman LIbrary	6
 2014-10-23 02:00:00	144	Starr East Asian Library	62	East Asian Library	3
@@ -6697,7 +6697,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-23 02:15:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-23 02:15:00	134	Butler Library 6	103	Butler	0
 2014-10-23 02:15:00	138	Butler Library stk	103	Butler	10
-2014-10-23 02:15:00	145	Science and Engineering Library	15	Mudd	17
+2014-10-23 02:15:00	145	Science and Engineering Library	15	Northwest Corner Building	17
 2014-10-23 02:15:00	155	JJ's Place	75	John Jay	3
 2014-10-23 02:15:00	133	Butler Library 5	103	Butler	6
 2014-10-23 02:15:00	151	Lerner 2	84	Lerner	3
@@ -6711,7 +6711,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-23 02:30:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-23 02:30:00	134	Butler Library 6	103	Butler	0
 2014-10-23 02:30:00	138	Butler Library stk	103	Butler	7
-2014-10-23 02:30:00	145	Science and Engineering Library	15	Mudd	15
+2014-10-23 02:30:00	145	Science and Engineering Library	15	Northwest Corner Building	15
 2014-10-23 02:30:00	131	Butler Library 3	103	Butler	142
 2014-10-23 02:30:00	139	Lehman Library 2	79	Lehman LIbrary	5
 2014-10-23 02:30:00	144	Starr East Asian Library	62	East Asian Library	6
@@ -6738,7 +6738,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-23 02:45:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-23 02:45:00	134	Butler Library 6	103	Butler	0
 2014-10-23 02:45:00	138	Butler Library stk	103	Butler	8
-2014-10-23 02:45:00	145	Science and Engineering Library	15	Mudd	11
+2014-10-23 02:45:00	145	Science and Engineering Library	15	Northwest Corner Building	11
 2014-10-23 02:45:00	131	Butler Library 3	103	Butler	127
 2014-10-23 02:45:00	139	Lehman Library 2	79	Lehman LIbrary	5
 2014-10-23 02:45:00	144	Starr East Asian Library	62	East Asian Library	5
@@ -6750,7 +6750,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-23 03:00:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-23 03:00:00	134	Butler Library 6	103	Butler	0
 2014-10-23 03:00:00	138	Butler Library stk	103	Butler	9
-2014-10-23 03:00:00	145	Science and Engineering Library	15	Mudd	11
+2014-10-23 03:00:00	145	Science and Engineering Library	15	Northwest Corner Building	11
 2014-10-23 03:00:00	131	Butler Library 3	103	Butler	110
 2014-10-23 03:00:00	139	Lehman Library 2	79	Lehman LIbrary	5
 2014-10-23 03:00:00	144	Starr East Asian Library	62	East Asian Library	2
@@ -6782,7 +6782,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-23 03:15:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-23 03:15:00	134	Butler Library 6	103	Butler	0
 2014-10-23 03:15:00	138	Butler Library stk	103	Butler	7
-2014-10-23 03:15:00	145	Science and Engineering Library	15	Mudd	4
+2014-10-23 03:15:00	145	Science and Engineering Library	15	Northwest Corner Building	4
 2014-10-23 03:15:00	131	Butler Library 3	103	Butler	97
 2014-10-23 03:15:00	139	Lehman Library 2	79	Lehman LIbrary	5
 2014-10-23 03:15:00	144	Starr East Asian Library	62	East Asian Library	3
@@ -6794,7 +6794,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-23 03:30:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-23 03:30:00	134	Butler Library 6	103	Butler	0
 2014-10-23 03:30:00	138	Butler Library stk	103	Butler	6
-2014-10-23 03:30:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-23 03:30:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-23 03:30:00	131	Butler Library 3	103	Butler	95
 2014-10-23 03:30:00	139	Lehman Library 2	79	Lehman LIbrary	5
 2014-10-23 03:30:00	144	Starr East Asian Library	62	East Asian Library	3
@@ -6824,7 +6824,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-23 03:45:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-23 03:45:00	134	Butler Library 6	103	Butler	0
 2014-10-23 03:45:00	138	Butler Library stk	103	Butler	7
-2014-10-23 03:45:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-23 03:45:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-23 03:45:00	155	JJ's Place	75	John Jay	2
 2014-10-23 03:45:00	133	Butler Library 5	103	Butler	7
 2014-10-23 03:45:00	151	Lerner 2	84	Lerner	4
@@ -6854,7 +6854,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-23 04:00:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-23 04:00:00	134	Butler Library 6	103	Butler	0
 2014-10-23 04:00:00	138	Butler Library stk	103	Butler	5
-2014-10-23 04:00:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-23 04:00:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-23 04:15:00	155	JJ's Place	75	John Jay	2
 2014-10-23 04:15:00	133	Butler Library 5	103	Butler	7
 2014-10-23 04:15:00	151	Lerner 2	84	Lerner	4
@@ -6876,7 +6876,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-23 04:15:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-23 04:15:00	134	Butler Library 6	103	Butler	0
 2014-10-23 04:15:00	138	Butler Library stk	103	Butler	6
-2014-10-23 04:15:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-23 04:15:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-23 04:30:00	155	JJ's Place	75	John Jay	1
 2014-10-23 04:30:00	23	Uris/Watson Library	2	Uris	16
 2014-10-23 04:30:00	133	Butler Library 5	103	Butler	10
@@ -6887,7 +6887,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-23 04:30:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-23 04:30:00	134	Butler Library 6	103	Butler	0
 2014-10-23 04:30:00	138	Butler Library stk	103	Butler	4
-2014-10-23 04:30:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-23 04:30:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-23 04:30:00	131	Butler Library 3	103	Butler	67
 2014-10-23 04:30:00	139	Lehman Library 2	79	Lehman LIbrary	5
 2014-10-23 04:30:00	144	Starr East Asian Library	62	East Asian Library	4
@@ -6914,7 +6914,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-23 04:45:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-23 04:45:00	134	Butler Library 6	103	Butler	0
 2014-10-23 04:45:00	138	Butler Library stk	103	Butler	3
-2014-10-23 04:45:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-23 04:45:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-23 04:45:00	131	Butler Library 3	103	Butler	66
 2014-10-23 04:45:00	139	Lehman Library 2	79	Lehman LIbrary	5
 2014-10-23 04:45:00	144	Starr East Asian Library	62	East Asian Library	3
@@ -6942,7 +6942,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-23 05:00:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-23 05:00:00	134	Butler Library 6	103	Butler	0
 2014-10-23 05:00:00	138	Butler Library stk	103	Butler	4
-2014-10-23 05:00:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-23 05:00:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-23 05:15:00	131	Butler Library 3	103	Butler	52
 2014-10-23 05:15:00	139	Lehman Library 2	79	Lehman LIbrary	5
 2014-10-23 05:15:00	144	Starr East Asian Library	62	East Asian Library	5
@@ -6956,7 +6956,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-23 05:15:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-23 05:15:00	134	Butler Library 6	103	Butler	0
 2014-10-23 05:15:00	138	Butler Library stk	103	Butler	4
-2014-10-23 05:15:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-23 05:15:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-23 05:15:00	155	JJ's Place	75	John Jay	1
 2014-10-23 05:15:00	133	Butler Library 5	103	Butler	7
 2014-10-23 05:15:00	151	Lerner 2	84	Lerner	4
@@ -6986,7 +6986,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-23 05:30:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-23 05:30:00	134	Butler Library 6	103	Butler	0
 2014-10-23 05:30:00	138	Butler Library stk	103	Butler	2
-2014-10-23 05:30:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-23 05:30:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-23 05:45:00	154	Lerner 5	84	Lerner	1
 2014-10-23 05:45:00	125	John Jay Dining Hall	75	John Jay	1
 2014-10-23 05:45:00	147	Architectural and Fine Arts Library 1	146	Avery	1
@@ -7005,7 +7005,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-23 05:45:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-23 05:45:00	134	Butler Library 6	103	Butler	0
 2014-10-23 05:45:00	138	Butler Library stk	103	Butler	3
-2014-10-23 05:45:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-23 05:45:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-23 05:45:00	155	JJ's Place	75	John Jay	1
 2014-10-23 05:45:00	133	Butler Library 5	103	Butler	6
 2014-10-23 05:45:00	151	Lerner 2	84	Lerner	5
@@ -7022,7 +7022,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-23 06:00:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-23 06:00:00	134	Butler Library 6	103	Butler	0
 2014-10-23 06:00:00	138	Butler Library stk	103	Butler	4
-2014-10-23 06:00:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-23 06:00:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-23 06:00:00	155	JJ's Place	75	John Jay	1
 2014-10-23 06:00:00	133	Butler Library 5	103	Butler	7
 2014-10-23 06:00:00	151	Lerner 2	84	Lerner	4
@@ -7036,7 +7036,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-23 06:15:00	149	Architectural and Fine Arts Library 3	146	Avery	2
 2014-10-23 06:15:00	134	Butler Library 6	103	Butler	0
 2014-10-23 06:15:00	138	Butler Library stk	103	Butler	3
-2014-10-23 06:15:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-23 06:15:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-23 06:15:00	131	Butler Library 3	103	Butler	45
 2014-10-23 06:15:00	139	Lehman Library 2	79	Lehman LIbrary	4
 2014-10-23 06:15:00	144	Starr East Asian Library	62	East Asian Library	2
@@ -7068,7 +7068,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-23 06:30:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-23 06:30:00	134	Butler Library 6	103	Butler	0
 2014-10-23 06:30:00	138	Butler Library stk	103	Butler	3
-2014-10-23 06:30:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-23 06:30:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-23 06:30:00	131	Butler Library 3	103	Butler	42
 2014-10-23 06:30:00	139	Lehman Library 2	79	Lehman LIbrary	5
 2014-10-23 06:30:00	144	Starr East Asian Library	62	East Asian Library	1
@@ -7080,7 +7080,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-23 06:45:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-23 06:45:00	134	Butler Library 6	103	Butler	0
 2014-10-23 06:45:00	138	Butler Library stk	103	Butler	4
-2014-10-23 06:45:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-23 06:45:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-23 06:45:00	155	JJ's Place	75	John Jay	1
 2014-10-23 06:45:00	133	Butler Library 5	103	Butler	7
 2014-10-23 06:45:00	151	Lerner 2	84	Lerner	7
@@ -7118,7 +7118,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-23 07:00:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-23 07:00:00	134	Butler Library 6	103	Butler	1
 2014-10-23 07:00:00	138	Butler Library stk	103	Butler	2
-2014-10-23 07:00:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-23 07:00:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-23 07:15:00	131	Butler Library 3	103	Butler	40
 2014-10-23 07:15:00	139	Lehman Library 2	79	Lehman LIbrary	5
 2014-10-23 07:15:00	144	Starr East Asian Library	62	East Asian Library	3
@@ -7132,7 +7132,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-23 07:15:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-23 07:15:00	134	Butler Library 6	103	Butler	1
 2014-10-23 07:15:00	138	Butler Library stk	103	Butler	0
-2014-10-23 07:15:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-23 07:15:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-23 07:15:00	155	JJ's Place	75	John Jay	2
 2014-10-23 07:15:00	133	Butler Library 5	103	Butler	8
 2014-10-23 07:15:00	151	Lerner 2	84	Lerner	10
@@ -7162,7 +7162,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-23 07:30:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-23 07:30:00	134	Butler Library 6	103	Butler	0
 2014-10-23 07:30:00	138	Butler Library stk	103	Butler	0
-2014-10-23 07:30:00	145	Science and Engineering Library	15	Mudd	0
+2014-10-23 07:30:00	145	Science and Engineering Library	15	Northwest Corner Building	0
 2014-10-23 07:45:00	155	JJ's Place	75	John Jay	3
 2014-10-23 07:45:00	23	Uris/Watson Library	2	Uris	3
 2014-10-23 07:45:00	133	Butler Library 5	103	Butler	21
@@ -7173,7 +7173,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-23 07:45:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-23 07:45:00	134	Butler Library 6	103	Butler	1
 2014-10-23 07:45:00	138	Butler Library stk	103	Butler	0
-2014-10-23 07:45:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-23 07:45:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-23 07:45:00	131	Butler Library 3	103	Butler	47
 2014-10-23 07:45:00	139	Lehman Library 2	79	Lehman LIbrary	6
 2014-10-23 07:45:00	144	Starr East Asian Library	62	East Asian Library	2
@@ -7206,13 +7206,13 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-23 08:00:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-23 08:00:00	134	Butler Library 6	103	Butler	0
 2014-10-23 08:00:00	138	Butler Library stk	103	Butler	0
-2014-10-23 08:00:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-23 08:00:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-23 08:15:00	152	Lerner 3	84	Lerner	35
 2014-10-23 08:15:00	130	Butler Library 2	103	Butler	56
 2014-10-23 08:15:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-23 08:15:00	134	Butler Library 6	103	Butler	0
 2014-10-23 08:15:00	138	Butler Library stk	103	Butler	0
-2014-10-23 08:15:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-23 08:15:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-23 08:15:00	131	Butler Library 3	103	Butler	43
 2014-10-23 08:15:00	139	Lehman Library 2	79	Lehman LIbrary	9
 2014-10-23 08:15:00	144	Starr East Asian Library	62	East Asian Library	4
@@ -7234,7 +7234,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-23 08:30:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-23 08:30:00	134	Butler Library 6	103	Butler	1
 2014-10-23 08:30:00	138	Butler Library stk	103	Butler	0
-2014-10-23 08:30:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-23 08:30:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-23 08:30:00	155	JJ's Place	75	John Jay	4
 2014-10-23 08:30:00	133	Butler Library 5	103	Butler	9
 2014-10-23 08:30:00	151	Lerner 2	84	Lerner	15
@@ -7256,7 +7256,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-23 08:45:00	149	Architectural and Fine Arts Library 3	146	Avery	6
 2014-10-23 08:45:00	134	Butler Library 6	103	Butler	1
 2014-10-23 08:45:00	138	Butler Library stk	103	Butler	2
-2014-10-23 08:45:00	145	Science and Engineering Library	15	Mudd	3
+2014-10-23 08:45:00	145	Science and Engineering Library	15	Northwest Corner Building	3
 2014-10-23 08:45:00	155	JJ's Place	75	John Jay	3
 2014-10-23 08:45:00	133	Butler Library 5	103	Butler	8
 2014-10-23 08:45:00	151	Lerner 2	84	Lerner	26
@@ -7295,7 +7295,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-23 09:00:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-23 09:00:00	134	Butler Library 6	103	Butler	1
 2014-10-23 09:00:00	138	Butler Library stk	103	Butler	2
-2014-10-23 09:00:00	145	Science and Engineering Library	15	Mudd	7
+2014-10-23 09:00:00	145	Science and Engineering Library	15	Northwest Corner Building	7
 2014-10-23 09:15:00	155	JJ's Place	75	John Jay	3
 2014-10-23 09:15:00	133	Butler Library 5	103	Butler	12
 2014-10-23 09:15:00	151	Lerner 2	84	Lerner	29
@@ -7317,7 +7317,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-23 09:15:00	149	Architectural and Fine Arts Library 3	146	Avery	4
 2014-10-23 09:15:00	134	Butler Library 6	103	Butler	8
 2014-10-23 09:15:00	138	Butler Library stk	103	Butler	2
-2014-10-23 09:15:00	145	Science and Engineering Library	15	Mudd	9
+2014-10-23 09:15:00	145	Science and Engineering Library	15	Northwest Corner Building	9
 2014-10-23 09:30:00	155	JJ's Place	75	John Jay	4
 2014-10-23 09:30:00	23	Uris/Watson Library	2	Uris	100
 2014-10-23 09:30:00	133	Butler Library 5	103	Butler	13
@@ -7328,7 +7328,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-23 09:30:00	149	Architectural and Fine Arts Library 3	146	Avery	3
 2014-10-23 09:30:00	134	Butler Library 6	103	Butler	12
 2014-10-23 09:30:00	138	Butler Library stk	103	Butler	1
-2014-10-23 09:30:00	145	Science and Engineering Library	15	Mudd	17
+2014-10-23 09:30:00	145	Science and Engineering Library	15	Northwest Corner Building	17
 2014-10-23 09:30:00	131	Butler Library 3	103	Butler	101
 2014-10-23 09:30:00	139	Lehman Library 2	79	Lehman LIbrary	25
 2014-10-23 09:30:00	144	Starr East Asian Library	62	East Asian Library	16
@@ -7361,7 +7361,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-23 09:45:00	149	Architectural and Fine Arts Library 3	146	Avery	5
 2014-10-23 09:45:00	134	Butler Library 6	103	Butler	14
 2014-10-23 09:45:00	138	Butler Library stk	103	Butler	5
-2014-10-23 09:45:00	145	Science and Engineering Library	15	Mudd	24
+2014-10-23 09:45:00	145	Science and Engineering Library	15	Northwest Corner Building	24
 2014-10-23 10:00:00	155	JJ's Place	75	John Jay	4
 2014-10-23 10:00:00	23	Uris/Watson Library	2	Uris	142
 2014-10-23 10:00:00	133	Butler Library 5	103	Butler	26
@@ -7372,7 +7372,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-23 10:00:00	149	Architectural and Fine Arts Library 3	146	Avery	8
 2014-10-23 10:00:00	134	Butler Library 6	103	Butler	14
 2014-10-23 10:00:00	138	Butler Library stk	103	Butler	7
-2014-10-23 10:00:00	145	Science and Engineering Library	15	Mudd	44
+2014-10-23 10:00:00	145	Science and Engineering Library	15	Northwest Corner Building	44
 2014-10-23 10:00:00	131	Butler Library 3	103	Butler	136
 2014-10-23 10:00:00	139	Lehman Library 2	79	Lehman LIbrary	23
 2014-10-23 10:00:00	144	Starr East Asian Library	62	East Asian Library	35
@@ -7397,7 +7397,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-23 10:15:00	149	Architectural and Fine Arts Library 3	146	Avery	6
 2014-10-23 10:15:00	134	Butler Library 6	103	Butler	24
 2014-10-23 10:15:00	138	Butler Library stk	103	Butler	12
-2014-10-23 10:15:00	145	Science and Engineering Library	15	Mudd	62
+2014-10-23 10:15:00	145	Science and Engineering Library	15	Northwest Corner Building	62
 2014-10-23 10:15:00	155	JJ's Place	75	John Jay	5
 2014-10-23 10:15:00	133	Butler Library 5	103	Butler	38
 2014-10-23 10:15:00	151	Lerner 2	84	Lerner	87
@@ -7411,7 +7411,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-23 10:30:00	149	Architectural and Fine Arts Library 3	146	Avery	38
 2014-10-23 10:30:00	134	Butler Library 6	103	Butler	31
 2014-10-23 10:30:00	138	Butler Library stk	103	Butler	7
-2014-10-23 10:30:00	145	Science and Engineering Library	15	Mudd	64
+2014-10-23 10:30:00	145	Science and Engineering Library	15	Northwest Corner Building	64
 2014-10-23 10:30:00	131	Butler Library 3	103	Butler	169
 2014-10-23 10:30:00	139	Lehman Library 2	79	Lehman LIbrary	26
 2014-10-23 10:30:00	144	Starr East Asian Library	62	East Asian Library	85
@@ -7433,7 +7433,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-23 10:45:00	149	Architectural and Fine Arts Library 3	146	Avery	38
 2014-10-23 10:45:00	134	Butler Library 6	103	Butler	42
 2014-10-23 10:45:00	138	Butler Library stk	103	Butler	13
-2014-10-23 10:45:00	145	Science and Engineering Library	15	Mudd	68
+2014-10-23 10:45:00	145	Science and Engineering Library	15	Northwest Corner Building	68
 2014-10-23 10:45:00	131	Butler Library 3	103	Butler	171
 2014-10-23 10:45:00	139	Lehman Library 2	79	Lehman LIbrary	33
 2014-10-23 10:45:00	144	Starr East Asian Library	62	East Asian Library	75
@@ -7460,7 +7460,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-23 11:00:00	149	Architectural and Fine Arts Library 3	146	Avery	46
 2014-10-23 11:00:00	134	Butler Library 6	103	Butler	51
 2014-10-23 11:00:00	138	Butler Library stk	103	Butler	10
-2014-10-23 11:00:00	145	Science and Engineering Library	15	Mudd	75
+2014-10-23 11:00:00	145	Science and Engineering Library	15	Northwest Corner Building	75
 2014-10-23 11:00:00	131	Butler Library 3	103	Butler	198
 2014-10-23 11:00:00	139	Lehman Library 2	79	Lehman LIbrary	38
 2014-10-23 11:00:00	144	Starr East Asian Library	62	East Asian Library	79
@@ -7487,7 +7487,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-23 11:15:00	149	Architectural and Fine Arts Library 3	146	Avery	55
 2014-10-23 11:15:00	134	Butler Library 6	103	Butler	55
 2014-10-23 11:15:00	138	Butler Library stk	103	Butler	8
-2014-10-23 11:15:00	145	Science and Engineering Library	15	Mudd	86
+2014-10-23 11:15:00	145	Science and Engineering Library	15	Northwest Corner Building	86
 2014-10-23 11:15:00	131	Butler Library 3	103	Butler	201
 2014-10-23 11:15:00	139	Lehman Library 2	79	Lehman LIbrary	44
 2014-10-23 11:15:00	144	Starr East Asian Library	62	East Asian Library	83
@@ -7499,7 +7499,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-23 11:30:00	149	Architectural and Fine Arts Library 3	146	Avery	61
 2014-10-23 11:30:00	134	Butler Library 6	103	Butler	60
 2014-10-23 11:30:00	138	Butler Library stk	103	Butler	12
-2014-10-23 11:30:00	145	Science and Engineering Library	15	Mudd	98
+2014-10-23 11:30:00	145	Science and Engineering Library	15	Northwest Corner Building	98
 2014-10-23 11:30:00	131	Butler Library 3	103	Butler	213
 2014-10-23 11:30:00	139	Lehman Library 2	79	Lehman LIbrary	39
 2014-10-23 11:30:00	144	Starr East Asian Library	62	East Asian Library	101
@@ -7529,7 +7529,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-23 11:45:00	149	Architectural and Fine Arts Library 3	146	Avery	58
 2014-10-23 11:45:00	134	Butler Library 6	103	Butler	68
 2014-10-23 11:45:00	138	Butler Library stk	103	Butler	12
-2014-10-23 11:45:00	145	Science and Engineering Library	15	Mudd	99
+2014-10-23 11:45:00	145	Science and Engineering Library	15	Northwest Corner Building	99
 2014-10-23 11:45:00	155	JJ's Place	75	John Jay	11
 2014-10-23 11:45:00	133	Butler Library 5	103	Butler	69
 2014-10-23 11:45:00	151	Lerner 2	84	Lerner	71
@@ -7548,7 +7548,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-23 12:00:00	149	Architectural and Fine Arts Library 3	146	Avery	68
 2014-10-23 12:00:00	134	Butler Library 6	103	Butler	62
 2014-10-23 12:00:00	138	Butler Library stk	103	Butler	12
-2014-10-23 12:00:00	145	Science and Engineering Library	15	Mudd	103
+2014-10-23 12:00:00	145	Science and Engineering Library	15	Northwest Corner Building	103
 2014-10-23 12:00:00	131	Butler Library 3	103	Butler	226
 2014-10-23 12:00:00	139	Lehman Library 2	79	Lehman LIbrary	39
 2014-10-23 12:00:00	144	Starr East Asian Library	62	East Asian Library	93
@@ -7565,7 +7565,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-23 12:15:00	149	Architectural and Fine Arts Library 3	146	Avery	63
 2014-10-23 12:15:00	134	Butler Library 6	103	Butler	60
 2014-10-23 12:15:00	138	Butler Library stk	103	Butler	10
-2014-10-23 12:15:00	145	Science and Engineering Library	15	Mudd	97
+2014-10-23 12:15:00	145	Science and Engineering Library	15	Northwest Corner Building	97
 2014-10-23 12:15:00	155	JJ's Place	75	John Jay	14
 2014-10-23 12:15:00	133	Butler Library 5	103	Butler	67
 2014-10-23 12:15:00	151	Lerner 2	84	Lerner	93
@@ -7592,7 +7592,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-23 12:30:00	149	Architectural and Fine Arts Library 3	146	Avery	63
 2014-10-23 12:30:00	134	Butler Library 6	103	Butler	67
 2014-10-23 12:30:00	138	Butler Library stk	103	Butler	10
-2014-10-23 12:30:00	145	Science and Engineering Library	15	Mudd	96
+2014-10-23 12:30:00	145	Science and Engineering Library	15	Northwest Corner Building	96
 2014-10-23 12:30:00	131	Butler Library 3	103	Butler	222
 2014-10-23 12:30:00	139	Lehman Library 2	79	Lehman LIbrary	33
 2014-10-23 12:30:00	144	Starr East Asian Library	62	East Asian Library	106
@@ -7622,7 +7622,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-23 12:45:00	149	Architectural and Fine Arts Library 3	146	Avery	74
 2014-10-23 12:45:00	134	Butler Library 6	103	Butler	65
 2014-10-23 12:45:00	138	Butler Library stk	103	Butler	10
-2014-10-23 12:45:00	145	Science and Engineering Library	15	Mudd	93
+2014-10-23 12:45:00	145	Science and Engineering Library	15	Northwest Corner Building	93
 2014-10-23 12:45:00	155	JJ's Place	75	John Jay	32
 2014-10-23 12:45:00	133	Butler Library 5	103	Butler	69
 2014-10-23 12:45:00	151	Lerner 2	84	Lerner	123
@@ -7647,7 +7647,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-23 13:00:00	149	Architectural and Fine Arts Library 3	146	Avery	67
 2014-10-23 13:00:00	134	Butler Library 6	103	Butler	64
 2014-10-23 13:00:00	138	Butler Library stk	103	Butler	12
-2014-10-23 13:00:00	145	Science and Engineering Library	15	Mudd	103
+2014-10-23 13:00:00	145	Science and Engineering Library	15	Northwest Corner Building	103
 2014-10-23 13:15:00	131	Butler Library 3	103	Butler	217
 2014-10-23 13:15:00	139	Lehman Library 2	79	Lehman LIbrary	57
 2014-10-23 13:15:00	144	Starr East Asian Library	62	East Asian Library	128
@@ -7669,14 +7669,14 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-23 13:15:00	149	Architectural and Fine Arts Library 3	146	Avery	76
 2014-10-23 13:15:00	134	Butler Library 6	103	Butler	67
 2014-10-23 13:15:00	138	Butler Library stk	103	Butler	18
-2014-10-23 13:15:00	145	Science and Engineering Library	15	Mudd	102
+2014-10-23 13:15:00	145	Science and Engineering Library	15	Northwest Corner Building	102
 2014-10-23 13:30:00	152	Lerner 3	84	Lerner	158
 2014-10-23 13:30:00	130	Butler Library 2	103	Butler	392
 2014-10-23 13:30:00	149	Architectural and Fine Arts Library 3	146	Avery	70
 2014-10-23 13:30:00	134	Butler Library 6	103	Butler	66
 2014-10-23 13:30:00	138	Butler Library stk	103	Butler	24
 2014-10-23 19:15:00	152	Lerner 3	84	Lerner	127
-2014-10-23 13:30:00	145	Science and Engineering Library	15	Mudd	113
+2014-10-23 13:30:00	145	Science and Engineering Library	15	Northwest Corner Building	113
 2014-10-23 13:30:00	155	JJ's Place	75	John Jay	32
 2014-10-23 13:30:00	133	Butler Library 5	103	Butler	72
 2014-10-23 13:30:00	151	Lerner 2	84	Lerner	115
@@ -7706,7 +7706,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-23 13:45:00	149	Architectural and Fine Arts Library 3	146	Avery	70
 2014-10-23 13:45:00	134	Butler Library 6	103	Butler	80
 2014-10-23 13:45:00	138	Butler Library stk	103	Butler	19
-2014-10-23 13:45:00	145	Science and Engineering Library	15	Mudd	91
+2014-10-23 13:45:00	145	Science and Engineering Library	15	Northwest Corner Building	91
 2014-10-23 13:45:00	155	JJ's Place	75	John Jay	42
 2014-10-23 13:45:00	133	Butler Library 5	103	Butler	71
 2014-10-23 13:45:00	151	Lerner 2	84	Lerner	106
@@ -7720,7 +7720,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-23 14:00:00	149	Architectural and Fine Arts Library 3	146	Avery	77
 2014-10-23 14:00:00	134	Butler Library 6	103	Butler	83
 2014-10-23 14:00:00	138	Butler Library stk	103	Butler	17
-2014-10-23 14:00:00	145	Science and Engineering Library	15	Mudd	98
+2014-10-23 14:00:00	145	Science and Engineering Library	15	Northwest Corner Building	98
 2014-10-23 14:00:00	155	JJ's Place	75	John Jay	35
 2014-10-23 14:00:00	133	Butler Library 5	103	Butler	79
 2014-10-23 14:00:00	151	Lerner 2	84	Lerner	101
@@ -7752,7 +7752,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-23 14:15:00	149	Architectural and Fine Arts Library 3	146	Avery	73
 2014-10-23 14:15:00	134	Butler Library 6	103	Butler	95
 2014-10-23 14:15:00	138	Butler Library stk	103	Butler	22
-2014-10-23 14:15:00	145	Science and Engineering Library	15	Mudd	96
+2014-10-23 14:15:00	145	Science and Engineering Library	15	Northwest Corner Building	96
 2014-10-23 14:15:00	131	Butler Library 3	103	Butler	292
 2014-10-23 14:15:00	139	Lehman Library 2	79	Lehman LIbrary	75
 2014-10-23 14:15:00	144	Starr East Asian Library	62	East Asian Library	138
@@ -7764,7 +7764,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-23 14:30:00	149	Architectural and Fine Arts Library 3	146	Avery	77
 2014-10-23 14:30:00	134	Butler Library 6	103	Butler	86
 2014-10-23 14:30:00	138	Butler Library stk	103	Butler	22
-2014-10-23 14:30:00	145	Science and Engineering Library	15	Mudd	104
+2014-10-23 14:30:00	145	Science and Engineering Library	15	Northwest Corner Building	104
 2014-10-23 14:30:00	131	Butler Library 3	103	Butler	286
 2014-10-23 14:30:00	139	Lehman Library 2	79	Lehman LIbrary	84
 2014-10-23 14:30:00	144	Starr East Asian Library	62	East Asian Library	161
@@ -7786,7 +7786,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-23 14:45:00	149	Architectural and Fine Arts Library 3	146	Avery	74
 2014-10-23 14:45:00	134	Butler Library 6	103	Butler	87
 2014-10-23 14:45:00	138	Butler Library stk	103	Butler	22
-2014-10-23 14:45:00	145	Science and Engineering Library	15	Mudd	113
+2014-10-23 14:45:00	145	Science and Engineering Library	15	Northwest Corner Building	113
 2014-10-23 14:45:00	155	JJ's Place	75	John Jay	26
 2014-10-23 14:45:00	133	Butler Library 5	103	Butler	92
 2014-10-23 14:45:00	151	Lerner 2	84	Lerner	112
@@ -7818,7 +7818,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-23 15:00:00	149	Architectural and Fine Arts Library 3	146	Avery	94
 2014-10-23 15:00:00	134	Butler Library 6	103	Butler	103
 2014-10-23 15:00:00	138	Butler Library stk	103	Butler	22
-2014-10-23 15:00:00	145	Science and Engineering Library	15	Mudd	105
+2014-10-23 15:00:00	145	Science and Engineering Library	15	Northwest Corner Building	105
 2014-10-23 15:00:00	131	Butler Library 3	103	Butler	277
 2014-10-23 15:00:00	139	Lehman Library 2	79	Lehman LIbrary	101
 2014-10-23 15:00:00	144	Starr East Asian Library	62	East Asian Library	171
@@ -7846,13 +7846,13 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-23 15:15:00	149	Architectural and Fine Arts Library 3	146	Avery	98
 2014-10-23 15:15:00	134	Butler Library 6	103	Butler	126
 2014-10-23 15:15:00	138	Butler Library stk	103	Butler	22
-2014-10-23 15:15:00	145	Science and Engineering Library	15	Mudd	104
+2014-10-23 15:15:00	145	Science and Engineering Library	15	Northwest Corner Building	104
 2014-10-23 15:30:00	152	Lerner 3	84	Lerner	128
 2014-10-23 15:30:00	130	Butler Library 2	103	Butler	451
 2014-10-23 15:30:00	149	Architectural and Fine Arts Library 3	146	Avery	96
 2014-10-23 15:30:00	134	Butler Library 6	103	Butler	129
 2014-10-23 15:30:00	138	Butler Library stk	103	Butler	26
-2014-10-23 15:30:00	145	Science and Engineering Library	15	Mudd	105
+2014-10-23 15:30:00	145	Science and Engineering Library	15	Northwest Corner Building	105
 2014-10-23 15:30:00	131	Butler Library 3	103	Butler	314
 2014-10-23 15:30:00	139	Lehman Library 2	79	Lehman LIbrary	113
 2014-10-23 15:30:00	144	Starr East Asian Library	62	East Asian Library	156
@@ -7890,13 +7890,13 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-23 15:45:00	149	Architectural and Fine Arts Library 3	146	Avery	100
 2014-10-23 15:45:00	134	Butler Library 6	103	Butler	129
 2014-10-23 15:45:00	138	Butler Library stk	103	Butler	32
-2014-10-23 15:45:00	145	Science and Engineering Library	15	Mudd	118
+2014-10-23 15:45:00	145	Science and Engineering Library	15	Northwest Corner Building	118
 2014-10-23 16:00:00	152	Lerner 3	84	Lerner	124
 2014-10-23 16:00:00	130	Butler Library 2	103	Butler	438
 2014-10-23 16:00:00	149	Architectural and Fine Arts Library 3	146	Avery	107
 2014-10-23 16:00:00	134	Butler Library 6	103	Butler	126
 2014-10-23 16:00:00	138	Butler Library stk	103	Butler	32
-2014-10-23 16:00:00	145	Science and Engineering Library	15	Mudd	117
+2014-10-23 16:00:00	145	Science and Engineering Library	15	Northwest Corner Building	117
 2014-10-23 16:00:00	131	Butler Library 3	103	Butler	311
 2014-10-23 16:00:00	139	Lehman Library 2	79	Lehman LIbrary	114
 2014-10-23 16:00:00	144	Starr East Asian Library	62	East Asian Library	130
@@ -7923,7 +7923,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-23 16:15:00	149	Architectural and Fine Arts Library 3	146	Avery	98
 2014-10-23 16:15:00	134	Butler Library 6	103	Butler	127
 2014-10-23 16:15:00	138	Butler Library stk	103	Butler	35
-2014-10-23 16:15:00	145	Science and Engineering Library	15	Mudd	130
+2014-10-23 16:15:00	145	Science and Engineering Library	15	Northwest Corner Building	130
 2014-10-23 16:15:00	131	Butler Library 3	103	Butler	282
 2014-10-23 16:15:00	139	Lehman Library 2	79	Lehman LIbrary	97
 2014-10-23 16:15:00	144	Starr East Asian Library	62	East Asian Library	132
@@ -7945,7 +7945,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-23 16:30:00	149	Architectural and Fine Arts Library 3	146	Avery	95
 2014-10-23 16:30:00	134	Butler Library 6	103	Butler	102
 2014-10-23 16:30:00	138	Butler Library stk	103	Butler	31
-2014-10-23 16:30:00	145	Science and Engineering Library	15	Mudd	132
+2014-10-23 16:30:00	145	Science and Engineering Library	15	Northwest Corner Building	132
 2014-10-23 16:30:00	131	Butler Library 3	103	Butler	317
 2014-10-23 16:30:00	139	Lehman Library 2	79	Lehman LIbrary	104
 2014-10-23 16:30:00	144	Starr East Asian Library	62	East Asian Library	121
@@ -7975,7 +7975,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-23 16:45:00	149	Architectural and Fine Arts Library 3	146	Avery	95
 2014-10-23 16:45:00	134	Butler Library 6	103	Butler	102
 2014-10-23 16:45:00	138	Butler Library stk	103	Butler	31
-2014-10-23 16:45:00	145	Science and Engineering Library	15	Mudd	144
+2014-10-23 16:45:00	145	Science and Engineering Library	15	Northwest Corner Building	144
 2014-10-23 16:45:00	155	JJ's Place	75	John Jay	41
 2014-10-23 16:45:00	133	Butler Library 5	103	Butler	90
 2014-10-23 17:00:00	155	JJ's Place	75	John Jay	42
@@ -7988,7 +7988,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-23 17:00:00	149	Architectural and Fine Arts Library 3	146	Avery	96
 2014-10-23 17:00:00	134	Butler Library 6	103	Butler	107
 2014-10-23 17:00:00	138	Butler Library stk	103	Butler	33
-2014-10-23 17:00:00	145	Science and Engineering Library	15	Mudd	137
+2014-10-23 17:00:00	145	Science and Engineering Library	15	Northwest Corner Building	137
 2014-10-23 17:00:00	131	Butler Library 3	103	Butler	303
 2014-10-23 17:00:00	139	Lehman Library 2	79	Lehman LIbrary	110
 2014-10-23 17:00:00	144	Starr East Asian Library	62	East Asian Library	97
@@ -8005,7 +8005,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-23 17:15:00	149	Architectural and Fine Arts Library 3	146	Avery	96
 2014-10-23 17:15:00	134	Butler Library 6	103	Butler	105
 2014-10-23 17:15:00	138	Butler Library stk	103	Butler	30
-2014-10-23 17:15:00	145	Science and Engineering Library	15	Mudd	138
+2014-10-23 17:15:00	145	Science and Engineering Library	15	Northwest Corner Building	138
 2014-10-23 17:15:00	131	Butler Library 3	103	Butler	309
 2014-10-23 17:15:00	139	Lehman Library 2	79	Lehman LIbrary	110
 2014-10-23 17:15:00	144	Starr East Asian Library	62	East Asian Library	95
@@ -8032,7 +8032,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-23 17:30:00	149	Architectural and Fine Arts Library 3	146	Avery	97
 2014-10-23 17:30:00	134	Butler Library 6	103	Butler	105
 2014-10-23 17:30:00	138	Butler Library stk	103	Butler	26
-2014-10-23 17:30:00	145	Science and Engineering Library	15	Mudd	131
+2014-10-23 17:30:00	145	Science and Engineering Library	15	Northwest Corner Building	131
 2014-10-23 17:30:00	131	Butler Library 3	103	Butler	314
 2014-10-23 17:30:00	139	Lehman Library 2	79	Lehman LIbrary	111
 2014-10-23 17:30:00	144	Starr East Asian Library	62	East Asian Library	93
@@ -8049,7 +8049,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-23 17:45:00	149	Architectural and Fine Arts Library 3	146	Avery	90
 2014-10-23 17:45:00	134	Butler Library 6	103	Butler	96
 2014-10-23 17:45:00	138	Butler Library stk	103	Butler	27
-2014-10-23 17:45:00	145	Science and Engineering Library	15	Mudd	131
+2014-10-23 17:45:00	145	Science and Engineering Library	15	Northwest Corner Building	131
 2014-10-23 17:45:00	155	JJ's Place	75	John Jay	32
 2014-10-23 17:45:00	133	Butler Library 5	103	Butler	76
 2014-10-23 17:45:00	151	Lerner 2	84	Lerner	97
@@ -8087,13 +8087,13 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-23 18:00:00	149	Architectural and Fine Arts Library 3	146	Avery	76
 2014-10-23 18:00:00	134	Butler Library 6	103	Butler	86
 2014-10-23 18:00:00	138	Butler Library stk	103	Butler	24
-2014-10-23 18:00:00	145	Science and Engineering Library	15	Mudd	120
+2014-10-23 18:00:00	145	Science and Engineering Library	15	Northwest Corner Building	120
 2014-10-23 18:15:00	152	Lerner 3	84	Lerner	143
 2014-10-23 18:15:00	130	Butler Library 2	103	Butler	343
 2014-10-23 18:15:00	149	Architectural and Fine Arts Library 3	146	Avery	77
 2014-10-23 18:15:00	134	Butler Library 6	103	Butler	71
 2014-10-23 18:15:00	138	Butler Library stk	103	Butler	24
-2014-10-23 18:15:00	145	Science and Engineering Library	15	Mudd	108
+2014-10-23 18:15:00	145	Science and Engineering Library	15	Northwest Corner Building	108
 2014-10-23 18:15:00	155	JJ's Place	75	John Jay	29
 2014-10-23 18:15:00	133	Butler Library 5	103	Butler	66
 2014-10-23 18:15:00	151	Lerner 2	84	Lerner	95
@@ -8128,7 +8128,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-23 18:30:00	149	Architectural and Fine Arts Library 3	146	Avery	59
 2014-10-23 18:30:00	134	Butler Library 6	103	Butler	56
 2014-10-23 18:30:00	138	Butler Library stk	103	Butler	17
-2014-10-23 18:30:00	145	Science and Engineering Library	15	Mudd	82
+2014-10-23 18:30:00	145	Science and Engineering Library	15	Northwest Corner Building	82
 2014-10-23 18:30:00	155	JJ's Place	75	John Jay	22
 2014-10-23 18:30:00	133	Butler Library 5	103	Butler	68
 2014-10-23 18:30:00	151	Lerner 2	84	Lerner	105
@@ -8137,7 +8137,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-23 18:45:00	149	Architectural and Fine Arts Library 3	146	Avery	55
 2014-10-23 18:45:00	134	Butler Library 6	103	Butler	61
 2014-10-23 18:45:00	138	Butler Library stk	103	Butler	23
-2014-10-23 18:45:00	145	Science and Engineering Library	15	Mudd	61
+2014-10-23 18:45:00	145	Science and Engineering Library	15	Northwest Corner Building	61
 2014-10-23 18:45:00	155	JJ's Place	75	John Jay	46
 2014-10-23 18:45:00	133	Butler Library 5	103	Butler	62
 2014-10-23 18:45:00	151	Lerner 2	84	Lerner	77
@@ -8169,7 +8169,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-23 19:00:00	149	Architectural and Fine Arts Library 3	146	Avery	59
 2014-10-23 19:00:00	134	Butler Library 6	103	Butler	59
 2014-10-23 19:00:00	138	Butler Library stk	103	Butler	22
-2014-10-23 19:00:00	145	Science and Engineering Library	15	Mudd	57
+2014-10-23 19:00:00	145	Science and Engineering Library	15	Northwest Corner Building	57
 2014-10-23 19:00:00	131	Butler Library 3	103	Butler	241
 2014-10-23 19:00:00	139	Lehman Library 2	79	Lehman LIbrary	52
 2014-10-23 19:00:00	144	Starr East Asian Library	62	East Asian Library	74
@@ -8184,7 +8184,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-23 19:15:00	149	Architectural and Fine Arts Library 3	146	Avery	46
 2014-10-23 19:15:00	134	Butler Library 6	103	Butler	55
 2014-10-23 19:15:00	138	Butler Library stk	103	Butler	16
-2014-10-23 19:15:00	145	Science and Engineering Library	15	Mudd	92
+2014-10-23 19:15:00	145	Science and Engineering Library	15	Northwest Corner Building	92
 2014-10-23 19:15:00	131	Butler Library 3	103	Butler	228
 2014-10-23 19:15:00	139	Lehman Library 2	79	Lehman LIbrary	43
 2014-10-23 19:15:00	144	Starr East Asian Library	62	East Asian Library	77
@@ -8211,7 +8211,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-23 19:30:00	149	Architectural and Fine Arts Library 3	146	Avery	43
 2014-10-23 19:30:00	134	Butler Library 6	103	Butler	50
 2014-10-23 19:30:00	138	Butler Library stk	103	Butler	21
-2014-10-23 19:30:00	145	Science and Engineering Library	15	Mudd	62
+2014-10-23 19:30:00	145	Science and Engineering Library	15	Northwest Corner Building	62
 2014-10-23 19:30:00	131	Butler Library 3	103	Butler	205
 2014-10-23 19:30:00	139	Lehman Library 2	79	Lehman LIbrary	44
 2014-10-23 19:30:00	144	Starr East Asian Library	62	East Asian Library	69
@@ -8233,7 +8233,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-23 19:45:00	149	Architectural and Fine Arts Library 3	146	Avery	50
 2014-10-23 19:45:00	134	Butler Library 6	103	Butler	47
 2014-10-23 19:45:00	138	Butler Library stk	103	Butler	14
-2014-10-23 19:45:00	145	Science and Engineering Library	15	Mudd	60
+2014-10-23 19:45:00	145	Science and Engineering Library	15	Northwest Corner Building	60
 2014-10-23 19:45:00	131	Butler Library 3	103	Butler	227
 2014-10-23 19:45:00	139	Lehman Library 2	79	Lehman LIbrary	36
 2014-10-23 19:45:00	144	Starr East Asian Library	62	East Asian Library	62
@@ -8258,7 +8258,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-23 20:00:00	149	Architectural and Fine Arts Library 3	146	Avery	39
 2014-10-23 20:00:00	134	Butler Library 6	103	Butler	50
 2014-10-23 20:00:00	138	Butler Library stk	103	Butler	14
-2014-10-23 20:00:00	145	Science and Engineering Library	15	Mudd	50
+2014-10-23 20:00:00	145	Science and Engineering Library	15	Northwest Corner Building	50
 2014-10-23 20:00:00	155	JJ's Place	75	John Jay	59
 2014-10-23 20:00:00	133	Butler Library 5	103	Butler	58
 2014-10-23 20:00:00	151	Lerner 2	84	Lerner	103
@@ -8272,7 +8272,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-23 20:15:00	149	Architectural and Fine Arts Library 3	146	Avery	24
 2014-10-23 20:15:00	134	Butler Library 6	103	Butler	52
 2014-10-23 20:15:00	138	Butler Library stk	103	Butler	15
-2014-10-23 20:15:00	145	Science and Engineering Library	15	Mudd	58
+2014-10-23 20:15:00	145	Science and Engineering Library	15	Northwest Corner Building	58
 2014-10-23 20:15:00	131	Butler Library 3	103	Butler	261
 2014-10-23 20:15:00	139	Lehman Library 2	79	Lehman LIbrary	23
 2014-10-23 20:15:00	144	Starr East Asian Library	62	East Asian Library	47
@@ -8294,7 +8294,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-23 20:30:00	149	Architectural and Fine Arts Library 3	146	Avery	32
 2014-10-23 20:30:00	134	Butler Library 6	103	Butler	58
 2014-10-23 20:30:00	138	Butler Library stk	103	Butler	16
-2014-10-23 20:30:00	145	Science and Engineering Library	15	Mudd	52
+2014-10-23 20:30:00	145	Science and Engineering Library	15	Northwest Corner Building	52
 2014-10-23 20:30:00	131	Butler Library 3	103	Butler	264
 2014-10-23 20:30:00	139	Lehman Library 2	79	Lehman LIbrary	21
 2014-10-23 20:30:00	144	Starr East Asian Library	62	East Asian Library	42
@@ -8319,7 +8319,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-23 20:45:00	149	Architectural and Fine Arts Library 3	146	Avery	36
 2014-10-23 20:45:00	134	Butler Library 6	103	Butler	54
 2014-10-23 20:45:00	138	Butler Library stk	103	Butler	13
-2014-10-23 20:45:00	145	Science and Engineering Library	15	Mudd	50
+2014-10-23 20:45:00	145	Science and Engineering Library	15	Northwest Corner Building	50
 2014-10-23 20:45:00	155	JJ's Place	75	John Jay	54
 2014-10-23 20:45:00	133	Butler Library 5	103	Butler	56
 2014-10-23 20:45:00	151	Lerner 2	84	Lerner	104
@@ -8338,7 +8338,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-23 21:00:00	149	Architectural and Fine Arts Library 3	146	Avery	31
 2014-10-23 21:00:00	134	Butler Library 6	103	Butler	57
 2014-10-23 21:00:00	138	Butler Library stk	103	Butler	14
-2014-10-23 21:00:00	145	Science and Engineering Library	15	Mudd	49
+2014-10-23 21:00:00	145	Science and Engineering Library	15	Northwest Corner Building	49
 2014-10-23 21:00:00	131	Butler Library 3	103	Butler	249
 2014-10-23 21:00:00	139	Lehman Library 2	79	Lehman LIbrary	34
 2014-10-23 21:00:00	144	Starr East Asian Library	62	East Asian Library	38
@@ -8365,7 +8365,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-23 21:15:00	149	Architectural and Fine Arts Library 3	146	Avery	35
 2014-10-23 21:15:00	134	Butler Library 6	103	Butler	54
 2014-10-23 21:15:00	138	Butler Library stk	103	Butler	10
-2014-10-23 21:15:00	145	Science and Engineering Library	15	Mudd	51
+2014-10-23 21:15:00	145	Science and Engineering Library	15	Northwest Corner Building	51
 2014-10-23 21:15:00	131	Butler Library 3	103	Butler	264
 2014-10-23 21:15:00	139	Lehman Library 2	79	Lehman LIbrary	35
 2014-10-23 21:15:00	144	Starr East Asian Library	62	East Asian Library	45
@@ -8382,7 +8382,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-23 21:30:00	149	Architectural and Fine Arts Library 3	146	Avery	30
 2014-10-23 21:30:00	134	Butler Library 6	103	Butler	49
 2014-10-23 21:30:00	138	Butler Library stk	103	Butler	8
-2014-10-23 21:30:00	145	Science and Engineering Library	15	Mudd	56
+2014-10-23 21:30:00	145	Science and Engineering Library	15	Northwest Corner Building	56
 2014-10-23 21:30:00	131	Butler Library 3	103	Butler	257
 2014-10-23 21:30:00	139	Lehman Library 2	79	Lehman LIbrary	34
 2014-10-23 21:30:00	144	Starr East Asian Library	62	East Asian Library	40
@@ -8412,7 +8412,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-23 21:45:00	149	Architectural and Fine Arts Library 3	146	Avery	33
 2014-10-23 21:45:00	134	Butler Library 6	103	Butler	47
 2014-10-23 21:45:00	138	Butler Library stk	103	Butler	10
-2014-10-23 21:45:00	145	Science and Engineering Library	15	Mudd	54
+2014-10-23 21:45:00	145	Science and Engineering Library	15	Northwest Corner Building	54
 2014-10-23 21:45:00	155	JJ's Place	75	John Jay	49
 2014-10-23 21:45:00	133	Butler Library 5	103	Butler	48
 2014-10-23 21:45:00	151	Lerner 2	84	Lerner	66
@@ -8437,7 +8437,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-23 22:00:00	149	Architectural and Fine Arts Library 3	146	Avery	25
 2014-10-23 22:00:00	134	Butler Library 6	103	Butler	41
 2014-10-23 22:00:00	138	Butler Library stk	103	Butler	13
-2014-10-23 22:00:00	145	Science and Engineering Library	15	Mudd	49
+2014-10-23 22:00:00	145	Science and Engineering Library	15	Northwest Corner Building	49
 2014-10-23 22:15:00	131	Butler Library 3	103	Butler	279
 2014-10-23 22:15:00	139	Lehman Library 2	79	Lehman LIbrary	32
 2014-10-23 22:15:00	144	Starr East Asian Library	62	East Asian Library	43
@@ -8459,7 +8459,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-23 22:15:00	149	Architectural and Fine Arts Library 3	146	Avery	24
 2014-10-23 22:15:00	134	Butler Library 6	103	Butler	44
 2014-10-23 22:15:00	138	Butler Library stk	103	Butler	13
-2014-10-23 22:15:00	145	Science and Engineering Library	15	Mudd	53
+2014-10-23 22:15:00	145	Science and Engineering Library	15	Northwest Corner Building	53
 2014-10-23 22:30:00	131	Butler Library 3	103	Butler	286
 2014-10-23 22:30:00	139	Lehman Library 2	79	Lehman LIbrary	33
 2014-10-23 22:30:00	144	Starr East Asian Library	62	East Asian Library	34
@@ -8482,7 +8482,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-23 22:30:00	134	Butler Library 6	103	Butler	40
 2014-10-23 22:30:00	138	Butler Library stk	103	Butler	18
 2014-10-24 03:15:00	153	Lerner 4	84	Lerner	7
-2014-10-23 22:30:00	145	Science and Engineering Library	15	Mudd	44
+2014-10-23 22:30:00	145	Science and Engineering Library	15	Northwest Corner Building	44
 2014-10-23 22:45:00	155	JJ's Place	75	John Jay	48
 2014-10-23 22:45:00	23	Uris/Watson Library	2	Uris	71
 2014-10-23 22:45:00	133	Butler Library 5	103	Butler	28
@@ -8493,7 +8493,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-23 22:45:00	149	Architectural and Fine Arts Library 3	146	Avery	15
 2014-10-23 22:45:00	134	Butler Library 6	103	Butler	30
 2014-10-23 22:45:00	138	Butler Library stk	103	Butler	17
-2014-10-23 22:45:00	145	Science and Engineering Library	15	Mudd	36
+2014-10-23 22:45:00	145	Science and Engineering Library	15	Northwest Corner Building	36
 2014-10-23 22:45:00	131	Butler Library 3	103	Butler	261
 2014-10-23 22:45:00	139	Lehman Library 2	79	Lehman LIbrary	29
 2014-10-23 22:45:00	144	Starr East Asian Library	62	East Asian Library	28
@@ -8518,7 +8518,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-23 23:00:00	149	Architectural and Fine Arts Library 3	146	Avery	12
 2014-10-23 23:00:00	134	Butler Library 6	103	Butler	18
 2014-10-23 23:00:00	138	Butler Library stk	103	Butler	16
-2014-10-23 23:00:00	145	Science and Engineering Library	15	Mudd	40
+2014-10-23 23:00:00	145	Science and Engineering Library	15	Northwest Corner Building	40
 2014-10-23 23:00:00	155	JJ's Place	75	John Jay	41
 2014-10-23 23:00:00	133	Butler Library 5	103	Butler	24
 2014-10-23 23:00:00	151	Lerner 2	84	Lerner	101
@@ -8537,7 +8537,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-23 23:15:00	149	Architectural and Fine Arts Library 3	146	Avery	6
 2014-10-23 23:15:00	134	Butler Library 6	103	Butler	6
 2014-10-23 23:15:00	138	Butler Library stk	103	Butler	14
-2014-10-23 23:15:00	145	Science and Engineering Library	15	Mudd	38
+2014-10-23 23:15:00	145	Science and Engineering Library	15	Northwest Corner Building	38
 2014-10-23 23:15:00	131	Butler Library 3	103	Butler	265
 2014-10-23 23:15:00	139	Lehman Library 2	79	Lehman LIbrary	22
 2014-10-23 23:15:00	144	Starr East Asian Library	62	East Asian Library	22
@@ -8570,7 +8570,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-23 23:30:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-23 23:30:00	134	Butler Library 6	103	Butler	1
 2014-10-23 23:30:00	138	Butler Library stk	103	Butler	11
-2014-10-23 23:30:00	145	Science and Engineering Library	15	Mudd	39
+2014-10-23 23:30:00	145	Science and Engineering Library	15	Northwest Corner Building	39
 2014-10-23 23:45:00	131	Butler Library 3	103	Butler	245
 2014-10-23 23:45:00	139	Lehman Library 2	79	Lehman LIbrary	13
 2014-10-23 23:45:00	144	Starr East Asian Library	62	East Asian Library	1
@@ -8584,7 +8584,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-23 23:45:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-23 23:45:00	134	Butler Library 6	103	Butler	0
 2014-10-23 23:45:00	138	Butler Library stk	103	Butler	11
-2014-10-23 23:45:00	145	Science and Engineering Library	15	Mudd	38
+2014-10-23 23:45:00	145	Science and Engineering Library	15	Northwest Corner Building	38
 2014-10-23 23:45:00	155	JJ's Place	75	John Jay	53
 2014-10-23 23:45:00	133	Butler Library 5	103	Butler	10
 2014-10-23 23:45:00	151	Lerner 2	84	Lerner	53
@@ -8603,7 +8603,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-24 00:00:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-24 00:00:00	134	Butler Library 6	103	Butler	1
 2014-10-24 00:00:00	138	Butler Library stk	103	Butler	10
-2014-10-24 00:00:00	145	Science and Engineering Library	15	Mudd	34
+2014-10-24 00:00:00	145	Science and Engineering Library	15	Northwest Corner Building	34
 2014-10-24 00:00:00	131	Butler Library 3	103	Butler	239
 2014-10-24 00:00:00	139	Lehman Library 2	79	Lehman LIbrary	10
 2014-10-24 00:00:00	144	Starr East Asian Library	62	East Asian Library	5
@@ -8620,7 +8620,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-24 00:15:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-24 00:15:00	134	Butler Library 6	103	Butler	1
 2014-10-24 00:15:00	138	Butler Library stk	103	Butler	11
-2014-10-24 00:15:00	145	Science and Engineering Library	15	Mudd	41
+2014-10-24 00:15:00	145	Science and Engineering Library	15	Northwest Corner Building	41
 2014-10-24 00:15:00	131	Butler Library 3	103	Butler	220
 2014-10-24 00:15:00	139	Lehman Library 2	79	Lehman LIbrary	5
 2014-10-24 00:15:00	144	Starr East Asian Library	62	East Asian Library	0
@@ -8650,7 +8650,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-24 00:30:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-24 00:30:00	134	Butler Library 6	103	Butler	1
 2014-10-24 00:30:00	138	Butler Library stk	103	Butler	4
-2014-10-24 00:30:00	145	Science and Engineering Library	15	Mudd	36
+2014-10-24 00:30:00	145	Science and Engineering Library	15	Northwest Corner Building	36
 2014-10-24 00:30:00	155	JJ's Place	75	John Jay	51
 2014-10-24 00:30:00	133	Butler Library 5	103	Butler	13
 2014-10-24 00:30:00	151	Lerner 2	84	Lerner	53
@@ -8674,7 +8674,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-24 00:45:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-24 00:45:00	134	Butler Library 6	103	Butler	2
 2014-10-24 00:45:00	138	Butler Library stk	103	Butler	4
-2014-10-24 00:45:00	145	Science and Engineering Library	15	Mudd	37
+2014-10-24 00:45:00	145	Science and Engineering Library	15	Northwest Corner Building	37
 2014-10-24 00:45:00	131	Butler Library 3	103	Butler	186
 2014-10-24 00:45:00	139	Lehman Library 2	79	Lehman LIbrary	3
 2014-10-24 00:45:00	144	Starr East Asian Library	62	East Asian Library	1
@@ -8696,7 +8696,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-24 01:00:00	149	Architectural and Fine Arts Library 3	146	Avery	3
 2014-10-24 01:00:00	134	Butler Library 6	103	Butler	1
 2014-10-24 01:00:00	138	Butler Library stk	103	Butler	4
-2014-10-24 01:00:00	145	Science and Engineering Library	15	Mudd	27
+2014-10-24 01:00:00	145	Science and Engineering Library	15	Northwest Corner Building	27
 2014-10-24 01:00:00	131	Butler Library 3	103	Butler	152
 2014-10-24 01:00:00	139	Lehman Library 2	79	Lehman LIbrary	3
 2014-10-24 01:00:00	144	Starr East Asian Library	62	East Asian Library	0
@@ -8724,7 +8724,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-24 01:15:00	149	Architectural and Fine Arts Library 3	146	Avery	3
 2014-10-24 01:15:00	134	Butler Library 6	103	Butler	1
 2014-10-24 01:15:00	138	Butler Library stk	103	Butler	2
-2014-10-24 01:15:00	145	Science and Engineering Library	15	Mudd	20
+2014-10-24 01:15:00	145	Science and Engineering Library	15	Northwest Corner Building	20
 2014-10-24 01:30:00	155	JJ's Place	75	John Jay	18
 2014-10-24 01:30:00	133	Butler Library 5	103	Butler	10
 2014-10-24 01:30:00	151	Lerner 2	84	Lerner	14
@@ -8746,13 +8746,13 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-24 01:30:00	149	Architectural and Fine Arts Library 3	146	Avery	4
 2014-10-24 01:30:00	134	Butler Library 6	103	Butler	2
 2014-10-24 01:30:00	138	Butler Library stk	103	Butler	0
-2014-10-24 01:30:00	145	Science and Engineering Library	15	Mudd	22
+2014-10-24 01:30:00	145	Science and Engineering Library	15	Northwest Corner Building	22
 2014-10-24 01:45:00	152	Lerner 3	84	Lerner	12
 2014-10-24 01:45:00	130	Butler Library 2	103	Butler	167
 2014-10-24 01:45:00	149	Architectural and Fine Arts Library 3	146	Avery	2
 2014-10-24 01:45:00	134	Butler Library 6	103	Butler	1
 2014-10-24 01:45:00	138	Butler Library stk	103	Butler	0
-2014-10-24 01:45:00	145	Science and Engineering Library	15	Mudd	16
+2014-10-24 01:45:00	145	Science and Engineering Library	15	Northwest Corner Building	16
 2014-10-24 01:45:00	131	Butler Library 3	103	Butler	128
 2014-10-24 01:45:00	139	Lehman Library 2	79	Lehman LIbrary	3
 2014-10-24 01:45:00	144	Starr East Asian Library	62	East Asian Library	0
@@ -8774,7 +8774,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-24 02:00:00	149	Architectural and Fine Arts Library 3	146	Avery	5
 2014-10-24 02:00:00	134	Butler Library 6	103	Butler	2
 2014-10-24 02:00:00	138	Butler Library stk	103	Butler	0
-2014-10-24 02:00:00	145	Science and Engineering Library	15	Mudd	17
+2014-10-24 02:00:00	145	Science and Engineering Library	15	Northwest Corner Building	17
 2014-10-24 02:00:00	155	JJ's Place	75	John Jay	5
 2014-10-24 02:00:00	133	Butler Library 5	103	Butler	12
 2014-10-24 02:00:00	151	Lerner 2	84	Lerner	10
@@ -8809,7 +8809,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-24 02:15:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-24 02:15:00	134	Butler Library 6	103	Butler	1
 2014-10-24 02:15:00	138	Butler Library stk	103	Butler	0
-2014-10-24 02:15:00	145	Science and Engineering Library	15	Mudd	14
+2014-10-24 02:15:00	145	Science and Engineering Library	15	Northwest Corner Building	14
 2014-10-24 02:15:00	155	JJ's Place	75	John Jay	4
 2014-10-24 02:15:00	133	Butler Library 5	103	Butler	9
 2014-10-24 02:15:00	151	Lerner 2	84	Lerner	7
@@ -8826,7 +8826,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-24 02:30:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-24 02:30:00	134	Butler Library 6	103	Butler	2
 2014-10-24 02:30:00	138	Butler Library stk	103	Butler	0
-2014-10-24 02:30:00	145	Science and Engineering Library	15	Mudd	9
+2014-10-24 02:30:00	145	Science and Engineering Library	15	Northwest Corner Building	9
 2014-10-24 02:30:00	155	JJ's Place	75	John Jay	3
 2014-10-24 02:30:00	133	Butler Library 5	103	Butler	8
 2014-10-24 02:30:00	151	Lerner 2	84	Lerner	7
@@ -8840,7 +8840,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-24 02:45:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-24 02:45:00	134	Butler Library 6	103	Butler	1
 2014-10-24 02:45:00	138	Butler Library stk	103	Butler	0
-2014-10-24 02:45:00	145	Science and Engineering Library	15	Mudd	9
+2014-10-24 02:45:00	145	Science and Engineering Library	15	Northwest Corner Building	9
 2014-10-24 02:45:00	155	JJ's Place	75	John Jay	2
 2014-10-24 02:45:00	133	Butler Library 5	103	Butler	6
 2014-10-24 02:45:00	151	Lerner 2	84	Lerner	4
@@ -8862,7 +8862,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-24 03:00:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-24 03:00:00	134	Butler Library 6	103	Butler	1
 2014-10-24 03:00:00	138	Butler Library stk	103	Butler	0
-2014-10-24 03:00:00	145	Science and Engineering Library	15	Mudd	9
+2014-10-24 03:00:00	145	Science and Engineering Library	15	Northwest Corner Building	9
 2014-10-24 03:00:00	155	JJ's Place	75	John Jay	3
 2014-10-24 03:00:00	133	Butler Library 5	103	Butler	6
 2014-10-24 03:00:00	151	Lerner 2	84	Lerner	2
@@ -8891,7 +8891,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-24 03:15:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-24 03:15:00	134	Butler Library 6	103	Butler	1
 2014-10-24 03:15:00	138	Butler Library stk	103	Butler	0
-2014-10-24 03:15:00	145	Science and Engineering Library	15	Mudd	9
+2014-10-24 03:15:00	145	Science and Engineering Library	15	Northwest Corner Building	9
 2014-10-24 03:15:00	155	JJ's Place	75	John Jay	3
 2014-10-24 03:15:00	133	Butler Library 5	103	Butler	7
 2014-10-24 03:15:00	151	Lerner 2	84	Lerner	4
@@ -8921,7 +8921,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-24 03:30:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-24 03:30:00	134	Butler Library 6	103	Butler	2
 2014-10-24 03:30:00	138	Butler Library stk	103	Butler	0
-2014-10-24 03:30:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-24 03:30:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-24 03:45:00	154	Lerner 5	84	Lerner	1
 2014-10-24 03:45:00	125	John Jay Dining Hall	75	John Jay	3
 2014-10-24 03:45:00	147	Architectural and Fine Arts Library 1	146	Avery	2
@@ -8937,7 +8937,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-24 03:45:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-24 03:45:00	134	Butler Library 6	103	Butler	1
 2014-10-24 03:45:00	138	Butler Library stk	103	Butler	0
-2014-10-24 03:45:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-24 03:45:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-24 03:45:00	131	Butler Library 3	103	Butler	46
 2014-10-24 03:45:00	139	Lehman Library 2	79	Lehman LIbrary	3
 2014-10-24 03:45:00	144	Starr East Asian Library	62	East Asian Library	1
@@ -8962,7 +8962,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-24 04:00:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-24 04:00:00	134	Butler Library 6	103	Butler	1
 2014-10-24 04:00:00	138	Butler Library stk	103	Butler	0
-2014-10-24 04:00:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-24 04:00:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-24 04:00:00	155	JJ's Place	75	John Jay	1
 2014-10-24 04:00:00	133	Butler Library 5	103	Butler	4
 2014-10-24 04:00:00	151	Lerner 2	84	Lerner	4
@@ -8987,7 +8987,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-24 04:15:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-24 04:15:00	134	Butler Library 6	103	Butler	1
 2014-10-24 04:15:00	138	Butler Library stk	103	Butler	0
-2014-10-24 04:15:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-24 04:15:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-24 04:30:00	131	Butler Library 3	103	Butler	40
 2014-10-24 04:30:00	139	Lehman Library 2	79	Lehman LIbrary	3
 2014-10-24 04:30:00	144	Starr East Asian Library	62	East Asian Library	0
@@ -9009,13 +9009,13 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-24 04:30:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-24 04:30:00	134	Butler Library 6	103	Butler	1
 2014-10-24 04:30:00	138	Butler Library stk	103	Butler	0
-2014-10-24 04:30:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-24 04:30:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-24 04:45:00	152	Lerner 3	84	Lerner	4
 2014-10-24 04:45:00	130	Butler Library 2	103	Butler	56
 2014-10-24 04:45:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-24 04:45:00	134	Butler Library 6	103	Butler	0
 2014-10-24 04:45:00	138	Butler Library stk	103	Butler	0
-2014-10-24 04:45:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-24 04:45:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-24 04:45:00	131	Butler Library 3	103	Butler	35
 2014-10-24 04:45:00	139	Lehman Library 2	79	Lehman LIbrary	3
 2014-10-24 04:45:00	144	Starr East Asian Library	62	East Asian Library	0
@@ -9037,7 +9037,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-24 05:00:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-24 05:00:00	134	Butler Library 6	103	Butler	0
 2014-10-24 05:00:00	138	Butler Library stk	103	Butler	0
-2014-10-24 05:00:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-24 05:00:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-24 05:00:00	131	Butler Library 3	103	Butler	32
 2014-10-24 05:00:00	139	Lehman Library 2	79	Lehman LIbrary	3
 2014-10-24 05:00:00	144	Starr East Asian Library	62	East Asian Library	0
@@ -9075,7 +9075,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-24 05:15:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-24 05:15:00	134	Butler Library 6	103	Butler	1
 2014-10-24 05:15:00	138	Butler Library stk	103	Butler	0
-2014-10-24 05:15:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-24 05:15:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-24 05:30:00	155	JJ's Place	75	John Jay	0
 2014-10-24 05:30:00	23	Uris/Watson Library	2	Uris	0
 2014-10-24 05:30:00	133	Butler Library 5	103	Butler	0
@@ -9086,7 +9086,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-24 05:30:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-24 05:30:00	134	Butler Library 6	103	Butler	0
 2014-10-24 05:30:00	138	Butler Library stk	103	Butler	0
-2014-10-24 05:30:00	145	Science and Engineering Library	15	Mudd	0
+2014-10-24 05:30:00	145	Science and Engineering Library	15	Northwest Corner Building	0
 2014-10-24 05:30:00	131	Butler Library 3	103	Butler	0
 2014-10-24 05:30:00	139	Lehman Library 2	79	Lehman LIbrary	0
 2014-10-24 05:30:00	144	Starr East Asian Library	62	East Asian Library	0
@@ -9103,7 +9103,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-24 05:45:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-24 05:45:00	134	Butler Library 6	103	Butler	0
 2014-10-24 05:45:00	138	Butler Library stk	103	Butler	0
-2014-10-24 05:45:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-24 05:45:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-24 05:45:00	131	Butler Library 3	103	Butler	20
 2014-10-24 05:45:00	139	Lehman Library 2	79	Lehman LIbrary	3
 2014-10-24 05:45:00	144	Starr East Asian Library	62	East Asian Library	0
@@ -9125,7 +9125,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-24 06:00:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-24 06:00:00	134	Butler Library 6	103	Butler	0
 2014-10-24 06:00:00	138	Butler Library stk	103	Butler	0
-2014-10-24 06:00:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-24 06:00:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-24 06:00:00	155	JJ's Place	75	John Jay	1
 2014-10-24 06:00:00	133	Butler Library 5	103	Butler	10
 2014-10-24 06:00:00	151	Lerner 2	84	Lerner	3
@@ -9155,7 +9155,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-24 06:15:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-24 06:15:00	134	Butler Library 6	103	Butler	0
 2014-10-24 06:15:00	138	Butler Library stk	103	Butler	1
-2014-10-24 06:15:00	145	Science and Engineering Library	15	Mudd	3
+2014-10-24 06:15:00	145	Science and Engineering Library	15	Northwest Corner Building	3
 2014-10-24 06:15:00	155	JJ's Place	75	John Jay	1
 2014-10-24 06:15:00	133	Butler Library 5	103	Butler	9
 2014-10-24 06:15:00	151	Lerner 2	84	Lerner	4
@@ -9174,7 +9174,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-24 06:30:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-24 06:30:00	134	Butler Library 6	103	Butler	0
 2014-10-24 06:30:00	138	Butler Library stk	103	Butler	1
-2014-10-24 06:30:00	145	Science and Engineering Library	15	Mudd	3
+2014-10-24 06:30:00	145	Science and Engineering Library	15	Northwest Corner Building	3
 2014-10-24 06:30:00	131	Butler Library 3	103	Butler	18
 2014-10-24 06:30:00	139	Lehman Library 2	79	Lehman LIbrary	3
 2014-10-24 06:30:00	144	Starr East Asian Library	62	East Asian Library	0
@@ -9199,7 +9199,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-24 06:45:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-24 06:45:00	134	Butler Library 6	103	Butler	1
 2014-10-24 06:45:00	138	Butler Library stk	103	Butler	0
-2014-10-24 06:45:00	145	Science and Engineering Library	15	Mudd	3
+2014-10-24 06:45:00	145	Science and Engineering Library	15	Northwest Corner Building	3
 2014-10-24 06:45:00	155	JJ's Place	75	John Jay	1
 2014-10-24 06:45:00	133	Butler Library 5	103	Butler	13
 2014-10-24 06:45:00	151	Lerner 2	84	Lerner	3
@@ -9229,7 +9229,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-24 07:00:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-24 07:00:00	134	Butler Library 6	103	Butler	1
 2014-10-24 07:00:00	138	Butler Library stk	103	Butler	1
-2014-10-24 07:00:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-24 07:00:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-24 07:15:00	154	Lerner 5	84	Lerner	1
 2014-10-24 07:15:00	125	John Jay Dining Hall	75	John Jay	1
 2014-10-24 07:15:00	147	Architectural and Fine Arts Library 1	146	Avery	0
@@ -9245,7 +9245,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-24 07:15:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-24 07:15:00	134	Butler Library 6	103	Butler	0
 2014-10-24 07:15:00	138	Butler Library stk	103	Butler	0
-2014-10-24 07:15:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-24 07:15:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-24 07:15:00	131	Butler Library 3	103	Butler	11
 2014-10-24 07:15:00	139	Lehman Library 2	79	Lehman LIbrary	4
 2014-10-24 07:15:00	144	Starr East Asian Library	62	East Asian Library	1
@@ -9257,7 +9257,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-24 07:30:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-24 07:30:00	134	Butler Library 6	103	Butler	0
 2014-10-24 07:30:00	138	Butler Library stk	103	Butler	0
-2014-10-24 07:30:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-24 07:30:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-24 07:30:00	131	Butler Library 3	103	Butler	25
 2014-10-24 07:30:00	139	Lehman Library 2	79	Lehman LIbrary	9
 2014-10-24 07:30:00	144	Starr East Asian Library	62	East Asian Library	1
@@ -9289,7 +9289,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-24 07:45:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-24 07:45:00	134	Butler Library 6	103	Butler	1
 2014-10-24 07:45:00	138	Butler Library stk	103	Butler	0
-2014-10-24 07:45:00	145	Science and Engineering Library	15	Mudd	3
+2014-10-24 07:45:00	145	Science and Engineering Library	15	Northwest Corner Building	3
 2014-10-24 07:45:00	131	Butler Library 3	103	Butler	15
 2014-10-24 07:45:00	139	Lehman Library 2	79	Lehman LIbrary	12
 2014-10-24 07:45:00	144	Starr East Asian Library	62	East Asian Library	0
@@ -9317,7 +9317,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-24 08:00:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-24 08:00:00	134	Butler Library 6	103	Butler	2
 2014-10-24 08:00:00	138	Butler Library stk	103	Butler	0
-2014-10-24 08:00:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-24 08:00:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-24 08:15:00	155	JJ's Place	75	John Jay	4
 2014-10-24 08:15:00	133	Butler Library 5	103	Butler	7
 2014-10-24 08:15:00	151	Lerner 2	84	Lerner	15
@@ -9339,7 +9339,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-24 08:15:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-24 08:15:00	134	Butler Library 6	103	Butler	3
 2014-10-24 08:15:00	138	Butler Library stk	103	Butler	0
-2014-10-24 08:15:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-24 08:15:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-24 08:30:00	155	JJ's Place	75	John Jay	1
 2014-10-24 08:30:00	133	Butler Library 5	103	Butler	17
 2014-10-24 08:30:00	151	Lerner 2	84	Lerner	27
@@ -9361,7 +9361,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-24 08:30:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-24 08:30:00	134	Butler Library 6	103	Butler	0
 2014-10-24 08:30:00	138	Butler Library stk	103	Butler	1
-2014-10-24 08:30:00	145	Science and Engineering Library	15	Mudd	4
+2014-10-24 08:30:00	145	Science and Engineering Library	15	Northwest Corner Building	4
 2014-10-24 08:45:00	154	Lerner 5	84	Lerner	3
 2014-10-24 08:45:00	125	John Jay Dining Hall	75	John Jay	4
 2014-10-24 08:45:00	147	Architectural and Fine Arts Library 1	146	Avery	0
@@ -9377,7 +9377,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-24 08:45:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-24 08:45:00	134	Butler Library 6	103	Butler	1
 2014-10-24 08:45:00	138	Butler Library stk	103	Butler	1
-2014-10-24 08:45:00	145	Science and Engineering Library	15	Mudd	3
+2014-10-24 08:45:00	145	Science and Engineering Library	15	Northwest Corner Building	3
 2014-10-24 08:45:00	131	Butler Library 3	103	Butler	38
 2014-10-24 08:45:00	139	Lehman Library 2	79	Lehman LIbrary	21
 2014-10-24 08:45:00	144	Starr East Asian Library	62	East Asian Library	4
@@ -9395,7 +9395,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-24 09:00:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-24 09:00:00	134	Butler Library 6	103	Butler	1
 2014-10-24 09:00:00	138	Butler Library stk	103	Butler	1
-2014-10-24 09:00:00	145	Science and Engineering Library	15	Mudd	4
+2014-10-24 09:00:00	145	Science and Engineering Library	15	Northwest Corner Building	4
 2014-10-24 09:00:00	131	Butler Library 3	103	Butler	51
 2014-10-24 09:00:00	139	Lehman Library 2	79	Lehman LIbrary	16
 2014-10-24 09:00:00	144	Starr East Asian Library	62	East Asian Library	18
@@ -9428,7 +9428,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-24 09:15:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-24 09:15:00	134	Butler Library 6	103	Butler	1
 2014-10-24 09:15:00	138	Butler Library stk	103	Butler	2
-2014-10-24 09:15:00	145	Science and Engineering Library	15	Mudd	8
+2014-10-24 09:15:00	145	Science and Engineering Library	15	Northwest Corner Building	8
 2014-10-24 09:30:00	154	Lerner 5	84	Lerner	26
 2014-10-24 09:30:00	125	John Jay Dining Hall	75	John Jay	5
 2014-10-24 09:30:00	147	Architectural and Fine Arts Library 1	146	Avery	0
@@ -9444,7 +9444,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-24 09:30:00	149	Architectural and Fine Arts Library 3	146	Avery	2
 2014-10-24 09:30:00	134	Butler Library 6	103	Butler	16
 2014-10-24 09:30:00	138	Butler Library stk	103	Butler	5
-2014-10-24 09:30:00	145	Science and Engineering Library	15	Mudd	15
+2014-10-24 09:30:00	145	Science and Engineering Library	15	Northwest Corner Building	15
 2014-10-24 09:30:00	131	Butler Library 3	103	Butler	91
 2014-10-24 09:30:00	139	Lehman Library 2	79	Lehman LIbrary	20
 2014-10-24 09:30:00	144	Starr East Asian Library	62	East Asian Library	62
@@ -9464,7 +9464,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-24 09:45:00	149	Architectural and Fine Arts Library 3	146	Avery	6
 2014-10-24 09:45:00	134	Butler Library 6	103	Butler	10
 2014-10-24 09:45:00	138	Butler Library stk	103	Butler	6
-2014-10-24 09:45:00	145	Science and Engineering Library	15	Mudd	28
+2014-10-24 09:45:00	145	Science and Engineering Library	15	Northwest Corner Building	28
 2014-10-24 09:45:00	155	JJ's Place	75	John Jay	5
 2014-10-24 09:45:00	133	Butler Library 5	103	Butler	28
 2014-10-24 09:45:00	151	Lerner 2	84	Lerner	38
@@ -9478,7 +9478,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-24 10:00:00	149	Architectural and Fine Arts Library 3	146	Avery	7
 2014-10-24 10:00:00	134	Butler Library 6	103	Butler	23
 2014-10-24 10:00:00	138	Butler Library stk	103	Butler	8
-2014-10-24 10:00:00	145	Science and Engineering Library	15	Mudd	31
+2014-10-24 10:00:00	145	Science and Engineering Library	15	Northwest Corner Building	31
 2014-10-24 10:00:00	155	JJ's Place	75	John Jay	5
 2014-10-24 10:00:00	133	Butler Library 5	103	Butler	38
 2014-10-24 10:00:00	151	Lerner 2	84	Lerner	37
@@ -9505,7 +9505,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-24 10:15:00	149	Architectural and Fine Arts Library 3	146	Avery	12
 2014-10-24 10:15:00	134	Butler Library 6	103	Butler	25
 2014-10-24 10:15:00	138	Butler Library stk	103	Butler	7
-2014-10-24 10:15:00	145	Science and Engineering Library	15	Mudd	36
+2014-10-24 10:15:00	145	Science and Engineering Library	15	Northwest Corner Building	36
 2014-10-24 10:15:00	131	Butler Library 3	103	Butler	128
 2014-10-24 10:15:00	139	Lehman Library 2	79	Lehman LIbrary	42
 2014-10-24 10:15:00	144	Starr East Asian Library	62	East Asian Library	72
@@ -9522,7 +9522,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-24 10:30:00	149	Architectural and Fine Arts Library 3	146	Avery	15
 2014-10-24 10:30:00	134	Butler Library 6	103	Butler	32
 2014-10-24 10:30:00	138	Butler Library stk	103	Butler	6
-2014-10-24 10:30:00	145	Science and Engineering Library	15	Mudd	33
+2014-10-24 10:30:00	145	Science and Engineering Library	15	Northwest Corner Building	33
 2014-10-24 10:30:00	131	Butler Library 3	103	Butler	165
 2014-10-24 10:30:00	139	Lehman Library 2	79	Lehman LIbrary	43
 2014-10-24 10:30:00	144	Starr East Asian Library	62	East Asian Library	69
@@ -9552,7 +9552,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-24 10:45:00	149	Architectural and Fine Arts Library 3	146	Avery	26
 2014-10-24 10:45:00	134	Butler Library 6	103	Butler	36
 2014-10-24 10:45:00	138	Butler Library stk	103	Butler	4
-2014-10-24 10:45:00	145	Science and Engineering Library	15	Mudd	55
+2014-10-24 10:45:00	145	Science and Engineering Library	15	Northwest Corner Building	55
 2014-10-24 10:45:00	155	JJ's Place	75	John Jay	4
 2014-10-24 10:45:00	133	Butler Library 5	103	Butler	50
 2014-10-24 10:45:00	151	Lerner 2	84	Lerner	49
@@ -9566,7 +9566,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-24 11:00:00	149	Architectural and Fine Arts Library 3	146	Avery	31
 2014-10-24 11:00:00	134	Butler Library 6	103	Butler	42
 2014-10-24 11:00:00	138	Butler Library stk	103	Butler	10
-2014-10-24 11:00:00	145	Science and Engineering Library	15	Mudd	57
+2014-10-24 11:00:00	145	Science and Engineering Library	15	Northwest Corner Building	57
 2014-10-24 11:00:00	155	JJ's Place	75	John Jay	6
 2014-10-24 11:00:00	133	Butler Library 5	103	Butler	51
 2014-10-24 11:00:00	151	Lerner 2	84	Lerner	52
@@ -9603,13 +9603,13 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-24 11:15:00	149	Architectural and Fine Arts Library 3	146	Avery	37
 2014-10-24 11:15:00	134	Butler Library 6	103	Butler	45
 2014-10-24 11:15:00	138	Butler Library stk	103	Butler	7
-2014-10-24 11:15:00	145	Science and Engineering Library	15	Mudd	63
+2014-10-24 11:15:00	145	Science and Engineering Library	15	Northwest Corner Building	63
 2014-10-24 11:30:00	152	Lerner 3	84	Lerner	83
 2014-10-24 11:30:00	130	Butler Library 2	103	Butler	224
 2014-10-24 11:30:00	149	Architectural and Fine Arts Library 3	146	Avery	37
 2014-10-24 11:30:00	134	Butler Library 6	103	Butler	45
 2014-10-24 11:30:00	138	Butler Library stk	103	Butler	7
-2014-10-24 11:30:00	145	Science and Engineering Library	15	Mudd	63
+2014-10-24 11:30:00	145	Science and Engineering Library	15	Northwest Corner Building	63
 2014-10-24 11:30:00	131	Butler Library 3	103	Butler	187
 2014-10-24 11:30:00	139	Lehman Library 2	79	Lehman LIbrary	41
 2014-10-24 11:30:00	144	Starr East Asian Library	62	East Asian Library	86
@@ -9636,7 +9636,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-24 11:45:00	149	Architectural and Fine Arts Library 3	146	Avery	47
 2014-10-24 11:45:00	134	Butler Library 6	103	Butler	40
 2014-10-24 11:45:00	138	Butler Library stk	103	Butler	10
-2014-10-24 11:45:00	145	Science and Engineering Library	15	Mudd	61
+2014-10-24 11:45:00	145	Science and Engineering Library	15	Northwest Corner Building	61
 2014-10-24 11:45:00	131	Butler Library 3	103	Butler	197
 2014-10-24 11:45:00	139	Lehman Library 2	79	Lehman LIbrary	49
 2014-10-24 11:45:00	144	Starr East Asian Library	62	East Asian Library	94
@@ -9663,7 +9663,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-24 12:00:00	149	Architectural and Fine Arts Library 3	146	Avery	68
 2014-10-24 12:00:00	134	Butler Library 6	103	Butler	48
 2014-10-24 12:00:00	138	Butler Library stk	103	Butler	8
-2014-10-24 12:00:00	145	Science and Engineering Library	15	Mudd	78
+2014-10-24 12:00:00	145	Science and Engineering Library	15	Northwest Corner Building	78
 2014-10-24 12:00:00	131	Butler Library 3	103	Butler	226
 2014-10-24 12:00:00	139	Lehman Library 2	79	Lehman LIbrary	50
 2014-10-24 12:00:00	144	Starr East Asian Library	62	East Asian Library	59
@@ -9675,7 +9675,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-24 12:15:00	149	Architectural and Fine Arts Library 3	146	Avery	58
 2014-10-24 12:15:00	134	Butler Library 6	103	Butler	49
 2014-10-24 12:15:00	138	Butler Library stk	103	Butler	13
-2014-10-24 12:15:00	145	Science and Engineering Library	15	Mudd	89
+2014-10-24 12:15:00	145	Science and Engineering Library	15	Northwest Corner Building	89
 2014-10-24 12:15:00	155	JJ's Place	75	John Jay	3
 2014-10-24 12:15:00	133	Butler Library 5	103	Butler	57
 2014-10-24 12:15:00	151	Lerner 2	84	Lerner	52
@@ -9713,7 +9713,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-24 12:30:00	149	Architectural and Fine Arts Library 3	146	Avery	66
 2014-10-24 12:30:00	134	Butler Library 6	103	Butler	56
 2014-10-24 12:30:00	138	Butler Library stk	103	Butler	12
-2014-10-24 12:30:00	145	Science and Engineering Library	15	Mudd	76
+2014-10-24 12:30:00	145	Science and Engineering Library	15	Northwest Corner Building	76
 2014-10-24 12:45:00	155	JJ's Place	75	John Jay	37
 2014-10-24 12:45:00	23	Uris/Watson Library	2	Uris	292
 2014-10-24 12:45:00	133	Butler Library 5	103	Butler	54
@@ -9724,7 +9724,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-24 12:45:00	149	Architectural and Fine Arts Library 3	146	Avery	70
 2014-10-24 12:45:00	134	Butler Library 6	103	Butler	60
 2014-10-24 12:45:00	138	Butler Library stk	103	Butler	15
-2014-10-24 12:45:00	145	Science and Engineering Library	15	Mudd	82
+2014-10-24 12:45:00	145	Science and Engineering Library	15	Northwest Corner Building	82
 2014-10-24 12:45:00	131	Butler Library 3	103	Butler	207
 2014-10-24 12:45:00	139	Lehman Library 2	79	Lehman LIbrary	49
 2014-10-24 12:45:00	144	Starr East Asian Library	62	East Asian Library	74
@@ -9746,7 +9746,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-24 13:00:00	149	Architectural and Fine Arts Library 3	146	Avery	63
 2014-10-24 13:00:00	134	Butler Library 6	103	Butler	70
 2014-10-24 13:00:00	138	Butler Library stk	103	Butler	22
-2014-10-24 13:00:00	145	Science and Engineering Library	15	Mudd	84
+2014-10-24 13:00:00	145	Science and Engineering Library	15	Northwest Corner Building	84
 2014-10-24 13:00:00	131	Butler Library 3	103	Butler	219
 2014-10-24 13:00:00	139	Lehman Library 2	79	Lehman LIbrary	48
 2014-10-24 13:00:00	144	Starr East Asian Library	62	East Asian Library	55
@@ -9773,7 +9773,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-24 13:15:00	149	Architectural and Fine Arts Library 3	146	Avery	72
 2014-10-24 13:15:00	134	Butler Library 6	103	Butler	70
 2014-10-24 13:15:00	138	Butler Library stk	103	Butler	17
-2014-10-24 13:15:00	145	Science and Engineering Library	15	Mudd	85
+2014-10-24 13:15:00	145	Science and Engineering Library	15	Northwest Corner Building	85
 2014-10-24 13:15:00	131	Butler Library 3	103	Butler	218
 2014-10-24 13:15:00	139	Lehman Library 2	79	Lehman LIbrary	42
 2014-10-24 13:15:00	144	Starr East Asian Library	62	East Asian Library	95
@@ -9793,7 +9793,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-24 13:30:00	149	Architectural and Fine Arts Library 3	146	Avery	80
 2014-10-24 13:30:00	134	Butler Library 6	103	Butler	92
 2014-10-24 13:30:00	138	Butler Library stk	103	Butler	14
-2014-10-24 13:30:00	145	Science and Engineering Library	15	Mudd	88
+2014-10-24 13:30:00	145	Science and Engineering Library	15	Northwest Corner Building	88
 2014-10-24 13:30:00	155	JJ's Place	75	John Jay	47
 2014-10-24 13:30:00	133	Butler Library 5	103	Butler	61
 2014-10-24 13:30:00	151	Lerner 2	84	Lerner	129
@@ -9820,7 +9820,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-24 13:45:00	149	Architectural and Fine Arts Library 3	146	Avery	78
 2014-10-24 13:45:00	134	Butler Library 6	103	Butler	93
 2014-10-24 13:45:00	138	Butler Library stk	103	Butler	13
-2014-10-24 13:45:00	145	Science and Engineering Library	15	Mudd	83
+2014-10-24 13:45:00	145	Science and Engineering Library	15	Northwest Corner Building	83
 2014-10-24 13:45:00	155	JJ's Place	75	John Jay	58
 2014-10-24 13:45:00	133	Butler Library 5	103	Butler	55
 2014-10-24 13:45:00	151	Lerner 2	84	Lerner	76
@@ -9839,7 +9839,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-24 14:00:00	149	Architectural and Fine Arts Library 3	146	Avery	72
 2014-10-24 14:00:00	134	Butler Library 6	103	Butler	104
 2014-10-24 14:00:00	138	Butler Library stk	103	Butler	8
-2014-10-24 14:00:00	145	Science and Engineering Library	15	Mudd	88
+2014-10-24 14:00:00	145	Science and Engineering Library	15	Northwest Corner Building	88
 2014-10-24 14:00:00	131	Butler Library 3	103	Butler	260
 2014-10-24 14:00:00	139	Lehman Library 2	79	Lehman LIbrary	54
 2014-10-24 14:00:00	144	Starr East Asian Library	62	East Asian Library	112
@@ -9861,7 +9861,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-24 14:15:00	149	Architectural and Fine Arts Library 3	146	Avery	66
 2014-10-24 14:15:00	134	Butler Library 6	103	Butler	109
 2014-10-24 14:15:00	138	Butler Library stk	103	Butler	19
-2014-10-24 14:15:00	145	Science and Engineering Library	15	Mudd	89
+2014-10-24 14:15:00	145	Science and Engineering Library	15	Northwest Corner Building	89
 2014-10-24 14:15:00	131	Butler Library 3	103	Butler	273
 2014-10-24 14:15:00	139	Lehman Library 2	79	Lehman LIbrary	45
 2014-10-24 14:15:00	144	Starr East Asian Library	62	East Asian Library	107
@@ -9886,7 +9886,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-24 14:30:00	149	Architectural and Fine Arts Library 3	146	Avery	63
 2014-10-24 14:30:00	134	Butler Library 6	103	Butler	112
 2014-10-24 14:30:00	138	Butler Library stk	103	Butler	20
-2014-10-24 14:30:00	145	Science and Engineering Library	15	Mudd	95
+2014-10-24 14:30:00	145	Science and Engineering Library	15	Northwest Corner Building	95
 2014-10-24 14:30:00	155	JJ's Place	75	John Jay	26
 2014-10-24 14:30:00	133	Butler Library 5	103	Butler	71
 2014-10-24 14:30:00	151	Lerner 2	84	Lerner	74
@@ -9911,7 +9911,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-24 14:45:00	149	Architectural and Fine Arts Library 3	146	Avery	85
 2014-10-24 14:45:00	134	Butler Library 6	103	Butler	124
 2014-10-24 14:45:00	138	Butler Library stk	103	Butler	21
-2014-10-24 14:45:00	145	Science and Engineering Library	15	Mudd	89
+2014-10-24 14:45:00	145	Science and Engineering Library	15	Northwest Corner Building	89
 2014-10-24 15:00:00	155	JJ's Place	75	John Jay	39
 2014-10-24 15:00:00	133	Butler Library 5	103	Butler	73
 2014-10-24 15:00:00	151	Lerner 2	84	Lerner	88
@@ -9933,7 +9933,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-24 15:00:00	149	Architectural and Fine Arts Library 3	146	Avery	77
 2014-10-24 15:00:00	134	Butler Library 6	103	Butler	134
 2014-10-24 15:00:00	138	Butler Library stk	103	Butler	21
-2014-10-24 15:00:00	145	Science and Engineering Library	15	Mudd	85
+2014-10-24 15:00:00	145	Science and Engineering Library	15	Northwest Corner Building	85
 2014-10-24 15:15:00	155	JJ's Place	75	John Jay	32
 2014-10-24 15:15:00	133	Butler Library 5	103	Butler	89
 2014-10-24 15:15:00	151	Lerner 2	84	Lerner	121
@@ -9955,13 +9955,13 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-24 15:15:00	149	Architectural and Fine Arts Library 3	146	Avery	77
 2014-10-24 15:15:00	134	Butler Library 6	103	Butler	136
 2014-10-24 15:15:00	138	Butler Library stk	103	Butler	25
-2014-10-24 15:15:00	145	Science and Engineering Library	15	Mudd	73
+2014-10-24 15:15:00	145	Science and Engineering Library	15	Northwest Corner Building	73
 2014-10-24 15:30:00	152	Lerner 3	84	Lerner	71
 2014-10-24 15:30:00	130	Butler Library 2	103	Butler	355
 2014-10-24 15:30:00	149	Architectural and Fine Arts Library 3	146	Avery	71
 2014-10-24 15:30:00	134	Butler Library 6	103	Butler	132
 2014-10-24 15:30:00	138	Butler Library stk	103	Butler	24
-2014-10-24 15:30:00	145	Science and Engineering Library	15	Mudd	86
+2014-10-24 15:30:00	145	Science and Engineering Library	15	Northwest Corner Building	86
 2014-10-24 15:30:00	131	Butler Library 3	103	Butler	307
 2014-10-24 15:30:00	139	Lehman Library 2	79	Lehman LIbrary	41
 2014-10-24 15:30:00	144	Starr East Asian Library	62	East Asian Library	127
@@ -9999,13 +9999,13 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-24 15:45:00	149	Architectural and Fine Arts Library 3	146	Avery	75
 2014-10-24 15:45:00	134	Butler Library 6	103	Butler	136
 2014-10-24 15:45:00	138	Butler Library stk	103	Butler	33
-2014-10-24 15:45:00	145	Science and Engineering Library	15	Mudd	86
+2014-10-24 15:45:00	145	Science and Engineering Library	15	Northwest Corner Building	86
 2014-10-24 16:00:00	152	Lerner 3	84	Lerner	76
 2014-10-24 16:00:00	130	Butler Library 2	103	Butler	392
 2014-10-24 16:00:00	149	Architectural and Fine Arts Library 3	146	Avery	86
 2014-10-24 16:00:00	134	Butler Library 6	103	Butler	130
 2014-10-24 16:00:00	138	Butler Library stk	103	Butler	35
-2014-10-24 16:00:00	145	Science and Engineering Library	15	Mudd	82
+2014-10-24 16:00:00	145	Science and Engineering Library	15	Northwest Corner Building	82
 2014-10-24 16:00:00	155	JJ's Place	75	John Jay	32
 2014-10-24 16:00:00	133	Butler Library 5	103	Butler	77
 2014-10-24 16:00:00	151	Lerner 2	84	Lerner	103
@@ -10035,7 +10035,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-24 16:15:00	149	Architectural and Fine Arts Library 3	146	Avery	89
 2014-10-24 16:15:00	134	Butler Library 6	103	Butler	131
 2014-10-24 16:15:00	138	Butler Library stk	103	Butler	25
-2014-10-24 16:15:00	145	Science and Engineering Library	15	Mudd	80
+2014-10-24 16:15:00	145	Science and Engineering Library	15	Northwest Corner Building	80
 2014-10-24 16:15:00	155	JJ's Place	75	John Jay	31
 2014-10-24 16:15:00	133	Butler Library 5	103	Butler	85
 2014-10-24 16:15:00	151	Lerner 2	84	Lerner	72
@@ -10049,7 +10049,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-24 16:30:00	149	Architectural and Fine Arts Library 3	146	Avery	103
 2014-10-24 16:30:00	134	Butler Library 6	103	Butler	135
 2014-10-24 16:30:00	138	Butler Library stk	103	Butler	34
-2014-10-24 16:30:00	145	Science and Engineering Library	15	Mudd	95
+2014-10-24 16:30:00	145	Science and Engineering Library	15	Northwest Corner Building	95
 2014-10-24 16:30:00	131	Butler Library 3	103	Butler	323
 2014-10-24 16:30:00	139	Lehman Library 2	79	Lehman LIbrary	35
 2014-10-24 16:30:00	144	Starr East Asian Library	62	East Asian Library	103
@@ -10087,14 +10087,14 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-24 16:45:00	149	Architectural and Fine Arts Library 3	146	Avery	102
 2014-10-24 16:45:00	134	Butler Library 6	103	Butler	128
 2014-10-24 16:45:00	138	Butler Library stk	103	Butler	26
-2014-10-24 16:45:00	145	Science and Engineering Library	15	Mudd	100
+2014-10-24 16:45:00	145	Science and Engineering Library	15	Northwest Corner Building	100
 2014-10-24 17:00:00	152	Lerner 3	84	Lerner	132
 2014-10-24 17:00:00	130	Butler Library 2	103	Butler	440
 2014-10-24 17:00:00	149	Architectural and Fine Arts Library 3	146	Avery	99
 2014-10-24 17:00:00	134	Butler Library 6	103	Butler	118
 2014-10-24 18:00:00	150	Lerner 1	84	Lerner	4
 2014-10-24 17:00:00	138	Butler Library stk	103	Butler	32
-2014-10-24 17:00:00	145	Science and Engineering Library	15	Mudd	101
+2014-10-24 17:00:00	145	Science and Engineering Library	15	Northwest Corner Building	101
 2014-10-24 17:00:00	131	Butler Library 3	103	Butler	318
 2014-10-24 17:00:00	139	Lehman Library 2	79	Lehman LIbrary	35
 2014-10-24 17:00:00	144	Starr East Asian Library	62	East Asian Library	84
@@ -10129,7 +10129,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-24 17:15:00	149	Architectural and Fine Arts Library 3	146	Avery	107
 2014-10-24 17:15:00	134	Butler Library 6	103	Butler	100
 2014-10-24 17:15:00	138	Butler Library stk	103	Butler	30
-2014-10-24 17:15:00	145	Science and Engineering Library	15	Mudd	90
+2014-10-24 17:15:00	145	Science and Engineering Library	15	Northwest Corner Building	90
 2014-10-24 17:15:00	155	JJ's Place	75	John Jay	24
 2014-10-24 17:15:00	133	Butler Library 5	103	Butler	95
 2014-10-24 17:15:00	151	Lerner 2	84	Lerner	61
@@ -10148,7 +10148,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-24 17:30:00	149	Architectural and Fine Arts Library 3	146	Avery	96
 2014-10-24 17:30:00	134	Butler Library 6	103	Butler	97
 2014-10-24 17:30:00	138	Butler Library stk	103	Butler	25
-2014-10-24 17:30:00	145	Science and Engineering Library	15	Mudd	77
+2014-10-24 17:30:00	145	Science and Engineering Library	15	Northwest Corner Building	77
 2014-10-24 17:30:00	131	Butler Library 3	103	Butler	307
 2014-10-24 17:30:00	139	Lehman Library 2	79	Lehman LIbrary	40
 2014-10-24 17:30:00	144	Starr East Asian Library	62	East Asian Library	82
@@ -10170,7 +10170,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-24 17:45:00	149	Architectural and Fine Arts Library 3	146	Avery	85
 2014-10-24 17:45:00	134	Butler Library 6	103	Butler	89
 2014-10-24 17:45:00	138	Butler Library stk	103	Butler	26
-2014-10-24 17:45:00	145	Science and Engineering Library	15	Mudd	82
+2014-10-24 17:45:00	145	Science and Engineering Library	15	Northwest Corner Building	82
 2014-10-24 17:45:00	131	Butler Library 3	103	Butler	289
 2014-10-24 17:45:00	139	Lehman Library 2	79	Lehman LIbrary	37
 2014-10-24 17:45:00	144	Starr East Asian Library	62	East Asian Library	88
@@ -10182,7 +10182,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-24 18:00:00	149	Architectural and Fine Arts Library 3	146	Avery	86
 2014-10-24 18:00:00	134	Butler Library 6	103	Butler	84
 2014-10-24 18:00:00	138	Butler Library stk	103	Butler	24
-2014-10-24 18:00:00	145	Science and Engineering Library	15	Mudd	86
+2014-10-24 18:00:00	145	Science and Engineering Library	15	Northwest Corner Building	86
 2014-10-24 18:00:00	131	Butler Library 3	103	Butler	272
 2014-10-24 18:00:00	139	Lehman Library 2	79	Lehman LIbrary	23
 2014-10-24 18:00:00	144	Starr East Asian Library	62	East Asian Library	61
@@ -10213,7 +10213,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-24 18:15:00	149	Architectural and Fine Arts Library 3	146	Avery	91
 2014-10-24 18:15:00	134	Butler Library 6	103	Butler	90
 2014-10-24 18:15:00	138	Butler Library stk	103	Butler	23
-2014-10-24 18:15:00	145	Science and Engineering Library	15	Mudd	75
+2014-10-24 18:15:00	145	Science and Engineering Library	15	Northwest Corner Building	75
 2014-10-24 18:15:00	131	Butler Library 3	103	Butler	261
 2014-10-24 18:15:00	139	Lehman Library 2	79	Lehman LIbrary	19
 2014-10-24 18:15:00	144	Starr East Asian Library	62	East Asian Library	78
@@ -10235,7 +10235,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-24 18:30:00	149	Architectural and Fine Arts Library 3	146	Avery	83
 2014-10-24 18:30:00	134	Butler Library 6	103	Butler	77
 2014-10-24 18:30:00	138	Butler Library stk	103	Butler	11
-2014-10-24 18:30:00	145	Science and Engineering Library	15	Mudd	77
+2014-10-24 18:30:00	145	Science and Engineering Library	15	Northwest Corner Building	77
 2014-10-24 18:30:00	131	Butler Library 3	103	Butler	237
 2014-10-24 18:30:00	139	Lehman Library 2	79	Lehman LIbrary	18
 2014-10-24 18:30:00	144	Starr East Asian Library	62	East Asian Library	54
@@ -10257,7 +10257,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-24 18:45:00	149	Architectural and Fine Arts Library 3	146	Avery	58
 2014-10-24 18:45:00	134	Butler Library 6	103	Butler	72
 2014-10-24 18:45:00	138	Butler Library stk	103	Butler	11
-2014-10-24 18:45:00	145	Science and Engineering Library	15	Mudd	75
+2014-10-24 18:45:00	145	Science and Engineering Library	15	Northwest Corner Building	75
 2014-10-24 18:45:00	131	Butler Library 3	103	Butler	241
 2014-10-24 18:45:00	139	Lehman Library 2	79	Lehman LIbrary	14
 2014-10-24 18:45:00	144	Starr East Asian Library	62	East Asian Library	53
@@ -10285,7 +10285,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-24 19:00:00	149	Architectural and Fine Arts Library 3	146	Avery	51
 2014-10-24 19:00:00	134	Butler Library 6	103	Butler	78
 2014-10-24 19:00:00	138	Butler Library stk	103	Butler	13
-2014-10-24 19:00:00	145	Science and Engineering Library	15	Mudd	70
+2014-10-24 19:00:00	145	Science and Engineering Library	15	Northwest Corner Building	70
 2014-10-24 19:15:00	155	JJ's Place	75	John Jay	54
 2014-10-24 19:15:00	23	Uris/Watson Library	2	Uris	242
 2014-10-24 19:15:00	133	Butler Library 5	103	Butler	45
@@ -10296,7 +10296,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-24 19:15:00	149	Architectural and Fine Arts Library 3	146	Avery	54
 2014-10-24 19:15:00	134	Butler Library 6	103	Butler	70
 2014-10-24 19:15:00	138	Butler Library stk	103	Butler	11
-2014-10-24 19:15:00	145	Science and Engineering Library	15	Mudd	62
+2014-10-24 19:15:00	145	Science and Engineering Library	15	Northwest Corner Building	62
 2014-10-24 19:15:00	131	Butler Library 3	103	Butler	234
 2014-10-24 19:15:00	139	Lehman Library 2	79	Lehman LIbrary	5
 2014-10-24 19:15:00	144	Starr East Asian Library	62	East Asian Library	28
@@ -10313,7 +10313,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-24 19:30:00	149	Architectural and Fine Arts Library 3	146	Avery	50
 2014-10-24 19:30:00	134	Butler Library 6	103	Butler	68
 2014-10-24 19:30:00	138	Butler Library stk	103	Butler	12
-2014-10-24 19:30:00	145	Science and Engineering Library	15	Mudd	64
+2014-10-24 19:30:00	145	Science and Engineering Library	15	Northwest Corner Building	64
 2014-10-24 19:30:00	131	Butler Library 3	103	Butler	225
 2014-10-24 19:30:00	139	Lehman Library 2	79	Lehman LIbrary	6
 2014-10-24 19:30:00	144	Starr East Asian Library	62	East Asian Library	16
@@ -10345,7 +10345,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-24 19:45:00	149	Architectural and Fine Arts Library 3	146	Avery	45
 2014-10-24 19:45:00	134	Butler Library 6	103	Butler	59
 2014-10-24 19:45:00	138	Butler Library stk	103	Butler	7
-2014-10-24 19:45:00	145	Science and Engineering Library	15	Mudd	65
+2014-10-24 19:45:00	145	Science and Engineering Library	15	Northwest Corner Building	65
 2014-10-24 19:45:00	131	Butler Library 3	103	Butler	234
 2014-10-24 19:45:00	139	Lehman Library 2	79	Lehman LIbrary	8
 2014-10-24 19:45:00	144	Starr East Asian Library	62	East Asian Library	11
@@ -10357,7 +10357,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-24 20:00:00	149	Architectural and Fine Arts Library 3	146	Avery	43
 2014-10-24 20:00:00	134	Butler Library 6	103	Butler	54
 2014-10-24 20:00:00	138	Butler Library stk	103	Butler	7
-2014-10-24 20:00:00	145	Science and Engineering Library	15	Mudd	59
+2014-10-24 20:00:00	145	Science and Engineering Library	15	Northwest Corner Building	59
 2014-10-24 20:00:00	155	JJ's Place	75	John Jay	50
 2014-10-24 20:00:00	133	Butler Library 5	103	Butler	36
 2014-10-24 20:00:00	151	Lerner 2	84	Lerner	94
@@ -10392,7 +10392,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-24 20:15:00	149	Architectural and Fine Arts Library 3	146	Avery	39
 2014-10-24 20:15:00	134	Butler Library 6	103	Butler	49
 2014-10-24 20:15:00	138	Butler Library stk	103	Butler	8
-2014-10-24 20:15:00	145	Science and Engineering Library	15	Mudd	52
+2014-10-24 20:15:00	145	Science and Engineering Library	15	Northwest Corner Building	52
 2014-10-24 20:15:00	155	JJ's Place	75	John Jay	28
 2014-10-24 20:15:00	133	Butler Library 5	103	Butler	36
 2014-10-24 20:15:00	151	Lerner 2	84	Lerner	76
@@ -10411,7 +10411,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-24 20:30:00	149	Architectural and Fine Arts Library 3	146	Avery	41
 2014-10-24 20:30:00	134	Butler Library 6	103	Butler	44
 2014-10-24 20:30:00	138	Butler Library stk	103	Butler	11
-2014-10-24 20:30:00	145	Science and Engineering Library	15	Mudd	54
+2014-10-24 20:30:00	145	Science and Engineering Library	15	Northwest Corner Building	54
 2014-10-24 20:30:00	131	Butler Library 3	103	Butler	233
 2014-10-24 20:30:00	139	Lehman Library 2	79	Lehman LIbrary	5
 2014-10-24 20:30:00	144	Starr East Asian Library	62	East Asian Library	12
@@ -10431,7 +10431,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-24 20:45:00	149	Architectural and Fine Arts Library 3	146	Avery	23
 2014-10-24 20:45:00	134	Butler Library 6	103	Butler	32
 2014-10-24 20:45:00	138	Butler Library stk	103	Butler	6
-2014-10-24 20:45:00	145	Science and Engineering Library	15	Mudd	52
+2014-10-24 20:45:00	145	Science and Engineering Library	15	Northwest Corner Building	52
 2014-10-24 20:45:00	155	JJ's Place	75	John Jay	1
 2014-10-24 20:45:00	133	Butler Library 5	103	Butler	24
 2014-10-24 20:45:00	151	Lerner 2	84	Lerner	83
@@ -10445,7 +10445,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-24 21:00:00	149	Architectural and Fine Arts Library 3	146	Avery	23
 2014-10-24 21:00:00	134	Butler Library 6	103	Butler	24
 2014-10-24 21:00:00	138	Butler Library stk	103	Butler	6
-2014-10-24 21:00:00	145	Science and Engineering Library	15	Mudd	49
+2014-10-24 21:00:00	145	Science and Engineering Library	15	Northwest Corner Building	49
 2014-10-24 21:00:00	131	Butler Library 3	103	Butler	261
 2014-10-24 21:00:00	139	Lehman Library 2	79	Lehman LIbrary	4
 2014-10-24 21:00:00	144	Starr East Asian Library	62	East Asian Library	10
@@ -10467,7 +10467,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-24 21:15:00	149	Architectural and Fine Arts Library 3	146	Avery	6
 2014-10-24 21:15:00	134	Butler Library 6	103	Butler	5
 2014-10-24 21:15:00	138	Butler Library stk	103	Butler	6
-2014-10-24 21:15:00	145	Science and Engineering Library	15	Mudd	46
+2014-10-24 21:15:00	145	Science and Engineering Library	15	Northwest Corner Building	46
 2014-10-24 21:15:00	131	Butler Library 3	103	Butler	267
 2014-10-24 21:15:00	139	Lehman Library 2	79	Lehman LIbrary	4
 2014-10-24 21:15:00	144	Starr East Asian Library	62	East Asian Library	7
@@ -10497,7 +10497,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-24 21:30:00	149	Architectural and Fine Arts Library 3	146	Avery	4
 2014-10-24 21:30:00	134	Butler Library 6	103	Butler	4
 2014-10-24 21:30:00	138	Butler Library stk	103	Butler	4
-2014-10-24 21:30:00	145	Science and Engineering Library	15	Mudd	56
+2014-10-24 21:30:00	145	Science and Engineering Library	15	Northwest Corner Building	56
 2014-10-24 21:30:00	155	JJ's Place	75	John Jay	0
 2014-10-24 21:30:00	133	Butler Library 5	103	Butler	13
 2014-10-24 21:30:00	151	Lerner 2	84	Lerner	50
@@ -10519,7 +10519,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-24 21:45:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-24 21:45:00	134	Butler Library 6	103	Butler	9
 2014-10-24 21:45:00	138	Butler Library stk	103	Butler	2
-2014-10-24 21:45:00	145	Science and Engineering Library	15	Mudd	47
+2014-10-24 21:45:00	145	Science and Engineering Library	15	Northwest Corner Building	47
 2014-10-24 21:45:00	155	JJ's Place	75	John Jay	0
 2014-10-24 21:45:00	133	Butler Library 5	103	Butler	17
 2014-10-24 21:45:00	151	Lerner 2	84	Lerner	71
@@ -10543,7 +10543,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-24 22:00:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-24 22:00:00	134	Butler Library 6	103	Butler	6
 2014-10-24 22:00:00	138	Butler Library stk	103	Butler	3
-2014-10-24 22:00:00	145	Science and Engineering Library	15	Mudd	49
+2014-10-24 22:00:00	145	Science and Engineering Library	15	Northwest Corner Building	49
 2014-10-24 22:00:00	131	Butler Library 3	103	Butler	273
 2014-10-24 22:00:00	139	Lehman Library 2	79	Lehman LIbrary	2
 2014-10-24 22:00:00	144	Starr East Asian Library	62	East Asian Library	24
@@ -10555,7 +10555,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-24 22:15:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-24 22:15:00	134	Butler Library 6	103	Butler	4
 2014-10-24 22:15:00	138	Butler Library stk	103	Butler	4
-2014-10-24 22:15:00	145	Science and Engineering Library	15	Mudd	45
+2014-10-24 22:15:00	145	Science and Engineering Library	15	Northwest Corner Building	45
 2014-10-24 22:15:00	131	Butler Library 3	103	Butler	277
 2014-10-24 22:15:00	139	Lehman Library 2	79	Lehman LIbrary	5
 2014-10-24 22:15:00	144	Starr East Asian Library	62	East Asian Library	14
@@ -10590,7 +10590,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-24 22:30:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-24 22:30:00	134	Butler Library 6	103	Butler	1
 2014-10-24 22:30:00	138	Butler Library stk	103	Butler	3
-2014-10-24 22:30:00	145	Science and Engineering Library	15	Mudd	40
+2014-10-24 22:30:00	145	Science and Engineering Library	15	Northwest Corner Building	40
 2014-10-24 22:30:00	155	JJ's Place	75	John Jay	2
 2014-10-24 22:30:00	133	Butler Library 5	103	Butler	8
 2014-10-24 22:30:00	151	Lerner 2	84	Lerner	52
@@ -10599,7 +10599,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-24 22:45:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-24 22:45:00	134	Butler Library 6	103	Butler	1
 2014-10-24 22:45:00	138	Butler Library stk	103	Butler	5
-2014-10-24 22:45:00	145	Science and Engineering Library	15	Mudd	38
+2014-10-24 22:45:00	145	Science and Engineering Library	15	Northwest Corner Building	38
 2014-10-24 22:45:00	131	Butler Library 3	103	Butler	245
 2014-10-24 22:45:00	139	Lehman Library 2	79	Lehman LIbrary	2
 2014-10-24 22:45:00	144	Starr East Asian Library	62	East Asian Library	10
@@ -10631,7 +10631,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-24 23:00:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-24 23:00:00	134	Butler Library 6	103	Butler	1
 2014-10-24 23:00:00	138	Butler Library stk	103	Butler	4
-2014-10-24 23:00:00	145	Science and Engineering Library	15	Mudd	40
+2014-10-24 23:00:00	145	Science and Engineering Library	15	Northwest Corner Building	40
 2014-10-24 23:00:00	131	Butler Library 3	103	Butler	221
 2014-10-24 23:00:00	139	Lehman Library 2	79	Lehman LIbrary	2
 2014-10-24 23:00:00	144	Starr East Asian Library	62	East Asian Library	4
@@ -10659,7 +10659,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-24 23:15:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-24 23:15:00	134	Butler Library 6	103	Butler	1
 2014-10-24 23:15:00	138	Butler Library stk	103	Butler	4
-2014-10-24 23:15:00	145	Science and Engineering Library	15	Mudd	45
+2014-10-24 23:15:00	145	Science and Engineering Library	15	Northwest Corner Building	45
 2014-10-24 23:30:00	131	Butler Library 3	103	Butler	199
 2014-10-24 23:30:00	139	Lehman Library 2	79	Lehman LIbrary	3
 2014-10-24 23:30:00	144	Starr East Asian Library	62	East Asian Library	5
@@ -10673,7 +10673,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-24 23:30:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-24 23:30:00	134	Butler Library 6	103	Butler	3
 2014-10-24 23:30:00	138	Butler Library stk	103	Butler	7
-2014-10-24 23:30:00	145	Science and Engineering Library	15	Mudd	44
+2014-10-24 23:30:00	145	Science and Engineering Library	15	Northwest Corner Building	44
 2014-10-24 23:30:00	155	JJ's Place	75	John Jay	1
 2014-10-24 23:30:00	133	Butler Library 5	103	Butler	16
 2014-10-24 23:30:00	151	Lerner 2	84	Lerner	58
@@ -10687,7 +10687,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-24 23:45:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-24 23:45:00	134	Butler Library 6	103	Butler	0
 2014-10-24 23:45:00	138	Butler Library stk	103	Butler	5
-2014-10-24 23:45:00	145	Science and Engineering Library	15	Mudd	35
+2014-10-24 23:45:00	145	Science and Engineering Library	15	Northwest Corner Building	35
 2014-10-24 23:45:00	131	Butler Library 3	103	Butler	186
 2014-10-24 23:45:00	139	Lehman Library 2	79	Lehman LIbrary	4
 2014-10-24 23:45:00	144	Starr East Asian Library	62	East Asian Library	10
@@ -10725,7 +10725,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-25 00:00:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-25 00:00:00	134	Butler Library 6	103	Butler	0
 2014-10-25 00:00:00	138	Butler Library stk	103	Butler	6
-2014-10-25 00:00:00	145	Science and Engineering Library	15	Mudd	33
+2014-10-25 00:00:00	145	Science and Engineering Library	15	Northwest Corner Building	33
 2014-10-25 00:15:00	155	JJ's Place	75	John Jay	2
 2014-10-25 00:15:00	133	Butler Library 5	103	Butler	9
 2014-10-25 00:15:00	151	Lerner 2	84	Lerner	27
@@ -10747,7 +10747,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-25 00:15:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-25 00:15:00	134	Butler Library 6	103	Butler	0
 2014-10-25 00:15:00	138	Butler Library stk	103	Butler	6
-2014-10-25 00:15:00	145	Science and Engineering Library	15	Mudd	26
+2014-10-25 00:15:00	145	Science and Engineering Library	15	Northwest Corner Building	26
 2014-10-25 00:30:00	155	JJ's Place	75	John Jay	2
 2014-10-25 00:30:00	133	Butler Library 5	103	Butler	11
 2014-10-25 00:30:00	151	Lerner 2	84	Lerner	26
@@ -10769,7 +10769,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-25 00:30:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-25 00:30:00	134	Butler Library 6	103	Butler	1
 2014-10-25 00:30:00	138	Butler Library stk	103	Butler	6
-2014-10-25 00:30:00	145	Science and Engineering Library	15	Mudd	29
+2014-10-25 00:30:00	145	Science and Engineering Library	15	Northwest Corner Building	29
 2014-10-25 00:45:00	131	Butler Library 3	103	Butler	105
 2014-10-25 00:45:00	139	Lehman Library 2	79	Lehman LIbrary	2
 2014-10-25 00:45:00	144	Starr East Asian Library	62	East Asian Library	5
@@ -10783,7 +10783,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-25 00:45:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-25 00:45:00	134	Butler Library 6	103	Butler	0
 2014-10-25 00:45:00	138	Butler Library stk	103	Butler	3
-2014-10-25 00:45:00	145	Science and Engineering Library	15	Mudd	26
+2014-10-25 00:45:00	145	Science and Engineering Library	15	Northwest Corner Building	26
 2014-10-25 00:45:00	155	JJ's Place	75	John Jay	1
 2014-10-25 00:45:00	133	Butler Library 5	103	Butler	9
 2014-10-25 00:45:00	151	Lerner 2	84	Lerner	24
@@ -10805,7 +10805,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-25 01:00:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-25 01:00:00	134	Butler Library 6	103	Butler	0
 2014-10-25 01:00:00	138	Butler Library stk	103	Butler	3
-2014-10-25 01:00:00	145	Science and Engineering Library	15	Mudd	20
+2014-10-25 01:00:00	145	Science and Engineering Library	15	Northwest Corner Building	20
 2014-10-25 01:00:00	155	JJ's Place	75	John Jay	0
 2014-10-25 01:00:00	133	Butler Library 5	103	Butler	9
 2014-10-25 01:00:00	151	Lerner 2	84	Lerner	24
@@ -10835,7 +10835,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-25 01:15:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-25 01:15:00	134	Butler Library 6	103	Butler	1
 2014-10-25 01:15:00	138	Butler Library stk	103	Butler	0
-2014-10-25 01:15:00	145	Science and Engineering Library	15	Mudd	14
+2014-10-25 01:15:00	145	Science and Engineering Library	15	Northwest Corner Building	14
 2014-10-25 01:30:00	154	Lerner 5	84	Lerner	6
 2014-10-25 01:30:00	125	John Jay Dining Hall	75	John Jay	4
 2014-10-25 01:30:00	147	Architectural and Fine Arts Library 1	146	Avery	1
@@ -10854,7 +10854,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-25 01:30:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-25 01:30:00	134	Butler Library 6	103	Butler	0
 2014-10-25 01:30:00	138	Butler Library stk	103	Butler	0
-2014-10-25 01:30:00	145	Science and Engineering Library	15	Mudd	4
+2014-10-25 01:30:00	145	Science and Engineering Library	15	Northwest Corner Building	4
 2014-10-25 01:30:00	155	JJ's Place	75	John Jay	0
 2014-10-25 01:30:00	133	Butler Library 5	103	Butler	9
 2014-10-25 01:30:00	151	Lerner 2	84	Lerner	26
@@ -10876,7 +10876,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-25 01:45:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-25 01:45:00	134	Butler Library 6	103	Butler	0
 2014-10-25 01:45:00	138	Butler Library stk	103	Butler	0
-2014-10-25 01:45:00	145	Science and Engineering Library	15	Mudd	3
+2014-10-25 01:45:00	145	Science and Engineering Library	15	Northwest Corner Building	3
 2014-10-25 01:45:00	155	JJ's Place	75	John Jay	0
 2014-10-25 01:45:00	133	Butler Library 5	103	Butler	11
 2014-10-25 01:45:00	151	Lerner 2	84	Lerner	31
@@ -10890,7 +10890,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-25 02:00:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-25 02:00:00	134	Butler Library 6	103	Butler	0
 2014-10-25 02:00:00	138	Butler Library stk	103	Butler	0
-2014-10-25 02:00:00	145	Science and Engineering Library	15	Mudd	3
+2014-10-25 02:00:00	145	Science and Engineering Library	15	Northwest Corner Building	3
 2014-10-25 02:00:00	131	Butler Library 3	103	Butler	44
 2014-10-25 02:00:00	139	Lehman Library 2	79	Lehman LIbrary	3
 2014-10-25 02:00:00	144	Starr East Asian Library	62	East Asian Library	1
@@ -10920,7 +10920,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-25 02:15:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-25 02:15:00	134	Butler Library 6	103	Butler	0
 2014-10-25 02:15:00	138	Butler Library stk	103	Butler	0
-2014-10-25 02:15:00	145	Science and Engineering Library	15	Mudd	4
+2014-10-25 02:15:00	145	Science and Engineering Library	15	Northwest Corner Building	4
 2014-10-25 02:15:00	155	JJ's Place	75	John Jay	0
 2014-10-25 02:15:00	133	Butler Library 5	103	Butler	13
 2014-10-25 02:15:00	151	Lerner 2	84	Lerner	26
@@ -10929,7 +10929,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-25 02:30:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-25 02:30:00	134	Butler Library 6	103	Butler	0
 2014-10-25 02:30:00	138	Butler Library stk	103	Butler	0
-2014-10-25 02:30:00	145	Science and Engineering Library	15	Mudd	3
+2014-10-25 02:30:00	145	Science and Engineering Library	15	Northwest Corner Building	3
 2014-10-25 02:30:00	155	JJ's Place	75	John Jay	0
 2014-10-25 02:30:00	133	Butler Library 5	103	Butler	8
 2014-10-25 02:30:00	151	Lerner 2	84	Lerner	26
@@ -10967,13 +10967,13 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-25 02:45:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-25 02:45:00	134	Butler Library 6	103	Butler	0
 2014-10-25 02:45:00	138	Butler Library stk	103	Butler	0
-2014-10-25 02:45:00	145	Science and Engineering Library	15	Mudd	3
+2014-10-25 02:45:00	145	Science and Engineering Library	15	Northwest Corner Building	3
 2014-10-25 03:00:00	152	Lerner 3	84	Lerner	19
 2014-10-25 03:00:00	130	Butler Library 2	103	Butler	52
 2014-10-25 03:00:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-25 03:00:00	134	Butler Library 6	103	Butler	0
 2014-10-25 03:00:00	138	Butler Library stk	103	Butler	0
-2014-10-25 03:00:00	145	Science and Engineering Library	15	Mudd	3
+2014-10-25 03:00:00	145	Science and Engineering Library	15	Northwest Corner Building	3
 2014-10-25 03:00:00	155	JJ's Place	75	John Jay	0
 2014-10-25 03:00:00	133	Butler Library 5	103	Butler	9
 2014-10-25 03:00:00	151	Lerner 2	84	Lerner	26
@@ -10995,7 +10995,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-25 03:15:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-25 03:15:00	134	Butler Library 6	103	Butler	0
 2014-10-25 03:15:00	138	Butler Library stk	103	Butler	0
-2014-10-25 03:15:00	145	Science and Engineering Library	15	Mudd	3
+2014-10-25 03:15:00	145	Science and Engineering Library	15	Northwest Corner Building	3
 2014-10-25 03:15:00	155	JJ's Place	75	John Jay	0
 2014-10-25 03:15:00	133	Butler Library 5	103	Butler	10
 2014-10-25 03:15:00	151	Lerner 2	84	Lerner	17
@@ -11027,7 +11027,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-25 03:30:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-25 03:30:00	134	Butler Library 6	103	Butler	0
 2014-10-25 03:30:00	138	Butler Library stk	103	Butler	1
-2014-10-25 03:30:00	145	Science and Engineering Library	15	Mudd	3
+2014-10-25 03:30:00	145	Science and Engineering Library	15	Northwest Corner Building	3
 2014-10-25 03:30:00	131	Butler Library 3	103	Butler	29
 2014-10-25 03:30:00	139	Lehman Library 2	79	Lehman LIbrary	3
 2014-10-25 03:30:00	144	Starr East Asian Library	62	East Asian Library	1
@@ -11055,7 +11055,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-25 03:45:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-25 03:45:00	134	Butler Library 6	103	Butler	0
 2014-10-25 03:45:00	138	Butler Library stk	103	Butler	0
-2014-10-25 03:45:00	145	Science and Engineering Library	15	Mudd	3
+2014-10-25 03:45:00	145	Science and Engineering Library	15	Northwest Corner Building	3
 2014-10-25 04:00:00	154	Lerner 5	84	Lerner	1
 2014-10-25 04:00:00	125	John Jay Dining Hall	75	John Jay	0
 2014-10-25 04:00:00	147	Architectural and Fine Arts Library 1	146	Avery	0
@@ -11071,7 +11071,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-25 04:00:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-25 04:00:00	134	Butler Library 6	103	Butler	0
 2014-10-25 04:00:00	138	Butler Library stk	103	Butler	0
-2014-10-25 04:00:00	145	Science and Engineering Library	15	Mudd	3
+2014-10-25 04:00:00	145	Science and Engineering Library	15	Northwest Corner Building	3
 2014-10-25 04:00:00	131	Butler Library 3	103	Butler	30
 2014-10-25 04:00:00	139	Lehman Library 2	79	Lehman LIbrary	2
 2014-10-25 04:00:00	144	Starr East Asian Library	62	East Asian Library	2
@@ -11083,7 +11083,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-25 04:15:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-25 04:15:00	134	Butler Library 6	103	Butler	0
 2014-10-25 04:15:00	138	Butler Library stk	103	Butler	0
-2014-10-25 04:15:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-25 04:15:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-25 04:15:00	131	Butler Library 3	103	Butler	26
 2014-10-25 04:15:00	139	Lehman Library 2	79	Lehman LIbrary	2
 2014-10-25 04:15:00	144	Starr East Asian Library	62	East Asian Library	1
@@ -11113,7 +11113,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-25 04:30:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-25 04:30:00	134	Butler Library 6	103	Butler	0
 2014-10-25 04:30:00	138	Butler Library stk	103	Butler	0
-2014-10-25 04:30:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-25 04:30:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-25 04:30:00	155	JJ's Place	75	John Jay	0
 2014-10-25 04:30:00	133	Butler Library 5	103	Butler	8
 2014-10-25 04:30:00	151	Lerner 2	84	Lerner	6
@@ -11132,7 +11132,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-25 04:45:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-25 04:45:00	134	Butler Library 6	103	Butler	1
 2014-10-25 04:45:00	138	Butler Library stk	103	Butler	0
-2014-10-25 04:45:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-25 04:45:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-25 04:45:00	131	Butler Library 3	103	Butler	23
 2014-10-25 04:45:00	139	Lehman Library 2	79	Lehman LIbrary	3
 2014-10-25 04:45:00	144	Starr East Asian Library	62	East Asian Library	2
@@ -11149,7 +11149,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-25 05:00:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-25 05:00:00	134	Butler Library 6	103	Butler	1
 2014-10-25 05:00:00	138	Butler Library stk	103	Butler	0
-2014-10-25 05:00:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-25 05:00:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-25 05:00:00	131	Butler Library 3	103	Butler	22
 2014-10-25 05:00:00	139	Lehman Library 2	79	Lehman LIbrary	3
 2014-10-25 05:00:00	144	Starr East Asian Library	62	East Asian Library	1
@@ -11181,7 +11181,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-25 05:15:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-25 05:15:00	134	Butler Library 6	103	Butler	0
 2014-10-25 05:15:00	138	Butler Library stk	103	Butler	0
-2014-10-25 05:15:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-25 05:15:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-25 05:15:00	131	Butler Library 3	103	Butler	25
 2014-10-25 05:15:00	139	Lehman Library 2	79	Lehman LIbrary	2
 2014-10-25 05:15:00	144	Starr East Asian Library	62	East Asian Library	1
@@ -11201,7 +11201,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-25 05:30:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-25 05:30:00	134	Butler Library 6	103	Butler	0
 2014-10-25 05:30:00	138	Butler Library stk	103	Butler	0
-2014-10-25 05:30:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-25 05:30:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-25 05:30:00	155	JJ's Place	75	John Jay	0
 2014-10-25 05:30:00	133	Butler Library 5	103	Butler	9
 2014-10-25 05:30:00	151	Lerner 2	84	Lerner	3
@@ -11228,7 +11228,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-25 05:45:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-25 05:45:00	134	Butler Library 6	103	Butler	0
 2014-10-25 05:45:00	138	Butler Library stk	103	Butler	0
-2014-10-25 05:45:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-25 05:45:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-25 05:45:00	155	JJ's Place	75	John Jay	0
 2014-10-25 05:45:00	133	Butler Library 5	103	Butler	11
 2014-10-25 05:45:00	151	Lerner 2	84	Lerner	4
@@ -11253,13 +11253,13 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-25 06:00:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-25 06:00:00	134	Butler Library 6	103	Butler	0
 2014-10-25 06:00:00	138	Butler Library stk	103	Butler	0
-2014-10-25 06:00:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-25 06:00:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-25 06:15:00	152	Lerner 3	84	Lerner	5
 2014-10-25 06:15:00	130	Butler Library 2	103	Butler	21
 2014-10-25 06:15:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-25 06:15:00	134	Butler Library 6	103	Butler	0
 2014-10-25 06:15:00	138	Butler Library stk	103	Butler	0
-2014-10-25 06:15:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-25 06:15:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-25 06:15:00	131	Butler Library 3	103	Butler	17
 2014-10-25 06:15:00	139	Lehman Library 2	79	Lehman LIbrary	3
 2014-10-25 06:15:00	144	Starr East Asian Library	62	East Asian Library	1
@@ -11294,7 +11294,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-25 06:30:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-25 06:30:00	134	Butler Library 6	103	Butler	1
 2014-10-25 06:30:00	138	Butler Library stk	103	Butler	0
-2014-10-25 06:30:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-25 06:30:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-25 06:30:00	155	JJ's Place	75	John Jay	0
 2014-10-25 06:30:00	133	Butler Library 5	103	Butler	9
 2014-10-25 06:30:00	151	Lerner 2	84	Lerner	4
@@ -11319,7 +11319,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-25 06:45:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-25 06:45:00	134	Butler Library 6	103	Butler	0
 2014-10-25 06:45:00	138	Butler Library stk	103	Butler	0
-2014-10-25 06:45:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-25 06:45:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-25 07:00:00	154	Lerner 5	84	Lerner	2
 2014-10-25 07:00:00	125	John Jay Dining Hall	75	John Jay	0
 2014-10-25 07:00:00	147	Architectural and Fine Arts Library 1	146	Avery	1
@@ -11335,7 +11335,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-25 07:00:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-25 07:00:00	134	Butler Library 6	103	Butler	0
 2014-10-25 07:00:00	138	Butler Library stk	103	Butler	0
-2014-10-25 07:00:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-25 07:00:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-25 07:00:00	131	Butler Library 3	103	Butler	15
 2014-10-25 07:00:00	139	Lehman Library 2	79	Lehman LIbrary	2
 2014-10-25 07:00:00	144	Starr East Asian Library	62	East Asian Library	1
@@ -11363,7 +11363,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-25 07:15:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-25 07:15:00	134	Butler Library 6	103	Butler	0
 2014-10-25 07:15:00	138	Butler Library stk	103	Butler	0
-2014-10-25 07:15:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-25 07:15:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-25 07:30:00	155	JJ's Place	75	John Jay	0
 2014-10-25 07:30:00	133	Butler Library 5	103	Butler	8
 2014-10-25 07:30:00	151	Lerner 2	84	Lerner	3
@@ -11385,7 +11385,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-25 07:30:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-25 07:30:00	134	Butler Library 6	103	Butler	0
 2014-10-25 07:30:00	138	Butler Library stk	103	Butler	0
-2014-10-25 07:30:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-25 07:30:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-25 07:45:00	155	JJ's Place	75	John Jay	0
 2014-10-25 07:45:00	23	Uris/Watson Library	2	Uris	0
 2014-10-25 07:45:00	133	Butler Library 5	103	Butler	8
@@ -11396,7 +11396,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-25 07:45:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-25 07:45:00	134	Butler Library 6	103	Butler	0
 2014-10-25 07:45:00	138	Butler Library stk	103	Butler	0
-2014-10-25 07:45:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-25 07:45:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-25 07:45:00	131	Butler Library 3	103	Butler	12
 2014-10-25 07:45:00	139	Lehman Library 2	79	Lehman LIbrary	3
 2014-10-25 07:45:00	144	Starr East Asian Library	62	East Asian Library	3
@@ -11429,7 +11429,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-25 08:00:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-25 08:00:00	134	Butler Library 6	103	Butler	4
 2014-10-25 08:00:00	138	Butler Library stk	103	Butler	0
-2014-10-25 08:00:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-25 08:00:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-25 08:15:00	131	Butler Library 3	103	Butler	10
 2014-10-25 08:15:00	139	Lehman Library 2	79	Lehman LIbrary	4
 2014-10-25 08:15:00	144	Starr East Asian Library	62	East Asian Library	3
@@ -11451,7 +11451,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-25 08:15:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-25 08:15:00	134	Butler Library 6	103	Butler	0
 2014-10-25 08:15:00	138	Butler Library stk	103	Butler	0
-2014-10-25 08:15:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-25 08:15:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-25 08:30:00	131	Butler Library 3	103	Butler	13
 2014-10-25 08:30:00	139	Lehman Library 2	79	Lehman LIbrary	2
 2014-10-25 08:30:00	144	Starr East Asian Library	62	East Asian Library	4
@@ -11473,7 +11473,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-25 08:30:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-25 08:30:00	134	Butler Library 6	103	Butler	1
 2014-10-25 08:30:00	138	Butler Library stk	103	Butler	0
-2014-10-25 08:30:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-25 08:30:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-25 08:45:00	154	Lerner 5	84	Lerner	8
 2014-10-25 08:45:00	125	John Jay Dining Hall	75	John Jay	0
 2014-10-25 08:45:00	147	Architectural and Fine Arts Library 1	146	Avery	1
@@ -11492,7 +11492,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-25 08:45:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-25 08:45:00	134	Butler Library 6	103	Butler	1
 2014-10-25 08:45:00	138	Butler Library stk	103	Butler	0
-2014-10-25 08:45:00	145	Science and Engineering Library	15	Mudd	7
+2014-10-25 08:45:00	145	Science and Engineering Library	15	Northwest Corner Building	7
 2014-10-25 08:45:00	155	JJ's Place	75	John Jay	0
 2014-10-25 08:45:00	133	Butler Library 5	103	Butler	9
 2014-10-25 08:45:00	151	Lerner 2	84	Lerner	10
@@ -11514,7 +11514,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-25 09:00:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-25 09:00:00	134	Butler Library 6	103	Butler	1
 2014-10-25 09:00:00	138	Butler Library stk	103	Butler	0
-2014-10-25 09:00:00	145	Science and Engineering Library	15	Mudd	6
+2014-10-25 09:00:00	145	Science and Engineering Library	15	Northwest Corner Building	6
 2014-10-25 09:00:00	155	JJ's Place	75	John Jay	1
 2014-10-25 09:00:00	133	Butler Library 5	103	Butler	8
 2014-10-25 09:00:00	151	Lerner 2	84	Lerner	13
@@ -11539,13 +11539,13 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-25 09:15:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-25 09:15:00	134	Butler Library 6	103	Butler	1
 2014-10-25 09:15:00	138	Butler Library stk	103	Butler	0
-2014-10-25 09:15:00	145	Science and Engineering Library	15	Mudd	4
+2014-10-25 09:15:00	145	Science and Engineering Library	15	Northwest Corner Building	4
 2014-10-25 09:30:00	152	Lerner 3	84	Lerner	28
 2014-10-25 09:30:00	130	Butler Library 2	103	Butler	43
 2014-10-25 09:30:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-25 09:30:00	134	Butler Library 6	103	Butler	1
 2014-10-25 09:30:00	138	Butler Library stk	103	Butler	0
-2014-10-25 09:30:00	145	Science and Engineering Library	15	Mudd	3
+2014-10-25 09:30:00	145	Science and Engineering Library	15	Northwest Corner Building	3
 2014-10-25 09:30:00	155	JJ's Place	75	John Jay	3
 2014-10-25 09:30:00	133	Butler Library 5	103	Butler	8
 2014-10-25 09:30:00	151	Lerner 2	84	Lerner	12
@@ -11572,7 +11572,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-25 09:45:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-25 09:45:00	134	Butler Library 6	103	Butler	1
 2014-10-25 09:45:00	138	Butler Library stk	103	Butler	0
-2014-10-25 09:45:00	145	Science and Engineering Library	15	Mudd	5
+2014-10-25 09:45:00	145	Science and Engineering Library	15	Northwest Corner Building	5
 2014-10-25 09:45:00	131	Butler Library 3	103	Butler	65
 2014-10-25 09:45:00	139	Lehman Library 2	79	Lehman LIbrary	4
 2014-10-25 09:45:00	144	Starr East Asian Library	62	East Asian Library	11
@@ -11605,7 +11605,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-25 10:00:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-25 10:00:00	134	Butler Library 6	103	Butler	1
 2014-10-25 10:00:00	138	Butler Library stk	103	Butler	0
-2014-10-25 10:00:00	145	Science and Engineering Library	15	Mudd	7
+2014-10-25 10:00:00	145	Science and Engineering Library	15	Northwest Corner Building	7
 2014-10-25 10:15:00	154	Lerner 5	84	Lerner	41
 2014-10-25 10:15:00	125	John Jay Dining Hall	75	John Jay	2
 2014-10-25 10:15:00	147	Architectural and Fine Arts Library 1	146	Avery	0
@@ -11624,7 +11624,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-25 10:15:00	149	Architectural and Fine Arts Library 3	146	Avery	4
 2014-10-25 10:15:00	134	Butler Library 6	103	Butler	4
 2014-10-25 10:15:00	138	Butler Library stk	103	Butler	2
-2014-10-25 10:15:00	145	Science and Engineering Library	15	Mudd	6
+2014-10-25 10:15:00	145	Science and Engineering Library	15	Northwest Corner Building	6
 2014-10-25 10:15:00	155	JJ's Place	75	John Jay	1
 2014-10-25 10:15:00	133	Butler Library 5	103	Butler	7
 2014-10-25 10:15:00	151	Lerner 2	84	Lerner	19
@@ -11649,13 +11649,13 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-25 10:30:00	149	Architectural and Fine Arts Library 3	146	Avery	9
 2014-10-25 10:30:00	134	Butler Library 6	103	Butler	5
 2014-10-25 10:30:00	138	Butler Library stk	103	Butler	3
-2014-10-25 10:30:00	145	Science and Engineering Library	15	Mudd	7
+2014-10-25 10:30:00	145	Science and Engineering Library	15	Northwest Corner Building	7
 2014-10-25 10:45:00	152	Lerner 3	84	Lerner	59
 2014-10-25 10:45:00	130	Butler Library 2	103	Butler	100
 2014-10-25 10:45:00	149	Architectural and Fine Arts Library 3	146	Avery	15
 2014-10-25 10:45:00	134	Butler Library 6	103	Butler	9
 2014-10-25 10:45:00	138	Butler Library stk	103	Butler	1
-2014-10-25 10:45:00	145	Science and Engineering Library	15	Mudd	8
+2014-10-25 10:45:00	145	Science and Engineering Library	15	Northwest Corner Building	8
 2014-10-25 10:45:00	155	JJ's Place	75	John Jay	2
 2014-10-25 10:45:00	133	Butler Library 5	103	Butler	11
 2014-10-25 10:45:00	151	Lerner 2	84	Lerner	20
@@ -11677,7 +11677,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-25 11:00:00	149	Architectural and Fine Arts Library 3	146	Avery	14
 2014-10-25 11:00:00	134	Butler Library 6	103	Butler	13
 2014-10-25 11:00:00	138	Butler Library stk	103	Butler	1
-2014-10-25 11:00:00	145	Science and Engineering Library	15	Mudd	12
+2014-10-25 11:00:00	145	Science and Engineering Library	15	Northwest Corner Building	12
 2014-10-25 11:00:00	155	JJ's Place	75	John Jay	2
 2014-10-25 11:00:00	133	Butler Library 5	103	Butler	11
 2014-10-25 11:00:00	151	Lerner 2	84	Lerner	22
@@ -11715,13 +11715,13 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-25 11:15:00	149	Architectural and Fine Arts Library 3	146	Avery	22
 2014-10-25 11:15:00	134	Butler Library 6	103	Butler	15
 2014-10-25 11:15:00	138	Butler Library stk	103	Butler	2
-2014-10-25 11:15:00	145	Science and Engineering Library	15	Mudd	24
+2014-10-25 11:15:00	145	Science and Engineering Library	15	Northwest Corner Building	24
 2014-10-25 11:30:00	152	Lerner 3	84	Lerner	83
 2014-10-25 11:30:00	130	Butler Library 2	103	Butler	149
 2014-10-25 11:30:00	149	Architectural and Fine Arts Library 3	146	Avery	26
 2014-10-25 11:30:00	134	Butler Library 6	103	Butler	20
 2014-10-25 11:30:00	138	Butler Library stk	103	Butler	1
-2014-10-25 11:30:00	145	Science and Engineering Library	15	Mudd	32
+2014-10-25 11:30:00	145	Science and Engineering Library	15	Northwest Corner Building	32
 2014-10-25 11:30:00	155	JJ's Place	75	John Jay	2
 2014-10-25 11:30:00	133	Butler Library 5	103	Butler	19
 2014-10-25 11:30:00	151	Lerner 2	84	Lerner	39
@@ -11756,7 +11756,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-25 11:45:00	149	Architectural and Fine Arts Library 3	146	Avery	26
 2014-10-25 11:45:00	134	Butler Library 6	103	Butler	22
 2014-10-25 11:45:00	138	Butler Library stk	103	Butler	3
-2014-10-25 11:45:00	145	Science and Engineering Library	15	Mudd	36
+2014-10-25 11:45:00	145	Science and Engineering Library	15	Northwest Corner Building	36
 2014-10-25 11:45:00	155	JJ's Place	75	John Jay	2
 2014-10-25 11:45:00	133	Butler Library 5	103	Butler	25
 2014-10-25 11:45:00	151	Lerner 2	84	Lerner	33
@@ -11781,13 +11781,13 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-25 12:00:00	149	Architectural and Fine Arts Library 3	146	Avery	26
 2014-10-25 12:00:00	134	Butler Library 6	103	Butler	24
 2014-10-25 12:00:00	138	Butler Library stk	103	Butler	6
-2014-10-25 12:00:00	145	Science and Engineering Library	15	Mudd	41
+2014-10-25 12:00:00	145	Science and Engineering Library	15	Northwest Corner Building	41
 2014-10-25 12:15:00	152	Lerner 3	84	Lerner	104
 2014-10-25 12:15:00	130	Butler Library 2	103	Butler	191
 2014-10-25 12:15:00	149	Architectural and Fine Arts Library 3	146	Avery	27
 2014-10-25 12:15:00	134	Butler Library 6	103	Butler	26
 2014-10-25 12:15:00	138	Butler Library stk	103	Butler	7
-2014-10-25 12:15:00	145	Science and Engineering Library	15	Mudd	43
+2014-10-25 12:15:00	145	Science and Engineering Library	15	Northwest Corner Building	43
 2014-10-25 12:15:00	155	JJ's Place	75	John Jay	2
 2014-10-25 12:15:00	133	Butler Library 5	103	Butler	26
 2014-10-25 12:15:00	151	Lerner 2	84	Lerner	38
@@ -11817,7 +11817,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-25 12:30:00	149	Architectural and Fine Arts Library 3	146	Avery	26
 2014-10-25 12:30:00	134	Butler Library 6	103	Butler	31
 2014-10-25 12:30:00	138	Butler Library stk	103	Butler	5
-2014-10-25 12:30:00	145	Science and Engineering Library	15	Mudd	46
+2014-10-25 12:30:00	145	Science and Engineering Library	15	Northwest Corner Building	46
 2014-10-25 12:30:00	155	JJ's Place	75	John Jay	19
 2014-10-25 12:30:00	133	Butler Library 5	103	Butler	28
 2014-10-25 12:30:00	151	Lerner 2	84	Lerner	41
@@ -11847,7 +11847,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-25 12:45:00	149	Architectural and Fine Arts Library 3	146	Avery	42
 2014-10-25 12:45:00	134	Butler Library 6	103	Butler	34
 2014-10-25 12:45:00	138	Butler Library stk	103	Butler	9
-2014-10-25 12:45:00	145	Science and Engineering Library	15	Mudd	53
+2014-10-25 12:45:00	145	Science and Engineering Library	15	Northwest Corner Building	53
 2014-10-25 13:00:00	155	JJ's Place	75	John Jay	23
 2014-10-25 13:00:00	23	Uris/Watson Library	2	Uris	198
 2014-10-25 13:00:00	133	Butler Library 5	103	Butler	22
@@ -11858,7 +11858,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-25 13:00:00	149	Architectural and Fine Arts Library 3	146	Avery	51
 2014-10-25 13:00:00	134	Butler Library 6	103	Butler	40
 2014-10-25 13:00:00	138	Butler Library stk	103	Butler	11
-2014-10-25 13:00:00	145	Science and Engineering Library	15	Mudd	53
+2014-10-25 13:00:00	145	Science and Engineering Library	15	Northwest Corner Building	53
 2014-10-25 13:00:00	131	Butler Library 3	103	Butler	229
 2014-10-25 13:00:00	139	Lehman Library 2	79	Lehman LIbrary	17
 2014-10-25 13:00:00	144	Starr East Asian Library	62	East Asian Library	40
@@ -11875,7 +11875,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-25 13:15:00	149	Architectural and Fine Arts Library 3	146	Avery	59
 2014-10-25 13:15:00	134	Butler Library 6	103	Butler	47
 2014-10-25 13:15:00	138	Butler Library stk	103	Butler	11
-2014-10-25 13:15:00	145	Science and Engineering Library	15	Mudd	50
+2014-10-25 13:15:00	145	Science and Engineering Library	15	Northwest Corner Building	50
 2014-10-25 13:15:00	131	Butler Library 3	103	Butler	247
 2014-10-25 13:15:00	139	Lehman Library 2	79	Lehman LIbrary	22
 2014-10-25 13:15:00	144	Starr East Asian Library	62	East Asian Library	37
@@ -11907,7 +11907,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-25 13:30:00	149	Architectural and Fine Arts Library 3	146	Avery	51
 2014-10-25 13:30:00	134	Butler Library 6	103	Butler	46
 2014-10-25 13:30:00	138	Butler Library stk	103	Butler	7
-2014-10-25 13:30:00	145	Science and Engineering Library	15	Mudd	57
+2014-10-25 13:30:00	145	Science and Engineering Library	15	Northwest Corner Building	57
 2014-10-25 13:30:00	131	Butler Library 3	103	Butler	253
 2014-10-25 13:30:00	139	Lehman Library 2	79	Lehman LIbrary	18
 2014-10-25 13:30:00	144	Starr East Asian Library	62	East Asian Library	48
@@ -11935,13 +11935,13 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-25 13:45:00	149	Architectural and Fine Arts Library 3	146	Avery	59
 2014-10-25 13:45:00	134	Butler Library 6	103	Butler	56
 2014-10-25 13:45:00	138	Butler Library stk	103	Butler	9
-2014-10-25 13:45:00	145	Science and Engineering Library	15	Mudd	50
+2014-10-25 13:45:00	145	Science and Engineering Library	15	Northwest Corner Building	50
 2014-10-25 14:00:00	152	Lerner 3	84	Lerner	90
 2014-10-25 14:00:00	130	Butler Library 2	103	Butler	268
 2014-10-25 14:00:00	149	Architectural and Fine Arts Library 3	146	Avery	58
 2014-10-25 14:00:00	134	Butler Library 6	103	Butler	59
 2014-10-25 14:00:00	138	Butler Library stk	103	Butler	9
-2014-10-25 14:00:00	145	Science and Engineering Library	15	Mudd	61
+2014-10-25 14:00:00	145	Science and Engineering Library	15	Northwest Corner Building	61
 2014-10-25 14:00:00	155	JJ's Place	75	John Jay	19
 2014-10-25 14:00:00	133	Butler Library 5	103	Butler	38
 2014-10-25 14:00:00	151	Lerner 2	84	Lerner	74
@@ -11979,7 +11979,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-25 14:15:00	149	Architectural and Fine Arts Library 3	146	Avery	52
 2014-10-25 14:15:00	134	Butler Library 6	103	Butler	56
 2014-10-25 14:15:00	138	Butler Library stk	103	Butler	8
-2014-10-25 14:15:00	145	Science and Engineering Library	15	Mudd	55
+2014-10-25 14:15:00	145	Science and Engineering Library	15	Northwest Corner Building	55
 2014-10-25 14:30:00	131	Butler Library 3	103	Butler	298
 2014-10-25 14:30:00	139	Lehman Library 2	79	Lehman LIbrary	26
 2014-10-25 14:30:00	144	Starr East Asian Library	62	East Asian Library	45
@@ -11993,7 +11993,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-25 14:30:00	149	Architectural and Fine Arts Library 3	146	Avery	63
 2014-10-25 14:30:00	134	Butler Library 6	103	Butler	61
 2014-10-25 14:30:00	138	Butler Library stk	103	Butler	14
-2014-10-25 14:30:00	145	Science and Engineering Library	15	Mudd	61
+2014-10-25 14:30:00	145	Science and Engineering Library	15	Northwest Corner Building	61
 2014-10-25 14:30:00	155	JJ's Place	75	John Jay	19
 2014-10-25 14:30:00	133	Butler Library 5	103	Butler	40
 2014-10-25 14:30:00	151	Lerner 2	84	Lerner	77
@@ -12023,7 +12023,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-25 14:45:00	149	Architectural and Fine Arts Library 3	146	Avery	58
 2014-10-25 14:45:00	134	Butler Library 6	103	Butler	71
 2014-10-25 14:45:00	138	Butler Library stk	103	Butler	14
-2014-10-25 14:45:00	145	Science and Engineering Library	15	Mudd	69
+2014-10-25 14:45:00	145	Science and Engineering Library	15	Northwest Corner Building	69
 2014-10-25 15:00:00	154	Lerner 5	84	Lerner	32
 2014-10-25 15:00:00	125	John Jay Dining Hall	75	John Jay	1
 2014-10-25 15:00:00	147	Architectural and Fine Arts Library 1	146	Avery	4
@@ -12042,7 +12042,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-25 15:00:00	149	Architectural and Fine Arts Library 3	146	Avery	70
 2014-10-25 15:00:00	134	Butler Library 6	103	Butler	74
 2014-10-25 15:00:00	138	Butler Library stk	103	Butler	11
-2014-10-25 15:00:00	145	Science and Engineering Library	15	Mudd	76
+2014-10-25 15:00:00	145	Science and Engineering Library	15	Northwest Corner Building	76
 2014-10-25 15:00:00	155	JJ's Place	75	John Jay	12
 2014-10-25 15:00:00	133	Butler Library 5	103	Butler	43
 2014-10-25 15:00:00	151	Lerner 2	84	Lerner	60
@@ -12059,7 +12059,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-25 15:15:00	149	Architectural and Fine Arts Library 3	146	Avery	63
 2014-10-25 15:15:00	134	Butler Library 6	103	Butler	88
 2014-10-25 15:15:00	138	Butler Library stk	103	Butler	8
-2014-10-25 15:15:00	145	Science and Engineering Library	15	Mudd	74
+2014-10-25 15:15:00	145	Science and Engineering Library	15	Northwest Corner Building	74
 2014-10-25 15:15:00	155	JJ's Place	75	John Jay	15
 2014-10-25 15:15:00	133	Butler Library 5	103	Butler	48
 2014-10-25 15:15:00	151	Lerner 2	84	Lerner	46
@@ -12078,7 +12078,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-25 15:30:00	149	Architectural and Fine Arts Library 3	146	Avery	73
 2014-10-25 15:30:00	134	Butler Library 6	103	Butler	89
 2014-10-25 15:30:00	138	Butler Library stk	103	Butler	19
-2014-10-25 15:30:00	145	Science and Engineering Library	15	Mudd	81
+2014-10-25 15:30:00	145	Science and Engineering Library	15	Northwest Corner Building	81
 2014-10-25 15:30:00	131	Butler Library 3	103	Butler	316
 2014-10-25 15:30:00	139	Lehman Library 2	79	Lehman LIbrary	29
 2014-10-25 15:30:00	144	Starr East Asian Library	62	East Asian Library	52
@@ -12100,7 +12100,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-25 15:45:00	149	Architectural and Fine Arts Library 3	146	Avery	75
 2014-10-25 15:45:00	134	Butler Library 6	103	Butler	92
 2014-10-25 15:45:00	138	Butler Library stk	103	Butler	17
-2014-10-25 15:45:00	145	Science and Engineering Library	15	Mudd	84
+2014-10-25 15:45:00	145	Science and Engineering Library	15	Northwest Corner Building	84
 2014-10-25 15:45:00	131	Butler Library 3	103	Butler	327
 2014-10-25 15:45:00	139	Lehman Library 2	79	Lehman LIbrary	29
 2014-10-25 15:45:00	144	Starr East Asian Library	62	East Asian Library	38
@@ -12125,7 +12125,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-25 16:00:00	149	Architectural and Fine Arts Library 3	146	Avery	68
 2014-10-25 16:00:00	134	Butler Library 6	103	Butler	105
 2014-10-25 16:00:00	138	Butler Library stk	103	Butler	12
-2014-10-25 16:00:00	145	Science and Engineering Library	15	Mudd	64
+2014-10-25 16:00:00	145	Science and Engineering Library	15	Northwest Corner Building	64
 2014-10-25 16:00:00	155	JJ's Place	75	John Jay	23
 2014-10-25 16:00:00	133	Butler Library 5	103	Butler	57
 2014-10-25 16:00:00	151	Lerner 2	84	Lerner	73
@@ -12149,7 +12149,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-25 16:15:00	149	Architectural and Fine Arts Library 3	146	Avery	76
 2014-10-25 16:15:00	134	Butler Library 6	103	Butler	96
 2014-10-25 16:15:00	138	Butler Library stk	103	Butler	15
-2014-10-25 16:15:00	145	Science and Engineering Library	15	Mudd	72
+2014-10-25 16:15:00	145	Science and Engineering Library	15	Northwest Corner Building	72
 2014-10-25 16:15:00	131	Butler Library 3	103	Butler	334
 2014-10-25 16:15:00	139	Lehman Library 2	79	Lehman LIbrary	28
 2014-10-25 16:15:00	144	Starr East Asian Library	62	East Asian Library	42
@@ -12177,7 +12177,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-25 16:30:00	149	Architectural and Fine Arts Library 3	146	Avery	72
 2014-10-25 16:30:00	134	Butler Library 6	103	Butler	100
 2014-10-25 16:30:00	138	Butler Library stk	103	Butler	14
-2014-10-25 16:30:00	145	Science and Engineering Library	15	Mudd	68
+2014-10-25 16:30:00	145	Science and Engineering Library	15	Northwest Corner Building	68
 2014-10-25 16:45:00	154	Lerner 5	84	Lerner	49
 2014-10-25 16:45:00	125	John Jay Dining Hall	75	John Jay	6
 2014-10-25 16:45:00	147	Architectural and Fine Arts Library 1	146	Avery	3
@@ -12196,7 +12196,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-25 16:45:00	149	Architectural and Fine Arts Library 3	146	Avery	73
 2014-10-25 16:45:00	134	Butler Library 6	103	Butler	102
 2014-10-25 16:45:00	138	Butler Library stk	103	Butler	14
-2014-10-25 16:45:00	145	Science and Engineering Library	15	Mudd	67
+2014-10-25 16:45:00	145	Science and Engineering Library	15	Northwest Corner Building	67
 2014-10-25 16:45:00	155	JJ's Place	75	John Jay	27
 2014-10-25 16:45:00	133	Butler Library 5	103	Butler	51
 2014-10-25 16:45:00	151	Lerner 2	84	Lerner	57
@@ -12218,7 +12218,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-25 17:00:00	149	Architectural and Fine Arts Library 3	146	Avery	73
 2014-10-25 17:00:00	134	Butler Library 6	103	Butler	97
 2014-10-25 17:00:00	138	Butler Library stk	103	Butler	17
-2014-10-25 17:00:00	145	Science and Engineering Library	15	Mudd	80
+2014-10-25 17:00:00	145	Science and Engineering Library	15	Northwest Corner Building	80
 2014-10-25 17:00:00	155	JJ's Place	75	John Jay	25
 2014-10-25 17:00:00	133	Butler Library 5	103	Butler	54
 2014-10-25 17:00:00	151	Lerner 2	84	Lerner	53
@@ -12243,13 +12243,13 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-25 17:15:00	149	Architectural and Fine Arts Library 3	146	Avery	77
 2014-10-25 17:15:00	134	Butler Library 6	103	Butler	96
 2014-10-25 17:15:00	138	Butler Library stk	103	Butler	18
-2014-10-25 17:15:00	145	Science and Engineering Library	15	Mudd	77
+2014-10-25 17:15:00	145	Science and Engineering Library	15	Northwest Corner Building	77
 2014-10-25 17:30:00	152	Lerner 3	84	Lerner	93
 2014-10-25 17:30:00	130	Butler Library 2	103	Butler	383
 2014-10-25 17:30:00	149	Architectural and Fine Arts Library 3	146	Avery	79
 2014-10-25 17:30:00	134	Butler Library 6	103	Butler	93
 2014-10-25 17:30:00	138	Butler Library stk	103	Butler	18
-2014-10-25 17:30:00	145	Science and Engineering Library	15	Mudd	60
+2014-10-25 17:30:00	145	Science and Engineering Library	15	Northwest Corner Building	60
 2014-10-25 17:30:00	131	Butler Library 3	103	Butler	317
 2014-10-25 17:30:00	139	Lehman Library 2	79	Lehman LIbrary	31
 2014-10-25 17:30:00	144	Starr East Asian Library	62	East Asian Library	17
@@ -12287,7 +12287,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-25 17:45:00	149	Architectural and Fine Arts Library 3	146	Avery	79
 2014-10-25 17:45:00	134	Butler Library 6	103	Butler	76
 2014-10-25 17:45:00	138	Butler Library stk	103	Butler	17
-2014-10-25 17:45:00	145	Science and Engineering Library	15	Mudd	70
+2014-10-25 17:45:00	145	Science and Engineering Library	15	Northwest Corner Building	70
 2014-10-25 18:00:00	154	Lerner 5	84	Lerner	59
 2014-10-25 18:00:00	125	John Jay Dining Hall	75	John Jay	4
 2014-10-25 18:00:00	147	Architectural and Fine Arts Library 1	146	Avery	4
@@ -12306,7 +12306,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-25 18:00:00	149	Architectural and Fine Arts Library 3	146	Avery	76
 2014-10-25 18:00:00	134	Butler Library 6	103	Butler	48
 2014-10-25 18:00:00	138	Butler Library stk	103	Butler	20
-2014-10-25 18:00:00	145	Science and Engineering Library	15	Mudd	72
+2014-10-25 18:00:00	145	Science and Engineering Library	15	Northwest Corner Building	72
 2014-10-25 18:00:00	155	JJ's Place	75	John Jay	45
 2014-10-25 18:00:00	133	Butler Library 5	103	Butler	38
 2014-10-25 18:00:00	151	Lerner 2	84	Lerner	80
@@ -12320,7 +12320,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-25 18:15:00	149	Architectural and Fine Arts Library 3	146	Avery	58
 2014-10-25 18:15:00	134	Butler Library 6	103	Butler	26
 2014-10-25 18:15:00	138	Butler Library stk	103	Butler	14
-2014-10-25 18:15:00	145	Science and Engineering Library	15	Mudd	59
+2014-10-25 18:15:00	145	Science and Engineering Library	15	Northwest Corner Building	59
 2014-10-25 18:15:00	131	Butler Library 3	103	Butler	309
 2014-10-25 18:15:00	139	Lehman Library 2	79	Lehman LIbrary	7
 2014-10-25 18:15:00	144	Starr East Asian Library	62	East Asian Library	30
@@ -12342,7 +12342,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-25 18:30:00	149	Architectural and Fine Arts Library 3	146	Avery	59
 2014-10-25 18:30:00	134	Butler Library 6	103	Butler	0
 2014-10-25 18:30:00	138	Butler Library stk	103	Butler	11
-2014-10-25 18:30:00	145	Science and Engineering Library	15	Mudd	60
+2014-10-25 18:30:00	145	Science and Engineering Library	15	Northwest Corner Building	60
 2014-10-25 18:30:00	131	Butler Library 3	103	Butler	304
 2014-10-25 18:30:00	139	Lehman Library 2	79	Lehman LIbrary	2
 2014-10-25 18:30:00	144	Starr East Asian Library	62	East Asian Library	29
@@ -12359,7 +12359,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-25 18:45:00	149	Architectural and Fine Arts Library 3	146	Avery	38
 2014-10-25 18:45:00	134	Butler Library 6	103	Butler	0
 2014-10-25 18:45:00	138	Butler Library stk	103	Butler	8
-2014-10-25 18:45:00	145	Science and Engineering Library	15	Mudd	69
+2014-10-25 18:45:00	145	Science and Engineering Library	15	Northwest Corner Building	69
 2014-10-25 18:45:00	155	JJ's Place	75	John Jay	42
 2014-10-25 18:45:00	133	Butler Library 5	103	Butler	10
 2014-10-25 18:45:00	151	Lerner 2	84	Lerner	76
@@ -12389,7 +12389,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-25 19:00:00	149	Architectural and Fine Arts Library 3	146	Avery	33
 2014-10-25 19:00:00	134	Butler Library 6	103	Butler	0
 2014-10-25 19:00:00	138	Butler Library stk	103	Butler	7
-2014-10-25 19:00:00	145	Science and Engineering Library	15	Mudd	63
+2014-10-25 19:00:00	145	Science and Engineering Library	15	Northwest Corner Building	63
 2014-10-25 19:00:00	155	JJ's Place	75	John Jay	60
 2014-10-25 19:00:00	133	Butler Library 5	103	Butler	11
 2014-10-25 19:00:00	151	Lerner 2	84	Lerner	74
@@ -12414,7 +12414,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-25 19:15:00	149	Architectural and Fine Arts Library 3	146	Avery	8
 2014-10-25 19:15:00	134	Butler Library 6	103	Butler	2
 2014-10-25 19:15:00	138	Butler Library stk	103	Butler	8
-2014-10-25 19:15:00	145	Science and Engineering Library	15	Mudd	59
+2014-10-25 19:15:00	145	Science and Engineering Library	15	Northwest Corner Building	59
 2014-10-25 19:15:00	131	Butler Library 3	103	Butler	276
 2014-10-25 19:15:00	139	Lehman Library 2	79	Lehman LIbrary	6
 2014-10-25 19:15:00	144	Starr East Asian Library	62	East Asian Library	24
@@ -12434,7 +12434,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-25 19:30:00	149	Architectural and Fine Arts Library 3	146	Avery	7
 2014-10-25 19:30:00	134	Butler Library 6	103	Butler	1
 2014-10-25 19:30:00	138	Butler Library stk	103	Butler	5
-2014-10-25 19:30:00	145	Science and Engineering Library	15	Mudd	60
+2014-10-25 19:30:00	145	Science and Engineering Library	15	Northwest Corner Building	60
 2014-10-25 19:30:00	155	JJ's Place	75	John Jay	42
 2014-10-25 19:30:00	133	Butler Library 5	103	Butler	12
 2014-10-25 19:30:00	151	Lerner 2	84	Lerner	83
@@ -12458,7 +12458,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-25 19:45:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-25 19:45:00	134	Butler Library 6	103	Butler	2
 2014-10-25 19:45:00	138	Butler Library stk	103	Butler	3
-2014-10-25 19:45:00	145	Science and Engineering Library	15	Mudd	59
+2014-10-25 19:45:00	145	Science and Engineering Library	15	Northwest Corner Building	59
 2014-10-25 19:45:00	131	Butler Library 3	103	Butler	267
 2014-10-25 19:45:00	139	Lehman Library 2	79	Lehman LIbrary	2
 2014-10-25 19:45:00	144	Starr East Asian Library	62	East Asian Library	28
@@ -12483,7 +12483,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-25 20:00:00	149	Architectural and Fine Arts Library 3	146	Avery	2
 2014-10-25 20:00:00	134	Butler Library 6	103	Butler	0
 2014-10-25 20:00:00	138	Butler Library stk	103	Butler	2
-2014-10-25 20:00:00	145	Science and Engineering Library	15	Mudd	61
+2014-10-25 20:00:00	145	Science and Engineering Library	15	Northwest Corner Building	61
 2014-10-25 20:00:00	155	JJ's Place	75	John Jay	62
 2014-10-25 20:00:00	133	Butler Library 5	103	Butler	17
 2014-10-25 20:00:00	151	Lerner 2	84	Lerner	54
@@ -12500,7 +12500,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-25 20:15:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-25 20:15:00	134	Butler Library 6	103	Butler	1
 2014-10-25 20:15:00	138	Butler Library stk	103	Butler	1
-2014-10-25 20:15:00	145	Science and Engineering Library	15	Mudd	57
+2014-10-25 20:15:00	145	Science and Engineering Library	15	Northwest Corner Building	57
 2014-10-25 20:15:00	155	JJ's Place	75	John Jay	47
 2014-10-25 20:15:00	133	Butler Library 5	103	Butler	8
 2014-10-25 20:15:00	151	Lerner 2	84	Lerner	73
@@ -12514,7 +12514,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-25 20:30:00	149	Architectural and Fine Arts Library 3	146	Avery	2
 2014-10-25 20:30:00	134	Butler Library 6	103	Butler	4
 2014-10-25 20:30:00	138	Butler Library stk	103	Butler	1
-2014-10-25 20:30:00	145	Science and Engineering Library	15	Mudd	66
+2014-10-25 20:30:00	145	Science and Engineering Library	15	Northwest Corner Building	66
 2014-10-25 20:30:00	155	JJ's Place	75	John Jay	28
 2014-10-25 20:30:00	133	Butler Library 5	103	Butler	13
 2014-10-25 20:30:00	151	Lerner 2	84	Lerner	62
@@ -12552,7 +12552,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-25 20:45:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-25 20:45:00	134	Butler Library 6	103	Butler	1
 2014-10-25 20:45:00	138	Butler Library stk	103	Butler	1
-2014-10-25 20:45:00	145	Science and Engineering Library	15	Mudd	67
+2014-10-25 20:45:00	145	Science and Engineering Library	15	Northwest Corner Building	67
 2014-10-25 21:00:00	131	Butler Library 3	103	Butler	309
 2014-10-25 21:00:00	139	Lehman Library 2	79	Lehman LIbrary	1
 2014-10-25 21:00:00	144	Starr East Asian Library	62	East Asian Library	21
@@ -12574,7 +12574,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-25 21:00:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-25 21:00:00	134	Butler Library 6	103	Butler	3
 2014-10-25 21:00:00	138	Butler Library stk	103	Butler	3
-2014-10-25 21:00:00	145	Science and Engineering Library	15	Mudd	71
+2014-10-25 21:00:00	145	Science and Engineering Library	15	Northwest Corner Building	71
 2014-10-25 21:15:00	131	Butler Library 3	103	Butler	319
 2014-10-25 21:15:00	139	Lehman Library 2	79	Lehman LIbrary	2
 2014-10-25 21:15:00	144	Starr East Asian Library	62	East Asian Library	17
@@ -12588,7 +12588,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-25 21:15:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-25 21:15:00	134	Butler Library 6	103	Butler	3
 2014-10-25 21:15:00	138	Butler Library stk	103	Butler	5
-2014-10-25 21:15:00	145	Science and Engineering Library	15	Mudd	69
+2014-10-25 21:15:00	145	Science and Engineering Library	15	Northwest Corner Building	69
 2014-10-25 21:15:00	155	JJ's Place	75	John Jay	1
 2014-10-25 21:15:00	133	Butler Library 5	103	Butler	7
 2014-10-25 21:15:00	151	Lerner 2	84	Lerner	77
@@ -12610,7 +12610,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-25 21:30:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-25 21:30:00	134	Butler Library 6	103	Butler	1
 2014-10-25 21:30:00	138	Butler Library stk	103	Butler	4
-2014-10-25 21:30:00	145	Science and Engineering Library	15	Mudd	68
+2014-10-25 21:30:00	145	Science and Engineering Library	15	Northwest Corner Building	68
 2014-10-25 21:30:00	155	JJ's Place	75	John Jay	3
 2014-10-25 21:30:00	133	Butler Library 5	103	Butler	11
 2014-10-25 21:30:00	151	Lerner 2	84	Lerner	81
@@ -12624,7 +12624,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-25 21:45:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-25 21:45:00	134	Butler Library 6	103	Butler	2
 2014-10-25 21:45:00	138	Butler Library stk	103	Butler	4
-2014-10-25 21:45:00	145	Science and Engineering Library	15	Mudd	77
+2014-10-25 21:45:00	145	Science and Engineering Library	15	Northwest Corner Building	77
 2014-10-25 21:45:00	155	JJ's Place	75	John Jay	3
 2014-10-25 21:45:00	133	Butler Library 5	103	Butler	8
 2014-10-25 21:45:00	151	Lerner 2	84	Lerner	61
@@ -12651,7 +12651,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-25 22:00:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-25 22:00:00	134	Butler Library 6	103	Butler	1
 2014-10-25 22:00:00	138	Butler Library stk	103	Butler	10
-2014-10-25 22:00:00	145	Science and Engineering Library	15	Mudd	75
+2014-10-25 22:00:00	145	Science and Engineering Library	15	Northwest Corner Building	75
 2014-10-25 22:00:00	131	Butler Library 3	103	Butler	317
 2014-10-25 22:00:00	139	Lehman Library 2	79	Lehman LIbrary	2
 2014-10-25 22:00:00	144	Starr East Asian Library	62	East Asian Library	2
@@ -12684,7 +12684,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-25 22:15:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-25 22:15:00	134	Butler Library 6	103	Butler	1
 2014-10-25 22:15:00	138	Butler Library stk	103	Butler	9
-2014-10-25 22:15:00	145	Science and Engineering Library	15	Mudd	59
+2014-10-25 22:15:00	145	Science and Engineering Library	15	Northwest Corner Building	59
 2014-10-25 22:30:00	131	Butler Library 3	103	Butler	313
 2014-10-25 22:30:00	139	Lehman Library 2	79	Lehman LIbrary	3
 2014-10-25 22:30:00	144	Starr East Asian Library	62	East Asian Library	3
@@ -12698,7 +12698,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-25 22:30:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-25 22:30:00	134	Butler Library 6	103	Butler	0
 2014-10-25 22:30:00	138	Butler Library stk	103	Butler	10
-2014-10-25 22:30:00	145	Science and Engineering Library	15	Mudd	55
+2014-10-25 22:30:00	145	Science and Engineering Library	15	Northwest Corner Building	55
 2014-10-25 22:30:00	155	JJ's Place	75	John Jay	2
 2014-10-25 22:30:00	133	Butler Library 5	103	Butler	16
 2014-10-25 22:30:00	151	Lerner 2	84	Lerner	62
@@ -12717,7 +12717,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-25 22:45:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-25 22:45:00	134	Butler Library 6	103	Butler	0
 2014-10-25 22:45:00	138	Butler Library stk	103	Butler	12
-2014-10-25 22:45:00	145	Science and Engineering Library	15	Mudd	48
+2014-10-25 22:45:00	145	Science and Engineering Library	15	Northwest Corner Building	48
 2014-10-25 22:45:00	131	Butler Library 3	103	Butler	325
 2014-10-25 22:45:00	139	Lehman Library 2	79	Lehman LIbrary	3
 2014-10-25 22:45:00	144	Starr East Asian Library	62	East Asian Library	3
@@ -12750,7 +12750,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-25 23:00:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-25 23:00:00	134	Butler Library 6	103	Butler	0
 2014-10-25 23:00:00	138	Butler Library stk	103	Butler	17
-2014-10-25 23:00:00	145	Science and Engineering Library	15	Mudd	41
+2014-10-25 23:00:00	145	Science and Engineering Library	15	Northwest Corner Building	41
 2014-10-25 23:15:00	155	JJ's Place	75	John Jay	4
 2014-10-25 23:15:00	23	Uris/Watson Library	2	Uris	9
 2014-10-25 23:15:00	133	Butler Library 5	103	Butler	16
@@ -12761,7 +12761,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-25 23:15:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-25 23:15:00	134	Butler Library 6	103	Butler	0
 2014-10-25 23:15:00	138	Butler Library stk	103	Butler	15
-2014-10-25 23:15:00	145	Science and Engineering Library	15	Mudd	21
+2014-10-25 23:15:00	145	Science and Engineering Library	15	Northwest Corner Building	21
 2014-10-25 23:15:00	131	Butler Library 3	103	Butler	299
 2014-10-25 23:15:00	139	Lehman Library 2	79	Lehman LIbrary	3
 2014-10-25 23:15:00	144	Starr East Asian Library	62	East Asian Library	2
@@ -12783,7 +12783,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-25 23:30:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-25 23:30:00	134	Butler Library 6	103	Butler	0
 2014-10-25 23:30:00	138	Butler Library stk	103	Butler	17
-2014-10-25 23:30:00	145	Science and Engineering Library	15	Mudd	11
+2014-10-25 23:30:00	145	Science and Engineering Library	15	Northwest Corner Building	11
 2014-10-25 23:30:00	131	Butler Library 3	103	Butler	262
 2014-10-25 23:30:00	139	Lehman Library 2	79	Lehman LIbrary	3
 2014-10-25 23:30:00	144	Starr East Asian Library	62	East Asian Library	8
@@ -12800,7 +12800,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-25 23:45:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-25 23:45:00	134	Butler Library 6	103	Butler	0
 2014-10-25 23:45:00	138	Butler Library stk	103	Butler	16
-2014-10-25 23:45:00	145	Science and Engineering Library	15	Mudd	8
+2014-10-25 23:45:00	145	Science and Engineering Library	15	Northwest Corner Building	8
 2014-10-25 23:45:00	131	Butler Library 3	103	Butler	243
 2014-10-25 23:45:00	139	Lehman Library 2	79	Lehman LIbrary	3
 2014-10-25 23:45:00	144	Starr East Asian Library	62	East Asian Library	3
@@ -12822,7 +12822,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-26 00:00:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-26 00:00:00	134	Butler Library 6	103	Butler	0
 2014-10-26 00:00:00	138	Butler Library stk	103	Butler	15
-2014-10-26 00:00:00	145	Science and Engineering Library	15	Mudd	6
+2014-10-26 00:00:00	145	Science and Engineering Library	15	Northwest Corner Building	6
 2014-10-26 00:00:00	131	Butler Library 3	103	Butler	220
 2014-10-26 00:00:00	139	Lehman Library 2	79	Lehman LIbrary	2
 2014-10-26 00:00:00	144	Starr East Asian Library	62	East Asian Library	4
@@ -12844,7 +12844,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-26 00:15:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-26 00:15:00	134	Butler Library 6	103	Butler	0
 2014-10-26 00:15:00	138	Butler Library stk	103	Butler	16
-2014-10-26 00:15:00	145	Science and Engineering Library	15	Mudd	5
+2014-10-26 00:15:00	145	Science and Engineering Library	15	Northwest Corner Building	5
 2014-10-26 00:15:00	155	JJ's Place	75	John Jay	1
 2014-10-26 00:15:00	133	Butler Library 5	103	Butler	8
 2014-10-26 00:15:00	151	Lerner 2	84	Lerner	27
@@ -12882,13 +12882,13 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-26 00:30:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-26 00:30:00	134	Butler Library 6	103	Butler	0
 2014-10-26 00:30:00	138	Butler Library stk	103	Butler	15
-2014-10-26 00:30:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-26 00:30:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-26 00:45:00	152	Lerner 3	84	Lerner	23
 2014-10-26 00:45:00	130	Butler Library 2	103	Butler	202
 2014-10-26 00:45:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-26 00:45:00	134	Butler Library 6	103	Butler	0
 2014-10-26 00:45:00	138	Butler Library stk	103	Butler	11
-2014-10-26 00:45:00	145	Science and Engineering Library	15	Mudd	3
+2014-10-26 00:45:00	145	Science and Engineering Library	15	Northwest Corner Building	3
 2014-10-26 00:45:00	131	Butler Library 3	103	Butler	171
 2014-10-26 00:45:00	139	Lehman Library 2	79	Lehman LIbrary	3
 2014-10-26 00:45:00	144	Starr East Asian Library	62	East Asian Library	3
@@ -12919,7 +12919,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-26 01:00:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-26 01:00:00	134	Butler Library 6	103	Butler	0
 2014-10-26 01:00:00	138	Butler Library stk	103	Butler	10
-2014-10-26 01:00:00	145	Science and Engineering Library	15	Mudd	3
+2014-10-26 01:00:00	145	Science and Engineering Library	15	Northwest Corner Building	3
 2014-10-26 01:00:00	131	Butler Library 3	103	Butler	152
 2014-10-26 01:00:00	139	Lehman Library 2	79	Lehman LIbrary	3
 2014-10-26 01:00:00	144	Starr East Asian Library	62	East Asian Library	8
@@ -12944,7 +12944,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-26 01:15:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-26 01:15:00	134	Butler Library 6	103	Butler	0
 2014-10-26 01:15:00	138	Butler Library stk	103	Butler	9
-2014-10-26 01:15:00	145	Science and Engineering Library	15	Mudd	3
+2014-10-26 01:15:00	145	Science and Engineering Library	15	Northwest Corner Building	3
 2014-10-26 01:15:00	155	JJ's Place	75	John Jay	1
 2014-10-26 01:15:00	133	Butler Library 5	103	Butler	8
 2014-10-26 01:15:00	151	Lerner 2	84	Lerner	18
@@ -12961,7 +12961,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-26 01:30:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-26 01:30:00	134	Butler Library 6	103	Butler	0
 2014-10-26 01:30:00	138	Butler Library stk	103	Butler	8
-2014-10-26 01:30:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-26 01:30:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-26 01:30:00	155	JJ's Place	75	John Jay	1
 2014-10-26 01:30:00	133	Butler Library 5	103	Butler	8
 2014-10-26 01:30:00	151	Lerner 2	84	Lerner	14
@@ -12975,7 +12975,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-26 01:45:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-26 01:45:00	134	Butler Library 6	103	Butler	0
 2014-10-26 01:45:00	138	Butler Library stk	103	Butler	6
-2014-10-26 01:45:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-26 01:45:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-26 01:45:00	131	Butler Library 3	103	Butler	99
 2014-10-26 01:45:00	139	Lehman Library 2	79	Lehman LIbrary	3
 2014-10-26 01:45:00	144	Starr East Asian Library	62	East Asian Library	1
@@ -13013,13 +13013,13 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-26 02:00:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-26 02:00:00	134	Butler Library 6	103	Butler	0
 2014-10-26 02:00:00	138	Butler Library stk	103	Butler	5
-2014-10-26 02:00:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-26 02:00:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-26 02:15:00	152	Lerner 3	84	Lerner	21
 2014-10-26 02:15:00	130	Butler Library 2	103	Butler	115
 2014-10-26 02:15:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-26 02:15:00	134	Butler Library 6	103	Butler	0
 2014-10-26 02:15:00	138	Butler Library stk	103	Butler	1
-2014-10-26 02:15:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-26 02:15:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-26 02:15:00	131	Butler Library 3	103	Butler	83
 2014-10-26 02:15:00	139	Lehman Library 2	79	Lehman LIbrary	2
 2014-10-26 02:15:00	144	Starr East Asian Library	62	East Asian Library	0
@@ -13054,7 +13054,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-26 02:30:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-26 02:30:00	134	Butler Library 6	103	Butler	0
 2014-10-26 02:30:00	138	Butler Library stk	103	Butler	0
-2014-10-26 02:30:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-26 02:30:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-26 02:30:00	155	JJ's Place	75	John Jay	1
 2014-10-26 02:30:00	133	Butler Library 5	103	Butler	6
 2014-10-26 02:30:00	151	Lerner 2	84	Lerner	15
@@ -13076,7 +13076,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-26 02:45:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-26 02:45:00	134	Butler Library 6	103	Butler	0
 2014-10-26 02:45:00	138	Butler Library stk	103	Butler	0
-2014-10-26 02:45:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-26 02:45:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-26 02:45:00	155	JJ's Place	75	John Jay	1
 2014-10-26 02:45:00	133	Butler Library 5	103	Butler	8
 2014-10-26 02:45:00	151	Lerner 2	84	Lerner	14
@@ -13093,7 +13093,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-26 03:00:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-26 03:00:00	134	Butler Library 6	103	Butler	0
 2014-10-26 03:00:00	138	Butler Library stk	103	Butler	0
-2014-10-26 03:00:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-26 03:00:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-26 03:00:00	155	JJ's Place	75	John Jay	1
 2014-10-26 03:00:00	133	Butler Library 5	103	Butler	6
 2014-10-26 03:00:00	151	Lerner 2	84	Lerner	11
@@ -13123,7 +13123,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-26 03:15:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-26 03:15:00	134	Butler Library 6	103	Butler	0
 2014-10-26 03:15:00	138	Butler Library stk	103	Butler	0
-2014-10-26 03:15:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-26 03:15:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-26 03:30:00	154	Lerner 5	84	Lerner	2
 2014-10-26 03:30:00	125	John Jay Dining Hall	75	John Jay	1
 2014-10-26 03:30:00	147	Architectural and Fine Arts Library 1	146	Avery	0
@@ -13139,7 +13139,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-26 03:30:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-26 03:30:00	134	Butler Library 6	103	Butler	0
 2014-10-26 03:30:00	138	Butler Library stk	103	Butler	0
-2014-10-26 03:30:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-26 03:30:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-26 03:30:00	131	Butler Library 3	103	Butler	39
 2014-10-26 03:30:00	139	Lehman Library 2	79	Lehman LIbrary	2
 2014-10-26 03:30:00	144	Starr East Asian Library	62	East Asian Library	1
@@ -13161,7 +13161,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-26 03:45:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-26 03:45:00	134	Butler Library 6	103	Butler	0
 2014-10-26 03:45:00	138	Butler Library stk	103	Butler	0
-2014-10-26 03:45:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-26 03:45:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-26 03:45:00	131	Butler Library 3	103	Butler	40
 2014-10-26 03:45:00	139	Lehman Library 2	79	Lehman LIbrary	2
 2014-10-26 03:45:00	144	Starr East Asian Library	62	East Asian Library	0
@@ -13186,7 +13186,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-26 04:00:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-26 04:00:00	134	Butler Library 6	103	Butler	0
 2014-10-26 04:00:00	138	Butler Library stk	103	Butler	0
-2014-10-26 04:00:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-26 04:00:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-26 04:00:00	155	JJ's Place	75	John Jay	1
 2014-10-26 04:00:00	133	Butler Library 5	103	Butler	7
 2014-10-26 04:00:00	151	Lerner 2	84	Lerner	6
@@ -13195,7 +13195,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-26 04:15:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-26 04:15:00	134	Butler Library 6	103	Butler	0
 2014-10-26 04:15:00	138	Butler Library stk	103	Butler	0
-2014-10-26 04:15:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-26 04:15:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-26 04:15:00	131	Butler Library 3	103	Butler	30
 2014-10-26 04:15:00	139	Lehman Library 2	79	Lehman LIbrary	2
 2014-10-26 04:15:00	144	Starr East Asian Library	62	East Asian Library	0
@@ -13217,7 +13217,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-26 04:30:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-26 04:30:00	134	Butler Library 6	103	Butler	0
 2014-10-26 04:30:00	138	Butler Library stk	103	Butler	0
-2014-10-26 04:30:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-26 04:30:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-26 04:30:00	131	Butler Library 3	103	Butler	23
 2014-10-26 04:30:00	139	Lehman Library 2	79	Lehman LIbrary	2
 2014-10-26 04:30:00	144	Starr East Asian Library	62	East Asian Library	0
@@ -13252,7 +13252,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-26 04:45:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-26 04:45:00	134	Butler Library 6	103	Butler	0
 2014-10-26 04:45:00	138	Butler Library stk	103	Butler	0
-2014-10-26 04:45:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-26 04:45:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-26 04:45:00	155	JJ's Place	75	John Jay	1
 2014-10-26 04:45:00	133	Butler Library 5	103	Butler	6
 2014-10-26 04:45:00	151	Lerner 2	84	Lerner	3
@@ -13266,7 +13266,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-26 05:00:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-26 05:00:00	134	Butler Library 6	103	Butler	0
 2014-10-26 05:00:00	138	Butler Library stk	103	Butler	0
-2014-10-26 05:00:00	145	Science and Engineering Library	15	Mudd	3
+2014-10-26 05:00:00	145	Science and Engineering Library	15	Northwest Corner Building	3
 2014-10-26 05:00:00	131	Butler Library 3	103	Butler	17
 2014-10-26 05:00:00	139	Lehman Library 2	79	Lehman LIbrary	2
 2014-10-26 05:00:00	144	Starr East Asian Library	62	East Asian Library	0
@@ -13296,7 +13296,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-26 05:15:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-26 05:15:00	134	Butler Library 6	103	Butler	0
 2014-10-26 05:15:00	138	Butler Library stk	103	Butler	0
-2014-10-26 05:15:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-26 05:15:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-26 05:15:00	155	JJ's Place	75	John Jay	1
 2014-10-26 05:15:00	133	Butler Library 5	103	Butler	6
 2014-10-26 05:15:00	151	Lerner 2	84	Lerner	3
@@ -13321,7 +13321,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-26 05:30:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-26 05:30:00	134	Butler Library 6	103	Butler	0
 2014-10-26 05:30:00	138	Butler Library stk	103	Butler	0
-2014-10-26 05:30:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-26 05:30:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-26 05:45:00	154	Lerner 5	84	Lerner	1
 2014-10-26 05:45:00	125	John Jay Dining Hall	75	John Jay	0
 2014-10-26 05:45:00	147	Architectural and Fine Arts Library 1	146	Avery	0
@@ -13340,7 +13340,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-26 05:45:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-26 05:45:00	134	Butler Library 6	103	Butler	0
 2014-10-26 05:45:00	138	Butler Library stk	103	Butler	0
-2014-10-26 05:45:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-26 05:45:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-26 05:45:00	155	JJ's Place	75	John Jay	1
 2014-10-26 05:45:00	133	Butler Library 5	103	Butler	6
 2014-10-26 05:45:00	151	Lerner 2	84	Lerner	3
@@ -13359,7 +13359,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-26 06:00:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-26 06:00:00	134	Butler Library 6	103	Butler	0
 2014-10-26 06:00:00	138	Butler Library stk	103	Butler	0
-2014-10-26 06:00:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-26 06:00:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-26 06:00:00	131	Butler Library 3	103	Butler	10
 2014-10-26 06:00:00	139	Lehman Library 2	79	Lehman LIbrary	3
 2014-10-26 06:00:00	144	Starr East Asian Library	62	East Asian Library	0
@@ -13379,7 +13379,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-26 06:15:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-26 06:15:00	134	Butler Library 6	103	Butler	0
 2014-10-26 06:15:00	138	Butler Library stk	103	Butler	0
-2014-10-26 06:15:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-26 06:15:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-26 06:15:00	155	JJ's Place	75	John Jay	1
 2014-10-26 06:15:00	133	Butler Library 5	103	Butler	6
 2014-10-26 06:15:00	151	Lerner 2	84	Lerner	4
@@ -13401,7 +13401,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-26 06:30:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-26 06:30:00	134	Butler Library 6	103	Butler	0
 2014-10-26 06:30:00	138	Butler Library stk	103	Butler	0
-2014-10-26 06:30:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-26 06:30:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-26 06:30:00	155	JJ's Place	75	John Jay	1
 2014-10-26 06:30:00	133	Butler Library 5	103	Butler	6
 2014-10-26 06:30:00	151	Lerner 2	84	Lerner	3
@@ -13415,7 +13415,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-26 06:45:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-26 06:45:00	134	Butler Library 6	103	Butler	0
 2014-10-26 06:45:00	138	Butler Library stk	103	Butler	0
-2014-10-26 06:45:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-26 06:45:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-26 06:45:00	131	Butler Library 3	103	Butler	10
 2014-10-26 11:15:00	153	Lerner 4	84	Lerner	21
 2014-10-26 06:45:00	139	Lehman Library 2	79	Lehman LIbrary	2
@@ -13438,7 +13438,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-26 07:00:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-26 07:00:00	134	Butler Library 6	103	Butler	1
 2014-10-26 07:00:00	138	Butler Library stk	103	Butler	0
-2014-10-26 07:00:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-26 07:00:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-26 07:00:00	131	Butler Library 3	103	Butler	11
 2014-10-26 07:00:00	139	Lehman Library 2	79	Lehman LIbrary	2
 2014-10-26 07:00:00	144	Starr East Asian Library	62	East Asian Library	0
@@ -13470,7 +13470,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-26 07:15:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-26 07:15:00	134	Butler Library 6	103	Butler	0
 2014-10-26 07:15:00	138	Butler Library stk	103	Butler	0
-2014-10-26 07:15:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-26 07:15:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-26 07:15:00	131	Butler Library 3	103	Butler	12
 2014-10-26 07:15:00	139	Lehman Library 2	79	Lehman LIbrary	2
 2014-10-26 07:15:00	144	Starr East Asian Library	62	East Asian Library	0
@@ -13490,7 +13490,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-26 07:30:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-26 07:30:00	134	Butler Library 6	103	Butler	0
 2014-10-26 07:30:00	138	Butler Library stk	103	Butler	0
-2014-10-26 07:30:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-26 07:30:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-26 07:30:00	155	JJ's Place	75	John Jay	4
 2014-10-26 07:30:00	133	Butler Library 5	103	Butler	7
 2014-10-26 07:30:00	151	Lerner 2	84	Lerner	6
@@ -13509,7 +13509,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-26 07:45:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-26 07:45:00	134	Butler Library 6	103	Butler	1
 2014-10-26 07:45:00	138	Butler Library stk	103	Butler	0
-2014-10-26 07:45:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-26 07:45:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-26 07:45:00	131	Butler Library 3	103	Butler	12
 2014-10-26 07:45:00	139	Lehman Library 2	79	Lehman LIbrary	3
 2014-10-26 07:45:00	144	Starr East Asian Library	62	East Asian Library	0
@@ -13535,7 +13535,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-26 08:00:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-26 08:00:00	134	Butler Library 6	103	Butler	0
 2014-10-26 08:00:00	138	Butler Library stk	103	Butler	0
-2014-10-26 08:00:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-26 08:00:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-26 08:00:00	155	JJ's Place	75	John Jay	5
 2014-10-26 08:00:00	133	Butler Library 5	103	Butler	7
 2014-10-26 08:00:00	151	Lerner 2	84	Lerner	4
@@ -13557,7 +13557,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-26 08:15:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-26 08:15:00	134	Butler Library 6	103	Butler	0
 2014-10-26 08:15:00	138	Butler Library stk	103	Butler	0
-2014-10-26 08:15:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-26 08:15:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-26 08:15:00	155	JJ's Place	75	John Jay	3
 2014-10-26 08:15:00	133	Butler Library 5	103	Butler	9
 2014-10-26 08:15:00	151	Lerner 2	84	Lerner	8
@@ -13576,7 +13576,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-26 08:30:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-26 08:30:00	134	Butler Library 6	103	Butler	0
 2014-10-26 08:30:00	138	Butler Library stk	103	Butler	0
-2014-10-26 08:30:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-26 08:30:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-26 08:30:00	131	Butler Library 3	103	Butler	22
 2014-10-26 08:30:00	139	Lehman Library 2	79	Lehman LIbrary	2
 2014-10-26 08:30:00	144	Starr East Asian Library	62	East Asian Library	0
@@ -13609,7 +13609,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-26 08:45:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-26 08:45:00	134	Butler Library 6	103	Butler	0
 2014-10-26 08:45:00	138	Butler Library stk	103	Butler	0
-2014-10-26 08:45:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-26 08:45:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-26 09:00:00	131	Butler Library 3	103	Butler	36
 2014-10-26 09:00:00	139	Lehman Library 2	79	Lehman LIbrary	2
 2014-10-26 09:00:00	144	Starr East Asian Library	62	East Asian Library	1
@@ -13623,7 +13623,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-26 09:00:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-26 09:00:00	134	Butler Library 6	103	Butler	0
 2014-10-26 09:00:00	138	Butler Library stk	103	Butler	0
-2014-10-26 09:00:00	145	Science and Engineering Library	15	Mudd	3
+2014-10-26 09:00:00	145	Science and Engineering Library	15	Northwest Corner Building	3
 2014-10-26 09:00:00	155	JJ's Place	75	John Jay	5
 2014-10-26 09:00:00	133	Butler Library 5	103	Butler	8
 2014-10-26 09:00:00	151	Lerner 2	84	Lerner	10
@@ -13650,7 +13650,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-26 09:15:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-26 09:15:00	134	Butler Library 6	103	Butler	0
 2014-10-26 09:15:00	138	Butler Library stk	103	Butler	0
-2014-10-26 09:15:00	145	Science and Engineering Library	15	Mudd	3
+2014-10-26 09:15:00	145	Science and Engineering Library	15	Northwest Corner Building	3
 2014-10-26 09:15:00	155	JJ's Place	75	John Jay	3
 2014-10-26 09:15:00	133	Butler Library 5	103	Butler	8
 2014-10-26 09:15:00	151	Lerner 2	84	Lerner	21
@@ -13659,7 +13659,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-26 09:30:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-26 09:30:00	134	Butler Library 6	103	Butler	0
 2014-10-26 09:30:00	138	Butler Library stk	103	Butler	0
-2014-10-26 09:30:00	145	Science and Engineering Library	15	Mudd	4
+2014-10-26 09:30:00	145	Science and Engineering Library	15	Northwest Corner Building	4
 2014-10-26 09:30:00	155	JJ's Place	75	John Jay	2
 2014-10-26 09:30:00	133	Butler Library 5	103	Butler	6
 2014-10-26 09:30:00	151	Lerner 2	84	Lerner	16
@@ -13697,7 +13697,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-26 09:45:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-26 09:45:00	134	Butler Library 6	103	Butler	1
 2014-10-26 09:45:00	138	Butler Library stk	103	Butler	0
-2014-10-26 09:45:00	145	Science and Engineering Library	15	Mudd	4
+2014-10-26 09:45:00	145	Science and Engineering Library	15	Northwest Corner Building	4
 2014-10-26 10:00:00	154	Lerner 5	84	Lerner	23
 2014-10-26 10:00:00	125	John Jay Dining Hall	75	John Jay	10
 2014-10-26 10:00:00	147	Architectural and Fine Arts Library 1	146	Avery	2
@@ -13716,7 +13716,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-26 10:00:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-26 10:00:00	134	Butler Library 6	103	Butler	0
 2014-10-26 10:00:00	138	Butler Library stk	103	Butler	0
-2014-10-26 10:00:00	145	Science and Engineering Library	15	Mudd	4
+2014-10-26 10:00:00	145	Science and Engineering Library	15	Northwest Corner Building	4
 2014-10-26 10:00:00	155	JJ's Place	75	John Jay	7
 2014-10-26 10:00:00	133	Butler Library 5	103	Butler	12
 2014-10-26 10:00:00	151	Lerner 2	84	Lerner	24
@@ -13738,7 +13738,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-26 10:15:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-26 10:15:00	134	Butler Library 6	103	Butler	6
 2014-10-26 10:15:00	138	Butler Library stk	103	Butler	0
-2014-10-26 10:15:00	145	Science and Engineering Library	15	Mudd	5
+2014-10-26 10:15:00	145	Science and Engineering Library	15	Northwest Corner Building	5
 2014-10-26 10:15:00	155	JJ's Place	75	John Jay	8
 2014-10-26 10:15:00	133	Butler Library 5	103	Butler	13
 2014-10-26 10:15:00	151	Lerner 2	84	Lerner	34
@@ -13763,7 +13763,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-26 10:30:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-26 10:30:00	134	Butler Library 6	103	Butler	7
 2014-10-26 10:30:00	138	Butler Library stk	103	Butler	1
-2014-10-26 10:30:00	145	Science and Engineering Library	15	Mudd	11
+2014-10-26 10:30:00	145	Science and Engineering Library	15	Northwest Corner Building	11
 2014-10-26 10:45:00	155	JJ's Place	75	John Jay	12
 2014-10-26 10:45:00	133	Butler Library 5	103	Butler	14
 2014-10-26 10:45:00	151	Lerner 2	84	Lerner	46
@@ -13785,7 +13785,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-26 10:45:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-26 10:45:00	134	Butler Library 6	103	Butler	11
 2014-10-26 10:45:00	138	Butler Library stk	103	Butler	0
-2014-10-26 10:45:00	145	Science and Engineering Library	15	Mudd	11
+2014-10-26 10:45:00	145	Science and Engineering Library	15	Northwest Corner Building	11
 2014-10-26 11:00:00	154	Lerner 5	84	Lerner	58
 2014-10-26 11:00:00	125	John Jay Dining Hall	75	John Jay	49
 2014-10-26 11:00:00	147	Architectural and Fine Arts Library 1	146	Avery	1
@@ -13804,7 +13804,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-26 11:00:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-26 11:00:00	134	Butler Library 6	103	Butler	14
 2014-10-26 11:00:00	138	Butler Library stk	103	Butler	0
-2014-10-26 11:00:00	145	Science and Engineering Library	15	Mudd	13
+2014-10-26 11:00:00	145	Science and Engineering Library	15	Northwest Corner Building	13
 2014-10-26 11:00:00	155	JJ's Place	75	John Jay	12
 2014-10-26 11:00:00	133	Butler Library 5	103	Butler	14
 2014-10-26 11:00:00	151	Lerner 2	84	Lerner	40
@@ -13818,7 +13818,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-26 11:15:00	149	Architectural and Fine Arts Library 3	146	Avery	2
 2014-10-26 11:15:00	134	Butler Library 6	103	Butler	20
 2014-10-26 11:15:00	138	Butler Library stk	103	Butler	3
-2014-10-26 11:15:00	145	Science and Engineering Library	15	Mudd	17
+2014-10-26 11:15:00	145	Science and Engineering Library	15	Northwest Corner Building	17
 2014-10-26 11:15:00	131	Butler Library 3	103	Butler	237
 2014-10-26 11:15:00	139	Lehman Library 2	79	Lehman LIbrary	6
 2014-10-26 11:15:00	144	Starr East Asian Library	62	East Asian Library	4
@@ -13850,7 +13850,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-26 11:30:00	149	Architectural and Fine Arts Library 3	146	Avery	3
 2014-10-26 11:30:00	134	Butler Library 6	103	Butler	27
 2014-10-26 11:30:00	138	Butler Library stk	103	Butler	1
-2014-10-26 11:30:00	145	Science and Engineering Library	15	Mudd	35
+2014-10-26 11:30:00	145	Science and Engineering Library	15	Northwest Corner Building	35
 2014-10-26 11:45:00	155	JJ's Place	75	John Jay	19
 2014-10-26 11:45:00	23	Uris/Watson Library	2	Uris	196
 2014-10-26 11:45:00	133	Butler Library 5	103	Butler	15
@@ -13861,7 +13861,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-26 11:45:00	149	Architectural and Fine Arts Library 3	146	Avery	2
 2014-10-26 11:45:00	134	Butler Library 6	103	Butler	38
 2014-10-26 11:45:00	138	Butler Library stk	103	Butler	2
-2014-10-26 11:45:00	145	Science and Engineering Library	15	Mudd	40
+2014-10-26 11:45:00	145	Science and Engineering Library	15	Northwest Corner Building	40
 2014-10-26 11:45:00	131	Butler Library 3	103	Butler	264
 2014-10-26 11:45:00	139	Lehman Library 2	79	Lehman LIbrary	11
 2014-10-26 11:45:00	144	Starr East Asian Library	62	East Asian Library	8
@@ -13883,7 +13883,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-26 12:00:00	149	Architectural and Fine Arts Library 3	146	Avery	6
 2014-10-26 12:00:00	134	Butler Library 6	103	Butler	46
 2014-10-26 12:00:00	138	Butler Library stk	103	Butler	3
-2014-10-26 12:00:00	145	Science and Engineering Library	15	Mudd	56
+2014-10-26 12:00:00	145	Science and Engineering Library	15	Northwest Corner Building	56
 2014-10-26 12:00:00	131	Butler Library 3	103	Butler	273
 2014-10-26 12:00:00	139	Lehman Library 2	79	Lehman LIbrary	8
 2014-10-26 12:00:00	144	Starr East Asian Library	62	East Asian Library	22
@@ -13916,7 +13916,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-26 12:15:00	149	Architectural and Fine Arts Library 3	146	Avery	6
 2014-10-26 12:15:00	134	Butler Library 6	103	Butler	52
 2014-10-26 12:15:00	138	Butler Library stk	103	Butler	3
-2014-10-26 12:15:00	145	Science and Engineering Library	15	Mudd	62
+2014-10-26 12:15:00	145	Science and Engineering Library	15	Northwest Corner Building	62
 2014-10-26 12:30:00	131	Butler Library 3	103	Butler	249
 2014-10-26 12:30:00	139	Lehman Library 2	79	Lehman LIbrary	7
 2014-10-26 12:30:00	144	Starr East Asian Library	62	East Asian Library	18
@@ -13929,7 +13929,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-26 12:30:00	149	Architectural and Fine Arts Library 3	146	Avery	10
 2014-10-26 12:30:00	134	Butler Library 6	103	Butler	71
 2014-10-26 12:30:00	138	Butler Library stk	103	Butler	11
-2014-10-26 12:30:00	145	Science and Engineering Library	15	Mudd	58
+2014-10-26 12:30:00	145	Science and Engineering Library	15	Northwest Corner Building	58
 2014-10-26 12:30:00	155	JJ's Place	75	John Jay	29
 2014-10-26 12:30:00	133	Butler Library 5	103	Butler	20
 2014-10-26 12:30:00	151	Lerner 2	84	Lerner	78
@@ -13948,7 +13948,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-26 12:45:00	149	Architectural and Fine Arts Library 3	146	Avery	20
 2014-10-26 12:45:00	134	Butler Library 6	103	Butler	82
 2014-10-26 12:45:00	138	Butler Library stk	103	Butler	10
-2014-10-26 12:45:00	145	Science and Engineering Library	15	Mudd	68
+2014-10-26 12:45:00	145	Science and Engineering Library	15	Northwest Corner Building	68
 2014-10-26 12:45:00	131	Butler Library 3	103	Butler	270
 2014-10-26 12:45:00	139	Lehman Library 2	79	Lehman LIbrary	15
 2014-10-26 12:45:00	144	Starr East Asian Library	62	East Asian Library	34
@@ -13975,7 +13975,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-26 13:00:00	149	Architectural and Fine Arts Library 3	146	Avery	24
 2014-10-26 13:00:00	134	Butler Library 6	103	Butler	103
 2014-10-26 13:00:00	138	Butler Library stk	103	Butler	8
-2014-10-26 13:00:00	145	Science and Engineering Library	15	Mudd	68
+2014-10-26 13:00:00	145	Science and Engineering Library	15	Northwest Corner Building	68
 2014-10-26 13:00:00	131	Butler Library 3	103	Butler	288
 2014-10-26 13:00:00	139	Lehman Library 2	79	Lehman LIbrary	14
 2014-10-26 13:00:00	144	Starr East Asian Library	62	East Asian Library	36
@@ -13987,7 +13987,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-26 13:15:00	149	Architectural and Fine Arts Library 3	146	Avery	41
 2014-10-26 13:15:00	134	Butler Library 6	103	Butler	110
 2014-10-26 13:15:00	138	Butler Library stk	103	Butler	7
-2014-10-26 13:15:00	145	Science and Engineering Library	15	Mudd	73
+2014-10-26 13:15:00	145	Science and Engineering Library	15	Northwest Corner Building	73
 2014-10-26 13:15:00	155	JJ's Place	75	John Jay	51
 2014-10-26 13:15:00	133	Butler Library 5	103	Butler	51
 2014-10-26 13:15:00	151	Lerner 2	84	Lerner	79
@@ -14025,7 +14025,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-26 13:30:00	149	Architectural and Fine Arts Library 3	146	Avery	43
 2014-10-26 13:30:00	134	Butler Library 6	103	Butler	128
 2014-10-26 13:30:00	138	Butler Library stk	103	Butler	15
-2014-10-26 13:30:00	145	Science and Engineering Library	15	Mudd	73
+2014-10-26 13:30:00	145	Science and Engineering Library	15	Northwest Corner Building	73
 2014-10-26 13:45:00	154	Lerner 5	84	Lerner	86
 2014-10-26 13:45:00	125	John Jay Dining Hall	75	John Jay	111
 2014-10-26 13:45:00	147	Architectural and Fine Arts Library 1	146	Avery	0
@@ -14044,7 +14044,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-26 13:45:00	149	Architectural and Fine Arts Library 3	146	Avery	54
 2014-10-26 13:45:00	134	Butler Library 6	103	Butler	123
 2014-10-26 13:45:00	138	Butler Library stk	103	Butler	16
-2014-10-26 13:45:00	145	Science and Engineering Library	15	Mudd	89
+2014-10-26 13:45:00	145	Science and Engineering Library	15	Northwest Corner Building	89
 2014-10-26 13:45:00	155	JJ's Place	75	John Jay	62
 2014-10-26 13:45:00	133	Butler Library 5	103	Butler	59
 2014-10-26 13:45:00	151	Lerner 2	84	Lerner	97
@@ -14063,7 +14063,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-26 14:00:00	149	Architectural and Fine Arts Library 3	146	Avery	54
 2014-10-26 14:00:00	134	Butler Library 6	103	Butler	140
 2014-10-26 14:00:00	138	Butler Library stk	103	Butler	19
-2014-10-26 14:00:00	145	Science and Engineering Library	15	Mudd	91
+2014-10-26 14:00:00	145	Science and Engineering Library	15	Northwest Corner Building	91
 2014-10-26 14:00:00	131	Butler Library 3	103	Butler	318
 2014-10-26 14:00:00	139	Lehman Library 2	79	Lehman LIbrary	33
 2014-10-26 14:00:00	144	Starr East Asian Library	62	East Asian Library	59
@@ -14075,7 +14075,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-26 14:15:00	149	Architectural and Fine Arts Library 3	146	Avery	64
 2014-10-26 14:15:00	134	Butler Library 6	103	Butler	141
 2014-10-26 14:15:00	138	Butler Library stk	103	Butler	26
-2014-10-26 14:15:00	145	Science and Engineering Library	15	Mudd	87
+2014-10-26 14:15:00	145	Science and Engineering Library	15	Northwest Corner Building	87
 2014-10-26 14:15:00	131	Butler Library 3	103	Butler	341
 2014-10-26 14:15:00	139	Lehman Library 2	79	Lehman LIbrary	27
 2014-10-26 14:15:00	144	Starr East Asian Library	62	East Asian Library	75
@@ -14113,7 +14113,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-26 14:30:00	149	Architectural and Fine Arts Library 3	146	Avery	59
 2014-10-26 14:30:00	134	Butler Library 6	103	Butler	151
 2014-10-26 14:30:00	138	Butler Library stk	103	Butler	30
-2014-10-26 14:30:00	145	Science and Engineering Library	15	Mudd	81
+2014-10-26 14:30:00	145	Science and Engineering Library	15	Northwest Corner Building	81
 2014-10-26 14:45:00	154	Lerner 5	84	Lerner	135
 2014-10-26 14:45:00	125	John Jay Dining Hall	75	John Jay	15
 2014-10-26 14:45:00	147	Architectural and Fine Arts Library 1	146	Avery	0
@@ -14132,7 +14132,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-26 14:45:00	149	Architectural and Fine Arts Library 3	146	Avery	85
 2014-10-26 14:45:00	134	Butler Library 6	103	Butler	159
 2014-10-26 14:45:00	138	Butler Library stk	103	Butler	39
-2014-10-26 14:45:00	145	Science and Engineering Library	15	Mudd	87
+2014-10-26 14:45:00	145	Science and Engineering Library	15	Northwest Corner Building	87
 2014-10-26 14:45:00	155	JJ's Place	75	John Jay	60
 2014-10-26 14:45:00	133	Butler Library 5	103	Butler	89
 2014-10-26 14:45:00	151	Lerner 2	84	Lerner	85
@@ -14141,7 +14141,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-26 15:00:00	149	Architectural and Fine Arts Library 3	146	Avery	79
 2014-10-26 15:00:00	134	Butler Library 6	103	Butler	172
 2014-10-26 15:00:00	138	Butler Library stk	103	Butler	42
-2014-10-26 15:00:00	145	Science and Engineering Library	15	Mudd	84
+2014-10-26 15:00:00	145	Science and Engineering Library	15	Northwest Corner Building	84
 2014-10-26 15:00:00	131	Butler Library 3	103	Butler	340
 2014-10-26 15:00:00	139	Lehman Library 2	79	Lehman LIbrary	48
 2014-10-26 15:00:00	144	Starr East Asian Library	62	East Asian Library	99
@@ -14176,7 +14176,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-26 15:15:00	149	Architectural and Fine Arts Library 3	146	Avery	91
 2014-10-26 15:15:00	134	Butler Library 6	103	Butler	173
 2014-10-26 15:15:00	138	Butler Library stk	103	Butler	46
-2014-10-26 15:15:00	145	Science and Engineering Library	15	Mudd	79
+2014-10-26 15:15:00	145	Science and Engineering Library	15	Northwest Corner Building	79
 2014-10-26 15:15:00	155	JJ's Place	75	John Jay	47
 2014-10-26 15:15:00	133	Butler Library 5	103	Butler	99
 2014-10-26 15:15:00	151	Lerner 2	84	Lerner	103
@@ -14195,7 +14195,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-26 15:30:00	149	Architectural and Fine Arts Library 3	146	Avery	94
 2014-10-26 15:30:00	134	Butler Library 6	103	Butler	163
 2014-10-26 15:30:00	138	Butler Library stk	103	Butler	42
-2014-10-26 15:30:00	145	Science and Engineering Library	15	Mudd	79
+2014-10-26 15:30:00	145	Science and Engineering Library	15	Northwest Corner Building	79
 2014-10-26 15:30:00	131	Butler Library 3	103	Butler	369
 2014-10-26 15:30:00	139	Lehman Library 2	79	Lehman LIbrary	50
 2014-10-26 15:30:00	144	Starr East Asian Library	62	East Asian Library	108
@@ -14223,7 +14223,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-26 15:45:00	149	Architectural and Fine Arts Library 3	146	Avery	93
 2014-10-26 15:45:00	134	Butler Library 6	103	Butler	179
 2014-10-26 15:45:00	138	Butler Library stk	103	Butler	45
-2014-10-26 15:45:00	145	Science and Engineering Library	15	Mudd	92
+2014-10-26 15:45:00	145	Science and Engineering Library	15	Northwest Corner Building	92
 2014-10-26 16:00:00	155	JJ's Place	75	John Jay	71
 2014-10-26 16:00:00	133	Butler Library 5	103	Butler	114
 2014-10-26 16:00:00	151	Lerner 2	84	Lerner	79
@@ -14245,7 +14245,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-26 16:00:00	149	Architectural and Fine Arts Library 3	146	Avery	87
 2014-10-26 16:00:00	134	Butler Library 6	103	Butler	186
 2014-10-26 16:00:00	138	Butler Library stk	103	Butler	44
-2014-10-26 16:00:00	145	Science and Engineering Library	15	Mudd	89
+2014-10-26 16:00:00	145	Science and Engineering Library	15	Northwest Corner Building	89
 2014-10-26 16:15:00	154	Lerner 5	84	Lerner	82
 2014-10-26 16:15:00	125	John Jay Dining Hall	75	John Jay	11
 2014-10-26 16:15:00	147	Architectural and Fine Arts Library 1	146	Avery	3
@@ -14264,7 +14264,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-26 16:15:00	149	Architectural and Fine Arts Library 3	146	Avery	83
 2014-10-26 16:15:00	134	Butler Library 6	103	Butler	180
 2014-10-26 16:15:00	138	Butler Library stk	103	Butler	51
-2014-10-26 16:15:00	145	Science and Engineering Library	15	Mudd	99
+2014-10-26 16:15:00	145	Science and Engineering Library	15	Northwest Corner Building	99
 2014-10-26 16:15:00	155	JJ's Place	75	John Jay	56
 2014-10-26 16:15:00	133	Butler Library 5	103	Butler	115
 2014-10-26 16:15:00	151	Lerner 2	84	Lerner	104
@@ -14273,7 +14273,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-26 16:30:00	149	Architectural and Fine Arts Library 3	146	Avery	79
 2014-10-26 16:30:00	134	Butler Library 6	103	Butler	179
 2014-10-26 16:30:00	138	Butler Library stk	103	Butler	48
-2014-10-26 16:30:00	145	Science and Engineering Library	15	Mudd	98
+2014-10-26 16:30:00	145	Science and Engineering Library	15	Northwest Corner Building	98
 2014-10-26 16:30:00	131	Butler Library 3	103	Butler	380
 2014-10-26 16:30:00	139	Lehman Library 2	79	Lehman LIbrary	58
 2014-10-26 16:30:00	144	Starr East Asian Library	62	East Asian Library	121
@@ -14295,7 +14295,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-26 16:45:00	149	Architectural and Fine Arts Library 3	146	Avery	80
 2014-10-26 16:45:00	134	Butler Library 6	103	Butler	181
 2014-10-26 16:45:00	138	Butler Library stk	103	Butler	59
-2014-10-26 16:45:00	145	Science and Engineering Library	15	Mudd	93
+2014-10-26 16:45:00	145	Science and Engineering Library	15	Northwest Corner Building	93
 2014-10-26 16:45:00	131	Butler Library 3	103	Butler	367
 2014-10-26 16:45:00	139	Lehman Library 2	79	Lehman LIbrary	56
 2014-10-26 16:45:00	144	Starr East Asian Library	62	East Asian Library	105
@@ -14317,7 +14317,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-26 17:00:00	149	Architectural and Fine Arts Library 3	146	Avery	87
 2014-10-26 17:00:00	134	Butler Library 6	103	Butler	182
 2014-10-26 17:00:00	138	Butler Library stk	103	Butler	53
-2014-10-26 17:00:00	145	Science and Engineering Library	15	Mudd	88
+2014-10-26 17:00:00	145	Science and Engineering Library	15	Northwest Corner Building	88
 2014-10-26 17:00:00	131	Butler Library 3	103	Butler	364
 2014-10-26 17:00:00	139	Lehman Library 2	79	Lehman LIbrary	64
 2014-10-26 17:00:00	144	Starr East Asian Library	62	East Asian Library	96
@@ -14345,7 +14345,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-26 17:15:00	149	Architectural and Fine Arts Library 3	146	Avery	88
 2014-10-26 17:15:00	134	Butler Library 6	103	Butler	169
 2014-10-26 17:15:00	138	Butler Library stk	103	Butler	57
-2014-10-26 17:15:00	145	Science and Engineering Library	15	Mudd	90
+2014-10-26 17:15:00	145	Science and Engineering Library	15	Northwest Corner Building	90
 2014-10-26 17:15:00	131	Butler Library 3	103	Butler	370
 2014-10-26 17:15:00	139	Lehman Library 2	79	Lehman LIbrary	61
 2014-10-26 17:15:00	144	Starr East Asian Library	62	East Asian Library	83
@@ -14375,7 +14375,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-26 17:30:00	149	Architectural and Fine Arts Library 3	146	Avery	79
 2014-10-26 17:30:00	134	Butler Library 6	103	Butler	165
 2014-10-26 17:30:00	138	Butler Library stk	103	Butler	60
-2014-10-26 17:30:00	145	Science and Engineering Library	15	Mudd	91
+2014-10-26 17:30:00	145	Science and Engineering Library	15	Northwest Corner Building	91
 2014-10-26 17:30:00	155	JJ's Place	75	John Jay	50
 2014-10-26 17:30:00	133	Butler Library 5	103	Butler	103
 2014-10-26 17:30:00	151	Lerner 2	84	Lerner	106
@@ -14389,7 +14389,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-26 17:45:00	149	Architectural and Fine Arts Library 3	146	Avery	84
 2014-10-26 17:45:00	134	Butler Library 6	103	Butler	174
 2014-10-26 17:45:00	138	Butler Library stk	103	Butler	56
-2014-10-26 17:45:00	145	Science and Engineering Library	15	Mudd	90
+2014-10-26 17:45:00	145	Science and Engineering Library	15	Northwest Corner Building	90
 2014-10-26 17:45:00	131	Butler Library 3	103	Butler	368
 2014-10-26 17:45:00	139	Lehman Library 2	79	Lehman LIbrary	64
 2014-10-26 17:45:00	144	Starr East Asian Library	62	East Asian Library	88
@@ -14422,13 +14422,13 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-26 18:00:00	149	Architectural and Fine Arts Library 3	146	Avery	80
 2014-10-26 18:00:00	134	Butler Library 6	103	Butler	154
 2014-10-26 18:00:00	138	Butler Library stk	103	Butler	42
-2014-10-26 18:00:00	145	Science and Engineering Library	15	Mudd	89
+2014-10-26 18:00:00	145	Science and Engineering Library	15	Northwest Corner Building	89
 2014-10-26 18:15:00	152	Lerner 3	84	Lerner	31
 2014-10-26 18:15:00	130	Butler Library 2	103	Butler	435
 2014-10-26 18:15:00	149	Architectural and Fine Arts Library 3	146	Avery	85
 2014-10-26 18:15:00	134	Butler Library 6	103	Butler	152
 2014-10-26 18:15:00	138	Butler Library stk	103	Butler	44
-2014-10-26 18:15:00	145	Science and Engineering Library	15	Mudd	89
+2014-10-26 18:15:00	145	Science and Engineering Library	15	Northwest Corner Building	89
 2014-10-26 18:15:00	155	JJ's Place	75	John Jay	42
 2014-10-26 18:15:00	133	Butler Library 5	103	Butler	82
 2014-10-26 18:15:00	151	Lerner 2	84	Lerner	79
@@ -14455,7 +14455,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-26 18:30:00	149	Architectural and Fine Arts Library 3	146	Avery	82
 2014-10-26 18:30:00	134	Butler Library 6	103	Butler	143
 2014-10-26 18:30:00	138	Butler Library stk	103	Butler	41
-2014-10-26 18:30:00	145	Science and Engineering Library	15	Mudd	87
+2014-10-26 18:30:00	145	Science and Engineering Library	15	Northwest Corner Building	87
 2014-10-26 18:30:00	131	Butler Library 3	103	Butler	311
 2014-10-26 18:30:00	139	Lehman Library 2	79	Lehman LIbrary	52
 2014-10-26 18:30:00	144	Starr East Asian Library	62	East Asian Library	69
@@ -14472,7 +14472,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-26 18:45:00	149	Architectural and Fine Arts Library 3	146	Avery	81
 2014-10-26 18:45:00	134	Butler Library 6	103	Butler	142
 2014-10-26 18:45:00	138	Butler Library stk	103	Butler	43
-2014-10-26 18:45:00	145	Science and Engineering Library	15	Mudd	82
+2014-10-26 18:45:00	145	Science and Engineering Library	15	Northwest Corner Building	82
 2014-10-26 18:45:00	131	Butler Library 3	103	Butler	322
 2014-10-26 18:45:00	139	Lehman Library 2	79	Lehman LIbrary	48
 2014-10-26 18:45:00	144	Starr East Asian Library	62	East Asian Library	58
@@ -14499,7 +14499,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-26 19:00:00	149	Architectural and Fine Arts Library 3	146	Avery	79
 2014-10-26 19:00:00	134	Butler Library 6	103	Butler	119
 2014-10-26 19:00:00	138	Butler Library stk	103	Butler	48
-2014-10-26 19:00:00	145	Science and Engineering Library	15	Mudd	86
+2014-10-26 19:00:00	145	Science and Engineering Library	15	Northwest Corner Building	86
 2014-10-26 19:00:00	131	Butler Library 3	103	Butler	315
 2014-10-26 19:00:00	139	Lehman Library 2	79	Lehman LIbrary	44
 2014-10-26 19:00:00	144	Starr East Asian Library	62	East Asian Library	60
@@ -14524,7 +14524,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-26 19:15:00	149	Architectural and Fine Arts Library 3	146	Avery	72
 2014-10-26 19:15:00	134	Butler Library 6	103	Butler	131
 2014-10-26 19:15:00	138	Butler Library stk	103	Butler	53
-2014-10-26 19:15:00	145	Science and Engineering Library	15	Mudd	79
+2014-10-26 19:15:00	145	Science and Engineering Library	15	Northwest Corner Building	79
 2014-10-26 19:15:00	155	JJ's Place	75	John Jay	104
 2014-10-26 19:15:00	133	Butler Library 5	103	Butler	91
 2014-10-26 19:15:00	151	Lerner 2	84	Lerner	102
@@ -14550,7 +14550,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-26 19:30:00	149	Architectural and Fine Arts Library 3	146	Avery	72
 2014-10-26 19:30:00	134	Butler Library 6	103	Butler	127
 2014-10-26 19:30:00	138	Butler Library stk	103	Butler	52
-2014-10-26 19:30:00	145	Science and Engineering Library	15	Mudd	81
+2014-10-26 19:30:00	145	Science and Engineering Library	15	Northwest Corner Building	81
 2014-10-26 19:30:00	155	JJ's Place	75	John Jay	103
 2014-10-26 19:30:00	133	Butler Library 5	103	Butler	89
 2014-10-26 19:30:00	151	Lerner 2	84	Lerner	114
@@ -14559,7 +14559,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-26 19:45:00	149	Architectural and Fine Arts Library 3	146	Avery	73
 2014-10-26 19:45:00	134	Butler Library 6	103	Butler	131
 2014-10-26 19:45:00	138	Butler Library stk	103	Butler	43
-2014-10-26 19:45:00	145	Science and Engineering Library	15	Mudd	77
+2014-10-26 19:45:00	145	Science and Engineering Library	15	Northwest Corner Building	77
 2014-10-26 19:45:00	131	Butler Library 3	103	Butler	337
 2014-10-26 19:45:00	139	Lehman Library 2	79	Lehman LIbrary	33
 2014-10-26 19:45:00	144	Starr East Asian Library	62	East Asian Library	43
@@ -14589,7 +14589,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-26 20:00:00	149	Architectural and Fine Arts Library 3	146	Avery	67
 2014-10-26 20:00:00	134	Butler Library 6	103	Butler	125
 2014-10-26 20:00:00	138	Butler Library stk	103	Butler	40
-2014-10-26 20:00:00	145	Science and Engineering Library	15	Mudd	79
+2014-10-26 20:00:00	145	Science and Engineering Library	15	Northwest Corner Building	79
 2014-10-26 20:00:00	155	JJ's Place	75	John Jay	97
 2014-10-26 20:00:00	133	Butler Library 5	103	Butler	92
 2014-10-26 20:00:00	151	Lerner 2	84	Lerner	114
@@ -14613,7 +14613,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-26 20:15:00	149	Architectural and Fine Arts Library 3	146	Avery	57
 2014-10-26 20:15:00	134	Butler Library 6	103	Butler	126
 2014-10-26 20:15:00	138	Butler Library stk	103	Butler	41
-2014-10-26 20:15:00	145	Science and Engineering Library	15	Mudd	76
+2014-10-26 20:15:00	145	Science and Engineering Library	15	Northwest Corner Building	76
 2014-10-26 20:15:00	131	Butler Library 3	103	Butler	321
 2014-10-26 20:15:00	139	Lehman Library 2	79	Lehman LIbrary	36
 2014-10-26 20:15:00	144	Starr East Asian Library	62	East Asian Library	44
@@ -14630,7 +14630,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-26 20:30:00	149	Architectural and Fine Arts Library 3	146	Avery	63
 2014-10-26 20:30:00	134	Butler Library 6	103	Butler	124
 2014-10-26 20:30:00	138	Butler Library stk	103	Butler	36
-2014-10-26 20:30:00	145	Science and Engineering Library	15	Mudd	78
+2014-10-26 20:30:00	145	Science and Engineering Library	15	Northwest Corner Building	78
 2014-10-26 20:30:00	131	Butler Library 3	103	Butler	312
 2014-10-26 20:30:00	139	Lehman Library 2	79	Lehman LIbrary	25
 2014-10-26 20:30:00	144	Starr East Asian Library	62	East Asian Library	53
@@ -14660,7 +14660,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-26 20:45:00	149	Architectural and Fine Arts Library 3	146	Avery	67
 2014-10-26 20:45:00	134	Butler Library 6	103	Butler	118
 2014-10-26 20:45:00	138	Butler Library stk	103	Butler	44
-2014-10-26 20:45:00	145	Science and Engineering Library	15	Mudd	79
+2014-10-26 20:45:00	145	Science and Engineering Library	15	Northwest Corner Building	79
 2014-10-26 20:45:00	155	JJ's Place	75	John Jay	67
 2014-10-26 20:45:00	133	Butler Library 5	103	Butler	86
 2014-10-26 20:45:00	151	Lerner 2	84	Lerner	105
@@ -14669,7 +14669,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-26 21:00:00	149	Architectural and Fine Arts Library 3	146	Avery	63
 2014-10-26 21:00:00	134	Butler Library 6	103	Butler	121
 2014-10-26 21:00:00	138	Butler Library stk	103	Butler	51
-2014-10-26 21:00:00	145	Science and Engineering Library	15	Mudd	81
+2014-10-26 21:00:00	145	Science and Engineering Library	15	Northwest Corner Building	81
 2014-10-26 21:00:00	155	JJ's Place	75	John Jay	64
 2014-10-26 21:00:00	133	Butler Library 5	103	Butler	88
 2014-10-26 21:00:00	151	Lerner 2	84	Lerner	91
@@ -14699,7 +14699,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-26 21:15:00	149	Architectural and Fine Arts Library 3	146	Avery	54
 2014-10-26 21:15:00	134	Butler Library 6	103	Butler	133
 2014-10-26 21:15:00	138	Butler Library stk	103	Butler	42
-2014-10-26 21:15:00	145	Science and Engineering Library	15	Mudd	80
+2014-10-26 21:15:00	145	Science and Engineering Library	15	Northwest Corner Building	80
 2014-10-26 21:15:00	155	JJ's Place	75	John Jay	45
 2014-10-26 21:15:00	133	Butler Library 5	103	Butler	84
 2014-10-26 21:15:00	151	Lerner 2	84	Lerner	86
@@ -14730,7 +14730,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-26 21:30:00	134	Butler Library 6	103	Butler	116
 2014-10-26 21:30:00	138	Butler Library stk	103	Butler	42
 2014-10-27 03:15:00	154	Lerner 5	84	Lerner	3
-2014-10-26 21:30:00	145	Science and Engineering Library	15	Mudd	78
+2014-10-26 21:30:00	145	Science and Engineering Library	15	Northwest Corner Building	78
 2014-10-26 21:45:00	154	Lerner 5	84	Lerner	121
 2014-10-26 21:45:00	125	John Jay Dining Hall	75	John Jay	7
 2014-10-26 21:45:00	147	Architectural and Fine Arts Library 1	146	Avery	4
@@ -14749,7 +14749,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-26 21:45:00	149	Architectural and Fine Arts Library 3	146	Avery	38
 2014-10-26 21:45:00	134	Butler Library 6	103	Butler	124
 2014-10-26 21:45:00	138	Butler Library stk	103	Butler	38
-2014-10-26 21:45:00	145	Science and Engineering Library	15	Mudd	76
+2014-10-26 21:45:00	145	Science and Engineering Library	15	Northwest Corner Building	76
 2014-10-26 21:45:00	155	JJ's Place	75	John Jay	54
 2014-10-26 21:45:00	133	Butler Library 5	103	Butler	83
 2014-10-26 21:45:00	151	Lerner 2	84	Lerner	83
@@ -14758,7 +14758,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-26 22:00:00	149	Architectural and Fine Arts Library 3	146	Avery	34
 2014-10-26 22:00:00	134	Butler Library 6	103	Butler	116
 2014-10-26 22:00:00	138	Butler Library stk	103	Butler	39
-2014-10-26 22:00:00	145	Science and Engineering Library	15	Mudd	72
+2014-10-26 22:00:00	145	Science and Engineering Library	15	Northwest Corner Building	72
 2014-10-26 22:00:00	131	Butler Library 3	103	Butler	334
 2014-10-26 22:00:00	139	Lehman Library 2	79	Lehman LIbrary	20
 2014-10-26 22:00:00	144	Starr East Asian Library	62	East Asian Library	29
@@ -14793,7 +14793,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-26 22:15:00	149	Architectural and Fine Arts Library 3	146	Avery	15
 2014-10-26 22:15:00	134	Butler Library 6	103	Butler	102
 2014-10-26 22:15:00	138	Butler Library stk	103	Butler	35
-2014-10-26 22:15:00	145	Science and Engineering Library	15	Mudd	70
+2014-10-26 22:15:00	145	Science and Engineering Library	15	Northwest Corner Building	70
 2014-10-26 22:15:00	155	JJ's Place	75	John Jay	47
 2014-10-26 22:15:00	133	Butler Library 5	103	Butler	75
 2014-10-26 22:15:00	151	Lerner 2	84	Lerner	81
@@ -14807,7 +14807,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-26 22:30:00	149	Architectural and Fine Arts Library 3	146	Avery	6
 2014-10-26 22:30:00	134	Butler Library 6	103	Butler	98
 2014-10-26 22:30:00	138	Butler Library stk	103	Butler	31
-2014-10-26 22:30:00	145	Science and Engineering Library	15	Mudd	67
+2014-10-26 22:30:00	145	Science and Engineering Library	15	Northwest Corner Building	67
 2014-10-26 22:30:00	131	Butler Library 3	103	Butler	315
 2014-10-26 22:30:00	139	Lehman Library 2	79	Lehman LIbrary	19
 2014-10-26 22:30:00	144	Starr East Asian Library	62	East Asian Library	12
@@ -14834,7 +14834,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-26 22:45:00	149	Architectural and Fine Arts Library 3	146	Avery	6
 2014-10-26 22:45:00	134	Butler Library 6	103	Butler	93
 2014-10-26 22:45:00	138	Butler Library stk	103	Butler	37
-2014-10-26 22:45:00	145	Science and Engineering Library	15	Mudd	70
+2014-10-26 22:45:00	145	Science and Engineering Library	15	Northwest Corner Building	70
 2014-10-26 22:45:00	131	Butler Library 3	103	Butler	328
 2014-10-26 22:45:00	139	Lehman Library 2	79	Lehman LIbrary	20
 2014-10-26 22:45:00	144	Starr East Asian Library	62	East Asian Library	8
@@ -14859,7 +14859,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-26 23:00:00	149	Architectural and Fine Arts Library 3	146	Avery	3
 2014-10-26 23:00:00	134	Butler Library 6	103	Butler	82
 2014-10-26 23:00:00	138	Butler Library stk	103	Butler	46
-2014-10-26 23:00:00	145	Science and Engineering Library	15	Mudd	69
+2014-10-26 23:00:00	145	Science and Engineering Library	15	Northwest Corner Building	69
 2014-10-26 23:00:00	155	JJ's Place	75	John Jay	59
 2014-10-26 23:00:00	133	Butler Library 5	103	Butler	46
 2014-10-26 23:00:00	151	Lerner 2	84	Lerner	54
@@ -14876,7 +14876,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-26 23:15:00	149	Architectural and Fine Arts Library 3	146	Avery	2
 2014-10-26 23:15:00	134	Butler Library 6	103	Butler	56
 2014-10-26 23:15:00	138	Butler Library stk	103	Butler	43
-2014-10-26 23:15:00	145	Science and Engineering Library	15	Mudd	68
+2014-10-26 23:15:00	145	Science and Engineering Library	15	Northwest Corner Building	68
 2014-10-26 23:15:00	155	JJ's Place	75	John Jay	60
 2014-10-26 23:15:00	133	Butler Library 5	103	Butler	21
 2014-10-26 23:15:00	151	Lerner 2	84	Lerner	42
@@ -14898,7 +14898,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-26 23:30:00	149	Architectural and Fine Arts Library 3	146	Avery	7
 2014-10-26 23:30:00	134	Butler Library 6	103	Butler	1
 2014-10-26 23:30:00	138	Butler Library stk	103	Butler	40
-2014-10-26 23:30:00	145	Science and Engineering Library	15	Mudd	55
+2014-10-26 23:30:00	145	Science and Engineering Library	15	Northwest Corner Building	55
 2014-10-26 23:30:00	155	JJ's Place	75	John Jay	68
 2014-10-26 23:30:00	133	Butler Library 5	103	Butler	18
 2014-10-26 23:30:00	151	Lerner 2	84	Lerner	41
@@ -14917,7 +14917,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-26 23:45:00	149	Architectural and Fine Arts Library 3	146	Avery	4
 2014-10-26 23:45:00	134	Butler Library 6	103	Butler	0
 2014-10-26 23:45:00	138	Butler Library stk	103	Butler	41
-2014-10-26 23:45:00	145	Science and Engineering Library	15	Mudd	48
+2014-10-26 23:45:00	145	Science and Engineering Library	15	Northwest Corner Building	48
 2014-10-26 23:45:00	131	Butler Library 3	103	Butler	352
 2014-10-26 23:45:00	139	Lehman Library 2	79	Lehman LIbrary	3
 2014-10-26 23:45:00	144	Starr East Asian Library	62	East Asian Library	2
@@ -14947,7 +14947,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-27 00:00:00	149	Architectural and Fine Arts Library 3	146	Avery	3
 2014-10-27 00:00:00	134	Butler Library 6	103	Butler	1
 2014-10-27 00:00:00	138	Butler Library stk	103	Butler	34
-2014-10-27 00:00:00	145	Science and Engineering Library	15	Mudd	58
+2014-10-27 00:00:00	145	Science and Engineering Library	15	Northwest Corner Building	58
 2014-10-27 00:00:00	155	JJ's Place	75	John Jay	55
 2014-10-27 00:00:00	133	Butler Library 5	103	Butler	6
 2014-10-27 00:00:00	151	Lerner 2	84	Lerner	25
@@ -14969,7 +14969,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-27 00:15:00	149	Architectural and Fine Arts Library 3	146	Avery	3
 2014-10-27 00:15:00	134	Butler Library 6	103	Butler	0
 2014-10-27 00:15:00	138	Butler Library stk	103	Butler	31
-2014-10-27 00:15:00	145	Science and Engineering Library	15	Mudd	52
+2014-10-27 00:15:00	145	Science and Engineering Library	15	Northwest Corner Building	52
 2014-10-27 00:15:00	155	JJ's Place	75	John Jay	53
 2014-10-27 00:15:00	133	Butler Library 5	103	Butler	5
 2014-10-27 00:15:00	151	Lerner 2	84	Lerner	35
@@ -14988,7 +14988,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-27 00:30:00	149	Architectural and Fine Arts Library 3	146	Avery	2
 2014-10-27 00:30:00	134	Butler Library 6	103	Butler	0
 2014-10-27 00:30:00	138	Butler Library stk	103	Butler	28
-2014-10-27 00:30:00	145	Science and Engineering Library	15	Mudd	50
+2014-10-27 00:30:00	145	Science and Engineering Library	15	Northwest Corner Building	50
 2014-10-27 00:30:00	131	Butler Library 3	103	Butler	271
 2014-10-27 00:30:00	139	Lehman Library 2	79	Lehman LIbrary	3
 2014-10-27 00:30:00	144	Starr East Asian Library	62	East Asian Library	1
@@ -15005,7 +15005,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-27 00:45:00	149	Architectural and Fine Arts Library 3	146	Avery	2
 2014-10-27 00:45:00	134	Butler Library 6	103	Butler	0
 2014-10-27 00:45:00	138	Butler Library stk	103	Butler	22
-2014-10-27 00:45:00	145	Science and Engineering Library	15	Mudd	48
+2014-10-27 00:45:00	145	Science and Engineering Library	15	Northwest Corner Building	48
 2014-10-27 00:45:00	131	Butler Library 3	103	Butler	256
 2014-10-27 00:45:00	139	Lehman Library 2	79	Lehman LIbrary	3
 2014-10-27 00:45:00	144	Starr East Asian Library	62	East Asian Library	0
@@ -15032,7 +15032,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-27 01:00:00	149	Architectural and Fine Arts Library 3	146	Avery	2
 2014-10-27 01:00:00	134	Butler Library 6	103	Butler	0
 2014-10-27 01:00:00	138	Butler Library stk	103	Butler	15
-2014-10-27 01:00:00	145	Science and Engineering Library	15	Mudd	43
+2014-10-27 01:00:00	145	Science and Engineering Library	15	Northwest Corner Building	43
 2014-10-27 01:00:00	131	Butler Library 3	103	Butler	224
 2014-10-27 01:00:00	139	Lehman Library 2	79	Lehman LIbrary	2
 2014-10-27 01:00:00	144	Starr East Asian Library	62	East Asian Library	1
@@ -15060,7 +15060,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-27 01:15:00	149	Architectural and Fine Arts Library 3	146	Avery	3
 2014-10-27 01:15:00	134	Butler Library 6	103	Butler	1
 2014-10-27 01:15:00	138	Butler Library stk	103	Butler	11
-2014-10-27 01:15:00	145	Science and Engineering Library	15	Mudd	40
+2014-10-27 01:15:00	145	Science and Engineering Library	15	Northwest Corner Building	40
 2014-10-27 01:30:00	155	JJ's Place	75	John Jay	8
 2014-10-27 01:30:00	133	Butler Library 5	103	Butler	8
 2014-10-27 01:30:00	151	Lerner 2	84	Lerner	6
@@ -15082,7 +15082,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-27 01:30:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-27 01:30:00	134	Butler Library 6	103	Butler	0
 2014-10-27 01:30:00	138	Butler Library stk	103	Butler	14
-2014-10-27 01:30:00	145	Science and Engineering Library	15	Mudd	38
+2014-10-27 01:30:00	145	Science and Engineering Library	15	Northwest Corner Building	38
 2014-10-27 01:45:00	154	Lerner 5	84	Lerner	3
 2014-10-27 01:45:00	125	John Jay Dining Hall	75	John Jay	2
 2014-10-27 01:45:00	147	Architectural and Fine Arts Library 1	146	Avery	0
@@ -15101,7 +15101,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-27 01:45:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-27 01:45:00	134	Butler Library 6	103	Butler	0
 2014-10-27 01:45:00	138	Butler Library stk	103	Butler	19
-2014-10-27 01:45:00	145	Science and Engineering Library	15	Mudd	30
+2014-10-27 01:45:00	145	Science and Engineering Library	15	Northwest Corner Building	30
 2014-10-27 01:45:00	155	JJ's Place	75	John Jay	1
 2014-10-27 01:45:00	133	Butler Library 5	103	Butler	9
 2014-10-27 01:45:00	151	Lerner 2	84	Lerner	4
@@ -15110,7 +15110,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-27 02:00:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-27 02:00:00	134	Butler Library 6	103	Butler	0
 2014-10-27 02:00:00	138	Butler Library stk	103	Butler	15
-2014-10-27 02:00:00	145	Science and Engineering Library	15	Mudd	30
+2014-10-27 02:00:00	145	Science and Engineering Library	15	Northwest Corner Building	30
 2014-10-27 02:00:00	155	JJ's Place	75	John Jay	2
 2014-10-27 02:00:00	133	Butler Library 5	103	Butler	8
 2014-10-27 02:00:00	151	Lerner 2	84	Lerner	5
@@ -15149,7 +15149,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-27 02:15:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-27 02:15:00	134	Butler Library 6	103	Butler	0
 2014-10-27 02:15:00	138	Butler Library stk	103	Butler	13
-2014-10-27 02:15:00	145	Science and Engineering Library	15	Mudd	26
+2014-10-27 02:15:00	145	Science and Engineering Library	15	Northwest Corner Building	26
 2014-10-27 02:30:00	131	Butler Library 3	103	Butler	121
 2014-10-27 02:30:00	139	Lehman Library 2	79	Lehman LIbrary	2
 2014-10-27 02:30:00	144	Starr East Asian Library	62	East Asian Library	1
@@ -15163,7 +15163,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-27 02:30:00	149	Architectural and Fine Arts Library 3	146	Avery	2
 2014-10-27 02:30:00	134	Butler Library 6	103	Butler	0
 2014-10-27 02:30:00	138	Butler Library stk	103	Butler	13
-2014-10-27 02:30:00	145	Science and Engineering Library	15	Mudd	23
+2014-10-27 02:30:00	145	Science and Engineering Library	15	Northwest Corner Building	23
 2014-10-27 02:30:00	155	JJ's Place	75	John Jay	1
 2014-10-27 02:30:00	133	Butler Library 5	103	Butler	5
 2014-10-27 02:30:00	151	Lerner 2	84	Lerner	4
@@ -15193,7 +15193,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-27 02:45:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-27 02:45:00	134	Butler Library 6	103	Butler	0
 2014-10-27 02:45:00	138	Butler Library stk	103	Butler	10
-2014-10-27 02:45:00	145	Science and Engineering Library	15	Mudd	24
+2014-10-27 02:45:00	145	Science and Engineering Library	15	Northwest Corner Building	24
 2014-10-27 03:00:00	155	JJ's Place	75	John Jay	2
 2014-10-27 03:00:00	133	Butler Library 5	103	Butler	7
 2014-10-27 03:00:00	151	Lerner 2	84	Lerner	3
@@ -15215,7 +15215,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-27 03:00:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-27 03:00:00	134	Butler Library 6	103	Butler	0
 2014-10-27 03:00:00	138	Butler Library stk	103	Butler	7
-2014-10-27 03:00:00	145	Science and Engineering Library	15	Mudd	25
+2014-10-27 03:00:00	145	Science and Engineering Library	15	Northwest Corner Building	25
 2014-10-27 03:15:00	131	Butler Library 3	103	Butler	85
 2014-10-27 03:15:00	139	Lehman Library 2	79	Lehman LIbrary	2
 2014-10-27 03:15:00	144	Starr East Asian Library	62	East Asian Library	0
@@ -15229,7 +15229,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-27 03:15:00	149	Architectural and Fine Arts Library 3	146	Avery	2
 2014-10-27 03:15:00	134	Butler Library 6	103	Butler	0
 2014-10-27 03:15:00	138	Butler Library stk	103	Butler	9
-2014-10-27 03:15:00	145	Science and Engineering Library	15	Mudd	11
+2014-10-27 03:15:00	145	Science and Engineering Library	15	Northwest Corner Building	11
 2014-10-27 03:15:00	155	JJ's Place	75	John Jay	1
 2014-10-27 03:15:00	133	Butler Library 5	103	Butler	7
 2014-10-27 03:15:00	151	Lerner 2	84	Lerner	4
@@ -15242,7 +15242,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-27 03:30:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-27 03:30:00	134	Butler Library 6	103	Butler	0
 2014-10-27 03:30:00	138	Butler Library stk	103	Butler	8
-2014-10-27 03:30:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-27 03:30:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-27 03:30:00	155	JJ's Place	75	John Jay	1
 2014-10-27 03:30:00	133	Butler Library 5	103	Butler	6
 2014-10-27 03:30:00	151	Lerner 2	84	Lerner	3
@@ -15264,7 +15264,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-27 03:45:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-27 03:45:00	134	Butler Library 6	103	Butler	0
 2014-10-27 03:45:00	138	Butler Library stk	103	Butler	2
-2014-10-27 03:45:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-27 03:45:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-27 03:45:00	131	Butler Library 3	103	Butler	64
 2014-10-27 03:45:00	139	Lehman Library 2	79	Lehman LIbrary	3
 2014-10-27 03:45:00	144	Starr East Asian Library	62	East Asian Library	0
@@ -15302,7 +15302,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-27 04:00:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-27 04:00:00	134	Butler Library 6	103	Butler	0
 2014-10-27 04:00:00	138	Butler Library stk	103	Butler	1
-2014-10-27 04:00:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-27 04:00:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-27 04:15:00	155	JJ's Place	75	John Jay	1
 2014-10-27 04:15:00	23	Uris/Watson Library	2	Uris	0
 2014-10-27 04:15:00	133	Butler Library 5	103	Butler	9
@@ -15313,7 +15313,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-27 04:15:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-27 04:15:00	134	Butler Library 6	103	Butler	0
 2014-10-27 04:15:00	138	Butler Library stk	103	Butler	1
-2014-10-27 04:15:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-27 04:15:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-27 04:15:00	131	Butler Library 3	103	Butler	60
 2014-10-27 04:15:00	139	Lehman Library 2	79	Lehman LIbrary	2
 2014-10-27 04:15:00	144	Starr East Asian Library	62	East Asian Library	0
@@ -15343,7 +15343,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-27 04:30:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-27 04:30:00	134	Butler Library 6	103	Butler	0
 2014-10-27 04:30:00	138	Butler Library stk	103	Butler	0
-2014-10-27 04:30:00	145	Science and Engineering Library	15	Mudd	3
+2014-10-27 04:30:00	145	Science and Engineering Library	15	Northwest Corner Building	3
 2014-10-27 04:30:00	155	JJ's Place	75	John Jay	1
 2014-10-27 04:30:00	133	Butler Library 5	103	Butler	7
 2014-10-27 04:30:00	151	Lerner 2	84	Lerner	3
@@ -15360,7 +15360,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-27 04:45:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-27 04:45:00	134	Butler Library 6	103	Butler	0
 2014-10-27 04:45:00	138	Butler Library stk	103	Butler	0
-2014-10-27 04:45:00	145	Science and Engineering Library	15	Mudd	3
+2014-10-27 04:45:00	145	Science and Engineering Library	15	Northwest Corner Building	3
 2014-10-27 04:45:00	155	JJ's Place	75	John Jay	1
 2014-10-27 04:45:00	133	Butler Library 5	103	Butler	7
 2014-10-27 04:45:00	151	Lerner 2	84	Lerner	3
@@ -15379,7 +15379,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-27 05:00:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-27 05:00:00	134	Butler Library 6	103	Butler	0
 2014-10-27 05:00:00	138	Butler Library stk	103	Butler	0
-2014-10-27 05:00:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-27 05:00:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-27 05:00:00	131	Butler Library 3	103	Butler	45
 2014-10-27 05:00:00	139	Lehman Library 2	79	Lehman LIbrary	2
 2014-10-27 05:00:00	144	Starr East Asian Library	62	East Asian Library	1
@@ -15401,7 +15401,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-27 05:15:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-27 05:15:00	134	Butler Library 6	103	Butler	0
 2014-10-27 05:15:00	138	Butler Library stk	103	Butler	0
-2014-10-27 05:15:00	145	Science and Engineering Library	15	Mudd	3
+2014-10-27 05:15:00	145	Science and Engineering Library	15	Northwest Corner Building	3
 2014-10-27 05:15:00	131	Butler Library 3	103	Butler	47
 2014-10-27 05:15:00	139	Lehman Library 2	79	Lehman LIbrary	2
 2014-10-27 05:15:00	144	Starr East Asian Library	62	East Asian Library	1
@@ -15434,7 +15434,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-27 05:30:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-27 05:30:00	134	Butler Library 6	103	Butler	0
 2014-10-27 05:30:00	138	Butler Library stk	103	Butler	0
-2014-10-27 05:30:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-27 05:30:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-27 05:45:00	155	JJ's Place	75	John Jay	0
 2014-10-27 05:45:00	133	Butler Library 5	103	Butler	7
 2014-10-27 05:45:00	151	Lerner 2	84	Lerner	4
@@ -15456,7 +15456,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-27 05:45:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-27 05:45:00	134	Butler Library 6	103	Butler	0
 2014-10-27 05:45:00	138	Butler Library stk	103	Butler	0
-2014-10-27 05:45:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-27 05:45:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-27 06:00:00	154	Lerner 5	84	Lerner	1
 2014-10-27 06:00:00	125	John Jay Dining Hall	75	John Jay	2
 2014-10-27 06:00:00	147	Architectural and Fine Arts Library 1	146	Avery	0
@@ -15472,7 +15472,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-27 06:00:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-27 06:00:00	134	Butler Library 6	103	Butler	0
 2014-10-27 06:00:00	138	Butler Library stk	103	Butler	1
-2014-10-27 06:00:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-27 06:00:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-27 06:00:00	131	Butler Library 3	103	Butler	32
 2014-10-27 06:00:00	139	Lehman Library 2	79	Lehman LIbrary	2
 2014-10-27 06:00:00	144	Starr East Asian Library	62	East Asian Library	0
@@ -15497,7 +15497,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-27 06:15:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-27 06:15:00	134	Butler Library 6	103	Butler	0
 2014-10-27 06:15:00	138	Butler Library stk	103	Butler	0
-2014-10-27 06:15:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-27 06:15:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-27 06:15:00	155	JJ's Place	75	John Jay	0
 2014-10-27 06:15:00	133	Butler Library 5	103	Butler	7
 2014-10-27 06:15:00	151	Lerner 2	84	Lerner	4
@@ -15506,7 +15506,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-27 06:30:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-27 06:30:00	134	Butler Library 6	103	Butler	0
 2014-10-27 06:30:00	138	Butler Library stk	103	Butler	1
-2014-10-27 06:30:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-27 06:30:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-27 06:30:00	155	JJ's Place	75	John Jay	0
 2014-10-27 06:30:00	133	Butler Library 5	103	Butler	8
 2014-10-27 06:30:00	151	Lerner 2	84	Lerner	3
@@ -15533,7 +15533,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-27 06:45:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-27 06:45:00	134	Butler Library 6	103	Butler	0
 2014-10-27 06:45:00	138	Butler Library stk	103	Butler	0
-2014-10-27 06:45:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-27 06:45:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-27 06:45:00	131	Butler Library 3	103	Butler	27
 2014-10-27 06:45:00	139	Lehman Library 2	79	Lehman LIbrary	1
 2014-10-27 06:45:00	144	Starr East Asian Library	62	East Asian Library	0
@@ -15566,13 +15566,13 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-27 07:00:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-27 07:00:00	134	Butler Library 6	103	Butler	2
 2014-10-27 07:00:00	138	Butler Library stk	103	Butler	0
-2014-10-27 07:00:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-27 07:00:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-27 07:15:00	152	Lerner 3	84	Lerner	9
 2014-10-27 07:15:00	130	Butler Library 2	103	Butler	25
 2014-10-27 07:15:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-27 07:15:00	134	Butler Library 6	103	Butler	0
 2014-10-27 07:15:00	138	Butler Library stk	103	Butler	0
-2014-10-27 07:15:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-27 07:15:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-27 07:15:00	155	JJ's Place	75	John Jay	0
 2014-10-27 07:15:00	133	Butler Library 5	103	Butler	7
 2014-10-27 07:15:00	151	Lerner 2	84	Lerner	7
@@ -15610,7 +15610,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-27 07:30:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-27 07:30:00	134	Butler Library 6	103	Butler	0
 2014-10-27 07:30:00	138	Butler Library stk	103	Butler	0
-2014-10-27 07:30:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-27 07:30:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-27 07:45:00	131	Butler Library 3	103	Butler	21
 2014-10-27 07:45:00	139	Lehman Library 2	79	Lehman LIbrary	5
 2014-10-27 07:45:00	144	Starr East Asian Library	62	East Asian Library	5
@@ -15632,14 +15632,14 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-27 07:45:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-27 07:45:00	134	Butler Library 6	103	Butler	0
 2014-10-27 07:45:00	138	Butler Library stk	103	Butler	0
-2014-10-27 07:45:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-27 07:45:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-27 08:00:00	152	Lerner 3	84	Lerner	60
 2014-10-27 08:00:00	130	Butler Library 2	103	Butler	38
 2014-10-27 08:00:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-28 00:00:00	153	Lerner 4	84	Lerner	33
 2014-10-27 08:00:00	134	Butler Library 6	103	Butler	0
 2014-10-27 08:00:00	138	Butler Library stk	103	Butler	0
-2014-10-27 08:00:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-27 08:00:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-27 08:00:00	131	Butler Library 3	103	Butler	19
 2014-10-27 08:00:00	139	Lehman Library 2	79	Lehman LIbrary	5
 2014-10-27 08:00:00	144	Starr East Asian Library	62	East Asian Library	5
@@ -15661,7 +15661,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-27 08:15:00	149	Architectural and Fine Arts Library 3	146	Avery	3
 2014-10-27 08:15:00	134	Butler Library 6	103	Butler	1
 2014-10-27 08:15:00	138	Butler Library stk	103	Butler	0
-2014-10-27 08:15:00	145	Science and Engineering Library	15	Mudd	3
+2014-10-27 08:15:00	145	Science and Engineering Library	15	Northwest Corner Building	3
 2014-10-27 08:15:00	155	JJ's Place	75	John Jay	1
 2014-10-27 08:15:00	133	Butler Library 5	103	Butler	7
 2014-10-27 08:15:00	151	Lerner 2	84	Lerner	13
@@ -15693,7 +15693,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-27 08:30:00	149	Architectural and Fine Arts Library 3	146	Avery	2
 2014-10-27 08:30:00	134	Butler Library 6	103	Butler	1
 2014-10-27 08:30:00	138	Butler Library stk	103	Butler	1
-2014-10-27 08:30:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-27 08:30:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-27 08:30:00	131	Butler Library 3	103	Butler	30
 2014-10-27 08:30:00	139	Lehman Library 2	79	Lehman LIbrary	8
 2014-10-27 08:30:00	144	Starr East Asian Library	62	East Asian Library	4
@@ -15715,7 +15715,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-27 08:45:00	149	Architectural and Fine Arts Library 3	146	Avery	2
 2014-10-27 08:45:00	134	Butler Library 6	103	Butler	1
 2014-10-27 08:45:00	138	Butler Library stk	103	Butler	0
-2014-10-27 08:45:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-27 08:45:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-27 08:45:00	131	Butler Library 3	103	Butler	34
 2014-10-27 08:45:00	139	Lehman Library 2	79	Lehman LIbrary	5
 2014-10-27 08:45:00	144	Starr East Asian Library	62	East Asian Library	3
@@ -15737,7 +15737,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-27 09:00:00	149	Architectural and Fine Arts Library 3	146	Avery	5
 2014-10-27 09:00:00	134	Butler Library 6	103	Butler	0
 2014-10-27 09:00:00	138	Butler Library stk	103	Butler	0
-2014-10-27 09:00:00	145	Science and Engineering Library	15	Mudd	4
+2014-10-27 09:00:00	145	Science and Engineering Library	15	Northwest Corner Building	4
 2014-10-27 09:00:00	131	Butler Library 3	103	Butler	42
 2014-10-27 09:00:00	139	Lehman Library 2	79	Lehman LIbrary	5
 2014-10-27 09:00:00	144	Starr East Asian Library	62	East Asian Library	22
@@ -15765,7 +15765,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-27 09:15:00	149	Architectural and Fine Arts Library 3	146	Avery	13
 2014-10-27 09:15:00	134	Butler Library 6	103	Butler	2
 2014-10-27 09:15:00	138	Butler Library stk	103	Butler	1
-2014-10-27 09:15:00	145	Science and Engineering Library	15	Mudd	13
+2014-10-27 09:15:00	145	Science and Engineering Library	15	Northwest Corner Building	13
 2014-10-27 09:30:00	154	Lerner 5	84	Lerner	18
 2014-10-27 09:30:00	125	John Jay Dining Hall	75	John Jay	1
 2014-10-27 09:30:00	147	Architectural and Fine Arts Library 1	146	Avery	2
@@ -15781,7 +15781,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-27 09:30:00	149	Architectural and Fine Arts Library 3	146	Avery	11
 2014-10-27 09:30:00	134	Butler Library 6	103	Butler	8
 2014-10-27 09:30:00	138	Butler Library stk	103	Butler	1
-2014-10-27 09:30:00	145	Science and Engineering Library	15	Mudd	15
+2014-10-27 09:30:00	145	Science and Engineering Library	15	Northwest Corner Building	15
 2014-10-27 09:30:00	131	Butler Library 3	103	Butler	75
 2014-10-27 09:30:00	139	Lehman Library 2	79	Lehman LIbrary	12
 2014-10-27 09:30:00	144	Starr East Asian Library	62	East Asian Library	48
@@ -15806,7 +15806,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-27 09:45:00	149	Architectural and Fine Arts Library 3	146	Avery	16
 2014-10-27 09:45:00	134	Butler Library 6	103	Butler	13
 2014-10-27 09:45:00	138	Butler Library stk	103	Butler	5
-2014-10-27 09:45:00	145	Science and Engineering Library	15	Mudd	38
+2014-10-27 09:45:00	145	Science and Engineering Library	15	Northwest Corner Building	38
 2014-10-27 09:45:00	155	JJ's Place	75	John Jay	2
 2014-10-27 09:45:00	133	Butler Library 5	103	Butler	29
 2014-10-27 09:45:00	151	Lerner 2	84	Lerner	26
@@ -15831,7 +15831,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-27 10:00:00	149	Architectural and Fine Arts Library 3	146	Avery	23
 2014-10-27 10:00:00	134	Butler Library 6	103	Butler	14
 2014-10-27 10:00:00	138	Butler Library stk	103	Butler	9
-2014-10-27 10:00:00	145	Science and Engineering Library	15	Mudd	37
+2014-10-27 10:00:00	145	Science and Engineering Library	15	Northwest Corner Building	37
 2014-10-27 10:15:00	155	JJ's Place	75	John Jay	1
 2014-10-27 10:15:00	133	Butler Library 5	103	Butler	41
 2014-10-27 10:15:00	151	Lerner 2	84	Lerner	42
@@ -15852,13 +15852,13 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-27 10:15:00	149	Architectural and Fine Arts Library 3	146	Avery	41
 2014-10-27 10:15:00	134	Butler Library 6	103	Butler	18
 2014-10-27 10:15:00	138	Butler Library stk	103	Butler	5
-2014-10-27 10:15:00	145	Science and Engineering Library	15	Mudd	68
+2014-10-27 10:15:00	145	Science and Engineering Library	15	Northwest Corner Building	68
 2014-10-27 10:30:00	152	Lerner 3	84	Lerner	97
 2014-10-27 10:30:00	130	Butler Library 2	103	Butler	243
 2014-10-27 10:30:00	149	Architectural and Fine Arts Library 3	146	Avery	54
 2014-10-27 10:30:00	134	Butler Library 6	103	Butler	30
 2014-10-27 10:30:00	138	Butler Library stk	103	Butler	9
-2014-10-27 10:30:00	145	Science and Engineering Library	15	Mudd	69
+2014-10-27 10:30:00	145	Science and Engineering Library	15	Northwest Corner Building	69
 2014-10-27 10:30:00	131	Butler Library 3	103	Butler	204
 2014-10-27 10:30:00	139	Lehman Library 2	79	Lehman LIbrary	31
 2014-10-27 10:30:00	144	Starr East Asian Library	62	East Asian Library	107
@@ -15890,7 +15890,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-27 10:45:00	149	Architectural and Fine Arts Library 3	146	Avery	57
 2014-10-27 10:45:00	134	Butler Library 6	103	Butler	38
 2014-10-27 10:45:00	138	Butler Library stk	103	Butler	9
-2014-10-27 10:45:00	145	Science and Engineering Library	15	Mudd	65
+2014-10-27 10:45:00	145	Science and Engineering Library	15	Northwest Corner Building	65
 2014-10-27 10:45:00	131	Butler Library 3	103	Butler	234
 2014-10-27 10:45:00	139	Lehman Library 2	79	Lehman LIbrary	40
 2014-10-27 10:45:00	144	Starr East Asian Library	62	East Asian Library	99
@@ -15912,7 +15912,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-27 11:00:00	149	Architectural and Fine Arts Library 3	146	Avery	68
 2014-10-27 11:00:00	134	Butler Library 6	103	Butler	38
 2014-10-27 11:00:00	138	Butler Library stk	103	Butler	11
-2014-10-27 11:00:00	145	Science and Engineering Library	15	Mudd	80
+2014-10-27 11:00:00	145	Science and Engineering Library	15	Northwest Corner Building	80
 2014-10-27 11:00:00	131	Butler Library 3	103	Butler	243
 2014-10-27 11:00:00	139	Lehman Library 2	79	Lehman LIbrary	40
 2014-10-27 11:00:00	144	Starr East Asian Library	62	East Asian Library	100
@@ -15929,7 +15929,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-27 11:15:00	149	Architectural and Fine Arts Library 3	146	Avery	78
 2014-10-27 11:15:00	134	Butler Library 6	103	Butler	60
 2014-10-27 11:15:00	138	Butler Library stk	103	Butler	11
-2014-10-27 11:15:00	145	Science and Engineering Library	15	Mudd	73
+2014-10-27 11:15:00	145	Science and Engineering Library	15	Northwest Corner Building	73
 2014-10-27 11:15:00	131	Butler Library 3	103	Butler	276
 2014-10-27 11:15:00	139	Lehman Library 2	79	Lehman LIbrary	36
 2014-10-27 11:15:00	144	Starr East Asian Library	62	East Asian Library	106
@@ -15962,13 +15962,13 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-27 11:30:00	149	Architectural and Fine Arts Library 3	146	Avery	94
 2014-10-27 11:30:00	134	Butler Library 6	103	Butler	58
 2014-10-27 11:30:00	138	Butler Library stk	103	Butler	15
-2014-10-27 11:30:00	145	Science and Engineering Library	15	Mudd	118
+2014-10-27 11:30:00	145	Science and Engineering Library	15	Northwest Corner Building	118
 2014-10-27 11:45:00	152	Lerner 3	84	Lerner	121
 2014-10-27 11:45:00	130	Butler Library 2	103	Butler	350
 2014-10-27 11:45:00	149	Architectural and Fine Arts Library 3	146	Avery	98
 2014-10-27 11:45:00	134	Butler Library 6	103	Butler	66
 2014-10-27 11:45:00	138	Butler Library stk	103	Butler	14
-2014-10-27 11:45:00	145	Science and Engineering Library	15	Mudd	89
+2014-10-27 11:45:00	145	Science and Engineering Library	15	Northwest Corner Building	89
 2014-10-27 11:45:00	131	Butler Library 3	103	Butler	269
 2014-10-27 11:45:00	139	Lehman Library 2	79	Lehman LIbrary	49
 2014-10-27 11:45:00	144	Starr East Asian Library	62	East Asian Library	103
@@ -15998,7 +15998,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-27 12:00:00	149	Architectural and Fine Arts Library 3	146	Avery	91
 2014-10-27 12:00:00	134	Butler Library 6	103	Butler	57
 2014-10-27 12:00:00	138	Butler Library stk	103	Butler	21
-2014-10-27 12:00:00	145	Science and Engineering Library	15	Mudd	85
+2014-10-27 12:00:00	145	Science and Engineering Library	15	Northwest Corner Building	85
 2014-10-27 12:00:00	155	JJ's Place	75	John Jay	20
 2014-10-27 12:00:00	133	Butler Library 5	103	Butler	58
 2014-10-27 12:00:00	151	Lerner 2	84	Lerner	79
@@ -16028,7 +16028,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-27 12:15:00	149	Architectural and Fine Arts Library 3	146	Avery	85
 2014-10-27 12:15:00	134	Butler Library 6	103	Butler	66
 2014-10-27 12:15:00	138	Butler Library stk	103	Butler	22
-2014-10-27 12:15:00	145	Science and Engineering Library	15	Mudd	97
+2014-10-27 12:15:00	145	Science and Engineering Library	15	Northwest Corner Building	97
 2014-10-27 12:30:00	155	JJ's Place	75	John Jay	18
 2014-10-27 12:30:00	133	Butler Library 5	103	Butler	66
 2014-10-27 12:30:00	151	Lerner 2	84	Lerner	64
@@ -16050,7 +16050,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-27 12:30:00	149	Architectural and Fine Arts Library 3	146	Avery	89
 2014-10-27 12:30:00	134	Butler Library 6	103	Butler	70
 2014-10-27 12:30:00	138	Butler Library stk	103	Butler	18
-2014-10-27 12:30:00	145	Science and Engineering Library	15	Mudd	101
+2014-10-27 12:30:00	145	Science and Engineering Library	15	Northwest Corner Building	101
 2014-10-27 12:45:00	155	JJ's Place	75	John Jay	28
 2014-10-27 12:45:00	133	Butler Library 5	103	Butler	65
 2014-10-27 12:45:00	151	Lerner 2	84	Lerner	77
@@ -16072,13 +16072,13 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-27 12:45:00	149	Architectural and Fine Arts Library 3	146	Avery	90
 2014-10-27 12:45:00	134	Butler Library 6	103	Butler	67
 2014-10-27 12:45:00	138	Butler Library stk	103	Butler	16
-2014-10-27 12:45:00	145	Science and Engineering Library	15	Mudd	96
+2014-10-27 12:45:00	145	Science and Engineering Library	15	Northwest Corner Building	96
 2014-10-27 13:00:00	152	Lerner 3	84	Lerner	146
 2014-10-27 13:00:00	130	Butler Library 2	103	Butler	372
 2014-10-27 13:00:00	149	Architectural and Fine Arts Library 3	146	Avery	86
 2014-10-27 13:00:00	134	Butler Library 6	103	Butler	77
 2014-10-27 13:00:00	138	Butler Library stk	103	Butler	16
-2014-10-27 13:00:00	145	Science and Engineering Library	15	Mudd	99
+2014-10-27 13:00:00	145	Science and Engineering Library	15	Northwest Corner Building	99
 2014-10-27 13:00:00	131	Butler Library 3	103	Butler	273
 2014-10-27 13:00:00	139	Lehman Library 2	79	Lehman LIbrary	69
 2014-10-27 13:00:00	144	Starr East Asian Library	62	East Asian Library	98
@@ -16116,7 +16116,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-27 13:15:00	149	Architectural and Fine Arts Library 3	146	Avery	98
 2014-10-27 13:15:00	134	Butler Library 6	103	Butler	84
 2014-10-27 13:15:00	138	Butler Library stk	103	Butler	17
-2014-10-27 13:15:00	145	Science and Engineering Library	15	Mudd	100
+2014-10-27 13:15:00	145	Science and Engineering Library	15	Northwest Corner Building	100
 2014-10-27 13:30:00	155	JJ's Place	75	John Jay	44
 2014-10-27 13:30:00	133	Butler Library 5	103	Butler	91
 2014-10-27 13:30:00	151	Lerner 2	84	Lerner	151
@@ -16138,13 +16138,13 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-27 13:30:00	149	Architectural and Fine Arts Library 3	146	Avery	98
 2014-10-27 13:30:00	134	Butler Library 6	103	Butler	90
 2014-10-27 13:30:00	138	Butler Library stk	103	Butler	18
-2014-10-27 13:30:00	145	Science and Engineering Library	15	Mudd	92
+2014-10-27 13:30:00	145	Science and Engineering Library	15	Northwest Corner Building	92
 2014-10-27 13:45:00	152	Lerner 3	84	Lerner	134
 2014-10-27 13:45:00	130	Butler Library 2	103	Butler	362
 2014-10-27 13:45:00	149	Architectural and Fine Arts Library 3	146	Avery	106
 2014-10-27 13:45:00	134	Butler Library 6	103	Butler	100
 2014-10-27 13:45:00	138	Butler Library stk	103	Butler	22
-2014-10-27 13:45:00	145	Science and Engineering Library	15	Mudd	117
+2014-10-27 13:45:00	145	Science and Engineering Library	15	Northwest Corner Building	117
 2014-10-27 13:45:00	155	JJ's Place	75	John Jay	27
 2014-10-27 13:45:00	133	Butler Library 5	103	Butler	88
 2014-10-27 13:45:00	151	Lerner 2	84	Lerner	95
@@ -16171,7 +16171,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-27 14:00:00	149	Architectural and Fine Arts Library 3	146	Avery	111
 2014-10-27 14:00:00	134	Butler Library 6	103	Butler	110
 2014-10-27 14:00:00	138	Butler Library stk	103	Butler	22
-2014-10-27 14:00:00	145	Science and Engineering Library	15	Mudd	113
+2014-10-27 14:00:00	145	Science and Engineering Library	15	Northwest Corner Building	113
 2014-10-27 14:00:00	131	Butler Library 3	103	Butler	289
 2014-10-27 14:00:00	139	Lehman Library 2	79	Lehman LIbrary	90
 2014-10-27 14:00:00	144	Starr East Asian Library	62	East Asian Library	139
@@ -16196,7 +16196,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-27 14:15:00	149	Architectural and Fine Arts Library 3	146	Avery	112
 2014-10-27 14:15:00	134	Butler Library 6	103	Butler	121
 2014-10-27 14:15:00	138	Butler Library stk	103	Butler	29
-2014-10-27 14:15:00	145	Science and Engineering Library	15	Mudd	117
+2014-10-27 14:15:00	145	Science and Engineering Library	15	Northwest Corner Building	117
 2014-10-27 14:15:00	155	JJ's Place	75	John Jay	4
 2014-10-27 14:15:00	133	Butler Library 5	103	Butler	101
 2014-10-27 14:15:00	151	Lerner 2	84	Lerner	94
@@ -16226,7 +16226,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-27 14:30:00	149	Architectural and Fine Arts Library 3	146	Avery	118
 2014-10-27 14:30:00	134	Butler Library 6	103	Butler	137
 2014-10-27 14:30:00	138	Butler Library stk	103	Butler	29
-2014-10-27 14:30:00	145	Science and Engineering Library	15	Mudd	117
+2014-10-27 14:30:00	145	Science and Engineering Library	15	Northwest Corner Building	117
 2014-10-27 14:45:00	131	Butler Library 3	103	Butler	319
 2014-10-27 14:45:00	139	Lehman Library 2	79	Lehman LIbrary	135
 2014-10-27 14:45:00	144	Starr East Asian Library	62	East Asian Library	122
@@ -16240,7 +16240,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-27 14:45:00	149	Architectural and Fine Arts Library 3	146	Avery	113
 2014-10-27 14:45:00	134	Butler Library 6	103	Butler	146
 2014-10-27 14:45:00	138	Butler Library stk	103	Butler	32
-2014-10-27 14:45:00	145	Science and Engineering Library	15	Mudd	124
+2014-10-27 14:45:00	145	Science and Engineering Library	15	Northwest Corner Building	124
 2014-10-27 14:45:00	155	JJ's Place	75	John Jay	17
 2014-10-27 14:45:00	133	Butler Library 5	103	Butler	113
 2014-10-27 14:45:00	151	Lerner 2	84	Lerner	76
@@ -16259,7 +16259,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-27 15:00:00	149	Architectural and Fine Arts Library 3	146	Avery	106
 2014-10-27 15:00:00	134	Butler Library 6	103	Butler	139
 2014-10-27 15:00:00	138	Butler Library stk	103	Butler	32
-2014-10-27 15:00:00	145	Science and Engineering Library	15	Mudd	118
+2014-10-27 15:00:00	145	Science and Engineering Library	15	Northwest Corner Building	118
 2014-10-27 15:00:00	131	Butler Library 3	103	Butler	341
 2014-10-27 15:00:00	139	Lehman Library 2	79	Lehman LIbrary	146
 2014-10-27 15:00:00	144	Starr East Asian Library	62	East Asian Library	110
@@ -16292,7 +16292,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-27 15:15:00	149	Architectural and Fine Arts Library 3	146	Avery	110
 2014-10-27 15:15:00	134	Butler Library 6	103	Butler	139
 2014-10-27 15:15:00	138	Butler Library stk	103	Butler	39
-2014-10-27 15:15:00	145	Science and Engineering Library	15	Mudd	106
+2014-10-27 15:15:00	145	Science and Engineering Library	15	Northwest Corner Building	106
 2014-10-27 15:30:00	154	Lerner 5	84	Lerner	68
 2014-10-27 15:30:00	125	John Jay Dining Hall	75	John Jay	14
 2014-10-27 15:30:00	147	Architectural and Fine Arts Library 1	146	Avery	17
@@ -16311,7 +16311,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-27 15:30:00	149	Architectural and Fine Arts Library 3	146	Avery	115
 2014-10-27 15:30:00	134	Butler Library 6	103	Butler	146
 2014-10-27 15:30:00	138	Butler Library stk	103	Butler	33
-2014-10-27 15:30:00	145	Science and Engineering Library	15	Mudd	117
+2014-10-27 15:30:00	145	Science and Engineering Library	15	Northwest Corner Building	117
 2014-10-27 15:30:00	155	JJ's Place	75	John Jay	28
 2014-10-27 15:30:00	133	Butler Library 5	103	Butler	111
 2014-10-27 15:30:00	151	Lerner 2	84	Lerner	72
@@ -16320,7 +16320,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-27 15:45:00	149	Architectural and Fine Arts Library 3	146	Avery	121
 2014-10-27 15:45:00	134	Butler Library 6	103	Butler	153
 2014-10-27 15:45:00	138	Butler Library stk	103	Butler	33
-2014-10-27 15:45:00	145	Science and Engineering Library	15	Mudd	107
+2014-10-27 15:45:00	145	Science and Engineering Library	15	Northwest Corner Building	107
 2014-10-27 15:45:00	131	Butler Library 3	103	Butler	342
 2014-10-27 15:45:00	139	Lehman Library 2	79	Lehman LIbrary	126
 2014-10-27 15:45:00	144	Starr East Asian Library	62	East Asian Library	137
@@ -16352,7 +16352,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-27 16:00:00	149	Architectural and Fine Arts Library 3	146	Avery	111
 2014-10-27 16:00:00	134	Butler Library 6	103	Butler	147
 2014-10-27 16:00:00	138	Butler Library stk	103	Butler	32
-2014-10-27 16:00:00	145	Science and Engineering Library	15	Mudd	100
+2014-10-27 16:00:00	145	Science and Engineering Library	15	Northwest Corner Building	100
 2014-10-27 16:00:00	131	Butler Library 3	103	Butler	351
 2014-10-27 16:00:00	139	Lehman Library 2	79	Lehman LIbrary	125
 2014-10-27 16:00:00	144	Starr East Asian Library	62	East Asian Library	133
@@ -16369,7 +16369,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-27 16:15:00	149	Architectural and Fine Arts Library 3	146	Avery	118
 2014-10-27 16:15:00	134	Butler Library 6	103	Butler	144
 2014-10-27 16:15:00	138	Butler Library stk	103	Butler	33
-2014-10-27 16:15:00	145	Science and Engineering Library	15	Mudd	112
+2014-10-27 16:15:00	145	Science and Engineering Library	15	Northwest Corner Building	112
 2014-10-27 16:15:00	131	Butler Library 3	103	Butler	347
 2014-10-27 16:15:00	139	Lehman Library 2	79	Lehman LIbrary	122
 2014-10-27 16:15:00	144	Starr East Asian Library	62	East Asian Library	168
@@ -16394,7 +16394,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-27 16:30:00	149	Architectural and Fine Arts Library 3	146	Avery	120
 2014-10-27 16:30:00	134	Butler Library 6	103	Butler	141
 2014-10-27 16:30:00	138	Butler Library stk	103	Butler	22
-2014-10-27 16:30:00	145	Science and Engineering Library	15	Mudd	101
+2014-10-27 16:30:00	145	Science and Engineering Library	15	Northwest Corner Building	101
 2014-10-27 16:30:00	155	JJ's Place	75	John Jay	28
 2014-10-27 16:30:00	133	Butler Library 5	103	Butler	126
 2014-10-27 16:30:00	151	Lerner 2	84	Lerner	138
@@ -16408,7 +16408,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-27 16:45:00	149	Architectural and Fine Arts Library 3	146	Avery	116
 2014-10-27 16:45:00	134	Butler Library 6	103	Butler	147
 2014-10-27 16:45:00	138	Butler Library stk	103	Butler	23
-2014-10-27 16:45:00	145	Science and Engineering Library	15	Mudd	102
+2014-10-27 16:45:00	145	Science and Engineering Library	15	Northwest Corner Building	102
 2014-10-27 16:45:00	155	JJ's Place	75	John Jay	35
 2014-10-27 16:45:00	133	Butler Library 5	103	Butler	121
 2014-10-27 16:45:00	151	Lerner 2	84	Lerner	88
@@ -16444,7 +16444,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-27 17:00:00	134	Butler Library 6	103	Butler	167
 2014-10-28 01:00:00	153	Lerner 4	84	Lerner	21
 2014-10-27 17:00:00	138	Butler Library stk	103	Butler	32
-2014-10-27 17:00:00	145	Science and Engineering Library	15	Mudd	102
+2014-10-27 17:00:00	145	Science and Engineering Library	15	Northwest Corner Building	102
 2014-10-27 17:00:00	155	JJ's Place	75	John Jay	32
 2014-10-27 17:00:00	133	Butler Library 5	103	Butler	120
 2014-10-27 17:00:00	151	Lerner 2	84	Lerner	120
@@ -16458,7 +16458,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-27 17:15:00	149	Architectural and Fine Arts Library 3	146	Avery	124
 2014-10-27 17:15:00	134	Butler Library 6	103	Butler	157
 2014-10-27 17:15:00	138	Butler Library stk	103	Butler	36
-2014-10-27 17:15:00	145	Science and Engineering Library	15	Mudd	103
+2014-10-27 17:15:00	145	Science and Engineering Library	15	Northwest Corner Building	103
 2014-10-27 17:15:00	131	Butler Library 3	103	Butler	315
 2014-10-27 17:15:00	139	Lehman Library 2	79	Lehman LIbrary	97
 2014-10-27 17:15:00	144	Starr East Asian Library	62	East Asian Library	146
@@ -16483,7 +16483,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-27 17:30:00	149	Architectural and Fine Arts Library 3	146	Avery	123
 2014-10-27 17:30:00	134	Butler Library 6	103	Butler	153
 2014-10-27 17:30:00	138	Butler Library stk	103	Butler	37
-2014-10-27 17:30:00	145	Science and Engineering Library	15	Mudd	91
+2014-10-27 17:30:00	145	Science and Engineering Library	15	Northwest Corner Building	91
 2014-10-27 17:30:00	155	JJ's Place	75	John Jay	33
 2014-10-27 17:30:00	133	Butler Library 5	103	Butler	115
 2014-10-27 17:30:00	151	Lerner 2	84	Lerner	131
@@ -16507,7 +16507,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-27 17:45:00	149	Architectural and Fine Arts Library 3	146	Avery	110
 2014-10-27 17:45:00	134	Butler Library 6	103	Butler	146
 2014-10-27 17:45:00	138	Butler Library stk	103	Butler	32
-2014-10-27 17:45:00	145	Science and Engineering Library	15	Mudd	93
+2014-10-27 17:45:00	145	Science and Engineering Library	15	Northwest Corner Building	93
 2014-10-27 17:45:00	131	Butler Library 3	103	Butler	322
 2014-10-27 17:45:00	139	Lehman Library 2	79	Lehman LIbrary	83
 2014-10-27 17:45:00	144	Starr East Asian Library	62	East Asian Library	162
@@ -16527,7 +16527,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-27 18:00:00	149	Architectural and Fine Arts Library 3	146	Avery	101
 2014-10-27 18:00:00	134	Butler Library 6	103	Butler	135
 2014-10-27 18:00:00	138	Butler Library stk	103	Butler	34
-2014-10-27 18:00:00	145	Science and Engineering Library	15	Mudd	99
+2014-10-27 18:00:00	145	Science and Engineering Library	15	Northwest Corner Building	99
 2014-10-27 18:00:00	155	JJ's Place	75	John Jay	33
 2014-10-27 18:00:00	133	Butler Library 5	103	Butler	89
 2014-10-27 18:00:00	151	Lerner 2	84	Lerner	116
@@ -16541,7 +16541,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-27 18:15:00	149	Architectural and Fine Arts Library 3	146	Avery	106
 2014-10-27 18:15:00	134	Butler Library 6	103	Butler	127
 2014-10-27 18:15:00	138	Butler Library stk	103	Butler	22
-2014-10-27 18:15:00	145	Science and Engineering Library	15	Mudd	82
+2014-10-27 18:15:00	145	Science and Engineering Library	15	Northwest Corner Building	82
 2014-10-27 18:15:00	131	Butler Library 3	103	Butler	327
 2014-10-27 18:15:00	139	Lehman Library 2	79	Lehman LIbrary	61
 2014-10-27 18:15:00	144	Starr East Asian Library	62	East Asian Library	148
@@ -16571,7 +16571,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-27 18:30:00	149	Architectural and Fine Arts Library 3	146	Avery	104
 2014-10-27 18:30:00	134	Butler Library 6	103	Butler	119
 2014-10-27 18:30:00	138	Butler Library stk	103	Butler	25
-2014-10-27 18:30:00	145	Science and Engineering Library	15	Mudd	73
+2014-10-27 18:30:00	145	Science and Engineering Library	15	Northwest Corner Building	73
 2014-10-27 18:30:00	155	JJ's Place	75	John Jay	44
 2014-10-27 18:30:00	133	Butler Library 5	103	Butler	80
 2014-10-27 18:30:00	151	Lerner 2	84	Lerner	127
@@ -16585,7 +16585,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-27 18:45:00	149	Architectural and Fine Arts Library 3	146	Avery	92
 2014-10-27 18:45:00	134	Butler Library 6	103	Butler	105
 2014-10-27 18:45:00	138	Butler Library stk	103	Butler	36
-2014-10-27 18:45:00	145	Science and Engineering Library	15	Mudd	78
+2014-10-27 18:45:00	145	Science and Engineering Library	15	Northwest Corner Building	78
 2014-10-27 18:45:00	155	JJ's Place	75	John Jay	43
 2014-10-27 18:45:00	133	Butler Library 5	103	Butler	64
 2014-10-27 18:45:00	151	Lerner 2	84	Lerner	83
@@ -16623,7 +16623,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-27 19:00:00	149	Architectural and Fine Arts Library 3	146	Avery	82
 2014-10-27 19:00:00	134	Butler Library 6	103	Butler	114
 2014-10-27 19:00:00	138	Butler Library stk	103	Butler	33
-2014-10-27 19:00:00	145	Science and Engineering Library	15	Mudd	74
+2014-10-27 19:00:00	145	Science and Engineering Library	15	Northwest Corner Building	74
 2014-10-27 19:15:00	154	Lerner 5	84	Lerner	63
 2014-10-27 19:15:00	125	John Jay Dining Hall	75	John Jay	118
 2014-10-27 19:15:00	147	Architectural and Fine Arts Library 1	146	Avery	4
@@ -16639,7 +16639,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-27 19:15:00	149	Architectural and Fine Arts Library 3	146	Avery	83
 2014-10-27 19:15:00	134	Butler Library 6	103	Butler	103
 2014-10-27 19:15:00	138	Butler Library stk	103	Butler	29
-2014-10-27 19:15:00	145	Science and Engineering Library	15	Mudd	77
+2014-10-27 19:15:00	145	Science and Engineering Library	15	Northwest Corner Building	77
 2014-10-27 19:15:00	131	Butler Library 3	103	Butler	316
 2014-10-27 19:15:00	139	Lehman Library 2	79	Lehman LIbrary	26
 2014-10-27 19:15:00	144	Starr East Asian Library	62	East Asian Library	120
@@ -16667,7 +16667,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-27 19:30:00	149	Architectural and Fine Arts Library 3	146	Avery	70
 2014-10-27 19:30:00	134	Butler Library 6	103	Butler	93
 2014-10-27 19:30:00	138	Butler Library stk	103	Butler	31
-2014-10-27 19:30:00	145	Science and Engineering Library	15	Mudd	69
+2014-10-27 19:30:00	145	Science and Engineering Library	15	Northwest Corner Building	69
 2014-10-27 19:45:00	131	Butler Library 3	103	Butler	319
 2014-10-27 19:45:00	139	Lehman Library 2	79	Lehman LIbrary	32
 2014-10-27 19:45:00	144	Starr East Asian Library	62	East Asian Library	104
@@ -16681,7 +16681,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-27 19:45:00	149	Architectural and Fine Arts Library 3	146	Avery	67
 2014-10-27 19:45:00	134	Butler Library 6	103	Butler	94
 2014-10-27 19:45:00	138	Butler Library stk	103	Butler	32
-2014-10-27 19:45:00	145	Science and Engineering Library	15	Mudd	62
+2014-10-27 19:45:00	145	Science and Engineering Library	15	Northwest Corner Building	62
 2014-10-27 19:45:00	155	JJ's Place	75	John Jay	60
 2014-10-27 19:45:00	133	Butler Library 5	103	Butler	66
 2014-10-27 19:45:00	151	Lerner 2	84	Lerner	136
@@ -16695,7 +16695,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-27 20:00:00	149	Architectural and Fine Arts Library 3	146	Avery	57
 2014-10-27 20:00:00	134	Butler Library 6	103	Butler	101
 2014-10-27 20:00:00	138	Butler Library stk	103	Butler	25
-2014-10-27 20:00:00	145	Science and Engineering Library	15	Mudd	77
+2014-10-27 20:00:00	145	Science and Engineering Library	15	Northwest Corner Building	77
 2014-10-27 20:00:00	131	Butler Library 3	103	Butler	331
 2014-10-27 20:00:00	139	Lehman Library 2	79	Lehman LIbrary	31
 2014-10-27 20:00:00	144	Starr East Asian Library	62	East Asian Library	98
@@ -16733,7 +16733,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-27 20:15:00	149	Architectural and Fine Arts Library 3	146	Avery	59
 2014-10-27 20:15:00	134	Butler Library 6	103	Butler	111
 2014-10-27 20:15:00	138	Butler Library stk	103	Butler	37
-2014-10-27 20:15:00	145	Science and Engineering Library	15	Mudd	84
+2014-10-27 20:15:00	145	Science and Engineering Library	15	Northwest Corner Building	84
 2014-10-27 20:30:00	154	Lerner 5	84	Lerner	144
 2014-10-27 20:30:00	125	John Jay Dining Hall	75	John Jay	84
 2014-10-27 20:30:00	147	Architectural and Fine Arts Library 1	146	Avery	6
@@ -16753,7 +16753,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-27 20:30:00	149	Architectural and Fine Arts Library 3	146	Avery	64
 2014-10-27 20:30:00	134	Butler Library 6	103	Butler	122
 2014-10-27 20:30:00	138	Butler Library stk	103	Butler	35
-2014-10-27 20:30:00	145	Science and Engineering Library	15	Mudd	80
+2014-10-27 20:30:00	145	Science and Engineering Library	15	Northwest Corner Building	80
 2014-10-27 20:30:00	155	JJ's Place	75	John Jay	66
 2014-10-27 20:30:00	133	Butler Library 5	103	Butler	68
 2014-10-27 20:30:00	151	Lerner 2	84	Lerner	96
@@ -16775,7 +16775,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-27 20:45:00	149	Architectural and Fine Arts Library 3	146	Avery	56
 2014-10-27 20:45:00	134	Butler Library 6	103	Butler	129
 2014-10-27 20:45:00	138	Butler Library stk	103	Butler	38
-2014-10-27 20:45:00	145	Science and Engineering Library	15	Mudd	75
+2014-10-27 20:45:00	145	Science and Engineering Library	15	Northwest Corner Building	75
 2014-10-27 20:45:00	155	JJ's Place	75	John Jay	85
 2014-10-27 20:45:00	133	Butler Library 5	103	Butler	73
 2014-10-27 20:45:00	151	Lerner 2	84	Lerner	145
@@ -16792,7 +16792,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-27 21:00:00	149	Architectural and Fine Arts Library 3	146	Avery	64
 2014-10-27 21:00:00	134	Butler Library 6	103	Butler	143
 2014-10-27 21:00:00	138	Butler Library stk	103	Butler	37
-2014-10-27 21:00:00	145	Science and Engineering Library	15	Mudd	77
+2014-10-27 21:00:00	145	Science and Engineering Library	15	Northwest Corner Building	77
 2014-10-27 21:00:00	155	JJ's Place	75	John Jay	68
 2014-10-27 21:00:00	133	Butler Library 5	103	Butler	71
 2014-10-27 21:00:00	151	Lerner 2	84	Lerner	129
@@ -16806,7 +16806,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-27 21:15:00	149	Architectural and Fine Arts Library 3	146	Avery	56
 2014-10-27 21:15:00	134	Butler Library 6	103	Butler	135
 2014-10-27 21:15:00	138	Butler Library stk	103	Butler	37
-2014-10-27 21:15:00	145	Science and Engineering Library	15	Mudd	78
+2014-10-27 21:15:00	145	Science and Engineering Library	15	Northwest Corner Building	78
 2014-10-27 21:15:00	155	JJ's Place	75	John Jay	66
 2014-10-27 21:15:00	133	Butler Library 5	103	Butler	74
 2014-10-27 21:15:00	151	Lerner 2	84	Lerner	107
@@ -16838,7 +16838,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-27 21:30:00	149	Architectural and Fine Arts Library 3	146	Avery	52
 2014-10-27 21:30:00	134	Butler Library 6	103	Butler	139
 2014-10-27 21:30:00	138	Butler Library stk	103	Butler	44
-2014-10-27 21:30:00	145	Science and Engineering Library	15	Mudd	72
+2014-10-27 21:30:00	145	Science and Engineering Library	15	Northwest Corner Building	72
 2014-10-27 21:30:00	131	Butler Library 3	103	Butler	352
 2014-10-27 21:30:00	139	Lehman Library 2	79	Lehman LIbrary	27
 2014-10-27 21:30:00	144	Starr East Asian Library	62	East Asian Library	95
@@ -16850,7 +16850,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-27 21:45:00	149	Architectural and Fine Arts Library 3	146	Avery	42
 2014-10-27 21:45:00	134	Butler Library 6	103	Butler	147
 2014-10-27 21:45:00	138	Butler Library stk	103	Butler	54
-2014-10-27 21:45:00	145	Science and Engineering Library	15	Mudd	76
+2014-10-27 21:45:00	145	Science and Engineering Library	15	Northwest Corner Building	76
 2014-10-27 21:45:00	155	JJ's Place	75	John Jay	56
 2014-10-27 21:45:00	133	Butler Library 5	103	Butler	75
 2014-10-27 21:45:00	151	Lerner 2	84	Lerner	122
@@ -16872,7 +16872,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-27 22:00:00	149	Architectural and Fine Arts Library 3	146	Avery	38
 2014-10-27 22:00:00	134	Butler Library 6	103	Butler	142
 2014-10-27 22:00:00	138	Butler Library stk	103	Butler	62
-2014-10-27 22:00:00	145	Science and Engineering Library	15	Mudd	73
+2014-10-27 22:00:00	145	Science and Engineering Library	15	Northwest Corner Building	73
 2014-10-27 22:00:00	131	Butler Library 3	103	Butler	365
 2014-10-27 22:00:00	139	Lehman Library 2	79	Lehman LIbrary	27
 2014-10-27 22:00:00	144	Starr East Asian Library	62	East Asian Library	69
@@ -16907,7 +16907,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-27 22:15:00	149	Architectural and Fine Arts Library 3	146	Avery	30
 2014-10-27 22:15:00	134	Butler Library 6	103	Butler	164
 2014-10-27 22:15:00	138	Butler Library stk	103	Butler	57
-2014-10-27 22:15:00	145	Science and Engineering Library	15	Mudd	76
+2014-10-27 22:15:00	145	Science and Engineering Library	15	Northwest Corner Building	76
 2014-10-27 22:15:00	155	JJ's Place	75	John Jay	45
 2014-10-27 22:15:00	133	Butler Library 5	103	Butler	71
 2014-10-27 22:15:00	151	Lerner 2	84	Lerner	88
@@ -16932,13 +16932,13 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-27 22:30:00	149	Architectural and Fine Arts Library 3	146	Avery	23
 2014-10-27 22:30:00	134	Butler Library 6	103	Butler	164
 2014-10-27 22:30:00	138	Butler Library stk	103	Butler	62
-2014-10-27 22:30:00	145	Science and Engineering Library	15	Mudd	75
+2014-10-27 22:30:00	145	Science and Engineering Library	15	Northwest Corner Building	75
 2014-10-27 22:45:00	152	Lerner 3	84	Lerner	51
 2014-10-27 22:45:00	130	Butler Library 2	103	Butler	489
 2014-10-27 22:45:00	149	Architectural and Fine Arts Library 3	146	Avery	25
 2014-10-27 22:45:00	134	Butler Library 6	103	Butler	148
 2014-10-27 22:45:00	138	Butler Library stk	103	Butler	51
-2014-10-27 22:45:00	145	Science and Engineering Library	15	Mudd	66
+2014-10-27 22:45:00	145	Science and Engineering Library	15	Northwest Corner Building	66
 2014-10-27 22:45:00	131	Butler Library 3	103	Butler	331
 2014-10-27 22:45:00	139	Lehman Library 2	79	Lehman LIbrary	28
 2014-10-27 22:45:00	144	Starr East Asian Library	62	East Asian Library	65
@@ -16960,7 +16960,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-27 23:00:00	149	Architectural and Fine Arts Library 3	146	Avery	17
 2014-10-27 23:00:00	134	Butler Library 6	103	Butler	83
 2014-10-27 23:00:00	138	Butler Library stk	103	Butler	51
-2014-10-27 23:00:00	145	Science and Engineering Library	15	Mudd	63
+2014-10-27 23:00:00	145	Science and Engineering Library	15	Northwest Corner Building	63
 2014-10-27 23:00:00	131	Butler Library 3	103	Butler	368
 2014-10-27 23:00:00	139	Lehman Library 2	79	Lehman LIbrary	23
 2014-10-27 23:00:00	144	Starr East Asian Library	62	East Asian Library	46
@@ -16987,7 +16987,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-27 23:15:00	149	Architectural and Fine Arts Library 3	146	Avery	7
 2014-10-27 23:15:00	134	Butler Library 6	103	Butler	43
 2014-10-27 23:15:00	138	Butler Library stk	103	Butler	46
-2014-10-27 23:15:00	145	Science and Engineering Library	15	Mudd	56
+2014-10-27 23:15:00	145	Science and Engineering Library	15	Northwest Corner Building	56
 2014-10-27 23:15:00	131	Butler Library 3	103	Butler	375
 2014-10-27 23:15:00	139	Lehman Library 2	79	Lehman LIbrary	24
 2014-10-27 23:15:00	144	Starr East Asian Library	62	East Asian Library	39
@@ -17014,7 +17014,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-27 23:30:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-27 23:30:00	134	Butler Library 6	103	Butler	6
 2014-10-27 23:30:00	138	Butler Library stk	103	Butler	42
-2014-10-27 23:30:00	145	Science and Engineering Library	15	Mudd	53
+2014-10-27 23:30:00	145	Science and Engineering Library	15	Northwest Corner Building	53
 2014-10-27 23:30:00	131	Butler Library 3	103	Butler	377
 2014-10-27 23:30:00	139	Lehman Library 2	79	Lehman LIbrary	24
 2014-10-27 23:30:00	144	Starr East Asian Library	62	East Asian Library	11
@@ -17026,7 +17026,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-27 23:45:00	149	Architectural and Fine Arts Library 3	146	Avery	3
 2014-10-27 23:45:00	134	Butler Library 6	103	Butler	3
 2014-10-27 23:45:00	138	Butler Library stk	103	Butler	42
-2014-10-27 23:45:00	145	Science and Engineering Library	15	Mudd	48
+2014-10-27 23:45:00	145	Science and Engineering Library	15	Northwest Corner Building	48
 2014-10-27 23:45:00	131	Butler Library 3	103	Butler	374
 2014-10-27 23:45:00	139	Lehman Library 2	79	Lehman LIbrary	23
 2014-10-27 23:45:00	144	Starr East Asian Library	62	East Asian Library	14
@@ -17055,7 +17055,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-28 00:00:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-28 00:00:00	134	Butler Library 6	103	Butler	3
 2014-10-28 00:00:00	138	Butler Library stk	103	Butler	36
-2014-10-28 00:00:00	145	Science and Engineering Library	15	Mudd	44
+2014-10-28 00:00:00	145	Science and Engineering Library	15	Northwest Corner Building	44
 2014-10-28 00:00:00	155	JJ's Place	75	John Jay	87
 2014-10-28 00:00:00	133	Butler Library 5	103	Butler	16
 2014-10-28 00:00:00	151	Lerner 2	84	Lerner	46
@@ -17069,7 +17069,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-28 00:15:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-28 00:15:00	134	Butler Library 6	103	Butler	4
 2014-10-28 00:15:00	138	Butler Library stk	103	Butler	30
-2014-10-28 00:15:00	145	Science and Engineering Library	15	Mudd	48
+2014-10-28 00:15:00	145	Science and Engineering Library	15	Northwest Corner Building	48
 2014-10-28 00:15:00	131	Butler Library 3	103	Butler	332
 2014-10-28 00:15:00	139	Lehman Library 2	79	Lehman LIbrary	9
 2014-10-28 00:15:00	144	Starr East Asian Library	62	East Asian Library	7
@@ -17096,7 +17096,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-28 00:30:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-28 00:30:00	134	Butler Library 6	103	Butler	3
 2014-10-28 00:30:00	138	Butler Library stk	103	Butler	29
-2014-10-28 00:30:00	145	Science and Engineering Library	15	Mudd	49
+2014-10-28 00:30:00	145	Science and Engineering Library	15	Northwest Corner Building	49
 2014-10-28 00:30:00	131	Butler Library 3	103	Butler	323
 2014-10-28 00:30:00	139	Lehman Library 2	79	Lehman LIbrary	5
 2014-10-28 00:30:00	144	Starr East Asian Library	62	East Asian Library	3
@@ -17121,7 +17121,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-28 00:45:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-28 00:45:00	134	Butler Library 6	103	Butler	2
 2014-10-28 00:45:00	138	Butler Library stk	103	Butler	30
-2014-10-28 00:45:00	145	Science and Engineering Library	15	Mudd	46
+2014-10-28 00:45:00	145	Science and Engineering Library	15	Northwest Corner Building	46
 2014-10-28 00:45:00	155	JJ's Place	75	John Jay	60
 2014-10-28 00:45:00	133	Butler Library 5	103	Butler	12
 2014-10-28 00:45:00	151	Lerner 2	84	Lerner	23
@@ -17145,7 +17145,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-28 01:00:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-28 01:00:00	134	Butler Library 6	103	Butler	4
 2014-10-28 01:00:00	138	Butler Library stk	103	Butler	25
-2014-10-28 01:00:00	145	Science and Engineering Library	15	Mudd	45
+2014-10-28 01:00:00	145	Science and Engineering Library	15	Northwest Corner Building	45
 2014-10-28 01:00:00	131	Butler Library 3	103	Butler	263
 2014-10-28 01:00:00	139	Lehman Library 2	79	Lehman LIbrary	4
 2014-10-28 01:00:00	144	Starr East Asian Library	62	East Asian Library	2
@@ -17164,7 +17164,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-28 01:15:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-28 01:15:00	134	Butler Library 6	103	Butler	3
 2014-10-28 01:15:00	138	Butler Library stk	103	Butler	23
-2014-10-28 01:15:00	145	Science and Engineering Library	15	Mudd	40
+2014-10-28 01:15:00	145	Science and Engineering Library	15	Northwest Corner Building	40
 2014-10-28 01:15:00	155	JJ's Place	75	John Jay	44
 2014-10-28 01:15:00	133	Butler Library 5	103	Butler	7
 2014-10-28 01:15:00	151	Lerner 2	84	Lerner	20
@@ -17178,7 +17178,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-28 01:30:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-28 01:30:00	134	Butler Library 6	103	Butler	3
 2014-10-28 01:30:00	138	Butler Library stk	103	Butler	26
-2014-10-28 01:30:00	145	Science and Engineering Library	15	Mudd	41
+2014-10-28 01:30:00	145	Science and Engineering Library	15	Northwest Corner Building	41
 2014-10-28 01:30:00	131	Butler Library 3	103	Butler	212
 2014-10-28 01:30:00	139	Lehman Library 2	79	Lehman LIbrary	4
 2014-10-28 01:30:00	144	Starr East Asian Library	62	East Asian Library	1
@@ -17210,7 +17210,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-28 01:45:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-28 01:45:00	134	Butler Library 6	103	Butler	3
 2014-10-28 01:45:00	138	Butler Library stk	103	Butler	21
-2014-10-28 01:45:00	145	Science and Engineering Library	15	Mudd	29
+2014-10-28 01:45:00	145	Science and Engineering Library	15	Northwest Corner Building	29
 2014-10-28 01:45:00	131	Butler Library 3	103	Butler	173
 2014-10-28 01:45:00	139	Lehman Library 2	79	Lehman LIbrary	4
 2014-10-28 01:45:00	144	Starr East Asian Library	62	East Asian Library	1
@@ -17230,7 +17230,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-28 02:00:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-28 02:00:00	134	Butler Library 6	103	Butler	3
 2014-10-28 02:00:00	138	Butler Library stk	103	Butler	20
-2014-10-28 02:00:00	145	Science and Engineering Library	15	Mudd	25
+2014-10-28 02:00:00	145	Science and Engineering Library	15	Northwest Corner Building	25
 2014-10-28 02:00:00	155	JJ's Place	75	John Jay	4
 2014-10-28 02:00:00	133	Butler Library 5	103	Butler	6
 2014-10-28 02:00:00	151	Lerner 2	84	Lerner	3
@@ -17254,7 +17254,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-28 02:15:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-28 02:15:00	134	Butler Library 6	103	Butler	3
 2014-10-28 02:15:00	138	Butler Library stk	103	Butler	14
-2014-10-28 02:15:00	145	Science and Engineering Library	15	Mudd	19
+2014-10-28 02:15:00	145	Science and Engineering Library	15	Northwest Corner Building	19
 2014-10-28 02:15:00	131	Butler Library 3	103	Butler	144
 2014-10-28 02:15:00	139	Lehman Library 2	79	Lehman LIbrary	3
 2014-10-28 02:15:00	144	Starr East Asian Library	62	East Asian Library	1
@@ -17274,7 +17274,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-28 02:30:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-28 02:30:00	134	Butler Library 6	103	Butler	2
 2014-10-28 02:30:00	138	Butler Library stk	103	Butler	18
-2014-10-28 02:30:00	145	Science and Engineering Library	15	Mudd	20
+2014-10-28 02:30:00	145	Science and Engineering Library	15	Northwest Corner Building	20
 2014-10-28 02:30:00	155	JJ's Place	75	John Jay	3
 2014-10-28 02:30:00	133	Butler Library 5	103	Butler	9
 2014-10-28 02:30:00	151	Lerner 2	84	Lerner	3
@@ -17293,7 +17293,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-28 02:45:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-28 02:45:00	134	Butler Library 6	103	Butler	2
 2014-10-28 02:45:00	138	Butler Library stk	103	Butler	16
-2014-10-28 02:45:00	145	Science and Engineering Library	15	Mudd	20
+2014-10-28 02:45:00	145	Science and Engineering Library	15	Northwest Corner Building	20
 2014-10-28 02:45:00	131	Butler Library 3	103	Butler	129
 2014-10-28 02:45:00	139	Lehman Library 2	79	Lehman LIbrary	4
 2014-10-28 02:45:00	144	Starr East Asian Library	62	East Asian Library	1
@@ -17318,7 +17318,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-28 03:00:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-28 03:00:00	134	Butler Library 6	103	Butler	2
 2014-10-28 03:00:00	138	Butler Library stk	103	Butler	14
-2014-10-28 03:00:00	145	Science and Engineering Library	15	Mudd	16
+2014-10-28 03:00:00	145	Science and Engineering Library	15	Northwest Corner Building	16
 2014-10-28 03:00:00	155	JJ's Place	75	John Jay	3
 2014-10-28 03:00:00	133	Butler Library 5	103	Butler	6
 2014-10-28 03:00:00	151	Lerner 2	84	Lerner	2
@@ -17348,7 +17348,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-28 03:15:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-28 03:15:00	134	Butler Library 6	103	Butler	1
 2014-10-28 03:15:00	138	Butler Library stk	103	Butler	7
-2014-10-28 03:15:00	145	Science and Engineering Library	15	Mudd	4
+2014-10-28 03:15:00	145	Science and Engineering Library	15	Northwest Corner Building	4
 2014-10-28 03:30:00	155	JJ's Place	75	John Jay	3
 2014-10-28 03:30:00	133	Butler Library 5	103	Butler	7
 2014-10-28 03:30:00	151	Lerner 2	84	Lerner	2
@@ -17370,13 +17370,13 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-28 03:30:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-28 03:30:00	134	Butler Library 6	103	Butler	1
 2014-10-28 03:30:00	138	Butler Library stk	103	Butler	6
-2014-10-28 03:30:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-28 03:30:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-28 03:45:00	152	Lerner 3	84	Lerner	5
 2014-10-28 03:45:00	130	Butler Library 2	103	Butler	96
 2014-10-28 03:45:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-28 03:45:00	134	Butler Library 6	103	Butler	0
 2014-10-28 03:45:00	138	Butler Library stk	103	Butler	4
-2014-10-28 03:45:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-28 03:45:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-28 03:45:00	131	Butler Library 3	103	Butler	80
 2014-10-28 03:45:00	139	Lehman Library 2	79	Lehman LIbrary	4
 2014-10-28 03:45:00	144	Starr East Asian Library	62	East Asian Library	1
@@ -17403,7 +17403,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-28 04:00:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-28 04:00:00	134	Butler Library 6	103	Butler	0
 2014-10-28 04:00:00	138	Butler Library stk	103	Butler	4
-2014-10-28 04:00:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-28 04:00:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-28 04:00:00	131	Butler Library 3	103	Butler	70
 2014-10-28 04:00:00	139	Lehman Library 2	79	Lehman LIbrary	4
 2014-10-28 04:00:00	144	Starr East Asian Library	62	East Asian Library	3
@@ -17420,7 +17420,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-28 04:15:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-28 04:15:00	134	Butler Library 6	103	Butler	0
 2014-10-28 04:15:00	138	Butler Library stk	103	Butler	3
-2014-10-28 04:15:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-28 04:15:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-28 04:15:00	131	Butler Library 3	103	Butler	58
 2014-10-28 04:15:00	139	Lehman Library 2	79	Lehman LIbrary	5
 2014-10-28 04:15:00	144	Starr East Asian Library	62	East Asian Library	1
@@ -17452,7 +17452,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-28 04:30:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-28 04:30:00	134	Butler Library 6	103	Butler	0
 2014-10-28 04:30:00	138	Butler Library stk	103	Butler	0
-2014-10-28 04:30:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-28 04:30:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-28 04:30:00	131	Butler Library 3	103	Butler	56
 2014-10-28 04:30:00	139	Lehman Library 2	79	Lehman LIbrary	4
 2014-10-28 04:30:00	144	Starr East Asian Library	62	East Asian Library	1
@@ -17477,7 +17477,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-28 04:45:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-28 04:45:00	134	Butler Library 6	103	Butler	0
 2014-10-28 04:45:00	138	Butler Library stk	103	Butler	0
-2014-10-28 04:45:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-28 04:45:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-28 04:45:00	155	JJ's Place	75	John Jay	1
 2014-10-28 04:45:00	133	Butler Library 5	103	Butler	7
 2014-10-28 04:45:00	151	Lerner 2	84	Lerner	2
@@ -17502,7 +17502,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-28 05:00:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-28 05:00:00	134	Butler Library 6	103	Butler	0
 2014-10-28 05:00:00	138	Butler Library stk	103	Butler	0
-2014-10-28 05:00:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-28 05:00:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-28 05:15:00	155	JJ's Place	75	John Jay	1
 2014-10-28 05:15:00	23	Uris/Watson Library	2	Uris	1
 2014-10-28 05:15:00	133	Butler Library 5	103	Butler	6
@@ -17513,7 +17513,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-28 05:15:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-28 05:15:00	134	Butler Library 6	103	Butler	0
 2014-10-28 05:15:00	138	Butler Library stk	103	Butler	0
-2014-10-28 05:15:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-28 05:15:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-28 05:15:00	131	Butler Library 3	103	Butler	41
 2014-10-28 05:15:00	139	Lehman Library 2	79	Lehman LIbrary	4
 2014-10-28 05:15:00	144	Starr East Asian Library	62	East Asian Library	1
@@ -17538,7 +17538,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-28 05:30:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-28 05:30:00	134	Butler Library 6	103	Butler	0
 2014-10-28 05:30:00	138	Butler Library stk	103	Butler	0
-2014-10-28 05:30:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-28 05:30:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-28 05:30:00	155	JJ's Place	75	John Jay	0
 2014-10-28 05:30:00	133	Butler Library 5	103	Butler	7
 2014-10-28 05:30:00	151	Lerner 2	84	Lerner	4
@@ -17552,7 +17552,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-28 05:45:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-28 05:45:00	134	Butler Library 6	103	Butler	0
 2014-10-28 05:45:00	138	Butler Library stk	103	Butler	0
-2014-10-28 05:45:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-28 05:45:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-28 05:45:00	155	JJ's Place	75	John Jay	0
 2014-10-28 05:45:00	133	Butler Library 5	103	Butler	6
 2014-10-28 05:45:00	151	Lerner 2	84	Lerner	3
@@ -17587,7 +17587,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-28 06:00:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-28 06:00:00	134	Butler Library 6	103	Butler	0
 2014-10-28 06:00:00	138	Butler Library stk	103	Butler	0
-2014-10-28 06:00:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-28 06:00:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-28 06:00:00	155	JJ's Place	75	John Jay	1
 2014-10-28 06:00:00	133	Butler Library 5	103	Butler	7
 2014-10-28 06:00:00	151	Lerner 2	84	Lerner	4
@@ -17609,7 +17609,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-28 06:15:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-28 06:15:00	134	Butler Library 6	103	Butler	0
 2014-10-28 06:15:00	138	Butler Library stk	103	Butler	0
-2014-10-28 06:15:00	145	Science and Engineering Library	15	Mudd	3
+2014-10-28 06:15:00	145	Science and Engineering Library	15	Northwest Corner Building	3
 2014-10-28 06:15:00	155	JJ's Place	75	John Jay	1
 2014-10-28 06:15:00	133	Butler Library 5	103	Butler	6
 2014-10-28 06:15:00	151	Lerner 2	84	Lerner	5
@@ -17623,7 +17623,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-28 06:30:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-28 06:30:00	134	Butler Library 6	103	Butler	0
 2014-10-28 06:30:00	138	Butler Library stk	103	Butler	2
-2014-10-28 06:30:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-28 06:30:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-28 06:30:00	131	Butler Library 3	103	Butler	30
 2014-10-28 06:30:00	139	Lehman Library 2	79	Lehman LIbrary	7
 2014-10-28 06:30:00	144	Starr East Asian Library	62	East Asian Library	1
@@ -17650,7 +17650,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-28 06:45:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-28 06:45:00	134	Butler Library 6	103	Butler	0
 2014-10-28 06:45:00	138	Butler Library stk	103	Butler	3
-2014-10-28 06:45:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-28 06:45:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-28 06:45:00	131	Butler Library 3	103	Butler	26
 2014-10-28 06:45:00	139	Lehman Library 2	79	Lehman LIbrary	4
 2014-10-28 06:45:00	144	Starr East Asian Library	62	East Asian Library	3
@@ -17670,7 +17670,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-28 07:00:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-28 07:00:00	134	Butler Library 6	103	Butler	0
 2014-10-28 07:00:00	138	Butler Library stk	103	Butler	3
-2014-10-28 07:00:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-28 07:00:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-28 07:00:00	155	JJ's Place	75	John Jay	2
 2014-10-28 07:00:00	133	Butler Library 5	103	Butler	9
 2014-10-28 07:00:00	151	Lerner 2	84	Lerner	4
@@ -17692,7 +17692,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-28 07:15:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-28 07:15:00	134	Butler Library 6	103	Butler	0
 2014-10-28 07:15:00	138	Butler Library stk	103	Butler	2
-2014-10-28 07:15:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-28 07:15:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-28 07:15:00	155	JJ's Place	75	John Jay	2
 2014-10-28 07:15:00	133	Butler Library 5	103	Butler	6
 2014-10-28 07:15:00	151	Lerner 2	84	Lerner	4
@@ -17711,7 +17711,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-28 07:30:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-28 07:30:00	134	Butler Library 6	103	Butler	1
 2014-10-28 07:30:00	138	Butler Library stk	103	Butler	2
-2014-10-28 07:30:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-28 07:30:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-28 07:30:00	131	Butler Library 3	103	Butler	29
 2014-10-28 07:30:00	139	Lehman Library 2	79	Lehman LIbrary	6
 2014-10-28 07:30:00	144	Starr East Asian Library	62	East Asian Library	3
@@ -17728,7 +17728,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-28 07:45:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-28 07:45:00	134	Butler Library 6	103	Butler	1
 2014-10-28 07:45:00	138	Butler Library stk	103	Butler	2
-2014-10-28 07:45:00	145	Science and Engineering Library	15	Mudd	3
+2014-10-28 07:45:00	145	Science and Engineering Library	15	Northwest Corner Building	3
 2014-10-28 07:45:00	155	JJ's Place	75	John Jay	3
 2014-10-28 07:45:00	133	Butler Library 5	103	Butler	6
 2014-10-28 07:45:00	151	Lerner 2	84	Lerner	5
@@ -17760,7 +17760,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-28 08:00:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-28 08:00:00	134	Butler Library 6	103	Butler	1
 2014-10-28 08:00:00	138	Butler Library stk	103	Butler	2
-2014-10-28 08:00:00	145	Science and Engineering Library	15	Mudd	3
+2014-10-28 08:00:00	145	Science and Engineering Library	15	Northwest Corner Building	3
 2014-10-28 08:00:00	131	Butler Library 3	103	Butler	29
 2014-10-28 08:00:00	139	Lehman Library 2	79	Lehman LIbrary	6
 2014-10-28 08:00:00	144	Starr East Asian Library	62	East Asian Library	2
@@ -17780,7 +17780,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-28 08:15:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-28 08:15:00	134	Butler Library 6	103	Butler	1
 2014-10-28 08:15:00	138	Butler Library stk	103	Butler	2
-2014-10-28 08:15:00	145	Science and Engineering Library	15	Mudd	4
+2014-10-28 08:15:00	145	Science and Engineering Library	15	Northwest Corner Building	4
 2014-10-28 08:15:00	155	JJ's Place	75	John Jay	3
 2014-10-28 08:15:00	133	Butler Library 5	103	Butler	7
 2014-10-28 08:15:00	151	Lerner 2	84	Lerner	17
@@ -17804,7 +17804,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-28 08:30:00	149	Architectural and Fine Arts Library 3	146	Avery	2
 2014-10-28 08:30:00	134	Butler Library 6	103	Butler	1
 2014-10-28 08:30:00	138	Butler Library stk	103	Butler	2
-2014-10-28 08:30:00	145	Science and Engineering Library	15	Mudd	3
+2014-10-28 08:30:00	145	Science and Engineering Library	15	Northwest Corner Building	3
 2014-10-28 08:30:00	131	Butler Library 3	103	Butler	37
 2014-10-28 08:30:00	139	Lehman Library 2	79	Lehman LIbrary	8
 2014-10-28 08:30:00	144	Starr East Asian Library	62	East Asian Library	4
@@ -17832,7 +17832,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-28 08:45:00	149	Architectural and Fine Arts Library 3	146	Avery	2
 2014-10-28 08:45:00	134	Butler Library 6	103	Butler	1
 2014-10-28 08:45:00	138	Butler Library stk	103	Butler	2
-2014-10-28 08:45:00	145	Science and Engineering Library	15	Mudd	6
+2014-10-28 08:45:00	145	Science and Engineering Library	15	Northwest Corner Building	6
 2014-10-28 09:00:00	154	Lerner 5	84	Lerner	4
 2014-10-28 09:00:00	125	John Jay Dining Hall	75	John Jay	4
 2014-10-28 09:00:00	147	Architectural and Fine Arts Library 1	146	Avery	1
@@ -17848,7 +17848,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-28 09:00:00	149	Architectural and Fine Arts Library 3	146	Avery	2
 2014-10-28 09:00:00	134	Butler Library 6	103	Butler	1
 2014-10-28 09:00:00	138	Butler Library stk	103	Butler	3
-2014-10-28 09:00:00	145	Science and Engineering Library	15	Mudd	7
+2014-10-28 09:00:00	145	Science and Engineering Library	15	Northwest Corner Building	7
 2014-10-28 09:00:00	131	Butler Library 3	103	Butler	55
 2014-10-28 09:00:00	139	Lehman Library 2	79	Lehman LIbrary	13
 2014-10-28 09:00:00	144	Starr East Asian Library	62	East Asian Library	14
@@ -17866,7 +17866,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-28 09:15:00	149	Architectural and Fine Arts Library 3	146	Avery	3
 2014-10-28 09:15:00	134	Butler Library 6	103	Butler	3
 2014-10-28 09:15:00	138	Butler Library stk	103	Butler	3
-2014-10-28 09:15:00	145	Science and Engineering Library	15	Mudd	14
+2014-10-28 09:15:00	145	Science and Engineering Library	15	Northwest Corner Building	14
 2014-10-28 09:15:00	131	Butler Library 3	103	Butler	70
 2014-10-28 09:15:00	139	Lehman Library 2	79	Lehman LIbrary	15
 2014-10-28 09:15:00	144	Starr East Asian Library	62	East Asian Library	36
@@ -17891,7 +17891,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-28 09:30:00	149	Architectural and Fine Arts Library 3	146	Avery	7
 2014-10-28 09:30:00	134	Butler Library 6	103	Butler	11
 2014-10-28 09:30:00	138	Butler Library stk	103	Butler	3
-2014-10-28 09:30:00	145	Science and Engineering Library	15	Mudd	21
+2014-10-28 09:30:00	145	Science and Engineering Library	15	Northwest Corner Building	21
 2014-10-28 09:30:00	155	JJ's Place	75	John Jay	4
 2014-10-28 09:30:00	133	Butler Library 5	103	Butler	24
 2014-10-28 09:30:00	151	Lerner 2	84	Lerner	11
@@ -17921,7 +17921,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-28 09:45:00	149	Architectural and Fine Arts Library 3	146	Avery	10
 2014-10-28 09:45:00	134	Butler Library 6	103	Butler	23
 2014-10-28 09:45:00	138	Butler Library stk	103	Butler	6
-2014-10-28 09:45:00	145	Science and Engineering Library	15	Mudd	23
+2014-10-28 09:45:00	145	Science and Engineering Library	15	Northwest Corner Building	23
 2014-10-28 10:00:00	155	JJ's Place	75	John Jay	5
 2014-10-28 10:00:00	133	Butler Library 5	103	Butler	32
 2014-10-28 10:00:00	151	Lerner 2	84	Lerner	25
@@ -17943,7 +17943,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-28 10:00:00	149	Architectural and Fine Arts Library 3	146	Avery	19
 2014-10-28 10:00:00	134	Butler Library 6	103	Butler	25
 2014-10-28 10:00:00	138	Butler Library stk	103	Butler	7
-2014-10-28 10:00:00	145	Science and Engineering Library	15	Mudd	36
+2014-10-28 10:00:00	145	Science and Engineering Library	15	Northwest Corner Building	36
 2014-10-28 10:15:00	154	Lerner 5	84	Lerner	43
 2014-10-28 10:15:00	125	John Jay Dining Hall	75	John Jay	7
 2014-10-28 10:15:00	147	Architectural and Fine Arts Library 1	146	Avery	5
@@ -17959,7 +17959,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-28 10:15:00	149	Architectural and Fine Arts Library 3	146	Avery	26
 2014-10-28 10:15:00	134	Butler Library 6	103	Butler	27
 2014-10-28 10:15:00	138	Butler Library stk	103	Butler	6
-2014-10-28 10:15:00	145	Science and Engineering Library	15	Mudd	44
+2014-10-28 10:15:00	145	Science and Engineering Library	15	Northwest Corner Building	44
 2014-10-28 10:15:00	131	Butler Library 3	103	Butler	157
 2014-10-28 10:15:00	139	Lehman Library 2	79	Lehman LIbrary	25
 2014-10-28 10:15:00	144	Starr East Asian Library	62	East Asian Library	31
@@ -17971,7 +17971,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-28 10:30:00	149	Architectural and Fine Arts Library 3	146	Avery	31
 2014-10-28 10:30:00	134	Butler Library 6	103	Butler	36
 2014-10-28 10:30:00	138	Butler Library stk	103	Butler	13
-2014-10-28 10:30:00	145	Science and Engineering Library	15	Mudd	61
+2014-10-28 10:30:00	145	Science and Engineering Library	15	Northwest Corner Building	61
 2014-10-28 10:30:00	131	Butler Library 3	103	Butler	172
 2014-10-28 10:30:00	139	Lehman Library 2	79	Lehman LIbrary	32
 2014-10-28 10:30:00	144	Starr East Asian Library	62	East Asian Library	58
@@ -17998,7 +17998,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-28 10:45:00	149	Architectural and Fine Arts Library 3	146	Avery	45
 2014-10-28 10:45:00	134	Butler Library 6	103	Butler	45
 2014-10-28 10:45:00	138	Butler Library stk	103	Butler	9
-2014-10-28 10:45:00	145	Science and Engineering Library	15	Mudd	64
+2014-10-28 10:45:00	145	Science and Engineering Library	15	Northwest Corner Building	64
 2014-10-28 10:45:00	131	Butler Library 3	103	Butler	195
 2014-10-28 10:45:00	139	Lehman Library 2	79	Lehman LIbrary	40
 2014-10-28 10:45:00	144	Starr East Asian Library	62	East Asian Library	81
@@ -18023,7 +18023,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-28 11:00:00	149	Architectural and Fine Arts Library 3	146	Avery	46
 2014-10-28 11:00:00	134	Butler Library 6	103	Butler	62
 2014-10-28 11:00:00	138	Butler Library stk	103	Butler	9
-2014-10-28 11:00:00	145	Science and Engineering Library	15	Mudd	81
+2014-10-28 11:00:00	145	Science and Engineering Library	15	Northwest Corner Building	81
 2014-10-28 11:00:00	155	JJ's Place	75	John Jay	6
 2014-10-28 11:00:00	133	Butler Library 5	103	Butler	58
 2014-10-28 11:00:00	151	Lerner 2	84	Lerner	48
@@ -18037,7 +18037,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-28 11:15:00	149	Architectural and Fine Arts Library 3	146	Avery	65
 2014-10-28 11:15:00	134	Butler Library 6	103	Butler	67
 2014-10-28 11:15:00	138	Butler Library stk	103	Butler	12
-2014-10-28 11:15:00	145	Science and Engineering Library	15	Mudd	99
+2014-10-28 11:15:00	145	Science and Engineering Library	15	Northwest Corner Building	99
 2014-10-28 11:15:00	131	Butler Library 3	103	Butler	235
 2014-10-28 11:15:00	139	Lehman Library 2	79	Lehman LIbrary	42
 2014-10-28 11:15:00	144	Starr East Asian Library	62	East Asian Library	113
@@ -18059,7 +18059,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-28 11:30:00	149	Architectural and Fine Arts Library 3	146	Avery	59
 2014-10-28 11:30:00	134	Butler Library 6	103	Butler	86
 2014-10-28 11:30:00	138	Butler Library stk	103	Butler	12
-2014-10-28 11:30:00	145	Science and Engineering Library	15	Mudd	97
+2014-10-28 11:30:00	145	Science and Engineering Library	15	Northwest Corner Building	97
 2014-10-28 11:30:00	131	Butler Library 3	103	Butler	279
 2014-10-28 11:30:00	139	Lehman Library 2	79	Lehman LIbrary	54
 2014-10-28 11:30:00	144	Starr East Asian Library	62	East Asian Library	118
@@ -18086,7 +18086,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-28 11:45:00	149	Architectural and Fine Arts Library 3	146	Avery	77
 2014-10-28 11:45:00	134	Butler Library 6	103	Butler	86
 2014-10-28 11:45:00	138	Butler Library stk	103	Butler	16
-2014-10-28 11:45:00	145	Science and Engineering Library	15	Mudd	105
+2014-10-28 11:45:00	145	Science and Engineering Library	15	Northwest Corner Building	105
 2014-10-28 11:45:00	131	Butler Library 3	103	Butler	267
 2014-10-28 11:45:00	139	Lehman Library 2	79	Lehman LIbrary	51
 2014-10-28 11:45:00	144	Starr East Asian Library	62	East Asian Library	118
@@ -18119,7 +18119,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-28 12:00:00	149	Architectural and Fine Arts Library 3	146	Avery	86
 2014-10-28 12:00:00	134	Butler Library 6	103	Butler	91
 2014-10-28 12:00:00	138	Butler Library stk	103	Butler	24
-2014-10-28 12:00:00	145	Science and Engineering Library	15	Mudd	97
+2014-10-28 12:00:00	145	Science and Engineering Library	15	Northwest Corner Building	97
 2014-10-28 12:15:00	131	Butler Library 3	103	Butler	295
 2014-10-28 12:15:00	139	Lehman Library 2	79	Lehman LIbrary	56
 2014-10-28 12:15:00	144	Starr East Asian Library	62	East Asian Library	110
@@ -18133,7 +18133,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-28 12:15:00	149	Architectural and Fine Arts Library 3	146	Avery	97
 2014-10-28 12:15:00	134	Butler Library 6	103	Butler	92
 2014-10-28 12:15:00	138	Butler Library stk	103	Butler	23
-2014-10-28 12:15:00	145	Science and Engineering Library	15	Mudd	94
+2014-10-28 12:15:00	145	Science and Engineering Library	15	Northwest Corner Building	94
 2014-10-28 12:15:00	155	JJ's Place	75	John Jay	20
 2014-10-28 12:15:00	133	Butler Library 5	103	Butler	72
 2014-10-28 12:15:00	151	Lerner 2	84	Lerner	85
@@ -18155,7 +18155,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-28 12:30:00	149	Architectural and Fine Arts Library 3	146	Avery	97
 2014-10-28 12:30:00	134	Butler Library 6	103	Butler	82
 2014-10-28 12:30:00	138	Butler Library stk	103	Butler	21
-2014-10-28 12:30:00	145	Science and Engineering Library	15	Mudd	100
+2014-10-28 12:30:00	145	Science and Engineering Library	15	Northwest Corner Building	100
 2014-10-28 12:30:00	155	JJ's Place	75	John Jay	13
 2014-10-28 12:30:00	133	Butler Library 5	103	Butler	73
 2014-10-28 12:30:00	151	Lerner 2	84	Lerner	91
@@ -18169,7 +18169,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-28 12:45:00	149	Architectural and Fine Arts Library 3	146	Avery	87
 2014-10-28 12:45:00	134	Butler Library 6	103	Butler	87
 2014-10-28 12:45:00	138	Butler Library stk	103	Butler	19
-2014-10-28 12:45:00	145	Science and Engineering Library	15	Mudd	106
+2014-10-28 12:45:00	145	Science and Engineering Library	15	Northwest Corner Building	106
 2014-10-28 12:45:00	155	JJ's Place	75	John Jay	21
 2014-10-28 12:45:00	133	Butler Library 5	103	Butler	74
 2014-10-28 12:45:00	151	Lerner 2	84	Lerner	87
@@ -18204,7 +18204,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-28 13:00:00	149	Architectural and Fine Arts Library 3	146	Avery	92
 2014-10-28 13:00:00	134	Butler Library 6	103	Butler	90
 2014-10-28 13:00:00	138	Butler Library stk	103	Butler	23
-2014-10-28 13:00:00	145	Science and Engineering Library	15	Mudd	104
+2014-10-28 13:00:00	145	Science and Engineering Library	15	Northwest Corner Building	104
 2014-10-28 13:00:00	155	JJ's Place	75	John Jay	27
 2014-10-28 13:00:00	133	Butler Library 5	103	Butler	83
 2014-10-28 13:00:00	151	Lerner 2	84	Lerner	103
@@ -18226,7 +18226,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-28 13:15:00	149	Architectural and Fine Arts Library 3	146	Avery	84
 2014-10-28 13:15:00	134	Butler Library 6	103	Butler	94
 2014-10-28 13:15:00	138	Butler Library stk	103	Butler	26
-2014-10-28 13:15:00	145	Science and Engineering Library	15	Mudd	101
+2014-10-28 13:15:00	145	Science and Engineering Library	15	Northwest Corner Building	101
 2014-10-28 13:15:00	155	JJ's Place	75	John Jay	39
 2014-10-28 13:15:00	133	Butler Library 5	103	Butler	80
 2014-10-28 13:15:00	151	Lerner 2	84	Lerner	104
@@ -18248,7 +18248,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-28 13:30:00	149	Architectural and Fine Arts Library 3	146	Avery	86
 2014-10-28 13:30:00	134	Butler Library 6	103	Butler	88
 2014-10-28 13:30:00	138	Butler Library stk	103	Butler	21
-2014-10-28 13:30:00	145	Science and Engineering Library	15	Mudd	96
+2014-10-28 13:30:00	145	Science and Engineering Library	15	Northwest Corner Building	96
 2014-10-28 13:30:00	155	JJ's Place	75	John Jay	47
 2014-10-28 13:30:00	133	Butler Library 5	103	Butler	88
 2014-10-28 13:30:00	151	Lerner 2	84	Lerner	87
@@ -18269,7 +18269,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-28 13:45:00	149	Architectural and Fine Arts Library 3	146	Avery	93
 2014-10-28 13:45:00	134	Butler Library 6	103	Butler	100
 2014-10-28 13:45:00	138	Butler Library stk	103	Butler	23
-2014-10-28 13:45:00	145	Science and Engineering Library	15	Mudd	103
+2014-10-28 13:45:00	145	Science and Engineering Library	15	Northwest Corner Building	103
 2014-10-28 13:45:00	155	JJ's Place	75	John Jay	36
 2014-10-28 13:45:00	133	Butler Library 5	103	Butler	92
 2014-10-28 13:45:00	151	Lerner 2	84	Lerner	127
@@ -18288,7 +18288,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-28 14:00:00	149	Architectural and Fine Arts Library 3	146	Avery	87
 2014-10-28 14:00:00	134	Butler Library 6	103	Butler	101
 2014-10-28 14:00:00	138	Butler Library stk	103	Butler	24
-2014-10-28 14:00:00	145	Science and Engineering Library	15	Mudd	103
+2014-10-28 14:00:00	145	Science and Engineering Library	15	Northwest Corner Building	103
 2014-10-28 14:00:00	131	Butler Library 3	103	Butler	280
 2014-10-28 14:00:00	139	Lehman Library 2	79	Lehman LIbrary	72
 2014-10-28 14:00:00	144	Starr East Asian Library	62	East Asian Library	166
@@ -18308,7 +18308,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-28 14:15:00	149	Architectural and Fine Arts Library 3	146	Avery	102
 2014-10-28 14:15:00	134	Butler Library 6	103	Butler	107
 2014-10-28 14:15:00	138	Butler Library stk	103	Butler	23
-2014-10-28 14:15:00	145	Science and Engineering Library	15	Mudd	120
+2014-10-28 14:15:00	145	Science and Engineering Library	15	Northwest Corner Building	120
 2014-10-28 14:15:00	155	JJ's Place	75	John Jay	22
 2014-10-28 14:15:00	133	Butler Library 5	103	Butler	94
 2014-10-28 14:15:00	151	Lerner 2	84	Lerner	109
@@ -18335,7 +18335,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-28 14:30:00	149	Architectural and Fine Arts Library 3	146	Avery	84
 2014-10-28 14:30:00	134	Butler Library 6	103	Butler	122
 2014-10-28 14:30:00	138	Butler Library stk	103	Butler	32
-2014-10-28 14:30:00	145	Science and Engineering Library	15	Mudd	123
+2014-10-28 14:30:00	145	Science and Engineering Library	15	Northwest Corner Building	123
 2014-10-28 14:30:00	155	JJ's Place	75	John Jay	16
 2014-10-28 14:30:00	133	Butler Library 5	103	Butler	90
 2014-10-28 14:30:00	151	Lerner 2	84	Lerner	74
@@ -18360,7 +18360,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-28 14:45:00	149	Architectural and Fine Arts Library 3	146	Avery	101
 2014-10-28 14:45:00	134	Butler Library 6	103	Butler	133
 2014-10-28 14:45:00	138	Butler Library stk	103	Butler	26
-2014-10-28 14:45:00	145	Science and Engineering Library	15	Mudd	119
+2014-10-28 14:45:00	145	Science and Engineering Library	15	Northwest Corner Building	119
 2014-10-28 15:00:00	154	Lerner 5	84	Lerner	57
 2014-10-28 15:00:00	125	John Jay Dining Hall	75	John Jay	19
 2014-10-28 15:00:00	147	Architectural and Fine Arts Library 1	146	Avery	7
@@ -18376,7 +18376,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-28 15:00:00	149	Architectural and Fine Arts Library 3	146	Avery	114
 2014-10-28 15:00:00	134	Butler Library 6	103	Butler	144
 2014-10-28 15:00:00	138	Butler Library stk	103	Butler	25
-2014-10-28 15:00:00	145	Science and Engineering Library	15	Mudd	127
+2014-10-28 15:00:00	145	Science and Engineering Library	15	Northwest Corner Building	127
 2014-10-28 15:00:00	131	Butler Library 3	103	Butler	295
 2014-10-28 15:00:00	139	Lehman Library 2	79	Lehman LIbrary	94
 2014-10-28 15:00:00	144	Starr East Asian Library	62	East Asian Library	151
@@ -18401,7 +18401,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-28 15:15:00	149	Architectural and Fine Arts Library 3	146	Avery	115
 2014-10-28 15:15:00	134	Butler Library 6	103	Butler	143
 2014-10-28 15:15:00	138	Butler Library stk	103	Butler	29
-2014-10-28 15:15:00	145	Science and Engineering Library	15	Mudd	122
+2014-10-28 15:15:00	145	Science and Engineering Library	15	Northwest Corner Building	122
 2014-10-28 15:15:00	155	JJ's Place	75	John Jay	3
 2014-10-28 15:15:00	133	Butler Library 5	103	Butler	88
 2014-10-28 15:15:00	151	Lerner 2	84	Lerner	90
@@ -18423,7 +18423,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-28 15:30:00	149	Architectural and Fine Arts Library 3	146	Avery	120
 2014-10-28 15:30:00	134	Butler Library 6	103	Butler	162
 2014-10-28 15:30:00	138	Butler Library stk	103	Butler	27
-2014-10-28 15:30:00	145	Science and Engineering Library	15	Mudd	122
+2014-10-28 15:30:00	145	Science and Engineering Library	15	Northwest Corner Building	122
 2014-10-28 15:30:00	155	JJ's Place	75	John Jay	3
 2014-10-28 15:30:00	133	Butler Library 5	103	Butler	96
 2014-10-28 15:30:00	151	Lerner 2	84	Lerner	91
@@ -18442,7 +18442,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-28 15:45:00	149	Architectural and Fine Arts Library 3	146	Avery	113
 2014-10-28 15:45:00	134	Butler Library 6	103	Butler	165
 2014-10-28 15:45:00	138	Butler Library stk	103	Butler	22
-2014-10-28 15:45:00	145	Science and Engineering Library	15	Mudd	116
+2014-10-28 15:45:00	145	Science and Engineering Library	15	Northwest Corner Building	116
 2014-10-28 15:45:00	131	Butler Library 3	103	Butler	332
 2014-10-28 15:45:00	139	Lehman Library 2	79	Lehman LIbrary	123
 2014-10-28 15:45:00	144	Starr East Asian Library	62	East Asian Library	177
@@ -18470,7 +18470,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-28 16:00:00	149	Architectural and Fine Arts Library 3	146	Avery	122
 2014-10-28 16:00:00	134	Butler Library 6	103	Butler	168
 2014-10-28 16:00:00	138	Butler Library stk	103	Butler	23
-2014-10-28 16:00:00	145	Science and Engineering Library	15	Mudd	140
+2014-10-28 16:00:00	145	Science and Engineering Library	15	Northwest Corner Building	140
 2014-10-28 16:15:00	131	Butler Library 3	103	Butler	312
 2014-10-28 16:15:00	139	Lehman Library 2	79	Lehman LIbrary	124
 2014-10-28 16:15:00	144	Starr East Asian Library	62	East Asian Library	183
@@ -18492,7 +18492,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-28 16:15:00	149	Architectural and Fine Arts Library 3	146	Avery	108
 2014-10-28 16:15:00	134	Butler Library 6	103	Butler	163
 2014-10-28 16:15:00	138	Butler Library stk	103	Butler	30
-2014-10-28 16:15:00	145	Science and Engineering Library	15	Mudd	132
+2014-10-28 16:15:00	145	Science and Engineering Library	15	Northwest Corner Building	132
 2014-10-28 16:30:00	155	JJ's Place	75	John Jay	18
 2014-10-28 16:30:00	133	Butler Library 5	103	Butler	102
 2014-10-28 16:30:00	151	Lerner 2	84	Lerner	89
@@ -18514,7 +18514,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-28 16:30:00	149	Architectural and Fine Arts Library 3	146	Avery	115
 2014-10-28 16:30:00	134	Butler Library 6	103	Butler	144
 2014-10-28 16:30:00	138	Butler Library stk	103	Butler	25
-2014-10-28 16:30:00	145	Science and Engineering Library	15	Mudd	127
+2014-10-28 16:30:00	145	Science and Engineering Library	15	Northwest Corner Building	127
 2014-10-28 16:45:00	154	Lerner 5	84	Lerner	58
 2014-10-28 16:45:00	125	John Jay Dining Hall	75	John Jay	13
 2014-10-28 16:45:00	147	Architectural and Fine Arts Library 1	146	Avery	6
@@ -18530,7 +18530,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-28 16:45:00	149	Architectural and Fine Arts Library 3	146	Avery	113
 2014-10-28 16:45:00	134	Butler Library 6	103	Butler	135
 2014-10-28 16:45:00	138	Butler Library stk	103	Butler	30
-2014-10-28 16:45:00	145	Science and Engineering Library	15	Mudd	123
+2014-10-28 16:45:00	145	Science and Engineering Library	15	Northwest Corner Building	123
 2014-10-28 16:45:00	131	Butler Library 3	103	Butler	326
 2014-10-28 16:45:00	139	Lehman Library 2	79	Lehman LIbrary	103
 2014-10-28 16:45:00	144	Starr East Asian Library	62	East Asian Library	148
@@ -18559,7 +18559,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-28 17:00:00	134	Butler Library 6	103	Butler	141
 2014-10-28 17:00:00	138	Butler Library stk	103	Butler	30
 2014-10-28 22:45:00	153	Lerner 4	84	Lerner	54
-2014-10-28 17:00:00	145	Science and Engineering Library	15	Mudd	128
+2014-10-28 17:00:00	145	Science and Engineering Library	15	Northwest Corner Building	128
 2014-10-28 17:15:00	131	Butler Library 3	103	Butler	309
 2014-10-28 17:15:00	139	Lehman Library 2	79	Lehman LIbrary	108
 2014-10-28 17:15:00	144	Starr East Asian Library	62	East Asian Library	147
@@ -18581,13 +18581,13 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-28 17:15:00	149	Architectural and Fine Arts Library 3	146	Avery	121
 2014-10-28 17:15:00	134	Butler Library 6	103	Butler	137
 2014-10-28 17:15:00	138	Butler Library stk	103	Butler	35
-2014-10-28 17:15:00	145	Science and Engineering Library	15	Mudd	113
+2014-10-28 17:15:00	145	Science and Engineering Library	15	Northwest Corner Building	113
 2014-10-28 17:30:00	152	Lerner 3	84	Lerner	145
 2014-10-28 17:30:00	130	Butler Library 2	103	Butler	408
 2014-10-28 17:30:00	149	Architectural and Fine Arts Library 3	146	Avery	122
 2014-10-28 17:30:00	134	Butler Library 6	103	Butler	133
 2014-10-28 17:30:00	138	Butler Library stk	103	Butler	29
-2014-10-28 17:30:00	145	Science and Engineering Library	15	Mudd	118
+2014-10-28 17:30:00	145	Science and Engineering Library	15	Northwest Corner Building	118
 2014-10-28 17:30:00	155	JJ's Place	75	John Jay	14
 2014-10-28 17:30:00	133	Butler Library 5	103	Butler	105
 2014-10-28 17:30:00	151	Lerner 2	84	Lerner	70
@@ -18625,7 +18625,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-28 17:45:00	149	Architectural and Fine Arts Library 3	146	Avery	122
 2014-10-28 17:45:00	134	Butler Library 6	103	Butler	128
 2014-10-28 17:45:00	138	Butler Library stk	103	Butler	34
-2014-10-28 17:45:00	145	Science and Engineering Library	15	Mudd	118
+2014-10-28 17:45:00	145	Science and Engineering Library	15	Northwest Corner Building	118
 2014-10-28 18:00:00	154	Lerner 5	84	Lerner	49
 2014-10-28 18:00:00	125	John Jay Dining Hall	75	John Jay	87
 2014-10-28 18:00:00	147	Architectural and Fine Arts Library 1	146	Avery	1
@@ -18644,7 +18644,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-28 18:00:00	149	Architectural and Fine Arts Library 3	146	Avery	104
 2014-10-28 18:00:00	134	Butler Library 6	103	Butler	127
 2014-10-28 18:00:00	138	Butler Library stk	103	Butler	34
-2014-10-28 18:00:00	145	Science and Engineering Library	15	Mudd	109
+2014-10-28 18:00:00	145	Science and Engineering Library	15	Northwest Corner Building	109
 2014-10-28 18:00:00	155	JJ's Place	75	John Jay	50
 2014-10-28 18:00:00	133	Butler Library 5	103	Butler	79
 2014-10-28 18:00:00	151	Lerner 2	84	Lerner	115
@@ -18653,7 +18653,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-28 18:15:00	149	Architectural and Fine Arts Library 3	146	Avery	92
 2014-10-28 18:15:00	134	Butler Library 6	103	Butler	116
 2014-10-28 18:15:00	138	Butler Library stk	103	Butler	21
-2014-10-28 18:15:00	145	Science and Engineering Library	15	Mudd	94
+2014-10-28 18:15:00	145	Science and Engineering Library	15	Northwest Corner Building	94
 2014-10-28 18:15:00	155	JJ's Place	75	John Jay	40
 2014-10-28 18:15:00	133	Butler Library 5	103	Butler	86
 2014-10-28 18:15:00	151	Lerner 2	84	Lerner	203
@@ -18685,7 +18685,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-28 18:30:00	149	Architectural and Fine Arts Library 3	146	Avery	79
 2014-10-28 18:30:00	134	Butler Library 6	103	Butler	107
 2014-10-28 18:30:00	138	Butler Library stk	103	Butler	22
-2014-10-28 18:30:00	145	Science and Engineering Library	15	Mudd	83
+2014-10-28 18:30:00	145	Science and Engineering Library	15	Northwest Corner Building	83
 2014-10-28 18:30:00	131	Butler Library 3	103	Butler	256
 2014-10-28 18:30:00	139	Lehman Library 2	79	Lehman LIbrary	74
 2014-10-28 18:30:00	144	Starr East Asian Library	62	East Asian Library	176
@@ -18705,7 +18705,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-28 18:45:00	149	Architectural and Fine Arts Library 3	146	Avery	75
 2014-10-28 18:45:00	134	Butler Library 6	103	Butler	110
 2014-10-28 18:45:00	138	Butler Library stk	103	Butler	20
-2014-10-28 18:45:00	145	Science and Engineering Library	15	Mudd	76
+2014-10-28 18:45:00	145	Science and Engineering Library	15	Northwest Corner Building	76
 2014-10-28 18:45:00	155	JJ's Place	75	John Jay	28
 2014-10-28 18:45:00	133	Butler Library 5	103	Butler	83
 2014-10-28 18:45:00	151	Lerner 2	84	Lerner	157
@@ -18719,7 +18719,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-28 19:00:00	149	Architectural and Fine Arts Library 3	146	Avery	73
 2014-10-28 19:00:00	134	Butler Library 6	103	Butler	109
 2014-10-28 19:00:00	138	Butler Library stk	103	Butler	21
-2014-10-28 19:00:00	145	Science and Engineering Library	15	Mudd	78
+2014-10-28 19:00:00	145	Science and Engineering Library	15	Northwest Corner Building	78
 2014-10-28 19:00:00	155	JJ's Place	75	John Jay	35
 2014-10-28 19:00:00	133	Butler Library 5	103	Butler	76
 2014-10-28 19:00:00	151	Lerner 2	84	Lerner	119
@@ -18751,7 +18751,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-28 19:15:00	149	Architectural and Fine Arts Library 3	146	Avery	61
 2014-10-28 19:15:00	134	Butler Library 6	103	Butler	103
 2014-10-28 19:15:00	138	Butler Library stk	103	Butler	24
-2014-10-28 19:15:00	145	Science and Engineering Library	15	Mudd	85
+2014-10-28 19:15:00	145	Science and Engineering Library	15	Northwest Corner Building	85
 2014-10-28 19:15:00	131	Butler Library 3	103	Butler	272
 2014-10-28 19:15:00	139	Lehman Library 2	79	Lehman LIbrary	63
 2014-10-28 19:15:00	144	Starr East Asian Library	62	East Asian Library	103
@@ -18774,7 +18774,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-28 19:30:00	149	Architectural and Fine Arts Library 3	146	Avery	63
 2014-10-28 19:30:00	134	Butler Library 6	103	Butler	89
 2014-10-28 19:30:00	138	Butler Library stk	103	Butler	30
-2014-10-28 19:30:00	145	Science and Engineering Library	15	Mudd	84
+2014-10-28 19:30:00	145	Science and Engineering Library	15	Northwest Corner Building	84
 2014-10-28 19:30:00	131	Butler Library 3	103	Butler	283
 2014-10-28 19:30:00	139	Lehman Library 2	79	Lehman LIbrary	53
 2014-10-28 19:30:00	144	Starr East Asian Library	62	East Asian Library	130
@@ -18786,7 +18786,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-28 19:45:00	149	Architectural and Fine Arts Library 3	146	Avery	55
 2014-10-28 19:45:00	134	Butler Library 6	103	Butler	86
 2014-10-28 19:45:00	138	Butler Library stk	103	Butler	24
-2014-10-28 19:45:00	145	Science and Engineering Library	15	Mudd	85
+2014-10-28 19:45:00	145	Science and Engineering Library	15	Northwest Corner Building	85
 2014-10-28 19:45:00	155	JJ's Place	75	John Jay	46
 2014-10-28 19:45:00	133	Butler Library 5	103	Butler	80
 2014-10-28 19:45:00	151	Lerner 2	84	Lerner	93
@@ -18824,7 +18824,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-28 20:00:00	149	Architectural and Fine Arts Library 3	146	Avery	51
 2014-10-28 20:00:00	134	Butler Library 6	103	Butler	90
 2014-10-28 20:00:00	138	Butler Library stk	103	Butler	31
-2014-10-28 20:00:00	145	Science and Engineering Library	15	Mudd	93
+2014-10-28 20:00:00	145	Science and Engineering Library	15	Northwest Corner Building	93
 2014-10-28 20:15:00	154	Lerner 5	84	Lerner	109
 2014-10-28 20:15:00	125	John Jay Dining Hall	75	John Jay	108
 2014-10-28 20:15:00	147	Architectural and Fine Arts Library 1	146	Avery	2
@@ -18843,7 +18843,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-28 20:15:00	149	Architectural and Fine Arts Library 3	146	Avery	43
 2014-10-28 20:15:00	134	Butler Library 6	103	Butler	93
 2014-10-28 20:15:00	138	Butler Library stk	103	Butler	24
-2014-10-28 20:15:00	145	Science and Engineering Library	15	Mudd	84
+2014-10-28 20:15:00	145	Science and Engineering Library	15	Northwest Corner Building	84
 2014-10-28 20:15:00	155	JJ's Place	75	John Jay	45
 2014-10-28 20:15:00	133	Butler Library 5	103	Butler	60
 2014-10-28 20:15:00	151	Lerner 2	84	Lerner	96
@@ -18852,7 +18852,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-28 20:30:00	149	Architectural and Fine Arts Library 3	146	Avery	41
 2014-10-28 20:30:00	134	Butler Library 6	103	Butler	95
 2014-10-28 20:30:00	138	Butler Library stk	103	Butler	25
-2014-10-28 20:30:00	145	Science and Engineering Library	15	Mudd	68
+2014-10-28 20:30:00	145	Science and Engineering Library	15	Northwest Corner Building	68
 2014-10-28 20:30:00	155	JJ's Place	75	John Jay	73
 2014-10-28 20:30:00	133	Butler Library 5	103	Butler	69
 2014-10-28 20:30:00	151	Lerner 2	84	Lerner	110
@@ -18884,7 +18884,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-28 20:45:00	149	Architectural and Fine Arts Library 3	146	Avery	54
 2014-10-28 20:45:00	134	Butler Library 6	103	Butler	95
 2014-10-28 20:45:00	138	Butler Library stk	103	Butler	27
-2014-10-28 20:45:00	145	Science and Engineering Library	15	Mudd	70
+2014-10-28 20:45:00	145	Science and Engineering Library	15	Northwest Corner Building	70
 2014-10-28 20:45:00	131	Butler Library 3	103	Butler	355
 2014-10-28 20:45:00	139	Lehman Library 2	79	Lehman LIbrary	45
 2014-10-28 20:45:00	144	Starr East Asian Library	62	East Asian Library	77
@@ -18912,7 +18912,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-28 21:00:00	149	Architectural and Fine Arts Library 3	146	Avery	48
 2014-10-28 21:00:00	134	Butler Library 6	103	Butler	113
 2014-10-28 21:00:00	138	Butler Library stk	103	Butler	32
-2014-10-28 21:00:00	145	Science and Engineering Library	15	Mudd	67
+2014-10-28 21:00:00	145	Science and Engineering Library	15	Northwest Corner Building	67
 2014-10-28 21:15:00	154	Lerner 5	84	Lerner	150
 2014-10-28 21:15:00	125	John Jay Dining Hall	75	John Jay	7
 2014-10-28 21:15:00	147	Architectural and Fine Arts Library 1	146	Avery	2
@@ -18928,7 +18928,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-28 21:15:00	149	Architectural and Fine Arts Library 3	146	Avery	42
 2014-10-28 21:15:00	134	Butler Library 6	103	Butler	118
 2014-10-28 21:15:00	138	Butler Library stk	103	Butler	31
-2014-10-28 21:15:00	145	Science and Engineering Library	15	Mudd	67
+2014-10-28 21:15:00	145	Science and Engineering Library	15	Northwest Corner Building	67
 2014-10-28 21:15:00	131	Butler Library 3	103	Butler	357
 2014-10-28 21:15:00	139	Lehman Library 2	79	Lehman LIbrary	57
 2014-10-28 21:15:00	144	Starr East Asian Library	62	East Asian Library	62
@@ -18948,7 +18948,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-28 21:30:00	149	Architectural and Fine Arts Library 3	146	Avery	38
 2014-10-28 21:30:00	134	Butler Library 6	103	Butler	124
 2014-10-28 21:30:00	138	Butler Library stk	103	Butler	36
-2014-10-28 21:30:00	145	Science and Engineering Library	15	Mudd	73
+2014-10-28 21:30:00	145	Science and Engineering Library	15	Northwest Corner Building	73
 2014-10-28 21:30:00	155	JJ's Place	75	John Jay	56
 2014-10-28 21:30:00	133	Butler Library 5	103	Butler	85
 2014-10-28 21:30:00	151	Lerner 2	84	Lerner	113
@@ -18969,7 +18969,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-28 21:45:00	149	Architectural and Fine Arts Library 3	146	Avery	40
 2014-10-28 21:45:00	134	Butler Library 6	103	Butler	121
 2014-10-28 21:45:00	138	Butler Library stk	103	Butler	35
-2014-10-28 21:45:00	145	Science and Engineering Library	15	Mudd	72
+2014-10-28 21:45:00	145	Science and Engineering Library	15	Northwest Corner Building	72
 2014-10-28 21:45:00	155	JJ's Place	75	John Jay	56
 2014-10-28 21:45:00	133	Butler Library 5	103	Butler	83
 2014-10-28 21:45:00	151	Lerner 2	84	Lerner	87
@@ -18999,7 +18999,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-28 22:00:00	149	Architectural and Fine Arts Library 3	146	Avery	40
 2014-10-28 22:00:00	134	Butler Library 6	103	Butler	119
 2014-10-28 22:00:00	138	Butler Library stk	103	Butler	39
-2014-10-28 22:00:00	145	Science and Engineering Library	15	Mudd	70
+2014-10-28 22:00:00	145	Science and Engineering Library	15	Northwest Corner Building	70
 2014-10-28 22:15:00	155	JJ's Place	75	John Jay	55
 2014-10-28 22:15:00	23	Uris/Watson Library	2	Uris	505
 2014-10-28 22:15:00	133	Butler Library 5	103	Butler	74
@@ -19010,7 +19010,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-28 22:15:00	149	Architectural and Fine Arts Library 3	146	Avery	51
 2014-10-28 22:15:00	134	Butler Library 6	103	Butler	125
 2014-10-28 22:15:00	138	Butler Library stk	103	Butler	47
-2014-10-28 22:15:00	145	Science and Engineering Library	15	Mudd	71
+2014-10-28 22:15:00	145	Science and Engineering Library	15	Northwest Corner Building	71
 2014-10-28 22:15:00	131	Butler Library 3	103	Butler	359
 2014-10-28 22:15:00	139	Lehman Library 2	79	Lehman LIbrary	63
 2014-10-28 22:15:00	144	Starr East Asian Library	62	East Asian Library	68
@@ -19027,7 +19027,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-28 22:30:00	149	Architectural and Fine Arts Library 3	146	Avery	36
 2014-10-28 22:30:00	134	Butler Library 6	103	Butler	110
 2014-10-28 22:30:00	138	Butler Library stk	103	Butler	43
-2014-10-28 22:30:00	145	Science and Engineering Library	15	Mudd	67
+2014-10-28 22:30:00	145	Science and Engineering Library	15	Northwest Corner Building	67
 2014-10-28 22:30:00	131	Butler Library 3	103	Butler	349
 2014-10-28 22:30:00	139	Lehman Library 2	79	Lehman LIbrary	52
 2014-10-28 22:30:00	144	Starr East Asian Library	62	East Asian Library	56
@@ -19049,7 +19049,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-28 22:45:00	149	Architectural and Fine Arts Library 3	146	Avery	25
 2014-10-28 22:45:00	134	Butler Library 6	103	Butler	90
 2014-10-28 22:45:00	138	Butler Library stk	103	Butler	45
-2014-10-28 22:45:00	145	Science and Engineering Library	15	Mudd	71
+2014-10-28 22:45:00	145	Science and Engineering Library	15	Northwest Corner Building	71
 2014-10-28 22:45:00	155	JJ's Place	75	John Jay	71
 2014-10-28 22:45:00	133	Butler Library 5	103	Butler	66
 2014-10-28 22:45:00	151	Lerner 2	84	Lerner	82
@@ -19078,7 +19078,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-28 23:00:00	149	Architectural and Fine Arts Library 3	146	Avery	16
 2014-10-28 23:00:00	134	Butler Library 6	103	Butler	86
 2014-10-28 23:00:00	138	Butler Library stk	103	Butler	43
-2014-10-28 23:00:00	145	Science and Engineering Library	15	Mudd	73
+2014-10-28 23:00:00	145	Science and Engineering Library	15	Northwest Corner Building	73
 2014-10-28 23:00:00	155	JJ's Place	75	John Jay	77
 2014-10-28 23:00:00	133	Butler Library 5	103	Butler	59
 2014-10-28 23:00:00	151	Lerner 2	84	Lerner	71
@@ -19108,13 +19108,13 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-28 23:15:00	149	Architectural and Fine Arts Library 3	146	Avery	12
 2014-10-28 23:15:00	134	Butler Library 6	103	Butler	37
 2014-10-28 23:15:00	138	Butler Library stk	103	Butler	34
-2014-10-28 23:15:00	145	Science and Engineering Library	15	Mudd	71
+2014-10-28 23:15:00	145	Science and Engineering Library	15	Northwest Corner Building	71
 2014-10-28 23:30:00	152	Lerner 3	84	Lerner	50
 2014-10-28 23:30:00	130	Butler Library 2	103	Butler	512
 2014-10-28 23:30:00	149	Architectural and Fine Arts Library 3	146	Avery	2
 2014-10-28 23:30:00	134	Butler Library 6	103	Butler	7
 2014-10-28 23:30:00	138	Butler Library stk	103	Butler	38
-2014-10-28 23:30:00	145	Science and Engineering Library	15	Mudd	70
+2014-10-28 23:30:00	145	Science and Engineering Library	15	Northwest Corner Building	70
 2014-10-28 23:30:00	155	JJ's Place	75	John Jay	69
 2014-10-28 23:30:00	133	Butler Library 5	103	Butler	15
 2014-10-28 23:30:00	151	Lerner 2	84	Lerner	78
@@ -19149,7 +19149,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-28 23:45:00	149	Architectural and Fine Arts Library 3	146	Avery	3
 2014-10-28 23:45:00	134	Butler Library 6	103	Butler	6
 2014-10-28 23:45:00	138	Butler Library stk	103	Butler	29
-2014-10-28 23:45:00	145	Science and Engineering Library	15	Mudd	61
+2014-10-28 23:45:00	145	Science and Engineering Library	15	Northwest Corner Building	61
 2014-10-28 23:45:00	155	JJ's Place	75	John Jay	62
 2014-10-28 23:45:00	133	Butler Library 5	103	Butler	17
 2014-10-28 23:45:00	151	Lerner 2	84	Lerner	74
@@ -19163,7 +19163,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-29 00:00:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-29 00:00:00	134	Butler Library 6	103	Butler	5
 2014-10-29 00:00:00	138	Butler Library stk	103	Butler	29
-2014-10-29 00:00:00	145	Science and Engineering Library	15	Mudd	53
+2014-10-29 00:00:00	145	Science and Engineering Library	15	Northwest Corner Building	53
 2014-10-29 00:00:00	131	Butler Library 3	103	Butler	356
 2014-10-29 00:00:00	139	Lehman Library 2	79	Lehman LIbrary	34
 2014-10-29 00:00:00	144	Starr East Asian Library	62	East Asian Library	6
@@ -19180,7 +19180,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-29 00:15:00	149	Architectural and Fine Arts Library 3	146	Avery	2
 2014-10-29 00:15:00	134	Butler Library 6	103	Butler	5
 2014-10-29 00:15:00	138	Butler Library stk	103	Butler	26
-2014-10-29 00:15:00	145	Science and Engineering Library	15	Mudd	45
+2014-10-29 00:15:00	145	Science and Engineering Library	15	Northwest Corner Building	45
 2014-10-29 00:15:00	131	Butler Library 3	103	Butler	328
 2014-10-29 00:15:00	139	Lehman Library 2	79	Lehman LIbrary	14
 2014-10-29 00:15:00	144	Starr East Asian Library	62	East Asian Library	5
@@ -19207,7 +19207,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-29 00:30:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-29 00:30:00	134	Butler Library 6	103	Butler	8
 2014-10-29 00:30:00	138	Butler Library stk	103	Butler	33
-2014-10-29 00:30:00	145	Science and Engineering Library	15	Mudd	42
+2014-10-29 00:30:00	145	Science and Engineering Library	15	Northwest Corner Building	42
 2014-10-29 00:30:00	131	Butler Library 3	103	Butler	301
 2014-10-29 00:30:00	139	Lehman Library 2	79	Lehman LIbrary	4
 2014-10-29 00:30:00	144	Starr East Asian Library	62	East Asian Library	8
@@ -19224,7 +19224,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-29 00:45:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-29 00:45:00	134	Butler Library 6	103	Butler	2
 2014-10-29 00:45:00	138	Butler Library stk	103	Butler	22
-2014-10-29 00:45:00	145	Science and Engineering Library	15	Mudd	44
+2014-10-29 00:45:00	145	Science and Engineering Library	15	Northwest Corner Building	44
 2014-10-29 00:45:00	155	JJ's Place	75	John Jay	85
 2014-10-29 00:45:00	133	Butler Library 5	103	Butler	11
 2014-10-29 00:45:00	151	Lerner 2	84	Lerner	25
@@ -19259,7 +19259,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-29 01:00:00	149	Architectural and Fine Arts Library 3	146	Avery	2
 2014-10-29 01:00:00	134	Butler Library 6	103	Butler	2
 2014-10-29 01:00:00	138	Butler Library stk	103	Butler	20
-2014-10-29 01:00:00	145	Science and Engineering Library	15	Mudd	41
+2014-10-29 01:00:00	145	Science and Engineering Library	15	Northwest Corner Building	41
 2014-10-29 01:00:00	155	JJ's Place	75	John Jay	95
 2014-10-29 01:00:00	133	Butler Library 5	103	Butler	12
 2014-10-29 01:00:00	151	Lerner 2	84	Lerner	24
@@ -19277,7 +19277,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-29 01:15:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-29 01:15:00	134	Butler Library 6	103	Butler	1
 2014-10-29 01:15:00	138	Butler Library stk	103	Butler	15
-2014-10-29 01:15:00	145	Science and Engineering Library	15	Mudd	34
+2014-10-29 01:15:00	145	Science and Engineering Library	15	Northwest Corner Building	34
 2014-10-29 01:15:00	155	JJ's Place	75	John Jay	67
 2014-10-29 01:15:00	133	Butler Library 5	103	Butler	13
 2014-10-29 01:15:00	151	Lerner 2	84	Lerner	26
@@ -19301,7 +19301,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-29 01:30:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-29 01:30:00	134	Butler Library 6	103	Butler	1
 2014-10-29 01:30:00	138	Butler Library stk	103	Butler	13
-2014-10-29 01:30:00	145	Science and Engineering Library	15	Mudd	35
+2014-10-29 01:30:00	145	Science and Engineering Library	15	Northwest Corner Building	35
 2014-10-29 01:30:00	131	Butler Library 3	103	Butler	222
 2014-10-29 01:30:00	139	Lehman Library 2	79	Lehman LIbrary	4
 2014-10-29 01:30:00	144	Starr East Asian Library	62	East Asian Library	2
@@ -19326,7 +19326,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-29 01:45:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-29 01:45:00	134	Butler Library 6	103	Butler	1
 2014-10-29 01:45:00	138	Butler Library stk	103	Butler	15
-2014-10-29 01:45:00	145	Science and Engineering Library	15	Mudd	30
+2014-10-29 01:45:00	145	Science and Engineering Library	15	Northwest Corner Building	30
 2014-10-29 01:45:00	155	JJ's Place	75	John Jay	7
 2014-10-29 01:45:00	133	Butler Library 5	103	Butler	9
 2014-10-29 01:45:00	151	Lerner 2	84	Lerner	7
@@ -19351,7 +19351,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-29 02:00:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-29 02:00:00	134	Butler Library 6	103	Butler	2
 2014-10-29 02:00:00	138	Butler Library stk	103	Butler	15
-2014-10-29 02:00:00	145	Science and Engineering Library	15	Mudd	26
+2014-10-29 02:00:00	145	Science and Engineering Library	15	Northwest Corner Building	26
 2014-10-29 02:15:00	154	Lerner 5	84	Lerner	0
 2014-10-29 02:15:00	125	John Jay Dining Hall	75	John Jay	2
 2014-10-29 02:15:00	147	Architectural and Fine Arts Library 1	146	Avery	0
@@ -19367,7 +19367,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-29 02:15:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-29 02:15:00	134	Butler Library 6	103	Butler	2
 2014-10-29 02:15:00	138	Butler Library stk	103	Butler	12
-2014-10-29 02:15:00	145	Science and Engineering Library	15	Mudd	24
+2014-10-29 02:15:00	145	Science and Engineering Library	15	Northwest Corner Building	24
 2014-10-29 02:15:00	131	Butler Library 3	103	Butler	168
 2014-10-29 02:15:00	139	Lehman Library 2	79	Lehman LIbrary	4
 2014-10-29 02:15:00	144	Starr East Asian Library	62	East Asian Library	1
@@ -19379,7 +19379,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-29 02:30:00	149	Architectural and Fine Arts Library 3	146	Avery	2
 2014-10-29 02:30:00	134	Butler Library 6	103	Butler	3
 2014-10-29 02:30:00	138	Butler Library stk	103	Butler	12
-2014-10-29 02:30:00	145	Science and Engineering Library	15	Mudd	23
+2014-10-29 02:30:00	145	Science and Engineering Library	15	Northwest Corner Building	23
 2014-10-29 02:30:00	131	Butler Library 3	103	Butler	148
 2014-10-29 02:30:00	139	Lehman Library 2	79	Lehman LIbrary	3
 2014-10-29 02:30:00	144	Starr East Asian Library	62	East Asian Library	2
@@ -19414,7 +19414,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-29 02:45:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-29 02:45:00	134	Butler Library 6	103	Butler	3
 2014-10-29 02:45:00	138	Butler Library stk	103	Butler	11
-2014-10-29 02:45:00	145	Science and Engineering Library	15	Mudd	17
+2014-10-29 02:45:00	145	Science and Engineering Library	15	Northwest Corner Building	17
 2014-10-29 02:45:00	155	JJ's Place	75	John Jay	3
 2014-10-29 02:45:00	133	Butler Library 5	103	Butler	6
 2014-10-29 02:45:00	151	Lerner 2	84	Lerner	4
@@ -19439,13 +19439,13 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-29 03:00:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-29 03:00:00	134	Butler Library 6	103	Butler	2
 2014-10-29 03:00:00	138	Butler Library stk	103	Butler	12
-2014-10-29 03:00:00	145	Science and Engineering Library	15	Mudd	16
+2014-10-29 03:00:00	145	Science and Engineering Library	15	Northwest Corner Building	16
 2014-10-29 03:15:00	152	Lerner 3	84	Lerner	5
 2014-10-29 03:15:00	130	Butler Library 2	103	Butler	156
 2014-10-29 03:15:00	149	Architectural and Fine Arts Library 3	146	Avery	2
 2014-10-29 03:15:00	134	Butler Library 6	103	Butler	2
 2014-10-29 03:15:00	138	Butler Library stk	103	Butler	10
-2014-10-29 03:15:00	145	Science and Engineering Library	15	Mudd	8
+2014-10-29 03:15:00	145	Science and Engineering Library	15	Northwest Corner Building	8
 2014-10-29 03:15:00	131	Butler Library 3	103	Butler	117
 2014-10-29 03:15:00	139	Lehman Library 2	79	Lehman LIbrary	4
 2014-10-29 03:15:00	144	Starr East Asian Library	62	East Asian Library	1
@@ -19475,7 +19475,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-29 03:30:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-29 03:30:00	134	Butler Library 6	103	Butler	3
 2014-10-29 03:30:00	138	Butler Library stk	103	Butler	4
-2014-10-29 03:30:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-29 03:30:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-29 03:30:00	155	JJ's Place	75	John Jay	4
 2014-10-29 03:30:00	133	Butler Library 5	103	Butler	7
 2014-10-29 03:30:00	151	Lerner 2	84	Lerner	3
@@ -19494,7 +19494,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-29 03:45:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-29 03:45:00	134	Butler Library 6	103	Butler	2
 2014-10-29 03:45:00	138	Butler Library stk	103	Butler	2
-2014-10-29 03:45:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-29 03:45:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-29 03:45:00	131	Butler Library 3	103	Butler	91
 2014-10-29 03:45:00	139	Lehman Library 2	79	Lehman LIbrary	4
 2014-10-29 03:45:00	144	Starr East Asian Library	62	East Asian Library	1
@@ -19527,7 +19527,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-29 04:00:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-29 04:00:00	134	Butler Library 6	103	Butler	2
 2014-10-29 04:00:00	138	Butler Library stk	103	Butler	0
-2014-10-29 04:00:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-29 04:00:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-29 04:15:00	131	Butler Library 3	103	Butler	69
 2014-10-29 04:15:00	139	Lehman Library 2	79	Lehman LIbrary	4
 2014-10-29 04:15:00	144	Starr East Asian Library	62	East Asian Library	1
@@ -19541,7 +19541,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-29 04:15:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-29 04:15:00	134	Butler Library 6	103	Butler	2
 2014-10-29 04:15:00	138	Butler Library stk	103	Butler	0
-2014-10-29 04:15:00	145	Science and Engineering Library	15	Mudd	3
+2014-10-29 04:15:00	145	Science and Engineering Library	15	Northwest Corner Building	3
 2014-10-29 04:15:00	155	JJ's Place	75	John Jay	3
 2014-10-29 04:15:00	133	Butler Library 5	103	Butler	7
 2014-10-29 04:15:00	151	Lerner 2	84	Lerner	4
@@ -19563,7 +19563,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-29 04:30:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-29 04:30:00	134	Butler Library 6	103	Butler	2
 2014-10-29 04:30:00	138	Butler Library stk	103	Butler	0
-2014-10-29 04:30:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-29 04:30:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-29 04:30:00	155	JJ's Place	75	John Jay	2
 2014-10-29 04:30:00	133	Butler Library 5	103	Butler	7
 2014-10-29 04:30:00	151	Lerner 2	84	Lerner	2
@@ -19589,7 +19589,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-29 04:45:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-29 04:45:00	134	Butler Library 6	103	Butler	3
 2014-10-29 04:45:00	138	Butler Library stk	103	Butler	0
-2014-10-29 04:45:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-29 04:45:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-29 04:45:00	155	JJ's Place	75	John Jay	2
 2014-10-29 04:45:00	133	Butler Library 5	103	Butler	8
 2014-10-29 04:45:00	151	Lerner 2	84	Lerner	2
@@ -19611,7 +19611,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-29 05:00:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-29 05:00:00	134	Butler Library 6	103	Butler	2
 2014-10-29 05:00:00	138	Butler Library stk	103	Butler	0
-2014-10-29 05:00:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-29 05:00:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-29 05:00:00	155	JJ's Place	75	John Jay	1
 2014-10-29 05:00:00	133	Butler Library 5	103	Butler	7
 2014-10-29 05:00:00	151	Lerner 2	84	Lerner	2
@@ -19636,7 +19636,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-29 05:15:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-29 05:15:00	134	Butler Library 6	103	Butler	1
 2014-10-29 05:15:00	138	Butler Library stk	103	Butler	0
-2014-10-29 05:15:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-29 05:15:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-29 05:30:00	154	Lerner 5	84	Lerner	0
 2014-10-29 05:30:00	125	John Jay Dining Hall	75	John Jay	2
 2014-10-29 05:30:00	147	Architectural and Fine Arts Library 1	146	Avery	0
@@ -19652,7 +19652,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-29 05:30:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-29 05:30:00	134	Butler Library 6	103	Butler	1
 2014-10-29 05:30:00	138	Butler Library stk	103	Butler	0
-2014-10-29 05:30:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-29 05:30:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-29 05:30:00	131	Butler Library 3	103	Butler	47
 2014-10-29 05:30:00	139	Lehman Library 2	79	Lehman LIbrary	4
 2014-10-29 05:30:00	144	Starr East Asian Library	62	East Asian Library	1
@@ -19664,7 +19664,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-29 05:45:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-29 05:45:00	134	Butler Library 6	103	Butler	1
 2014-10-29 05:45:00	138	Butler Library stk	103	Butler	0
-2014-10-29 05:45:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-29 05:45:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-29 05:45:00	155	JJ's Place	75	John Jay	1
 2014-10-29 05:45:00	133	Butler Library 5	103	Butler	7
 2014-10-29 05:45:00	151	Lerner 2	84	Lerner	4
@@ -19695,7 +19695,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-29 06:00:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-29 06:00:00	134	Butler Library 6	103	Butler	1
 2014-10-29 06:00:00	138	Butler Library stk	103	Butler	0
-2014-10-29 06:00:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-29 06:00:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-29 06:00:00	131	Butler Library 3	103	Butler	44
 2014-10-29 06:00:00	139	Lehman Library 2	79	Lehman LIbrary	5
 2014-10-29 06:00:00	144	Starr East Asian Library	62	East Asian Library	1
@@ -19717,7 +19717,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-29 06:15:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-29 06:15:00	134	Butler Library 6	103	Butler	3
 2014-10-29 06:15:00	138	Butler Library stk	103	Butler	0
-2014-10-29 06:15:00	145	Science and Engineering Library	15	Mudd	5
+2014-10-29 06:15:00	145	Science and Engineering Library	15	Northwest Corner Building	5
 2014-10-29 06:15:00	131	Butler Library 3	103	Butler	44
 2014-10-29 06:15:00	139	Lehman Library 2	79	Lehman LIbrary	4
 2014-10-29 06:15:00	144	Starr East Asian Library	62	East Asian Library	1
@@ -19745,7 +19745,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-29 06:30:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-29 06:30:00	134	Butler Library 6	103	Butler	2
 2014-10-29 06:30:00	138	Butler Library stk	103	Butler	0
-2014-10-29 06:30:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-29 06:30:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-29 06:45:00	154	Lerner 5	84	Lerner	2
 2014-10-29 06:45:00	125	John Jay Dining Hall	75	John Jay	3
 2014-10-29 06:45:00	147	Architectural and Fine Arts Library 1	146	Avery	4
@@ -19764,7 +19764,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-29 06:45:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-29 06:45:00	134	Butler Library 6	103	Butler	1
 2014-10-29 06:45:00	138	Butler Library stk	103	Butler	0
-2014-10-29 06:45:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-29 06:45:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-29 06:45:00	155	JJ's Place	75	John Jay	1
 2014-10-29 06:45:00	133	Butler Library 5	103	Butler	9
 2014-10-29 06:45:00	151	Lerner 2	84	Lerner	3
@@ -19786,7 +19786,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-29 07:00:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-29 07:00:00	134	Butler Library 6	103	Butler	1
 2014-10-29 07:00:00	138	Butler Library stk	103	Butler	0
-2014-10-29 07:00:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-29 07:00:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-29 07:00:00	155	JJ's Place	75	John Jay	1
 2014-10-29 07:00:00	133	Butler Library 5	103	Butler	9
 2014-10-29 07:00:00	151	Lerner 2	84	Lerner	6
@@ -19811,7 +19811,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-29 07:15:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-29 07:15:00	134	Butler Library 6	103	Butler	2
 2014-10-29 07:15:00	138	Butler Library stk	103	Butler	1
-2014-10-29 07:15:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-29 07:15:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-29 07:30:00	154	Lerner 5	84	Lerner	4
 2014-10-29 07:30:00	125	John Jay Dining Hall	75	John Jay	1
 2014-10-29 07:30:00	147	Architectural and Fine Arts Library 1	146	Avery	0
@@ -19827,7 +19827,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-29 07:30:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-29 07:30:00	134	Butler Library 6	103	Butler	2
 2014-10-29 07:30:00	138	Butler Library stk	103	Butler	0
-2014-10-29 07:30:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-29 07:30:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-29 07:30:00	131	Butler Library 3	103	Butler	28
 2014-10-29 07:30:00	139	Lehman Library 2	79	Lehman LIbrary	6
 2014-10-29 07:30:00	144	Starr East Asian Library	62	East Asian Library	3
@@ -19839,7 +19839,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-29 07:45:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-29 07:45:00	134	Butler Library 6	103	Butler	1
 2014-10-29 07:45:00	138	Butler Library stk	103	Butler	0
-2014-10-29 07:45:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-29 07:45:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-29 07:45:00	131	Butler Library 3	103	Butler	38
 2014-10-29 07:45:00	139	Lehman Library 2	79	Lehman LIbrary	7
 2014-10-29 07:45:00	144	Starr East Asian Library	62	East Asian Library	1
@@ -19866,7 +19866,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-29 08:00:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-29 08:00:00	134	Butler Library 6	103	Butler	3
 2014-10-29 08:00:00	138	Butler Library stk	103	Butler	0
-2014-10-29 08:00:00	145	Science and Engineering Library	15	Mudd	4
+2014-10-29 08:00:00	145	Science and Engineering Library	15	Northwest Corner Building	4
 2014-10-29 08:00:00	131	Butler Library 3	103	Butler	27
 2014-10-29 08:00:00	139	Lehman Library 2	79	Lehman LIbrary	7
 2014-10-29 08:00:00	144	Starr East Asian Library	62	East Asian Library	2
@@ -19883,7 +19883,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-29 08:15:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-29 08:15:00	134	Butler Library 6	103	Butler	2
 2014-10-29 08:15:00	138	Butler Library stk	103	Butler	0
-2014-10-29 08:15:00	145	Science and Engineering Library	15	Mudd	3
+2014-10-29 08:15:00	145	Science and Engineering Library	15	Northwest Corner Building	3
 2014-10-29 08:15:00	131	Butler Library 3	103	Butler	36
 2014-10-29 08:15:00	139	Lehman Library 2	79	Lehman LIbrary	6
 2014-10-29 08:15:00	144	Starr East Asian Library	62	East Asian Library	3
@@ -19921,7 +19921,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-29 08:30:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-29 08:30:00	134	Butler Library 6	103	Butler	2
 2014-10-29 08:30:00	138	Butler Library stk	103	Butler	0
-2014-10-29 08:30:00	145	Science and Engineering Library	15	Mudd	5
+2014-10-29 08:30:00	145	Science and Engineering Library	15	Northwest Corner Building	5
 2014-10-29 08:45:00	155	JJ's Place	75	John Jay	8
 2014-10-29 08:45:00	133	Butler Library 5	103	Butler	14
 2014-10-29 08:45:00	151	Lerner 2	84	Lerner	41
@@ -19943,7 +19943,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-29 08:45:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-29 08:45:00	134	Butler Library 6	103	Butler	2
 2014-10-29 08:45:00	138	Butler Library stk	103	Butler	0
-2014-10-29 08:45:00	145	Science and Engineering Library	15	Mudd	9
+2014-10-29 08:45:00	145	Science and Engineering Library	15	Northwest Corner Building	9
 2014-10-29 09:00:00	131	Butler Library 3	103	Butler	63
 2014-10-29 09:00:00	139	Lehman Library 2	79	Lehman LIbrary	8
 2014-10-29 09:00:00	144	Starr East Asian Library	62	East Asian Library	43
@@ -19957,7 +19957,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-29 09:00:00	149	Architectural and Fine Arts Library 3	146	Avery	7
 2014-10-29 09:00:00	134	Butler Library 6	103	Butler	3
 2014-10-29 09:00:00	138	Butler Library stk	103	Butler	0
-2014-10-29 09:00:00	145	Science and Engineering Library	15	Mudd	8
+2014-10-29 09:00:00	145	Science and Engineering Library	15	Northwest Corner Building	8
 2014-10-29 09:00:00	155	JJ's Place	75	John Jay	6
 2014-10-29 09:00:00	133	Butler Library 5	103	Butler	12
 2014-10-29 09:00:00	151	Lerner 2	84	Lerner	33
@@ -19981,7 +19981,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-29 09:15:00	149	Architectural and Fine Arts Library 3	146	Avery	7
 2014-10-29 09:15:00	134	Butler Library 6	103	Butler	5
 2014-10-29 09:15:00	138	Butler Library stk	103	Butler	2
-2014-10-29 09:15:00	145	Science and Engineering Library	15	Mudd	12
+2014-10-29 09:15:00	145	Science and Engineering Library	15	Northwest Corner Building	12
 2014-10-29 09:15:00	131	Butler Library 3	103	Butler	86
 2014-10-29 09:15:00	139	Lehman Library 2	79	Lehman LIbrary	8
 2014-10-29 09:15:00	144	Starr East Asian Library	62	East Asian Library	48
@@ -20006,7 +20006,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-29 09:30:00	149	Architectural and Fine Arts Library 3	146	Avery	17
 2014-10-29 09:30:00	134	Butler Library 6	103	Butler	11
 2014-10-29 09:30:00	138	Butler Library stk	103	Butler	4
-2014-10-29 09:30:00	145	Science and Engineering Library	15	Mudd	15
+2014-10-29 09:30:00	145	Science and Engineering Library	15	Northwest Corner Building	15
 2014-10-29 09:30:00	155	JJ's Place	75	John Jay	10
 2014-10-29 09:30:00	133	Butler Library 5	103	Butler	25
 2014-10-29 09:30:00	151	Lerner 2	84	Lerner	36
@@ -20020,7 +20020,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-29 09:45:00	149	Architectural and Fine Arts Library 3	146	Avery	28
 2014-10-29 09:45:00	134	Butler Library 6	103	Butler	12
 2014-10-29 09:45:00	138	Butler Library stk	103	Butler	7
-2014-10-29 09:45:00	145	Science and Engineering Library	15	Mudd	30
+2014-10-29 09:45:00	145	Science and Engineering Library	15	Northwest Corner Building	30
 2014-10-29 09:45:00	131	Butler Library 3	103	Butler	142
 2014-10-29 09:45:00	139	Lehman Library 2	79	Lehman LIbrary	24
 2014-10-29 09:45:00	144	Starr East Asian Library	62	East Asian Library	57
@@ -20053,7 +20053,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-29 10:00:00	149	Architectural and Fine Arts Library 3	146	Avery	27
 2014-10-29 10:00:00	134	Butler Library 6	103	Butler	21
 2014-10-29 10:00:00	138	Butler Library stk	103	Butler	8
-2014-10-29 10:00:00	145	Science and Engineering Library	15	Mudd	38
+2014-10-29 10:00:00	145	Science and Engineering Library	15	Northwest Corner Building	38
 2014-10-29 10:15:00	131	Butler Library 3	103	Butler	178
 2014-10-29 10:15:00	139	Lehman Library 2	79	Lehman LIbrary	24
 2014-10-29 10:15:00	144	Starr East Asian Library	62	East Asian Library	69
@@ -20067,7 +20067,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-29 10:15:00	149	Architectural and Fine Arts Library 3	146	Avery	41
 2014-10-29 10:15:00	134	Butler Library 6	103	Butler	25
 2014-10-29 10:15:00	138	Butler Library stk	103	Butler	9
-2014-10-29 10:15:00	145	Science and Engineering Library	15	Mudd	64
+2014-10-29 10:15:00	145	Science and Engineering Library	15	Northwest Corner Building	64
 2014-10-29 10:15:00	155	JJ's Place	75	John Jay	8
 2014-10-29 10:15:00	133	Butler Library 5	103	Butler	50
 2014-10-29 10:15:00	151	Lerner 2	84	Lerner	34
@@ -20094,7 +20094,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-29 10:30:00	149	Architectural and Fine Arts Library 3	146	Avery	58
 2014-10-29 10:30:00	134	Butler Library 6	103	Butler	35
 2014-10-29 10:30:00	138	Butler Library stk	103	Butler	9
-2014-10-29 10:30:00	145	Science and Engineering Library	15	Mudd	65
+2014-10-29 10:30:00	145	Science and Engineering Library	15	Northwest Corner Building	65
 2014-10-29 10:30:00	155	JJ's Place	75	John Jay	9
 2014-10-29 10:30:00	133	Butler Library 5	103	Butler	68
 2014-10-29 10:30:00	151	Lerner 2	84	Lerner	48
@@ -20108,7 +20108,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-29 10:45:00	149	Architectural and Fine Arts Library 3	146	Avery	65
 2014-10-29 10:45:00	134	Butler Library 6	103	Butler	38
 2014-10-29 10:45:00	138	Butler Library stk	103	Butler	14
-2014-10-29 10:45:00	145	Science and Engineering Library	15	Mudd	66
+2014-10-29 10:45:00	145	Science and Engineering Library	15	Northwest Corner Building	66
 2014-10-29 10:45:00	131	Butler Library 3	103	Butler	219
 2014-10-29 10:45:00	139	Lehman Library 2	79	Lehman LIbrary	30
 2014-10-29 10:45:00	144	Starr East Asian Library	62	East Asian Library	90
@@ -20130,7 +20130,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-29 11:00:00	149	Architectural and Fine Arts Library 3	146	Avery	75
 2014-10-29 11:00:00	134	Butler Library 6	103	Butler	39
 2014-10-29 11:00:00	138	Butler Library stk	103	Butler	19
-2014-10-29 11:00:00	145	Science and Engineering Library	15	Mudd	90
+2014-10-29 11:00:00	145	Science and Engineering Library	15	Northwest Corner Building	90
 2014-10-29 11:00:00	131	Butler Library 3	103	Butler	252
 2014-10-29 11:00:00	139	Lehman Library 2	79	Lehman LIbrary	33
 2014-10-29 11:00:00	144	Starr East Asian Library	62	East Asian Library	89
@@ -20147,7 +20147,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-29 11:15:00	149	Architectural and Fine Arts Library 3	146	Avery	75
 2014-10-29 11:15:00	134	Butler Library 6	103	Butler	49
 2014-10-29 11:15:00	138	Butler Library stk	103	Butler	15
-2014-10-29 11:15:00	145	Science and Engineering Library	15	Mudd	93
+2014-10-29 11:15:00	145	Science and Engineering Library	15	Northwest Corner Building	93
 2014-10-29 11:15:00	155	JJ's Place	75	John Jay	8
 2014-10-29 11:15:00	133	Butler Library 5	103	Butler	88
 2014-10-29 11:15:00	151	Lerner 2	84	Lerner	76
@@ -20169,7 +20169,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-29 11:30:00	149	Architectural and Fine Arts Library 3	146	Avery	87
 2014-10-29 11:30:00	134	Butler Library 6	103	Butler	52
 2014-10-29 11:30:00	138	Butler Library stk	103	Butler	14
-2014-10-29 11:30:00	145	Science and Engineering Library	15	Mudd	95
+2014-10-29 11:30:00	145	Science and Engineering Library	15	Northwest Corner Building	95
 2014-10-29 11:30:00	155	JJ's Place	75	John Jay	11
 2014-10-29 11:30:00	133	Butler Library 5	103	Butler	78
 2014-10-29 11:30:00	151	Lerner 2	84	Lerner	64
@@ -20201,7 +20201,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-29 11:45:00	149	Architectural and Fine Arts Library 3	146	Avery	83
 2014-10-29 11:45:00	134	Butler Library 6	103	Butler	58
 2014-10-29 11:45:00	138	Butler Library stk	103	Butler	13
-2014-10-29 11:45:00	145	Science and Engineering Library	15	Mudd	105
+2014-10-29 11:45:00	145	Science and Engineering Library	15	Northwest Corner Building	105
 2014-10-29 11:45:00	131	Butler Library 3	103	Butler	293
 2014-10-29 11:45:00	139	Lehman Library 2	79	Lehman LIbrary	48
 2014-10-29 11:45:00	144	Starr East Asian Library	62	East Asian Library	117
@@ -20218,7 +20218,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-29 12:00:00	149	Architectural and Fine Arts Library 3	146	Avery	89
 2014-10-29 12:00:00	134	Butler Library 6	103	Butler	62
 2014-10-29 12:00:00	138	Butler Library stk	103	Butler	14
-2014-10-29 12:00:00	145	Science and Engineering Library	15	Mudd	93
+2014-10-29 12:00:00	145	Science and Engineering Library	15	Northwest Corner Building	93
 2014-10-29 12:00:00	131	Butler Library 3	103	Butler	278
 2014-10-29 12:00:00	139	Lehman Library 2	79	Lehman LIbrary	44
 2014-10-29 12:00:00	144	Starr East Asian Library	62	East Asian Library	114
@@ -20251,13 +20251,13 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-29 12:15:00	149	Architectural and Fine Arts Library 3	146	Avery	84
 2014-10-29 12:15:00	134	Butler Library 6	103	Butler	69
 2014-10-29 12:15:00	138	Butler Library stk	103	Butler	19
-2014-10-29 12:15:00	145	Science and Engineering Library	15	Mudd	104
+2014-10-29 12:15:00	145	Science and Engineering Library	15	Northwest Corner Building	104
 2014-10-29 12:30:00	152	Lerner 3	84	Lerner	154
 2014-10-29 12:30:00	130	Butler Library 2	103	Butler	419
 2014-10-29 12:30:00	149	Architectural and Fine Arts Library 3	146	Avery	96
 2014-10-29 12:30:00	134	Butler Library 6	103	Butler	62
 2014-10-29 12:30:00	138	Butler Library stk	103	Butler	15
-2014-10-29 12:30:00	145	Science and Engineering Library	15	Mudd	103
+2014-10-29 12:30:00	145	Science and Engineering Library	15	Northwest Corner Building	103
 2014-10-29 12:30:00	155	JJ's Place	75	John Jay	29
 2014-10-29 12:30:00	133	Butler Library 5	103	Butler	89
 2014-10-29 12:30:00	151	Lerner 2	84	Lerner	128
@@ -20287,7 +20287,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-29 12:45:00	149	Architectural and Fine Arts Library 3	146	Avery	101
 2014-10-29 12:45:00	134	Butler Library 6	103	Butler	72
 2014-10-29 12:45:00	138	Butler Library stk	103	Butler	16
-2014-10-29 12:45:00	145	Science and Engineering Library	15	Mudd	109
+2014-10-29 12:45:00	145	Science and Engineering Library	15	Northwest Corner Building	109
 2014-10-29 12:45:00	155	JJ's Place	75	John Jay	30
 2014-10-29 12:45:00	133	Butler Library 5	103	Butler	91
 2014-10-29 12:45:00	151	Lerner 2	84	Lerner	150
@@ -20301,7 +20301,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-29 13:00:00	149	Architectural and Fine Arts Library 3	146	Avery	94
 2014-10-29 13:00:00	134	Butler Library 6	103	Butler	71
 2014-10-29 13:00:00	138	Butler Library stk	103	Butler	14
-2014-10-29 13:00:00	145	Science and Engineering Library	15	Mudd	102
+2014-10-29 13:00:00	145	Science and Engineering Library	15	Northwest Corner Building	102
 2014-10-29 13:00:00	155	JJ's Place	75	John Jay	26
 2014-10-29 13:00:00	133	Butler Library 5	103	Butler	83
 2014-10-29 13:00:00	151	Lerner 2	84	Lerner	127
@@ -20336,7 +20336,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-29 13:15:00	149	Architectural and Fine Arts Library 3	146	Avery	103
 2014-10-29 13:15:00	134	Butler Library 6	103	Butler	64
 2014-10-29 13:15:00	138	Butler Library stk	103	Butler	24
-2014-10-29 13:15:00	145	Science and Engineering Library	15	Mudd	125
+2014-10-29 13:15:00	145	Science and Engineering Library	15	Northwest Corner Building	125
 2014-10-29 13:15:00	155	JJ's Place	75	John Jay	30
 2014-10-29 13:15:00	133	Butler Library 5	103	Butler	85
 2014-10-29 13:15:00	151	Lerner 2	84	Lerner	118
@@ -20350,7 +20350,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-29 13:30:00	149	Architectural and Fine Arts Library 3	146	Avery	105
 2014-10-29 13:30:00	134	Butler Library 6	103	Butler	76
 2014-10-29 13:30:00	138	Butler Library stk	103	Butler	21
-2014-10-29 13:30:00	145	Science and Engineering Library	15	Mudd	111
+2014-10-29 13:30:00	145	Science and Engineering Library	15	Northwest Corner Building	111
 2014-10-29 13:30:00	131	Butler Library 3	103	Butler	345
 2014-10-29 13:30:00	139	Lehman Library 2	79	Lehman LIbrary	58
 2014-10-29 13:30:00	144	Starr East Asian Library	62	East Asian Library	101
@@ -20383,13 +20383,13 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-29 13:45:00	149	Architectural and Fine Arts Library 3	146	Avery	103
 2014-10-29 13:45:00	134	Butler Library 6	103	Butler	94
 2014-10-29 13:45:00	138	Butler Library stk	103	Butler	26
-2014-10-29 13:45:00	145	Science and Engineering Library	15	Mudd	119
+2014-10-29 13:45:00	145	Science and Engineering Library	15	Northwest Corner Building	119
 2014-10-29 14:00:00	152	Lerner 3	84	Lerner	143
 2014-10-29 14:00:00	130	Butler Library 2	103	Butler	413
 2014-10-29 14:00:00	149	Architectural and Fine Arts Library 3	146	Avery	109
 2014-10-29 14:00:00	134	Butler Library 6	103	Butler	98
 2014-10-29 14:00:00	138	Butler Library stk	103	Butler	25
-2014-10-29 14:00:00	145	Science and Engineering Library	15	Mudd	127
+2014-10-29 14:00:00	145	Science and Engineering Library	15	Northwest Corner Building	127
 2014-10-29 14:00:00	131	Butler Library 3	103	Butler	306
 2014-10-29 14:00:00	139	Lehman Library 2	79	Lehman LIbrary	80
 2014-10-29 14:00:00	144	Starr East Asian Library	62	East Asian Library	81
@@ -20427,13 +20427,13 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-29 14:15:00	149	Architectural and Fine Arts Library 3	146	Avery	114
 2014-10-29 14:15:00	134	Butler Library 6	103	Butler	106
 2014-10-29 14:15:00	138	Butler Library stk	103	Butler	26
-2014-10-29 14:15:00	145	Science and Engineering Library	15	Mudd	129
+2014-10-29 14:15:00	145	Science and Engineering Library	15	Northwest Corner Building	129
 2014-10-29 14:30:00	152	Lerner 3	84	Lerner	115
 2014-10-29 14:30:00	130	Butler Library 2	103	Butler	388
 2014-10-29 14:30:00	149	Architectural and Fine Arts Library 3	146	Avery	109
 2014-10-29 14:30:00	134	Butler Library 6	103	Butler	114
 2014-10-29 14:30:00	138	Butler Library stk	103	Butler	28
-2014-10-29 14:30:00	145	Science and Engineering Library	15	Mudd	118
+2014-10-29 14:30:00	145	Science and Engineering Library	15	Northwest Corner Building	118
 2014-10-29 14:30:00	155	JJ's Place	75	John Jay	25
 2014-10-29 14:30:00	133	Butler Library 5	103	Butler	71
 2014-10-29 14:30:00	151	Lerner 2	84	Lerner	80
@@ -20468,7 +20468,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-29 14:45:00	149	Architectural and Fine Arts Library 3	146	Avery	108
 2014-10-29 14:45:00	134	Butler Library 6	103	Butler	104
 2014-10-29 14:45:00	138	Butler Library stk	103	Butler	25
-2014-10-29 14:45:00	145	Science and Engineering Library	15	Mudd	130
+2014-10-29 14:45:00	145	Science and Engineering Library	15	Northwest Corner Building	130
 2014-10-29 14:45:00	155	JJ's Place	75	John Jay	23
 2014-10-29 14:45:00	133	Butler Library 5	103	Butler	86
 2014-10-29 14:45:00	151	Lerner 2	84	Lerner	89
@@ -20477,7 +20477,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-29 15:00:00	149	Architectural and Fine Arts Library 3	146	Avery	112
 2014-10-29 15:00:00	134	Butler Library 6	103	Butler	117
 2014-10-29 15:00:00	138	Butler Library stk	103	Butler	27
-2014-10-29 15:00:00	145	Science and Engineering Library	15	Mudd	118
+2014-10-29 15:00:00	145	Science and Engineering Library	15	Northwest Corner Building	118
 2014-10-29 15:00:00	155	JJ's Place	75	John Jay	47
 2014-10-29 15:00:00	133	Butler Library 5	103	Butler	103
 2014-10-29 15:00:00	151	Lerner 2	84	Lerner	127
@@ -20499,7 +20499,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-29 15:15:00	149	Architectural and Fine Arts Library 3	146	Avery	118
 2014-10-29 15:15:00	134	Butler Library 6	103	Butler	115
 2014-10-29 15:15:00	138	Butler Library stk	103	Butler	19
-2014-10-29 15:15:00	145	Science and Engineering Library	15	Mudd	114
+2014-10-29 15:15:00	145	Science and Engineering Library	15	Northwest Corner Building	114
 2014-10-29 15:15:00	155	JJ's Place	75	John Jay	39
 2014-10-29 15:15:00	133	Butler Library 5	103	Butler	94
 2014-10-29 15:15:00	151	Lerner 2	84	Lerner	84
@@ -20531,7 +20531,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-29 15:30:00	149	Architectural and Fine Arts Library 3	146	Avery	130
 2014-10-29 15:30:00	134	Butler Library 6	103	Butler	107
 2014-10-29 15:30:00	138	Butler Library stk	103	Butler	19
-2014-10-29 15:30:00	145	Science and Engineering Library	15	Mudd	123
+2014-10-29 15:30:00	145	Science and Engineering Library	15	Northwest Corner Building	123
 2014-10-29 15:30:00	131	Butler Library 3	103	Butler	350
 2014-10-29 15:30:00	139	Lehman Library 2	79	Lehman LIbrary	106
 2014-10-29 15:30:00	144	Starr East Asian Library	62	East Asian Library	128
@@ -20556,7 +20556,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-29 15:45:00	149	Architectural and Fine Arts Library 3	146	Avery	123
 2014-10-29 15:45:00	134	Butler Library 6	103	Butler	105
 2014-10-29 15:45:00	138	Butler Library stk	103	Butler	25
-2014-10-29 15:45:00	145	Science and Engineering Library	15	Mudd	125
+2014-10-29 15:45:00	145	Science and Engineering Library	15	Northwest Corner Building	125
 2014-10-29 15:45:00	155	JJ's Place	75	John Jay	19
 2014-10-29 15:45:00	133	Butler Library 5	103	Butler	103
 2014-10-29 15:45:00	151	Lerner 2	84	Lerner	92
@@ -20582,7 +20582,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-29 16:00:00	149	Architectural and Fine Arts Library 3	146	Avery	116
 2014-10-29 16:00:00	134	Butler Library 6	103	Butler	98
 2014-10-29 16:00:00	138	Butler Library stk	103	Butler	26
-2014-10-29 16:00:00	145	Science and Engineering Library	15	Mudd	128
+2014-10-29 16:00:00	145	Science and Engineering Library	15	Northwest Corner Building	128
 2014-10-29 16:15:00	154	Lerner 5	84	Lerner	84
 2014-10-29 16:15:00	125	John Jay Dining Hall	75	John Jay	19
 2014-10-29 16:15:00	147	Architectural and Fine Arts Library 1	146	Avery	15
@@ -20601,7 +20601,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-29 16:15:00	149	Architectural and Fine Arts Library 3	146	Avery	125
 2014-10-29 16:15:00	134	Butler Library 6	103	Butler	97
 2014-10-29 16:15:00	138	Butler Library stk	103	Butler	26
-2014-10-29 16:15:00	145	Science and Engineering Library	15	Mudd	115
+2014-10-29 16:15:00	145	Science and Engineering Library	15	Northwest Corner Building	115
 2014-10-29 16:15:00	155	JJ's Place	75	John Jay	16
 2014-10-29 16:15:00	133	Butler Library 5	103	Butler	98
 2014-10-29 16:15:00	151	Lerner 2	84	Lerner	93
@@ -20610,7 +20610,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-29 16:30:00	149	Architectural and Fine Arts Library 3	146	Avery	102
 2014-10-29 16:30:00	134	Butler Library 6	103	Butler	91
 2014-10-29 16:30:00	138	Butler Library stk	103	Butler	17
-2014-10-29 16:30:00	145	Science and Engineering Library	15	Mudd	124
+2014-10-29 16:30:00	145	Science and Engineering Library	15	Northwest Corner Building	124
 2014-10-29 16:30:00	131	Butler Library 3	103	Butler	347
 2014-10-29 16:30:00	139	Lehman Library 2	79	Lehman LIbrary	83
 2014-10-29 16:30:00	144	Starr East Asian Library	62	East Asian Library	161
@@ -20632,7 +20632,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-29 16:45:00	149	Architectural and Fine Arts Library 3	146	Avery	98
 2014-10-29 16:45:00	134	Butler Library 6	103	Butler	91
 2014-10-29 16:45:00	138	Butler Library stk	103	Butler	17
-2014-10-29 16:45:00	145	Science and Engineering Library	15	Mudd	128
+2014-10-29 16:45:00	145	Science and Engineering Library	15	Northwest Corner Building	128
 2014-10-29 16:45:00	131	Butler Library 3	103	Butler	368
 2014-10-29 16:45:00	139	Lehman Library 2	79	Lehman LIbrary	100
 2014-10-29 16:45:00	144	Starr East Asian Library	62	East Asian Library	115
@@ -20654,7 +20654,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-29 17:00:00	149	Architectural and Fine Arts Library 3	146	Avery	103
 2014-10-29 17:00:00	134	Butler Library 6	103	Butler	94
 2014-10-29 17:00:00	138	Butler Library stk	103	Butler	19
-2014-10-29 17:00:00	145	Science and Engineering Library	15	Mudd	121
+2014-10-29 17:00:00	145	Science and Engineering Library	15	Northwest Corner Building	121
 2014-10-29 17:00:00	155	JJ's Place	75	John Jay	18
 2014-10-29 17:00:00	133	Butler Library 5	103	Butler	85
 2014-10-29 17:00:00	151	Lerner 2	84	Lerner	85
@@ -20685,7 +20685,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-29 17:15:00	149	Architectural and Fine Arts Library 3	146	Avery	113
 2014-10-29 17:15:00	134	Butler Library 6	103	Butler	73
 2014-10-29 17:15:00	138	Butler Library stk	103	Butler	16
-2014-10-29 17:15:00	145	Science and Engineering Library	15	Mudd	122
+2014-10-29 17:15:00	145	Science and Engineering Library	15	Northwest Corner Building	122
 2014-10-29 17:15:00	131	Butler Library 3	103	Butler	369
 2014-10-29 17:15:00	139	Lehman Library 2	79	Lehman LIbrary	83
 2014-10-29 17:15:00	144	Starr East Asian Library	62	East Asian Library	96
@@ -20702,7 +20702,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-29 17:30:00	149	Architectural and Fine Arts Library 3	146	Avery	116
 2014-10-29 17:30:00	134	Butler Library 6	103	Butler	78
 2014-10-29 17:30:00	138	Butler Library stk	103	Butler	14
-2014-10-29 17:30:00	145	Science and Engineering Library	15	Mudd	116
+2014-10-29 17:30:00	145	Science and Engineering Library	15	Northwest Corner Building	116
 2014-10-29 17:30:00	131	Butler Library 3	103	Butler	364
 2014-10-29 17:30:00	139	Lehman Library 2	79	Lehman LIbrary	85
 2014-10-29 17:30:00	144	Starr East Asian Library	62	East Asian Library	91
@@ -20732,7 +20732,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-29 17:45:00	149	Architectural and Fine Arts Library 3	146	Avery	109
 2014-10-29 17:45:00	134	Butler Library 6	103	Butler	63
 2014-10-29 17:45:00	138	Butler Library stk	103	Butler	9
-2014-10-29 17:45:00	145	Science and Engineering Library	15	Mudd	127
+2014-10-29 17:45:00	145	Science and Engineering Library	15	Northwest Corner Building	127
 2014-10-29 17:45:00	155	JJ's Place	75	John Jay	31
 2014-10-29 17:45:00	133	Butler Library 5	103	Butler	68
 2014-10-29 17:45:00	151	Lerner 2	84	Lerner	100
@@ -20741,7 +20741,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-29 18:00:00	149	Architectural and Fine Arts Library 3	146	Avery	101
 2014-10-29 18:00:00	134	Butler Library 6	103	Butler	72
 2014-10-29 18:00:00	138	Butler Library stk	103	Butler	13
-2014-10-29 18:00:00	145	Science and Engineering Library	15	Mudd	103
+2014-10-29 18:00:00	145	Science and Engineering Library	15	Northwest Corner Building	103
 2014-10-29 18:00:00	131	Butler Library 3	103	Butler	369
 2014-10-29 18:00:00	139	Lehman Library 2	79	Lehman LIbrary	61
 2014-10-29 18:00:00	144	Starr East Asian Library	62	East Asian Library	107
@@ -20773,7 +20773,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-29 18:15:00	149	Architectural and Fine Arts Library 3	146	Avery	85
 2014-10-29 18:15:00	134	Butler Library 6	103	Butler	62
 2014-10-29 18:15:00	138	Butler Library stk	103	Butler	7
-2014-10-29 18:15:00	145	Science and Engineering Library	15	Mudd	84
+2014-10-29 18:15:00	145	Science and Engineering Library	15	Northwest Corner Building	84
 2014-10-29 18:15:00	131	Butler Library 3	103	Butler	339
 2014-10-29 18:15:00	139	Lehman Library 2	79	Lehman LIbrary	54
 2014-10-29 18:15:00	144	Starr East Asian Library	62	East Asian Library	114
@@ -20785,7 +20785,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-29 18:30:00	149	Architectural and Fine Arts Library 3	146	Avery	77
 2014-10-29 18:30:00	134	Butler Library 6	103	Butler	58
 2014-10-29 18:30:00	138	Butler Library stk	103	Butler	6
-2014-10-29 18:30:00	145	Science and Engineering Library	15	Mudd	77
+2014-10-29 18:30:00	145	Science and Engineering Library	15	Northwest Corner Building	77
 2014-10-29 18:30:00	131	Butler Library 3	103	Butler	313
 2014-10-29 18:30:00	139	Lehman Library 2	79	Lehman LIbrary	45
 2014-10-29 18:30:00	144	Starr East Asian Library	62	East Asian Library	105
@@ -20812,7 +20812,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-29 18:45:00	149	Architectural and Fine Arts Library 3	146	Avery	64
 2014-10-29 18:45:00	134	Butler Library 6	103	Butler	56
 2014-10-29 18:45:00	138	Butler Library stk	103	Butler	8
-2014-10-29 18:45:00	145	Science and Engineering Library	15	Mudd	82
+2014-10-29 18:45:00	145	Science and Engineering Library	15	Northwest Corner Building	82
 2014-10-29 18:45:00	131	Butler Library 3	103	Butler	299
 2014-10-29 18:45:00	139	Lehman Library 2	79	Lehman LIbrary	44
 2014-10-29 18:45:00	144	Starr East Asian Library	62	East Asian Library	107
@@ -20837,7 +20837,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-29 19:00:00	149	Architectural and Fine Arts Library 3	146	Avery	59
 2014-10-29 19:00:00	134	Butler Library 6	103	Butler	54
 2014-10-29 19:00:00	138	Butler Library stk	103	Butler	27
-2014-10-29 19:00:00	145	Science and Engineering Library	15	Mudd	77
+2014-10-29 19:00:00	145	Science and Engineering Library	15	Northwest Corner Building	77
 2014-10-29 19:00:00	155	JJ's Place	75	John Jay	51
 2014-10-29 19:00:00	133	Butler Library 5	103	Butler	67
 2014-10-29 19:00:00	151	Lerner 2	84	Lerner	96
@@ -20856,7 +20856,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-29 19:15:00	149	Architectural and Fine Arts Library 3	146	Avery	59
 2014-10-29 19:15:00	134	Butler Library 6	103	Butler	44
 2014-10-29 19:15:00	138	Butler Library stk	103	Butler	22
-2014-10-29 19:15:00	145	Science and Engineering Library	15	Mudd	79
+2014-10-29 19:15:00	145	Science and Engineering Library	15	Northwest Corner Building	79
 2014-10-29 19:15:00	131	Butler Library 3	103	Butler	295
 2014-10-29 19:15:00	139	Lehman Library 2	79	Lehman LIbrary	33
 2014-10-29 19:15:00	144	Starr East Asian Library	62	East Asian Library	85
@@ -20873,7 +20873,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-29 19:30:00	149	Architectural and Fine Arts Library 3	146	Avery	64
 2014-10-29 19:30:00	134	Butler Library 6	103	Butler	43
 2014-10-29 19:30:00	138	Butler Library stk	103	Butler	11
-2014-10-29 19:30:00	145	Science and Engineering Library	15	Mudd	84
+2014-10-29 19:30:00	145	Science and Engineering Library	15	Northwest Corner Building	84
 2014-10-29 19:30:00	131	Butler Library 3	103	Butler	290
 2014-10-29 19:30:00	139	Lehman Library 2	79	Lehman LIbrary	29
 2014-10-29 19:30:00	144	Starr East Asian Library	62	East Asian Library	89
@@ -20900,7 +20900,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-29 19:45:00	149	Architectural and Fine Arts Library 3	146	Avery	59
 2014-10-29 19:45:00	134	Butler Library 6	103	Butler	45
 2014-10-29 19:45:00	138	Butler Library stk	103	Butler	18
-2014-10-29 19:45:00	145	Science and Engineering Library	15	Mudd	77
+2014-10-29 19:45:00	145	Science and Engineering Library	15	Northwest Corner Building	77
 2014-10-29 19:45:00	131	Butler Library 3	103	Butler	278
 2014-10-29 19:45:00	139	Lehman Library 2	79	Lehman LIbrary	27
 2014-10-29 19:45:00	144	Starr East Asian Library	62	East Asian Library	67
@@ -20917,7 +20917,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-29 20:00:00	149	Architectural and Fine Arts Library 3	146	Avery	58
 2014-10-29 20:00:00	134	Butler Library 6	103	Butler	45
 2014-10-29 20:00:00	138	Butler Library stk	103	Butler	20
-2014-10-29 20:00:00	145	Science and Engineering Library	15	Mudd	82
+2014-10-29 20:00:00	145	Science and Engineering Library	15	Northwest Corner Building	82
 2014-10-29 20:00:00	155	JJ's Place	75	John Jay	66
 2014-10-29 20:00:00	133	Butler Library 5	103	Butler	51
 2014-10-29 20:00:00	151	Lerner 2	84	Lerner	83
@@ -20939,7 +20939,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-29 20:15:00	149	Architectural and Fine Arts Library 3	146	Avery	50
 2014-10-29 20:15:00	134	Butler Library 6	103	Butler	52
 2014-10-29 20:15:00	138	Butler Library stk	103	Butler	18
-2014-10-29 20:15:00	145	Science and Engineering Library	15	Mudd	79
+2014-10-29 20:15:00	145	Science and Engineering Library	15	Northwest Corner Building	79
 2014-10-29 20:15:00	155	JJ's Place	75	John Jay	60
 2014-10-29 20:15:00	133	Butler Library 5	103	Butler	51
 2014-10-29 20:15:00	151	Lerner 2	84	Lerner	85
@@ -20977,7 +20977,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-29 20:30:00	149	Architectural and Fine Arts Library 3	146	Avery	49
 2014-10-29 20:30:00	134	Butler Library 6	103	Butler	50
 2014-10-29 20:30:00	138	Butler Library stk	103	Butler	18
-2014-10-29 20:30:00	145	Science and Engineering Library	15	Mudd	90
+2014-10-29 20:30:00	145	Science and Engineering Library	15	Northwest Corner Building	90
 2014-10-29 20:45:00	154	Lerner 5	84	Lerner	107
 2014-10-29 20:45:00	125	John Jay Dining Hall	75	John Jay	15
 2014-10-29 20:45:00	147	Architectural and Fine Arts Library 1	146	Avery	3
@@ -20996,7 +20996,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-29 20:45:00	149	Architectural and Fine Arts Library 3	146	Avery	43
 2014-10-29 20:45:00	134	Butler Library 6	103	Butler	54
 2014-10-29 20:45:00	138	Butler Library stk	103	Butler	16
-2014-10-29 20:45:00	145	Science and Engineering Library	15	Mudd	88
+2014-10-29 20:45:00	145	Science and Engineering Library	15	Northwest Corner Building	88
 2014-10-29 20:45:00	155	JJ's Place	75	John Jay	70
 2014-10-29 20:45:00	133	Butler Library 5	103	Butler	46
 2014-10-29 20:45:00	151	Lerner 2	84	Lerner	83
@@ -21018,7 +21018,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-29 21:00:00	149	Architectural and Fine Arts Library 3	146	Avery	35
 2014-10-29 21:00:00	134	Butler Library 6	103	Butler	56
 2014-10-29 21:00:00	138	Butler Library stk	103	Butler	16
-2014-10-29 21:00:00	145	Science and Engineering Library	15	Mudd	90
+2014-10-29 21:00:00	145	Science and Engineering Library	15	Northwest Corner Building	90
 2014-10-29 21:00:00	155	JJ's Place	75	John Jay	72
 2014-10-29 21:00:00	133	Butler Library 5	103	Butler	44
 2014-10-29 21:00:00	151	Lerner 2	84	Lerner	97
@@ -21040,7 +21040,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-29 21:15:00	149	Architectural and Fine Arts Library 3	146	Avery	40
 2014-10-29 21:15:00	134	Butler Library 6	103	Butler	57
 2014-10-29 21:15:00	138	Butler Library stk	103	Butler	19
-2014-10-29 21:15:00	145	Science and Engineering Library	15	Mudd	89
+2014-10-29 21:15:00	145	Science and Engineering Library	15	Northwest Corner Building	89
 2014-10-29 21:15:00	155	JJ's Place	75	John Jay	65
 2014-10-29 21:15:00	133	Butler Library 5	103	Butler	38
 2014-10-29 21:15:00	151	Lerner 2	84	Lerner	79
@@ -21054,7 +21054,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-29 21:30:00	149	Architectural and Fine Arts Library 3	146	Avery	39
 2014-10-29 21:30:00	134	Butler Library 6	103	Butler	63
 2014-10-29 21:30:00	138	Butler Library stk	103	Butler	20
-2014-10-29 21:30:00	145	Science and Engineering Library	15	Mudd	89
+2014-10-29 21:30:00	145	Science and Engineering Library	15	Northwest Corner Building	89
 2014-10-29 21:30:00	131	Butler Library 3	103	Butler	307
 2014-10-29 21:30:00	139	Lehman Library 2	79	Lehman LIbrary	42
 2014-10-29 21:30:00	144	Starr East Asian Library	62	East Asian Library	67
@@ -21081,7 +21081,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-29 21:45:00	149	Architectural and Fine Arts Library 3	146	Avery	34
 2014-10-29 21:45:00	134	Butler Library 6	103	Butler	62
 2014-10-29 21:45:00	138	Butler Library stk	103	Butler	18
-2014-10-29 21:45:00	145	Science and Engineering Library	15	Mudd	90
+2014-10-29 21:45:00	145	Science and Engineering Library	15	Northwest Corner Building	90
 2014-10-29 21:45:00	131	Butler Library 3	103	Butler	308
 2014-10-29 21:45:00	139	Lehman Library 2	79	Lehman LIbrary	44
 2014-10-29 21:45:00	144	Starr East Asian Library	62	East Asian Library	50
@@ -21109,13 +21109,13 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-29 22:00:00	149	Architectural and Fine Arts Library 3	146	Avery	32
 2014-10-29 22:00:00	134	Butler Library 6	103	Butler	64
 2014-10-29 22:00:00	138	Butler Library stk	103	Butler	20
-2014-10-29 22:00:00	145	Science and Engineering Library	15	Mudd	78
+2014-10-29 22:00:00	145	Science and Engineering Library	15	Northwest Corner Building	78
 2014-10-29 22:15:00	152	Lerner 3	84	Lerner	55
 2014-10-29 22:15:00	130	Butler Library 2	103	Butler	419
 2014-10-29 22:15:00	149	Architectural and Fine Arts Library 3	146	Avery	30
 2014-10-29 22:15:00	134	Butler Library 6	103	Butler	58
 2014-10-29 22:15:00	138	Butler Library stk	103	Butler	23
-2014-10-29 22:15:00	145	Science and Engineering Library	15	Mudd	77
+2014-10-29 22:15:00	145	Science and Engineering Library	15	Northwest Corner Building	77
 2014-10-29 22:15:00	131	Butler Library 3	103	Butler	313
 2014-10-29 22:15:00	139	Lehman Library 2	79	Lehman LIbrary	38
 2014-10-29 22:15:00	144	Starr East Asian Library	62	East Asian Library	39
@@ -21145,7 +21145,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-29 22:30:00	149	Architectural and Fine Arts Library 3	146	Avery	27
 2014-10-29 22:30:00	134	Butler Library 6	103	Butler	41
 2014-10-29 22:30:00	138	Butler Library stk	103	Butler	22
-2014-10-29 22:30:00	145	Science and Engineering Library	15	Mudd	85
+2014-10-29 22:30:00	145	Science and Engineering Library	15	Northwest Corner Building	85
 2014-10-29 22:30:00	155	JJ's Place	75	John Jay	73
 2014-10-29 22:30:00	133	Butler Library 5	103	Butler	40
 2014-10-29 22:30:00	151	Lerner 2	84	Lerner	71
@@ -21175,7 +21175,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-29 22:45:00	149	Architectural and Fine Arts Library 3	146	Avery	27
 2014-10-29 22:45:00	134	Butler Library 6	103	Butler	34
 2014-10-29 22:45:00	138	Butler Library stk	103	Butler	25
-2014-10-29 22:45:00	145	Science and Engineering Library	15	Mudd	69
+2014-10-29 22:45:00	145	Science and Engineering Library	15	Northwest Corner Building	69
 2014-10-29 23:00:00	131	Butler Library 3	103	Butler	294
 2014-10-29 23:00:00	139	Lehman Library 2	79	Lehman LIbrary	33
 2014-10-29 23:00:00	144	Starr East Asian Library	62	East Asian Library	30
@@ -21189,7 +21189,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-29 23:00:00	149	Architectural and Fine Arts Library 3	146	Avery	24
 2014-10-29 23:00:00	134	Butler Library 6	103	Butler	19
 2014-10-29 23:00:00	138	Butler Library stk	103	Butler	27
-2014-10-29 23:00:00	145	Science and Engineering Library	15	Mudd	64
+2014-10-29 23:00:00	145	Science and Engineering Library	15	Northwest Corner Building	64
 2014-10-29 23:00:00	155	JJ's Place	75	John Jay	69
 2014-10-29 23:00:00	133	Butler Library 5	103	Butler	16
 2014-10-29 23:00:00	151	Lerner 2	84	Lerner	65
@@ -21213,7 +21213,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-29 23:15:00	149	Architectural and Fine Arts Library 3	146	Avery	6
 2014-10-29 23:15:00	134	Butler Library 6	103	Butler	5
 2014-10-29 23:15:00	138	Butler Library stk	103	Butler	25
-2014-10-29 23:15:00	145	Science and Engineering Library	15	Mudd	65
+2014-10-29 23:15:00	145	Science and Engineering Library	15	Northwest Corner Building	65
 2014-10-29 23:15:00	131	Butler Library 3	103	Butler	318
 2014-10-29 23:15:00	139	Lehman Library 2	79	Lehman LIbrary	27
 2014-10-29 23:15:00	144	Starr East Asian Library	62	East Asian Library	9
@@ -21238,7 +21238,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-29 23:30:00	149	Architectural and Fine Arts Library 3	146	Avery	2
 2014-10-29 23:30:00	134	Butler Library 6	103	Butler	3
 2014-10-29 23:30:00	138	Butler Library stk	103	Butler	21
-2014-10-29 23:30:00	145	Science and Engineering Library	15	Mudd	60
+2014-10-29 23:30:00	145	Science and Engineering Library	15	Northwest Corner Building	60
 2014-10-29 23:30:00	155	JJ's Place	75	John Jay	62
 2014-10-29 23:30:00	133	Butler Library 5	103	Butler	16
 2014-10-29 23:30:00	151	Lerner 2	84	Lerner	63
@@ -21252,7 +21252,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-29 23:45:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-29 23:45:00	134	Butler Library 6	103	Butler	1
 2014-10-29 23:45:00	138	Butler Library stk	103	Butler	19
-2014-10-29 23:45:00	145	Science and Engineering Library	15	Mudd	54
+2014-10-29 23:45:00	145	Science and Engineering Library	15	Northwest Corner Building	54
 2014-10-29 23:45:00	131	Butler Library 3	103	Butler	298
 2014-10-29 23:45:00	139	Lehman Library 2	79	Lehman LIbrary	20
 2014-10-29 23:45:00	144	Starr East Asian Library	62	East Asian Library	3
@@ -21274,7 +21274,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-30 00:00:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-30 00:00:00	134	Butler Library 6	103	Butler	2
 2014-10-30 00:00:00	138	Butler Library stk	103	Butler	23
-2014-10-30 00:00:00	145	Science and Engineering Library	15	Mudd	57
+2014-10-30 00:00:00	145	Science and Engineering Library	15	Northwest Corner Building	57
 2014-10-30 00:00:00	131	Butler Library 3	103	Butler	282
 2014-10-30 00:00:00	139	Lehman Library 2	79	Lehman LIbrary	15
 2014-10-30 00:00:00	144	Starr East Asian Library	62	East Asian Library	5
@@ -21307,7 +21307,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-30 00:15:00	149	Architectural and Fine Arts Library 3	146	Avery	2
 2014-10-30 00:15:00	134	Butler Library 6	103	Butler	3
 2014-10-30 00:15:00	138	Butler Library stk	103	Butler	22
-2014-10-30 00:15:00	145	Science and Engineering Library	15	Mudd	40
+2014-10-30 00:15:00	145	Science and Engineering Library	15	Northwest Corner Building	40
 2014-10-30 00:30:00	155	JJ's Place	75	John Jay	83
 2014-10-30 00:30:00	23	Uris/Watson Library	2	Uris	10
 2014-10-30 00:30:00	133	Butler Library 5	103	Butler	12
@@ -21318,7 +21318,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-30 00:30:00	149	Architectural and Fine Arts Library 3	146	Avery	2
 2014-10-30 00:30:00	134	Butler Library 6	103	Butler	2
 2014-10-30 00:30:00	138	Butler Library stk	103	Butler	22
-2014-10-30 00:30:00	145	Science and Engineering Library	15	Mudd	35
+2014-10-30 00:30:00	145	Science and Engineering Library	15	Northwest Corner Building	35
 2014-10-30 00:30:00	131	Butler Library 3	103	Butler	271
 2014-10-30 00:30:00	139	Lehman Library 2	79	Lehman LIbrary	4
 2014-10-30 00:30:00	144	Starr East Asian Library	62	East Asian Library	4
@@ -21335,7 +21335,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-30 00:45:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-30 00:45:00	134	Butler Library 6	103	Butler	2
 2014-10-30 00:45:00	138	Butler Library stk	103	Butler	19
-2014-10-30 00:45:00	145	Science and Engineering Library	15	Mudd	26
+2014-10-30 00:45:00	145	Science and Engineering Library	15	Northwest Corner Building	26
 2014-10-30 00:45:00	131	Butler Library 3	103	Butler	250
 2014-10-30 00:45:00	139	Lehman Library 2	79	Lehman LIbrary	3
 2014-10-30 00:45:00	144	Starr East Asian Library	62	East Asian Library	6
@@ -21362,7 +21362,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-30 01:00:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-30 01:00:00	134	Butler Library 6	103	Butler	1
 2014-10-30 01:00:00	138	Butler Library stk	103	Butler	17
-2014-10-30 01:00:00	145	Science and Engineering Library	15	Mudd	29
+2014-10-30 01:00:00	145	Science and Engineering Library	15	Northwest Corner Building	29
 2014-10-30 01:00:00	131	Butler Library 3	103	Butler	233
 2014-10-30 01:00:00	139	Lehman Library 2	79	Lehman LIbrary	2
 2014-10-30 01:00:00	144	Starr East Asian Library	62	East Asian Library	3
@@ -21389,7 +21389,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-30 01:15:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-30 01:15:00	134	Butler Library 6	103	Butler	1
 2014-10-30 01:15:00	138	Butler Library stk	103	Butler	13
-2014-10-30 01:15:00	145	Science and Engineering Library	15	Mudd	23
+2014-10-30 01:15:00	145	Science and Engineering Library	15	Northwest Corner Building	23
 2014-10-30 01:15:00	131	Butler Library 3	103	Butler	227
 2014-10-30 01:15:00	139	Lehman Library 2	79	Lehman LIbrary	2
 2014-10-30 01:15:00	144	Starr East Asian Library	62	East Asian Library	8
@@ -21406,7 +21406,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-30 01:30:00	149	Architectural and Fine Arts Library 3	146	Avery	2
 2014-10-30 01:30:00	134	Butler Library 6	103	Butler	1
 2014-10-30 01:30:00	138	Butler Library stk	103	Butler	14
-2014-10-30 01:30:00	145	Science and Engineering Library	15	Mudd	18
+2014-10-30 01:30:00	145	Science and Engineering Library	15	Northwest Corner Building	18
 2014-10-30 01:30:00	131	Butler Library 3	103	Butler	218
 2014-10-30 01:30:00	139	Lehman Library 2	79	Lehman LIbrary	2
 2014-10-30 01:30:00	144	Starr East Asian Library	62	East Asian Library	3
@@ -21439,13 +21439,13 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-30 01:45:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-30 01:45:00	134	Butler Library 6	103	Butler	1
 2014-10-30 01:45:00	138	Butler Library stk	103	Butler	12
-2014-10-30 01:45:00	145	Science and Engineering Library	15	Mudd	11
+2014-10-30 01:45:00	145	Science and Engineering Library	15	Northwest Corner Building	11
 2014-10-30 02:00:00	152	Lerner 3	84	Lerner	13
 2014-10-30 02:00:00	130	Butler Library 2	103	Butler	207
 2014-10-30 02:00:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-30 02:00:00	134	Butler Library 6	103	Butler	1
 2014-10-30 02:00:00	138	Butler Library stk	103	Butler	7
-2014-10-30 02:00:00	145	Science and Engineering Library	15	Mudd	11
+2014-10-30 02:00:00	145	Science and Engineering Library	15	Northwest Corner Building	11
 2014-10-30 02:00:00	155	JJ's Place	75	John Jay	4
 2014-10-30 02:00:00	133	Butler Library 5	103	Butler	17
 2014-10-30 02:00:00	151	Lerner 2	84	Lerner	9
@@ -21467,7 +21467,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-30 02:15:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-30 02:15:00	134	Butler Library 6	103	Butler	1
 2014-10-30 02:15:00	138	Butler Library stk	103	Butler	7
-2014-10-30 02:15:00	145	Science and Engineering Library	15	Mudd	11
+2014-10-30 02:15:00	145	Science and Engineering Library	15	Northwest Corner Building	11
 2014-10-30 02:15:00	131	Butler Library 3	103	Butler	188
 2014-10-30 02:15:00	139	Lehman Library 2	79	Lehman LIbrary	2
 2014-10-30 02:15:00	144	Starr East Asian Library	62	East Asian Library	1
@@ -21505,7 +21505,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-30 02:30:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-30 02:30:00	134	Butler Library 6	103	Butler	1
 2014-10-30 02:30:00	138	Butler Library stk	103	Butler	9
-2014-10-30 02:30:00	145	Science and Engineering Library	15	Mudd	11
+2014-10-30 02:30:00	145	Science and Engineering Library	15	Northwest Corner Building	11
 2014-10-30 02:45:00	131	Butler Library 3	103	Butler	163
 2014-10-30 02:45:00	139	Lehman Library 2	79	Lehman LIbrary	3
 2014-10-30 02:45:00	144	Starr East Asian Library	62	East Asian Library	1
@@ -21527,7 +21527,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-30 02:45:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-30 02:45:00	134	Butler Library 6	103	Butler	1
 2014-10-30 02:45:00	138	Butler Library stk	103	Butler	5
-2014-10-30 02:45:00	145	Science and Engineering Library	15	Mudd	9
+2014-10-30 02:45:00	145	Science and Engineering Library	15	Northwest Corner Building	9
 2014-10-30 03:00:00	131	Butler Library 3	103	Butler	134
 2014-10-30 03:00:00	139	Lehman Library 2	79	Lehman LIbrary	3
 2014-10-30 03:00:00	144	Starr East Asian Library	62	East Asian Library	2
@@ -21541,7 +21541,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-30 03:00:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-30 03:00:00	134	Butler Library 6	103	Butler	1
 2014-10-30 03:00:00	138	Butler Library stk	103	Butler	6
-2014-10-30 03:00:00	145	Science and Engineering Library	15	Mudd	8
+2014-10-30 03:00:00	145	Science and Engineering Library	15	Northwest Corner Building	8
 2014-10-30 03:00:00	155	JJ's Place	75	John Jay	5
 2014-10-30 03:00:00	133	Butler Library 5	103	Butler	9
 2014-10-30 03:00:00	151	Lerner 2	84	Lerner	7
@@ -21560,7 +21560,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-30 03:15:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-30 03:15:00	134	Butler Library 6	103	Butler	1
 2014-10-30 03:15:00	138	Butler Library stk	103	Butler	3
-2014-10-30 03:15:00	145	Science and Engineering Library	15	Mudd	3
+2014-10-30 03:15:00	145	Science and Engineering Library	15	Northwest Corner Building	3
 2014-10-30 03:15:00	131	Butler Library 3	103	Butler	139
 2014-10-30 03:15:00	139	Lehman Library 2	79	Lehman LIbrary	3
 2014-10-30 03:15:00	144	Starr East Asian Library	62	East Asian Library	2
@@ -21587,7 +21587,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-30 03:30:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-30 03:30:00	134	Butler Library 6	103	Butler	1
 2014-10-30 03:30:00	138	Butler Library stk	103	Butler	2
-2014-10-30 03:30:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-30 03:30:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-30 03:30:00	131	Butler Library 3	103	Butler	129
 2014-10-30 03:30:00	139	Lehman Library 2	79	Lehman LIbrary	3
 2014-10-30 03:30:00	144	Starr East Asian Library	62	East Asian Library	2
@@ -21604,7 +21604,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-30 03:45:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-30 03:45:00	134	Butler Library 6	103	Butler	1
 2014-10-30 03:45:00	138	Butler Library stk	103	Butler	2
-2014-10-30 03:45:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-30 03:45:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-30 03:45:00	131	Butler Library 3	103	Butler	108
 2014-10-30 03:45:00	139	Lehman Library 2	79	Lehman LIbrary	3
 2014-10-30 03:45:00	144	Starr East Asian Library	62	East Asian Library	3
@@ -21621,7 +21621,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-30 04:00:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-30 04:00:00	134	Butler Library 6	103	Butler	1
 2014-10-30 04:00:00	138	Butler Library stk	103	Butler	3
-2014-10-30 04:00:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-30 04:00:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-30 04:00:00	155	JJ's Place	75	John Jay	5
 2014-10-30 04:00:00	133	Butler Library 5	103	Butler	9
 2014-10-30 04:00:00	151	Lerner 2	84	Lerner	6
@@ -21659,7 +21659,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-30 04:15:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-30 04:15:00	134	Butler Library 6	103	Butler	1
 2014-10-30 04:15:00	138	Butler Library stk	103	Butler	4
-2014-10-30 04:15:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-30 04:15:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-30 04:30:00	154	Lerner 5	84	Lerner	0
 2014-10-30 04:30:00	125	John Jay Dining Hall	75	John Jay	0
 2014-10-30 04:30:00	147	Architectural and Fine Arts Library 1	146	Avery	0
@@ -21678,7 +21678,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-30 04:30:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-30 04:30:00	134	Butler Library 6	103	Butler	1
 2014-10-30 04:30:00	138	Butler Library stk	103	Butler	3
-2014-10-30 04:30:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-30 04:30:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-30 04:30:00	155	JJ's Place	75	John Jay	2
 2014-10-30 04:30:00	133	Butler Library 5	103	Butler	9
 2014-10-30 04:30:00	151	Lerner 2	84	Lerner	3
@@ -21692,7 +21692,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-30 04:45:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-30 04:45:00	134	Butler Library 6	103	Butler	1
 2014-10-30 04:45:00	138	Butler Library stk	103	Butler	4
-2014-10-30 04:45:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-30 04:45:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-30 04:45:00	131	Butler Library 3	103	Butler	72
 2014-10-30 04:45:00	139	Lehman Library 2	79	Lehman LIbrary	3
 2014-10-30 04:45:00	144	Starr East Asian Library	62	East Asian Library	1
@@ -21722,7 +21722,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-30 05:00:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-30 05:00:00	134	Butler Library 6	103	Butler	1
 2014-10-30 05:00:00	138	Butler Library stk	103	Butler	4
-2014-10-30 05:00:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-30 05:00:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-30 05:00:00	155	JJ's Place	75	John Jay	2
 2014-10-30 05:00:00	133	Butler Library 5	103	Butler	9
 2014-10-30 05:00:00	151	Lerner 2	84	Lerner	3
@@ -21747,7 +21747,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-30 05:15:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-30 05:15:00	134	Butler Library 6	103	Butler	1
 2014-10-30 05:15:00	138	Butler Library stk	103	Butler	3
-2014-10-30 05:15:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-30 05:15:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-30 05:30:00	154	Lerner 5	84	Lerner	0
 2014-10-30 05:30:00	125	John Jay Dining Hall	75	John Jay	0
 2014-10-30 05:30:00	147	Architectural and Fine Arts Library 1	146	Avery	0
@@ -21766,7 +21766,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-30 05:30:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-30 05:30:00	134	Butler Library 6	103	Butler	1
 2014-10-30 05:30:00	138	Butler Library stk	103	Butler	4
-2014-10-30 05:30:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-30 05:30:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-30 05:30:00	155	JJ's Place	75	John Jay	2
 2014-10-30 05:30:00	133	Butler Library 5	103	Butler	10
 2014-10-30 05:30:00	151	Lerner 2	84	Lerner	4
@@ -21775,7 +21775,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-30 05:45:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-30 05:45:00	134	Butler Library 6	103	Butler	1
 2014-10-30 05:45:00	138	Butler Library stk	103	Butler	4
-2014-10-30 05:45:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-30 05:45:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-30 05:45:00	131	Butler Library 3	103	Butler	53
 2014-10-30 05:45:00	139	Lehman Library 2	79	Lehman LIbrary	2
 2014-10-30 05:45:00	144	Starr East Asian Library	62	East Asian Library	3
@@ -21806,7 +21806,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-30 06:00:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-30 06:00:00	134	Butler Library 6	103	Butler	1
 2014-10-30 06:00:00	138	Butler Library stk	103	Butler	4
-2014-10-30 06:00:00	145	Science and Engineering Library	15	Mudd	5
+2014-10-30 06:00:00	145	Science and Engineering Library	15	Northwest Corner Building	5
 2014-10-30 06:00:00	155	JJ's Place	75	John Jay	2
 2014-10-30 06:00:00	133	Butler Library 5	103	Butler	8
 2014-10-30 06:00:00	151	Lerner 2	84	Lerner	2
@@ -21836,7 +21836,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-30 06:15:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-30 06:15:00	134	Butler Library 6	103	Butler	1
 2014-10-30 06:15:00	138	Butler Library stk	103	Butler	2
-2014-10-30 06:15:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-30 06:15:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-30 06:30:00	155	JJ's Place	75	John Jay	2
 2014-10-30 06:30:00	133	Butler Library 5	103	Butler	9
 2014-10-30 06:30:00	151	Lerner 2	84	Lerner	6
@@ -21858,13 +21858,13 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-30 06:30:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-30 06:30:00	134	Butler Library 6	103	Butler	1
 2014-10-30 06:30:00	138	Butler Library stk	103	Butler	2
-2014-10-30 06:30:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-30 06:30:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-30 06:45:00	152	Lerner 3	84	Lerner	6
 2014-10-30 06:45:00	130	Butler Library 2	103	Butler	43
 2014-10-30 06:45:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-30 06:45:00	134	Butler Library 6	103	Butler	1
 2014-10-30 06:45:00	138	Butler Library stk	103	Butler	0
-2014-10-30 06:45:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-30 06:45:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-30 06:45:00	155	JJ's Place	75	John Jay	2
 2014-10-30 06:45:00	133	Butler Library 5	103	Butler	10
 2014-10-30 06:45:00	151	Lerner 2	84	Lerner	6
@@ -21886,7 +21886,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-30 07:00:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-30 07:00:00	134	Butler Library 6	103	Butler	2
 2014-10-30 07:00:00	138	Butler Library stk	103	Butler	0
-2014-10-30 07:00:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-30 07:00:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-30 07:00:00	131	Butler Library 3	103	Butler	44
 2014-10-30 07:00:00	139	Lehman Library 2	79	Lehman LIbrary	3
 2014-10-30 07:00:00	144	Starr East Asian Library	62	East Asian Library	2
@@ -21908,7 +21908,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-30 07:15:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-30 07:15:00	134	Butler Library 6	103	Butler	2
 2014-10-30 07:15:00	138	Butler Library stk	103	Butler	2
-2014-10-30 07:15:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-30 07:15:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-30 07:15:00	131	Butler Library 3	103	Butler	40
 2014-10-30 07:15:00	139	Lehman Library 2	79	Lehman LIbrary	3
 2014-10-30 07:15:00	144	Starr East Asian Library	62	East Asian Library	12
@@ -21938,7 +21938,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-30 07:30:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-30 07:30:00	134	Butler Library 6	103	Butler	1
 2014-10-30 07:30:00	138	Butler Library stk	103	Butler	2
-2014-10-30 07:30:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-30 07:30:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-30 07:30:00	155	JJ's Place	75	John Jay	4
 2014-10-30 07:30:00	133	Butler Library 5	103	Butler	9
 2014-10-30 07:30:00	151	Lerner 2	84	Lerner	10
@@ -21968,7 +21968,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-30 07:45:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-30 07:45:00	134	Butler Library 6	103	Butler	1
 2014-10-30 07:45:00	138	Butler Library stk	103	Butler	2
-2014-10-30 07:45:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-30 07:45:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-30 08:00:00	131	Butler Library 3	103	Butler	32
 2014-10-30 08:00:00	139	Lehman Library 2	79	Lehman LIbrary	7
 2014-10-30 08:00:00	144	Starr East Asian Library	62	East Asian Library	3
@@ -21982,7 +21982,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-30 08:00:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-30 08:00:00	134	Butler Library 6	103	Butler	1
 2014-10-30 08:00:00	138	Butler Library stk	103	Butler	1
-2014-10-30 08:00:00	145	Science and Engineering Library	15	Mudd	3
+2014-10-30 08:00:00	145	Science and Engineering Library	15	Northwest Corner Building	3
 2014-10-30 08:00:00	155	JJ's Place	75	John Jay	6
 2014-10-30 08:00:00	133	Butler Library 5	103	Butler	9
 2014-10-30 08:00:00	151	Lerner 2	84	Lerner	21
@@ -22001,7 +22001,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-30 08:15:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-30 08:15:00	134	Butler Library 6	103	Butler	1
 2014-10-30 08:15:00	138	Butler Library stk	103	Butler	1
-2014-10-30 08:15:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-30 08:15:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-30 08:15:00	131	Butler Library 3	103	Butler	36
 2014-10-30 08:15:00	139	Lehman Library 2	79	Lehman LIbrary	5
 2014-10-30 08:15:00	144	Starr East Asian Library	62	East Asian Library	1
@@ -22034,7 +22034,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-30 08:30:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-30 08:30:00	134	Butler Library 6	103	Butler	3
 2014-10-30 08:30:00	138	Butler Library stk	103	Butler	1
-2014-10-30 08:30:00	145	Science and Engineering Library	15	Mudd	5
+2014-10-30 08:30:00	145	Science and Engineering Library	15	Northwest Corner Building	5
 2014-10-30 08:45:00	155	JJ's Place	75	John Jay	6
 2014-10-30 08:45:00	133	Butler Library 5	103	Butler	11
 2014-10-30 08:45:00	151	Lerner 2	84	Lerner	35
@@ -22056,7 +22056,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-30 08:45:00	149	Architectural and Fine Arts Library 3	146	Avery	2
 2014-10-30 08:45:00	134	Butler Library 6	103	Butler	4
 2014-10-30 08:45:00	138	Butler Library stk	103	Butler	1
-2014-10-30 08:45:00	145	Science and Engineering Library	15	Mudd	6
+2014-10-30 08:45:00	145	Science and Engineering Library	15	Northwest Corner Building	6
 2014-10-30 09:00:00	155	JJ's Place	75	John Jay	10
 2014-10-30 09:00:00	23	Uris/Watson Library	2	Uris	65
 2014-10-30 09:00:00	133	Butler Library 5	103	Butler	22
@@ -22067,7 +22067,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-30 09:00:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-30 09:00:00	134	Butler Library 6	103	Butler	3
 2014-10-30 09:00:00	138	Butler Library stk	103	Butler	1
-2014-10-30 09:00:00	145	Science and Engineering Library	15	Mudd	6
+2014-10-30 09:00:00	145	Science and Engineering Library	15	Northwest Corner Building	6
 2014-10-30 09:00:00	131	Butler Library 3	103	Butler	53
 2014-10-30 09:00:00	139	Lehman Library 2	79	Lehman LIbrary	8
 2014-10-30 09:00:00	144	Starr East Asian Library	62	East Asian Library	13
@@ -22101,13 +22101,13 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-30 09:15:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-30 09:15:00	134	Butler Library 6	103	Butler	8
 2014-10-30 09:15:00	138	Butler Library stk	103	Butler	2
-2014-10-30 09:15:00	145	Science and Engineering Library	15	Mudd	8
+2014-10-30 09:15:00	145	Science and Engineering Library	15	Northwest Corner Building	8
 2014-10-30 09:30:00	152	Lerner 3	84	Lerner	57
 2014-10-30 09:30:00	130	Butler Library 2	103	Butler	166
 2014-10-30 09:30:00	149	Architectural and Fine Arts Library 3	146	Avery	12
 2014-10-30 09:30:00	134	Butler Library 6	103	Butler	20
 2014-10-30 09:30:00	138	Butler Library stk	103	Butler	5
-2014-10-30 09:30:00	145	Science and Engineering Library	15	Mudd	24
+2014-10-30 09:30:00	145	Science and Engineering Library	15	Northwest Corner Building	24
 2014-10-30 09:30:00	131	Butler Library 3	103	Butler	73
 2014-10-30 09:30:00	139	Lehman Library 2	79	Lehman LIbrary	15
 2014-10-30 09:30:00	144	Starr East Asian Library	62	East Asian Library	29
@@ -22129,7 +22129,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-30 09:45:00	149	Architectural and Fine Arts Library 3	146	Avery	15
 2014-10-30 09:45:00	134	Butler Library 6	103	Butler	19
 2014-10-30 09:45:00	138	Butler Library stk	103	Butler	7
-2014-10-30 09:45:00	145	Science and Engineering Library	15	Mudd	36
+2014-10-30 09:45:00	145	Science and Engineering Library	15	Northwest Corner Building	36
 2014-10-30 09:45:00	155	JJ's Place	75	John Jay	7
 2014-10-30 09:45:00	133	Butler Library 5	103	Butler	31
 2014-10-30 09:45:00	151	Lerner 2	84	Lerner	63
@@ -22151,7 +22151,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-30 10:00:00	149	Architectural and Fine Arts Library 3	146	Avery	15
 2014-10-30 10:00:00	134	Butler Library 6	103	Butler	21
 2014-10-30 10:00:00	138	Butler Library stk	103	Butler	8
-2014-10-30 10:00:00	145	Science and Engineering Library	15	Mudd	60
+2014-10-30 10:00:00	145	Science and Engineering Library	15	Northwest Corner Building	60
 2014-10-30 10:00:00	155	JJ's Place	75	John Jay	11
 2014-10-30 10:00:00	133	Butler Library 5	103	Butler	31
 2014-10-30 10:00:00	151	Lerner 2	84	Lerner	66
@@ -22189,13 +22189,13 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-30 10:15:00	149	Architectural and Fine Arts Library 3	146	Avery	17
 2014-10-30 10:15:00	134	Butler Library 6	103	Butler	27
 2014-10-30 10:15:00	138	Butler Library stk	103	Butler	10
-2014-10-30 10:15:00	145	Science and Engineering Library	15	Mudd	88
+2014-10-30 10:15:00	145	Science and Engineering Library	15	Northwest Corner Building	88
 2014-10-30 10:30:00	152	Lerner 3	84	Lerner	105
 2014-10-30 10:30:00	130	Butler Library 2	103	Butler	280
 2014-10-30 10:30:00	149	Architectural and Fine Arts Library 3	146	Avery	30
 2014-10-30 10:30:00	134	Butler Library 6	103	Butler	25
 2014-10-30 10:30:00	138	Butler Library stk	103	Butler	7
-2014-10-30 10:30:00	145	Science and Engineering Library	15	Mudd	79
+2014-10-30 10:30:00	145	Science and Engineering Library	15	Northwest Corner Building	79
 2014-10-30 10:30:00	131	Butler Library 3	103	Butler	139
 2014-10-30 10:30:00	139	Lehman Library 2	79	Lehman LIbrary	32
 2014-10-30 10:30:00	144	Starr East Asian Library	62	East Asian Library	66
@@ -22227,7 +22227,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-30 10:45:00	149	Architectural and Fine Arts Library 3	146	Avery	34
 2014-10-30 10:45:00	134	Butler Library 6	103	Butler	29
 2014-10-30 10:45:00	138	Butler Library stk	103	Butler	9
-2014-10-30 10:45:00	145	Science and Engineering Library	15	Mudd	82
+2014-10-30 10:45:00	145	Science and Engineering Library	15	Northwest Corner Building	82
 2014-10-30 10:45:00	131	Butler Library 3	103	Butler	188
 2014-10-30 10:45:00	139	Lehman Library 2	79	Lehman LIbrary	36
 2014-10-30 10:45:00	144	Starr East Asian Library	62	East Asian Library	81
@@ -22244,7 +22244,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-30 11:00:00	149	Architectural and Fine Arts Library 3	146	Avery	33
 2014-10-30 11:00:00	134	Butler Library 6	103	Butler	38
 2014-10-30 11:00:00	138	Butler Library stk	103	Butler	8
-2014-10-30 11:00:00	145	Science and Engineering Library	15	Mudd	79
+2014-10-30 11:00:00	145	Science and Engineering Library	15	Northwest Corner Building	79
 2014-10-30 11:00:00	131	Butler Library 3	103	Butler	212
 2014-10-30 11:00:00	139	Lehman Library 2	79	Lehman LIbrary	43
 2014-10-30 11:00:00	144	Starr East Asian Library	62	East Asian Library	81
@@ -22277,13 +22277,13 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-30 11:15:00	149	Architectural and Fine Arts Library 3	146	Avery	53
 2014-10-30 11:15:00	134	Butler Library 6	103	Butler	46
 2014-10-30 11:15:00	138	Butler Library stk	103	Butler	8
-2014-10-30 11:15:00	145	Science and Engineering Library	15	Mudd	88
+2014-10-30 11:15:00	145	Science and Engineering Library	15	Northwest Corner Building	88
 2014-10-30 11:30:00	152	Lerner 3	84	Lerner	80
 2014-10-30 11:30:00	130	Butler Library 2	103	Butler	309
 2014-10-30 11:30:00	149	Architectural and Fine Arts Library 3	146	Avery	50
 2014-10-30 11:30:00	134	Butler Library 6	103	Butler	48
 2014-10-30 11:30:00	138	Butler Library stk	103	Butler	13
-2014-10-30 11:30:00	145	Science and Engineering Library	15	Mudd	87
+2014-10-30 11:30:00	145	Science and Engineering Library	15	Northwest Corner Building	87
 2014-10-30 11:30:00	155	JJ's Place	75	John Jay	17
 2014-10-30 11:30:00	133	Butler Library 5	103	Butler	74
 2014-10-30 11:30:00	151	Lerner 2	84	Lerner	63
@@ -22320,7 +22320,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-30 11:45:00	149	Architectural and Fine Arts Library 3	146	Avery	62
 2014-10-30 11:45:00	134	Butler Library 6	103	Butler	61
 2014-10-30 11:45:00	138	Butler Library stk	103	Butler	13
-2014-10-30 11:45:00	145	Science and Engineering Library	15	Mudd	89
+2014-10-30 11:45:00	145	Science and Engineering Library	15	Northwest Corner Building	89
 2014-10-30 12:00:00	154	Lerner 5	84	Lerner	42
 2014-10-30 12:00:00	125	John Jay Dining Hall	75	John Jay	86
 2014-10-30 12:00:00	147	Architectural and Fine Arts Library 1	146	Avery	9
@@ -22336,7 +22336,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-30 12:00:00	149	Architectural and Fine Arts Library 3	146	Avery	65
 2014-10-30 12:00:00	134	Butler Library 6	103	Butler	58
 2014-10-30 12:00:00	138	Butler Library stk	103	Butler	13
-2014-10-30 12:00:00	145	Science and Engineering Library	15	Mudd	86
+2014-10-30 12:00:00	145	Science and Engineering Library	15	Northwest Corner Building	86
 2014-10-30 12:00:00	131	Butler Library 3	103	Butler	242
 2014-10-30 12:00:00	139	Lehman Library 2	79	Lehman LIbrary	38
 2014-10-30 12:00:00	144	Starr East Asian Library	62	East Asian Library	140
@@ -22356,7 +22356,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-30 12:15:00	149	Architectural and Fine Arts Library 3	146	Avery	72
 2014-10-30 12:15:00	134	Butler Library 6	103	Butler	65
 2014-10-30 12:15:00	138	Butler Library stk	103	Butler	13
-2014-10-30 12:15:00	145	Science and Engineering Library	15	Mudd	97
+2014-10-30 12:15:00	145	Science and Engineering Library	15	Northwest Corner Building	97
 2014-10-30 12:15:00	155	JJ's Place	75	John Jay	19
 2014-10-30 12:15:00	133	Butler Library 5	103	Butler	69
 2014-10-30 12:15:00	151	Lerner 2	84	Lerner	73
@@ -22386,7 +22386,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-30 12:30:00	149	Architectural and Fine Arts Library 3	146	Avery	67
 2014-10-30 12:30:00	134	Butler Library 6	103	Butler	64
 2014-10-30 12:30:00	138	Butler Library stk	103	Butler	12
-2014-10-30 12:30:00	145	Science and Engineering Library	15	Mudd	89
+2014-10-30 12:30:00	145	Science and Engineering Library	15	Northwest Corner Building	89
 2014-10-30 12:45:00	125	John Jay Dining Hall	75	John Jay	103
 2014-10-30 12:45:00	147	Architectural and Fine Arts Library 1	146	Avery	7
 2014-10-30 12:45:00	132	Butler Library 4	103	Butler	142
@@ -22401,7 +22401,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-30 12:45:00	149	Architectural and Fine Arts Library 3	146	Avery	70
 2014-10-30 12:45:00	134	Butler Library 6	103	Butler	58
 2014-10-30 12:45:00	138	Butler Library stk	103	Butler	14
-2014-10-30 12:45:00	145	Science and Engineering Library	15	Mudd	100
+2014-10-30 12:45:00	145	Science and Engineering Library	15	Northwest Corner Building	100
 2014-10-30 12:45:00	131	Butler Library 3	103	Butler	239
 2014-10-30 12:45:00	139	Lehman Library 2	79	Lehman LIbrary	46
 2014-10-30 12:45:00	144	Starr East Asian Library	62	East Asian Library	98
@@ -22421,7 +22421,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-30 13:00:00	149	Architectural and Fine Arts Library 3	146	Avery	55
 2014-10-30 13:00:00	134	Butler Library 6	103	Butler	64
 2014-10-30 13:00:00	138	Butler Library stk	103	Butler	14
-2014-10-30 13:00:00	145	Science and Engineering Library	15	Mudd	109
+2014-10-30 13:00:00	145	Science and Engineering Library	15	Northwest Corner Building	109
 2014-10-30 13:00:00	155	JJ's Place	75	John Jay	37
 2014-10-30 13:00:00	133	Butler Library 5	103	Butler	67
 2014-10-30 13:00:00	151	Lerner 2	84	Lerner	97
@@ -22451,7 +22451,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-30 13:15:00	149	Architectural and Fine Arts Library 3	146	Avery	66
 2014-10-30 13:15:00	134	Butler Library 6	103	Butler	69
 2014-10-30 13:15:00	138	Butler Library stk	103	Butler	20
-2014-10-30 13:15:00	145	Science and Engineering Library	15	Mudd	112
+2014-10-30 13:15:00	145	Science and Engineering Library	15	Northwest Corner Building	112
 2014-10-30 13:30:00	155	JJ's Place	75	John Jay	63
 2014-10-30 13:30:00	133	Butler Library 5	103	Butler	74
 2014-10-30 13:30:00	151	Lerner 2	84	Lerner	101
@@ -22473,7 +22473,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-30 13:30:00	149	Architectural and Fine Arts Library 3	146	Avery	69
 2014-10-30 13:30:00	134	Butler Library 6	103	Butler	63
 2014-10-30 13:30:00	138	Butler Library stk	103	Butler	19
-2014-10-30 13:30:00	145	Science and Engineering Library	15	Mudd	100
+2014-10-30 13:30:00	145	Science and Engineering Library	15	Northwest Corner Building	100
 2014-10-30 13:45:00	155	JJ's Place	75	John Jay	43
 2014-10-30 13:45:00	133	Butler Library 5	103	Butler	74
 2014-10-30 13:45:00	151	Lerner 2	84	Lerner	90
@@ -22495,13 +22495,13 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-30 13:45:00	149	Architectural and Fine Arts Library 3	146	Avery	70
 2014-10-30 13:45:00	134	Butler Library 6	103	Butler	78
 2014-10-30 13:45:00	138	Butler Library stk	103	Butler	19
-2014-10-30 13:45:00	145	Science and Engineering Library	15	Mudd	101
+2014-10-30 13:45:00	145	Science and Engineering Library	15	Northwest Corner Building	101
 2014-10-30 14:00:00	152	Lerner 3	84	Lerner	127
 2014-10-30 14:00:00	130	Butler Library 2	103	Butler	362
 2014-10-30 14:00:00	149	Architectural and Fine Arts Library 3	146	Avery	79
 2014-10-30 14:00:00	134	Butler Library 6	103	Butler	88
 2014-10-30 14:00:00	138	Butler Library stk	103	Butler	24
-2014-10-30 14:00:00	145	Science and Engineering Library	15	Mudd	108
+2014-10-30 14:00:00	145	Science and Engineering Library	15	Northwest Corner Building	108
 2014-10-30 14:00:00	131	Butler Library 3	103	Butler	300
 2014-10-30 14:00:00	139	Lehman Library 2	79	Lehman LIbrary	70
 2014-10-30 14:00:00	144	Starr East Asian Library	62	East Asian Library	146
@@ -22531,7 +22531,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-30 14:15:00	149	Architectural and Fine Arts Library 3	146	Avery	81
 2014-10-30 14:15:00	134	Butler Library 6	103	Butler	82
 2014-10-30 14:15:00	138	Butler Library stk	103	Butler	24
-2014-10-30 14:15:00	145	Science and Engineering Library	15	Mudd	97
+2014-10-30 14:15:00	145	Science and Engineering Library	15	Northwest Corner Building	97
 2014-10-30 14:15:00	155	JJ's Place	75	John Jay	39
 2014-10-30 14:15:00	133	Butler Library 5	103	Butler	89
 2014-10-30 14:15:00	151	Lerner 2	84	Lerner	104
@@ -22550,7 +22550,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-30 14:30:00	149	Architectural and Fine Arts Library 3	146	Avery	75
 2014-10-30 14:30:00	134	Butler Library 6	103	Butler	93
 2014-10-30 14:30:00	138	Butler Library stk	103	Butler	35
-2014-10-30 14:30:00	145	Science and Engineering Library	15	Mudd	96
+2014-10-30 14:30:00	145	Science and Engineering Library	15	Northwest Corner Building	96
 2014-10-30 14:30:00	131	Butler Library 3	103	Butler	296
 2014-10-30 14:30:00	139	Lehman Library 2	79	Lehman LIbrary	87
 2014-10-30 14:30:00	144	Starr East Asian Library	62	East Asian Library	152
@@ -22583,14 +22583,14 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-30 14:45:00	149	Architectural and Fine Arts Library 3	146	Avery	99
 2014-10-30 14:45:00	134	Butler Library 6	103	Butler	92
 2014-10-30 14:45:00	138	Butler Library stk	103	Butler	36
-2014-10-30 14:45:00	145	Science and Engineering Library	15	Mudd	112
+2014-10-30 14:45:00	145	Science and Engineering Library	15	Northwest Corner Building	112
 2014-10-30 15:00:00	152	Lerner 3	84	Lerner	169
 2014-10-30 15:00:00	130	Butler Library 2	103	Butler	416
 2014-10-30 15:00:00	149	Architectural and Fine Arts Library 3	146	Avery	99
 2014-10-30 15:00:00	134	Butler Library 6	103	Butler	93
 2014-10-31 02:15:00	151	Lerner 2	84	Lerner	13
 2014-10-30 15:00:00	138	Butler Library stk	103	Butler	38
-2014-10-30 15:00:00	145	Science and Engineering Library	15	Mudd	101
+2014-10-30 15:00:00	145	Science and Engineering Library	15	Northwest Corner Building	101
 2014-10-30 15:00:00	131	Butler Library 3	103	Butler	352
 2014-10-30 15:00:00	139	Lehman Library 2	79	Lehman LIbrary	97
 2014-10-30 15:00:00	144	Starr East Asian Library	62	East Asian Library	159
@@ -22617,7 +22617,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-30 15:15:00	149	Architectural and Fine Arts Library 3	146	Avery	91
 2014-10-30 15:15:00	134	Butler Library 6	103	Butler	89
 2014-10-30 15:15:00	138	Butler Library stk	103	Butler	38
-2014-10-30 15:15:00	145	Science and Engineering Library	15	Mudd	102
+2014-10-30 15:15:00	145	Science and Engineering Library	15	Northwest Corner Building	102
 2014-10-30 15:15:00	131	Butler Library 3	103	Butler	322
 2014-10-30 15:15:00	139	Lehman Library 2	79	Lehman LIbrary	98
 2014-10-30 15:15:00	144	Starr East Asian Library	62	East Asian Library	161
@@ -22634,7 +22634,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-30 15:30:00	149	Architectural and Fine Arts Library 3	146	Avery	102
 2014-10-30 15:30:00	134	Butler Library 6	103	Butler	111
 2014-10-30 15:30:00	138	Butler Library stk	103	Butler	31
-2014-10-30 15:30:00	145	Science and Engineering Library	15	Mudd	105
+2014-10-30 15:30:00	145	Science and Engineering Library	15	Northwest Corner Building	105
 2014-10-30 15:30:00	131	Butler Library 3	103	Butler	340
 2014-10-30 15:30:00	139	Lehman Library 2	79	Lehman LIbrary	99
 2014-10-30 15:30:00	144	Starr East Asian Library	62	East Asian Library	149
@@ -22669,7 +22669,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-30 15:45:00	149	Architectural and Fine Arts Library 3	146	Avery	110
 2014-10-30 15:45:00	134	Butler Library 6	103	Butler	106
 2014-10-30 15:45:00	138	Butler Library stk	103	Butler	26
-2014-10-30 15:45:00	145	Science and Engineering Library	15	Mudd	103
+2014-10-30 15:45:00	145	Science and Engineering Library	15	Northwest Corner Building	103
 2014-10-30 15:45:00	155	JJ's Place	75	John Jay	30
 2014-10-30 15:45:00	133	Butler Library 5	103	Butler	86
 2014-10-30 15:45:00	151	Lerner 2	84	Lerner	89
@@ -22694,7 +22694,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-30 16:00:00	149	Architectural and Fine Arts Library 3	146	Avery	107
 2014-10-30 16:00:00	134	Butler Library 6	103	Butler	102
 2014-10-30 16:00:00	138	Butler Library stk	103	Butler	31
-2014-10-30 16:00:00	145	Science and Engineering Library	15	Mudd	104
+2014-10-30 16:00:00	145	Science and Engineering Library	15	Northwest Corner Building	104
 2014-10-30 16:15:00	155	JJ's Place	75	John Jay	28
 2014-10-30 16:15:00	133	Butler Library 5	103	Butler	100
 2014-10-30 16:15:00	151	Lerner 2	84	Lerner	103
@@ -22716,13 +22716,13 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-30 16:15:00	149	Architectural and Fine Arts Library 3	146	Avery	102
 2014-10-30 16:15:00	134	Butler Library 6	103	Butler	94
 2014-10-30 16:15:00	138	Butler Library stk	103	Butler	28
-2014-10-30 16:15:00	145	Science and Engineering Library	15	Mudd	123
+2014-10-30 16:15:00	145	Science and Engineering Library	15	Northwest Corner Building	123
 2014-10-30 16:30:00	152	Lerner 3	84	Lerner	118
 2014-10-30 16:30:00	130	Butler Library 2	103	Butler	369
 2014-10-30 16:30:00	149	Architectural and Fine Arts Library 3	146	Avery	100
 2014-10-30 16:30:00	134	Butler Library 6	103	Butler	80
 2014-10-30 16:30:00	138	Butler Library stk	103	Butler	22
-2014-10-30 16:30:00	145	Science and Engineering Library	15	Mudd	97
+2014-10-30 16:30:00	145	Science and Engineering Library	15	Northwest Corner Building	97
 2014-10-30 16:30:00	131	Butler Library 3	103	Butler	304
 2014-10-30 16:30:00	139	Lehman Library 2	79	Lehman LIbrary	75
 2014-10-30 16:30:00	144	Starr East Asian Library	62	East Asian Library	160
@@ -22760,7 +22760,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-30 16:45:00	149	Architectural and Fine Arts Library 3	146	Avery	101
 2014-10-30 16:45:00	134	Butler Library 6	103	Butler	82
 2014-10-30 16:45:00	138	Butler Library stk	103	Butler	25
-2014-10-30 16:45:00	145	Science and Engineering Library	15	Mudd	96
+2014-10-30 16:45:00	145	Science and Engineering Library	15	Northwest Corner Building	96
 2014-10-30 17:00:00	154	Lerner 5	84	Lerner	64
 2014-10-30 17:00:00	125	John Jay Dining Hall	75	John Jay	12
 2014-10-30 17:00:00	147	Architectural and Fine Arts Library 1	146	Avery	3
@@ -22779,7 +22779,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-30 17:00:00	149	Architectural and Fine Arts Library 3	146	Avery	107
 2014-10-30 17:00:00	134	Butler Library 6	103	Butler	78
 2014-10-30 17:00:00	138	Butler Library stk	103	Butler	19
-2014-10-30 17:00:00	145	Science and Engineering Library	15	Mudd	104
+2014-10-30 17:00:00	145	Science and Engineering Library	15	Northwest Corner Building	104
 2014-10-30 17:00:00	155	JJ's Place	75	John Jay	41
 2014-10-30 17:00:00	133	Butler Library 5	103	Butler	86
 2014-10-30 17:00:00	151	Lerner 2	84	Lerner	83
@@ -22788,7 +22788,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-30 17:15:00	149	Architectural and Fine Arts Library 3	146	Avery	103
 2014-10-30 17:15:00	134	Butler Library 6	103	Butler	58
 2014-10-30 17:15:00	138	Butler Library stk	103	Butler	21
-2014-10-30 17:15:00	145	Science and Engineering Library	15	Mudd	84
+2014-10-30 17:15:00	145	Science and Engineering Library	15	Northwest Corner Building	84
 2014-10-30 17:15:00	131	Butler Library 3	103	Butler	283
 2014-10-31 02:30:00	154	Lerner 5	84	Lerner	4
 2014-10-30 17:15:00	139	Lehman Library 2	79	Lehman LIbrary	86
@@ -22827,7 +22827,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-30 17:30:00	149	Architectural and Fine Arts Library 3	146	Avery	90
 2014-10-30 17:30:00	134	Butler Library 6	103	Butler	58
 2014-10-30 17:30:00	138	Butler Library stk	103	Butler	20
-2014-10-30 17:30:00	145	Science and Engineering Library	15	Mudd	101
+2014-10-30 17:30:00	145	Science and Engineering Library	15	Northwest Corner Building	101
 2014-10-30 17:45:00	155	JJ's Place	75	John Jay	27
 2014-10-30 17:45:00	133	Butler Library 5	103	Butler	65
 2014-10-30 17:45:00	151	Lerner 2	84	Lerner	122
@@ -22849,13 +22849,13 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-30 17:45:00	149	Architectural and Fine Arts Library 3	146	Avery	99
 2014-10-30 17:45:00	134	Butler Library 6	103	Butler	51
 2014-10-30 17:45:00	138	Butler Library stk	103	Butler	14
-2014-10-30 17:45:00	145	Science and Engineering Library	15	Mudd	119
+2014-10-30 17:45:00	145	Science and Engineering Library	15	Northwest Corner Building	119
 2014-10-30 18:00:00	152	Lerner 3	84	Lerner	141
 2014-10-30 18:00:00	130	Butler Library 2	103	Butler	385
 2014-10-30 18:00:00	149	Architectural and Fine Arts Library 3	146	Avery	92
 2014-10-30 18:00:00	134	Butler Library 6	103	Butler	48
 2014-10-30 18:00:00	138	Butler Library stk	103	Butler	10
-2014-10-30 18:00:00	145	Science and Engineering Library	15	Mudd	93
+2014-10-30 18:00:00	145	Science and Engineering Library	15	Northwest Corner Building	93
 2014-10-30 18:00:00	131	Butler Library 3	103	Butler	261
 2014-10-30 18:00:00	139	Lehman Library 2	79	Lehman LIbrary	64
 2014-10-30 18:00:00	144	Starr East Asian Library	62	East Asian Library	67
@@ -22877,7 +22877,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-30 18:15:00	149	Architectural and Fine Arts Library 3	146	Avery	78
 2014-10-30 18:15:00	134	Butler Library 6	103	Butler	39
 2014-10-30 18:15:00	138	Butler Library stk	103	Butler	10
-2014-10-30 18:15:00	145	Science and Engineering Library	15	Mudd	81
+2014-10-30 18:15:00	145	Science and Engineering Library	15	Northwest Corner Building	81
 2014-10-30 18:15:00	131	Butler Library 3	103	Butler	265
 2014-10-30 18:15:00	139	Lehman Library 2	79	Lehman LIbrary	60
 2014-10-30 18:15:00	144	Starr East Asian Library	62	East Asian Library	68
@@ -22915,7 +22915,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-30 18:30:00	149	Architectural and Fine Arts Library 3	146	Avery	53
 2014-10-30 18:30:00	134	Butler Library 6	103	Butler	34
 2014-10-30 18:30:00	138	Butler Library stk	103	Butler	16
-2014-10-30 18:30:00	145	Science and Engineering Library	15	Mudd	53
+2014-10-30 18:30:00	145	Science and Engineering Library	15	Northwest Corner Building	53
 2014-10-30 18:45:00	131	Butler Library 3	103	Butler	229
 2014-10-30 18:45:00	139	Lehman Library 2	79	Lehman LIbrary	51
 2014-10-30 18:45:00	144	Starr East Asian Library	62	East Asian Library	63
@@ -22929,7 +22929,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-30 18:45:00	149	Architectural and Fine Arts Library 3	146	Avery	54
 2014-10-30 18:45:00	134	Butler Library 6	103	Butler	31
 2014-10-30 18:45:00	138	Butler Library stk	103	Butler	12
-2014-10-30 18:45:00	145	Science and Engineering Library	15	Mudd	54
+2014-10-30 18:45:00	145	Science and Engineering Library	15	Northwest Corner Building	54
 2014-10-30 18:45:00	155	JJ's Place	75	John Jay	43
 2014-10-30 18:45:00	133	Butler Library 5	103	Butler	48
 2014-10-30 18:45:00	151	Lerner 2	84	Lerner	94
@@ -22948,7 +22948,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-30 19:00:00	149	Architectural and Fine Arts Library 3	146	Avery	51
 2014-10-30 19:00:00	134	Butler Library 6	103	Butler	32
 2014-10-30 19:00:00	138	Butler Library stk	103	Butler	8
-2014-10-30 19:00:00	145	Science and Engineering Library	15	Mudd	61
+2014-10-30 19:00:00	145	Science and Engineering Library	15	Northwest Corner Building	61
 2014-10-30 19:00:00	131	Butler Library 3	103	Butler	240
 2014-10-30 19:00:00	139	Lehman Library 2	79	Lehman LIbrary	47
 2014-10-30 19:00:00	144	Starr East Asian Library	62	East Asian Library	74
@@ -22970,7 +22970,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-30 19:15:00	149	Architectural and Fine Arts Library 3	146	Avery	47
 2014-10-30 19:15:00	134	Butler Library 6	103	Butler	28
 2014-10-30 19:15:00	138	Butler Library stk	103	Butler	12
-2014-10-30 19:15:00	145	Science and Engineering Library	15	Mudd	61
+2014-10-30 19:15:00	145	Science and Engineering Library	15	Northwest Corner Building	61
 2014-10-30 19:15:00	131	Butler Library 3	103	Butler	251
 2014-10-30 19:15:00	139	Lehman Library 2	79	Lehman LIbrary	44
 2014-10-30 19:15:00	144	Starr East Asian Library	62	East Asian Library	68
@@ -22992,7 +22992,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-30 19:30:00	149	Architectural and Fine Arts Library 3	146	Avery	51
 2014-10-30 19:30:00	134	Butler Library 6	103	Butler	31
 2014-10-30 19:30:00	138	Butler Library stk	103	Butler	6
-2014-10-30 19:30:00	145	Science and Engineering Library	15	Mudd	59
+2014-10-30 19:30:00	145	Science and Engineering Library	15	Northwest Corner Building	59
 2014-10-30 19:30:00	131	Butler Library 3	103	Butler	216
 2014-10-30 19:30:00	139	Lehman Library 2	79	Lehman LIbrary	47
 2014-10-30 19:30:00	144	Starr East Asian Library	62	East Asian Library	61
@@ -23019,7 +23019,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-30 19:45:00	149	Architectural and Fine Arts Library 3	146	Avery	37
 2014-10-30 19:45:00	134	Butler Library 6	103	Butler	24
 2014-10-30 19:45:00	138	Butler Library stk	103	Butler	3
-2014-10-30 19:45:00	145	Science and Engineering Library	15	Mudd	50
+2014-10-30 19:45:00	145	Science and Engineering Library	15	Northwest Corner Building	50
 2014-10-30 19:45:00	131	Butler Library 3	103	Butler	190
 2014-10-30 19:45:00	139	Lehman Library 2	79	Lehman LIbrary	34
 2014-10-30 19:45:00	144	Starr East Asian Library	62	East Asian Library	75
@@ -23047,13 +23047,13 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-30 20:00:00	149	Architectural and Fine Arts Library 3	146	Avery	37
 2014-10-30 20:00:00	134	Butler Library 6	103	Butler	25
 2014-10-30 20:00:00	138	Butler Library stk	103	Butler	2
-2014-10-30 20:00:00	145	Science and Engineering Library	15	Mudd	54
+2014-10-30 20:00:00	145	Science and Engineering Library	15	Northwest Corner Building	54
 2014-10-30 20:15:00	152	Lerner 3	84	Lerner	140
 2014-10-30 20:15:00	130	Butler Library 2	103	Butler	217
 2014-10-30 20:15:00	149	Architectural and Fine Arts Library 3	146	Avery	22
 2014-10-30 20:15:00	134	Butler Library 6	103	Butler	26
 2014-10-30 20:15:00	138	Butler Library stk	103	Butler	4
-2014-10-30 20:15:00	145	Science and Engineering Library	15	Mudd	52
+2014-10-30 20:15:00	145	Science and Engineering Library	15	Northwest Corner Building	52
 2014-10-30 20:15:00	155	JJ's Place	75	John Jay	60
 2014-10-30 20:15:00	133	Butler Library 5	103	Butler	46
 2014-10-30 20:15:00	151	Lerner 2	84	Lerner	107
@@ -23080,7 +23080,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-30 20:30:00	149	Architectural and Fine Arts Library 3	146	Avery	22
 2014-10-30 20:30:00	134	Butler Library 6	103	Butler	26
 2014-10-30 20:30:00	138	Butler Library stk	103	Butler	3
-2014-10-30 20:30:00	145	Science and Engineering Library	15	Mudd	60
+2014-10-30 20:30:00	145	Science and Engineering Library	15	Northwest Corner Building	60
 2014-10-30 20:30:00	131	Butler Library 3	103	Butler	222
 2014-10-30 20:30:00	139	Lehman Library 2	79	Lehman LIbrary	28
 2014-10-30 20:30:00	144	Starr East Asian Library	62	East Asian Library	39
@@ -23097,7 +23097,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-30 20:45:00	149	Architectural and Fine Arts Library 3	146	Avery	25
 2014-10-30 20:45:00	134	Butler Library 6	103	Butler	23
 2014-10-30 20:45:00	138	Butler Library stk	103	Butler	4
-2014-10-30 20:45:00	145	Science and Engineering Library	15	Mudd	52
+2014-10-30 20:45:00	145	Science and Engineering Library	15	Northwest Corner Building	52
 2014-10-30 20:45:00	131	Butler Library 3	103	Butler	200
 2014-10-30 20:45:00	139	Lehman Library 2	79	Lehman LIbrary	27
 2014-10-30 20:45:00	144	Starr East Asian Library	62	East Asian Library	38
@@ -23135,7 +23135,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-30 21:00:00	149	Architectural and Fine Arts Library 3	146	Avery	27
 2014-10-30 21:00:00	134	Butler Library 6	103	Butler	20
 2014-10-30 21:00:00	138	Butler Library stk	103	Butler	10
-2014-10-30 21:00:00	145	Science and Engineering Library	15	Mudd	59
+2014-10-30 21:00:00	145	Science and Engineering Library	15	Northwest Corner Building	59
 2014-10-30 21:15:00	155	JJ's Place	75	John Jay	39
 2014-10-30 21:15:00	23	Uris/Watson Library	2	Uris	264
 2014-10-30 21:15:00	133	Butler Library 5	103	Butler	31
@@ -23146,7 +23146,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-30 21:15:00	149	Architectural and Fine Arts Library 3	146	Avery	28
 2014-10-30 21:15:00	134	Butler Library 6	103	Butler	17
 2014-10-30 21:15:00	138	Butler Library stk	103	Butler	10
-2014-10-30 21:15:00	145	Science and Engineering Library	15	Mudd	53
+2014-10-30 21:15:00	145	Science and Engineering Library	15	Northwest Corner Building	53
 2014-10-30 21:15:00	131	Butler Library 3	103	Butler	196
 2014-10-30 21:15:00	139	Lehman Library 2	79	Lehman LIbrary	20
 2014-10-30 21:15:00	144	Starr East Asian Library	62	East Asian Library	33
@@ -23176,7 +23176,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-30 21:30:00	149	Architectural and Fine Arts Library 3	146	Avery	25
 2014-10-30 21:30:00	134	Butler Library 6	103	Butler	12
 2014-10-30 21:30:00	138	Butler Library stk	103	Butler	10
-2014-10-30 21:30:00	145	Science and Engineering Library	15	Mudd	57
+2014-10-30 21:30:00	145	Science and Engineering Library	15	Northwest Corner Building	57
 2014-10-30 21:30:00	155	JJ's Place	75	John Jay	36
 2014-10-30 21:30:00	133	Butler Library 5	103	Butler	35
 2014-10-30 21:30:00	151	Lerner 2	84	Lerner	60
@@ -23185,7 +23185,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-30 21:45:00	149	Architectural and Fine Arts Library 3	146	Avery	22
 2014-10-30 21:45:00	134	Butler Library 6	103	Butler	12
 2014-10-30 21:45:00	138	Butler Library stk	103	Butler	10
-2014-10-30 21:45:00	145	Science and Engineering Library	15	Mudd	50
+2014-10-30 21:45:00	145	Science and Engineering Library	15	Northwest Corner Building	50
 2014-10-30 21:45:00	155	JJ's Place	75	John Jay	37
 2014-10-30 21:45:00	133	Butler Library 5	103	Butler	36
 2014-10-30 21:45:00	151	Lerner 2	84	Lerner	56
@@ -23223,7 +23223,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-30 22:00:00	149	Architectural and Fine Arts Library 3	146	Avery	19
 2014-10-30 22:00:00	134	Butler Library 6	103	Butler	14
 2014-10-30 22:00:00	138	Butler Library stk	103	Butler	7
-2014-10-30 22:00:00	145	Science and Engineering Library	15	Mudd	52
+2014-10-30 22:00:00	145	Science and Engineering Library	15	Northwest Corner Building	52
 2014-10-30 22:15:00	131	Butler Library 3	103	Butler	162
 2014-10-30 22:15:00	139	Lehman Library 2	79	Lehman LIbrary	18
 2014-10-30 22:15:00	144	Starr East Asian Library	62	East Asian Library	36
@@ -23245,7 +23245,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-30 22:15:00	149	Architectural and Fine Arts Library 3	146	Avery	18
 2014-10-30 22:15:00	134	Butler Library 6	103	Butler	13
 2014-10-30 22:15:00	138	Butler Library stk	103	Butler	5
-2014-10-30 22:15:00	145	Science and Engineering Library	15	Mudd	45
+2014-10-30 22:15:00	145	Science and Engineering Library	15	Northwest Corner Building	45
 2014-10-30 22:30:00	155	JJ's Place	75	John Jay	28
 2014-10-30 22:30:00	133	Butler Library 5	103	Butler	40
 2014-10-30 22:30:00	151	Lerner 2	84	Lerner	95
@@ -23267,7 +23267,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-30 22:30:00	149	Architectural and Fine Arts Library 3	146	Avery	20
 2014-10-30 22:30:00	134	Butler Library 6	103	Butler	13
 2014-10-30 22:30:00	138	Butler Library stk	103	Butler	6
-2014-10-30 22:30:00	145	Science and Engineering Library	15	Mudd	57
+2014-10-30 22:30:00	145	Science and Engineering Library	15	Northwest Corner Building	57
 2014-10-30 22:45:00	154	Lerner 5	84	Lerner	35
 2014-10-30 22:45:00	125	John Jay Dining Hall	75	John Jay	6
 2014-10-30 22:45:00	147	Architectural and Fine Arts Library 1	146	Avery	1
@@ -23286,7 +23286,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-30 22:45:00	149	Architectural and Fine Arts Library 3	146	Avery	17
 2014-10-30 22:45:00	134	Butler Library 6	103	Butler	9
 2014-10-30 22:45:00	138	Butler Library stk	103	Butler	4
-2014-10-30 22:45:00	145	Science and Engineering Library	15	Mudd	57
+2014-10-30 22:45:00	145	Science and Engineering Library	15	Northwest Corner Building	57
 2014-10-30 22:45:00	155	JJ's Place	75	John Jay	23
 2014-10-30 22:45:00	133	Butler Library 5	103	Butler	29
 2014-10-30 22:45:00	151	Lerner 2	84	Lerner	73
@@ -23306,7 +23306,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-30 23:00:00	149	Architectural and Fine Arts Library 3	146	Avery	9
 2014-10-30 23:00:00	134	Butler Library 6	103	Butler	6
 2014-10-30 23:00:00	138	Butler Library stk	103	Butler	4
-2014-10-30 23:00:00	145	Science and Engineering Library	15	Mudd	59
+2014-10-30 23:00:00	145	Science and Engineering Library	15	Northwest Corner Building	59
 2014-10-30 23:00:00	131	Butler Library 3	103	Butler	148
 2014-10-30 23:00:00	139	Lehman Library 2	79	Lehman LIbrary	18
 2014-10-30 23:00:00	144	Starr East Asian Library	62	East Asian Library	33
@@ -23334,13 +23334,13 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-30 23:15:00	149	Architectural and Fine Arts Library 3	146	Avery	4
 2014-10-30 23:15:00	134	Butler Library 6	103	Butler	7
 2014-10-30 23:15:00	138	Butler Library stk	103	Butler	5
-2014-10-30 23:15:00	145	Science and Engineering Library	15	Mudd	51
+2014-10-30 23:15:00	145	Science and Engineering Library	15	Northwest Corner Building	51
 2014-10-30 23:30:00	152	Lerner 3	84	Lerner	20
 2014-10-30 23:30:00	130	Butler Library 2	103	Butler	178
 2014-10-30 23:30:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-30 23:30:00	134	Butler Library 6	103	Butler	8
 2014-10-30 23:30:00	138	Butler Library stk	103	Butler	1
-2014-10-30 23:30:00	145	Science and Engineering Library	15	Mudd	41
+2014-10-30 23:30:00	145	Science and Engineering Library	15	Northwest Corner Building	41
 2014-10-30 23:30:00	131	Butler Library 3	103	Butler	126
 2014-10-30 23:30:00	139	Lehman Library 2	79	Lehman LIbrary	12
 2014-10-30 23:30:00	144	Starr East Asian Library	62	East Asian Library	7
@@ -23362,7 +23362,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-30 23:45:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-30 23:45:00	134	Butler Library 6	103	Butler	8
 2014-10-30 23:45:00	138	Butler Library stk	103	Butler	2
-2014-10-30 23:45:00	145	Science and Engineering Library	15	Mudd	40
+2014-10-30 23:45:00	145	Science and Engineering Library	15	Northwest Corner Building	40
 2014-10-30 23:45:00	155	JJ's Place	75	John Jay	25
 2014-10-30 23:45:00	133	Butler Library 5	103	Butler	20
 2014-10-30 23:45:00	151	Lerner 2	84	Lerner	63
@@ -23400,13 +23400,13 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-31 00:00:00	149	Architectural and Fine Arts Library 3	146	Avery	2
 2014-10-31 00:00:00	134	Butler Library 6	103	Butler	8
 2014-10-31 00:00:00	138	Butler Library stk	103	Butler	2
-2014-10-31 00:00:00	145	Science and Engineering Library	15	Mudd	40
+2014-10-31 00:00:00	145	Science and Engineering Library	15	Northwest Corner Building	40
 2014-10-31 00:15:00	152	Lerner 3	84	Lerner	38
 2014-10-31 00:15:00	130	Butler Library 2	103	Butler	191
 2014-10-31 00:15:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-31 00:15:00	134	Butler Library 6	103	Butler	10
 2014-10-31 00:15:00	138	Butler Library stk	103	Butler	1
-2014-10-31 00:15:00	145	Science and Engineering Library	15	Mudd	33
+2014-10-31 00:15:00	145	Science and Engineering Library	15	Northwest Corner Building	33
 2014-10-31 00:15:00	131	Butler Library 3	103	Butler	127
 2014-10-31 00:15:00	139	Lehman Library 2	79	Lehman LIbrary	10
 2014-10-31 00:15:00	144	Starr East Asian Library	62	East Asian Library	8
@@ -23444,7 +23444,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-31 00:30:00	149	Architectural and Fine Arts Library 3	146	Avery	2
 2014-10-31 00:30:00	134	Butler Library 6	103	Butler	9
 2014-10-31 00:30:00	138	Butler Library stk	103	Butler	1
-2014-10-31 00:30:00	145	Science and Engineering Library	15	Mudd	26
+2014-10-31 00:30:00	145	Science and Engineering Library	15	Northwest Corner Building	26
 2014-10-31 00:45:00	155	JJ's Place	75	John Jay	40
 2014-10-31 00:45:00	133	Butler Library 5	103	Butler	34
 2014-10-31 00:45:00	151	Lerner 2	84	Lerner	36
@@ -23466,7 +23466,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-31 00:45:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-31 00:45:00	134	Butler Library 6	103	Butler	5
 2014-10-31 00:45:00	138	Butler Library stk	103	Butler	2
-2014-10-31 00:45:00	145	Science and Engineering Library	15	Mudd	25
+2014-10-31 00:45:00	145	Science and Engineering Library	15	Northwest Corner Building	25
 2014-10-31 01:00:00	155	JJ's Place	75	John Jay	36
 2014-10-31 01:00:00	133	Butler Library 5	103	Butler	17
 2014-10-31 01:00:00	151	Lerner 2	84	Lerner	26
@@ -23488,7 +23488,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-31 01:00:00	149	Architectural and Fine Arts Library 3	146	Avery	3
 2014-10-31 01:00:00	134	Butler Library 6	103	Butler	5
 2014-10-31 01:00:00	138	Butler Library stk	103	Butler	1
-2014-10-31 01:00:00	145	Science and Engineering Library	15	Mudd	17
+2014-10-31 01:00:00	145	Science and Engineering Library	15	Northwest Corner Building	17
 2014-10-31 01:15:00	154	Lerner 5	84	Lerner	8
 2014-10-31 01:15:00	125	John Jay Dining Hall	75	John Jay	5
 2014-10-31 01:15:00	147	Architectural and Fine Arts Library 1	146	Avery	0
@@ -23507,7 +23507,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-31 01:15:00	149	Architectural and Fine Arts Library 3	146	Avery	2
 2014-10-31 01:15:00	134	Butler Library 6	103	Butler	4
 2014-10-31 01:15:00	138	Butler Library stk	103	Butler	2
-2014-10-31 01:15:00	145	Science and Engineering Library	15	Mudd	19
+2014-10-31 01:15:00	145	Science and Engineering Library	15	Northwest Corner Building	19
 2014-10-31 01:15:00	155	JJ's Place	75	John Jay	30
 2014-10-31 01:15:00	133	Butler Library 5	103	Butler	18
 2014-10-31 01:15:00	151	Lerner 2	84	Lerner	25
@@ -23524,7 +23524,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-31 01:30:00	149	Architectural and Fine Arts Library 3	146	Avery	3
 2014-10-31 01:30:00	134	Butler Library 6	103	Butler	4
 2014-10-31 01:30:00	138	Butler Library stk	103	Butler	2
-2014-10-31 01:30:00	145	Science and Engineering Library	15	Mudd	15
+2014-10-31 01:30:00	145	Science and Engineering Library	15	Northwest Corner Building	15
 2014-10-31 01:30:00	155	JJ's Place	75	John Jay	13
 2014-10-31 01:30:00	133	Butler Library 5	103	Butler	15
 2014-10-31 01:30:00	151	Lerner 2	84	Lerner	18
@@ -23554,7 +23554,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-31 01:45:00	149	Architectural and Fine Arts Library 3	146	Avery	7
 2014-10-31 01:45:00	134	Butler Library 6	103	Butler	1
 2014-10-31 01:45:00	138	Butler Library stk	103	Butler	1
-2014-10-31 01:45:00	145	Science and Engineering Library	15	Mudd	12
+2014-10-31 01:45:00	145	Science and Engineering Library	15	Northwest Corner Building	12
 2014-10-31 02:00:00	155	JJ's Place	75	John Jay	3
 2014-10-31 02:00:00	23	Uris/Watson Library	2	Uris	2
 2014-10-31 02:00:00	133	Butler Library 5	103	Butler	17
@@ -23565,7 +23565,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-31 02:00:00	149	Architectural and Fine Arts Library 3	146	Avery	5
 2014-10-31 02:00:00	134	Butler Library 6	103	Butler	1
 2014-10-31 02:00:00	138	Butler Library stk	103	Butler	2
-2014-10-31 02:00:00	145	Science and Engineering Library	15	Mudd	14
+2014-10-31 02:00:00	145	Science and Engineering Library	15	Northwest Corner Building	14
 2014-10-31 02:00:00	131	Butler Library 3	103	Butler	63
 2014-10-31 02:00:00	139	Lehman Library 2	79	Lehman LIbrary	4
 2014-10-31 02:00:00	144	Starr East Asian Library	62	East Asian Library	6
@@ -23582,7 +23582,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-31 02:15:00	149	Architectural and Fine Arts Library 3	146	Avery	4
 2014-10-31 02:15:00	134	Butler Library 6	103	Butler	1
 2014-10-31 02:15:00	138	Butler Library stk	103	Butler	2
-2014-10-31 02:15:00	145	Science and Engineering Library	15	Mudd	15
+2014-10-31 02:15:00	145	Science and Engineering Library	15	Northwest Corner Building	15
 2014-10-31 02:15:00	131	Butler Library 3	103	Butler	56
 2014-10-31 02:15:00	139	Lehman Library 2	79	Lehman LIbrary	4
 2014-10-31 02:15:00	144	Starr East Asian Library	62	East Asian Library	2
@@ -23615,7 +23615,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-31 02:30:00	149	Architectural and Fine Arts Library 3	146	Avery	3
 2014-10-31 02:30:00	134	Butler Library 6	103	Butler	1
 2014-10-31 02:30:00	138	Butler Library stk	103	Butler	1
-2014-10-31 02:30:00	145	Science and Engineering Library	15	Mudd	13
+2014-10-31 02:30:00	145	Science and Engineering Library	15	Northwest Corner Building	13
 2014-10-31 02:30:00	155	JJ's Place	75	John Jay	3
 2014-10-31 02:30:00	133	Butler Library 5	103	Butler	15
 2014-10-31 02:30:00	151	Lerner 2	84	Lerner	18
@@ -23629,7 +23629,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-31 02:45:00	149	Architectural and Fine Arts Library 3	146	Avery	2
 2014-10-31 02:45:00	134	Butler Library 6	103	Butler	1
 2014-10-31 02:45:00	138	Butler Library stk	103	Butler	1
-2014-10-31 02:45:00	145	Science and Engineering Library	15	Mudd	9
+2014-10-31 02:45:00	145	Science and Engineering Library	15	Northwest Corner Building	9
 2014-10-31 02:45:00	131	Butler Library 3	103	Butler	50
 2014-10-31 02:45:00	139	Lehman Library 2	79	Lehman LIbrary	4
 2014-10-31 02:45:00	144	Starr East Asian Library	62	East Asian Library	3
@@ -23646,7 +23646,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-31 03:00:00	149	Architectural and Fine Arts Library 3	146	Avery	2
 2014-10-31 03:00:00	134	Butler Library 6	103	Butler	1
 2014-10-31 03:00:00	138	Butler Library stk	103	Butler	1
-2014-10-31 03:00:00	145	Science and Engineering Library	15	Mudd	5
+2014-10-31 03:00:00	145	Science and Engineering Library	15	Northwest Corner Building	5
 2014-10-31 03:00:00	155	JJ's Place	75	John Jay	3
 2014-10-31 03:00:00	133	Butler Library 5	103	Butler	13
 2014-10-31 03:00:00	151	Lerner 2	84	Lerner	10
@@ -23678,7 +23678,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-31 03:15:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-31 03:15:00	134	Butler Library 6	103	Butler	1
 2014-10-31 03:15:00	138	Butler Library stk	103	Butler	2
-2014-10-31 03:15:00	145	Science and Engineering Library	15	Mudd	8
+2014-10-31 03:15:00	145	Science and Engineering Library	15	Northwest Corner Building	8
 2014-10-31 03:15:00	131	Butler Library 3	103	Butler	40
 2014-10-31 03:15:00	139	Lehman Library 2	79	Lehman LIbrary	4
 2014-10-31 03:15:00	144	Starr East Asian Library	62	East Asian Library	1
@@ -23706,7 +23706,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-31 03:30:00	149	Architectural and Fine Arts Library 3	146	Avery	2
 2014-10-31 03:30:00	134	Butler Library 6	103	Butler	1
 2014-10-31 03:30:00	138	Butler Library stk	103	Butler	1
-2014-10-31 03:30:00	145	Science and Engineering Library	15	Mudd	4
+2014-10-31 03:30:00	145	Science and Engineering Library	15	Northwest Corner Building	4
 2014-10-31 03:45:00	154	Lerner 5	84	Lerner	0
 2014-10-31 03:45:00	125	John Jay Dining Hall	75	John Jay	0
 2014-10-31 03:45:00	147	Architectural and Fine Arts Library 1	146	Avery	1
@@ -23722,7 +23722,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-31 03:45:00	149	Architectural and Fine Arts Library 3	146	Avery	2
 2014-10-31 03:45:00	134	Butler Library 6	103	Butler	1
 2014-10-31 03:45:00	138	Butler Library stk	103	Butler	2
-2014-10-31 03:45:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-31 03:45:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-31 03:45:00	131	Butler Library 3	103	Butler	38
 2014-10-31 03:45:00	139	Lehman Library 2	79	Lehman LIbrary	4
 2014-10-31 03:45:00	144	Starr East Asian Library	62	East Asian Library	5
@@ -23739,7 +23739,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-31 04:00:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-31 04:00:00	134	Butler Library 6	103	Butler	1
 2014-10-31 04:00:00	138	Butler Library stk	103	Butler	2
-2014-10-31 04:00:00	145	Science and Engineering Library	15	Mudd	3
+2014-10-31 04:00:00	145	Science and Engineering Library	15	Northwest Corner Building	3
 2014-10-31 04:00:00	131	Butler Library 3	103	Butler	36
 2014-10-31 04:00:00	139	Lehman Library 2	79	Lehman LIbrary	4
 2014-10-31 04:00:00	144	Starr East Asian Library	62	East Asian Library	3
@@ -23772,7 +23772,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-31 04:15:00	149	Architectural and Fine Arts Library 3	146	Avery	2
 2014-10-31 04:15:00	134	Butler Library 6	103	Butler	1
 2014-10-31 04:15:00	138	Butler Library stk	103	Butler	2
-2014-10-31 04:15:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-31 04:15:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-31 04:30:00	131	Butler Library 3	103	Butler	24
 2014-10-31 04:30:00	139	Lehman Library 2	79	Lehman LIbrary	4
 2014-10-31 04:30:00	144	Starr East Asian Library	62	East Asian Library	1
@@ -23794,7 +23794,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-31 04:30:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-31 04:30:00	134	Butler Library 6	103	Butler	1
 2014-10-31 04:30:00	138	Butler Library stk	103	Butler	0
-2014-10-31 04:30:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-31 04:30:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-31 04:45:00	154	Lerner 5	84	Lerner	0
 2014-10-31 04:45:00	125	John Jay Dining Hall	75	John Jay	2
 2014-10-31 04:45:00	147	Architectural and Fine Arts Library 1	146	Avery	0
@@ -23812,7 +23812,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-31 04:45:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-31 04:45:00	134	Butler Library 6	103	Butler	1
 2014-10-31 04:45:00	138	Butler Library stk	103	Butler	0
-2014-10-31 04:45:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-31 04:45:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-31 04:45:00	155	JJ's Place	75	John Jay	0
 2014-10-31 04:45:00	133	Butler Library 5	103	Butler	11
 2014-10-31 04:45:00	151	Lerner 2	84	Lerner	2
@@ -23826,7 +23826,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-31 05:00:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-31 05:00:00	134	Butler Library 6	103	Butler	1
 2014-10-31 05:00:00	138	Butler Library stk	103	Butler	0
-2014-10-31 05:00:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-31 05:00:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-31 05:00:00	131	Butler Library 3	103	Butler	18
 2014-10-31 05:00:00	139	Lehman Library 2	79	Lehman LIbrary	4
 2014-10-31 05:00:00	144	Starr East Asian Library	62	East Asian Library	1
@@ -23859,13 +23859,13 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-31 05:15:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-31 05:15:00	134	Butler Library 6	103	Butler	1
 2014-10-31 05:15:00	138	Butler Library stk	103	Butler	0
-2014-10-31 05:15:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-31 05:15:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-31 05:30:00	152	Lerner 3	84	Lerner	3
 2014-10-31 05:30:00	130	Butler Library 2	103	Butler	18
 2014-10-31 05:30:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-31 05:30:00	134	Butler Library 6	103	Butler	1
 2014-10-31 05:30:00	138	Butler Library stk	103	Butler	0
-2014-10-31 05:30:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-31 05:30:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-31 05:30:00	155	JJ's Place	75	John Jay	0
 2014-10-31 05:30:00	133	Butler Library 5	103	Butler	9
 2014-10-31 05:30:00	151	Lerner 2	84	Lerner	4
@@ -23892,7 +23892,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-31 05:45:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-31 05:45:00	134	Butler Library 6	103	Butler	1
 2014-10-31 05:45:00	138	Butler Library stk	103	Butler	0
-2014-10-31 05:45:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-31 05:45:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-31 05:45:00	131	Butler Library 3	103	Butler	17
 2014-10-31 05:45:00	139	Lehman Library 2	79	Lehman LIbrary	4
 2014-10-31 05:45:00	144	Starr East Asian Library	62	East Asian Library	1
@@ -23909,7 +23909,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-31 06:00:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-31 06:00:00	134	Butler Library 6	103	Butler	1
 2014-10-31 06:00:00	138	Butler Library stk	103	Butler	0
-2014-10-31 06:00:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-31 06:00:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-31 06:00:00	131	Butler Library 3	103	Butler	18
 2014-10-31 06:00:00	139	Lehman Library 2	79	Lehman LIbrary	4
 2014-10-31 06:00:00	144	Starr East Asian Library	62	East Asian Library	1
@@ -23931,7 +23931,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-31 06:15:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-31 06:15:00	134	Butler Library 6	103	Butler	1
 2014-10-31 06:15:00	138	Butler Library stk	103	Butler	0
-2014-10-31 06:15:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-31 06:15:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-31 06:15:00	131	Butler Library 3	103	Butler	18
 2014-10-31 06:15:00	139	Lehman Library 2	79	Lehman LIbrary	4
 2014-10-31 06:15:00	144	Starr East Asian Library	62	East Asian Library	2
@@ -23953,7 +23953,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-31 06:30:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-31 06:30:00	134	Butler Library 6	103	Butler	1
 2014-10-31 06:30:00	138	Butler Library stk	103	Butler	1
-2014-10-31 06:30:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-31 06:30:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-31 06:30:00	155	JJ's Place	75	John Jay	0
 2014-10-31 06:30:00	133	Butler Library 5	103	Butler	12
 2014-10-31 06:30:00	151	Lerner 2	84	Lerner	4
@@ -23988,7 +23988,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-31 06:45:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-31 06:45:00	134	Butler Library 6	103	Butler	1
 2014-10-31 06:45:00	138	Butler Library stk	103	Butler	1
-2014-10-31 06:45:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-31 06:45:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-31 06:45:00	155	JJ's Place	75	John Jay	0
 2014-10-31 06:45:00	133	Butler Library 5	103	Butler	8
 2014-10-31 06:45:00	151	Lerner 2	84	Lerner	4
@@ -23997,7 +23997,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-31 07:00:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-31 07:00:00	134	Butler Library 6	103	Butler	2
 2014-10-31 07:00:00	138	Butler Library stk	103	Butler	1
-2014-10-31 07:00:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-31 07:00:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-31 07:00:00	155	JJ's Place	75	John Jay	0
 2014-10-31 07:00:00	133	Butler Library 5	103	Butler	9
 2014-10-31 07:00:00	151	Lerner 2	84	Lerner	6
@@ -24029,7 +24029,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-31 07:15:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-31 07:15:00	134	Butler Library 6	103	Butler	2
 2014-10-31 07:15:00	138	Butler Library stk	103	Butler	0
-2014-10-31 07:15:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-31 07:15:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-31 07:15:00	131	Butler Library 3	103	Butler	11
 2014-10-31 07:15:00	139	Lehman Library 2	79	Lehman LIbrary	6
 2014-10-31 07:15:00	144	Starr East Asian Library	62	East Asian Library	4
@@ -24049,7 +24049,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-31 07:30:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-31 07:30:00	134	Butler Library 6	103	Butler	1
 2014-10-31 07:30:00	138	Butler Library stk	103	Butler	0
-2014-10-31 07:30:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-31 07:30:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-31 07:30:00	155	JJ's Place	75	John Jay	1
 2014-10-31 07:30:00	133	Butler Library 5	103	Butler	10
 2014-10-31 07:30:00	151	Lerner 2	84	Lerner	10
@@ -24063,7 +24063,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-31 07:45:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-31 07:45:00	134	Butler Library 6	103	Butler	2
 2014-10-31 07:45:00	138	Butler Library stk	103	Butler	0
-2014-10-31 07:45:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-31 07:45:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-31 07:45:00	131	Butler Library 3	103	Butler	12
 2014-10-31 07:45:00	139	Lehman Library 2	79	Lehman LIbrary	8
 2014-10-31 07:45:00	144	Starr East Asian Library	62	East Asian Library	5
@@ -24085,7 +24085,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-31 08:00:00	149	Architectural and Fine Arts Library 3	146	Avery	2
 2014-10-31 08:00:00	134	Butler Library 6	103	Butler	1
 2014-10-31 08:00:00	138	Butler Library stk	103	Butler	0
-2014-10-31 08:00:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-31 08:00:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-31 08:00:00	131	Butler Library 3	103	Butler	17
 2014-10-31 08:00:00	139	Lehman Library 2	79	Lehman LIbrary	8
 2014-10-31 08:00:00	144	Starr East Asian Library	62	East Asian Library	3
@@ -24107,7 +24107,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-31 08:15:00	149	Architectural and Fine Arts Library 3	146	Avery	2
 2014-10-31 08:15:00	134	Butler Library 6	103	Butler	1
 2014-10-31 08:15:00	138	Butler Library stk	103	Butler	0
-2014-10-31 08:15:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-31 08:15:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-31 08:15:00	155	JJ's Place	75	John Jay	2
 2014-10-31 08:15:00	133	Butler Library 5	103	Butler	10
 2014-10-31 08:15:00	151	Lerner 2	84	Lerner	6
@@ -24145,7 +24145,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-31 08:30:00	149	Architectural and Fine Arts Library 3	146	Avery	6
 2014-10-31 08:30:00	134	Butler Library 6	103	Butler	2
 2014-10-31 08:30:00	138	Butler Library stk	103	Butler	0
-2014-10-31 08:30:00	145	Science and Engineering Library	15	Mudd	2
+2014-10-31 08:30:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-10-31 08:45:00	154	Lerner 5	84	Lerner	3
 2014-10-31 08:45:00	125	John Jay Dining Hall	75	John Jay	0
 2014-10-31 08:45:00	147	Architectural and Fine Arts Library 1	146	Avery	0
@@ -24164,7 +24164,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-31 08:45:00	149	Architectural and Fine Arts Library 3	146	Avery	5
 2014-10-31 08:45:00	134	Butler Library 6	103	Butler	1
 2014-10-31 08:45:00	138	Butler Library stk	103	Butler	1
-2014-10-31 08:45:00	145	Science and Engineering Library	15	Mudd	3
+2014-10-31 08:45:00	145	Science and Engineering Library	15	Northwest Corner Building	3
 2014-10-31 08:45:00	155	JJ's Place	75	John Jay	4
 2014-10-31 08:45:00	133	Butler Library 5	103	Butler	11
 2014-10-31 08:45:00	151	Lerner 2	84	Lerner	17
@@ -24189,13 +24189,13 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-31 09:00:00	149	Architectural and Fine Arts Library 3	146	Avery	2
 2014-10-31 09:00:00	134	Butler Library 6	103	Butler	2
 2014-10-31 09:00:00	138	Butler Library stk	103	Butler	2
-2014-10-31 09:00:00	145	Science and Engineering Library	15	Mudd	4
+2014-10-31 09:00:00	145	Science and Engineering Library	15	Northwest Corner Building	4
 2014-10-31 09:15:00	152	Lerner 3	84	Lerner	27
 2014-10-31 09:15:00	130	Butler Library 2	103	Butler	54
 2014-10-31 09:15:00	149	Architectural and Fine Arts Library 3	146	Avery	3
 2014-10-31 09:15:00	134	Butler Library 6	103	Butler	2
 2014-10-31 09:15:00	138	Butler Library stk	103	Butler	2
-2014-10-31 09:15:00	145	Science and Engineering Library	15	Mudd	11
+2014-10-31 09:15:00	145	Science and Engineering Library	15	Northwest Corner Building	11
 2014-10-31 09:15:00	131	Butler Library 3	103	Butler	38
 2014-10-31 09:15:00	139	Lehman Library 2	79	Lehman LIbrary	11
 2014-10-31 09:15:00	144	Starr East Asian Library	62	East Asian Library	37
@@ -24231,7 +24231,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-31 09:30:00	149	Architectural and Fine Arts Library 3	146	Avery	5
 2014-10-31 09:30:00	134	Butler Library 6	103	Butler	6
 2014-10-31 09:30:00	138	Butler Library stk	103	Butler	6
-2014-10-31 09:30:00	145	Science and Engineering Library	15	Mudd	15
+2014-10-31 09:30:00	145	Science and Engineering Library	15	Northwest Corner Building	15
 2014-10-31 09:30:00	155	JJ's Place	75	John Jay	4
 2014-10-31 09:30:00	133	Butler Library 5	103	Butler	22
 2014-10-31 09:30:00	151	Lerner 2	84	Lerner	23
@@ -24245,7 +24245,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-31 09:45:00	149	Architectural and Fine Arts Library 3	146	Avery	4
 2014-10-31 09:45:00	134	Butler Library 6	103	Butler	11
 2014-10-31 09:45:00	138	Butler Library stk	103	Butler	8
-2014-10-31 09:45:00	145	Science and Engineering Library	15	Mudd	23
+2014-10-31 09:45:00	145	Science and Engineering Library	15	Northwest Corner Building	23
 2014-10-31 09:45:00	131	Butler Library 3	103	Butler	62
 2014-10-31 09:45:00	139	Lehman Library 2	79	Lehman LIbrary	26
 2014-10-31 09:45:00	144	Starr East Asian Library	62	East Asian Library	39
@@ -24275,7 +24275,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-31 10:00:00	149	Architectural and Fine Arts Library 3	146	Avery	8
 2014-10-31 10:00:00	134	Butler Library 6	103	Butler	15
 2014-10-31 10:00:00	138	Butler Library stk	103	Butler	10
-2014-10-31 10:00:00	145	Science and Engineering Library	15	Mudd	27
+2014-10-31 10:00:00	145	Science and Engineering Library	15	Northwest Corner Building	27
 2014-10-31 10:00:00	155	JJ's Place	75	John Jay	5
 2014-10-31 10:00:00	133	Butler Library 5	103	Butler	33
 2014-10-31 10:00:00	151	Lerner 2	84	Lerner	22
@@ -24300,7 +24300,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-31 10:15:00	149	Architectural and Fine Arts Library 3	146	Avery	12
 2014-10-31 10:15:00	134	Butler Library 6	103	Butler	17
 2014-10-31 10:15:00	138	Butler Library stk	103	Butler	9
-2014-10-31 10:15:00	145	Science and Engineering Library	15	Mudd	43
+2014-10-31 10:15:00	145	Science and Engineering Library	15	Northwest Corner Building	43
 2014-10-31 10:30:00	155	JJ's Place	75	John Jay	5
 2014-10-31 10:30:00	133	Butler Library 5	103	Butler	41
 2014-10-31 10:30:00	154	Lerner 5	84	Lerner	27
@@ -24321,13 +24321,13 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-31 10:30:00	149	Architectural and Fine Arts Library 3	146	Avery	13
 2014-10-31 10:30:00	134	Butler Library 6	103	Butler	15
 2014-10-31 10:30:00	138	Butler Library stk	103	Butler	9
-2014-10-31 10:30:00	145	Science and Engineering Library	15	Mudd	48
+2014-10-31 10:30:00	145	Science and Engineering Library	15	Northwest Corner Building	48
 2014-10-31 10:45:00	152	Lerner 3	84	Lerner	72
 2014-10-31 10:45:00	130	Butler Library 2	103	Butler	144
 2014-10-31 10:45:00	149	Architectural and Fine Arts Library 3	146	Avery	22
 2014-10-31 10:45:00	134	Butler Library 6	103	Butler	28
 2014-10-31 10:45:00	138	Butler Library stk	103	Butler	9
-2014-10-31 10:45:00	145	Science and Engineering Library	15	Mudd	63
+2014-10-31 10:45:00	145	Science and Engineering Library	15	Northwest Corner Building	63
 2014-10-31 10:45:00	155	JJ's Place	75	John Jay	7
 2014-10-31 10:45:00	133	Butler Library 5	103	Butler	43
 2014-10-31 10:45:00	151	Lerner 2	84	Lerner	35
@@ -24362,7 +24362,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-31 11:00:00	149	Architectural and Fine Arts Library 3	146	Avery	26
 2014-10-31 11:00:00	134	Butler Library 6	103	Butler	27
 2014-10-31 11:00:00	138	Butler Library stk	103	Butler	11
-2014-10-31 11:00:00	145	Science and Engineering Library	15	Mudd	66
+2014-10-31 11:00:00	145	Science and Engineering Library	15	Northwest Corner Building	66
 2014-10-31 11:00:00	155	JJ's Place	75	John Jay	5
 2014-10-31 11:00:00	133	Butler Library 5	103	Butler	48
 2014-10-31 11:00:00	151	Lerner 2	84	Lerner	34
@@ -24376,7 +24376,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-31 11:15:00	149	Architectural and Fine Arts Library 3	146	Avery	31
 2014-10-31 11:15:00	134	Butler Library 6	103	Butler	30
 2014-10-31 11:15:00	138	Butler Library stk	103	Butler	7
-2014-10-31 11:15:00	145	Science and Engineering Library	15	Mudd	65
+2014-10-31 11:15:00	145	Science and Engineering Library	15	Northwest Corner Building	65
 2014-10-31 11:15:00	131	Butler Library 3	103	Butler	135
 2014-10-31 11:15:00	139	Lehman Library 2	79	Lehman LIbrary	44
 2014-10-31 11:15:00	144	Starr East Asian Library	62	East Asian Library	65
@@ -24398,7 +24398,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-31 11:30:00	149	Architectural and Fine Arts Library 3	146	Avery	38
 2014-10-31 11:30:00	134	Butler Library 6	103	Butler	33
 2014-10-31 11:30:00	138	Butler Library stk	103	Butler	17
-2014-10-31 11:30:00	145	Science and Engineering Library	15	Mudd	72
+2014-10-31 11:30:00	145	Science and Engineering Library	15	Northwest Corner Building	72
 2014-10-31 11:30:00	131	Butler Library 3	103	Butler	133
 2014-10-31 11:30:00	139	Lehman Library 2	79	Lehman LIbrary	40
 2014-10-31 11:30:00	144	Starr East Asian Library	62	East Asian Library	78
@@ -24424,7 +24424,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-31 11:45:00	149	Architectural and Fine Arts Library 3	146	Avery	46
 2014-10-31 11:45:00	134	Butler Library 6	103	Butler	36
 2014-10-31 11:45:00	138	Butler Library stk	103	Butler	16
-2014-10-31 11:45:00	145	Science and Engineering Library	15	Mudd	71
+2014-10-31 11:45:00	145	Science and Engineering Library	15	Northwest Corner Building	71
 2014-10-31 11:45:00	155	JJ's Place	75	John Jay	5
 2014-10-31 11:45:00	133	Butler Library 5	103	Butler	69
 2014-10-31 11:45:00	151	Lerner 2	84	Lerner	53
@@ -24438,7 +24438,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-31 12:00:00	149	Architectural and Fine Arts Library 3	146	Avery	41
 2014-10-31 12:00:00	134	Butler Library 6	103	Butler	38
 2014-10-31 12:00:00	138	Butler Library stk	103	Butler	17
-2014-10-31 12:00:00	145	Science and Engineering Library	15	Mudd	81
+2014-10-31 12:00:00	145	Science and Engineering Library	15	Northwest Corner Building	81
 2014-10-31 12:00:00	131	Butler Library 3	103	Butler	152
 2014-10-31 12:00:00	139	Lehman Library 2	79	Lehman LIbrary	40
 2014-10-31 12:00:00	144	Starr East Asian Library	62	East Asian Library	65
@@ -24473,7 +24473,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-31 12:15:00	149	Architectural and Fine Arts Library 3	146	Avery	45
 2014-10-31 12:15:00	134	Butler Library 6	103	Butler	41
 2014-10-31 12:15:00	138	Butler Library stk	103	Butler	16
-2014-10-31 12:15:00	145	Science and Engineering Library	15	Mudd	76
+2014-10-31 12:15:00	145	Science and Engineering Library	15	Northwest Corner Building	76
 2014-10-31 12:15:00	155	JJ's Place	75	John Jay	7
 2014-10-31 12:15:00	133	Butler Library 5	103	Butler	82
 2014-10-31 12:15:00	151	Lerner 2	84	Lerner	71
@@ -24495,7 +24495,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-31 12:30:00	149	Architectural and Fine Arts Library 3	146	Avery	47
 2014-10-31 12:30:00	134	Butler Library 6	103	Butler	35
 2014-10-31 12:30:00	138	Butler Library stk	103	Butler	10
-2014-10-31 12:30:00	145	Science and Engineering Library	15	Mudd	72
+2014-10-31 12:30:00	145	Science and Engineering Library	15	Northwest Corner Building	72
 2014-10-31 12:30:00	155	JJ's Place	75	John Jay	22
 2014-10-31 12:30:00	133	Butler Library 5	103	Butler	78
 2014-10-31 12:30:00	151	Lerner 2	84	Lerner	86
@@ -24514,7 +24514,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-31 12:45:00	149	Architectural and Fine Arts Library 3	146	Avery	43
 2014-10-31 12:45:00	134	Butler Library 6	103	Butler	30
 2014-10-31 12:45:00	138	Butler Library stk	103	Butler	10
-2014-10-31 12:45:00	145	Science and Engineering Library	15	Mudd	68
+2014-10-31 12:45:00	145	Science and Engineering Library	15	Northwest Corner Building	68
 2014-10-31 12:45:00	131	Butler Library 3	103	Butler	139
 2014-10-31 12:45:00	139	Lehman Library 2	79	Lehman LIbrary	40
 2014-10-31 12:45:00	144	Starr East Asian Library	62	East Asian Library	57
@@ -24542,7 +24542,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-31 13:00:00	149	Architectural and Fine Arts Library 3	146	Avery	51
 2014-10-31 13:00:00	134	Butler Library 6	103	Butler	25
 2014-10-31 13:00:00	138	Butler Library stk	103	Butler	10
-2014-10-31 13:00:00	145	Science and Engineering Library	15	Mudd	73
+2014-10-31 13:00:00	145	Science and Engineering Library	15	Northwest Corner Building	73
 2014-10-31 13:15:00	131	Butler Library 3	103	Butler	162
 2014-10-31 13:15:00	139	Lehman Library 2	79	Lehman LIbrary	33
 2014-10-31 13:15:00	144	Starr East Asian Library	62	East Asian Library	82
@@ -24556,7 +24556,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-31 13:15:00	149	Architectural and Fine Arts Library 3	146	Avery	49
 2014-10-31 13:15:00	134	Butler Library 6	103	Butler	27
 2014-10-31 13:15:00	138	Butler Library stk	103	Butler	10
-2014-10-31 13:15:00	145	Science and Engineering Library	15	Mudd	70
+2014-10-31 13:15:00	145	Science and Engineering Library	15	Northwest Corner Building	70
 2014-10-31 13:15:00	155	JJ's Place	75	John Jay	45
 2014-10-31 13:15:00	133	Butler Library 5	103	Butler	81
 2014-10-31 13:15:00	151	Lerner 2	84	Lerner	106
@@ -24586,7 +24586,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-31 13:30:00	149	Architectural and Fine Arts Library 3	146	Avery	40
 2014-10-31 13:30:00	134	Butler Library 6	103	Butler	31
 2014-10-31 13:30:00	138	Butler Library stk	103	Butler	12
-2014-10-31 13:30:00	145	Science and Engineering Library	15	Mudd	68
+2014-10-31 13:30:00	145	Science and Engineering Library	15	Northwest Corner Building	68
 2014-10-31 13:45:00	131	Butler Library 3	103	Butler	166
 2014-10-31 13:45:00	139	Lehman Library 2	79	Lehman LIbrary	34
 2014-10-31 13:45:00	144	Starr East Asian Library	62	East Asian Library	94
@@ -24600,7 +24600,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-31 13:45:00	149	Architectural and Fine Arts Library 3	146	Avery	41
 2014-10-31 13:45:00	134	Butler Library 6	103	Butler	39
 2014-10-31 13:45:00	138	Butler Library stk	103	Butler	11
-2014-10-31 13:45:00	145	Science and Engineering Library	15	Mudd	65
+2014-10-31 13:45:00	145	Science and Engineering Library	15	Northwest Corner Building	65
 2014-10-31 13:45:00	155	JJ's Place	75	John Jay	54
 2014-10-31 13:45:00	133	Butler Library 5	103	Butler	88
 2014-10-31 13:45:00	151	Lerner 2	84	Lerner	98
@@ -24627,7 +24627,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-31 14:00:00	149	Architectural and Fine Arts Library 3	146	Avery	42
 2014-10-31 14:00:00	134	Butler Library 6	103	Butler	45
 2014-10-31 14:00:00	138	Butler Library stk	103	Butler	12
-2014-10-31 14:00:00	145	Science and Engineering Library	15	Mudd	57
+2014-10-31 14:00:00	145	Science and Engineering Library	15	Northwest Corner Building	57
 2014-10-31 14:00:00	155	JJ's Place	75	John Jay	36
 2014-10-31 14:00:00	133	Butler Library 5	103	Butler	83
 2014-10-31 14:00:00	151	Lerner 2	84	Lerner	71
@@ -24636,7 +24636,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-31 14:15:00	149	Architectural and Fine Arts Library 3	146	Avery	41
 2014-10-31 14:15:00	134	Butler Library 6	103	Butler	44
 2014-10-31 14:15:00	138	Butler Library stk	103	Butler	13
-2014-10-31 14:15:00	145	Science and Engineering Library	15	Mudd	67
+2014-10-31 14:15:00	145	Science and Engineering Library	15	Northwest Corner Building	67
 2014-10-31 14:15:00	155	JJ's Place	75	John Jay	33
 2014-10-31 14:15:00	133	Butler Library 5	103	Butler	79
 2014-10-31 14:15:00	151	Lerner 2	84	Lerner	57
@@ -24671,7 +24671,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-31 14:30:00	149	Architectural and Fine Arts Library 3	146	Avery	41
 2014-10-31 14:30:00	134	Butler Library 6	103	Butler	52
 2014-10-31 14:30:00	138	Butler Library stk	103	Butler	14
-2014-10-31 14:30:00	145	Science and Engineering Library	15	Mudd	64
+2014-10-31 14:30:00	145	Science and Engineering Library	15	Northwest Corner Building	64
 2014-10-31 14:30:00	155	JJ's Place	75	John Jay	52
 2014-10-31 14:30:00	133	Butler Library 5	103	Butler	74
 2014-10-31 14:30:00	151	Lerner 2	84	Lerner	64
@@ -24696,7 +24696,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-31 14:45:00	149	Architectural and Fine Arts Library 3	146	Avery	51
 2014-10-31 14:45:00	134	Butler Library 6	103	Butler	47
 2014-10-31 14:45:00	138	Butler Library stk	103	Butler	20
-2014-10-31 14:45:00	145	Science and Engineering Library	15	Mudd	61
+2014-10-31 14:45:00	145	Science and Engineering Library	15	Northwest Corner Building	61
 2014-10-31 15:00:00	154	Lerner 5	84	Lerner	52
 2014-10-31 15:00:00	125	John Jay Dining Hall	75	John Jay	13
 2014-10-31 15:00:00	147	Architectural and Fine Arts Library 1	146	Avery	15
@@ -24711,7 +24711,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-31 15:00:00	149	Architectural and Fine Arts Library 3	146	Avery	52
 2014-10-31 15:00:00	134	Butler Library 6	103	Butler	54
 2014-10-31 15:00:00	138	Butler Library stk	103	Butler	21
-2014-10-31 15:00:00	145	Science and Engineering Library	15	Mudd	62
+2014-10-31 15:00:00	145	Science and Engineering Library	15	Northwest Corner Building	62
 2014-10-31 15:00:00	131	Butler Library 3	103	Butler	179
 2014-10-31 15:00:00	139	Lehman Library 2	79	Lehman LIbrary	21
 2014-10-31 15:00:00	144	Starr East Asian Library	62	East Asian Library	88
@@ -24723,7 +24723,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-31 15:15:00	149	Architectural and Fine Arts Library 3	146	Avery	58
 2014-10-31 15:15:00	134	Butler Library 6	103	Butler	58
 2014-10-31 15:15:00	138	Butler Library stk	103	Butler	16
-2014-10-31 15:15:00	145	Science and Engineering Library	15	Mudd	68
+2014-10-31 15:15:00	145	Science and Engineering Library	15	Northwest Corner Building	68
 2014-10-31 15:15:00	155	JJ's Place	75	John Jay	69
 2014-10-31 15:15:00	133	Butler Library 5	103	Butler	65
 2014-10-31 15:15:00	151	Lerner 2	84	Lerner	57
@@ -24761,7 +24761,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-31 15:30:00	149	Architectural and Fine Arts Library 3	146	Avery	62
 2014-10-31 15:30:00	134	Butler Library 6	103	Butler	57
 2014-10-31 15:30:00	138	Butler Library stk	103	Butler	21
-2014-10-31 15:30:00	145	Science and Engineering Library	15	Mudd	61
+2014-10-31 15:30:00	145	Science and Engineering Library	15	Northwest Corner Building	61
 2014-10-31 15:45:00	154	Lerner 5	84	Lerner	46
 2014-10-31 15:45:00	125	John Jay Dining Hall	75	John Jay	7
 2014-10-31 15:45:00	147	Architectural and Fine Arts Library 1	146	Avery	10
@@ -24777,7 +24777,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-31 15:45:00	149	Architectural and Fine Arts Library 3	146	Avery	61
 2014-10-31 15:45:00	134	Butler Library 6	103	Butler	59
 2014-10-31 15:45:00	138	Butler Library stk	103	Butler	18
-2014-10-31 15:45:00	145	Science and Engineering Library	15	Mudd	73
+2014-10-31 15:45:00	145	Science and Engineering Library	15	Northwest Corner Building	73
 2014-10-31 15:45:00	131	Butler Library 3	103	Butler	187
 2014-10-31 15:45:00	139	Lehman Library 2	79	Lehman LIbrary	25
 2014-10-31 15:45:00	144	Starr East Asian Library	62	East Asian Library	80
@@ -24802,7 +24802,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-31 16:00:00	149	Architectural and Fine Arts Library 3	146	Avery	66
 2014-10-31 16:00:00	134	Butler Library 6	103	Butler	63
 2014-10-31 16:00:00	138	Butler Library stk	103	Butler	19
-2014-10-31 16:00:00	145	Science and Engineering Library	15	Mudd	77
+2014-10-31 16:00:00	145	Science and Engineering Library	15	Northwest Corner Building	77
 2014-10-31 16:00:00	155	JJ's Place	75	John Jay	40
 2014-10-31 16:00:00	133	Butler Library 5	103	Butler	69
 2014-10-31 16:00:00	151	Lerner 2	84	Lerner	79
@@ -24827,13 +24827,13 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-31 16:15:00	149	Architectural and Fine Arts Library 3	146	Avery	66
 2014-10-31 16:15:00	134	Butler Library 6	103	Butler	63
 2014-10-31 16:15:00	138	Butler Library stk	103	Butler	18
-2014-10-31 16:15:00	145	Science and Engineering Library	15	Mudd	76
+2014-10-31 16:15:00	145	Science and Engineering Library	15	Northwest Corner Building	76
 2014-10-31 16:30:00	152	Lerner 3	84	Lerner	42
 2014-10-31 16:30:00	130	Butler Library 2	103	Butler	256
 2014-10-31 16:30:00	149	Architectural and Fine Arts Library 3	146	Avery	67
 2014-10-31 16:30:00	134	Butler Library 6	103	Butler	68
 2014-10-31 16:30:00	138	Butler Library stk	103	Butler	14
-2014-10-31 16:30:00	145	Science and Engineering Library	15	Mudd	72
+2014-10-31 16:30:00	145	Science and Engineering Library	15	Northwest Corner Building	72
 2014-10-31 16:30:00	155	JJ's Place	75	John Jay	33
 2014-10-31 16:30:00	133	Butler Library 5	103	Butler	61
 2014-10-31 16:30:00	151	Lerner 2	84	Lerner	60
@@ -24865,7 +24865,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-31 16:45:00	149	Architectural and Fine Arts Library 3	146	Avery	51
 2014-10-31 16:45:00	134	Butler Library 6	103	Butler	56
 2014-10-31 16:45:00	138	Butler Library stk	103	Butler	17
-2014-10-31 16:45:00	145	Science and Engineering Library	15	Mudd	60
+2014-10-31 16:45:00	145	Science and Engineering Library	15	Northwest Corner Building	60
 2014-10-31 16:45:00	131	Butler Library 3	103	Butler	190
 2014-10-31 16:45:00	139	Lehman Library 2	79	Lehman LIbrary	24
 2014-10-31 16:45:00	144	Starr East Asian Library	62	East Asian Library	85
@@ -24877,7 +24877,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-31 17:00:00	149	Architectural and Fine Arts Library 3	146	Avery	56
 2014-10-31 17:00:00	134	Butler Library 6	103	Butler	57
 2014-10-31 17:00:00	138	Butler Library stk	103	Butler	19
-2014-10-31 17:00:00	145	Science and Engineering Library	15	Mudd	64
+2014-10-31 17:00:00	145	Science and Engineering Library	15	Northwest Corner Building	64
 2014-10-31 17:00:00	155	JJ's Place	75	John Jay	56
 2014-10-31 17:00:00	133	Butler Library 5	103	Butler	61
 2014-10-31 17:00:00	151	Lerner 2	84	Lerner	59
@@ -24899,7 +24899,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-31 17:15:00	149	Architectural and Fine Arts Library 3	146	Avery	52
 2014-10-31 17:15:00	134	Butler Library 6	103	Butler	50
 2014-10-31 17:15:00	138	Butler Library stk	103	Butler	18
-2014-10-31 17:15:00	145	Science and Engineering Library	15	Mudd	65
+2014-10-31 17:15:00	145	Science and Engineering Library	15	Northwest Corner Building	65
 2014-10-31 17:15:00	131	Butler Library 3	103	Butler	167
 2014-10-31 17:15:00	139	Lehman Library 2	79	Lehman LIbrary	22
 2014-10-31 17:15:00	144	Starr East Asian Library	62	East Asian Library	66
@@ -24938,7 +24938,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-31 17:30:00	149	Architectural and Fine Arts Library 3	146	Avery	39
 2014-10-31 17:30:00	134	Butler Library 6	103	Butler	53
 2014-10-31 17:30:00	138	Butler Library stk	103	Butler	15
-2014-10-31 17:30:00	145	Science and Engineering Library	15	Mudd	62
+2014-10-31 17:30:00	145	Science and Engineering Library	15	Northwest Corner Building	62
 2014-10-31 17:45:00	131	Butler Library 3	103	Butler	159
 2014-10-31 17:45:00	139	Lehman Library 2	79	Lehman LIbrary	18
 2014-10-31 17:45:00	144	Starr East Asian Library	62	East Asian Library	55
@@ -24952,7 +24952,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-31 17:45:00	149	Architectural and Fine Arts Library 3	146	Avery	41
 2014-10-31 17:45:00	134	Butler Library 6	103	Butler	52
 2014-10-31 17:45:00	138	Butler Library stk	103	Butler	15
-2014-10-31 17:45:00	145	Science and Engineering Library	15	Mudd	61
+2014-10-31 17:45:00	145	Science and Engineering Library	15	Northwest Corner Building	61
 2014-10-31 17:45:00	155	JJ's Place	75	John Jay	53
 2014-10-31 17:45:00	133	Butler Library 5	103	Butler	54
 2014-10-31 17:45:00	151	Lerner 2	84	Lerner	91
@@ -24971,7 +24971,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-31 18:00:00	149	Architectural and Fine Arts Library 3	146	Avery	43
 2014-10-31 18:00:00	134	Butler Library 6	103	Butler	46
 2014-10-31 18:00:00	138	Butler Library stk	103	Butler	20
-2014-10-31 18:00:00	145	Science and Engineering Library	15	Mudd	58
+2014-10-31 18:00:00	145	Science and Engineering Library	15	Northwest Corner Building	58
 2014-10-31 18:00:00	131	Butler Library 3	103	Butler	140
 2014-10-31 18:00:00	139	Lehman Library 2	79	Lehman LIbrary	17
 2014-10-31 18:00:00	144	Starr East Asian Library	62	East Asian Library	45
@@ -24988,7 +24988,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-31 18:15:00	149	Architectural and Fine Arts Library 3	146	Avery	31
 2014-10-31 18:15:00	134	Butler Library 6	103	Butler	32
 2014-10-31 18:15:00	138	Butler Library stk	103	Butler	19
-2014-10-31 18:15:00	145	Science and Engineering Library	15	Mudd	47
+2014-10-31 18:15:00	145	Science and Engineering Library	15	Northwest Corner Building	47
 2014-10-31 18:15:00	131	Butler Library 3	103	Butler	136
 2014-10-31 18:15:00	139	Lehman Library 2	79	Lehman LIbrary	14
 2014-10-31 18:15:00	144	Starr East Asian Library	62	East Asian Library	36
@@ -25010,7 +25010,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-31 18:30:00	149	Architectural and Fine Arts Library 3	146	Avery	20
 2014-10-31 18:30:00	134	Butler Library 6	103	Butler	33
 2014-10-31 18:30:00	138	Butler Library stk	103	Butler	19
-2014-10-31 18:30:00	145	Science and Engineering Library	15	Mudd	45
+2014-10-31 18:30:00	145	Science and Engineering Library	15	Northwest Corner Building	45
 2014-10-31 18:30:00	155	JJ's Place	75	John Jay	62
 2014-10-31 18:30:00	133	Butler Library 5	103	Butler	43
 2014-10-31 18:30:00	151	Lerner 2	84	Lerner	58
@@ -25040,7 +25040,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-31 18:45:00	149	Architectural and Fine Arts Library 3	146	Avery	21
 2014-10-31 18:45:00	134	Butler Library 6	103	Butler	30
 2014-10-31 18:45:00	138	Butler Library stk	103	Butler	13
-2014-10-31 18:45:00	145	Science and Engineering Library	15	Mudd	47
+2014-10-31 18:45:00	145	Science and Engineering Library	15	Northwest Corner Building	47
 2014-10-31 18:45:00	155	JJ's Place	75	John Jay	90
 2014-10-31 18:45:00	133	Butler Library 5	103	Butler	33
 2014-10-31 18:45:00	151	Lerner 2	84	Lerner	70
@@ -25070,7 +25070,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-31 19:00:00	149	Architectural and Fine Arts Library 3	146	Avery	16
 2014-10-31 19:00:00	134	Butler Library 6	103	Butler	28
 2014-10-31 19:00:00	138	Butler Library stk	103	Butler	11
-2014-10-31 19:00:00	145	Science and Engineering Library	15	Mudd	45
+2014-10-31 19:00:00	145	Science and Engineering Library	15	Northwest Corner Building	45
 2014-10-31 19:15:00	154	Lerner 5	84	Lerner	23
 2014-10-31 19:15:00	125	John Jay Dining Hall	75	John Jay	36
 2014-10-31 19:15:00	147	Architectural and Fine Arts Library 1	146	Avery	3
@@ -25086,7 +25086,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-31 19:15:00	149	Architectural and Fine Arts Library 3	146	Avery	12
 2014-10-31 19:15:00	134	Butler Library 6	103	Butler	26
 2014-10-31 19:15:00	138	Butler Library stk	103	Butler	9
-2014-10-31 19:15:00	145	Science and Engineering Library	15	Mudd	49
+2014-10-31 19:15:00	145	Science and Engineering Library	15	Northwest Corner Building	49
 2014-10-31 19:15:00	131	Butler Library 3	103	Butler	116
 2014-10-31 19:15:00	139	Lehman Library 2	79	Lehman LIbrary	2
 2014-10-31 19:15:00	144	Starr East Asian Library	62	East Asian Library	17
@@ -25098,7 +25098,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-31 19:30:00	149	Architectural and Fine Arts Library 3	146	Avery	14
 2014-10-31 19:30:00	134	Butler Library 6	103	Butler	32
 2014-10-31 19:30:00	138	Butler Library stk	103	Butler	9
-2014-10-31 19:30:00	145	Science and Engineering Library	15	Mudd	42
+2014-10-31 19:30:00	145	Science and Engineering Library	15	Northwest Corner Building	42
 2014-10-31 19:30:00	155	JJ's Place	75	John Jay	88
 2014-10-31 19:30:00	133	Butler Library 5	103	Butler	33
 2014-10-31 19:30:00	151	Lerner 2	84	Lerner	61
@@ -25133,7 +25133,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-31 19:45:00	149	Architectural and Fine Arts Library 3	146	Avery	14
 2014-10-31 19:45:00	134	Butler Library 6	103	Butler	30
 2014-10-31 19:45:00	138	Butler Library stk	103	Butler	8
-2014-10-31 19:45:00	145	Science and Engineering Library	15	Mudd	36
+2014-10-31 19:45:00	145	Science and Engineering Library	15	Northwest Corner Building	36
 2014-10-31 19:45:00	155	JJ's Place	75	John Jay	93
 2014-10-31 19:45:00	133	Butler Library 5	103	Butler	29
 2014-10-31 19:45:00	151	Lerner 2	84	Lerner	47
@@ -25155,7 +25155,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-31 20:00:00	149	Architectural and Fine Arts Library 3	146	Avery	11
 2014-10-31 20:00:00	134	Butler Library 6	103	Butler	26
 2014-10-31 20:00:00	138	Butler Library stk	103	Butler	7
-2014-10-31 20:00:00	145	Science and Engineering Library	15	Mudd	36
+2014-10-31 20:00:00	145	Science and Engineering Library	15	Northwest Corner Building	36
 2014-10-31 20:00:00	155	JJ's Place	75	John Jay	103
 2014-10-31 20:00:00	133	Butler Library 5	103	Butler	29
 2014-10-31 20:00:00	151	Lerner 2	84	Lerner	49
@@ -25174,7 +25174,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-31 20:15:00	149	Architectural and Fine Arts Library 3	146	Avery	9
 2014-10-31 20:15:00	134	Butler Library 6	103	Butler	22
 2014-10-31 20:15:00	138	Butler Library stk	103	Butler	9
-2014-10-31 20:15:00	145	Science and Engineering Library	15	Mudd	35
+2014-10-31 20:15:00	145	Science and Engineering Library	15	Northwest Corner Building	35
 2014-10-31 20:15:00	131	Butler Library 3	103	Butler	79
 2014-10-31 20:15:00	139	Lehman Library 2	79	Lehman LIbrary	2
 2014-10-31 20:15:00	144	Starr East Asian Library	62	East Asian Library	9
@@ -25199,7 +25199,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-31 20:30:00	149	Architectural and Fine Arts Library 3	146	Avery	12
 2014-10-31 20:30:00	134	Butler Library 6	103	Butler	18
 2014-10-31 20:30:00	138	Butler Library stk	103	Butler	7
-2014-10-31 20:30:00	145	Science and Engineering Library	15	Mudd	26
+2014-10-31 20:30:00	145	Science and Engineering Library	15	Northwest Corner Building	26
 2014-10-31 20:30:00	155	JJ's Place	75	John Jay	34
 2014-10-31 20:30:00	133	Butler Library 5	103	Butler	33
 2014-10-31 20:30:00	151	Lerner 2	84	Lerner	40
@@ -25222,7 +25222,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-31 20:45:00	149	Architectural and Fine Arts Library 3	146	Avery	11
 2014-10-31 20:45:00	134	Butler Library 6	103	Butler	15
 2014-10-31 20:45:00	138	Butler Library stk	103	Butler	6
-2014-10-31 20:45:00	145	Science and Engineering Library	15	Mudd	25
+2014-10-31 20:45:00	145	Science and Engineering Library	15	Northwest Corner Building	25
 2014-10-31 20:45:00	155	JJ's Place	75	John Jay	6
 2014-10-31 20:45:00	133	Butler Library 5	103	Butler	20
 2014-10-31 20:45:00	151	Lerner 2	84	Lerner	32
@@ -25247,7 +25247,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-31 21:00:00	149	Architectural and Fine Arts Library 3	146	Avery	9
 2014-10-31 21:00:00	134	Butler Library 6	103	Butler	5
 2014-10-31 21:00:00	138	Butler Library stk	103	Butler	7
-2014-10-31 21:00:00	145	Science and Engineering Library	15	Mudd	33
+2014-10-31 21:00:00	145	Science and Engineering Library	15	Northwest Corner Building	33
 2014-10-31 21:15:00	131	Butler Library 3	103	Butler	77
 2014-10-31 21:15:00	139	Lehman Library 2	79	Lehman LIbrary	3
 2014-10-31 21:15:00	144	Starr East Asian Library	62	East Asian Library	12
@@ -25261,7 +25261,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-31 21:15:00	149	Architectural and Fine Arts Library 3	146	Avery	2
 2014-10-31 21:15:00	134	Butler Library 6	103	Butler	5
 2014-10-31 21:15:00	138	Butler Library stk	103	Butler	4
-2014-10-31 21:15:00	145	Science and Engineering Library	15	Mudd	37
+2014-10-31 21:15:00	145	Science and Engineering Library	15	Northwest Corner Building	37
 2014-10-31 21:15:00	155	JJ's Place	75	John Jay	1
 2014-10-31 21:15:00	133	Butler Library 5	103	Butler	12
 2014-10-31 21:15:00	151	Lerner 2	84	Lerner	37
@@ -25283,7 +25283,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-31 21:30:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-31 21:30:00	134	Butler Library 6	103	Butler	5
 2014-10-31 21:30:00	138	Butler Library stk	103	Butler	3
-2014-10-31 21:30:00	145	Science and Engineering Library	15	Mudd	38
+2014-10-31 21:30:00	145	Science and Engineering Library	15	Northwest Corner Building	38
 2014-10-31 21:30:00	155	JJ's Place	75	John Jay	2
 2014-10-31 21:30:00	133	Butler Library 5	103	Butler	11
 2014-10-31 21:30:00	151	Lerner 2	84	Lerner	32
@@ -25307,7 +25307,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-31 21:45:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-31 21:45:00	134	Butler Library 6	103	Butler	3
 2014-10-31 21:45:00	138	Butler Library stk	103	Butler	2
-2014-10-31 21:45:00	145	Science and Engineering Library	15	Mudd	31
+2014-10-31 21:45:00	145	Science and Engineering Library	15	Northwest Corner Building	31
 2014-10-31 21:45:00	131	Butler Library 3	103	Butler	86
 2014-10-31 21:45:00	139	Lehman Library 2	79	Lehman LIbrary	2
 2014-10-31 21:45:00	144	Starr East Asian Library	62	East Asian Library	10
@@ -25319,7 +25319,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-31 22:00:00	149	Architectural and Fine Arts Library 3	146	Avery	2
 2014-10-31 22:00:00	134	Butler Library 6	103	Butler	4
 2014-10-31 22:00:00	138	Butler Library stk	103	Butler	4
-2014-10-31 22:00:00	145	Science and Engineering Library	15	Mudd	28
+2014-10-31 22:00:00	145	Science and Engineering Library	15	Northwest Corner Building	28
 2014-10-31 22:00:00	131	Butler Library 3	103	Butler	85
 2014-10-31 22:00:00	139	Lehman Library 2	79	Lehman LIbrary	2
 2014-10-31 22:00:00	144	Starr East Asian Library	62	East Asian Library	14
@@ -25354,7 +25354,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-31 22:15:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-31 22:15:00	134	Butler Library 6	103	Butler	6
 2014-10-31 22:15:00	138	Butler Library stk	103	Butler	3
-2014-10-31 22:15:00	145	Science and Engineering Library	15	Mudd	28
+2014-10-31 22:15:00	145	Science and Engineering Library	15	Northwest Corner Building	28
 2014-10-31 22:15:00	155	JJ's Place	75	John Jay	1
 2014-10-31 22:15:00	133	Butler Library 5	103	Butler	14
 2014-10-31 22:15:00	151	Lerner 2	84	Lerner	31
@@ -25363,7 +25363,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-31 22:30:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-10-31 22:30:00	134	Butler Library 6	103	Butler	3
 2014-10-31 22:30:00	138	Butler Library stk	103	Butler	4
-2014-10-31 22:30:00	145	Science and Engineering Library	15	Mudd	30
+2014-10-31 22:30:00	145	Science and Engineering Library	15	Northwest Corner Building	30
 2014-10-31 22:30:00	131	Butler Library 3	103	Butler	84
 2014-10-31 22:30:00	139	Lehman Library 2	79	Lehman LIbrary	2
 2014-10-31 22:30:00	144	Starr East Asian Library	62	East Asian Library	9
@@ -25401,7 +25401,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-31 22:45:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-31 22:45:00	134	Butler Library 6	103	Butler	3
 2014-10-31 22:45:00	138	Butler Library stk	103	Butler	4
-2014-10-31 22:45:00	145	Science and Engineering Library	15	Mudd	33
+2014-10-31 22:45:00	145	Science and Engineering Library	15	Northwest Corner Building	33
 2014-10-31 23:00:00	131	Butler Library 3	103	Butler	81
 2014-10-31 23:00:00	139	Lehman Library 2	79	Lehman LIbrary	3
 2014-10-31 23:00:00	144	Starr East Asian Library	62	East Asian Library	4
@@ -25415,7 +25415,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-31 23:00:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-31 23:00:00	134	Butler Library 6	103	Butler	3
 2014-10-31 23:00:00	138	Butler Library stk	103	Butler	2
-2014-10-31 23:00:00	145	Science and Engineering Library	15	Mudd	26
+2014-10-31 23:00:00	145	Science and Engineering Library	15	Northwest Corner Building	26
 2014-10-31 23:00:00	155	JJ's Place	75	John Jay	2
 2014-10-31 23:00:00	133	Butler Library 5	103	Butler	10
 2014-10-31 23:00:00	151	Lerner 2	84	Lerner	30
@@ -25429,7 +25429,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-31 23:15:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-31 23:15:00	134	Butler Library 6	103	Butler	3
 2014-10-31 23:15:00	138	Butler Library stk	103	Butler	0
-2014-10-31 23:15:00	145	Science and Engineering Library	15	Mudd	19
+2014-10-31 23:15:00	145	Science and Engineering Library	15	Northwest Corner Building	19
 2014-10-31 23:15:00	155	JJ's Place	75	John Jay	2
 2014-10-31 23:15:00	133	Butler Library 5	103	Butler	12
 2014-10-31 23:15:00	151	Lerner 2	84	Lerner	32
@@ -25464,7 +25464,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-31 23:30:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-31 23:30:00	134	Butler Library 6	103	Butler	3
 2014-10-31 23:30:00	138	Butler Library stk	103	Butler	0
-2014-10-31 23:30:00	145	Science and Engineering Library	15	Mudd	18
+2014-10-31 23:30:00	145	Science and Engineering Library	15	Northwest Corner Building	18
 2014-10-31 23:30:00	155	JJ's Place	75	John Jay	2
 2014-10-31 23:30:00	133	Butler Library 5	103	Butler	8
 2014-10-31 23:30:00	151	Lerner 2	84	Lerner	28
@@ -25473,7 +25473,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-10-31 23:45:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-10-31 23:45:00	134	Butler Library 6	103	Butler	3
 2014-10-31 23:45:00	138	Butler Library stk	103	Butler	0
-2014-10-31 23:45:00	145	Science and Engineering Library	15	Mudd	13
+2014-10-31 23:45:00	145	Science and Engineering Library	15	Northwest Corner Building	13
 2014-10-31 23:45:00	131	Butler Library 3	103	Butler	75
 2014-10-31 23:45:00	139	Lehman Library 2	79	Lehman LIbrary	3
 2014-10-31 23:45:00	144	Starr East Asian Library	62	East Asian Library	4
@@ -25511,7 +25511,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-11-01 00:00:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-11-01 00:00:00	134	Butler Library 6	103	Butler	3
 2014-11-01 00:00:00	138	Butler Library stk	103	Butler	0
-2014-11-01 00:00:00	145	Science and Engineering Library	15	Mudd	12
+2014-11-01 00:00:00	145	Science and Engineering Library	15	Northwest Corner Building	12
 2014-11-01 00:15:00	154	Lerner 5	84	Lerner	25
 2014-11-01 00:15:00	125	John Jay Dining Hall	75	John Jay	3
 2014-11-01 00:15:00	147	Architectural and Fine Arts Library 1	146	Avery	2
@@ -25530,7 +25530,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-11-01 00:15:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-11-01 00:15:00	134	Butler Library 6	103	Butler	3
 2014-11-01 00:15:00	138	Butler Library stk	103	Butler	0
-2014-11-01 00:15:00	145	Science and Engineering Library	15	Mudd	5
+2014-11-01 00:15:00	145	Science and Engineering Library	15	Northwest Corner Building	5
 2014-11-01 00:15:00	155	JJ's Place	75	John Jay	1
 2014-11-01 00:15:00	133	Butler Library 5	103	Butler	7
 2014-11-01 00:15:00	151	Lerner 2	84	Lerner	22
@@ -25555,7 +25555,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-11-01 00:30:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-11-01 00:30:00	134	Butler Library 6	103	Butler	3
 2014-11-01 00:30:00	138	Butler Library stk	103	Butler	0
-2014-11-01 00:30:00	145	Science and Engineering Library	15	Mudd	5
+2014-11-01 00:30:00	145	Science and Engineering Library	15	Northwest Corner Building	5
 2014-11-01 00:45:00	131	Butler Library 3	103	Butler	54
 2014-11-01 00:45:00	139	Lehman Library 2	79	Lehman LIbrary	3
 2014-11-01 00:45:00	144	Starr East Asian Library	62	East Asian Library	3
@@ -25577,7 +25577,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-11-01 00:45:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-11-01 00:45:00	134	Butler Library 6	103	Butler	2
 2014-11-01 00:45:00	138	Butler Library stk	103	Butler	2
-2014-11-01 00:45:00	145	Science and Engineering Library	15	Mudd	5
+2014-11-01 00:45:00	145	Science and Engineering Library	15	Northwest Corner Building	5
 2014-11-01 01:00:00	154	Lerner 5	84	Lerner	19
 2014-11-01 01:00:00	125	John Jay Dining Hall	75	John Jay	1
 2014-11-01 01:00:00	147	Architectural and Fine Arts Library 1	146	Avery	0
@@ -25596,7 +25596,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-11-01 01:00:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-11-01 01:00:00	134	Butler Library 6	103	Butler	3
 2014-11-01 01:00:00	138	Butler Library stk	103	Butler	1
-2014-11-01 01:00:00	145	Science and Engineering Library	15	Mudd	4
+2014-11-01 01:00:00	145	Science and Engineering Library	15	Northwest Corner Building	4
 2014-11-01 01:00:00	155	JJ's Place	75	John Jay	2
 2014-11-01 01:00:00	133	Butler Library 5	103	Butler	8
 2014-11-01 01:00:00	151	Lerner 2	84	Lerner	25
@@ -25613,7 +25613,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-11-01 01:15:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-11-01 01:15:00	134	Butler Library 6	103	Butler	3
 2014-11-01 01:15:00	138	Butler Library stk	103	Butler	2
-2014-11-01 01:15:00	145	Science and Engineering Library	15	Mudd	4
+2014-11-01 01:15:00	145	Science and Engineering Library	15	Northwest Corner Building	4
 2014-11-01 01:15:00	155	JJ's Place	75	John Jay	1
 2014-11-01 01:15:00	133	Butler Library 5	103	Butler	14
 2014-11-01 01:15:00	151	Lerner 2	84	Lerner	20
@@ -25643,7 +25643,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-11-01 01:30:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-11-01 01:30:00	134	Butler Library 6	103	Butler	3
 2014-11-01 01:30:00	138	Butler Library stk	103	Butler	2
-2014-11-01 01:30:00	145	Science and Engineering Library	15	Mudd	3
+2014-11-01 01:30:00	145	Science and Engineering Library	15	Northwest Corner Building	3
 2014-11-01 01:45:00	155	JJ's Place	75	John Jay	2
 2014-11-01 01:45:00	23	Uris/Watson Library	2	Uris	3
 2014-11-01 01:45:00	133	Butler Library 5	103	Butler	8
@@ -25654,7 +25654,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-11-01 01:45:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-11-01 01:45:00	134	Butler Library 6	103	Butler	3
 2014-11-01 01:45:00	138	Butler Library stk	103	Butler	0
-2014-11-01 01:45:00	145	Science and Engineering Library	15	Mudd	2
+2014-11-01 01:45:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-11-01 01:45:00	131	Butler Library 3	103	Butler	32
 2014-11-01 01:45:00	139	Lehman Library 2	79	Lehman LIbrary	3
 2014-11-01 01:45:00	144	Starr East Asian Library	62	East Asian Library	3
@@ -25687,13 +25687,13 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-11-01 02:00:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-11-01 02:00:00	134	Butler Library 6	103	Butler	3
 2014-11-01 02:00:00	138	Butler Library stk	103	Butler	0
-2014-11-01 02:00:00	145	Science and Engineering Library	15	Mudd	2
+2014-11-01 02:00:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-11-01 02:15:00	152	Lerner 3	84	Lerner	6
 2014-11-01 02:15:00	130	Butler Library 2	103	Butler	26
 2014-11-01 02:15:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-11-01 02:15:00	134	Butler Library 6	103	Butler	5
 2014-11-01 02:15:00	138	Butler Library stk	103	Butler	0
-2014-11-01 02:15:00	145	Science and Engineering Library	15	Mudd	2
+2014-11-01 02:15:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-11-01 02:15:00	155	JJ's Place	75	John Jay	1
 2014-11-01 02:15:00	133	Butler Library 5	103	Butler	7
 2014-11-01 02:15:00	151	Lerner 2	84	Lerner	12
@@ -25731,7 +25731,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-11-01 02:30:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-11-01 02:30:00	134	Butler Library 6	103	Butler	2
 2014-11-01 02:30:00	138	Butler Library stk	103	Butler	1
-2014-11-01 02:30:00	145	Science and Engineering Library	15	Mudd	2
+2014-11-01 02:30:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-11-01 02:45:00	131	Butler Library 3	103	Butler	20
 2014-11-01 02:45:00	139	Lehman Library 2	79	Lehman LIbrary	4
 2014-11-01 02:45:00	144	Starr East Asian Library	62	East Asian Library	1
@@ -25745,7 +25745,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-11-01 02:45:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-11-01 02:45:00	134	Butler Library 6	103	Butler	2
 2014-11-01 02:45:00	138	Butler Library stk	103	Butler	1
-2014-11-01 02:45:00	145	Science and Engineering Library	15	Mudd	2
+2014-11-01 02:45:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-11-01 02:45:00	155	JJ's Place	75	John Jay	1
 2014-11-01 02:45:00	133	Butler Library 5	103	Butler	8
 2014-11-01 02:45:00	151	Lerner 2	84	Lerner	10
@@ -25764,7 +25764,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-11-01 03:00:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-11-01 03:00:00	134	Butler Library 6	103	Butler	1
 2014-11-01 03:00:00	138	Butler Library stk	103	Butler	2
-2014-11-01 03:00:00	145	Science and Engineering Library	15	Mudd	2
+2014-11-01 03:00:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-11-01 03:00:00	131	Butler Library 3	103	Butler	20
 2014-11-01 03:00:00	139	Lehman Library 2	79	Lehman LIbrary	4
 2014-11-01 03:00:00	144	Starr East Asian Library	62	East Asian Library	1
@@ -25786,7 +25786,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-11-01 03:15:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-11-01 03:15:00	134	Butler Library 6	103	Butler	2
 2014-11-01 03:15:00	138	Butler Library stk	103	Butler	1
-2014-11-01 03:15:00	145	Science and Engineering Library	15	Mudd	2
+2014-11-01 03:15:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-11-01 03:15:00	131	Butler Library 3	103	Butler	19
 2014-11-01 03:15:00	139	Lehman Library 2	79	Lehman LIbrary	5
 2014-11-01 03:15:00	144	Starr East Asian Library	62	East Asian Library	1
@@ -25808,7 +25808,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-11-01 03:30:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-11-01 03:30:00	134	Butler Library 6	103	Butler	2
 2014-11-01 03:30:00	138	Butler Library stk	103	Butler	1
-2014-11-01 03:30:00	145	Science and Engineering Library	15	Mudd	1
+2014-11-01 03:30:00	145	Science and Engineering Library	15	Northwest Corner Building	1
 2014-11-01 03:30:00	131	Butler Library 3	103	Butler	19
 2014-11-01 03:30:00	139	Lehman Library 2	79	Lehman LIbrary	4
 2014-11-01 03:30:00	144	Starr East Asian Library	62	East Asian Library	3
@@ -25825,7 +25825,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-11-01 03:45:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-11-01 03:45:00	134	Butler Library 6	103	Butler	1
 2014-11-01 03:45:00	138	Butler Library stk	103	Butler	1
-2014-11-01 03:45:00	145	Science and Engineering Library	15	Mudd	2
+2014-11-01 03:45:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-11-01 03:45:00	131	Butler Library 3	103	Butler	19
 2014-11-01 03:45:00	139	Lehman Library 2	79	Lehman LIbrary	4
 2014-11-01 03:45:00	144	Starr East Asian Library	62	East Asian Library	1
@@ -25855,7 +25855,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-11-01 04:00:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-11-01 04:00:00	134	Butler Library 6	103	Butler	1
 2014-11-01 04:00:00	138	Butler Library stk	103	Butler	2
-2014-11-01 04:00:00	145	Science and Engineering Library	15	Mudd	2
+2014-11-01 04:00:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-11-01 04:00:00	155	JJ's Place	75	John Jay	1
 2014-11-01 04:00:00	133	Butler Library 5	103	Butler	6
 2014-11-01 04:00:00	151	Lerner 2	84	Lerner	4
@@ -25874,7 +25874,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-11-01 04:15:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-11-01 04:15:00	134	Butler Library 6	103	Butler	1
 2014-11-01 04:15:00	138	Butler Library stk	103	Butler	2
-2014-11-01 04:15:00	145	Science and Engineering Library	15	Mudd	2
+2014-11-01 04:15:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-11-01 04:15:00	131	Butler Library 3	103	Butler	12
 2014-11-01 04:15:00	139	Lehman Library 2	79	Lehman LIbrary	3
 2014-11-01 04:15:00	144	Starr East Asian Library	62	East Asian Library	1
@@ -25901,7 +25901,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-11-01 04:30:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-11-01 04:30:00	134	Butler Library 6	103	Butler	1
 2014-11-01 04:30:00	138	Butler Library stk	103	Butler	2
-2014-11-01 04:30:00	145	Science and Engineering Library	15	Mudd	2
+2014-11-01 04:30:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-11-01 04:30:00	131	Butler Library 3	103	Butler	8
 2014-11-01 04:30:00	139	Lehman Library 2	79	Lehman LIbrary	3
 2014-11-01 04:30:00	144	Starr East Asian Library	62	East Asian Library	1
@@ -25918,7 +25918,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-11-01 04:45:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-11-01 04:45:00	134	Butler Library 6	103	Butler	2
 2014-11-01 04:45:00	138	Butler Library stk	103	Butler	1
-2014-11-01 04:45:00	145	Science and Engineering Library	15	Mudd	2
+2014-11-01 04:45:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-11-01 04:45:00	131	Butler Library 3	103	Butler	8
 2014-11-01 04:45:00	139	Lehman Library 2	79	Lehman LIbrary	3
 2014-11-01 04:45:00	144	Starr East Asian Library	62	East Asian Library	1
@@ -25943,7 +25943,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-11-01 05:00:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-11-01 05:00:00	134	Butler Library 6	103	Butler	0
 2014-11-01 05:00:00	138	Butler Library stk	103	Butler	2
-2014-11-01 05:00:00	145	Science and Engineering Library	15	Mudd	2
+2014-11-01 05:00:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-11-01 05:00:00	155	JJ's Place	75	John Jay	1
 2014-11-01 05:00:00	133	Butler Library 5	103	Butler	6
 2014-11-01 05:00:00	151	Lerner 2	84	Lerner	2
@@ -25970,7 +25970,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-11-01 05:15:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-11-01 05:15:00	134	Butler Library 6	103	Butler	0
 2014-11-01 05:15:00	138	Butler Library stk	103	Butler	2
-2014-11-01 05:15:00	145	Science and Engineering Library	15	Mudd	2
+2014-11-01 05:15:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-11-01 05:15:00	155	JJ's Place	75	John Jay	1
 2014-11-01 05:15:00	133	Butler Library 5	103	Butler	7
 2014-11-01 05:15:00	151	Lerner 2	84	Lerner	5
@@ -25987,7 +25987,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-11-01 05:30:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-11-01 05:30:00	134	Butler Library 6	103	Butler	0
 2014-11-01 05:30:00	138	Butler Library stk	103	Butler	2
-2014-11-01 05:30:00	145	Science and Engineering Library	15	Mudd	3
+2014-11-01 05:30:00	145	Science and Engineering Library	15	Northwest Corner Building	3
 2014-11-01 05:30:00	155	JJ's Place	75	John Jay	1
 2014-11-01 05:30:00	133	Butler Library 5	103	Butler	6
 2014-11-01 05:30:00	151	Lerner 2	84	Lerner	3
@@ -26001,7 +26001,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-11-01 05:45:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-11-01 05:45:00	134	Butler Library 6	103	Butler	0
 2014-11-01 05:45:00	138	Butler Library stk	103	Butler	2
-2014-11-01 05:45:00	145	Science and Engineering Library	15	Mudd	2
+2014-11-01 05:45:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-11-01 05:45:00	155	JJ's Place	75	John Jay	1
 2014-11-01 05:45:00	133	Butler Library 5	103	Butler	7
 2014-11-01 05:45:00	151	Lerner 2	84	Lerner	8
@@ -26022,7 +26022,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-11-01 06:00:00	149	Architectural and Fine Arts Library 3	146	Avery	1
 2014-11-01 06:00:00	134	Butler Library 6	103	Butler	0
 2014-11-01 06:00:00	138	Butler Library stk	103	Butler	2
-2014-11-01 06:00:00	145	Science and Engineering Library	15	Mudd	2
+2014-11-01 06:00:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-11-01 06:00:00	131	Butler Library 3	103	Butler	11
 2014-11-01 06:00:00	139	Lehman Library 2	79	Lehman LIbrary	4
 2014-11-01 06:00:00	144	Starr East Asian Library	62	East Asian Library	1
@@ -26060,13 +26060,13 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-11-01 06:15:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-11-01 06:15:00	134	Butler Library 6	103	Butler	0
 2014-11-01 06:15:00	138	Butler Library stk	103	Butler	2
-2014-11-01 06:15:00	145	Science and Engineering Library	15	Mudd	2
+2014-11-01 06:15:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-11-01 06:30:00	152	Lerner 3	84	Lerner	4
 2014-11-01 06:30:00	130	Butler Library 2	103	Butler	19
 2014-11-01 06:30:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-11-01 06:30:00	134	Butler Library 6	103	Butler	0
 2014-11-01 06:30:00	138	Butler Library stk	103	Butler	2
-2014-11-01 06:30:00	145	Science and Engineering Library	15	Mudd	2
+2014-11-01 06:30:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-11-01 06:30:00	131	Butler Library 3	103	Butler	13
 2014-11-01 06:30:00	139	Lehman Library 2	79	Lehman LIbrary	4
 2014-11-01 06:30:00	144	Starr East Asian Library	62	East Asian Library	1
@@ -26101,7 +26101,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-11-01 06:45:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-11-01 06:45:00	134	Butler Library 6	103	Butler	0
 2014-11-01 06:45:00	138	Butler Library stk	103	Butler	2
-2014-11-01 06:45:00	145	Science and Engineering Library	15	Mudd	2
+2014-11-01 06:45:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-11-01 06:45:00	155	JJ's Place	75	John Jay	1
 2014-11-01 06:45:00	133	Butler Library 5	103	Butler	6
 2014-11-01 06:45:00	151	Lerner 2	84	Lerner	4
@@ -26110,7 +26110,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-11-01 07:00:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-11-01 07:00:00	134	Butler Library 6	103	Butler	0
 2014-11-01 07:00:00	138	Butler Library stk	103	Butler	1
-2014-11-01 07:00:00	145	Science and Engineering Library	15	Mudd	2
+2014-11-01 07:00:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-11-01 07:00:00	155	JJ's Place	75	John Jay	1
 2014-11-01 07:00:00	133	Butler Library 5	103	Butler	7
 2014-11-01 07:00:00	151	Lerner 2	84	Lerner	8
@@ -26142,7 +26142,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-11-01 07:15:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-11-01 07:15:00	134	Butler Library 6	103	Butler	0
 2014-11-01 07:15:00	138	Butler Library stk	103	Butler	0
-2014-11-01 07:15:00	145	Science and Engineering Library	15	Mudd	2
+2014-11-01 07:15:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-11-01 07:15:00	131	Butler Library 3	103	Butler	11
 2014-11-01 07:15:00	139	Lehman Library 2	79	Lehman LIbrary	8
 2014-11-01 07:15:00	144	Starr East Asian Library	62	East Asian Library	3
@@ -26170,7 +26170,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-11-01 07:30:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-11-01 07:30:00	134	Butler Library 6	103	Butler	0
 2014-11-01 07:30:00	138	Butler Library stk	103	Butler	0
-2014-11-01 07:30:00	145	Science and Engineering Library	15	Mudd	2
+2014-11-01 07:30:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-11-01 07:45:00	131	Butler Library 3	103	Butler	11
 2014-11-01 07:45:00	139	Lehman Library 2	79	Lehman LIbrary	7
 2014-11-01 07:45:00	144	Starr East Asian Library	62	East Asian Library	2
@@ -26184,7 +26184,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-11-01 07:45:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-11-01 07:45:00	134	Butler Library 6	103	Butler	0
 2014-11-01 07:45:00	138	Butler Library stk	103	Butler	0
-2014-11-01 07:45:00	145	Science and Engineering Library	15	Mudd	2
+2014-11-01 07:45:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-11-01 07:45:00	155	JJ's Place	75	John Jay	1
 2014-11-01 07:45:00	133	Butler Library 5	103	Butler	6
 2014-11-01 07:45:00	151	Lerner 2	84	Lerner	6
@@ -26214,7 +26214,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-11-01 08:00:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-11-01 08:00:00	134	Butler Library 6	103	Butler	0
 2014-11-01 08:00:00	138	Butler Library stk	103	Butler	0
-2014-11-01 08:00:00	145	Science and Engineering Library	15	Mudd	2
+2014-11-01 08:00:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-11-01 08:15:00	154	Lerner 5	84	Lerner	1
 2014-11-01 08:15:00	125	John Jay Dining Hall	75	John Jay	0
 2014-11-01 08:15:00	147	Architectural and Fine Arts Library 1	146	Avery	2
@@ -26233,7 +26233,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-11-01 08:15:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-11-01 08:15:00	134	Butler Library 6	103	Butler	0
 2014-11-01 08:15:00	138	Butler Library stk	103	Butler	0
-2014-11-01 08:15:00	145	Science and Engineering Library	15	Mudd	2
+2014-11-01 08:15:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-11-01 08:15:00	155	JJ's Place	75	John Jay	0
 2014-11-01 08:15:00	133	Butler Library 5	103	Butler	6
 2014-11-01 08:15:00	151	Lerner 2	84	Lerner	7
@@ -26250,7 +26250,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-11-01 08:30:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-11-01 08:30:00	134	Butler Library 6	103	Butler	0
 2014-11-01 08:30:00	138	Butler Library stk	103	Butler	0
-2014-11-01 08:30:00	145	Science and Engineering Library	15	Mudd	2
+2014-11-01 08:30:00	145	Science and Engineering Library	15	Northwest Corner Building	2
 2014-11-01 08:30:00	155	JJ's Place	75	John Jay	0
 2014-11-01 08:30:00	133	Butler Library 5	103	Butler	8
 2014-11-01 08:30:00	151	Lerner 2	84	Lerner	9
@@ -26269,7 +26269,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-11-01 08:45:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-11-01 08:45:00	134	Butler Library 6	103	Butler	0
 2014-11-01 08:45:00	138	Butler Library stk	103	Butler	0
-2014-11-01 08:45:00	145	Science and Engineering Library	15	Mudd	3
+2014-11-01 08:45:00	145	Science and Engineering Library	15	Northwest Corner Building	3
 2014-11-01 08:45:00	131	Butler Library 3	103	Butler	8
 2014-11-01 08:45:00	139	Lehman Library 2	79	Lehman LIbrary	3
 2014-11-01 08:45:00	144	Starr East Asian Library	62	East Asian Library	3
@@ -26302,13 +26302,13 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-11-01 09:00:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-11-01 09:00:00	134	Butler Library 6	103	Butler	0
 2014-11-01 09:00:00	138	Butler Library stk	103	Butler	0
-2014-11-01 09:00:00	145	Science and Engineering Library	15	Mudd	3
+2014-11-01 09:00:00	145	Science and Engineering Library	15	Northwest Corner Building	3
 2014-11-01 09:15:00	152	Lerner 3	84	Lerner	16
 2014-11-01 09:15:00	130	Butler Library 2	103	Butler	24
 2014-11-01 09:15:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-11-01 09:15:00	134	Butler Library 6	103	Butler	0
 2014-11-01 09:15:00	138	Butler Library stk	103	Butler	0
-2014-11-01 09:15:00	145	Science and Engineering Library	15	Mudd	3
+2014-11-01 09:15:00	145	Science and Engineering Library	15	Northwest Corner Building	3
 2014-11-01 09:15:00	155	JJ's Place	75	John Jay	0
 2014-11-01 09:15:00	133	Butler Library 5	103	Butler	7
 2014-11-01 09:15:00	151	Lerner 2	84	Lerner	9
@@ -26343,7 +26343,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-11-01 09:30:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-11-01 09:30:00	134	Butler Library 6	103	Butler	2
 2014-11-01 09:30:00	138	Butler Library stk	103	Butler	0
-2014-11-01 09:30:00	145	Science and Engineering Library	15	Mudd	3
+2014-11-01 09:30:00	145	Science and Engineering Library	15	Northwest Corner Building	3
 2014-11-01 09:30:00	155	JJ's Place	75	John Jay	0
 2014-11-01 09:30:00	133	Butler Library 5	103	Butler	8
 2014-11-01 09:30:00	151	Lerner 2	84	Lerner	17
@@ -26360,7 +26360,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-11-01 09:45:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-11-01 09:45:00	134	Butler Library 6	103	Butler	0
 2014-11-01 09:45:00	138	Butler Library stk	103	Butler	0
-2014-11-01 09:45:00	145	Science and Engineering Library	15	Mudd	4
+2014-11-01 09:45:00	145	Science and Engineering Library	15	Northwest Corner Building	4
 2014-11-01 09:45:00	155	JJ's Place	75	John Jay	0
 2014-11-01 09:45:00	133	Butler Library 5	103	Butler	8
 2014-11-01 09:45:00	151	Lerner 2	84	Lerner	11
@@ -26390,13 +26390,13 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-11-01 10:00:00	149	Architectural and Fine Arts Library 3	146	Avery	0
 2014-11-01 10:00:00	134	Butler Library 6	103	Butler	0
 2014-11-01 10:00:00	138	Butler Library stk	103	Butler	0
-2014-11-01 10:00:00	145	Science and Engineering Library	15	Mudd	6
+2014-11-01 10:00:00	145	Science and Engineering Library	15	Northwest Corner Building	6
 2014-11-01 10:15:00	152	Lerner 3	84	Lerner	13
 2014-11-01 10:15:00	130	Butler Library 2	103	Butler	35
 2014-11-01 10:15:00	149	Architectural and Fine Arts Library 3	146	Avery	6
 2014-11-01 10:15:00	134	Butler Library 6	103	Butler	0
 2014-11-01 10:15:00	138	Butler Library stk	103	Butler	0
-2014-11-01 10:15:00	145	Science and Engineering Library	15	Mudd	4
+2014-11-01 10:15:00	145	Science and Engineering Library	15	Northwest Corner Building	4
 2014-11-01 10:15:00	131	Butler Library 3	103	Butler	45
 2014-11-01 10:15:00	139	Lehman Library 2	79	Lehman LIbrary	9
 2014-11-01 10:15:00	144	Starr East Asian Library	62	East Asian Library	10
@@ -26427,7 +26427,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-11-01 10:30:00	149	Architectural and Fine Arts Library 3	146	Avery	5
 2014-11-01 10:30:00	134	Butler Library 6	103	Butler	0
 2014-11-01 10:30:00	138	Butler Library stk	103	Butler	2
-2014-11-01 10:30:00	145	Science and Engineering Library	15	Mudd	8
+2014-11-01 10:30:00	145	Science and Engineering Library	15	Northwest Corner Building	8
 2014-11-01 10:30:00	131	Butler Library 3	103	Butler	61
 2014-11-01 10:30:00	139	Lehman Library 2	79	Lehman LIbrary	11
 2014-11-01 10:30:00	144	Starr East Asian Library	62	East Asian Library	6
@@ -26455,7 +26455,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-11-01 10:45:00	149	Architectural and Fine Arts Library 3	146	Avery	6
 2014-11-01 10:45:00	134	Butler Library 6	103	Butler	0
 2014-11-01 10:45:00	138	Butler Library stk	103	Butler	1
-2014-11-01 10:45:00	145	Science and Engineering Library	15	Mudd	13
+2014-11-01 10:45:00	145	Science and Engineering Library	15	Northwest Corner Building	13
 2014-11-01 11:00:00	155	JJ's Place	75	John Jay	0
 2014-11-01 11:00:00	23	Uris/Watson Library	2	Uris	20
 2014-11-01 11:00:00	133	Butler Library 5	103	Butler	16
@@ -26466,7 +26466,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-11-01 11:00:00	149	Architectural and Fine Arts Library 3	146	Avery	6
 2014-11-01 11:00:00	134	Butler Library 6	103	Butler	1
 2014-11-01 11:00:00	138	Butler Library stk	103	Butler	1
-2014-11-01 11:00:00	145	Science and Engineering Library	15	Mudd	13
+2014-11-01 11:00:00	145	Science and Engineering Library	15	Northwest Corner Building	13
 2014-11-01 11:00:00	131	Butler Library 3	103	Butler	80
 2014-11-01 11:00:00	139	Lehman Library 2	79	Lehman LIbrary	7
 2014-11-01 11:00:00	144	Starr East Asian Library	62	East Asian Library	6
@@ -26491,7 +26491,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-11-01 11:15:00	149	Architectural and Fine Arts Library 3	146	Avery	7
 2014-11-01 11:15:00	134	Butler Library 6	103	Butler	2
 2014-11-01 11:15:00	138	Butler Library stk	103	Butler	0
-2014-11-01 11:15:00	145	Science and Engineering Library	15	Mudd	19
+2014-11-01 11:15:00	145	Science and Engineering Library	15	Northwest Corner Building	19
 2014-11-01 11:15:00	155	JJ's Place	75	John Jay	0
 2014-11-01 11:15:00	133	Butler Library 5	103	Butler	13
 2014-11-01 11:15:00	151	Lerner 2	84	Lerner	32
@@ -26521,7 +26521,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-11-01 11:30:00	149	Architectural and Fine Arts Library 3	146	Avery	8
 2014-11-01 11:30:00	134	Butler Library 6	103	Butler	6
 2014-11-01 11:30:00	138	Butler Library stk	103	Butler	0
-2014-11-01 11:30:00	145	Science and Engineering Library	15	Mudd	21
+2014-11-01 11:30:00	145	Science and Engineering Library	15	Northwest Corner Building	21
 2014-11-01 11:45:00	155	JJ's Place	75	John Jay	0
 2014-11-01 11:45:00	23	Uris/Watson Library	2	Uris	43
 2014-11-01 11:45:00	133	Butler Library 5	103	Butler	15
@@ -26532,7 +26532,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-11-01 11:45:00	149	Architectural and Fine Arts Library 3	146	Avery	11
 2014-11-01 11:45:00	134	Butler Library 6	103	Butler	5
 2014-11-01 11:45:00	138	Butler Library stk	103	Butler	2
-2014-11-01 11:45:00	145	Science and Engineering Library	15	Mudd	23
+2014-11-01 11:45:00	145	Science and Engineering Library	15	Northwest Corner Building	23
 2014-11-01 11:45:00	131	Butler Library 3	103	Butler	98
 2014-11-01 11:45:00	139	Lehman Library 2	79	Lehman LIbrary	7
 2014-11-01 11:45:00	144	Starr East Asian Library	62	East Asian Library	7
@@ -26549,7 +26549,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-11-01 12:00:00	149	Architectural and Fine Arts Library 3	146	Avery	14
 2014-11-01 12:00:00	134	Butler Library 6	103	Butler	11
 2014-11-01 12:00:00	138	Butler Library stk	103	Butler	0
-2014-11-01 12:00:00	145	Science and Engineering Library	15	Mudd	25
+2014-11-01 12:00:00	145	Science and Engineering Library	15	Northwest Corner Building	25
 2014-11-01 12:00:00	155	JJ's Place	75	John Jay	0
 2014-11-01 12:00:00	133	Butler Library 5	103	Butler	26
 2014-11-01 12:00:00	151	Lerner 2	84	Lerner	24
@@ -26571,7 +26571,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-11-01 12:15:00	149	Architectural and Fine Arts Library 3	146	Avery	18
 2014-11-01 12:15:00	134	Butler Library 6	103	Butler	17
 2014-11-01 12:15:00	138	Butler Library stk	103	Butler	1
-2014-11-01 12:15:00	145	Science and Engineering Library	15	Mudd	31
+2014-11-01 12:15:00	145	Science and Engineering Library	15	Northwest Corner Building	31
 2014-11-01 12:15:00	131	Butler Library 3	103	Butler	118
 2014-11-01 12:15:00	139	Lehman Library 2	79	Lehman LIbrary	4
 2014-11-01 12:15:00	144	Starr East Asian Library	62	East Asian Library	9
@@ -26606,7 +26606,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-11-01 12:30:00	149	Architectural and Fine Arts Library 3	146	Avery	18
 2014-11-01 12:30:00	134	Butler Library 6	103	Butler	20
 2014-11-01 12:30:00	138	Butler Library stk	103	Butler	2
-2014-11-01 12:30:00	145	Science and Engineering Library	15	Mudd	30
+2014-11-01 12:30:00	145	Science and Engineering Library	15	Northwest Corner Building	30
 2014-11-01 12:30:00	155	JJ's Place	75	John Jay	0
 2014-11-01 12:30:00	133	Butler Library 5	103	Butler	31
 2014-11-01 12:30:00	151	Lerner 2	84	Lerner	59
@@ -26631,7 +26631,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-11-01 12:45:00	149	Architectural and Fine Arts Library 3	146	Avery	19
 2014-11-01 12:45:00	134	Butler Library 6	103	Butler	21
 2014-11-01 12:45:00	138	Butler Library stk	103	Butler	1
-2014-11-01 12:45:00	145	Science and Engineering Library	15	Mudd	31
+2014-11-01 12:45:00	145	Science and Engineering Library	15	Northwest Corner Building	31
 2014-11-01 13:00:00	131	Butler Library 3	103	Butler	139
 2014-11-01 13:00:00	139	Lehman Library 2	79	Lehman LIbrary	5
 2014-11-01 13:00:00	144	Starr East Asian Library	62	East Asian Library	13
@@ -26645,7 +26645,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-11-01 13:00:00	149	Architectural and Fine Arts Library 3	146	Avery	18
 2014-11-01 13:00:00	134	Butler Library 6	103	Butler	19
 2014-11-01 13:00:00	138	Butler Library stk	103	Butler	1
-2014-11-01 13:00:00	145	Science and Engineering Library	15	Mudd	36
+2014-11-01 13:00:00	145	Science and Engineering Library	15	Northwest Corner Building	36
 2014-11-01 13:00:00	155	JJ's Place	75	John Jay	0
 2014-11-01 13:00:00	133	Butler Library 5	103	Butler	27
 2014-11-01 13:00:00	151	Lerner 2	84	Lerner	63
@@ -26667,7 +26667,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-11-01 13:15:00	149	Architectural and Fine Arts Library 3	146	Avery	16
 2014-11-01 13:15:00	134	Butler Library 6	103	Butler	27
 2014-11-01 13:15:00	138	Butler Library stk	103	Butler	2
-2014-11-01 13:15:00	145	Science and Engineering Library	15	Mudd	38
+2014-11-01 13:15:00	145	Science and Engineering Library	15	Northwest Corner Building	38
 2014-11-01 13:15:00	155	JJ's Place	75	John Jay	0
 2014-11-01 13:15:00	133	Butler Library 5	103	Butler	27
 2014-11-01 13:15:00	151	Lerner 2	84	Lerner	58
@@ -26697,7 +26697,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-11-01 13:30:00	149	Architectural and Fine Arts Library 3	146	Avery	20
 2014-11-01 13:30:00	134	Butler Library 6	103	Butler	31
 2014-11-01 13:30:00	138	Butler Library stk	103	Butler	1
-2014-11-01 13:30:00	145	Science and Engineering Library	15	Mudd	41
+2014-11-01 13:30:00	145	Science and Engineering Library	15	Northwest Corner Building	41
 2014-11-01 13:45:00	154	Lerner 5	84	Lerner	20
 2014-11-01 13:45:00	125	John Jay Dining Hall	75	John Jay	7
 2014-11-01 13:45:00	147	Architectural and Fine Arts Library 1	146	Avery	3
@@ -26713,7 +26713,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-11-01 13:45:00	149	Architectural and Fine Arts Library 3	146	Avery	19
 2014-11-01 13:45:00	134	Butler Library 6	103	Butler	34
 2014-11-01 13:45:00	138	Butler Library stk	103	Butler	4
-2014-11-01 13:45:00	145	Science and Engineering Library	15	Mudd	38
+2014-11-01 13:45:00	145	Science and Engineering Library	15	Northwest Corner Building	38
 2014-11-01 13:45:00	131	Butler Library 3	103	Butler	159
 2014-11-01 13:45:00	139	Lehman Library 2	79	Lehman LIbrary	6
 2014-11-01 13:45:00	144	Starr East Asian Library	62	East Asian Library	13
@@ -26730,7 +26730,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-11-01 14:00:00	149	Architectural and Fine Arts Library 3	146	Avery	22
 2014-11-01 14:00:00	134	Butler Library 6	103	Butler	36
 2014-11-01 14:00:00	138	Butler Library stk	103	Butler	2
-2014-11-01 14:00:00	145	Science and Engineering Library	15	Mudd	44
+2014-11-01 14:00:00	145	Science and Engineering Library	15	Northwest Corner Building	44
 2014-11-01 14:00:00	131	Butler Library 3	103	Butler	162
 2014-11-01 14:00:00	139	Lehman Library 2	79	Lehman LIbrary	11
 2014-11-01 14:00:00	144	Starr East Asian Library	62	East Asian Library	17
@@ -26757,7 +26757,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-11-01 14:15:00	149	Architectural and Fine Arts Library 3	146	Avery	18
 2014-11-01 14:15:00	134	Butler Library 6	103	Butler	38
 2014-11-01 14:15:00	138	Butler Library stk	103	Butler	2
-2014-11-01 14:15:00	145	Science and Engineering Library	15	Mudd	44
+2014-11-01 14:15:00	145	Science and Engineering Library	15	Northwest Corner Building	44
 2014-11-01 14:15:00	131	Butler Library 3	103	Butler	174
 2014-11-01 14:15:00	139	Lehman Library 2	79	Lehman LIbrary	8
 2014-11-01 14:15:00	144	Starr East Asian Library	62	East Asian Library	17
@@ -26769,7 +26769,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-11-01 14:30:00	149	Architectural and Fine Arts Library 3	146	Avery	22
 2014-11-01 14:30:00	134	Butler Library 6	103	Butler	39
 2014-11-01 14:30:00	138	Butler Library stk	103	Butler	2
-2014-11-01 14:30:00	145	Science and Engineering Library	15	Mudd	45
+2014-11-01 14:30:00	145	Science and Engineering Library	15	Northwest Corner Building	45
 2014-11-01 14:30:00	131	Butler Library 3	103	Butler	177
 2014-11-01 14:30:00	139	Lehman Library 2	79	Lehman LIbrary	14
 2014-11-01 14:30:00	144	Starr East Asian Library	62	East Asian Library	20
@@ -26804,7 +26804,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-11-01 14:45:00	149	Architectural and Fine Arts Library 3	146	Avery	23
 2014-11-01 14:45:00	134	Butler Library 6	103	Butler	41
 2014-11-01 14:45:00	138	Butler Library stk	103	Butler	3
-2014-11-01 14:45:00	145	Science and Engineering Library	15	Mudd	43
+2014-11-01 14:45:00	145	Science and Engineering Library	15	Northwest Corner Building	43
 2014-11-01 14:45:00	155	JJ's Place	75	John Jay	0
 2014-11-01 14:45:00	133	Butler Library 5	103	Butler	30
 2014-11-01 14:45:00	151	Lerner 2	84	Lerner	65
@@ -26823,7 +26823,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-11-01 15:00:00	149	Architectural and Fine Arts Library 3	146	Avery	33
 2014-11-01 15:00:00	134	Butler Library 6	103	Butler	39
 2014-11-01 15:00:00	138	Butler Library stk	103	Butler	3
-2014-11-01 15:00:00	145	Science and Engineering Library	15	Mudd	50
+2014-11-01 15:00:00	145	Science and Engineering Library	15	Northwest Corner Building	50
 2014-11-01 15:00:00	131	Butler Library 3	103	Butler	203
 2014-11-01 15:00:00	139	Lehman Library 2	79	Lehman LIbrary	11
 2014-11-01 15:00:00	144	Starr East Asian Library	62	East Asian Library	25
@@ -26845,7 +26845,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-11-01 15:15:00	149	Architectural and Fine Arts Library 3	146	Avery	34
 2014-11-01 15:15:00	134	Butler Library 6	103	Butler	38
 2014-11-01 15:15:00	138	Butler Library stk	103	Butler	6
-2014-11-01 15:15:00	145	Science and Engineering Library	15	Mudd	47
+2014-11-01 15:15:00	145	Science and Engineering Library	15	Northwest Corner Building	47
 2014-11-01 15:15:00	131	Butler Library 3	103	Butler	218
 2014-11-01 15:15:00	139	Lehman Library 2	79	Lehman LIbrary	11
 2014-11-01 15:15:00	144	Starr East Asian Library	62	East Asian Library	19
@@ -26857,7 +26857,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-11-01 15:30:00	149	Architectural and Fine Arts Library 3	146	Avery	29
 2014-11-01 15:30:00	134	Butler Library 6	103	Butler	38
 2014-11-01 15:30:00	138	Butler Library stk	103	Butler	5
-2014-11-01 15:30:00	145	Science and Engineering Library	15	Mudd	51
+2014-11-01 15:30:00	145	Science and Engineering Library	15	Northwest Corner Building	51
 2014-11-01 15:30:00	131	Butler Library 3	103	Butler	221
 2014-11-01 15:30:00	139	Lehman Library 2	79	Lehman LIbrary	11
 2014-11-01 15:30:00	144	Starr East Asian Library	62	East Asian Library	21
@@ -26879,7 +26879,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-11-01 15:45:00	149	Architectural and Fine Arts Library 3	146	Avery	35
 2014-11-01 15:45:00	134	Butler Library 6	103	Butler	46
 2014-11-01 15:45:00	138	Butler Library stk	103	Butler	7
-2014-11-01 15:45:00	145	Science and Engineering Library	15	Mudd	48
+2014-11-01 15:45:00	145	Science and Engineering Library	15	Northwest Corner Building	48
 2014-11-01 15:45:00	155	JJ's Place	75	John Jay	0
 2014-11-01 15:45:00	133	Butler Library 5	103	Butler	49
 2014-11-01 15:45:00	151	Lerner 2	84	Lerner	67
@@ -26901,7 +26901,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-11-01 16:00:00	149	Architectural and Fine Arts Library 3	146	Avery	31
 2014-11-01 16:00:00	134	Butler Library 6	103	Butler	44
 2014-11-01 16:00:00	138	Butler Library stk	103	Butler	10
-2014-11-01 16:00:00	145	Science and Engineering Library	15	Mudd	49
+2014-11-01 16:00:00	145	Science and Engineering Library	15	Northwest Corner Building	49
 2014-11-01 16:00:00	131	Butler Library 3	103	Butler	220
 2014-11-01 16:00:00	139	Lehman Library 2	79	Lehman LIbrary	14
 2014-11-01 16:00:00	144	Starr East Asian Library	62	East Asian Library	32
@@ -26928,7 +26928,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-11-01 16:15:00	149	Architectural and Fine Arts Library 3	146	Avery	31
 2014-11-01 16:15:00	134	Butler Library 6	103	Butler	45
 2014-11-01 16:15:00	138	Butler Library stk	103	Butler	11
-2014-11-01 16:15:00	145	Science and Engineering Library	15	Mudd	48
+2014-11-01 16:15:00	145	Science and Engineering Library	15	Northwest Corner Building	48
 2014-11-01 16:15:00	131	Butler Library 3	103	Butler	220
 2014-11-01 16:15:00	139	Lehman Library 2	79	Lehman LIbrary	14
 2014-11-01 16:15:00	144	Starr East Asian Library	62	East Asian Library	27
@@ -26958,7 +26958,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-11-01 16:30:00	149	Architectural and Fine Arts Library 3	146	Avery	29
 2014-11-01 16:30:00	134	Butler Library 6	103	Butler	45
 2014-11-01 16:30:00	138	Butler Library stk	103	Butler	9
-2014-11-01 16:30:00	145	Science and Engineering Library	15	Mudd	50
+2014-11-01 16:30:00	145	Science and Engineering Library	15	Northwest Corner Building	50
 2014-11-01 16:30:00	155	JJ's Place	75	John Jay	0
 2014-11-01 16:30:00	133	Butler Library 5	103	Butler	41
 2014-11-01 16:30:00	151	Lerner 2	84	Lerner	48
@@ -26967,7 +26967,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-11-01 16:45:00	149	Architectural and Fine Arts Library 3	146	Avery	32
 2014-11-01 16:45:00	134	Butler Library 6	103	Butler	52
 2014-11-01 16:45:00	138	Butler Library stk	103	Butler	15
-2014-11-01 16:45:00	145	Science and Engineering Library	15	Mudd	49
+2014-11-01 16:45:00	145	Science and Engineering Library	15	Northwest Corner Building	49
 2014-11-01 16:45:00	131	Butler Library 3	103	Butler	216
 2014-11-01 16:45:00	139	Lehman Library 2	79	Lehman LIbrary	12
 2014-11-01 16:45:00	144	Starr East Asian Library	62	East Asian Library	31
@@ -26994,7 +26994,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-11-01 17:00:00	149	Architectural and Fine Arts Library 3	146	Avery	38
 2014-11-01 17:00:00	134	Butler Library 6	103	Butler	52
 2014-11-01 17:00:00	138	Butler Library stk	103	Butler	10
-2014-11-01 17:00:00	145	Science and Engineering Library	15	Mudd	50
+2014-11-01 17:00:00	145	Science and Engineering Library	15	Northwest Corner Building	50
 2014-11-01 17:00:00	131	Butler Library 3	103	Butler	222
 2014-11-01 17:00:00	139	Lehman Library 2	79	Lehman LIbrary	11
 2014-11-01 17:00:00	144	Starr East Asian Library	62	East Asian Library	30
@@ -27027,13 +27027,13 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-11-01 17:15:00	149	Architectural and Fine Arts Library 3	146	Avery	40
 2014-11-01 17:15:00	134	Butler Library 6	103	Butler	52
 2014-11-01 17:15:00	138	Butler Library stk	103	Butler	9
-2014-11-01 17:15:00	145	Science and Engineering Library	15	Mudd	53
+2014-11-01 17:15:00	145	Science and Engineering Library	15	Northwest Corner Building	53
 2014-11-01 17:30:00	152	Lerner 3	84	Lerner	23
 2014-11-01 17:30:00	130	Butler Library 2	103	Butler	234
 2014-11-01 17:30:00	149	Architectural and Fine Arts Library 3	146	Avery	39
 2014-11-01 17:30:00	134	Butler Library 6	103	Butler	52
 2014-11-01 17:30:00	138	Butler Library stk	103	Butler	9
-2014-11-01 17:30:00	145	Science and Engineering Library	15	Mudd	48
+2014-11-01 17:30:00	145	Science and Engineering Library	15	Northwest Corner Building	48
 2014-11-01 17:30:00	131	Butler Library 3	103	Butler	221
 2014-11-01 17:30:00	139	Lehman Library 2	79	Lehman LIbrary	9
 2014-11-01 17:30:00	144	Starr East Asian Library	62	East Asian Library	28
@@ -27071,13 +27071,13 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-11-01 17:45:00	149	Architectural and Fine Arts Library 3	146	Avery	41
 2014-11-01 17:45:00	134	Butler Library 6	103	Butler	52
 2014-11-01 17:45:00	138	Butler Library stk	103	Butler	14
-2014-11-01 17:45:00	145	Science and Engineering Library	15	Mudd	50
+2014-11-01 17:45:00	145	Science and Engineering Library	15	Northwest Corner Building	50
 2014-11-01 18:00:00	152	Lerner 3	84	Lerner	20
 2014-11-01 18:00:00	130	Butler Library 2	103	Butler	227
 2014-11-01 18:00:00	149	Architectural and Fine Arts Library 3	146	Avery	41
 2014-11-01 18:00:00	134	Butler Library 6	103	Butler	21
 2014-11-01 18:00:00	138	Butler Library stk	103	Butler	10
-2014-11-01 18:00:00	145	Science and Engineering Library	15	Mudd	58
+2014-11-01 18:00:00	145	Science and Engineering Library	15	Northwest Corner Building	58
 2014-11-01 18:00:00	155	JJ's Place	75	John Jay	1
 2014-11-01 18:00:00	133	Butler Library 5	103	Butler	31
 2014-11-01 18:00:00	151	Lerner 2	84	Lerner	36
@@ -27115,13 +27115,13 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-11-01 18:15:00	149	Architectural and Fine Arts Library 3	146	Avery	39
 2014-11-01 18:15:00	134	Butler Library 6	103	Butler	6
 2014-11-01 18:15:00	138	Butler Library stk	103	Butler	7
-2014-11-01 18:15:00	145	Science and Engineering Library	15	Mudd	60
+2014-11-01 18:15:00	145	Science and Engineering Library	15	Northwest Corner Building	60
 2014-11-01 18:30:00	152	Lerner 3	84	Lerner	22
 2014-11-01 18:30:00	130	Butler Library 2	103	Butler	203
 2014-11-01 18:30:00	149	Architectural and Fine Arts Library 3	146	Avery	32
 2014-11-01 18:30:00	134	Butler Library 6	103	Butler	3
 2014-11-01 18:30:00	138	Butler Library stk	103	Butler	5
-2014-11-01 18:30:00	145	Science and Engineering Library	15	Mudd	48
+2014-11-01 18:30:00	145	Science and Engineering Library	15	Northwest Corner Building	48
 2014-11-01 18:30:00	131	Butler Library 3	103	Butler	215
 2014-11-01 18:30:00	139	Lehman Library 2	79	Lehman LIbrary	2
 2014-11-01 18:30:00	144	Starr East Asian Library	62	East Asian Library	28
@@ -27151,7 +27151,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-11-01 18:45:00	149	Architectural and Fine Arts Library 3	146	Avery	32
 2014-11-01 18:45:00	134	Butler Library 6	103	Butler	3
 2014-11-01 18:45:00	138	Butler Library stk	103	Butler	5
-2014-11-01 18:45:00	145	Science and Engineering Library	15	Mudd	47
+2014-11-01 18:45:00	145	Science and Engineering Library	15	Northwest Corner Building	47
 2014-11-01 18:45:00	155	JJ's Place	75	John Jay	0
 2014-11-01 18:45:00	133	Butler Library 5	103	Butler	8
 2014-11-01 18:45:00	151	Lerner 2	84	Lerner	34
@@ -27165,7 +27165,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-11-01 19:00:00	149	Architectural and Fine Arts Library 3	146	Avery	22
 2014-11-01 19:00:00	134	Butler Library 6	103	Butler	2
 2014-11-01 19:00:00	138	Butler Library stk	103	Butler	6
-2014-11-01 19:00:00	145	Science and Engineering Library	15	Mudd	39
+2014-11-01 19:00:00	145	Science and Engineering Library	15	Northwest Corner Building	39
 2014-11-01 19:00:00	155	JJ's Place	75	John Jay	0
 2014-11-01 19:00:00	133	Butler Library 5	103	Butler	9
 2014-11-01 19:00:00	151	Lerner 2	84	Lerner	42
@@ -27203,13 +27203,13 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-11-01 19:15:00	149	Architectural and Fine Arts Library 3	146	Avery	7
 2014-11-01 19:15:00	134	Butler Library 6	103	Butler	2
 2014-11-01 19:15:00	138	Butler Library stk	103	Butler	6
-2014-11-01 19:15:00	145	Science and Engineering Library	15	Mudd	36
+2014-11-01 19:15:00	145	Science and Engineering Library	15	Northwest Corner Building	36
 2014-11-01 19:30:00	152	Lerner 3	84	Lerner	26
 2014-11-01 19:30:00	130	Butler Library 2	103	Butler	165
 2014-11-01 19:30:00	149	Architectural and Fine Arts Library 3	146	Avery	2
 2014-11-01 19:30:00	134	Butler Library 6	103	Butler	3
 2014-11-01 19:30:00	138	Butler Library stk	103	Butler	6
-2014-11-01 19:30:00	145	Science and Engineering Library	15	Mudd	31
+2014-11-01 19:30:00	145	Science and Engineering Library	15	Northwest Corner Building	31
 2014-11-01 19:30:00	155	JJ's Place	75	John Jay	0
 2014-11-01 19:30:00	133	Butler Library 5	103	Butler	6
 2014-11-01 19:30:00	151	Lerner 2	84	Lerner	33
@@ -27239,7 +27239,7 @@ COPY density_data (dump_time, group_id, group_name, parent_id, parent_name, clie
 2014-11-01 19:45:00	149	Architectural and Fine Arts Library 3	146	Avery	2
 2014-11-01 19:45:00	134	Butler Library 6	103	Butler	4
 2014-11-01 19:45:00	138	Butler Library stk	103	Butler	5
-2014-11-01 19:45:00	145	Science and Engineering Library	15	Mudd	34
+2014-11-01 19:45:00	145	Science and Engineering Library	15	Northwest Corner Building	34
 2014-11-01 19:45:00	155	JJ's Place	75	John Jay	0
 2014-11-01 19:45:00	133	Butler Library 5	103	Butler	8
 2014-11-01 19:45:00	151	Lerner 2	84	Lerner	34
