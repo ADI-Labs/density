@@ -426,6 +426,8 @@ def calculate_capacity(cap_data, cur_data):
 
         group_name = cap['group_name']
         capacity = cap['capacity']
+        parentId = cap['parent_id']
+        parentName = cap['parent_name']
 
         for latest in cur_data:
             if latest['group_name'] == group_name:
@@ -440,7 +442,8 @@ def calculate_capacity(cap_data, cur_data):
         if group_name == 'Butler Library stk':
             group_name = 'Butler Library Stacks'
 
-        locations.append({"name": group_name, "fullness": percent_full})
+        locations.append({"name": group_name, "fullness": percent_full,
+                          "parentId": parentId, "parentName": parentName})
     return locations
 
 
@@ -449,32 +452,8 @@ def map():
     """ Render and show maps page """
 
     cur_data = db.get_latest_data(g.cursor)
-    locations = []
 
-    # Loop to find corresponding cur_client_count with capacity
-    # and store it in locations
-    for cap in FULL_CAP_DATA:
-        groupName = cap['group_name']
-        capacity = cap['capacity']
-        parentId = cap['parent_id']
-        parentName = cap['parent_name']
-
-        for latest in cur_data:
-            if latest['group_name'] == groupName:
-                cur_client_count = latest['client_count']
-                break
-        # Cast one of the numbers into a float, get a percentile by multiplying
-        # 100, round the percentage and cast it back into a int.
-        percent_full = int(round(float(cur_client_count)/capacity*100))
-        if percent_full > 100:
-            percent_full = 100
-
-        if groupName == 'Butler Library stk':
-            groupName = 'Butler Library Stacks'
-
-        locations.append({"name": groupName, "fullness": percent_full,
-                          "parentId": parentId, "parentName": parentName})
-
+    locations = calculate_capacity(FULL_CAP_DATA, cur_data)
     # Render template has an SVG image whose colors are changed by % full
     return render_template('map.html', locations=locations)
 
