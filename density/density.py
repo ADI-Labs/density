@@ -439,6 +439,8 @@ def calculate_capacity(cap_data, cur_data):
 
         if group_name == 'Butler Library stk':
             group_name = 'Butler Library Stacks'
+        elif group_name == 'Science and Engineering Library':
+            group_name = 'NoCo Library'
 
         locations.append({"name": group_name, "fullness": percent_full,
                           "parentId": parentId, "parentName": parentName})
