@@ -1,15 +1,6 @@
 from flask import Flask, g, jsonify, render_template, json, request
 from flask_mail import Message, Mail
-app = Flask(__name__)
-
-# do import early to check that all env variables are present
-if not app.debug:
-    mail = Mail(app)
-
-# change the default JSON encoder to handle datetime's properly
 from config import flask_config
-app.config.from_object('config.flask_config')
-app.json_encoder = flask_config.ISO8601Encoder
 
 # library imports
 import psycopg2
@@ -23,6 +14,14 @@ import httplib2
 from db import db
 import re
 from functools import wraps
+
+app = Flask(__name__)
+app.config.update(**flask_config.config)
+if not app.debug:
+    mail = Mail(app)
+
+# change the default JSON encoder to handle datetime's properly
+app.json_encoder = flask_config.ISO8601Encoder
 
 with open('data/capacity_group.json') as json_data:
     FULL_CAP_DATA = json.load(json_data)['data']
@@ -203,8 +202,8 @@ def auth():
         http = httplib2.Http()
         http = credentials.authorize(http)
 
-        h, content = http.request('https://www.googleapis.com/plus/v1/people/'
-                                  + gplus_id, 'GET')
+        h, content = http.request(
+            'https://www.googleapis.com/plus/v1/people/' + gplus_id, 'GET')
         data = json.loads(content)
         email = data["emails"][0]["value"]
 
@@ -216,8 +215,7 @@ def auth():
                                    success=False,
                                    reason="Please log in with your " +
                                    "Columbia or Barnard email. You logged " +
-                                   "in with: " +
-                                   email)
+                                   "in with: " + email)
 
         # Get UNI and ask database for code.
         uni = regex.group('uni')

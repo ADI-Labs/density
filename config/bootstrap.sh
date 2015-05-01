@@ -1,5 +1,17 @@
 #!/usr/bin/env bash
 
+
+# add swap if DNE
+# swap is necessary for using Docker
+if [ $(sudo swapon -s | wc -l) -eq 1 ]
+then
+    fallocate -l 2G /swapfile
+    chmod 600 /swapfile
+    mkswap /swapfile
+    swapon /swapfile
+fi
+
+
 # installs the package passed in if it's not installed
 install () {
     package=$1
@@ -41,5 +53,29 @@ pip install flake8  # for local testing
 
 # install vim
 install vim
+
+# install docker
+install docker.io
+service restart docker.io
+
+install curl
+install unzip
+
+# install consul if it is not already present
+if [[ ! $(which consul) ]]
+then
+    mkdir -p /var/lib/consul
+    mkdir -p /usr/share/consul
+    mkdir -p /etc/consul/conf.d
+
+    curl -OL https://dl.bintray.com/mitchellh/consul/0.5.0_linux_amd64.zip
+    unzip 0.5.0_linux_amd64.zip
+    mv consul /usr/local/bin/consul
+
+    curl -OL https://dl.bintray.com/mitchellh/consul/0.5.0_web_ui.zip
+    unzip 0.5.0_web_ui.zip
+    mv dist /usr/share/consul/ui
+fi
+
 
 exit 0

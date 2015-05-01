@@ -45,6 +45,7 @@ before_script:
 script:
   - flake8 density/
   - flake8 density/tests
+  - source config/settings.dev
   - cd density && nosetests
 
 notifications:
