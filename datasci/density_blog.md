@@ -3,9 +3,8 @@
 
 ---
 
-##[CUIT](https://cuit.columbia.edu/) has supplied us with the following data set:
+##[CUIT](https://cuit.columbia.edu/) has supplied us with our data set.
 
-![alt text](https://github.com/adicu/density/blob/master/density/static/favicon.png?raw=true)
 
 ###We receive device counts from specific routers aggregated into 15 minute intervals
 
