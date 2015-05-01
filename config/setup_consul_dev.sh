@@ -9,3 +9,4 @@ curl -X PUT -d 'adi' http://localhost:8500/v1/kv/density/postgres_password
 curl -X PUT -d '5432' http://localhost:8500/v1/kv/density/postgres_port
 curl -X PUT -d 'adi' http://localhost:8500/v1/kv/density/postgres_user
 curl -X PUT -d 'abc123' http://localhost:8500/v1/kv/density/secret_key
+curl -X PUT -d 'password' http://localhost:8500/v1/kv/density/mail_password

@@ -4,17 +4,8 @@
     {{ super() }}
     <script src="https://apis.google.com/js/client:platform.js" async defer></script>
 {% endblock %}
-{% if success %}
-{% else %}
-<div class="textContainer">
-    <div class="container">
-        <div>
-	        <p class="about">Wireless Density Data for Columbia University</p>
-		    <p>Welcome to Density, an API that gives Columbia developers access to wireless density data.</p>
-	    </div>
-    </div>
-</div>
-{% endif %}
+
+{% block body %}
 <div class="container main-body">
   {% if success %}
     <h1> Welcome {{ uni }}! </h1>
