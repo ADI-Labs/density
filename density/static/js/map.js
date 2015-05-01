@@ -1,13 +1,18 @@
 // vanilla js document.ready bc we are kool kids
 document.addEventListener('DOMContentLoaded', function() {
-  console.log(document.getElementById('map'));
-
   // This recursive function waits until the SVG is fully loaded
   // before executing the relevant javascript. This solves
   // the issue of the javascript not being run on Safari.
+
+  var loading_check_interval = 5;
+
   function checkReady() {
     if (document.getElementById('map').getSVGDocument() == null) {
-      setTimeout(checkReady, 5);
+      setTimeout(checkReady, loading_check_interval);
+    }
+    // we still need to check to see if all of the elements of the SVG have been loaded
+    else if (document.getElementById('map').contentDocument.getElementById('parent_2') == null) {
+      setTimeout(checkReady, loading_check_interval);
     }
     else {
       run();
@@ -27,11 +32,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     //Create a mapping from parent_id --> text representation
     var buildingStrings = {};
-    console.log(buildingStrings);
-    
+
     //Create a mapping from parent_id --> list full %s for elements inside (e.g. floors of a building)
     var buildingFloors = {};
-    console.log(buildingFloors);
 
     //Create a mapping from parent_id --> query (http://....hours)
     var buildingHours = {};
@@ -75,6 +78,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
       var percent = (totalFullness / numFloorsInBuilding); //Should be from [0, 100]
       var buildingElement = innerSvg.getElementById('parent_' + building); //e.g. parent_43
+
       if(buildingElement != null) {
         buildingElement.style.opacity = percent / 100;
       }
@@ -90,7 +94,7 @@ document.addEventListener('DOMContentLoaded', function() {
       buildingElement.onmouseenter = function(event) {
         popup.style.visibility = 'visible';
         var leftPosition = (initialOffsetLeft + event.clientX - 
-          (popup.offsetWidth/2)).toString() + 'px'; // divide by 2 centers it (half of width)
+          (popup.offsetWidth / 2)).toString() + 'px'; // divide by 2 centers it (half of width)
         var topPosition = (initialOffsetTop - mouseOffset + event.clientY -
           (popup.offsetHeight)).toString() + 'px';
         popup.style.top = topPosition;
@@ -106,7 +110,7 @@ document.addEventListener('DOMContentLoaded', function() {
       //moves popup with mouse
       buildingElement.onmousemove = function(event) {
         var leftPosition = (initialOffsetLeft + event.clientX - 
-          (popup.offsetWidth/2)).toString() + 'px'; // divide by 2 centers it (half of width)
+          (popup.offsetWidth / 2)).toString() + 'px'; // divide by 2 centers it (half of width)
         var topPosition = (initialOffsetTop - mouseOffset + event.clientY -
           (popup.offsetHeight)).toString() + 'px';
         popup.style.top = topPosition;
