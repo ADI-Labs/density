@@ -7,11 +7,12 @@ html, body {
     font-family: 'Lato', sans-serif;
     position: relative;
     width: 100%;
-    background-color: #fff;
-    color: #468fcc;
+    background-color: #468fcc;
+    color: #fff;
     line-height: 1.5rem;
     text-align: center;
     font-size: 18px;
+    font-weight: 300;
     max-height: 47px;
     -webkit-transition: 0.6s ease max-height;
     -moz-transition: 0.6s ease max-height;
@@ -26,11 +27,11 @@ html, body {
 }
 
 .alert > a {
-    color: #F85B48;
+    color: #f3bebd;
 }
 
 .alert > a:hover {
-    opacity: 0.75;
+    opacity: #f8725d;
 }
 
 #alert-close {
@@ -40,7 +41,7 @@ html, body {
     top: 16px;
     font-size: 24px;
     float: right;
-    color: #468fcc;
+    color: #fff;
 }
 
 #alert-close:hover {
@@ -122,7 +123,7 @@ p {
 
 .logoContainer {
     background-color: #2285c6;
-    padding: 30px;
+    padding: 50px;
 }
 
 .navContainer {
@@ -137,6 +138,7 @@ p {
     */
 
     background-color: #468fcc;
+    text-align: center;
 }
 
 .textContainer {
