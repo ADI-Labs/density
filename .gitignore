@@ -9,6 +9,7 @@ lib-cov
 *.gz
 *.pyc
 *.swp
+*.tsv
 .DS_Store
 
 .vagrant
@@ -21,6 +22,8 @@ results
 include
 share
 lib/python2.7
+
+scripts
 
 config/settings.*
 !config/settings.dev
