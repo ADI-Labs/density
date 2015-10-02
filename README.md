@@ -161,3 +161,4 @@ Make sure to conform to [AirBnb's brilliant style guide](https://github.com/airb
 - Terra Blevins
 - Evan Tarrh
 - Raymond Xu
+- Connie Zhang
