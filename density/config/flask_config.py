@@ -67,14 +67,16 @@ else:  # use consul
                              "density/{}").format(consul_key))
 
     # mail settings
-    MAIL_SERVER = 'smtp.gmail.com'
-    MAIL_PORT = 465
-    MAIL_USE_SSL = True
-    MAIL_USE_TLS = False
-    MAIL_DEFAULT_SENDER = 'densitylogger@gmail.com'
-    MAIL_USERNAME = 'densitylogger@gmail.com'
-    _, MAIL_PASSWORD = kv.get('density/mail_password')
-    if not MAIL_PASSWORD:
+    config.update({
+        'MAIL_SERVER': 'smtp.gmail.com',
+        'MAIL_PORT': 465,
+        'MAIL_USE_SSL': True,
+        'MAIL_USE_TLS': False,
+        'MAIL_DEFAULT_SENDER': 'densitylogger@gmail.com',
+        'MAIL_USERNAME': 'densitylogger@gmail.com',
+        'MAIL_PASSWORD': kv.get('density/mail_password')[1]
+    })
+    if not config['MAIL_PASSWORD']:
         raise Exception("No password for Mail found in Consul")
 
     # administrator list
