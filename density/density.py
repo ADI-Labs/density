@@ -95,8 +95,11 @@ def internal_error(e):
     if not app.debug:
         msg = Message("DENSITY ERROR", recipients=app.config['ADMINS'])
         msg.body = traceback.format_exc()
-        mail.send(msg)
-    return jsonify(error="Something went wrong, the admins were notified.")
+        # mail.send(msg)
+    return jsonify(error="Something went wrong, and notification of "
+                   "admins failed.  Please contact an admin.",
+                   error_data=traceback.format_exc())
+    # return jsonify(error="Something went wrong, the admins were notified.")
 
 
 def authorization_required(func):
