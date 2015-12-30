@@ -70,7 +70,7 @@ else:  # use consul
     config.update({
         'MAIL_SERVER': 'smtp.gmail.com',
         'MAIL_PORT': 465,
-        'MAIL_USE_SSL': False,
+        'MAIL_USE_SSL': True,
         'MAIL_USE_TLS': True,
         'MAIL_DEFAULT_SENDER': 'densitylogger@gmail.com',
         'MAIL_USERNAME': 'densitylogger@gmail.com',
