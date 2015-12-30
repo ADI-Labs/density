@@ -4,6 +4,7 @@
     {{ super() }}
     <script src="https://apis.google.com/js/client:platform.js" async defer></script>
 {% endblock %}
+{% block body %}
 {% if success %}
 {% else %}
 <div class="textContainer">
