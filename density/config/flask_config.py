@@ -87,6 +87,8 @@ else:  # use consul
         'jzf2101@columbia.edu'
     ]
 
+    config['ADMINS'] = ADMINS
+
 config['DEBUG'] = (config['DEBUG'] == 'TRUE')
 
 """ Creates a json encoder that returns ISO 8601 strings for datetimes
