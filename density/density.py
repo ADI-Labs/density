@@ -93,9 +93,10 @@ def page_not_found(e):
 @app.errorhandler(Exception)
 def internal_error(e):
     if not app.debug:
-        msg = Message("DENSITY ERROR", recipients=app.config['ADMINS'])
+        msg = Message("DENSITY ERROR", sender="densitylogger@gmail.com",
+                recipients=app.config['ADMINS'])
         msg.body = traceback.format_exc()
-        # mail.send(msg)
+        mail.send(msg)
     return jsonify(error="Something went wrong, and notification of "
                    "admins failed.  Please contact an admin.",
                    error_data=traceback.format_exc())

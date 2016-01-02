@@ -67,29 +67,25 @@ else:  # use consul
                              "density/{}").format(consul_key))
 
     # mail settings
-    config.update({
-        'MAIL_SERVER': 'smtp.googlemail.com',
-        'MAIL_PORT': 465,
-        'MAIL_USE_SSL': True,
-        'MAIL_USE_TLS': False,
-        'MAIL_DEFAULT_SENDER': 'densitylogger@gmail.com',
-        'MAIL_USERNAME': 'densitylogger@gmail.com',
-        'MAIL_PASSWORD': kv.get('density/mail_password')[1]
-    })
+    config['MAIL_SERVER'] = 'smtp.gmail.com'
+    config['MAIL_PORT'] = 465
+    config['MAIL_USE_SSL'] = True
+    config['MAIL_USE_TLS'] = False
+    config['MAIL_DEFAULT_SENDER'] = 'densitylogger@gmail.com'
+    config['MAIL_USERNAME'] = 'densitylogger@gmail.com'
+
+    # Get mail password
+    _, consul_mail_password = kv.get('density/mail_password')
+    config['MAIL_PASSWORD'] = consul_mail_password.get('Value')
     if not config['MAIL_PASSWORD']:
         raise Exception("No password for Mail found in Consul")
 
     # administrator list
-    ADMINS = [
+    config['ADMINS'] = [
         'bz2231@columbia.edu',
-        'dzh2101@columbia.edu',
-        'jgv2108@columbia.edu',
-        'sb3657@columbia.edu',
-        'mgb2163@columbia.edu',
-        'jzf2101@columbia.edu'
+        'dan@adicu.com',
+        'mjp2220@columbia.edu'
     ]
-
-    config['ADMINS'] = ADMINS
 
 config['DEBUG'] = (config['DEBUG'] == 'TRUE')
 
