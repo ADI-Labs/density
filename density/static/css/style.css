@@ -149,7 +149,7 @@ p {
 
 .listContainer {
     background-color: #f0f0f0;
-    padding: 50px 50px 30px 50px;
+    padding: 30px 50px 30px 50px;
 }
 
 #mapContainer {
@@ -247,6 +247,12 @@ p {
     line-height: 25px;
 }
 
+.app_store {
+    margin: 0 auto;
+    display: block;
+    padding-bottom: 30px;
+}
+
 img {
     max-width: 100%;
     max-height: 100%;
@@ -285,7 +291,7 @@ img {
 
     .listContainer {
         width: 100%;
-        padding: 0px;
+        padding: 10px 0px 0px 0px;
     }
 
     .thanksContainer {
@@ -317,6 +323,10 @@ img {
     .logo {
         max-width: 100%;
         max-height: 100%;
+    }
+
+    .app_store {
+        padding-bottom: 10px;
     }
 
     .mobile {
