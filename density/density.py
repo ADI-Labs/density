@@ -93,7 +93,8 @@ def page_not_found(e):
 @app.errorhandler(Exception)
 def internal_error(e):
     if not app.debug:
-        msg = Message("DENSITY ERROR", recipients=app.config['ADMINS'])
+        msg = Message("DENSITY ERROR", sender="densitylogger@gmail.com",
+                recipients=app.config['ADMINS'])
         msg.body = traceback.format_exc()
         mail.send(msg)
     return jsonify(error="Something went wrong, the admins were notified.")
@@ -152,6 +153,11 @@ def home():
     return render_template('index.html',
                            client_id=app.config['GOOGLE_CLIENT_ID'])
 
+
+@app.route('/trigger_error')
+def trigger_error():
+    raise Exception()
+    return 'error'
 
 @app.route('/about')
 def about():

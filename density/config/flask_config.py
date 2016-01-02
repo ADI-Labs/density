@@ -73,18 +73,18 @@ else:  # use consul
     config['MAIL_USE_TLS'] = False
     config['MAIL_DEFAULT_SENDER'] = 'densitylogger@gmail.com'
     config['MAIL_USERNAME'] = 'densitylogger@gmail.com'
-    _, config['MAIL_PASSWORD'] = kv.get('density/mail_password')
+
+    # Get mail password
+    _, consul_mail_password = kv.get('density/mail_password')
+    config['MAIL_PASSWORD'] = consul_mail_password.get('Value')
     if not config['MAIL_PASSWORD']:
         raise Exception("No password for Mail found in Consul")
 
     # administrator list
     config['ADMINS'] = [
         'bz2231@columbia.edu',
-        'dzh2101@columbia.edu',
-        'jgv2108@columbia.edu',
-        'sb3657@columbia.edu',
-        'mgb2163@columbia.edu',
-        'jzf2101@columbia.edu'
+        'dan@adicu.com',
+        'mjp2220@columbia.edu'
     ]
 
 config['DEBUG'] = (config['DEBUG'] == 'TRUE')
