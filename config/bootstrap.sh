@@ -36,20 +36,18 @@ then
     apt-get update
 fi
 
-apt-get -y install postgresql-9.3
+install postgresql-9.3
 sudo -u postgres psql < /vagrant/config/density_dump.sql
 sudo -u postgres psql < /vagrant/config/oauth_dev_dump.sql
 
 # install python
-apt-get install -y python \
-    python-pip \
-    python-dev \
-    python-software-properties \
-    libpq-dev
-apt-get update
+install python
+install python-pip
+install python-software-properties
+install libpg-dev
+
 pip install -r /vagrant/config/requirements.txt
 pip install flake8  # for local testing
-
 
 # install vim
 install vim
@@ -57,25 +55,5 @@ install vim
 # install docker
 install docker.io
 service restart docker.io
-
-install curl
-install unzip
-
-# install consul if it is not already present
-if [[ ! $(which consul) ]]
-then
-    mkdir -p /var/lib/consul
-    mkdir -p /usr/share/consul
-    mkdir -p /etc/consul/conf.d
-
-    curl -OL https://dl.bintray.com/mitchellh/consul/0.5.0_linux_amd64.zip
-    unzip 0.5.0_linux_amd64.zip
-    mv consul /usr/local/bin/consul
-
-    curl -OL https://dl.bintray.com/mitchellh/consul/0.5.0_web_ui.zip
-    unzip 0.5.0_web_ui.zip
-    mv dist /usr/share/consul/ui
-fi
-
 
 exit 0
