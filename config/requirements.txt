@@ -18,6 +18,7 @@ psycopg2
 pyasn1
 pyasn1-modules
 pyflakes
+pytest
 requests
 rsa
 six

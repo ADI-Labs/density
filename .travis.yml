@@ -25,7 +25,6 @@ env:
 
 install:
   - pip install -r config/requirements.txt
-  - pip install flake8
 
 services:
   - postgresql
@@ -41,12 +40,12 @@ before_script:
   - sudo -u postgres psql density < ./config/density_dump.sql
   - sudo -u postgres psql density < ./config/oauth_dev_dump.sql
   - sudo -u postgres psql -c "GRANT SELECT ON ALL TABLES IN SCHEMA public TO adi;"
+  - pip freeze		# show debugging information
 
 script:
-  - flake8 density/
-  - flake8 density/tests
+  - flake8
   - source config/settings.dev
-  - cd density && nosetests
+  - cd density && PYTHONPATH=. py.test --verbose
 
 notifications:
  slack: adi-labs:tCeqXPsLSyIFe3yjfWfKLRYg
