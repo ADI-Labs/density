@@ -144,8 +144,11 @@ def annotate_fullness_percentage(cur_data):
                 break
 
         # Percent full in float
-        percent_full = float(cur_client_count)/capacity*100
-        data["percent_full"] = percent_full
+        if capacity:
+            percent_full = float(cur_client_count)/capacity*100
+            data["percent_full"] = percent_full
+        else:
+            data["percent_full"] = None
 
     # Match percentage and group by order of list
     return cur_data_copy
