@@ -41,7 +41,7 @@ except KeyError as e:
 config['DEBUG'] = (config['DEBUG'] == 'TRUE')
 
 class ISO8601Encoder(JSONEncoder):
-    """ JSON encoder for ISO8601 datetime strings. 
+    """ JSON encoder for ISO8601 datetime strings
 
     See http://flask.pocoo.org/snippets/119/ """
 

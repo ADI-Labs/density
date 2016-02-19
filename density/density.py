@@ -94,7 +94,7 @@ def page_not_found(e):
 def internal_error(e):
     if not app.debug:
         msg = Message("DENSITY ERROR", sender="densitylogger@gmail.com",
-                recipients=app.config['ADMINS'])
+                      recipients=app.config['ADMINS'])
         msg.body = traceback.format_exc()
         mail.send(msg)
     return jsonify(error="Something went wrong, and notification of "
@@ -145,7 +145,7 @@ def annotate_fullness_percentage(cur_data):
 
         # Percent full in float
         if capacity:
-            percent_full = float(cur_client_count)/capacity*100
+            percent_full = float(cur_client_count) / capacity * 100
             data["percent_full"] = percent_full
         else:
             data["percent_full"] = None
@@ -440,7 +440,7 @@ def calculate_capacity(cap_data, cur_data):
                 break
         # Cast one of the numbers into a float, get a percentile by multiplying
         # 100, round the percentage and cast it back into a int.
-        percent_full = int(round(float(cur_client_count)/capacity*100))
+        percent_full = int(round(float(cur_client_count) / capacity * 100))
         if percent_full > 100:
             percent_full = 100
 
