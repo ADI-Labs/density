@@ -6,5 +6,5 @@ consul agent \
     -bootstrap \
     -client 0.0.0.0 \
     -data-dir ~/consul \
-    -ui-dir /usr/share/consul/ui
+    -ui-dir /usr/share/consul/ui &
 
