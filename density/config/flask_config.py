@@ -9,7 +9,6 @@ from os import environ
 from sys import exit
 from datetime import datetime
 
-from consul import Consul
 from flask.json import JSONEncoder
 
 # dictionary the flask app configures itself from
