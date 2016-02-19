@@ -11,21 +11,10 @@ then
     swapon /swapfile
 fi
 
-
-# installs the package passed in if it's not installed
-install () {
-    package=$1
-    dpkg-query -l $package &> /dev/null
-    if [ $? -ne 0 ]; then
-        apt-get -y install $package
-    fi
-}
-
 apt-get update
 
 # install git
-install git-core
-install git
+apt-get install --yes git
 
 # install postgresql-9.3
 PG_REPO_APT_SOURCE=/etc/apt/sources.list.d/pgdg.list
@@ -36,25 +25,25 @@ then
     apt-get update
 fi
 
-install postgresql-9.3
-install libpg-dev
+apt-get install --yes postgresql-9.3 \
+    libpq-dev
 sudo -u postgres psql < /vagrant/config/density_dump.sql
 sudo -u postgres psql < /vagrant/config/oauth_dev_dump.sql
 
 # install python
-install python
-install python-pip
-install python-dev
-install python-software-properties
+apt-get install --yes python \
+    python-pip \
+    python-dev \
+    python-software-properties
 
 pip install -r /vagrant/config/requirements.txt
 pip install flake8  # for local testing
 
 # install vim
-install vim
+apt-get install --yes vim
 
 # install docker
-install docker.io
+apt-get install --yes docker.io
 service restart docker
 
 exit 0
