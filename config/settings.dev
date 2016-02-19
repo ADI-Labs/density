@@ -1,5 +1,3 @@
-#!/bin/sh
-
 export HOST="0.0.0.0"
 export PORT="5000"
 export DEBUG=TRUE
