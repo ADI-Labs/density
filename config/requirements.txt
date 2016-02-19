@@ -18,7 +18,6 @@ psycopg2
 pyasn1
 pyasn1-modules
 pyflakes
-python-consul
 requests
 rsa
 six

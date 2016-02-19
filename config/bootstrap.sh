@@ -37,14 +37,15 @@ then
 fi
 
 install postgresql-9.3
+install libpg-dev
 sudo -u postgres psql < /vagrant/config/density_dump.sql
 sudo -u postgres psql < /vagrant/config/oauth_dev_dump.sql
 
 # install python
 install python
 install python-pip
+install python-dev
 install python-software-properties
-install libpg-dev
 
 pip install -r /vagrant/config/requirements.txt
 pip install flake8  # for local testing
@@ -54,6 +55,6 @@ install vim
 
 # install docker
 install docker.io
-service restart docker.io
+service restart docker
 
 exit 0
