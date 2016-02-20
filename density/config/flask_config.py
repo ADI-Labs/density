@@ -5,9 +5,9 @@ Flask specific settings will be set here and we can store additional settings
 in the config object as well.
 """
 
-from os import environ
-from sys import exit
-from datetime import datetime
+import os
+import sys
+import datetime as dt
 
 from flask.json import JSONEncoder
 
@@ -28,7 +28,7 @@ config = {
 try:  # use local settings
     for env_key, value in config.iteritems():
         if not value:
-            config[env_key] = environ[env_key]
+            config[env_key] = os.environ[env_key]
 
 except KeyError as e:
     """ Throw an error if a setting is missing """
@@ -36,7 +36,7 @@ except KeyError as e:
     print ("Some of your settings aren't in the environment."
            "You probably need to run:"
            "\n\n\tsource config/<your settings file>")
-    exit(1)
+    sys.exit(1)
 
 config['DEBUG'] = (config['DEBUG'] == 'TRUE')
 
@@ -47,7 +47,7 @@ class ISO8601Encoder(JSONEncoder):
 
     def default(self, obj):
         try:
-            if isinstance(obj, datetime):
+            if isinstance(obj, dt.datetime):
                 return obj.isoformat()
             iterable = iter(obj)
         except TypeError:

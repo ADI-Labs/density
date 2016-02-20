@@ -1,19 +1,19 @@
+from functools import wraps
+import copy
+import datetime
+import httplib2
+import re
+import traceback
+
 from flask import Flask, g, jsonify, render_template, json, request
 from flask_mail import Message, Mail
-from config import flask_config
-
-# library imports
 import psycopg2
 import psycopg2.pool
 import psycopg2.extras
-import datetime
-import traceback
-import copy
 from oauth2client.client import flow_from_clientsecrets
-import httplib2
+
 from db import db
-import re
-from functools import wraps
+from config import flask_config
 
 app = Flask(__name__)
 app.config.update(**flask_config.config)
