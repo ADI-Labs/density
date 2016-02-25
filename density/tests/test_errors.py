@@ -1,23 +1,17 @@
-
-import template
 import json
+import conftest
 
+def test_bad_date(app, auth_header):
+    resp = app.get("/day/23/group/85", headers=auth_header)
+    body = json.loads(resp.data)
 
-class TestDateFormatChecker(template.TestingTemplate):
+    assert resp.status_code == 400
+    assert "error" in body
+    assert "YYYY-MM-DD" in body["error"]
 
-    def test_bad_date(self):
-        resp = self.authenticated_get('/day/23/group/85')
+def test_good_date(app, auth_header):
+    resp = app.get("/day/2014-10-23/group/85", headers=auth_header)
+    body = json.loads(resp.data)
 
-        self.assertEqual(400, resp.status_code)
-
-        body = json.loads(resp.data)
-        self.assertIn('error', body)
-        self.assertIn('YYYY-MM-DD', body.get('error'))
-
-    def test_good_date(self):
-        resp = self.authenticated_get('/day/2014-10-23/group/85')
-
-        self.assertEqual(200, resp.status_code)
-
-        body = json.loads(resp.data)
-        self.assertEqual(len(body['data']), 96)
+    assert resp.status_code == 200
+    assert len(body["data"]) == 96
