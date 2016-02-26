@@ -1,6 +1,5 @@
 import json
 
-import conftest
 import density
 
 

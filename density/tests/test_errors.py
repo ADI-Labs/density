@@ -1,5 +1,4 @@
 import json
-import conftest
 
 def test_bad_date(app, auth_header):
     resp = app.get("/day/23/group/85", headers=auth_header)
