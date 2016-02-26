@@ -11,21 +11,10 @@ then
     swapon /swapfile
 fi
 
-
-# installs the package passed in if it's not installed
-install () {
-    package=$1
-    dpkg-query -l $package &> /dev/null
-    if [ $? -ne 0 ]; then
-        apt-get -y install $package
-    fi
-}
-
 apt-get update
 
 # install git
-install git-core
-install git
+apt-get install --yes git
 
 # install postgresql-9.3
 PG_REPO_APT_SOURCE=/etc/apt/sources.list.d/pgdg.list
@@ -36,46 +25,25 @@ then
     apt-get update
 fi
 
-apt-get -y install postgresql-9.3
+apt-get install --yes postgresql-9.3 \
+    libpq-dev
 sudo -u postgres psql < /vagrant/config/density_dump.sql
 sudo -u postgres psql < /vagrant/config/oauth_dev_dump.sql
 
 # install python
-apt-get install -y python \
+apt-get install --yes python \
     python-pip \
     python-dev \
-    python-software-properties \
-    libpq-dev
-apt-get update
+    python-software-properties
+
 pip install -r /vagrant/config/requirements.txt
 pip install flake8  # for local testing
 
-
 # install vim
-install vim
+apt-get install --yes vim
 
 # install docker
-install docker.io
-service restart docker.io
-
-install curl
-install unzip
-
-# install consul if it is not already present
-if [[ ! $(which consul) ]]
-then
-    mkdir -p /var/lib/consul
-    mkdir -p /usr/share/consul
-    mkdir -p /etc/consul/conf.d
-
-    curl -OL https://dl.bintray.com/mitchellh/consul/0.5.0_linux_amd64.zip
-    unzip 0.5.0_linux_amd64.zip
-    mv consul /usr/local/bin/consul
-
-    curl -OL https://dl.bintray.com/mitchellh/consul/0.5.0_web_ui.zip
-    unzip 0.5.0_web_ui.zip
-    mv dist /usr/share/consul/ui
-fi
-
+apt-get install --yes docker.io
+service restart docker
 
 exit 0
