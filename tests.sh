@@ -4,15 +4,12 @@ source /vagrant/config/settings.dev
 export TESTING=TRUE
 
 echo '--------------------------------------'
-echo '    pep 8 complicance testing'
+echo '              Linting'
 echo '--------------------------------------'
 
-flake8 density/
-flake8 density/tests
+flake8
 
 echo '--------------------------------------'
-echo '    unit testing'
+echo '             Unit Tests'
 echo '--------------------------------------'
-cd density && nosetests
-
-
+cd density && PYTHONPATH=. py.test --verbose

@@ -1,19 +1,19 @@
+from functools import wraps
+import copy
+import datetime
+import httplib2
+import re
+import traceback
+
 from flask import Flask, g, jsonify, render_template, json, request
 from flask_mail import Message, Mail
-from config import flask_config
-
-# library imports
 import psycopg2
 import psycopg2.pool
 import psycopg2.extras
-import datetime
-import traceback
-import copy
 from oauth2client.client import flow_from_clientsecrets
-import httplib2
+
 from db import db
-import re
-from functools import wraps
+from config import flask_config
 
 app = Flask(__name__)
 app.config.update(**flask_config.config)
@@ -93,10 +93,14 @@ def page_not_found(e):
 @app.errorhandler(Exception)
 def internal_error(e):
     if not app.debug:
-        msg = Message("DENSITY ERROR", recipients=app.config['ADMINS'])
+        msg = Message("DENSITY ERROR", sender="densitylogger@gmail.com",
+                      recipients=app.config['ADMINS'])
         msg.body = traceback.format_exc()
         mail.send(msg)
-    return jsonify(error="Something went wrong, the admins were notified.")
+    return jsonify(error="Something went wrong, and notification of "
+                   "admins failed.  Please contact an admin.",
+                   error_data=traceback.format_exc())
+    # return jsonify(error="Something went wrong, the admins were notified.")
 
 
 def authorization_required(func):
@@ -106,11 +110,15 @@ def authorization_required(func):
         if not token:
             token = request.args.get('auth_token')
             if not token:
-                return jsonify(error="No authorization token provided.")
+                response = jsonify(error="No authorization token provided")
+                response.status_code = 401      # unauthorized
+                return response
 
         uni = db.get_uni_for_code(g.cursor, token)
         if not uni:
-            return jsonify(error="Invalid authorization token.")
+            response = jsonify(error="No authorization token provided")
+            response.status_code = 401          # unauthorized
+            return response
 
         # TODO: Some logging right here. We can log which user is using what.
         return func(*args, **kwargs)
@@ -140,8 +148,11 @@ def annotate_fullness_percentage(cur_data):
                 break
 
         # Percent full in float
-        percent_full = float(cur_client_count)/capacity*100
-        data["percent_full"] = percent_full
+        if capacity:
+            percent_full = float(cur_client_count) / capacity * 100
+            data["percent_full"] = percent_full
+        else:
+            data["percent_full"] = None
 
     # Match percentage and group by order of list
     return cur_data_copy
@@ -433,7 +444,7 @@ def calculate_capacity(cap_data, cur_data):
                 break
         # Cast one of the numbers into a float, get a percentile by multiplying
         # 100, round the percentage and cast it back into a int.
-        percent_full = int(round(float(cur_client_count)/capacity*100))
+        percent_full = int(round(float(cur_client_count) / capacity * 100))
         if percent_full > 100:
             percent_full = 100
 

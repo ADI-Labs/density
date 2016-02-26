@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 
-
 # add swap if DNE
 # swap is necessary for using Docker
 if [ $(sudo swapon -s | wc -l) -eq 1 ]
@@ -11,21 +10,8 @@ then
     swapon /swapfile
 fi
 
-
-# installs the package passed in if it's not installed
-install () {
-    package=$1
-    dpkg-query -l $package &> /dev/null
-    if [ $? -ne 0 ]; then
-        apt-get -y install $package
-    fi
-}
-
 apt-get update
-
-# install git
-install git-core
-install git
+apt-get install --yes docker.io git vim
 
 # install postgresql-9.3
 PG_REPO_APT_SOURCE=/etc/apt/sources.list.d/pgdg.list
@@ -36,46 +22,18 @@ then
     apt-get update
 fi
 
-apt-get -y install postgresql-9.3
+apt-get install --yes postgresql-9.3
 sudo -u postgres psql < /vagrant/config/density_dump.sql
 sudo -u postgres psql < /vagrant/config/oauth_dev_dump.sql
 
-# install python
-apt-get install -y python \
-    python-pip \
-    python-dev \
-    python-software-properties \
-    libpq-dev
-apt-get update
-pip install -r /vagrant/config/requirements.txt
-pip install flake8  # for local testing
+if [ ! -d "/opt/conda" ]; then
+    wget --no-clobber http://repo.continuum.io/miniconda/Miniconda2-latest-Linux-x86_64.sh
+    bash Miniconda2-latest-Linux-x86_64.sh -b -p "/opt/conda"
+    echo 'export PATH="/opt/conda/bin:$PATH"' >> /home/vagrant/.bashrc
+    export PATH="/opt/conda/bin:$PATH"
 
-
-# install vim
-install vim
-
-# install docker
-install docker.io
-service restart docker.io
-
-install curl
-install unzip
-
-# install consul if it is not already present
-if [[ ! $(which consul) ]]
-then
-    mkdir -p /var/lib/consul
-    mkdir -p /usr/share/consul
-    mkdir -p /etc/consul/conf.d
-
-    curl -OL https://dl.bintray.com/mitchellh/consul/0.5.0_linux_amd64.zip
-    unzip 0.5.0_linux_amd64.zip
-    mv consul /usr/local/bin/consul
-
-    curl -OL https://dl.bintray.com/mitchellh/consul/0.5.0_web_ui.zip
-    unzip 0.5.0_web_ui.zip
-    mv dist /usr/share/consul/ui
+    conda update --yes conda
+    conda env update --name root --file /vagrant/config/environment.yml
 fi
-
 
 exit 0

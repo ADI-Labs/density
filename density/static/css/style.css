@@ -7,11 +7,12 @@ html, body {
     font-family: 'Lato', sans-serif;
     position: relative;
     width: 100%;
-    background-color: #fff;
-    color: #468fcc;
+    background-color: #468fcc;
+    color: #fff;
     line-height: 1.5rem;
     text-align: center;
     font-size: 18px;
+    font-weight: 300;
     max-height: 47px;
     -webkit-transition: 0.6s ease max-height;
     -moz-transition: 0.6s ease max-height;
@@ -26,11 +27,11 @@ html, body {
 }
 
 .alert > a {
-    color: #F85B48;
+    color: #f3bebd;
 }
 
 .alert > a:hover {
-    opacity: 0.75;
+    opacity: #f8725d;
 }
 
 #alert-close {
@@ -40,7 +41,7 @@ html, body {
     top: 16px;
     font-size: 24px;
     float: right;
-    color: #468fcc;
+    color: #fff;
 }
 
 #alert-close:hover {
@@ -137,6 +138,7 @@ p {
     */
 
     background-color: #468fcc;
+    text-align: center;
 }
 
 .textContainer {
@@ -147,7 +149,7 @@ p {
 
 .listContainer {
     background-color: #f0f0f0;
-    padding: 50px 50px 30px 50px;
+    padding: 30px 50px 30px 50px;
 }
 
 #mapContainer {
@@ -245,6 +247,12 @@ p {
     line-height: 25px;
 }
 
+.app_store {
+    margin: 0 auto;
+    display: block;
+    padding-bottom: 30px;
+}
+
 img {
     max-width: 100%;
     max-height: 100%;
@@ -283,7 +291,7 @@ img {
 
     .listContainer {
         width: 100%;
-        padding: 0px;
+        padding: 10px 0px 0px 0px;
     }
 
     .thanksContainer {
@@ -315,6 +323,10 @@ img {
     .logo {
         max-width: 100%;
         max-height: 100%;
+    }
+
+    .app_store {
+        padding-bottom: 10px;
     }
 
     .mobile {

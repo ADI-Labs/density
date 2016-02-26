@@ -4,6 +4,8 @@
     {{ super() }}
     <script src="https://apis.google.com/js/client:platform.js" async defer></script>
 {% endblock %}
+
+{% block body %}
 {% if success %}
 {% else %}
 <div class="textContainer">
@@ -15,6 +17,7 @@
     </div>
 </div>
 {% endif %}
+
 <div class="container main-body">
   {% if success %}
     <h1> Welcome {{ uni }}! </h1>

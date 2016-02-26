@@ -1,22 +1,26 @@
-import density
-import unittest
 import re
+import density
+
+def test_email_regex():
+    """ Tests the regex used to filter Oauth applicants """
+    cases = [
+        ('nsb2142@columbia.edu', True),
+        ('nsb2142@columbia.eduABC', False),
+        ('@@nsb2142@columbia.edu', False),
+        ('jae@cs.columbia.edu', True),
+        ('nsb2142@barnard.edu', True),
+        ('nsb2142@yale.edu', False),
+    ]
+
+    for email, match in cases:
+        assert bool(re.match(density.CU_EMAIL_REGEX, email)) == match
 
 
-class TestAuth(unittest.TestCase):
+def test_uni_oauth_code(cursor):
+    assert density.db.get_uni_for_code(cursor, "Not in the database") is None
 
-    def test_email_regex(self):
-        """ Tests the regex used to filter Oauth applicants """
-        cases = [
-            ('nsb2142@columbia.edu', True),
-            ('nsb2142@columbia.eduABC', False),
-            ('@@nsb2142@columbia.edu', False),
-            ('jae@cs.columbia.edu', True),
-            ('nsb2142@barnard.edu', True),
-            ('nsb2142@yale.edu', False),
-        ]
-
-        for email, res in cases:
-            self.assertEqual(
-                bool(re.match(density.CU_EMAIL_REGEX, email)),
-                res)
+    code = density.db.get_oauth_code_for_uni(cursor, "example_uni")
+    # Same UNI -> same code
+    assert code == density.db.get_oauth_code_for_uni(cursor, "example_uni")
+    # Get uni back from code
+    assert density.db.get_uni_for_code(cursor, code) == "example_uni"

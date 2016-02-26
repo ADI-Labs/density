@@ -23,9 +23,16 @@ env:
     - RATE_LIMIT=200
     - GOOGLE_CLIENT_ID="123.apps.googleusercontent.com"
 
+before_install:
+  - wget https://repo.continuum.io/miniconda/Miniconda2-latest-Linux-x86_64.sh -O miniconda.sh;
+  - bash miniconda.sh -b -p "$HOME/miniconda"
+  - export PATH="$HOME/miniconda/bin:$PATH"
+  - conda config --set always_yes yes --set changeps1 no
+  - conda update conda
+
 install:
-  - pip install -r config/requirements.txt
-  - pip install flake8
+  - conda env create -n density --file config/environment.yml
+  - source activate density
 
 services:
   - postgresql
@@ -41,14 +48,14 @@ before_script:
   - sudo -u postgres psql density < ./config/density_dump.sql
   - sudo -u postgres psql density < ./config/oauth_dev_dump.sql
   - sudo -u postgres psql -c "GRANT SELECT ON ALL TABLES IN SCHEMA public TO adi;"
+  - conda env export    # debugging info
+  - source config/settings.dev
 
 script:
-  - flake8 density/
-  - flake8 density/tests
-  - source config/settings.dev
-  - cd density && nosetests
+  - flake8
+  - cd density && PYTHONPATH=. py.test --verbose
 
 notifications:
- slack: adi-labs:tCeqXPsLSyIFe3yjfWfKLRYg
- on_success: never
- on_failure: change
+  slack: adi-labs:tCeqXPsLSyIFe3yjfWfKLRYg
+  on_success: never
+  on_failure: change
