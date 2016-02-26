@@ -1,10 +1,10 @@
 # use Docker's provided python image
-FROM python:2.7
-MAINTAINER natebrennand <natebrennand@gmail.com>
+FROM continuumio/miniconda
+MAINTAINER Alan Du <ahd2125@columbia.edu>
 
 # install all packages
-COPY ./config/requirements.txt /requirements.txt
-RUN pip install -r /requirements.txt
+COPY ./config/environment.yml /environment.yml
+RUN conda env update --name root --file /environment.yml
 
 # add the application directories
 ADD ./density /density
