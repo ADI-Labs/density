@@ -13,7 +13,6 @@ dependencies:
 - seaborn
 - pandas
 - scikit-learn
-- cpickle
 - joblib
 - pip:
   - Flask-Mail
