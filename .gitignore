@@ -1,4 +1,5 @@
 density/.cache
+.cache
 
 lib-cov
 *.seed

@@ -1,0 +1,11 @@
+name: density
+dependencies:
+- flake8        # [test]
+- flask
+- gunicorn
+- psycopg2
+- pytest        # [test]
+- python=2.7
+- pip:
+  - Flask-Mail
+  - oauth2client
