@@ -3,8 +3,6 @@ language: python
 python:
     - "2.7"
 
-cache: pip
-
 env:
   global:
     # general settings
@@ -25,8 +23,16 @@ env:
     - RATE_LIMIT=200
     - GOOGLE_CLIENT_ID="123.apps.googleusercontent.com"
 
+before_install:
+  - wget https://repo.continuum.io/miniconda/Miniconda2-latest-Linux-x86_64.sh -O miniconda.sh;
+  - bash miniconda.sh -b -p "$HOME/miniconda"
+  - export PATH="$HOME/miniconda/bin:$PATH"
+  - conda config --set always_yes yes --set changeps1 no
+  - conda update conda
+
 install:
-  - pip install -r config/requirements.txt
+  - conda env create -n density --file config/environment.yml
+  - source activate density
 
 services:
   - postgresql
@@ -42,7 +48,7 @@ before_script:
   - sudo -u postgres psql density < ./config/density_dump.sql
   - sudo -u postgres psql density < ./config/oauth_dev_dump.sql
   - sudo -u postgres psql -c "GRANT SELECT ON ALL TABLES IN SCHEMA public TO adi;"
-  - pip freeze		# show debugging information
+  - conda env export    # debugging info
   - source config/settings.dev
 
 script:

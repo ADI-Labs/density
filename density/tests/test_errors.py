@@ -1,23 +1,31 @@
-
-import template
 import json
 
+def test_bad_date(app, auth_header):
+    resp = app.get("/day/23/group/85", headers=auth_header)
+    body = json.loads(resp.data)
 
-class TestDateFormatChecker(template.TestingTemplate):
+    assert resp.status_code == 400
+    assert "error" in body
+    assert "YYYY-MM-DD" in body["error"]
 
-    def test_bad_date(self):
-        resp = self.authenticated_get('/day/23/group/85')
+def test_good_date(app, auth_header):
+    resp = app.get("/day/2014-10-23/group/85", headers=auth_header)
+    body = json.loads(resp.data)
 
-        self.assertEqual(400, resp.status_code)
+    assert resp.status_code == 200
+    assert len(body["data"]) == 96
 
-        body = json.loads(resp.data)
-        self.assertIn('error', body)
-        self.assertIn('YYYY-MM-DD', body.get('error'))
+def test_no_auth(app):
+    resp = app.get("/day/2014-10-23/group/85")
+    body = json.loads(resp.data)
 
-    def test_good_date(self):
-        resp = self.authenticated_get('/day/2014-10-23/group/85')
+    assert "No authorization token" in body["error"]
+    assert resp.status_code == 401      # unauthorized
 
-        self.assertEqual(200, resp.status_code)
+def test_bad_auth(app):
+    resp = app.get("/day/2014-10-23/group/85",
+                   headers={"Authorization-Token": "fake auth token"})
+    body = json.loads(resp.data)
 
-        body = json.loads(resp.data)
-        self.assertEqual(len(body['data']), 96)
+    assert "No authorization token" in body["error"]
+    assert resp.status_code == 401      # unauthorized

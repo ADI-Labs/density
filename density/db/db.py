@@ -180,12 +180,12 @@ def get_oauth_code_for_uni(cursor, uni):
     # Try getting the code from the database.
     query = """SELECT code
                FROM oauth_data
-               WHERE uni=%s;"""
+               WHERE uni=%s LIMIT 1;"""
     cursor.execute(query, [uni])
-    results = cursor.fetchall()
+    result = cursor.fetchone()
 
-    if results:
-        return results[0]['code']
+    if result is not None:
+        return result['code']
     else:
         # If the code DNE, create a new one and insert into the database.
         new_code = ''.join(random.choice(
@@ -204,10 +204,8 @@ def get_uni_for_code(cursor, code):
     """
     query = """SELECT uni
                FROM oauth_data
-               WHERE code=%s;"""
+               WHERE code=%s LIMIT 1;"""
     cursor.execute(query, [code])
-    results = cursor.fetchall()
-    if results:
-        return results[0]['uni']
-    else:
-        return None
+    result = cursor.fetchone()
+    if result is not None:
+        return result['uni']

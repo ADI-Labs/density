@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 
-
 # add swap if DNE
 # swap is necessary for using Docker
 if [ $(sudo swapon -s | wc -l) -eq 1 ]
@@ -12,9 +11,7 @@ then
 fi
 
 apt-get update
-
-# install git
-apt-get install --yes git
+apt-get install --yes docker.io git vim
 
 # install postgresql-9.3
 PG_REPO_APT_SOURCE=/etc/apt/sources.list.d/pgdg.list
@@ -25,25 +22,18 @@ then
     apt-get update
 fi
 
-apt-get install --yes postgresql-9.3 \
-    libpq-dev
+apt-get install --yes postgresql-9.3
 sudo -u postgres psql < /vagrant/config/density_dump.sql
 sudo -u postgres psql < /vagrant/config/oauth_dev_dump.sql
 
-# install python
-apt-get install --yes python \
-    python-pip \
-    python-dev \
-    python-software-properties
+if [ ! -d "/opt/conda" ]; then
+    wget --no-clobber http://repo.continuum.io/miniconda/Miniconda2-latest-Linux-x86_64.sh
+    bash Miniconda2-latest-Linux-x86_64.sh -b -p "/opt/conda"
+    echo 'export PATH="/opt/conda/bin:$PATH"' >> /home/vagrant/.bashrc
+    export PATH="/opt/conda/bin:$PATH"
 
-pip install -r /vagrant/config/requirements.txt
-pip install flake8  # for local testing
-
-# install vim
-apt-get install --yes vim
-
-# install docker
-apt-get install --yes docker.io
-service restart docker
+    conda update --yes conda
+    conda env update --name root --file /vagrant/config/environment.yml
+fi
 
 exit 0
