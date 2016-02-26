@@ -7,6 +7,8 @@ dependencies:
 - pytest        # [test]
 - python=2.7
 - jupyter
+- numpy
+- scipy
 - matplotlib
 - seaborn
 - pandas
