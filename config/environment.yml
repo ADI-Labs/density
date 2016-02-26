@@ -6,6 +6,13 @@ dependencies:
 - psycopg2
 - pytest        # [test]
 - python=2.7
+- jupyter
+- matplotlib
+- seaborn
+- pandas
+- scikit-learn
+- cpickle
+- joblib
 - pip:
   - Flask-Mail
   - oauth2client
