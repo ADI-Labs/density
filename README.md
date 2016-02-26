@@ -39,6 +39,14 @@ The data table is under the name `density_data`
 
 [Click here for the PostgeSQL tutorial](http://www.postgresql.org/docs/8.0/static/tutorial.html)
 
+##Scientific Computing
+
+We now use [miniconda](http://conda.pydata.org/miniconda.html) to handle our Python environment needs.  Our `/config/environment.yml` file contains a list of basic libraries for data science.  
+
+To use [Jupyter Notebook](http://jupyter.org/) within Vagrant type:
+
+`jupyter notebook ––ip=0.0.0.0`
+
 
 ## Importing Dev Data
 
