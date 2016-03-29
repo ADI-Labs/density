@@ -30,10 +30,12 @@ if [ ! -d "/opt/conda" ]; then
     wget --no-clobber http://repo.continuum.io/miniconda/Miniconda2-latest-Linux-x86_64.sh
     bash Miniconda2-latest-Linux-x86_64.sh -b -p "/opt/conda"
     echo 'export PATH="/opt/conda/bin:$PATH"' >> /home/vagrant/.bashrc
-    export PATH="/opt/conda/bin:$PATH"
-
-    conda update --yes conda
-    conda env update --name root --file /vagrant/config/environment.yml
+    sudo chown -R vagrant:vagrant /opt/conda
 fi
+
+export PATH="/opt/conda/bin:$PATH"
+
+conda update --yes conda
+conda env update --name root --file /vagrant/config/environment.yml
 
 exit 0

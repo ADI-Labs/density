@@ -3,17 +3,11 @@ dependencies:
 - flake8        # [test]
 - flask
 - gunicorn
+- jupyter
+- pandas
 - psycopg2
 - pytest        # [test]
 - python=2.7
-- jupyter
-- numpy
-- scipy
-- matplotlib
-- seaborn
-- pandas
-- scikit-learn
-- joblib
 - pip:
   - Flask-Mail
   - oauth2client
