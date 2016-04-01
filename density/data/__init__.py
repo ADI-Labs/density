@@ -22,10 +22,8 @@ def db_to_pandas(conn):
     conn: psycopg2.extensions.connection
 
     Returns
-    _______
-
+    -------
     pandas.DataFrame
-
     """
 
     df = pd.read_sql('SELECT * FROM density_data', conn) \
@@ -37,10 +35,29 @@ def db_to_pandas(conn):
 
 
 def plot_prediction_point_estimate(series, predictor):
+    """ Returns bokeh plot of current + predicted capacity
 
+    Returns a figure with 2 lines, one for past capacity and another for
+    future predicted capacity using predictor function. The plot
+    displays 24 hours into the future at 15 minute intervals.
+
+    Parameters
+    ----------
+    series : pandas.Series
+        A series of a single floor's occupancy. Its index are past times
+        and its values are the observec occupancies, and its name is the
+        floor name.
+    predictor : Callable[[str, pd.PeriodIndex], pd.Series]
+        Takes the room name and a PeriodIndex of times of future times
+        and returns the predicted occupancy of the room at those times
+
+    Returns
+    -------
+    bokeh.plotting.figure.Figure
+    """
     future_dts = PeriodIndex(start=series.index[-1], freq='15T',
                              periods=24 * 4)
-    predictions = pd.Series(predictor(future_dts),
+    predictions = pd.Series(predictor(series.name, future_dts),
                             index=future_dts.to_datetime())
 
     p = figure(x_axis_type="datetime")
