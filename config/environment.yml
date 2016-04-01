@@ -1,5 +1,6 @@
 name: density
 dependencies:
+- bokeh
 - flake8        # [test]
 - flask
 - gunicorn
