@@ -13,6 +13,6 @@ def test_db_to_pandas():
     assert df.dtypes["group_name"] == "category"
     assert df.dtypes["parent_id"] == "int64"
     assert df.dtypes["parent_name"] == "category"
-    
+
     assert df.index.name == "dump_time"
     assert isinstance(df.index, pd.DatetimeIndex)
