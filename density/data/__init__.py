@@ -20,10 +20,11 @@ def db_to_pandas(conn):
     Parameters
     ----------
     conn: psycopg2.extensions.connection
-
+        Connection to db
     Returns
     -------
     pandas.DataFrame
+        Density data in a Dataframe
     """
 
     df = pd.read_sql('SELECT * FROM density_data', conn) \
@@ -43,11 +44,14 @@ def plot_prediction_point_estimate(conn, series, predictor):
 
     Parameters
     ----------
-    series : pandas.Series
+    conn: psycopg2.extensions.connection
+        Connection to db
+    series: pandas.Series
         A series of a single floor's occupancy. Its index are past times
         and its values are the observec occupancies, and its name is the
         floor name.
-    predictor : Callable[[str, pd.PeriodIndex], pd.Series]
+    predictor: Callable[[psycopg2.extensions.connection, str, pd.PeriodIndex],
+                         pd.Series]
         Takes the room name and a PeriodIndex of times of future times
         and returns the predicted occupancy of the room at those times
 
@@ -87,7 +91,7 @@ def df_predict(conn, index, floor):
     ----------
     conn: psycopg2.extensions.connection
         Connection to db
-    index: pd.DatetimeIndex
+    index: pd.DatetimeIndex/pd.PeriodIndex
         Index of all times for querying predictions.
     floor: str
         Floor to obtain predictions for.
@@ -99,15 +103,13 @@ def df_predict(conn, index, floor):
     """
     df = db_to_pandas(conn)
     means = [get_weekly_history(df, floor, data).mean() for data in index]
-    means = [get_weekly_history(df, floor, data) for data in index]
     predictions = pd.Series(means, index=index)
 
     return predictions
 
 
 def get_weekly_history(df, floor, date):
-    """ Return series of past capacities for a floor at the same day of week
-    and time
+    """ Return past capacities for a floor at the same day of week and time
 
     Parameters
     ----------
