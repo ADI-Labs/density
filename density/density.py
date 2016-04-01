@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+from __future__ import print_function
 
 from functools import wraps
 import copy
@@ -236,7 +236,7 @@ def auth():
         return render_template('auth.html', success=True, uni=uni, code=code)
     except Exception as e:
         # TODO: log errors
-        print e
+        print(e)
         return render_template('auth.html',
                                success=False,
                                reason="An error occurred. Please try again.")
