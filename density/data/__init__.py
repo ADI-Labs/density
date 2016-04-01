@@ -34,7 +34,7 @@ def db_to_pandas(conn):
     return df
 
 
-def plot_prediction_point_estimate(series, predictor):
+def plot_prediction_point_estimate(conn, series, predictor):
     """ Returns bokeh plot of current + predicted capacity
 
     Returns a figure with 2 lines, one for past capacity and another for
@@ -57,7 +57,7 @@ def plot_prediction_point_estimate(series, predictor):
     """
     future_dts = PeriodIndex(start=series.index[-1], freq='15T',
                              periods=24 * 4)
-    predictions = pd.Series(predictor(series.name, future_dts),
+    predictions = pd.Series(predictor(conn, series.name, future_dts),
                             index=future_dts.to_datetime())
 
     p = figure(x_axis_type="datetime")
@@ -80,13 +80,13 @@ def plot_prediction_point_estimate(series, predictor):
     return p
 
 
-def df_predict(df, index, floor):
+def df_predict(conn, index, floor):
     """ Return series of predicted capacities for a provided set of times
 
     Parameters
     ----------
-    df: pd.Dataframe
-        Dataframe consisting of Density data.
+    conn: psycopg2.extensions.connection
+        Connection to db
     index: pd.DatetimeIndex
         Index of all times for querying predictions.
     floor: str
@@ -97,7 +97,9 @@ def df_predict(df, index, floor):
     pd.Series
         Series consisting of predictions for each time in the index.
     """
+    df = db_to_pandas(conn)
     means = [get_weekly_history(df, floor, data).mean() for data in index]
+    means = [get_weekly_history(df, floor, data) for data in index]
     predictions = pd.Series(means, index=index)
 
     return predictions
@@ -124,6 +126,3 @@ def get_weekly_history(df, floor, date):
 
     return df.groupby([df.group_name, df.index.dayofweek, df.index.time]) \
              .get_group((floor, date.dayofweek, date.time()))['client_count']
-
-
-
