@@ -3,8 +3,8 @@ from pandas import PeriodIndex
 
 import pandas as pd
 
-
 PANTONE_292 = (105, 179, 231)
+
 
 def db_to_pandas(conn):
     """ Return occupancy data as pandas dataframe
@@ -78,3 +78,52 @@ def plot_prediction_point_estimate(series, predictor):
     p.yaxis.axis_line_width = 3
 
     return p
+
+
+def df_predict(df, index, floor):
+    """ Return series of predicted capacities for a provided set of times
+
+    Parameters
+    ----------
+    df: pd.Dataframe
+        Dataframe consisting of Density data.
+    index: pd.DatetimeIndex
+        Index of all times for querying predictions.
+    floor: str
+        Floor to obtain predictions for.
+
+    Returns
+    -------
+    pd.Series
+        Series consisting of predictions for each time in the index.
+    """
+    means = [get_weekly_history(df, floor, data).mean() for data in index]
+    predictions = pd.Series(means, index=index)
+
+    return predictions
+
+
+def get_weekly_history(df, floor, date):
+    """ Return series of past capacities for a floor at the same day of week
+    and time
+
+    Parameters
+    ----------
+    df: pd.Dataframe
+        Dataframe consisting of Density data.
+    floor: str
+        Floor to obtain predictions for.
+    date: pd.Timestamp
+        Date to obtain history for
+
+    Returns
+    -------
+    pd.Series
+        Series consisting of past capacities
+    """
+
+    return df.groupby([df.group_name, df.index.dayofweek, df.index.time]) \
+             .get_group((floor, date.dayofweek, date.time()))['client_count']
+
+
+
