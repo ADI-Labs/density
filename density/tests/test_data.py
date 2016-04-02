@@ -20,6 +20,7 @@ def test_db_to_pandas():
     assert df.index.name == "dump_time"
     assert isinstance(df.index, pd.DatetimeIndex)
 
+
 def test_plot_prediction_point_estimate():
 
     def fake_predictor(*args, **kwargs):
@@ -39,6 +40,6 @@ def test_plot_prediction_point_estimate():
                .assign(dump_date=lambda df: pd.to_datetime(df.dump_date)) \
                .set_index("dump_date")
     series = df["Butler Library 3"]
-
-    figure = plot_prediction_point_estimate(series, fake_predictor)
+    conn = pg_pool.getconn()
+    figure = plot_prediction_point_estimate(conn, series, fake_predictor)
     assert isinstance(figure, Figure)
