@@ -102,14 +102,14 @@ def df_predict(conn, index, floor):
         Series consisting of predictions for each time in the index.
     """
     df = db_to_pandas(conn)
-    means = [get_weekly_history(df, floor, data).mean() for data in index]
+    means = get_historical_means(df, floor, index)
     predictions = pd.Series(means, index=index)
 
     return predictions
 
 
-def get_weekly_history(df, floor, date):
-    """ Return past capacities for a floor at the same day of week and time
+def get_historical_means(df, floor, index):
+    """ Return mean capacities for a floor at the same day of week and time
 
     Parameters
     ----------
@@ -117,14 +117,16 @@ def get_weekly_history(df, floor, date):
         Dataframe consisting of Density data.
     floor: str
         Floor to obtain predictions for.
-    date: pd.Timestamp
-        Date to obtain history for
+    index: pd.DatetimeIndex/pd.PeriodIndex
+        Index of dates to obtain history for
 
     Returns
     -------
-    pd.Series
-        Series consisting of past capacities
+    List[float]
+        List of historical averages
     """
-
-    return df.groupby([df.group_name, df.index.dayofweek, df.index.time]) \
-             .get_group((floor, date.dayofweek, date.time()))['client_count']
+    groups = df.groupby([df.group_name, df.index.dayofweek, df.index.time])
+    return [groups
+            .get_group((floor, date.dayofweek, date.time()))['client_count']
+            .mean()
+            for date in index]
