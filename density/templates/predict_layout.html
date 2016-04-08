@@ -1,14 +1,22 @@
+<div class="alert-container">
+    <div class="alert">
+        Check out our new <a href="/map">map</a> feature and <a href="https://adicu.com/blog/post/density_data">blog post</a>!
+    </div>
+    <div id="alert-close">
+        &times;
+    </div>
+</div>
 <!doctype html>
 <head>
-    {% block head %}
+    
     <title>Density</title>
     <!--CSS files-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
-    <link rel="shortcut icon" type="image/png" href="{{ url_for('static', filename='img/favicon.png') }}">
-    <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/favicon.png') }}">
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+    <link rel="shortcut icon" type="image/png" href="/static/img/favicon.png">
+    <link rel="icon" type="image/png" href="/static/img/favicon.png">
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -19,7 +27,17 @@
       ga('send', 'pageview');
 
     </script>
-    {% endblock %}
+
+
+
+<link
+    href="http://cdn.pydata.org/bokeh/release/bokeh-0.11.0.min.css"
+    rel="stylesheet" type="text/css">
+<script src="http://cdn.pydata.org/bokeh/release/bokeh-0.11.0.min.js"></script>
+{{ script|safe }}
+
+
+    
 </head>
 <body>
   <div class="wrapper">
@@ -27,7 +45,7 @@
       <div class="logoContainer">
         <div class="container">
           <div class="text-center">
-            <a href="/"><img class="logo" src="{{ url_for('static', filename='img/logo.svg')}}"></a>
+            <a href="/"><img class="logo" src="/static/img/logo.svg"></a>
           </div>
         </div>
       </div>
@@ -40,7 +58,37 @@
           <span id="nav-api" class="navItem"><a href="/docs">API</a></span>
         </div>
       </div>
-      {% block body %}{% endblock %}
+      
+<div class="listContainer">
+    <a href="https://itunes.apple.com/us/app/density-columbia-study-spaces/id1065376976"><img class="app_store" src="/static/img/app_store_badge.svg"></a>
+    <div class="container">
+
+		<ul class="list-group">
+			{% for location_name, d in div.items() %}
+			<li class="list-predict-item"><h4>{{location_name}}</h4>
+                
+
+					<div class='graph'>
+						<p>this is a work in progress :(</p>
+						{{ d|safe }}
+					</div>
+
+            </li>
+			{% endfor %}
+            
+        </ul>
+
+    </div>
+    <div class="update">Last updated November 01 2014, 07:45 PM</div>
+</div>
+<div class="thanksContainer">
+    <div class="container">
+        <h4>Special thanks to <img class="logo escLogo" src="/static/img/esc.png">
+        </h4>
+    </div>
+</div>
+
+
       <footer class="footer">
           <div class="container">
               <p class="left">Maintained by <a href="https://adicucom/labs">ADI Labs</a></p>
@@ -52,9 +100,10 @@
       <!--Javascript Files-->
       <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-      <script src="{{ url_for('static', filename='js/base.js') }}"></script>
-      {% block scripts %}{% endblock %}
+      <script src="/static/js/base.js"></script>
+      
+    <script src="/static/js/capacity.js"></script>
+
     </div>
   </div>
 </body>
-

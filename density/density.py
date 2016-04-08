@@ -7,6 +7,7 @@ import httplib2
 import re
 import traceback
 
+from bokeh.embed import components
 from flask import Flask, g, jsonify, render_template, json, request
 from flask_mail import Message, Mail
 import psycopg2
@@ -16,6 +17,9 @@ from oauth2client.client import flow_from_clientsecrets
 
 from db import db
 from config import flask_config
+
+from data import sample_out
+
 
 app = Flask(__name__)
 app.config.update(**flask_config.config)
@@ -165,10 +169,17 @@ def home():
     return render_template('index.html',
                            client_id=app.config['GOOGLE_CLIENT_ID'])
 
-
 @app.route('/about')
 def about():
     return render_template('about.html')
+
+@app.route('/predict')
+def predict():
+    locations = sorted(group["group_name"] for group in FULL_CAP_DATA)
+    plot = {l: sample_out() for l in locations}
+
+    script,div = components(plot)
+    return render_template('predict_layout.html', script=script,div=div)
 
 
 @app.route('/docs')
