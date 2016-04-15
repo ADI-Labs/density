@@ -32,7 +32,13 @@ def db_to_pandas(conn):
            .set_index("dump_time") \
            .assign(group_name=lambda df: df["group_name"].astype('category'),
                    parent_name=lambda df: df["parent_name"].astype('category'))
+    return df
 
+def db_to_pandas_pivot(conn):
+    df = pd.read_sql('SELECT * FROM density_data', conn) \
+       .set_index("dump_time") \
+       .assign(group_name=lambda df: df["group_name"].astype('category')) \
+       .pivot(columns="group_name", values="client_count")
     return df
 
 
@@ -49,7 +55,7 @@ def plot_prediction_point_estimate(conn, series, predictor):
         Connection to db
     series: pandas.Series
         A series of a single floor's occupancy. Its index are past times
-        and its values are the observec occupancies, and its name is the
+        and its values are the observed occupancies, and its name is the
         floor name.
     predictor: Callable[[psycopg2.extensions.connection, str, pd.PeriodIndex],
                          pd.Series]
@@ -85,7 +91,7 @@ def plot_prediction_point_estimate(conn, series, predictor):
     return p
 
 
-def df_predict(conn, index, floor):
+def df_predict(conn, floor, index):
     """ Return series of predicted capacities for a provided set of times
 
     Parameters
@@ -130,4 +136,4 @@ def get_historical_means(df, floor, index):
     return [groups
             .get_group((floor, date.dayofweek, date.time()))['client_count']
             .mean()
-            for date in index]
+            for date in index.to_datetime()]

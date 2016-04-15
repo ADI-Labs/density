@@ -18,8 +18,10 @@ from oauth2client.client import flow_from_clientsecrets
 from db import db
 from config import flask_config
 
-from data import sample_out
 
+import pandas as pd
+from data import plot_prediction_point_estimate,df_predict, db_to_pandas_pivot
+import datetime as dt
 
 app = Flask(__name__)
 app.config.update(**flask_config.config)
@@ -95,20 +97,6 @@ def page_not_found(e):
     return render_template('404.html')
 
 
-@app.errorhandler(500)
-@app.errorhandler(Exception)
-def internal_error(e):
-    if not app.debug:
-        msg = Message("DENSITY ERROR", sender="densitylogger@gmail.com",
-                      recipients=app.config['ADMINS'])
-        msg.body = traceback.format_exc()
-        mail.send(msg)
-    return jsonify(error="Something went wrong, and notification of "
-                   "admins failed.  Please contact an admin.",
-                   error_data=traceback.format_exc())
-    # return jsonify(error="Something went wrong, the admins were notified.")
-
-
 def authorization_required(func):
     @wraps(func)
     def authorization_checker(*args, **kwargs):
@@ -176,10 +164,13 @@ def about():
 @app.route('/predict')
 def predict():
     locations = sorted(group["group_name"] for group in FULL_CAP_DATA)
-    plot = {l: sample_out() for l in locations}
 
-    script,div = components(plot)
-    return render_template('predict_layout.html', script=script,div=div)
+    df = db_to_pandas_pivot(g.pg_conn)
+    plots = {l: plot_prediction_point_estimate(g.pg_conn, df[l], df_predict)
+             for l in locations}
+
+    script,div = components(plots)
+    return render_template('predict_layout2.html', script=script,divs=divs)
 
 
 @app.route('/docs')
