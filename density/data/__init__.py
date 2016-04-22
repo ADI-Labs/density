@@ -92,14 +92,12 @@ def plot_prediction_point_estimate(conn, series, predictor):
     return p
 
 
-def df_predict(conn, series, index):
+def df_predict(series, index):
     """ Return series of predicted capacities for a provided set of times
 
     Parameters
     ----------
-    conn: psycopg2.extensions.connection
-        Connection to db
-    series: str
+    series: pd.Series
         Series of historical data for the desired floor.
     index: pd.DatetimeIndex/pd.PeriodIndex
         Index of all times for querying predictions.
@@ -115,13 +113,13 @@ def df_predict(conn, series, index):
     return predictions
 
 
-def get_historical_means(df, index):
+def get_historical_means(series, index):
     """ Return mean capacities for a floor at the same day of week and time
 
     Parameters
     ----------
-    df: pd.Dataframe
-        Dataframe consisting of Density data for the given floor.
+    series: pd.Series
+        Series consisting of Density data for the given floor.
     index: pd.DatetimeIndex/pd.PeriodIndex
         Index of dates to obtain history for
 
@@ -130,7 +128,7 @@ def get_historical_means(df, index):
     List[float]
         List of historical averages
     """
-    groups = df.groupby([df.index.dayofweek, df.index.time])
+    groups = series.groupby([series.index.dayofweek, series.index.time])
     return [groups
             .get_group((date.dayofweek, date.time()))
             .mean()
