@@ -5,6 +5,7 @@ import pandas as pd
 
 PANTONE_292 = (105, 179, 231)
 
+
 def db_to_pandas(conn):
     """ Return occupancy data as pandas dataframe
 
@@ -67,7 +68,8 @@ def plot_prediction_point_estimate(conn, series, predictor):
     """
     future_dts = PeriodIndex(start=series.index[-1], freq='15T',
                              periods=24 * 4)
-    predictions = pd.Series(predictor(conn, series.name, future_dts),
+
+    predictions = pd.Series(predictor(conn, series, future_dts),
                             index=future_dts.to_datetime())
 
     p = figure(x_axis_type="datetime")
@@ -90,39 +92,36 @@ def plot_prediction_point_estimate(conn, series, predictor):
     return p
 
 
-def df_predict(conn, floor, index):
+def df_predict(conn, series, index):
     """ Return series of predicted capacities for a provided set of times
 
     Parameters
     ----------
     conn: psycopg2.extensions.connection
         Connection to db
+    series: str
+        Series of historical data for the desired floor.
     index: pd.DatetimeIndex/pd.PeriodIndex
         Index of all times for querying predictions.
-    floor: str
-        Floor to obtain predictions for.
 
     Returns
     -------
     pd.Series
         Series consisting of predictions for each time in the index.
     """
-    df = db_to_pandas(conn)
-    means = get_historical_means(df, floor, index)
+    means = get_historical_means(series, index)
     predictions = pd.Series(means, index=index)
 
     return predictions
 
 
-def get_historical_means(df, floor, index):
+def get_historical_means(df, index):
     """ Return mean capacities for a floor at the same day of week and time
 
     Parameters
     ----------
     df: pd.Dataframe
-        Dataframe consisting of Density data.
-    floor: str
-        Floor to obtain predictions for.
+        Dataframe consisting of Density data for the given floor.
     index: pd.DatetimeIndex/pd.PeriodIndex
         Index of dates to obtain history for
 
@@ -131,8 +130,8 @@ def get_historical_means(df, floor, index):
     List[float]
         List of historical averages
     """
-    groups = df.groupby([df.group_name, df.index.dayofweek, df.index.time])
+    groups = df.groupby([df.index.dayofweek, df.index.time])
     return [groups
-            .get_group((floor, date.dayofweek, date.time()))['client_count']
+            .get_group((date.dayofweek, date.time()))
             .mean()
             for date in index.to_datetime()]
