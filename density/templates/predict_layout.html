@@ -2,30 +2,21 @@
 {% extends "layout.html" %}
 {% block body %}
 
-<link
-    href="http://cdn.pydata.org/bokeh/release/bokeh-0.11.0.min.css"
-    rel="stylesheet" type="text/css">
+<link href="http://cdn.pydata.org/bokeh/release/bokeh-0.11.0.min.css" 
+  rel="stylesheet" type="text/css">
 <script src="http://cdn.pydata.org/bokeh/release/bokeh-0.11.0.min.js"></script>
 {{ script|safe }}
 
 <div class="listContainer">
-
-    <ul class="list-group">
-      {% for location_name, d in divs.items() %}
-      <li class="list-predict-item"><h4>{{location_name}}</h4>
-                
-
-          <div class='graph'>
-            <p>this is a work in progress :(</p>
-            {{ d|safe }}
-          </div>
-
-            </li>
-      {% endfor %}
-            
-        </ul>
-
-    </div>
-
-
+  <ul class="list-group">
+    {% for location_name, d in divs.items() %}
+    <li class="list-predict-item"><h4>{{location_name}}</h4>
+      <div class='graph'>
+        <p>this is a work in progress :(</p>
+        {{ d|safe }}
+      </div>
+    </li>
+    {% endfor %}     
+  </ul>
+</div>
 {% endblock %}
