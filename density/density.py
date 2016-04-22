@@ -1,12 +1,13 @@
-#!/usr/bin/env python
+from __future__ import print_function
 
-from functools import wraps
 import copy
 import datetime
+from functools import wraps
 import httplib2
 import re
 import traceback
 
+from bokeh.embed import components
 from flask import Flask, g, jsonify, render_template, json, request
 from flask_mail import Message, Mail
 import psycopg2
@@ -14,8 +15,10 @@ import psycopg2.pool
 import psycopg2.extras
 from oauth2client.client import flow_from_clientsecrets
 
-from db import db
 from config import flask_config
+from data import plot_prediction_point_estimate, df_predict, db_to_pandas_pivot
+from db import db
+
 
 app = Flask(__name__)
 app.config.update(**flask_config.config)
@@ -41,7 +44,6 @@ pg_pool = psycopg2.pool.SimpleConnectionPool(
     host=app.config['PG_HOST'],
     port=app.config['PG_PORT'],
 )
-
 
 @app.before_request
 def get_connections():
@@ -104,7 +106,6 @@ def internal_error(e):
                    error_data=traceback.format_exc())
     # return jsonify(error="Something went wrong, the admins were notified.")
 
-
 def authorization_required(func):
     @wraps(func)
     def authorization_checker(*args, **kwargs):
@@ -165,10 +166,20 @@ def home():
     return render_template('index.html',
                            client_id=app.config['GOOGLE_CLIENT_ID'])
 
-
 @app.route('/about')
 def about():
     return render_template('about.html')
+
+@app.route('/predict')
+def predict():
+    locations = sorted(group["group_name"] for group in FULL_CAP_DATA)
+
+    df = db_to_pandas_pivot(g.pg_conn)
+    plots = {l: plot_prediction_point_estimate(g.pg_conn, df[l], df_predict)
+             for l in locations}
+
+    script, divs = components(plots)
+    return render_template('predict_layout.html', script=script, divs=divs)
 
 
 @app.route('/docs')
@@ -236,7 +247,7 @@ def auth():
         return render_template('auth.html', success=True, uni=uni, code=code)
     except Exception as e:
         # TODO: log errors
-        print e
+        print(e)
         return render_template('auth.html',
                                success=False,
                                reason="An error occurred. Please try again.")

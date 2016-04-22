@@ -32,6 +32,8 @@ $(document).ready(function() {
     darken('nav-api');
   } else if (url.indexOf('about') !== -1) {
     darken('nav-about');
+  } else if(url.indexOf('predict')!== -1) {
+    darken('nav-predict')
   } else {
     darken('nav-home');
   }
