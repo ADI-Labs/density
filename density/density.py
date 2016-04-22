@@ -1,8 +1,8 @@
 from __future__ import print_function
 
-from functools import wraps
 import copy
 import datetime
+from functools import wraps
 import httplib2
 import re
 import traceback
@@ -10,18 +10,20 @@ import traceback
 from bokeh.embed import components
 from flask import Flask, g, jsonify, render_template, json, request
 from flask_mail import Message, Mail
+import pandas as pd
 import psycopg2
 import psycopg2.pool
 import psycopg2.extras
 from oauth2client.client import flow_from_clientsecrets
 
-from db import db
 from config import flask_config
-
-
-import pandas as pd
 from data import plot_prediction_point_estimate,df_predict, db_to_pandas_pivot
+<<<<<<< HEAD
 import datetime as dt
+=======
+from db import db
+
+>>>>>>> Formatting and import changes
 
 app = Flask(__name__)
 app.config.update(**flask_config.config)
@@ -97,6 +99,26 @@ def page_not_found(e):
     return render_template('404.html')
 
 
+@app.errorhandler(500)
+@app.errorhandler(Exception)
+def internal_error(e):
+    if not app.debug:
+        msg = Message("DENSITY ERROR", sender="densitylogger@gmail.com",
+                      recipients=app.config['ADMINS'])
+        msg.body = traceback.format_exc()
+        mail.send(msg)
+    return jsonify(error="Something went wrong, and notification of "
+                   "admins failed.  Please contact an admin.",
+                   error_data=traceback.format_exc())
+    # return jsonify(error="Something went wrong, the admins were notified.")
+
+
+
+
+
+
+
+
 def authorization_required(func):
     @wraps(func)
     def authorization_checker(*args, **kwargs):
@@ -169,8 +191,8 @@ def predict():
     plots = {l: plot_prediction_point_estimate(g.pg_conn, df[l], df_predict)
              for l in locations}
 
-    script,div = components(plots)
-    return render_template('predict_layout2.html', script=script,divs=divs)
+    script, divs = components(plots)
+    return render_template('predict_layout.html', script=script,divs=divs)
 
 
 @app.route('/docs')
