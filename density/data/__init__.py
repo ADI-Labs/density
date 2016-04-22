@@ -2,10 +2,8 @@ from bokeh.plotting import figure
 from pandas import PeriodIndex
 
 import pandas as pd
-from bokeh.plotting import figure, output_file, show
 
 PANTONE_292 = (105, 179, 231)
-
 
 def db_to_pandas(conn):
     """ Return occupancy data as pandas dataframe
@@ -34,11 +32,12 @@ def db_to_pandas(conn):
                    parent_name=lambda df: df["parent_name"].astype('category'))
     return df
 
+
 def db_to_pandas_pivot(conn):
     df = pd.read_sql('SELECT * FROM density_data', conn) \
-       .set_index("dump_time") \
-       .assign(group_name=lambda df: df["group_name"].astype('category')) \
-       .pivot(columns="group_name", values="client_count")
+           .set_index("dump_time") \
+           .assign(group_name=lambda df: df["group_name"].astype('category')) \
+           .pivot(columns="group_name", values="client_count")
     return df
 
 

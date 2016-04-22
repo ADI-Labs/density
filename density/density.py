@@ -10,20 +10,15 @@ import traceback
 from bokeh.embed import components
 from flask import Flask, g, jsonify, render_template, json, request
 from flask_mail import Message, Mail
-import pandas as pd
 import psycopg2
 import psycopg2.pool
 import psycopg2.extras
 from oauth2client.client import flow_from_clientsecrets
 
 from config import flask_config
-from data import plot_prediction_point_estimate,df_predict, db_to_pandas_pivot
-<<<<<<< HEAD
-import datetime as dt
-=======
+from data import plot_prediction_point_estimate, df_predict, db_to_pandas_pivot
 from db import db
 
->>>>>>> Formatting and import changes
 
 app = Flask(__name__)
 app.config.update(**flask_config.config)
@@ -49,7 +44,6 @@ pg_pool = psycopg2.pool.SimpleConnectionPool(
     host=app.config['PG_HOST'],
     port=app.config['PG_PORT'],
 )
-
 
 @app.before_request
 def get_connections():
@@ -111,13 +105,6 @@ def internal_error(e):
                    "admins failed.  Please contact an admin.",
                    error_data=traceback.format_exc())
     # return jsonify(error="Something went wrong, the admins were notified.")
-
-
-
-
-
-
-
 
 def authorization_required(func):
     @wraps(func)
@@ -192,7 +179,7 @@ def predict():
              for l in locations}
 
     script, divs = components(plots)
-    return render_template('predict_layout.html', script=script,divs=divs)
+    return render_template('predict_layout.html', script=script, divs=divs)
 
 
 @app.route('/docs')
