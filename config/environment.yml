@@ -4,7 +4,6 @@ dependencies:
 - flake8        # [test]
 - flask
 - gunicorn
-- jupyter
 - pandas
 - psycopg2
 - pytest        # [test]
