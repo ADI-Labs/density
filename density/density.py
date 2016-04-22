@@ -45,6 +45,7 @@ pg_pool = psycopg2.pool.SimpleConnectionPool(
     port=app.config['PG_PORT'],
 )
 
+
 @app.before_request
 def get_connections():
     """ Get connections from the Postgres pool. """
@@ -106,6 +107,7 @@ def internal_error(e):
                    error_data=traceback.format_exc())
     # return jsonify(error="Something went wrong, the admins were notified.")
 
+
 def authorization_required(func):
     @wraps(func)
     def authorization_checker(*args, **kwargs):
@@ -166,9 +168,11 @@ def home():
     return render_template('index.html',
                            client_id=app.config['GOOGLE_CLIENT_ID'])
 
+
 @app.route('/about')
 def about():
     return render_template('about.html')
+
 
 @app.route('/predict')
 def predict():
