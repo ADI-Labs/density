@@ -27,10 +27,10 @@ sudo -u postgres psql < /vagrant/config/density_dump.sql
 sudo -u postgres psql < /vagrant/config/oauth_dev_dump.sql
 
 if [ ! -d "/opt/conda" ]; then
-    wget --no-clobber http://repo.continuum.io/miniconda/Miniconda2-latest-Linux-x86_64.sh
+    wget --quiet --no-clobber http://repo.continuum.io/miniconda/Miniconda2-latest-Linux-x86_64.sh
     bash Miniconda2-latest-Linux-x86_64.sh -b -p "/opt/conda"
     echo 'export PATH="/opt/conda/bin:$PATH"' >> /home/vagrant/.bashrc
-    sudo chown -R vagrant:vagrant /opt/conda
+    chown -R vagrant:vagrant /opt/conda
 fi
 
 export PATH="/opt/conda/bin:$PATH"
