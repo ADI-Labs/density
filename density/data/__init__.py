@@ -42,7 +42,7 @@ def db_to_pandas_pivot(conn):
     return df
 
 
-def plot_prediction_point_estimate(conn, series, predictor):
+def plot_prediction_point_estimate(series, predictor):
     """ Returns bokeh plot of current + predicted capacity
 
     Returns a figure with 2 lines, one for past capacity and another for
@@ -51,13 +51,11 @@ def plot_prediction_point_estimate(conn, series, predictor):
 
     Parameters
     ----------
-    conn: psycopg2.extensions.connection
-        Connection to db
     series: pandas.Series
         A series of a single floor's occupancy. Its index are past times
         and its values are the observed occupancies, and its name is the
         floor name.
-    predictor: Callable[[psycopg2.extensions.connection, str, pd.PeriodIndex],
+    predictor: Callable[[pd.Series, pd.PeriodIndex],
                          pd.Series]
         Takes the room name and a PeriodIndex of times of future times
         and returns the predicted occupancy of the room at those times
@@ -69,7 +67,7 @@ def plot_prediction_point_estimate(conn, series, predictor):
     future_dts = PeriodIndex(start=series.index[-1], freq='15T',
                              periods=24 * 4)
 
-    predictions = pd.Series(predictor(conn, series, future_dts),
+    predictions = pd.Series(predictor(series, future_dts),
                             index=future_dts.to_datetime())
 
     p = figure(x_axis_type="datetime")

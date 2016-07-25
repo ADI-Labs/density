@@ -179,7 +179,7 @@ def predict():
     locations = sorted(group["group_name"] for group in FULL_CAP_DATA)
 
     df = db_to_pandas_pivot(g.pg_conn)
-    plots = {l: plot_prediction_point_estimate(g.pg_conn, df[l], df_predict)
+    plots = {l: plot_prediction_point_estimate(df[l], df_predict)
              for l in locations}
 
     script, divs = components(plots)
