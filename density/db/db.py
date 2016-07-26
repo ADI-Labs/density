@@ -189,7 +189,7 @@ def get_oauth_code_for_uni(cursor, uni):
     else:
         # If the code DNE, create a new one and insert into the database.
         new_code = ''.join(random.choice(
-            string.ascii_uppercase + string.digits) for x in xrange(32))
+            string.ascii_uppercase + string.digits) for _x in xrange(32))
         query = """INSERT INTO oauth_data (uni, code)
                    VALUES (%s, %s);"""
         cursor.execute(query, [uni, new_code])
