@@ -8,7 +8,7 @@ echo '              Linting'
 echo '--------------------------------------'
 
 flake8
-vulture
+vulture ./
 
 echo '--------------------------------------'
 echo '             Unit Tests'

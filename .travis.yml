@@ -53,7 +53,7 @@ before_script:
 
 script:
   - flake8
-  - vulture
+  - vulture ./
   - cd density && PYTHONPATH=. py.test --verbose
 
 notifications:
