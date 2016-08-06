@@ -6,6 +6,8 @@
 from density import density
 from bokeh import figure
 
+app = density.app
+
 # Ignore bokeh figure attribute assignment
 figure.xaxis.axis_label
 figure.xaxis.axis_line_width
@@ -18,22 +20,8 @@ figure.yaxis.major_label_orientation
 figure.yaxis.axis_line_width
 
 # Ignore Flask app attribute assignment
-density.app.json_encoder
+app.json_encoder
 
 # Ignore all Flask routes
-density.get_connections
-density.log_outcome
-density.page_not_found
-density.internal_error
-density.home
-density.about
-density.predict
-density.docs
-density.building_info
-density.auth
-density.redirect_uri
-density.get_day_group_data
-density.get_day_building_data
-density.get_window_group_data
-density.get_window_building_data
-density.map
+routes = [app.view_functions[rule.endpoint] for rule in
+          app.url_map.iter_rules()]
