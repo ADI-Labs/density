@@ -11,3 +11,4 @@ dependencies:
 - pip:
   - Flask-Mail
   - oauth2client
+  - vulture     # [test]
