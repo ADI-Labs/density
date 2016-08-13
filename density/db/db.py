@@ -1,5 +1,6 @@
-import random
-import string
+import os
+import base64
+import uuid
 
 
 TABLE_NAME = 'density_data'
@@ -188,8 +189,8 @@ def get_oauth_code_for_uni(cursor, uni):
         return result['code']
     else:
         # If the code DNE, create a new one and insert into the database.
-        new_code = ''.join(random.choice(
-            string.ascii_uppercase + string.digits) for x in xrange(32))
+        token_bytes = os.urandom(32) + uuid.uuid4().bytes
+        new_code = base64.urlsafe_b64encode(token_bytes)
         query = """INSERT INTO oauth_data (uni, code)
                    VALUES (%s, %s);"""
         cursor.execute(query, [uni, new_code])
