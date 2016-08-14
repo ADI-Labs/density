@@ -1,7 +1,7 @@
 
 # Density
 
-[![Build Status](https://travis-ci.org/adicu/density.svg?branch=master)](https://travis-ci.org/adicu/density)
+[![Build Status](https://travis-ci.org/ADI-Labs/density.svg?branch=master)](https://travis-ci.org/ADI-Labs/density)
 
 
 Density is a project to provide easy access to the Wireless Density data from Columbia.
