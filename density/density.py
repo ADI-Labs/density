@@ -249,6 +249,14 @@ def auth():
         uni = regex.group('uni')
         code = db.get_oauth_code_for_uni(g.cursor, uni)
         return render_template('auth.html', success=True, uni=uni, code=code)
+    except psycopg2.IntegrityError:
+        return render_template('auth.html',
+                               success=False,
+                               reason="Attempt to generate API key resulted in"
+                                      " a collision with another key in the"
+                                      " database. Please refresh to try and"
+                                      " generate a new key.")
+
     except Exception as e:
         # TODO: log errors
         print(e)
