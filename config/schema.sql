@@ -100,8 +100,10 @@ DROP TABLE oauth_data CASCADE;
 
 CREATE TABLE oauth_data (
     uni  text NOT NULL,
-    code text NOT NULL
+    code varchar(64) NOT NULL
 );
+
+CREATE UNIQUE INDEX on oauth_data (code);
 
 AlTER TABLE density_data OWNER TO adicu;
 AlTER TABLE hour_window  OWNER TO adicu;

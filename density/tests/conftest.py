@@ -9,7 +9,8 @@ def app():
 
 @pytest.fixture
 def auth_header():
-    return {'Authorization-Token': 'abcdefghjijklmnopqrstuvwxyz'}
+    token = 'l7QGxn6doncC9Z9iPk7hykbMilRg2uV0JoIxYljtEai4o7rjVP1J9KDTudwYDNKl'
+    return {'Authorization-Token': token}
 
 @pytest.yield_fixture
 def cursor():
