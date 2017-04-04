@@ -493,7 +493,7 @@ def map():
     # Render template has an SVG image whose colors are changed by % full
     return render_template('map.html', locations=locations)
 
-@app.route('/upload', methods = ['POST'])
+@app.route('/upload', methods=['POST'])
 def upload():
     """ Accept POST requests from CUIT to add new data to the server """
 
@@ -508,12 +508,13 @@ def upload():
 
     density_data = json_data['data']
 
-    db_failed = db.insert_density_data(g.cursor, density_data)
-    if db_failed == 0:
+    db_success = db.insert_density_data(g.cursor, density_data)
+    if db_success:
         return 'Data successfully uploaded.', 200
     else:
-        return '%d rows were not inserted. Please try again or contact someone in ADI.' % db_failed, 500
+        return 'At least one of the records was not inserted. \
+            Please contact someone in ADI for more details.', 500
+
 
 if __name__ == '__main__':
     app.run(host=app.config['HOST'])
-

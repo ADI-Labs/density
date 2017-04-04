@@ -212,38 +212,43 @@ def get_uni_for_code(cursor, code):
     if result is not None:
         return result['uni']
 
+
 PARENTS = {
-  '79' : 'Lehman Library',
-  '84' : 'Lerner',
-  '15' : 'Northwest Corner Building',
-  '75' : 'John Jay',
-  '103' : 'Butler',
-  '131' : '',
-  '146' : 'Avery',
-  '62' : 'East Asian Library',
-  '2' : 'Uris'
+    '79': 'Lehman Library',
+    '84': 'Lerner',
+    '15': 'Northwest Corner Building',
+    '75': 'John Jay',
+    '103': 'Butler',
+    '131': '',
+    '146': 'Avery',
+    '62': 'East Asian Library',
+    '2': 'Uris'
 }
 
 def insert_density_data(cursor, data):
-  query = """INSERT INTO {table_name}
-             (dump_time, group_id, group_name, parent_id, parent_name, client_count)
-             VALUES %s;""".format(table_name=TABLE_NAME)
+    query = """INSERT INTO {table_name} (dump_time, group_id, group_name,\
+      parent_id, parent_name, client_count)
+      VALUES %s;""".format(table_name=TABLE_NAME)
 
-  # Set the time
-  date = datetime.now().replace(second=0, microsecond=0)
+    date = datetime.now().replace(second=0, microsecond=0)
 
-  db_failed = 0
+    db_success = True
 
-  # NOTE: We tried batching these but ran into some problems escaping quotes.
-  # It's easy with list comprehensions to batch them, but hard to escape
-  # single quotes that may appear in group names.
-  for key in data:
     query = """INSERT INTO {table_name}
-             (dump_time, group_id, group_name, parent_id, parent_name, client_count)
-             VALUES (%s, %s, %s, %s, %s, %s);""".format(table_name=TABLE_NAME)
-    try:
-      cursor.execute(query, (date, int(key), data[key]['name'], int(data[key]['parent_id']), PARENTS[data[key]['parent_id']], int(data[key]['client_count'])))
-    except:
-      db_failed += 1
+               (dump_time, group_id, group_name, parent_id,
+                parent_name, client_count) VALUES
+               (%s, %s, %s, %s, %s, %s);""".format(table_name=TABLE_NAME)
 
-  return db_failed
+    data = [(date, int(key), data[key]['name'],
+            int(data[key]['parent_id']), PARENTS[data[key]['parent_id']],
+            int(data[key]['client_count'])) for key in data]
+
+    try:
+        cursor.executemany(query, data)
+    except Exception as e:
+        # At least log the error for our own sanity. But, we still
+        # want to insert as many records as we can, so we won't break.
+        print(e)
+        db_success = False
+
+    return db_success
