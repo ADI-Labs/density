@@ -497,24 +497,25 @@ def map():
 @app.route('/upload', methods=['POST'])
 def upload():
     """ Accept POST requests from CUIT to add new data to the server """
-
     # This is stored in local settings and is the way we verify uploads.
     secret_key = request.args['key']
     if secret_key != app.config['UPLOAD_KEY']:
         return 'Please include a valid API key.', 401
 
-    json_data = request.get_json()
-    if 'data' not in json_data:
+    try:
+        data = request.get_json()["data"]
+    except (TypeError, KeyError):
         return 'Please include data to upload.', 400
 
-    density_data = json_data['data']
-
-    db_success = db.insert_density_data(g.cursor, density_data)
-    if db_success:
-        return 'Data successfully uploaded.', 200
-    else:
+    try:
+        db.insert_density_data(g.cursor, data)
+    except Exception as e:
+        # TODO: proper logging
+        print(e)
         return 'At least one of the records was not inserted. \
             Please contact someone in ADI for more details.', 500
+
+    return 'Data successfully uploaded.', 200
 
 
 if __name__ == '__main__':
