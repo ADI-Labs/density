@@ -174,7 +174,8 @@ def about():
     return render_template('about.html')
 
 
-@app.route('/predict')
+# WIP: predict
+# @app.route('/predict')
 def predict():
     locations = sorted(group["group_name"] for group in FULL_CAP_DATA)
 
@@ -183,7 +184,7 @@ def predict():
              for l in locations}
 
     script, divs = components(plots)
-    return render_template('predict_layout.html', script=script, divs=divs)
+    return render_template('predict.html', script=script, divs=divs)
 
 
 @app.route('/docs')

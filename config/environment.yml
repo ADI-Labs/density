@@ -1,4 +1,7 @@
 name: density
+channels:
+- conda-forge
+- defaults
 dependencies:
 - bokeh
 - flake8        # [test]
