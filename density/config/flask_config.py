@@ -22,7 +22,8 @@ config = {
     'PG_HOST': None,
     'PG_PORT': None,
     'GOOGLE_CLIENT_ID': None,
-    'DEBUG': None
+    'DEBUG': None,
+    'UPLOAD_KEY': None
 }
 
 try:  # use local settings

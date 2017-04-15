@@ -494,5 +494,28 @@ def map():
     # Render template has an SVG image whose colors are changed by % full
     return render_template('map.html', locations=locations)
 
+@app.route('/upload', methods=['POST'])
+def upload():
+    """ Accept POST requests from CUIT to add new data to the server """
+
+    # This is stored in local settings and is the way we verify uploads.
+    secret_key = request.args['key']
+    if secret_key != app.config['UPLOAD_KEY']:
+        return 'Please include a valid API key.', 401
+
+    json_data = request.get_json()
+    if 'data' not in json_data:
+        return 'Please include data to upload.', 400
+
+    density_data = json_data['data']
+
+    db_success = db.insert_density_data(g.cursor, density_data)
+    if db_success:
+        return 'Data successfully uploaded.', 200
+    else:
+        return 'At least one of the records was not inserted. \
+            Please contact someone in ADI for more details.', 500
+
+
 if __name__ == '__main__':
     app.run(host=app.config['HOST'])
