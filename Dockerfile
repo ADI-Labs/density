@@ -3,10 +3,11 @@ FROM continuumio/miniconda
 MAINTAINER Alan Du <ahd2125@columbia.edu>
 
 # install all packages
-COPY ./config /config
+COPY ./config/environment.yml /config/environment.yml
 RUN conda env create --name density --file /config/environment.yml
 
 # add the application directories
+COPY ./config /config
 COPY ./density /density
 WORKDIR /density
 
