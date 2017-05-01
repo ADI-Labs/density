@@ -1,5 +1,4 @@
-{
-  "data": [
+FULL_CAP_DATA = [
     {
       "capacity": 22, 
       "group_id": 147, 
@@ -154,5 +153,4 @@
       "parent_id": 2, 
       "parent_name": "Uris"
     }
-  ]
-}
+]

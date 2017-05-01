@@ -7,7 +7,6 @@ import httplib2
 import re
 import traceback
 
-from bokeh.embed import components
 from flask import Flask, g, jsonify, render_template, json, request
 from flask_mail import Message, Mail
 import psycopg2
@@ -15,21 +14,18 @@ import psycopg2.pool
 import psycopg2.extras
 from oauth2client.client import flow_from_clientsecrets
 
-from config import flask_config
-from data import plot_prediction_point_estimate, df_predict, db_to_pandas_pivot
-from db import db
+from . import db
+from .config import config, ISO8601Encoder
+from .data import FULL_CAP_DATA
 
 
 app = Flask(__name__)
-app.config.update(**flask_config.config)
+app.config.update(**config)
 if not app.debug:
     mail = Mail(app)
 
 # change the default JSON encoder to handle datetime's properly
-app.json_encoder = flask_config.ISO8601Encoder
-
-with open('data/capacity_group.json') as json_data:
-    FULL_CAP_DATA = json.load(json_data)['data']
+app.json_encoder = ISO8601Encoder
 
 CU_EMAIL_REGEX = r"^(?P<uni>[a-z\d]+)@.*(columbia|barnard)\.edu$"
 request_date_format = '%Y-%m-%d'
@@ -105,7 +101,6 @@ def internal_error(e):
     return jsonify(error="Something went wrong, and notification of "
                    "admins failed.  Please contact an admin.",
                    error_data=traceback.format_exc())
-    # return jsonify(error="Something went wrong, the admins were notified.")
 
 
 def authorization_required(func):
@@ -172,19 +167,6 @@ def home():
 @app.route('/about')
 def about():
     return render_template('about.html')
-
-
-# WIP: predict
-# @app.route('/predict')
-def predict():
-    locations = sorted(group["group_name"] for group in FULL_CAP_DATA)
-
-    df = db_to_pandas_pivot(g.pg_conn)
-    plots = {l: plot_prediction_point_estimate(df[l], df_predict)
-             for l in locations}
-
-    script, divs = components(plots)
-    return render_template('predict.html', script=script, divs=divs)
 
 
 @app.route('/docs')
