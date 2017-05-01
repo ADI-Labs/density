@@ -22,7 +22,6 @@ config = {
     'PG_HOST': None,
     'PG_PORT': None,
     'GOOGLE_CLIENT_ID': None,
-    'DEBUG': None,
     'UPLOAD_KEY': None
 }
 
@@ -55,8 +54,6 @@ config['ADMINS'] = [
     'dan@adicu.com',
     'mjp2220@columbia.edu'
 ]
-
-config['DEBUG'] = (config['DEBUG'] == 'TRUE')
 
 class ISO8601Encoder(JSONEncoder):
     """ JSON encoder for ISO8601 datetime strings

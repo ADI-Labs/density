@@ -90,17 +90,17 @@ def page_not_found(e):
     return render_template('404.html')
 
 
-@app.errorhandler(500)
-@app.errorhandler(Exception)
-def internal_error(e):
-    if not app.debug:
+if not app.debug:
+    @app.errorhandler(500)
+    @app.errorhandler(Exception)
+    def internal_error(e):
         msg = Message("DENSITY ERROR", sender="densitylogger@gmail.com",
                       recipients=app.config['ADMINS'])
         msg.body = traceback.format_exc()
         mail.send(msg)
-    return jsonify(error="Something went wrong, and notification of "
-                   "admins failed.  Please contact an admin.",
-                   error_data=traceback.format_exc())
+        return jsonify(error="Something went wrong, and notification of "
+                       "admins failed.  Please contact an admin.",
+                       error_data=traceback.format_exc())
 
 
 def authorization_required(func):
@@ -125,37 +125,21 @@ def authorization_required(func):
     return authorization_checker
 
 
-def annotate_fullness_percentage(cur_data):
+def annotate_fullness_percentage(data):
     """
     Calculates percent fullness of all groups and adds them to the data in
-    the key 'percent_full'. The original data file is not modified.
+    the key 'percent_full'. The original data is not modified.
     :param list of dictionaries cur_data: data to calculate fullness percentage
     :return: list of dictionaries with added pecent_full data
     :rtype: list of dictionaries
     """
-
-    # copy so that original list is not affected
-    cur_data_copy = copy.copy(cur_data)
-
-    for data in cur_data_copy:
-
-        group_name = data['group_name']
-        cur_client_count = data['client_count']
-
-        for cap in FULL_CAP_DATA:
-            if cap['group_name'] == group_name:
-                capacity = cap['capacity']
-                break
-
-        # Percent full in float
-        if capacity:
-            percent_full = float(cur_client_count) / capacity * 100
-            data["percent_full"] = percent_full
-        else:
-            data["percent_full"] = None
-
-    # Match percentage and group by order of list
-    return cur_data_copy
+    groups = []
+    for row in data:
+        capacity = FULL_CAP_DATA[row["group_name"]]
+        copy = dict(**row)
+        copy["percent_full"] = min(100, (100 * row["client_count"]) // capacity)
+        groups.append(copy)
+    return groups
 
 
 @app.route('/home')
@@ -256,7 +240,6 @@ def get_latest_data():
     :return: Latest JSON
     :rtype: flask.Response
     """
-
     fetched_data = db.get_latest_data(g.cursor)
 
     # Add percentage_full
@@ -403,76 +386,22 @@ def get_window_building_data(start_time, end_time, parent_id):
     return jsonify(data=fetched_data, next_page=next_page_url)
 
 
-@app.route('/capacity/group')
-def get_cap_group():
-    """
-    Return capacity of all groups.
-    :return: List of dictionaries having keys "group_name", "capacity",
-    "group_id"
-    :rtype: List of dictionaries
-    """
-
-    fetched_data = db.get_cap_group(g.cursor)
-
-    return jsonify(data=fetched_data)
-
-
 @app.route('/')
 def capacity():
-    """ Render and show capacity page """
+    """Render and show capacity page"""
     normfmt = '%B %d %Y, %I:%M %p'
     cur_data = db.get_latest_data(g.cursor)
     last_updated = cur_data[0]['dump_time']
     last_updated = last_updated.strftime(normfmt)
-    locations = calculate_capacity(FULL_CAP_DATA, cur_data)
+    locations = annotate_fullness_percentage(cur_data)
     return render_template('capacity.html', locations=locations,
                            last_updated=last_updated)
 
-
-def calculate_capacity(cap_data, cur_data):
-    """
-    Calculates capacity with cap_data and cur_data and puts
-    with respective group_name into locations
-    """
-
-    locations = []
-
-    # Loop to find corresponding cur_client_count with capacity
-    # and store it in locations
-    for cap in cap_data:
-
-        group_name = cap['group_name']
-        capacity = cap['capacity']
-        parentId = cap['parent_id']
-        parentName = cap['parent_name']
-
-        for latest in cur_data:
-            if latest['group_name'] == group_name:
-                cur_client_count = latest['client_count']
-                break
-        # Cast one of the numbers into a float, get a percentile by multiplying
-        # 100, round the percentage and cast it back into a int.
-        percent_full = int(round(float(cur_client_count) / capacity * 100))
-        if percent_full > 100:
-            percent_full = 100
-
-        if group_name == 'Butler Library stk':
-            group_name = 'Butler Library Stacks'
-        elif group_name == 'Science and Engineering Library':
-            group_name = 'NoCo Library'
-
-        locations.append({"name": group_name, "fullness": percent_full,
-                          "parentId": parentId, "parentName": parentName})
-    return locations
-
-
 @app.route('/map')
 def map():
-    """ Render and show maps page """
-
     cur_data = db.get_latest_data(g.cursor)
+    locations = annotate_fullness_percentage(cur_data)
 
-    locations = calculate_capacity(FULL_CAP_DATA, cur_data)
     # Render template has an SVG image whose colors are changed by % full
     return render_template('map.html', locations=locations)
 

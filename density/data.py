@@ -1,156 +1,24 @@
-FULL_CAP_DATA = [
-    {
-      "capacity": 22, 
-      "group_id": 147, 
-      "group_name": "Architectural and Fine Arts Library 1",
-      "parent_id": 146, 
-      "parent_name": "Avery"
-    }, 
-    {
-      "capacity": 272, 
-      "group_id": 148, 
-      "group_name": "Architectural and Fine Arts Library 2",
-      "parent_id": 146, 
-      "parent_name": "Avery"
-    }, 
-    {
-      "capacity": 133, 
-      "group_id": 149, 
-      "group_name": "Architectural and Fine Arts Library 3",
-      "parent_id": 146, 
-      "parent_name": "Avery"
-    }, 
-    {
-      "capacity": 573, 
-      "group_id": 130, 
-      "group_name": "Butler Library 2",
-      "parent_id": 103, 
-      "parent_name": "Butler"
-    }, 
-    {
-      "capacity": 413, 
-      "group_id": 131, 
-      "group_name": "Butler Library 3", 
-      "parent_id": 103, 
-      "parent_name": "Butler"
-    }, 
-    {
-      "capacity": 346, 
-      "group_id": 132, 
-      "group_name": "Butler Library 4", 
-      "parent_id": 103, 
-      "parent_name": "Butler"
-    }, 
-    {
-      "capacity": 157, 
-      "group_id": 133, 
-      "group_name": "Butler Library 5", 
-      "parent_id": 103, 
-      "parent_name": "Butler"
-    }, 
-    {
-      "capacity": 220, 
-      "group_id": 134, 
-      "group_name": "Butler Library 6", 
-      "parent_id": 103, 
-      "parent_name": "Butler"
-    }, 
-    {
-      "capacity": 80, 
-      "group_id": 138, 
-      "group_name": "Butler Library stk", 
-      "parent_id": 103, 
-      "parent_name": "Butler"
-    }, 
-    {
-      "capacity": 129, 
-      "group_id": 155, 
-      "group_name": "JJ's Place", 
-      "parent_id": 75, 
-      "parent_name": "John Jay"
-    }, 
-    {
-      "capacity": 200, 
-      "group_id": 125, 
-      "group_name": "John Jay Dining Hall", 
-      "parent_id": 75, 
-      "parent_name": "John Jay"
-    }, 
-    {
-      "capacity": 178, 
-      "group_id": 139, 
-      "group_name": "Lehman Library 2", 
-      "parent_id": 79, 
-      "parent_name": "Lehman Library"
-    }, 
-    {
-      "capacity": 570, 
-      "group_id": 140, 
-      "group_name": "Lehman Library 3", 
-      "parent_id": 79, 
-      "parent_name": "Lehman Library"
-    }, 
-    {
-      "capacity": 138, 
-      "group_id": 150, 
-      "group_name": "Lerner 1", 
-      "parent_id": 84, 
-      "parent_name": "Lerner"
-    }, 
-    {
-      "capacity": 224, 
-      "group_id": 151, 
-      "group_name": "Lerner 2", 
-      "parent_id": 84, 
-      "parent_name": "Lerner"
-    }, 
-    {
-      "capacity": 248, 
-      "group_id": 152, 
-      "group_name": "Lerner 3",
-      "parent_id": 84, 
-      "parent_name": "Lerner"
-    }, 
-    {
-      "capacity": 243, 
-      "group_id": 153, 
-      "group_name": "Lerner 4", 
-      "parent_id": 84, 
-      "parent_name": "Lerner"
-    }, 
-    {
-      "capacity": 206, 
-      "group_id": 154, 
-      "group_name": "Lerner 5", 
-      "parent_id": 84, 
-      "parent_name": "Lerner"
-    }, 
-    {
-      "capacity": 497, 
-      "group_id": 85, 
-      "group_name": "Roone Arledge Auditorium", 
-      "parent_id": 84, 
-      "parent_name": "Lerner"
-    }, 
-    {
-      "capacity": 154, 
-      "group_id": 145, 
-      "group_name": "Science and Engineering Library", 
-      "parent_id": 15, 
-      "parent_name": "Northwest Corner Building"
-    }, 
-    {
-      "capacity": 197, 
-      "group_id": 144, 
-      "group_name": "Starr East Asian Library", 
-      "parent_id": 62, 
-      "parent_name": "East Asian Library"
-    }, 
-    {
-      "capacity": 992, 
-      "group_id": 23, 
-      "group_name": "Uris/Watson Library", 
-      "parent_id": 2, 
-      "parent_name": "Uris"
-    }
-]
+FULL_CAP_DATA = {
+    'Architectural and Fine Arts Library 1': 22,
+    'Architectural and Fine Arts Library 2': 272,
+    'Architectural and Fine Arts Library 3': 133,
+    'Butler Library 2': 573,
+    'Butler Library 3': 413,
+    'Butler Library 4': 346,
+    'Butler Library 5': 157,
+    'Butler Library 6': 220,
+    'Butler Library stk': 80,
+    "JJ's Place": 129,
+    'John Jay Dining Hall': 200,
+    'Lehman Library 2': 178,
+    'Lehman Library 3': 570,
+    'Lerner 1': 138,
+    'Lerner 2': 224,
+    'Lerner 3': 248,
+    'Lerner 4': 243,
+    'Lerner 5': 206,
+    'Roone Arledge Auditorium': 497,
+    'Science and Engineering Library': 154,
+    'Starr East Asian Library': 197,
+    'Uris/Watson Library': 992,
+}

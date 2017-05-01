@@ -1,11 +1,11 @@
 import psycopg2
 import pytest
 
-import density
+from density import app, pg_pool
 
 @pytest.fixture
 def app():
-    return density.app.test_client()
+    return app.test_client()
 
 @pytest.fixture
 def auth_header():
@@ -14,7 +14,7 @@ def auth_header():
 
 @pytest.yield_fixture
 def cursor():
-    with density.pg_pool.getconn() as conn:
+    with pg_pool.getconn() as conn:
         cursor = conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
         yield cursor
         conn.rollback()

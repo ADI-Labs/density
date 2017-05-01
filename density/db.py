@@ -4,7 +4,14 @@ import os
 import uuid
 
 
-TABLE_NAME = 'density_data'
+SELECT = """
+    SELECT d.client_count, d.dump_time,
+           r.id AS group_id, r.name AS group_name,
+           b.id as parent_id, b.name AS building_name
+    FROM density_data d
+    JOIN routers r ON r.id = d.group_id
+    JOIN buildings b ON b.id = r.building_id"""
+
 QUERY_LIMIT = 100
 
 
@@ -16,14 +23,10 @@ def get_latest_data(cursor):
     :return: list of dicts representing each row from the db
     :rtype: list of dict
     """
-    query = """SELECT *
-               FROM {table_name}
-               WHERE dump_time=(
-                   SELECT MAX(dump_time)
-                   FROM {table_name}
-               )
-               ORDER BY group_name
-               ;""".format(table_name=TABLE_NAME)
+    query = SELECT + """
+        WHERE d.dump_time = (SELECT MAX(dump_time) FROM density_data)
+        ORDER BY group_name
+    ;"""
     cursor.execute(query)
     return cursor.fetchall()
 
@@ -39,13 +42,10 @@ def get_latest_group_data(cursor, group_id):
     :rtype: list of dict
     """
 
-    query = """SELECT *
-               FROM {table_name}
-               WHERE dump_time=(
-                   SELECT MAX(dump_time)
-                   FROM {table_name}
-               ) AND group_id=%s
-               ;""".format(table_name=TABLE_NAME)
+    query = SELECT + """
+        WHERE d.dump_time = (SELECT MAX(dump_time) FROM density_data)
+              AND group_id = %s
+    ;"""
     cursor.execute(query, [group_id])
     return cursor.fetchall()
 
@@ -61,13 +61,10 @@ def get_latest_building_data(cursor, parent_id):
     :rtype: list of dict
     """
 
-    query = """SELECT *
-               FROM {table_name}
-               WHERE dump_time=(
-                   SELECT MAX(dump_time)
-                   FROM {table_name}
-               ) AND parent_id=%s
-               ;""".format(table_name=TABLE_NAME)
+    query = SELECT + """
+        WHERE d.dump_time = (SELECT MAX(dump_time) FROM density_data)
+              AND parent_id = %s
+    ;"""
     cursor.execute(query, [parent_id])
     return cursor.fetchall()
 
@@ -86,18 +83,14 @@ def get_window_based_on_group(cursor, group_id, start_time, end_time, offset):
     query
     :rtype: list of dict
     """
-    query = """SELECT *
-               FROM {table_name}
-               WHERE (
-                    dump_time >= %s
-                    AND dump_time < %s
-               ) AND group_id=%s
-               ORDER BY dump_time DESC
-               LIMIT %s
-               OFFSET %s
-               ;""".format(table_name=TABLE_NAME)
-    cursor.execute(query, [start_time, end_time, group_id, QUERY_LIMIT,
-                           offset])
+    query = SELECT + """
+        WHERE d.dump_time >= %s AND
+              d.dump_time < %s AND
+              group_id = %s
+        ORDER BY d.dump_time DESC
+        LIMIT %s OFFSET %s
+    ;"""
+    cursor.execute(query, [start_time, end_time, group_id, QUERY_LIMIT, offset])
     return cursor.fetchall()
 
 
@@ -116,41 +109,15 @@ def get_window_based_on_parent(cursor, parent_id, start_time, end_time,
     query
     :rtype: list of dict
     """
-    query = """SELECT *
-               FROM {table_name}
-               WHERE (
-                    dump_time >= %s
-                    AND dump_time < %s
-               ) AND parent_id=%s
-               ORDER BY dump_time DESC
-               LIMIT %s
-               OFFSET %s
-               ;""".format(table_name=TABLE_NAME)
-    cursor.execute(query, [start_time, end_time, parent_id, QUERY_LIMIT,
-                           offset])
-    return cursor.fetchall()
 
-
-def get_cap_group(cursor):
-    """
-    Gets the max capacity of all groups. Equation for max capacity is average +
-    std*2. We're estimating the 95th percentile as average + std*2.
-
-    :param cursor: cursor for our DB
-    :return: list of dictionaries representing the rows corresponding to the
-    query
-    :rtype: list of dict
-    """
-
-    query = """SELECT cast(
-                          max(client_count)
-                          as int
-                       )  as capacity, group_id, group_name
-               FROM {table_name}
-               GROUP BY group_name, group_id
-               ORDER BY group_name
-               ;""".format(table_name=TABLE_NAME)
-    cursor.execute(query)
+    query = SELECT + """
+        WHERE d.dump_time >= %s AND
+              d.dump_time < %s AND
+              parent_id=%s
+        ORDER BY d.dump_time DESC
+        LIMIT %s OFFSET %s
+    ;"""
+    cursor.execute(query, [start_time, end_time, parent_id, QUERY_LIMIT, offset])
     return cursor.fetchall()
 
 
@@ -160,15 +127,13 @@ def get_building_info(cursor):
 
     :param cursor:
     """
-    query = """SELECT
-                 group_name, group_id, parent_name, parent_id
-                 FROM {table_name}
-                 WHERE dump_time=(
-                    SELECT MAX(dump_time)
-                    FROM {table_name}
-                 )
-                 ORDER BY parent_name, group_name;
-                 ;""".format(table_name=TABLE_NAME)
+    query = """
+        SELECT r.name AS group_name, r.id AS group_id,
+               b.name AS parent_name, b.id AS parent_id
+        FROM routers r
+        JOIN buildings b ON r.building_id = b.id
+        ORDER BY parent_name, group_name;
+    """
     cursor.execute(query)
     return cursor.fetchall()
 
