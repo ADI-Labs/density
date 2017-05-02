@@ -1,1 +1,1 @@
-from density import app
+from density import app  # noqa

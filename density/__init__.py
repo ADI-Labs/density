@@ -1,6 +1,5 @@
-import copy
-import datetime
 from functools import wraps
+import datetime
 import httplib2
 import re
 import traceback
@@ -134,8 +133,10 @@ def annotate_fullness_percentage(data):
     groups = []
     for row in data:
         capacity = FULL_CAP_DATA[row["group_name"]]
+        percent = (100 * row["client_count"]) // capacity
+
         copy = dict(**row)
-        copy["percent_full"] = min(100, (100 * row["client_count"]) // capacity)
+        copy["percent_full"] = min(100, percent)
         groups.append(copy)
     return groups
 

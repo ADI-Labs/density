@@ -90,7 +90,8 @@ def get_window_based_on_group(cursor, group_id, start_time, end_time, offset):
         ORDER BY d.dump_time DESC
         LIMIT %s OFFSET %s
     ;"""
-    cursor.execute(query, [start_time, end_time, group_id, QUERY_LIMIT, offset])
+    cursor.execute(query,
+                   [start_time, end_time, group_id, QUERY_LIMIT, offset])
     return cursor.fetchall()
 
 
@@ -117,7 +118,8 @@ def get_window_based_on_parent(cursor, parent_id, start_time, end_time,
         ORDER BY d.dump_time DESC
         LIMIT %s OFFSET %s
     ;"""
-    cursor.execute(query, [start_time, end_time, parent_id, QUERY_LIMIT, offset])
+    cursor.execute(query,
+                   [start_time, end_time, parent_id, QUERY_LIMIT, offset])
     return cursor.fetchall()
 
 
@@ -178,27 +180,34 @@ def get_uni_for_code(cursor, code):
         return result['uni']
 
 
-PARENTS = {
-    79: 'Lehman Library',
-    84: 'Lerner',
-    15: 'Northwest Corner Building',
-    75: 'John Jay',
-    103: 'Butler',
-    131: '',
-    146: 'Avery',
-    62: 'East Asian Library',
-    2: 'Uris'
-}
-
 def insert_density_data(cursor, data):
-    date = dt.datetime.now().replace(second=0, microsecond=0)
+    # Check integrity of data
+    cursor.execute("""
+    SELECT name, id, building_id AS parent_id
+    FROM routers r
+    ;""")
+    groups = {row["id"]: row for row in cursor.fetchall()}
 
-    query = """INSERT INTO {table_name}
-               (dump_time, group_id, group_name, parent_id,
-                parent_name, client_count) VALUES
-               (%s, %s, %s, %s, %s, %s);""".format(table_name=TABLE_NAME)
-    data = [(date, int(key), value['name'], value['parent_id'],
-             PARENTS[value['parent_id']], value['client_count'])
-            for key, value in data.iteritems()]
+    rows = []
+    time = dt.datetime.now().replace(second=0, microsecond=0)
+    for key, value in data.items():
+        group = {"id": int(key),
+                 "name": value["name"],
+                 "parent_id": int(value["parent_id"])}
+        client_count = int(value["client_count"])
 
-    cursor.executemany(query, data)
+        # Data normalization issue on CUIT's side
+        if group["parent_id"] == 131 and group["name"] == "Butler Library 301":
+            group["parent_id"] = 103
+
+        if groups[group["id"]] != group:
+            raise RuntimeError(f"Invalid group found: {group}")
+
+        rows.append([time, group["id"], client_count])
+
+    query = """
+    INSERT INTO density_data
+        (dump_time, group_id, client_count)
+        VALUES (%s, %s, %s)
+    ;"""
+    cursor.executemany(query, rows)
