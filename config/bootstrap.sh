@@ -12,15 +12,15 @@ fi
 apt-get install --yes postgresql-9.6
 source /vagrant/config/settings.dev
 
-sudo -u postgres psql < /vagrant/config/dump.sql
 sudo -u postgres psql -c "CREATE USER adi WITH PASSWORD 'adi';"
 sudo -u postgres psql -c "CREATE DATABASE density;"
+sudo -u postgres psql density < /vagrant/config/dump.sql
 sudo -u postgres psql -c "GRANT CONNECT ON DATABASE density TO adi;"
 sudo -u postgres psql -c "GRANT SELECT ON ALL TABLES IN SCHEMA public TO adi;"
 
 if [ ! -d "/opt/conda" ]; then
     wget --quiet --no-clobber http://repo.continuum.io/miniconda/Miniconda2-latest-Linux-x86_64.sh
-    bash Miniconda2-latest-Linux-x86_64.sh -b -p "/opt/conda"
+    bash Miniconda-latest-Linux-x86_64.sh -b -p "/opt/conda"
     echo 'export PATH="/opt/conda/bin:$PATH"' >> /home/vagrant/.bashrc
 fi
 

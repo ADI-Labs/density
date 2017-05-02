@@ -24,16 +24,16 @@ config = {
 }
 
 try:  # use local settings
-    for env_key, value in config.iteritems():
+    for env_key, value in config.items():
         if not value:
             config[env_key] = os.environ[env_key]
 
 except KeyError as e:
     """ Throw an error if a setting is missing """
-    print "ERR MSG: {}".format(e.message)
-    print ("Some of your settings aren't in the environment."
-           "You probably need to run:"
-           "\n\n\tsource config/<your settings file>")
+    print("ERR MSG: {}".format(e.message))
+    print("Some of your settings aren't in the environment."
+          "You probably need to run:"
+          "\n\n\tsource config/<your settings file>")
     sys.exit(1)
 
 # Mail settings

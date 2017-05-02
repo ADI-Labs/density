@@ -156,7 +156,7 @@ def get_oauth_code_for_uni(cursor, uni):
     else:
         # If the code DNE, create a new one and insert into the database.
         token_bytes = os.urandom(32) + uuid.uuid4().bytes
-        new_code = base64.urlsafe_b64encode(token_bytes)
+        new_code = base64.urlsafe_b64encode(token_bytes).decode()
         query = """INSERT INTO oauth_data (uni, code)
                    VALUES (%s, %s);"""
         cursor.execute(query, [uni, new_code])
