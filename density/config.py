@@ -13,8 +13,6 @@ from flask.json import JSONEncoder
 
 # dictionary the flask app configures itself from
 config = {
-    'HOST': '0.0.0.0',
-    'PORT': None,
     'SECRET_KEY': None,
     'PG_USER': None,
     'PG_PASSWORD': None,
