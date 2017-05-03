@@ -9,25 +9,27 @@
 {% extends "layout.html" %}
 {% block body %}
 <div class="listContainer">
-    <a href="https://itunes.apple.com/us/app/density-columbia-study-spaces/id1065376976"><img class="app_store" src="{{ url_for('static', filename='img/app_store_badge.svg')}}"></a>
+    <a href="https://itunes.apple.com/us/app/density-columbia-study-spaces/id1065376976">
+        <img class="app_store" src="{{ url_for('static', filename='img/app_store_badge.svg')}}">
+    </a>
     <div class="container">
         <ul class="list-group">
             {% for location in locations %}
-            <li class="list-group-item"><h4>{{ location['name'] }}</h4>
+            <li class="list-group-item"><h4>{{ location['group_name'] }}</h4>
                 <div class="progress">
-                    {% if location['fullness'] <= 2 %}
+                    {% if location['percent_full'] <= 2 %}
                         <div class="progress-bar progress-bar-info progress-bar-striped active"
                            role="progressbar" aria-valuenow="0"
                            aria-valuemin="0" aria-valuemax="100"
                            style="width: 0;">
-                           {{ location['fullness'] }}%
+                           {{ location['percent_full'] }}%
                         </div>
                     {% else %}
                         <div class="progress-bar progress-bar-info progress-bar-striped active"
-                           role="progressbar" aria-valuenow="{{location['fullness']}}"
+                           role="progressbar" aria-valuenow="{{location['percent_full']}}"
                            aria-valuemin="0" aria-valuemax="100"
-                           style="width: {{location['fullness']}}%;">
-                           {{ location['fullness'] }}%
+                           style="width: {{location['percent_full']}}%;">
+                           {{ location['percent_full'] }}%
                         </div>
                     {% endif %}
                 </div>

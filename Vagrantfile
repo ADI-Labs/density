@@ -5,20 +5,8 @@
 VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
-  # All Vagrant configuration is done here. The most common configuration
-  # options are documented and commented below. For a complete reference,
-  # please see the online documentation at vagrantup.com.
-
-  # Every Vagrant virtual environment requires a box to build off of.
-  config.vm.box = "ubuntu/trusty64"
-
-  # expose port 5000 for Flask
-  config.vm.network :forwarded_port,  guest: 5000,    host: 5000
-
-  # expose port 8888 for Jupyter
-  config.vm.network :forwarded_port,  guest: 8888,    host: 8888
-
-  # run the install script for dependencies
+  config.vm.box = "bento/ubuntu-16.04"
   config.vm.provision :shell, :path => "config/bootstrap.sh"
+  config.vm.network :forwarded_port, guest: 5000, host: 5000
 end
 

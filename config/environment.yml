@@ -10,7 +10,8 @@ dependencies:
 - pandas
 - psycopg2
 - pytest        # [test]
-- python=2.7
+- python=3.6
 - pip:
-  - Flask-Mail
   - oauth2client
+  - freezegun   # [test]
+  - httplib2

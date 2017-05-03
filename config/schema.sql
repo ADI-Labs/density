@@ -1,114 +1,69 @@
-
-
 DROP TABLE density_data CASCADE;
+DROP TABLE oauth_data CASCADE;
+DROP TABLE routers CASCADE;
+DROP TABLE buildings CASCADE;
 
+CREATE TABLE buildings (
+    id      INTEGER NOT NULL,
+    name    TEXT NOT NULL,
+    PRIMARY KEY(id),
+    CONSTRAINT building_unique_name UNIQUE(name)
+);
+
+CREATE TABLE routers (
+    id              INTEGER NOT NULL,
+    name            TEXT NOT NULL,
+    building_id     INTEGER NOT NULL REFERENCES buildings,
+    PRIMARY KEY(id),
+    CONSTRAINT room_unique_name UNIQUE(name)
+);
 
 CREATE TABLE density_data (
-    dump_time       timestamp,
-    group_id        integer,
-    group_name      text NOT NULL,
-    parent_id       integer,
-    parent_name     text NOT NULL,
-    client_count    integer,
+    dump_time       TIMESTAMP,
+    group_id        INTEGER NOT NULL REFERENCES routers,
+    client_count    INTEGER NOT NULL,
     PRIMARY KEY(dump_time, group_id)
 );
 
 CREATE INDEX ON density_data (group_id, dump_time);
 CREATE INDEX ON density_data (parent_id);
-
-CREATE MATERIALIZED VIEW hour_window AS (
-    SELECT
-        date_trunc('hour', dump_time) AS hour,
-        group_id,
-        group_name,
-        parent_id,
-        parent_name,
-        AVG(client_count) AS average_count,
-        MAX(client_count) AS max_count,
-        MIN(client_count) AS min_count
-    FROM
-        density_data
-    GROUP BY
-        group_id,
-        group_name,
-        parent_id,
-        parent_name,
-        date_trunc('hour', dump_time)
-);
-CREATE MATERIALIZED VIEW day_window AS (
-    SELECT
-        date_trunc('day', dump_time) AS day,
-        group_id,
-        group_name,
-        parent_id,
-        parent_name,
-        AVG(client_count) AS average_count,
-        MAX(client_count) AS max_count,
-        MIN(client_count) AS min_count
-    FROM
-        density_data
-    GROUP BY
-        group_id,
-        group_name,
-        parent_id,
-        parent_name,
-        date_trunc('day', dump_time)
-);
-
-CREATE MATERIALIZED VIEW week_window AS (
-    SELECT
-        date_trunc('week', dump_time) AS week,
-        group_id,
-        group_name,
-        parent_id,
-        parent_name,
-        AVG(client_count) AS average_count,
-        MAX(client_count) AS max_count,
-        MIN(client_count) AS min_count
-    FROM
-        density_data
-    GROUP BY
-        group_id,
-        group_name,
-        parent_id,
-        parent_name,
-        date_trunc('week', dump_time)
-);
-
-CREATE MATERIALIZED VIEW month_window AS (
-    SELECT
-        date_trunc('month', dump_time) AS month,
-        group_id,
-        group_name,
-        parent_id,
-        parent_name,
-        AVG(client_count) AS average_count,
-        MAX(client_count) AS max_count,
-        MIN(client_count) AS min_count
-    FROM
-        density_data
-    GROUP BY
-        group_id,
-        group_name,
-        parent_id,
-        parent_name,
-        date_trunc('month', dump_time)
-);
-
-DROP TABLE oauth_data CASCADE;
-
-
 CREATE TABLE oauth_data (
-    uni  text NOT NULL,
-    code varchar(64) NOT NULL
+    uni  TEXT NOT NULL,
+    code VARCHAR(64) NOT NULL,
+    CONSTRAINT oauth_unique_code UNIQUE(code)
 );
 
-CREATE UNIQUE INDEX on oauth_data (code);
+INSERT INTO buildings (id, name) VALUES
+    (103, 'Butler'),
+    (146, 'Avery'),
+    (15,  'Northwest Corner Building'),
+    (2,   'Uris'),
+    (62,  'East Asian Library'),
+    (75,  'John Jay'),
+    (79,  'Lehman Library'),
+    (84,  'Lerner');
 
-AlTER TABLE density_data OWNER TO adicu;
-AlTER TABLE hour_window  OWNER TO adicu;
-AlTER TABLE day_window   OWNER TO adicu;
-AlTER TABLE week_window  OWNER TO adicu;
-AlTER TABLE month_window OWNER TO adicu;
-ALTER TABLE oauth_data   OWNER TO adicu;
-
+INSERT INTO routers (id, name, building_id) VALUES
+    (152, 'Lerner 3', 84),
+    (150, 'Lerner 1', 84),
+    (155, 'JJ''s Place', 75),
+    (130, 'Butler Library 2', 103),
+    (148, 'Architectural and Fine Arts Library 2', 146),
+    (134, 'Butler Library 6', 103),
+    (144, 'Starr East Asian Library', 62),
+    (151, 'Lerner 2', 84),
+    (85,  'Roone Arledge Auditorium', 84),
+    (133, 'Butler Library 5', 103),
+    (140, 'Lehman Library 3', 79),
+    (171, 'Butler Library 301', 103),
+    (153, 'Lerner 4', 84),
+    (145, 'Science and Engineering Library', 15),
+    (149, 'Architectural and Fine Arts Library 3', 146),
+    (139, 'Lehman Library 2', 79),
+    (154, 'Lerner 5', 84),
+    (131, 'Butler Library 3', 103),
+    (125, 'John Jay Dining Hall', 75),
+    (138, 'Butler Library stk', 103),
+    (132, 'Butler Library 4', 103),
+    (23,  'Uris/Watson Library',  2),
+    (147, 'Architectural and Fine Arts Library 1', 146);

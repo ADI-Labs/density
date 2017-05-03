@@ -13,8 +13,6 @@ from flask.json import JSONEncoder
 
 # dictionary the flask app configures itself from
 config = {
-    'HOST': '0.0.0.0',
-    'PORT': None,
     'SECRET_KEY': None,
     'PG_USER': None,
     'PG_PASSWORD': None,
@@ -22,41 +20,21 @@ config = {
     'PG_HOST': None,
     'PG_PORT': None,
     'GOOGLE_CLIENT_ID': None,
-    'DEBUG': None,
     'UPLOAD_KEY': None
 }
 
 try:  # use local settings
-    for env_key, value in config.iteritems():
+    for env_key, value in config.items():
         if not value:
             config[env_key] = os.environ[env_key]
 
 except KeyError as e:
     """ Throw an error if a setting is missing """
-    print "ERR MSG: {}".format(e.message)
-    print ("Some of your settings aren't in the environment."
-           "You probably need to run:"
-           "\n\n\tsource config/<your settings file>")
+    print("ERR MSG: {}".format(e.message))
+    print("Some of your settings aren't in the environment."
+          "You probably need to run:"
+          "\n\n\tsource config/<your settings file>")
     sys.exit(1)
-
-# Mail settings
-config['MAIL_SERVER'] = 'smtp.gmail.com'
-config['MAIL_PORT'] = 465
-config['MAIL_USE_SSL'] = True
-config['MAIL_USE_TLS'] = False
-config['MAIL_DEFAULT_SENDER'] = 'densitylogger@gmail.com'
-config['MAIL_USERNAME'] = 'densitylogger@gmail.com'
-
-# TODO: set config["MAIL_PASSWORD"]
-
-# administrator list
-config['ADMINS'] = [
-    'bz2231@columbia.edu',
-    'dan@adicu.com',
-    'mjp2220@columbia.edu'
-]
-
-config['DEBUG'] = (config['DEBUG'] == 'TRUE')
 
 class ISO8601Encoder(JSONEncoder):
     """ JSON encoder for ISO8601 datetime strings

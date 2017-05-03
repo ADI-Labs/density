@@ -1,6 +1,6 @@
-export HOST="0.0.0.0"
-export PORT="5000"
-export DEBUG=TRUE
+export FLASK_DEBUG=1
+export FLASK_APP=run.py
+
 export SECRET_KEY=abc123   # don't share production secret
 
 export PG_USER="adi"
@@ -12,3 +12,5 @@ export PG_PORT="5432"
 export GOOGLE_CLIENT_ID="859795907220-57lf7t8m19a1i3huaogqg546u5efjk8j.apps.googleusercontent.com"
 
 export UPLOAD_KEY="12345abcde"
+
+source activate density

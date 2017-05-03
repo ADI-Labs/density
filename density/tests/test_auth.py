@@ -20,7 +20,5 @@ def test_uni_oauth_code(cursor):
     assert density.db.get_uni_for_code(cursor, "Not in the database") is None
 
     code = density.db.get_oauth_code_for_uni(cursor, "example_uni")
-    # Same UNI -> same code
     assert code == density.db.get_oauth_code_for_uni(cursor, "example_uni")
-    # Get uni back from code
     assert density.db.get_uni_for_code(cursor, code) == "example_uni"

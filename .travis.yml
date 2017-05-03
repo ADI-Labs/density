@@ -1,30 +1,16 @@
+dist: trusty
+notifications:
+  email: false
+  slack: adi-labs:tCeqXPsLSyIFe3yjfWfKLRYg
+  on_success: never
+  on_failure: change
+
 language: python
-
 python:
-    - "2.7"
-
-env:
-  global:
-    # general settings
-    - PORT=5000
-    - HOST=0.0.0.0
-    - DEBUG=TRUE
-    - SECRET_KEY=abc123
-    - TESTING=TRUE
-
-    # postgres settings
-    - PG_HOST=127.0.0.1
-    - PG_PORT=5432
-    - PG_USER=adi
-    - PG_PASSWORD=adi
-    - PG_DB=density
-    - PG_PAGE_LIMIT=250
-    - PG_DEFAULT=20
-    - RATE_LIMIT=200
-    - GOOGLE_CLIENT_ID="123.apps.googleusercontent.com"
+- 3.6
 
 before_install:
-  - wget https://repo.continuum.io/miniconda/Miniconda2-latest-Linux-x86_64.sh -O miniconda.sh;
+  - wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh;
   - bash miniconda.sh -b -p "$HOME/miniconda"
   - export PATH="$HOME/miniconda/bin:$PATH"
   - conda config --set always_yes yes --set changeps1 no
@@ -32,30 +18,21 @@ before_install:
 
 install:
   - conda env create -n density --file config/environment.yml
-  - source activate density
-
-services:
-  - postgresql
-
-addons:
-  postgresql: 9.3  # avoid default of postgres 9.1
-
-before_script:
-  - psql --version
+  - source config/settings.dev
   - sudo -u postgres psql -c "CREATE USER adi WITH PASSWORD 'adi';"
   - sudo -u postgres psql -c "CREATE DATABASE density;"
   - sudo -u postgres psql -c "GRANT CONNECT ON DATABASE density TO adi;"
-  - sudo -u postgres psql density < ./config/density_dump.sql
-  - sudo -u postgres psql density < ./config/oauth_dev_dump.sql
+  - sudo -u postgres psql density < ./config/dump.sql
   - sudo -u postgres psql -c "GRANT SELECT ON ALL TABLES IN SCHEMA public TO adi;"
-  - conda env export    # debugging info
-  - source config/settings.dev
+
+addons:
+  postgresql: 9.6
+
+before_script:
+  - psql --version
+  - conda env export
 
 script:
   - flake8
-  - cd density && PYTHONPATH=. py.test --verbose
+  - py.test --verbose
 
-notifications:
-  slack: adi-labs:tCeqXPsLSyIFe3yjfWfKLRYg
-  on_success: never
-  on_failure: change
