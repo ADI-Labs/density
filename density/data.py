@@ -5,6 +5,7 @@ FULL_CAP_DATA = {
     'Butler Library 2': 573,
     'Butler Library 3': 413,
     'Butler Library 4': 346,
+    'Butler Library 301': 282,
     'Butler Library 5': 157,
     'Butler Library 6': 220,
     'Butler Library stk': 80,
