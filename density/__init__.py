@@ -5,7 +5,6 @@ import re
 import traceback
 
 from flask import Flask, g, jsonify, render_template, json, request
-from flask_mail import Message, Mail
 import psycopg2
 import psycopg2.pool
 import psycopg2.extras
@@ -18,8 +17,6 @@ from .data import FULL_CAP_DATA
 
 app = Flask(__name__)
 app.config.update(**config)
-if not app.debug:
-    mail = Mail(app)
 
 # change the default JSON encoder to handle datetime's properly
 app.json_encoder = ISO8601Encoder
@@ -91,10 +88,6 @@ if not app.debug:
     @app.errorhandler(500)
     @app.errorhandler(Exception)
     def internal_error(e):
-        msg = Message("DENSITY ERROR", sender="densitylogger@gmail.com",
-                      recipients=app.config['ADMINS'])
-        msg.body = traceback.format_exc()
-        mail.send(msg)
         return jsonify(error="Something went wrong, and notification of "
                        "admins failed.  Please contact an admin.",
                        error_data=traceback.format_exc())

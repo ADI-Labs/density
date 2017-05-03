@@ -36,23 +36,6 @@ except KeyError as e:
           "\n\n\tsource config/<your settings file>")
     sys.exit(1)
 
-# Mail settings
-config['MAIL_SERVER'] = 'smtp.gmail.com'
-config['MAIL_PORT'] = 465
-config['MAIL_USE_SSL'] = True
-config['MAIL_USE_TLS'] = False
-config['MAIL_DEFAULT_SENDER'] = 'densitylogger@gmail.com'
-config['MAIL_USERNAME'] = 'densitylogger@gmail.com'
-
-# TODO: set config["MAIL_PASSWORD"]
-
-# administrator list
-config['ADMINS'] = [
-    'bz2231@columbia.edu',
-    'dan@adicu.com',
-    'mjp2220@columbia.edu'
-]
-
 class ISO8601Encoder(JSONEncoder):
     """ JSON encoder for ISO8601 datetime strings
 

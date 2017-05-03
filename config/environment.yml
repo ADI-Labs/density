@@ -12,7 +12,6 @@ dependencies:
 - pytest        # [test]
 - python=3.6
 - pip:
-  - Flask-Mail
   - oauth2client
   - freezegun   # [test]
   - httplib2
