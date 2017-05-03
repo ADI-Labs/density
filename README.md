@@ -1,150 +1,94 @@
-
 # Density
 
-[![Build Status](https://travis-ci.org/ADI-Labs/density.svg?branch=master)](https://travis-ci.org/ADI-Labs/density)
+[![Build
+Status](https://travis-ci.org/ADI-Labs/density.svg?branch=master)](https://travis-ci.org/ADI-Labs/density)
+
+[Density](https://density.adicu.com) estimates how full different parts of
+Columbia are, based on the number of devices connected to the WiFi (data
+graciously provided by CUIT in coordination with ESC).
 
 
-Density is a project to provide easy access to the Wireless Density data from Columbia.
-For more details on the project, please view the [spec](SPEC.md).
-
-
-
+## Contributing
 
 ## Local Dev
 
-This is the recommend means of setting up Density for development.
-Next, install [vagrant](http://www.vagrantup.com/).
-Once vagrant is installed, you can run `vagrant up`, and vagrant will provision the virtual machine for you.
+We recommend using [Vagrant](https://www.vagrantup.com) for development
+environment set-up. If you have Vagrant, running `vagrant up` should set-up
+and provision the virtual machine for you.
 
-To start, log into vagrant by following the these steps:
+Inside the virtual machine, run:
 
 ```bash
-vagrant ssh
 cd /vagrant
 source config/settings.dev
+flask run --host=0.0.0.0
 ```
 
-To run the app after you've logged into vagrant, follow these steps:
+and go to https://localhost:5000. You should see your own local Density app!
 
-```bash
-cd density
-python density.py
+### Dependencies
+
+Density is build with Python 3.6 and Flask. We use a [conda](https://conda.io)
+environment, defined via `config/environment.yml`, for dependency management.
+When you run `source config/settings.dev`, the appropriate conda environment
+will automatically be activated.
+
+Density runs on Postgres 9.6. To access the database, you can just run:
+
+```
+sudo -u postgres psql density
 ```
 
-To access the database after you've logged call:
+You can find a copy of the database schema in `config/schema.sql`.
 
-`sudo -u postgres psql density`
+### Testing
 
-The data table is under the name `density_data`
-
-[Click here for the PostgeSQL tutorial](http://www.postgresql.org/docs/8.0/static/tutorial.html)
-
-##Scientific Computing
-
-We now use [miniconda](http://conda.pydata.org/miniconda.html) to handle our Python environment needs.  Our `/config/environment.yml` file contains a list of basic libraries for data science.  
-
-To use [Jupyter Notebook](http://jupyter.org/) within Vagrant type:
-
-`jupyter notebook ––ip=0.0.0.0`
-
-
-## Importing Dev Data
-
-We use a partial dump of our data for quick-and-easy development.
-This gets loaded on VM provision by our Vagrant setup scripts.
-It contains a small subset and is not updated frequently, but is sufficient for most feature development and bug squashing.
-
-Be sure to also insert the [Oauth table](config/oauth_dev_dump.sql) so that you can make authenticated requests against the API.
-
-
-
-
-
-
-## Docker
-
-The Docker container requires that either the port for the Postgres instance is forward or that the host is set to an exact IP or domain.
-
-Using Docker:
+We use `py.test` for testing and `flake8` for linting. All tests are defined
+in `density/tests`. To run tests locally, in the app root directory you should
+run:
 
 ```bash
-# enter the project directory
-cd density
+source config/settings.dev
+py.test
+flake8
+```
 
-# builds a Docker image
-#   -t dictates that the image is tagged as 'density'
+We have [Travis CI](https://travis-ci.org/ADI-Labs/density/) set-up to enforce
+passing tests.
+
+### Deployment
+
+Density is currently deployed on ADI's server via Docker (defined in the
+`Dockerfile`). To build the Docker image locally, install Docker and run:
+
+```bash
 docker build -t density .
-
-# runs a docker container tagged as 'density'
-#   --net=host forwards all ports from the host to the container
-#       this allows docker to access the Postres port, 5432
-#   -e allows setting environment variables within the container
-#   -d detaches the process and runs the container like a daemon
 docker run --net=host -d density
-
-# ps shows all docker containers currently running
-docker ps
 ```
 
-Running Density within Docker relies on an instance of Consul being run on `localhost:8500` which is used to configure the settings.
-
-
-
-## Routes
-
-Supported routes currently include:
+### Project Layout
 
 ```
-/       : Density homepage with "fullness" graphic
-/latest : APi endpoint providing the latest data available
-/home   : future API homepage that allows a user to obtain an API token
+.
+├── config
+│   ├── bootstrap.sh      -- bootstrap script for Vagrant
+│   ├── dump.sql          -- a database dump for local development
+│   ├── environment.yml   -- a file defining our conda environment
+│   ├── schema.sql        -- our database schema
+│   └── settings.dev      -- various configuration settings for development
+├── density
+│   ├── config.py         -- loads configuration from environment variables
+│   ├── data.py           -- stores various constants
+│   ├── db.py             -- app interface to the Postgres database
+│   ├── __init__.py       -- the bulk of the app logic
+│   ├── predict.py        -- in-progress work for data science work
+│   ├── static/
+│   ├── templates/
+│   └── tests/
+├── API.md                -- API documentation
+├── Dockerfile            -- Dockerfile for production
+├── README.md
+├── run.py                -- File for Flask to run
+├── setup.cfg
+└── Vagrantfile
 ```
-
-
-## Data Sources
-
-Data for density is provided by CUIT in coordination with ESC.
-
-
-## Style guide
-
-Make sure to conform to [AirBnb's brilliant style guide](https://github.com/airbnb/javascript) when writing javascript.
-
-# app structure
-
-```
-|-- config/ (config settings and install scripts)
-|-- README.md (This file)
-|-- density/
-    \
-    |-- density.py  (the executable for this application)
-    |-- static/     (your static files, such as js, css, imgs)
-    |-- tests/      (unittest scripts that should be used during development)
-```
-
-
-
-# Changelog
-
-0.1.1: Datetime formatting changed to ISO 8601.
-0.1.0: Basic API up and stable.
-
-
-
-
-# List of Developers
-
-- Brian Zeng
-- David Hao
-- Sungwoo Bae
-- Nate Brennand
-- Benjamin Low
-- Jessica Forde
-- Jessica Valarezo
-- Maclyn Brandwein
-- Jackie Ho
-- Dan Schlosser
-- Terra Blevins
-- Evan Tarrh
-- Raymond Xu
-- Connie Zhang
