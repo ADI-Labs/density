@@ -405,12 +405,7 @@ def upload():
         return 'Please include a valid API key.', 401
 
     try:
-        data = request.get_json()["data"]
-    except (TypeError, KeyError):
-        return 'Please include data to upload.', 400
-
-    try:
-        db.insert_density_data(g.cursor, data)
+        db.insert_density_data(g.cursor, request.get_json())
     except Exception as e:
         # TODO: proper logging
         print(e)
