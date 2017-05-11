@@ -401,8 +401,7 @@ def map():
 def upload():
     """ Accept POST requests from CUIT to add new data to the server """
     # This is stored in local settings and is the way we verify uploads.
-    secret_key = request.args['key']
-    if secret_key != app.config['UPLOAD_KEY']:
+    if request.args.get('key') != app.config['UPLOAD_KEY']:
         return 'Please include a valid API key.', 401
 
     try:
