@@ -2,6 +2,7 @@ import datetime as dt
 
 from freezegun import freeze_time
 import pytest
+import pytz
 
 from density import db
 
@@ -18,7 +19,6 @@ def test_bad_insert(cursor):
     assert previous == cursor.fetchone()["max"]
 
 
-@freeze_time("2017-01-01")
 def test_good_insert(cursor):
     data = {
         "171": {
@@ -33,10 +33,13 @@ def test_good_insert(cursor):
         },
     }
 
-    db.insert_density_data(cursor, data)
+    date = dt.datetime(2017, 1, 1).astimezone(pytz.timezone("US/Eastern"))
+
+    with freeze_time(date):
+        db.insert_density_data(cursor, data)
 
     cursor.execute("SELECT MAX(dump_time) FROM density_data")
-    assert cursor.fetchone()["max"] == dt.datetime(2017, 1, 1)
+    assert cursor.fetchone()["max"] == date.replace(tzinfo=None)
 
     cursor.execute("""
     DELETE FROM density_data
