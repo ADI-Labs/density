@@ -3,6 +3,8 @@ import datetime as dt
 import os
 import uuid
 
+import pytz
+
 
 SELECT = """
     SELECT d.client_count, d.dump_time,
@@ -189,7 +191,8 @@ def insert_density_data(cursor, data):
     groups = {row["id"]: row for row in cursor.fetchall()}
 
     rows = []
-    time = dt.datetime.now().replace(second=0, microsecond=0)
+    time = (dt.datetime.now(pytz.timezone("US/Eastern"))
+              .replace(second=0, microsecond=0))
     for key, value in data.items():
         group = {"id": int(key),
                  "name": value["name"],
