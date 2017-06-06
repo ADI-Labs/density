@@ -381,10 +381,8 @@ def get_window_building_data(start_time, end_time, parent_id):
 @app.route('/')
 def capacity():
     """Render and show capacity page"""
-    normfmt = '%B %d %Y, %I:%M %p'
     cur_data = db.get_latest_data(g.cursor)
-    last_updated = cur_data[0]['dump_time']
-    last_updated = last_updated.strftime(normfmt)
+    last_updated = cur_data[0]['dump_time'].strftime("%B %d %Y, %I:%M %p")
     locations = annotate_fullness_percentage(cur_data)
     return render_template('capacity.html', locations=locations,
                            last_updated=last_updated)
