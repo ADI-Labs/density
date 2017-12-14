@@ -20,4 +20,4 @@ conda install --yes python=3.6.3 pip virtualenv
 pip install -U pipenv
 chown -R vagrant:vagrant /opt/anaconda
 
-cd /vagrant/scripts/ && ./bootstrap.sh
+cd /vagrant/ && ./scripts/bootstrap.sh
