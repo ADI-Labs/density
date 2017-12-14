@@ -1,4 +1,6 @@
+.env
 density/.cache
+.coverage
 .cache
 
 lib-cov
@@ -17,27 +19,3 @@ lib-cov
 .vagrant
 .idea
 .ipynb_checkpoints
-**/ipynb_checkpoints
-.Python
-pids
-logs
-results
-include
-share
-lib/python2.7
-
-scripts
-
-config/settings.*
-!config/settings.dev
-
-bin/activate*
-bin/easy_install*
-bin/pip*
-bin/python*
-local
-man
-pip-selfcheck.json
-
-scripts/density_dump.sql
-density/client_secrets.json

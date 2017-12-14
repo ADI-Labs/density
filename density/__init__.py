@@ -1,22 +1,21 @@
-from functools import wraps
 import datetime
-import httplib2
+from functools import wraps
+import json
 import re
 import traceback
 
-from flask import Flask, g, jsonify, render_template, json, request
-import psycopg2
-import psycopg2.pool
-import psycopg2.extras
+from flask import Flask, g, jsonify, render_template, request
+import httplib2
 from oauth2client.client import flow_from_clientsecrets
+import psycopg2
+import psycopg2.extras
+import psycopg2.pool
 
 from . import db
 from .config import config, ISO8601Encoder
 from .data import FULL_CAP_DATA
 
-
 app = Flask(__name__)
-app.config.update(**config)
 
 # change the default JSON encoder to handle datetime's properly
 app.json_encoder = ISO8601Encoder
@@ -26,14 +25,7 @@ request_date_format = '%Y-%m-%d'
 
 # create a pool of postgres connections
 pg_pool = psycopg2.pool.SimpleConnectionPool(
-    5,      # min connections
-    20,     # max connections
-    database=app.config['PG_DB'],
-    user=app.config['PG_USER'],
-    password=app.config['PG_PASSWORD'],
-    host=app.config['PG_HOST'],
-    port=app.config['PG_PORT'],
-)
+    minconn=5, maxconn=20, dsn=config["DB_URI"])
 
 
 @app.before_request
@@ -52,6 +44,7 @@ def return_connections():
 
 def unsafe_date(*keys):
     """ Takes URL parameters to filter as an argument """
+
     def dec(fn):
         @wraps(fn)
         def validate_datetime(*args, **kwargs):
@@ -60,12 +53,15 @@ def unsafe_date(*keys):
                 try:
                     datetime.datetime.strptime(arg_date, request_date_format)
                 except ValueError:
-                    return jsonify(error=("Invalid datetime format, "
-                                          "'{}', please use YYYY-MM-DD format")
-                                   .format(arg_date)), 400
+                    return jsonify(
+                        error=("Invalid datetime format, "
+                               "'{}', please use YYYY-MM-DD format")
+                        .format(arg_date)), 400
 
             return fn(*args, **kwargs)
+
         return validate_datetime
+
     return dec
 
 
@@ -85,12 +81,14 @@ def page_not_found(e):
 
 
 if not app.debug:
+
     @app.errorhandler(500)
     @app.errorhandler(Exception)
     def internal_error(e):
-        return jsonify(error="Something went wrong, and notification of "
-                       "admins failed.  Please contact an admin.",
-                       error_data=traceback.format_exc())
+        return jsonify(
+            error="Something went wrong, and notification of "
+            "admins failed.  Please contact an admin.",
+            error_data=traceback.format_exc())
 
 
 def authorization_required(func):
@@ -101,17 +99,18 @@ def authorization_required(func):
             token = request.args.get('auth_token')
             if not token:
                 response = jsonify(error="No authorization token provided")
-                response.status_code = 401      # unauthorized
+                response.status_code = 401  # unauthorized
                 return response
 
         uni = db.get_uni_for_code(g.cursor, token)
         if not uni:
             response = jsonify(error="No authorization token provided")
-            response.status_code = 401          # unauthorized
+            response.status_code = 401  # unauthorized
             return response
 
         # TODO: Some logging right here. We can log which user is using what.
         return func(*args, **kwargs)
+
     return authorization_checker
 
 
@@ -136,8 +135,8 @@ def annotate_fullness_percentage(data):
 
 @app.route('/home')
 def home():
-    return render_template('index.html',
-                           client_id=app.config['GOOGLE_CLIENT_ID'])
+    return render_template(
+        'index.html', client_id=app.config['GOOGLE_CLIENT_ID'])
 
 
 @app.route('/about')
@@ -174,8 +173,7 @@ def auth():
     # Get code from params.
     code = request.args.get('code')
     if not code:
-        return render_template('auth.html',
-                               success=False)
+        return render_template('auth.html', success=False)
 
     try:
         # Exchange code for email address.
@@ -198,30 +196,32 @@ def auth():
         regex = re.match(CU_EMAIL_REGEX, email)
 
         if not regex:
-            return render_template('auth.html',
-                                   success=False,
-                                   reason="Please log in with your " +
-                                   "Columbia or Barnard email. You logged " +
-                                   "in with: " + email)
+            return render_template(
+                'auth.html',
+                success=False,
+                reason="Please log in with your " +
+                "Columbia or Barnard email. You logged " + "in with: " + email)
 
         # Get UNI and ask database for code.
         uni = regex.group('uni')
         code = db.get_oauth_code_for_uni(g.cursor, uni)
         return render_template('auth.html', success=True, uni=uni, code=code)
     except psycopg2.IntegrityError:
-        return render_template('auth.html',
-                               success=False,
-                               reason="Attempt to generate API key resulted in"
-                                      " a collision with another key in the"
-                                      " database. Please refresh to try and"
-                                      " generate a new key.")
+        return render_template(
+            'auth.html',
+            success=False,
+            reason="Attempt to generate API key resulted in"
+            " a collision with another key in the"
+            " database. Please refresh to try and"
+            " generate a new key.")
 
     except Exception as e:
         # TODO: log errors
         print(e)
-        return render_template('auth.html',
-                               success=False,
-                               reason="An error occurred. Please try again.")
+        return render_template(
+            'auth.html',
+            success=False,
+            reason="An error occurred. Please try again.")
 
 
 @app.route('/latest')
@@ -292,8 +292,8 @@ def get_day_group_data(day, group_id):
     start_day = datetime.datetime.strptime(day, "%Y-%m-%d")
     end_day = start_day + datetime.timedelta(days=1)
 
-    fetched_data = db.get_window_based_on_group(g.cursor, group_id, start_day,
-                                                end_day, offset=0)
+    fetched_data = db.get_window_based_on_group(
+        g.cursor, group_id, start_day, end_day, offset=0)
     # Add percentage_full
     fetched_data = annotate_fullness_percentage(fetched_data)
 
@@ -316,8 +316,8 @@ def get_day_building_data(day, parent_id):
     start_day = datetime.datetime.strptime(day, "%Y-%m-%d")
     end_day = start_day + datetime.timedelta(days=1)
 
-    fetched_data = db.get_window_based_on_parent(g.cursor, parent_id,
-                                                 start_day, end_day, offset=0)
+    fetched_data = db.get_window_based_on_parent(
+        g.cursor, parent_id, start_day, end_day, offset=0)
 
     # Add percentage_full
     fetched_data = annotate_fullness_percentage(fetched_data)
@@ -336,8 +336,8 @@ def get_window_group_data(start_time, end_time, group_id):
     :return: JSON corresponding to the requested window and group
     :rtype: flask.Response
     """
-    offset = request.args.get('offset', type=int) if request.args.get(
-        'offset') else 0
+    offset = request.args.get(
+        'offset', type=int) if request.args.get('offset') else 0
     fetched_data = db.get_window_based_on_group(g.cursor, group_id, start_time,
                                                 end_time, offset)
     # Add percentage_full
@@ -363,8 +363,8 @@ def get_window_building_data(start_time, end_time, parent_id):
     :return: JSON corresponding to the requested window and building
     :rtype: flask.Response
     """
-    offset = request.args.get('offset', type=int) if request.args.get(
-        'offset') else 0
+    offset = request.args.get(
+        'offset', type=int) if request.args.get('offset') else 0
     fetched_data = db.get_window_based_on_parent(g.cursor, parent_id,
                                                  start_time, end_time, offset)
     # Add percentage_full
@@ -384,8 +384,9 @@ def capacity():
     cur_data = db.get_latest_data(g.cursor)
     last_updated = cur_data[0]['dump_time'].strftime("%B %d %Y, %I:%M %p")
     locations = annotate_fullness_percentage(cur_data)
-    return render_template('capacity.html', locations=locations,
-                           last_updated=last_updated)
+    return render_template(
+        'capacity.html', locations=locations, last_updated=last_updated)
+
 
 @app.route('/map')
 def map():
@@ -394,6 +395,7 @@ def map():
 
     # Render template has an SVG image whose colors are changed by % full
     return render_template('map.html', locations=locations)
+
 
 @app.route('/upload', methods=['POST'])
 def upload():

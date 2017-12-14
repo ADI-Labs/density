@@ -1,4 +1,5 @@
 import re
+
 import density
 
 def test_email_regex():

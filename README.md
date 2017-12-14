@@ -10,36 +10,52 @@ graciously provided by CUIT in coordination with ESC).
 
 ## Contributing
 
-## Local Dev
+### Local Development
 
-We recommend using [Vagrant](https://www.vagrantup.com) for development
-environment set-up. If you have Vagrant, running `vagrant up` should set-up
-and provision the virtual machine for you.
-
-Inside the virtual machine, run:
+Density currently runs on Python 3.6.3 and PostgreSQL 9.6. Our Python
+dependencies are managed via [Pipenv](https://docs.pipenv.org/). If you
+have Python 3.6 already installed, just run:
 
 ```bash
-cd /vagrant
-source config/settings.dev
-flask run --host=0.0.0.0
+pip install -U pipenv
+pipenv install --dev
+./scripts/bootstrap.sh
 ```
 
-and go to https://localhost:5000. You should see your own local Density app!
+### Vagrant
 
-### Dependencies
+If you don't know how to install Python 3.6.3 and PostgreSQL 9.6
+yourself, we also have a [Vagrant](https://www.vagrantup.com/) setup. Go
+to [Vagrant Downloads](https://www.vagrantup.com/downloads.html) to
+download Vagrant, and then in the terminal run:
 
-Density is build with Python 3.6 and Flask. We use a [conda](https://conda.io)
-environment, defined via `config/environment.yml`, for dependency management.
-When you run `source config/settings.dev`, the appropriate conda environment
-will automatically be activated.
-
-Density runs on Postgres 9.6. To access the database, you can just run:
-
-```
-sudo -u postgres psql density
+```bash
+vagrant up
+vagrant ssh
 ```
 
-You can find a copy of the database schema in `config/schema.sql`.
+This should `ssh` you into `vagrant@vagrant` virtualmachine. Go to
+`/vagrant` and then run `pipenv install --dev`.
+
+### Environment variables
+
+We use `.env` file (automatically loaded by `pipenv`) to handle
+configuration. This should automatically be created for you when you run
+`./scripts/bootstrap.sh` (or when Vagrant provisions itself).
+
+In production, we use a different set of environment variables.
+
+## Running the Server
+
+```
+pipenv run flask run
+```
+
+to start the server. If you're using Vagrant, you'll have to run:
+
+```
+pipenv run flask run --host=0.0.0.0
+```
 
 ### Testing
 
@@ -48,9 +64,8 @@ in `density/tests`. To run tests locally, in the app root directory you should
 run:
 
 ```bash
-source config/settings.dev
-py.test
-flake8
+pipenv run flake8
+pipenv run py.test
 ```
 
 We have [Travis CI](https://travis-ci.org/ADI-Labs/density/) set-up to enforce
@@ -70,25 +85,25 @@ docker run --net=host -d density
 
 ```
 .
-├── config
-│   ├── bootstrap.sh      -- bootstrap script for Vagrant
-│   ├── dump.sql          -- a database dump for local development
-│   ├── environment.yml   -- a file defining our conda environment
-│   ├── schema.sql        -- our database schema
-│   └── settings.dev      -- various configuration settings for development
+├── API.md              -- API documentation
 ├── density
-│   ├── config.py         -- loads configuration from environment variables
-│   ├── data.py           -- stores various constants
-│   ├── db.py             -- app interface to the Postgres database
-│   ├── __init__.py       -- the bulk of the app logic
-│   ├── predict.py        -- in-progress work for data science work
-│   ├── static/
-│   ├── templates/
-│   └── tests/
-├── API.md                -- API documentation
-├── Dockerfile            -- Dockerfile for production
+│   ├── config.py       -- Load configuration from `.env` file
+│   ├── data.py         -- Raw data for rooms
+│   ├── db.py           -- Handle all database access
+│   ├── __init__.py     -- Bulk of the app logic
+│   ├── predict.py      -- WIP (unused) file for predictions
+│   ├── static/         -- static assets for Flask
+│   ├── templates       -- Jinja2 templates for Flask
+│   └── tests/          -- various tests
+├── Dockerfile
+├── Pipfile             -- List of Python dependencies
+├── Pipfile.lock
 ├── README.md
-├── run.py                -- File for Flask to run
-├── setup.cfg
+├── scripts
+│   ├── bootstrap.sh    -- Set-up PostgreSQL logic and `.env`
+│   ├── dump.sql        -- dump of database for development
+│   ├── schema.sql      -- database schema (for reference)
+│   └── vagrant.sh      -- script to setup Vagrant
+├── setup.cfg           -- Setup for CI
 └── Vagrantfile
 ```

@@ -1,7 +1,10 @@
-from bokeh.plotting import figure
-from pandas import PeriodIndex
+"""
+This file is WIP and is not ready to use
+"""
 
+from bokeh.plotting import figure
 import pandas as pd
+from pandas import PeriodIndex
 
 PANTONE_292 = (105, 179, 231)
 
