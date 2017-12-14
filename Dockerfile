@@ -4,11 +4,11 @@ MAINTAINER ADI <infrastructure@adicu.com>
 RUN pip install -U pipenv
 
 WORKDIR /density
-COPY ./Pipfile.lock ./density/Pipfile.lock
+COPY ./Pipfile.lock ./Pipfile.lock
 RUN pipenv install --ignore-pipfile --deploy
 
 # add the application directories
-COPY ./ /density
+COPY ./ ./
 
 # expose the port and start the server
 EXPOSE 6002
