@@ -5,7 +5,6 @@ import uuid
 
 import pytz
 
-
 SELECT = """
     SELECT d.client_count, d.dump_time,
            r.id AS group_id, r.name AS group_name,
@@ -192,15 +191,16 @@ def insert_density_data(cursor, data):
 
     rows = []
 
-    time = (dt.datetime.utcnow()
-              .replace(second=0, microsecond=0)
-              .astimezone(pytz.timezone("US/Eastern"))
-              .replace(tzinfo=None))   # drop timezone info for Postgres
+    time = (dt.datetime.utcnow().replace(second=0, microsecond=0).astimezone(
+        pytz.timezone("US/Eastern"))
+            .replace(tzinfo=None))  # drop timezone info for Postgres
 
     for key, value in data.items():
-        group = {"id": int(key),
-                 "name": value["name"],
-                 "parent_id": int(value["parent_id"])}
+        group = {
+            "id": int(key),
+            "name": value["name"],
+            "parent_id": int(value["parent_id"])
+        }
         client_count = int(value["client_count"])
 
         # Data normalization issue on CUIT's side

@@ -20,8 +20,7 @@ Inside the virtual machine, run:
 
 ```bash
 cd /vagrant
-source config/settings.dev
-flask run --host=0.0.0.0
+pipenv run flask run --host=0.0.0.0
 ```
 
 and go to https://localhost:5000. You should see your own local Density app!

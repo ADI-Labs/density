@@ -16,7 +16,6 @@ from .data import FULL_CAP_DATA
 
 
 app = Flask(__name__)
-app.config.update(**config)
 
 # change the default JSON encoder to handle datetime's properly
 app.json_encoder = ISO8601Encoder
@@ -26,13 +25,9 @@ request_date_format = '%Y-%m-%d'
 
 # create a pool of postgres connections
 pg_pool = psycopg2.pool.SimpleConnectionPool(
-    5,      # min connections
-    20,     # max connections
-    database=app.config['PG_DB'],
-    user=app.config['PG_USER'],
-    password=app.config['PG_PASSWORD'],
-    host=app.config['PG_HOST'],
-    port=app.config['PG_PORT'],
+    minconn=5,
+    maxconn=20,
+    dsn=config["DB_URI"]
 )
 
 

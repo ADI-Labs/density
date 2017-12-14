@@ -6,35 +6,29 @@ in the config object as well.
 """
 
 import os
-import sys
 import datetime as dt
 
 from flask.json import JSONEncoder
 
 # dictionary the flask app configures itself from
 config = {
-    'SECRET_KEY': None,
-    'PG_USER': None,
-    'PG_PASSWORD': None,
-    'PG_DB': None,
-    'PG_HOST': None,
-    'PG_PORT': None,
+    'DB_URI': None,
     'GOOGLE_CLIENT_ID': None,
+    'SECRET_KEY': None,
     'UPLOAD_KEY': None
 }
 
-try:  # use local settings
+try:
     for env_key, value in config.items():
         if not value:
             config[env_key] = os.environ[env_key]
-
 except KeyError as e:
     """ Throw an error if a setting is missing """
-    print("ERR MSG: {}".format(e.message))
-    print("Some of your settings aren't in the environment."
-          "You probably need to run:"
-          "\n\n\tsource config/<your settings file>")
-    sys.exit(1)
+    print(f"ERR MSG: {e}")
+    print("Some of your settings aren't in the environment. "
+          "You probably need to create a `.env` file")
+    raise
+
 
 class ISO8601Encoder(JSONEncoder):
     """ JSON encoder for ISO8601 datetime strings
