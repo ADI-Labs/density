@@ -136,7 +136,7 @@ def annotate_fullness_percentage(data):
 @app.route('/home')
 def home():
     return render_template(
-        'index.html', client_id=app.config['GOOGLE_CLIENT_ID'])
+        'index.html', client_id=config['GOOGLE_CLIENT_ID'])
 
 
 @app.route('/about')
@@ -401,7 +401,7 @@ def map():
 def upload():
     """ Accept POST requests from CUIT to add new data to the server """
     # This is stored in local settings and is the way we verify uploads.
-    if request.args.get('key') != app.config['UPLOAD_KEY']:
+    if request.args.get('key') != config['UPLOAD_KEY']:
         return 'Please include a valid API key.', 401
 
     try:
