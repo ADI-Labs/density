@@ -9,30 +9,18 @@ language: python
 python:
 - 3.6
 
-before_install:
-  - wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh;
-  - bash miniconda.sh -b -p "$HOME/miniconda"
-  - export PATH="$HOME/miniconda/bin:$PATH"
-  - conda config --set always_yes yes --set changeps1 no
-  - conda update conda
-
-install:
-  - conda env create -n density --file config/environment.yml
-  - source config/settings.dev
-  - sudo -u postgres psql -c "CREATE USER adi WITH PASSWORD 'adi';"
-  - sudo -u postgres psql -c "CREATE DATABASE density;"
-  - sudo -u postgres psql -c "GRANT CONNECT ON DATABASE density TO adi;"
-  - sudo -u postgres psql density < ./config/dump.sql
-  - sudo -u postgres psql -c "GRANT SELECT ON ALL TABLES IN SCHEMA public TO adi;"
-
 addons:
   postgresql: 9.6
 
+install:
+- ./scripts/bootstrap.sh
+- pip install -U pipenv
+- pipenv install --dev
+
 before_script:
-  - psql --version
-  - conda env export
+- psql --version
+- pip freeze
 
 script:
-  - flake8
-  - py.test --verbose
-
+- pipenv run flake8
+- pipenv run py.test --verbose --cov

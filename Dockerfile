@@ -12,6 +12,6 @@ COPY ./ /density
 
 # expose the port and start the server
 EXPOSE 6002
-CMD /bin/bash -c "pipenv run gunicorn run:app \
+CMD /bin/bash -c "pipenv run gunicorn density:app \
         --bind 0.0.0.0:6002 \
         --log-level debug"

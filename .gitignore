@@ -1,5 +1,6 @@
 .env
 density/.cache
+.coverage
 .cache
 
 lib-cov

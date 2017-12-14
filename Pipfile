@@ -1,12 +1,9 @@
 [[source]]
-
 url = "https://pypi.python.org/simple"
 verify_ssl = true
 name = "pypi"
 
-
 [packages]
-
 flask = "*"
 "psycopg2" = "*"
 gunicorn = "*"
@@ -14,14 +11,13 @@ pytz = "*"
 "oauth2client" = "*"
 "httplib2" = "*"
 
-
 [dev-packages]
-
 "flake8" = "*"
 "flake8-bugbear" = "*"
+"flake8-import-order" = "*"
 pytest = "*"
-
+pytest-cov = "*"
+freezegun = "*"
 
 [requires]
-
 python_version = "3.6"

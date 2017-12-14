@@ -191,8 +191,8 @@ def insert_density_data(cursor, data):
 
     rows = []
 
-    time = (dt.datetime.utcnow().replace(second=0, microsecond=0).astimezone(
-        pytz.timezone("US/Eastern"))
+    time = (dt.datetime.now(tz=pytz.utc)
+            .astimezone(pytz.timezone("US/Eastern"))
             .replace(tzinfo=None))  # drop timezone info for Postgres
 
     for key, value in data.items():

@@ -33,9 +33,8 @@ def test_good_insert(cursor):
         },
     }
 
-    date = dt.datetime(2017, 1, 1).astimezone(pytz.timezone("US/Eastern"))
-
-    with freeze_time(date):
+    date = dt.datetime(2017, 5, 5).astimezone(pytz.timezone("US/Eastern"))
+    with freeze_time(date.astimezone(pytz.utc)):
         db.insert_density_data(cursor, data)
 
     cursor.execute("SELECT MAX(dump_time) FROM density_data")

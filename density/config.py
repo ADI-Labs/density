@@ -5,23 +5,16 @@ Flask specific settings will be set here and we can store additional settings
 in the config object as well.
 """
 
-import os
 import datetime as dt
+import os
 
 from flask.json import JSONEncoder
 
 # dictionary the flask app configures itself from
-config = {
-    'DB_URI': None,
-    'GOOGLE_CLIENT_ID': None,
-    'SECRET_KEY': None,
-    'UPLOAD_KEY': None
-}
+keys = {'DB_URI', 'GOOGLE_CLIENT_ID', 'SECRET_KEY', 'UPLOAD_KEY'}
 
 try:
-    for env_key, value in config.items():
-        if not value:
-            config[env_key] = os.environ[env_key]
+    config = {key: os.environ[key] for key in keys}
 except KeyError as e:
     """ Throw an error if a setting is missing """
     print(f"ERR MSG: {e}")
