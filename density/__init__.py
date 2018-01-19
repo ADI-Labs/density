@@ -85,6 +85,7 @@ if not app.debug:
     @app.errorhandler(500)
     @app.errorhandler(Exception)
     def internal_error(e):
+        traceback.print_exc()
         return jsonify(
             error="Something went wrong, and notification of "
             "admins failed.  Please contact an admin.",
