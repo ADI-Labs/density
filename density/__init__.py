@@ -133,12 +133,6 @@ def annotate_fullness_percentage(data):
     return groups
 
 
-@app.route('/home')
-def home():
-    return render_template(
-        'index.html', client_id=config['GOOGLE_CLIENT_ID'])
-
-
 @app.route('/about')
 def about():
     return render_template('about.html')
