@@ -1,5 +1,3 @@
-import json
-
 def test_about(app):
-	resp = app.get('/');
-	assert resp.status_code == 200
+    resp = app.get('/')
+    assert resp.status_code == 200
