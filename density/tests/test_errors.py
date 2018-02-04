@@ -28,4 +28,3 @@ def test_bad_auth(app):
     body = json.loads(resp.data.decode())
 
     assert "No authorization token" in body["error"]
-    assert resp.status_code == 401      # unauthorized

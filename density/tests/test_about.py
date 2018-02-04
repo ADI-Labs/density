@@ -1,3 +1,3 @@
 def test_about(app):
-    resp = app.get('/')
+    resp = app.get('/about')
     assert resp.status_code == 200
