@@ -23,7 +23,8 @@ def test_latest_group_data(app, auth_header):
     assert resp.status_code == 200
     assert len(body["data"]) == 1
     assert body["data"][0]["building_name"] == "Avery"
-    assert body["data"][0]["group_name"] == "Architectural and Fine Arts Library 2"
+    assert body["data"][0]["group_name"] == (
+        "Architectural and Fine Arts Library 2")
     assert body["data"][0]["parent_id"] == 146
     assert body["data"][0]["group_id"] == 148
         
