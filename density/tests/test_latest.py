@@ -50,8 +50,8 @@ def test_window_group_data(app, auth_header):
 	assert len(body["data"]) == 2
 
 	rec_1 = body["data"][0]
-	assert rec_1.keys() == {'client_count', 'dump_time', 'group_id', 
-							'group_name', 'parent_id', 'building_name'}
+	assert rec_1.keys() == {'building_name', 'client_count', 'dump_time', 'group_id', 
+							'group_name', 'parent_id', 'percent_full'}
 	assert rec_1['client_count'] == 107
 	assert rec_1['group_name'] == 'Starr East Asian Library'
 
