@@ -59,7 +59,7 @@ def test_window_group_data(app, auth_header):
 	assert rec_2['client_count'] == 99
 
 
-def test_window_building_data():
+def test_window_building_data(app, auth_header):
 	resp = app.get('/window/2014-10-21T19:45:00/2014-10-21T20:15:00/building/15', headers=auth_header)
 	body = json.loads(resp.data.decode())
 
@@ -74,6 +74,7 @@ def test_window_building_data():
 
 	rec_2 = body["data"][1]
 	assert rec_2['client_count'] == 74
+
 
 def test_annotate_fullness_percentage():
     data = [{
