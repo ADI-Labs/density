@@ -32,3 +32,8 @@ def test_annotate_fullness_percentage():
 
     data[0]["percent_full"] = 22
     assert annotated == data
+
+def test_window_group_data():
+    group_id = 144
+    start_time, end_time = '2014-10-21 19:45:00', '2014-10-21 20:15:00'
+
