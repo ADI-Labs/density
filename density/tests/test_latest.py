@@ -52,7 +52,8 @@ def test_window_group_data(app, auth_header):
 
     rec_1 = body["data"][0]
     assert rec_1.keys() == {'building_name', 'client_count', 'dump_time',
-                            'group_id', 'group_name', 'parent_id', 'percent_full'}
+                            'group_id', 'group_name', 'parent_id',
+                            'percent_full'}
     assert rec_1['client_count'] == 107
     assert rec_1['group_name'] == 'Starr East Asian Library'
 
@@ -61,7 +62,7 @@ def test_window_group_data(app, auth_header):
 
 
 def test_window_building_data(app, auth_header):
-	app_query = '/window/2014-10-21T19:45:00/2014-10-21T20:15:00/building/15'
+    app_query = '/window/2014-10-21T19:45:00/2014-10-21T20:15:00/building/15'
     resp = app.get(app_query, headers=auth_header)
     body = json.loads(resp.data.decode())
 
