@@ -12,6 +12,7 @@ import psycopg2.extras
 import psycopg2.pool
 
 from . import db
+from . import predict
 from .config import config, ISO8601Encoder
 from .data import FULL_CAP_DATA
 
@@ -391,6 +392,10 @@ def map():
     # Render template has an SVG image whose colors are changed by % full
     return render_template('map.html', locations=locations)
 
+@app.route('/predict')
+def predict():
+    predict_data = predict.db_to_pandas(g.pg_conn)
+    return render_template('predict.html')
 
 @app.route('/upload', methods=['POST'])
 def upload():
