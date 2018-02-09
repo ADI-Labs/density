@@ -8,6 +8,14 @@ from pandas import PeriodIndex
 
 PANTONE_292 = (105, 179, 231)
 
+SELECT = """
+    SELECT d.client_count, d.dump_time,
+           r.id AS group_id, r.name AS group_name,
+           b.id AS parent_id, b.name AS building_name
+    FROM density_data d
+    JOIN routers r ON r.id = d.group_id
+    JOIN buildings b ON b.id = r.building_id"""
+
 
 def db_to_pandas(conn):
     """ Return occupancy data as pandas dataframe
@@ -30,15 +38,15 @@ def db_to_pandas(conn):
         Density data in a Dataframe
     """
 
-    df = pd.read_sql('SELECT * FROM density_data', conn) \
+    df = pd.read_sql(SELECT, conn) \
            .set_index("dump_time") \
            .assign(group_name=lambda df: df["group_name"].astype('category'),
-                   parent_name=lambda df: df["parent_name"].astype('category'))
+                   parent_name=lambda df: df["parent_id"].astype('category'))
     return df
 
 
 def db_to_pandas_pivot(conn):
-    df = pd.read_sql('SELECT * FROM density_data', conn) \
+    df = pd.read_sql(SELECT, conn) \
            .set_index("dump_time") \
            .assign(group_name=lambda df: df["group_name"].astype('category')) \
            .pivot(columns="group_name", values="client_count")

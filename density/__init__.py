@@ -10,9 +10,10 @@ from oauth2client.client import flow_from_clientsecrets
 import psycopg2
 import psycopg2.extras
 import psycopg2.pool
+import pandas as pd
 
 from . import db
-from . import predict
+from .predict import db_to_pandas, df_predict, get_historical_means, db_to_pandas_pivot
 from .config import config, ISO8601Encoder
 from .data import FULL_CAP_DATA
 
@@ -384,6 +385,7 @@ def capacity():
         'capacity.html', locations=locations, last_updated=last_updated)
 
 
+
 @app.route('/map')
 def map():
     cur_data = db.get_latest_data(g.cursor)
@@ -392,9 +394,14 @@ def map():
     # Render template has an SVG image whose colors are changed by % full
     return render_template('map.html', locations=locations)
 
+
 @app.route('/predict')
 def predict():
-    predict_data = predict.db_to_pandas(g.pg_conn)
+    imported_data = db_to_pandas_pivot(g.pg_conn)
+    lerner_2 = pd.Series(imported_data[['Lerner 2']])
+    predicted = df_predict(lerner_2, lerner_2.index)
+    print(predicted)
+    
     return render_template('predict.html')
 
 @app.route('/upload', methods=['POST'])
