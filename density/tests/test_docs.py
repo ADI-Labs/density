@@ -14,4 +14,4 @@ def test_building_info(app, auth_header):
 
     for row in body["data"]:
         assert row.keys() == {'group_id',
-			      'group_name', 'parent_id', 'parent_name'}
+                              'group_name', 'parent_id', 'parent_name'}
