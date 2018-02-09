@@ -43,14 +43,16 @@ def test_latest_building_data(app, auth_header):
 
 
 def test_window_group_data(app, auth_header):
-    resp = app.get('/window/2014-10-21T19:45:00/2014-10-21T20:15:00/group/144', headers=auth_header)
+    resp = app.get('/window/2014-10-21T19:45:00/2014-10-21T20:15:00/group/144', 
+        headers=auth_header)
     body = json.loads(resp.data.decode())
 
     assert resp.status_code == 200
     assert len(body["data"]) == 2
 
     rec_1 = body["data"][0]
-    assert rec_1.keys() == {'building_name', 'client_count', 'dump_time', 'group_id', 'group_name', 'parent_id', 'percent_full'}
+    assert rec_1.keys() == {'building_name', 'client_count', 'dump_time', 
+    'group_id', 'group_name', 'parent_id', 'percent_full'}
     assert rec_1['client_count'] == 107
     assert rec_1['group_name'] == 'Starr East Asian Library'
 
@@ -59,14 +61,16 @@ def test_window_group_data(app, auth_header):
 
 
 def test_window_building_data(app, auth_header):
-    resp = app.get('/window/2014-10-21T19:45:00/2014-10-21T20:15:00/building/15', headers=auth_header)
+    resp = app.get('/window/2014-10-21T19:45:00/2014-10-21T20:15:00/building/15', 
+        headers=auth_header)
     body = json.loads(resp.data.decode())
 
     assert resp.status_code == 200
     assert len(body["data"]) == 2
 
     rec_1 = body["data"][0]
-    assert rec_1.keys() == {'building_name', 'client_count', 'dump_time', 'group_id', 'group_name', 'parent_id', 'percent_full'}
+    assert rec_1.keys() == {'building_name', 'client_count', 'dump_time', 
+    'group_id', 'group_name', 'parent_id', 'percent_full'}
     assert rec_1['client_count'] == 87
     assert rec_1['building_name'] == 'Northwest Corner Building'
 
