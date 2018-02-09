@@ -40,7 +40,28 @@ def test_latest_building_data(app, auth_header):
                               'dump_time', 'group_name', 'group_id',
                               'percent_full', 'parent_id'}
         assert row["building_name"] == "Butler"
-        
+    
+
+def test_window_group_data(app, auth_header):
+	resp = app.get('/window/2014-10-21T19:45:00/2014-10-21T20:15:00/group/144', headers=auth_header)
+	body = json.loads(resp.data.decode())
+
+	assert resp.status_code == 200
+	assert len(body["data"]) == 2
+
+	rec_1 = body["data"][0]
+	assert rec_1.keys() == {'client_count', 'dump_time', 'group_id', 
+							'group_name', 'parent_id', 'building_name'}
+	assert rec_1['client_count'] == 107
+	assert rec_1['group_name'] == 'Starr East Asian Library'
+
+	rec_2 = body["data"][1]
+	assert rec_1['client_count'] == 99
+
+
+def test_window_building_data():
+	pass    
+
 
 def test_annotate_fullness_percentage():
     data = [{
@@ -59,8 +80,4 @@ def test_annotate_fullness_percentage():
 
     data[0]["percent_full"] = 22
     assert annotated == data
-
-def test_window_group_data():
-    group_id = 144
-    start_time, end_time = '2014-10-21 19:45:00', '2014-10-21 20:15:00'
 
