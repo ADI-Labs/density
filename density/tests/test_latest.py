@@ -71,7 +71,8 @@ def test_window_building_data(app, auth_header):
 
     rec_1 = body["data"][0]
     assert rec_1.keys() == {'building_name', 'client_count', 'dump_time',
-                            'group_id', 'group_name', 'parent_id', 'percent_full'}
+                            'group_id', 'group_name', 
+                            'parent_id', 'percent_full'}
     assert rec_1['client_count'] == 87
     assert rec_1['building_name'] == 'Northwest Corner Building'
 

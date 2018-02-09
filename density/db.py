@@ -65,7 +65,7 @@ def get_latest_building_data(cursor, parent_id):
 
     query = SELECT + """
         WHERE d.dump_time = (SELECT MAX(dump_time) FROM density_data)
-              AND building_id = %s 
+              AND building_id = %s
     ;"""
     cursor.execute(query, [parent_id])
     return cursor.fetchall()
