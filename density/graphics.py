@@ -1,11 +1,16 @@
-from bokeh.plotting import figure
+from bokeh.plotting import figure, output_file, show
+from bokeh.embed import components
 import pandas as pd
 from pandas import PeriodIndex, DataFrame, Series
 
+PANTONE_292 = (105, 179, 231)
+
 def create_figure(building, predictions):
 
-	for time, prediction in predictions.iteritems():
-		print("building:", building, "time:", time, "prediction:", prediction)
+	create_prediction_plot(predictions.index, predictions)
+	# for time, prediction in predictions.iteritems():
+	# 	print("building:", building, "time:", time, "prediction:", prediction)
+	# 	create_prediction_plot(prediction.index, prediction)
 
 
 def create_all_buildings(df):
@@ -19,15 +24,16 @@ def create_all_buildings(df):
     	index = index + 1
 
 def phony_data():
-	d = {'12am' : pd.Series([1, 2, 3, 4, 5, 6], index=['lerner 1', 'lerner 2', 'lerner 3', 'butler 1', 'butler 2', 'butler 3']),
-		'1am' : pd.Series([2, 4, 3, 4, 5, 6], index=['lerner 1', 'lerner 2', 'lerner 3', 'butler 1', 'butler 2', 'butler 3']),
-		'2am' : pd.Series([3, 6, 3, 4, 5, 6], index=['lerner 1', 'lerner 2', 'lerner 3', 'butler 1', 'butler 2', 'butler 3']),
-		'3am' : pd.Series([4, 8, 3, 4, 5, 6], index=['lerner 1', 'lerner 2', 'lerner 3', 'butler 1', 'butler 2', 'butler 3']), }
+	d = {'1' : pd.Series([1, 2, 3, 4, 5, 1], index=['lerner 1', 'lerner 2', 'lerner 3', 'butler 1', 'butler 2', 'butler 3']),
+		'2' : pd.Series([2, 4, 3, 4, 5, 2], index=['lerner 1', 'lerner 2', 'lerner 3', 'butler 1', 'butler 2', 'butler 3']),
+		'3' : pd.Series([3, 6, 3, 4, 5, 3], index=['lerner 1', 'lerner 2', 'lerner 3', 'butler 1', 'butler 2', 'butler 3']),
+		'4' : pd.Series([4, 8, 3, 4, 5, 4], index=['lerner 1', 'lerner 2', 'lerner 3', 'butler 1', 'butler 2', 'butler 3']), }
 
+	print(pd.DataFrame(d))
 	return pd.DataFrame(d)
 
 
-def create_prediction_plot():
+def create_prediction_plot(time, prediction):
 
     output_file("line.html")
 
@@ -47,10 +53,11 @@ def create_prediction_plot():
     p.yaxis.axis_line_width = 3
 
 	# add a line renderer
-    p.line([1, 2, 3, 4, 5], [6, 7, 2, 4, 5], line_width=2)
+    p.line(time, prediction, line_width=2)
 
-    show(p)
-
+    #  show(p)
+    script, div = components(p)
+    print(script)
+    print(div)
 
 create_all_buildings(phony_data())
-print(phony_data())
