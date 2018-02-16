@@ -26,5 +26,31 @@ def phony_data():
 
 	return pd.DataFrame(d)
 
+
+def create_prediction_plot():
+
+    output_file("line.html")
+
+    p = figure(plot_width=400, plot_height=400)
+
+    #set format for x axis
+    p.xaxis.axis_label = "Time of Day"
+    p.xaxis.axis_line_width = 3
+    p.xaxis.axis_line_color = PANTONE_292
+    p.xaxis.major_label_text_color = PANTONE_292
+
+    #set format for y axis
+    p.yaxis.axis_label = "Predicted Capacity"
+    p.yaxis.axis_line_color = PANTONE_292
+    p.yaxis.major_label_text_color = PANTONE_292
+    p.yaxis.major_label_orientation = "vertical"
+    p.yaxis.axis_line_width = 3
+
+	# add a line renderer
+    p.line([1, 2, 3, 4, 5], [6, 7, 2, 4, 5], line_width=2)
+
+    show(p)
+
+
 create_all_buildings(phony_data())
 print(phony_data())
