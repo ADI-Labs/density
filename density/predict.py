@@ -58,7 +58,7 @@ def plot_prediction_point_estimate(series, predictor):
 
     Returns a figure with 2 lines, one for past capacity and another for
     future predicted capacity using predictor function. The plot
-    displays 24 hours into the future at 15 minute intervals.
+    displays 24 hours into the future at 15 minute intervals
 
     Parameters
     ----------
