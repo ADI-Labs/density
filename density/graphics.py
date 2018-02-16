@@ -1,6 +1,8 @@
-from bokeh.plotting import figure
+from bokeh.plotting import figure, output_file, show
 import pandas as pd
 from pandas import PeriodIndex, DataFrame, Series
+
+PANTONE_292 = (105, 179, 231)
 
 def create_figure(building, predictions):
 
@@ -54,3 +56,4 @@ def create_prediction_plot():
 
 create_all_buildings(phony_data())
 print(phony_data())
+create_prediction_plot()
