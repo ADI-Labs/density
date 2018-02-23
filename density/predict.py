@@ -119,3 +119,16 @@ def predict_tomorrow(day_dict):
     
     return result
 
+
+def annotate_fullness_predict(data):
+    """
+    Calculates percent fullness of all groups and adds them to the data in
+    the key 'percent_full'. The original data is not modified.
+    :param pd.dataframe: pandas dataframe object
+    :return: list of dictionaries with added pecent_full data
+    :rtype: list of dictionaries
+    """
+    groups = np.unique(data.columns)
+    for group in groups:
+        capacity = FULL_CAP_DATA[group]
+        data[[group]] = (100 * data[[group]]) // capacity
