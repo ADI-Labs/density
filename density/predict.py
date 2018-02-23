@@ -1,12 +1,10 @@
-"""
-This file is WIP and is not ready to use
-"""
-
-from bokeh.plotting import figure
 import pandas as pd
-from pandas import PeriodIndex
+import numpy as np
+import datetime
+import psycopg2
+from matplotlib import pyplot as plt
 
-PANTONE_292 = (105, 179, 231)
+conn = psycopg2.connect(dbname="local_density", user="adi", password="password")
 
 SELECT = """
     SELECT d.client_count, d.dump_time,
@@ -19,15 +17,16 @@ SELECT = """
 
 def db_to_pandas(conn):
     """ Return occupancy data as pandas dataframe
-
     column dtypes:
         group_id: int64
         group_name: category
         parent_id: int64
         parent_name: category
         client_count: int64
+        week: int64
+        weekday: int64
+        time_point: string
     index: DateTimeIndex -- dump_time
-
     Parameters
     ----------
     conn: psycopg2.extensions.connection
@@ -41,104 +40,82 @@ def db_to_pandas(conn):
     df = pd.read_sql(SELECT, conn) \
            .set_index("dump_time") \
            .assign(group_name=lambda df: df["group_name"].astype('category'),
-                   parent_name=lambda df: df["parent_id"].astype('category'))
+                   parent_id=lambda df: df["parent_id"].astype('category'))
+    df['week'] = df.index.weekofyear  # get week of the year (1-52) for a given timestamp
+    df['weekday'] = df.index.weekday  # get day of the week (1-7) for a given timestamp
+    time_points = zip(df.index.hour, df.index.minute)
+    time_points = ["{}:{}".format(x[0], x[1]) for x in time_points]
+    df["time_point"] = time_points # get time of the day (HH:mm) for a given timestamp
+    
     return df
 
 
-def db_to_pandas_pivot(conn):
-    df = pd.read_sql(SELECT, conn) \
-           .set_index("dump_time") \
-           .assign(group_name=lambda df: df["group_name"].astype('category')) \
-           .pivot(columns="group_name", values="client_count")
-    return df
-
-
-def plot_prediction_point_estimate(series, predictor):
-    """ Returns bokeh plot of current + predicted capacity
-
-    Returns a figure with 2 lines, one for past capacity and another for
-    future predicted capacity using predictor function. The plot
-    displays 24 hours into the future at 15 minute intervals
-
+def parse_by_week(df):
+    """Return a dictionary of dataframes where the keys are days of the week
     Parameters
     ----------
-    series: pandas.Series
-        A series of a single floor's occupancy. Its index are past times
-        and its values are the observed occupancies, and its name is the
-        floor name.
-    predictor: Callable[[pd.Series, pd.PeriodIndex],
-                         pd.Series]
-        Takes the room name and a PeriodIndex of times of future times
-        and returns the predicted occupancy of the room at those times
-
+    df: pandas.DataFrame
+        Density data in a Dataframe
     Returns
     -------
-    bokeh.plotting.figure.Figure
+    Dictionary
+        a dictionary of dataframes where the keys are days of the week
     """
-    future_dts = PeriodIndex(start=series.index[-1], freq='15T',
-                             periods=24 * 4)
-
-    predictions = pd.Series(predictor(series, future_dts),
-                            index=future_dts.to_datetime())
-
-    p = figure(x_axis_type="datetime")
-    p.line(series.index, series, color="dodgerblue", line_width=3,
-           line_cap="round")
-    p.line(predictions.index, predictions, color="crimson", line_width=3,
-           line_dash="dashed", line_cap="round")
-
-    p.xaxis.axis_label = "Time of Day"
-    p.xaxis.axis_line_width = 3
-    p.xaxis.axis_line_color = PANTONE_292
-    p.xaxis.major_label_text_color = PANTONE_292
-
-    p.yaxis.axis_label = "Capacity"
-    p.yaxis.axis_line_color = PANTONE_292
-    p.yaxis.major_label_text_color = PANTONE_292
-    p.yaxis.major_label_orientation = "vertical"
-    p.yaxis.axis_line_width = 3
-
-    return p
+    weeks = np.unique(df['week'])
+    week_dic = dict.fromkeys(weeks)
+    
+    for week in weeks:
+        week_dic[week] = df[df['week'] == week]
+    
+    return week_dic
 
 
-def df_predict(series, index):
-    """ Return series of predicted capacities for a provided set of times
-
+def predict_tomorrow(day_dict):
+    """Return a dataframes of predicted counts for tomorrow 
+    where the indexs are timestamps of the week and columns are locations
     Parameters
     ----------
-    series: pd.Series
-        Series of historical data for the desired floor.
-    index: pd.DatetimeIndex/pd.PeriodIndex
-        Index of all times for querying predictions.
-
+    day_dict: Dictionary
+        a dictionary of dataframes of density data where the keys are days of the week
     Returns
     -------
-    pd.Series
-        Series consisting of predictions for each time in the index.
+    pandas.DataFrame
+        Dataframe containing predicted counts for 96 tomorrow's timepoints
     """
-    means = get_historical_means(series, index)
-    predictions = pd.Series(means, index=index)
+    # get time stats for tomorrow
+    tomorrow = datetime.datetime.today() + datetime.timedelta(days=1)
+    day_of_week = tomorrow.weekday()
+    week_of_year = tomorrow.isocalendar()[1]
+    
+    # find past data for the given day of the week
+    past_data = day_dict[week_of_year]
+    past_data = past_data[past_data['weekday'] == day_of_week]
+    
+    results, locs = [], []
+    for group in np.unique(past_data["group_name"]):
+        locs.append(group)
+        group_data = past_data[past_data["group_name"] == group]
+        group_data = group_data[["client_count", "time_point"]]
+        group_result = group_data.groupby("time_point").mean()  # average counts by time for each location
+        results.append(group_result.transpose())
+    result = pd.concat(results)  # combine the data for all locations
+    result.index = locs
+    result = result.transpose()  # make time points indexes and locations columns
+    
+    old_indexes = result.index
+    new_indexes = []
 
-    return predictions
+    # make sure all time index has the same string format
+    for index in old_indexes:
+        splited = index.split(":")
+        leading, trailing = splited[0], splited[1]
+        if len(leading) == 1:
+            leading = "0" + leading
+        new_index = "{}:{}".format(leading, trailing)
+        new_indexes.append(new_index)
 
+    result.index = new_indexes
+    result = result.sort_index()
+    
+    return result
 
-def get_historical_means(series, index):
-    """ Return mean capacities for a floor at the same day of week and time
-
-    Parameters
-    ----------
-    series: pd.Series
-        Series consisting of Density data for the given floor.
-    index: pd.DatetimeIndex/pd.PeriodIndex
-        Index of dates to obtain history for
-
-    Returns
-    -------
-    List[float]
-        List of historical averages
-    """
-    groups = series.groupby([series.index.dayofweek, series.index.time])
-    return [groups
-            .get_group((date.dayofweek, date.time()))
-            .mean()
-            for date in index.to_datetime()]
