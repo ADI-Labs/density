@@ -23,7 +23,10 @@ def create_all_buildings(df):
     all_scripts = ""
 
     for building, predictions in df.iterrows():
+        #  create prediction plot for one building
         script, div = create_prediction_plot(predictions.index, predictions) 
+
+        #  add div and script to other div and scripts 
         all_divs += (div + "\n")
         all_scripts += (script + "\n")
 
@@ -70,7 +73,7 @@ def create_prediction_plot(time, prediction):
     # add a line renderer
     p.line(time, prediction, line_width=2)
 
-    #  show(p)
+    #  get script and div of plot
     script, div = components(p)
     return (script, div)
 
