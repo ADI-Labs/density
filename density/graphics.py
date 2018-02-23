@@ -12,27 +12,23 @@ def create_all_buildings(df):
     Generates html/javascript code for graphs of all buildings 
 
     :param df: DataFrame that contains predictions of traffic for each building over 24 hour period
-    :return: tuple of scripts for all buildings and divs for all buildings
+    :return: tuple of script and div of plot prediction for all buildings 
     :rtype: tuple of string, string
     """
     
+    building_divs = {}
+
     #  building = index of row (String)
     #  predictions = Series of columns with predictions 
 
-    all_divs = ""
-    all_scripts = ""
-
     for building, predictions in df.iterrows():
-        #  create prediction plot for one building
-        script, div = create_prediction_plot(predictions.index, predictions) 
+        #  create plot prediction for each building and add to dictionary
+        building_divs[building] = create_prediction_plot(predictions.index, predictions)
 
-        #  add div and script to other div and scripts 
-        all_divs += (div + "\n")
-        all_scripts += (script + "\n")
+    #  create script and div from dictionary
+    script, div = components(building_divs)
 
-    print(all_divs)
-    print(all_scripts)
-    return (all_scripts, all_divs)
+    return (script, div)
 
 
 def phony_data():
@@ -51,30 +47,29 @@ def create_prediction_plot(time, prediction):
 
     :param time: pandas Index object with time of next 24 hours
     :param prediction: pandas Series object with predictions corresponding to next 24 hours
-    :return: tuple of script and div for one plot
-    :rtype: tuple of string, string 
+    :return: bokeh Figure that with plot prediction of one building 
+    :rtype: bokeh Figure 
     """
 
     p = figure(plot_width=400, plot_height=400)
 
-    #set format for x axis
+    #  set format for x axis
     p.xaxis.axis_label = "Time of Day"
     p.xaxis.axis_line_width = 3
     p.xaxis.axis_line_color = PANTONE_292
     p.xaxis.major_label_text_color = PANTONE_292
 
-    #set format for y axis
+    #  set format for y axis
     p.yaxis.axis_label = "Predicted Capacity"
     p.yaxis.axis_line_color = PANTONE_292
     p.yaxis.major_label_text_color = PANTONE_292
     p.yaxis.major_label_orientation = "vertical"
     p.yaxis.axis_line_width = 3
 
-    # add a line renderer
+    #  add a line renderer
     p.line(time, prediction, line_width=2)
 
-    #  get script and div of plot
-    script, div = components(p)
-    return (script, div)
+    #  return plot for one building
+    return p
 
-#   create_all_buildings(phony_data())
+# create_all_buildings(phony_data())
