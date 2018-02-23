@@ -15,6 +15,7 @@ pytz = "*"
 "httplib2" = "*"
 pandas = "*"
 bokeh = "*"
+matplotlib = "*"
 
 
 [dev-packages]

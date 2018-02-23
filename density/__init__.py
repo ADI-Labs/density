@@ -12,6 +12,7 @@ import psycopg2.extras
 import psycopg2.pool
 import pandas as pd
 
+from . import graphics
 from . import db
 from .predict import db_to_pandas, df_predict, get_historical_means, db_to_pandas_pivot
 from .config import config, ISO8601Encoder
@@ -403,12 +404,12 @@ def map():
 
 @app.route('/predict')
 def predict():
-    imported_data = db_to_pandas_pivot(g.pg_conn)
-    lerner_2 = pd.Series(imported_data[['Lerner 2']])
-    predicted = df_predict(lerner_2, lerner_2.index)
-    print(predicted)
-    
-    return render_template('predict.html')
+    # imported_data = db_to_pandas_pivot(g.pg_conn)
+    # lerner_2 = pd.Series(imported_data[['Lerner 2']])
+    # predicted = df_predict(lerner_2, lerner_2.index)
+    # print(predicted)
+    script, divs = graphics.create_all_buildings(graphics.phony_data())
+    return render_template('predict.html',divs=divs,script=script)
 
 @app.route('/upload', methods=['POST'])
 def upload():
