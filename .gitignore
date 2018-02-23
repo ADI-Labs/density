@@ -15,7 +15,7 @@ lib-cov
 *.swp
 *.tsv
 .DS_Store
-
-.vagrant
+*.json
+vagrant
 .idea
 .ipynb_checkpoints

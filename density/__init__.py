@@ -169,6 +169,7 @@ def auth():
 
     # Get code from params.
     code = request.args.get('code')
+    print(code)
     if not code:
         return render_template('auth.html', success=False)
 
@@ -176,9 +177,13 @@ def auth():
         # Exchange code for email address.
         # Get Google+ ID.
         oauth_flow = flow_from_clientsecrets('client_secrets.json', scope='')
+        print(oauth_flow)
+        print("trying")
         oauth_flow.redirect_uri = 'postmessage'
         credentials = oauth_flow.step2_exchange(code)
+        print(credentials)
         gplus_id = credentials.id_token['sub']
+        print(gplus_id)
 
         # Get first email address from Google+ ID.
         http = httplib2.Http()
@@ -187,6 +192,7 @@ def auth():
         h, content = http.request(
             'https://www.googleapis.com/plus/v1/people/' + gplus_id, 'GET')
         data = json.loads(content)
+        print(data)
         email = data["emails"][0]["value"]
 
         # Verify email is valid.
