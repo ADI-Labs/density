@@ -13,7 +13,7 @@ tee .env <<EOL
 FLASK_DEBUG=true
 FLASK_APP=density/__init__.py
 
-DB_URI="postgresql://adi:password@localhost:5432/density"
+DB_URI="postgresql://adi:password@localhost:5432/local_density"
 
 GOOGLE_CLIENT_ID="859795907220-57lf7t8m19a1i3huaogqg546u5efjk8j.apps.googleusercontent.com"
 SECRET_KEY="abc123"

@@ -4,7 +4,7 @@ import datetime
 import psycopg2
 from matplotlib import pyplot as plt
 
-conn = psycopg2.connect(dbname="local_density", user="adi", password="password")
+conn = psycopg2.connect(dbname="local_density", user="adicu", password="password")
 
 SELECT = """
     SELECT d.client_count, d.dump_time,

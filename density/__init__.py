@@ -11,12 +11,15 @@ import psycopg2
 import psycopg2.extras
 import psycopg2.pool
 import pandas as pd
+from bokeh.resources import CDN
 
 from . import graphics
 from . import db
-from .predict import db_to_pandas, df_predict, get_historical_means, db_to_pandas_pivot
+from .predict import db_to_pandas#, df_predict, get_historical_means, db_to_pandas_pivot
 from .config import config, ISO8601Encoder
 from .data import FULL_CAP_DATA
+
+
 
 app = Flask(__name__)
 
@@ -409,7 +412,7 @@ def predict():
     # predicted = df_predict(lerner_2, lerner_2.index)
     # print(predicted)
     script, divs = graphics.create_all_buildings(graphics.phony_data())
-    return render_template('predict.html',divs=divs,script=script)
+    return render_template('predict.html',divs=divs,script=script, css_script=CDN.render_js())
 
 @app.route('/upload', methods=['POST'])
 def upload():
