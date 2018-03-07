@@ -15,7 +15,7 @@ from bokeh.resources import CDN
 
 from . import graphics
 from . import db
-from .predict import db_to_pandas#, df_predict, get_historical_means, db_to_pandas_pivot
+from .predict import db_to_pandas, parse_by_week, predict_tomorrow, annotate_fullness_predict
 from .config import config, ISO8601Encoder
 from .data import FULL_CAP_DATA
 
@@ -405,13 +405,26 @@ def map():
     return render_template('map.html', locations=locations)
 
 
+#TODO fix bokeh plotting time
 @app.route('/predict')
 def predict():
     # imported_data = db_to_pandas_pivot(g.pg_conn)
     # lerner_2 = pd.Series(imported_data[['Lerner 2']])
     # predicted = df_predict(lerner_2, lerner_2.index)
     # print(predicted)
-    script, divs = graphics.create_all_buildings(graphics.phony_data())
+
+    data = db_to_pandas(g.pg_conn)
+    by_week = parse_by_week(data)
+    tp =  predict_tomorrow(by_week)
+
+    d={}
+    j=0;
+    for i in tp.index:
+        d[j] = pd.Series(tp.loc[i], index = list(tp.columns.values))
+        j+=1
+    print("tp finished")
+    print(list(tp.keys()))
+    script, divs = graphics.create_all_buildings(pd.DataFrame(d))
     return render_template('predict.html',divs=divs,script=script, css_script=CDN.render_js())
 
 @app.route('/upload', methods=['POST'])
