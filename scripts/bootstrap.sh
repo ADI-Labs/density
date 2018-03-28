@@ -4,7 +4,7 @@ createdb -E UTF8 -T template0 -O adicu local_density
 psql -d local_density <<EOL
 ALTER ROLE adicu WITH PASSWORD 'password';
 EOL
-psql local_density < scripts/local_dump.sql
+psql local_density < scripts/dump.sql
 
 echo
 echo
