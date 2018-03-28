@@ -19,6 +19,7 @@ from .predict import db_to_pandas, parse_by_week, predict_tomorrow, annotate_ful
 from .config import config, ISO8601Encoder
 from .data import FULL_CAP_DATA
 
+import time
 
 
 app = Flask(__name__)
@@ -413,18 +414,19 @@ def predict():
     # predicted = df_predict(lerner_2, lerner_2.index)
     # print(predicted)
 
-    data = db_to_pandas(g.pg_conn)
+    # loading data from a database connection might take up to 20 seconds
+    data = db_to_pandas(g.pg_conn)  # loading data from current database connection
     by_week = parse_by_week(data)
-    tp =  predict_tomorrow(by_week)
+    tmrw_pred =  predict_tomorrow(by_week)
 
-    d={}
-    j=0;
-    for i in tp.index:
-        d[j] = pd.Series(tp.loc[i], index = list(tp.columns.values))
-        j+=1
-    print("tp finished")
-    print(list(tp.keys()))
-    script, divs = graphics.create_all_buildings(pd.DataFrame(d))
+    #d={}
+    #j=0;
+    #for i in tmrw_pred.index:
+    #    d[j] = pd.Series(tmrw_pred.loc[i], index = list(tmrw_pred.columns.values))
+    #    j+=1
+    print(tmrw_pred.transpose())
+    #print(list(tmrw_pred.keys()))
+    script, divs = graphics.create_all_buildings(tmrw_pred.transpose())
     return render_template('predict.html',divs=divs,script=script, css_script=CDN.render_js())
 
 @app.route('/upload', methods=['POST'])

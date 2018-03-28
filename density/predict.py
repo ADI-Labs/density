@@ -77,7 +77,7 @@ def db_to_pandas(conn):
 
 
 def parse_by_week(df):
-    """Return a dictionary of dataframes where the keys are days of the week
+    """Return a dictionary of dataframes where the keys are weeks of the year
     Parameters
     ----------
     df: pandas.DataFrame
@@ -98,7 +98,7 @@ def parse_by_week(df):
 
 def predict_tomorrow(day_dict):
     """Return a dataframes of predicted counts for tomorrow 
-    where the indexs are timestamps of the week and columns are locations
+    where the indexs are timestamps of the day and columns are locations
     Parameters
     ----------
     day_dict: Dictionary
