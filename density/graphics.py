@@ -51,7 +51,8 @@ def create_prediction_plot(time, prediction):
     :rtype: bokeh Figure 
     """
 
-    p = figure(x_range=time, plot_width=1800, plot_height=600, sizing_mode="scale_width")
+    p = figure(x_range=time, y_range=(0, 100), tools = "wheel_zoom",
+               plot_width=1800, plot_height=600, sizing_mode="scale_width")
 
     #  set format for x axis
     p.xaxis.axis_label = "Time of Day"
@@ -67,8 +68,8 @@ def create_prediction_plot(time, prediction):
     p.yaxis.axis_line_width = 3
 
     #  add a line renderer
-    # p.vbar(x=time, top=prediction, width=0.1)
-    p.line(time, prediction, line_width=0.59)
+    p.vbar(x=time, top=prediction, width=0.3)
+    # p.line(time, prediction, line_width=0.59)
 
     #  return plot for one building
     return p
