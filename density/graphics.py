@@ -23,7 +23,7 @@ def create_all_buildings(df):
 
     for building, predictions in df.iterrows():
         #  create plot prediction for each building and add to dictionary
-        building_divs[building] = create_prediction_plot(predictions.index.tolist(), predictions)
+        building_divs[building] = create_prediction_plot(predictions.index.tolist()[::4], predictions[::4]*100)
 
     #  create script and div from dictionary
     script, div = components(building_divs)
@@ -51,7 +51,7 @@ def create_prediction_plot(time, prediction):
     :rtype: bokeh Figure 
     """
 
-    p = figure(x_range=time, plot_width=400, plot_height=400)
+    p = figure(x_range=time, plot_width=1800, plot_height=600, sizing_mode="scale_width")
 
     #  set format for x axis
     p.xaxis.axis_label = "Time of Day"
@@ -67,7 +67,8 @@ def create_prediction_plot(time, prediction):
     p.yaxis.axis_line_width = 3
 
     #  add a line renderer
-    p.line(time, prediction, line_width=2)
+    # p.vbar(x=time, top=prediction, width=0.1)
+    p.line(time, prediction, line_width=0.59)
 
     #  return plot for one building
     return p
