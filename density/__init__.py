@@ -10,10 +10,17 @@ from oauth2client.client import flow_from_clientsecrets
 import psycopg2
 import psycopg2.extras
 import psycopg2.pool
+import pandas as pd
+from bokeh.resources import CDN
 
+from . import graphics
 from . import db
+from .predict import db_to_pandas, predict_tomorrow
 from .config import config, ISO8601Encoder
 from .data import FULL_CAP_DATA
+
+import time
+
 
 app = Flask(__name__)
 
@@ -167,6 +174,7 @@ def auth():
 
     # Get code from params.
     code = request.args.get('code')
+    print(code)
     if not code:
         return render_template('auth.html', success=False)
 
@@ -174,9 +182,13 @@ def auth():
         # Exchange code for email address.
         # Get Google+ ID.
         oauth_flow = flow_from_clientsecrets('client_secrets.json', scope='')
+        print(oauth_flow)
+        print("trying")
         oauth_flow.redirect_uri = 'postmessage'
         credentials = oauth_flow.step2_exchange(code)
+        print(credentials)
         gplus_id = credentials.id_token['sub']
+        print(gplus_id)
 
         # Get first email address from Google+ ID.
         http = httplib2.Http()
@@ -185,6 +197,7 @@ def auth():
         h, content = http.request(
             'https://www.googleapis.com/plus/v1/people/' + gplus_id, 'GET')
         data = json.loads(content)
+        print(data)
         email = data["emails"][0]["value"]
 
         # Verify email is valid.
@@ -390,6 +403,15 @@ def map():
 
     # Render template has an SVG image whose colors are changed by % full
     return render_template('map.html', locations=locations)
+
+
+@app.route('/predict')
+def predict():
+    data = db_to_pandas(g.cursor)  # loading data from current database connection
+    tmrw_pred =  predict_tomorrow(data)
+
+    script, divs = graphics.create_all_buildings(tmrw_pred.transpose())
+    return render_template('predict.html',divs=divs,script=script, css_script=CDN.render_js())
 
 
 @app.route('/upload', methods=['POST'])
