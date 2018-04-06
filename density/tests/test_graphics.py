@@ -38,7 +38,3 @@ def test_create_all_buildings():
 	script, divs = create_all_buldings()
 
 	assert len(divs) == 6 # makes all div files
-
-test_create_prediction_plot()
-
-test_create_all_buildings()
