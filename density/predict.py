@@ -41,7 +41,7 @@ FULL_CAP_DATA = {
 }
 
 
-def db_to_pandas(conn):
+def db_to_pandas(cursor):
     """ Return occupancy data as pandas dataframe
     column dtypes:
         group_id: int64
@@ -62,41 +62,25 @@ def db_to_pandas(conn):
     pandas.DataFrame
         Density data in a Dataframe
     """
-
-    df = pd.read_sql(SELECT, conn) \
-           .set_index("dump_time") \
-           .assign(group_name=lambda df: df["group_name"].astype('category'),
+    tomorrow = datetime.datetime.today() + datetime.timedelta(days=1)
+    day_of_week = tomorrow.weekday()
+    week_of_year = tomorrow.isocalendar()[1]
+    query = " WHERE extract(WEEK from d.dump_time) = {} AND extract(DOW from d.dump_time) = {}".format(week_of_year, day_of_week)
+    cursor.execute(SELECT + query)
+    raw_data = cursor.fetchall()
+    df = pd.DataFrame(raw_data) \
+    	   .set_index("dump_time") \
+    	   .assign(group_name=lambda df: df["group_name"].astype('category'),
                    parent_id=lambda df: df["parent_id"].astype('category'))
-    df['week'] = df.index.weekofyear  # get week of the year (1-52) for a given timestamp
-    df['weekday'] = df.index.weekday  # get day of the week (1-7) for a given timestamp
+
     time_points = zip(df.index.hour, df.index.minute)
     time_points = ["{}:{}".format(x[0], x[1]) for x in time_points]
     df["time_point"] = time_points # get time of the day (HH:mm) for a given timestamp
-    
+
     return df
 
 
-def parse_by_week(df):
-    """Return a dictionary of dataframes where the keys are weeks of the year
-    Parameters
-    ----------
-    df: pandas.DataFrame
-        Density data in a Dataframe
-    Returns
-    -------
-    Dictionary
-        a dictionary of dataframes where the keys are days of the week
-    """
-    weeks = np.unique(df['week'])
-    week_dic = dict.fromkeys(weeks)
-    
-    for week in weeks:
-        week_dic[week] = df[df['week'] == week]
-    
-    return week_dic
-
-
-def predict_tomorrow(day_dict):
+def predict_tomorrow(past_data):
     """Return a dataframes of predicted counts for tomorrow 
     where the indexs are timestamps of the day and columns are locations
     Parameters
@@ -108,14 +92,6 @@ def predict_tomorrow(day_dict):
     pandas.DataFrame
         Dataframe containing predicted counts for 96 tomorrow's timepoints
     """
-    # get time stats for tomorrow
-    tomorrow = datetime.datetime.today() + datetime.timedelta(days=1)
-    day_of_week = tomorrow.weekday()
-    week_of_year = tomorrow.isocalendar()[1]
-    
-    # find past data for the given day of the week
-    past_data = day_dict[week_of_year]
-    past_data = past_data[past_data['weekday'] == day_of_week]
     
     results, locs = [], []
     for group in np.unique(past_data["group_name"]):
@@ -146,16 +122,3 @@ def predict_tomorrow(day_dict):
     
     return result
 
-
-def annotate_fullness_predict(data):
-    """
-    Calculates percent fullness of all groups and adds them to the data in
-    the key 'percent_full'. The original data is not modified.
-    :param pd.dataframe: pandas dataframe object
-    :return: list of dictionaries with added pecent_full data
-    :rtype: list of dictionaries
-    """
-    groups = np.unique(data.columns)
-    for group in groups:
-        capacity = FULL_CAP_DATA[group]
-        data[[group]] = (100 * data[[group]]) // capacity

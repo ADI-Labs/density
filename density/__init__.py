@@ -15,7 +15,7 @@ from bokeh.resources import CDN
 
 from . import graphics
 from . import db
-from .predict import db_to_pandas, parse_by_week, predict_tomorrow, annotate_fullness_predict
+from .predict import db_to_pandas, predict_tomorrow
 from .config import config, ISO8601Encoder
 from .data import FULL_CAP_DATA
 
@@ -396,7 +396,6 @@ def capacity():
         'capacity.html', locations=locations, last_updated=last_updated)
 
 
-
 @app.route('/map')
 def map():
     cur_data = db.get_latest_data(g.cursor)
@@ -406,28 +405,14 @@ def map():
     return render_template('map.html', locations=locations)
 
 
-#TODO fix bokeh plotting time
 @app.route('/predict')
 def predict():
-    # imported_data = db_to_pandas_pivot(g.pg_conn)
-    # lerner_2 = pd.Series(imported_data[['Lerner 2']])
-    # predicted = df_predict(lerner_2, lerner_2.index)
-    # print(predicted)
+    data = db_to_pandas(g.cursor)  # loading data from current database connection
+    tmrw_pred =  predict_tomorrow(data)
 
-    # loading data from a database connection might take up to 20 seconds
-    data = db_to_pandas(g.pg_conn)  # loading data from current database connection
-    by_week = parse_by_week(data)
-    tmrw_pred =  predict_tomorrow(by_week)
-
-    #d={}
-    #j=0;
-    #for i in tmrw_pred.index:
-    #    d[j] = pd.Series(tmrw_pred.loc[i], index = list(tmrw_pred.columns.values))
-    #    j+=1
-    print(tmrw_pred.transpose())
-    #print(list(tmrw_pred.keys()))
     script, divs = graphics.create_all_buildings(tmrw_pred.transpose())
     return render_template('predict.html',divs=divs,script=script, css_script=CDN.render_js())
+
 
 @app.route('/upload', methods=['POST'])
 def upload():
