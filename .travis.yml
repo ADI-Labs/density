@@ -12,8 +12,9 @@ python:
 addons:
   postgresql: 9.6
 
+
 install:
-- ./scripts/bootstrap.sh
+- "./scripts/bootstrap.sh"
 - pip install -U pipenv
 - pipenv install --dev
 
@@ -24,3 +25,13 @@ before_script:
 script:
 - pipenv run flake8
 - pipenv run py.test --verbose --cov
+
+before_deploy:
+- openssl aes-256-cbc -K $encrypted_fff8e3f0e23f_key -iv $encrypted_fff8e3f0e23f_iv
+  -in .ci/id_rsa.enc -out .ci/id_rsa -d
+
+deploy:
+  provider: script
+  script: "./scripts/deploy.sh"
+  on:
+    branch: deploy
