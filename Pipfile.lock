@@ -65,7 +65,7 @@
         },
         "httplib2": {
             "hashes": [],
-            "version": "==0.11.1.post1803300028"
+            "version": "==0.11.3"
         },
         "itsdangerous": {
             "hashes": [
