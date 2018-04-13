@@ -8,7 +8,7 @@ import pytz
 SELECT = """
     SELECT d.client_count, d.dump_time,
            r.id AS group_id, r.name AS group_name,
-           b.id as parent_id, b.name AS building_name
+           b.id AS parent_id, b.name AS building_name
     FROM density_data d
     JOIN routers r ON r.id = d.group_id
     JOIN buildings b ON b.id = r.building_id"""
@@ -29,6 +29,7 @@ def get_latest_data(cursor):
         ORDER BY group_name
     ;"""
     cursor.execute(query)
+    print("fetch called")
     return cursor.fetchall()
 
 
@@ -64,7 +65,7 @@ def get_latest_building_data(cursor, parent_id):
 
     query = SELECT + """
         WHERE d.dump_time = (SELECT MAX(dump_time) FROM density_data)
-              AND parent_id = %s
+              AND building_id = %s
     ;"""
     cursor.execute(query, [parent_id])
     return cursor.fetchall()
@@ -115,7 +116,7 @@ def get_window_based_on_parent(cursor, parent_id, start_time, end_time,
     query = SELECT + """
         WHERE d.dump_time >= %s AND
               d.dump_time < %s AND
-              parent_id=%s
+              building_id=%s
         ORDER BY d.dump_time DESC
         LIMIT %s OFFSET %s
     ;"""
