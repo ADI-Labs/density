@@ -1,8 +1,8 @@
-import pandas as pd
-import numpy as np
 import datetime
+
+import numpy as np
+import pandas as pd
 import psycopg2
-from matplotlib import pyplot as plt
 
 conn = psycopg2.connect(dbname="local_density", user="adicu", password="password")
 
@@ -49,8 +49,6 @@ def db_to_pandas(cursor):
         parent_id: int64
         parent_name: category
         client_count: int64
-        week: int64
-        weekday: int64
         time_point: string
     index: DateTimeIndex -- dump_time
     Parameters
@@ -65,12 +63,14 @@ def db_to_pandas(cursor):
     tomorrow = datetime.datetime.today() + datetime.timedelta(days=1)
     day_of_week = tomorrow.weekday()
     week_of_year = tomorrow.isocalendar()[1]
-    query = " WHERE extract(WEEK from d.dump_time) = {} AND extract(DOW from d.dump_time) = {}".format(week_of_year, day_of_week)
+    query = ' WHERE extract(WEEK from d.dump_time) = '
+            '{} AND extract(DOW from d.dump_time) = '
+            '{}'.format(week_of_year, day_of_week)
     cursor.execute(SELECT + query)
     raw_data = cursor.fetchall()
     df = pd.DataFrame(raw_data) \
-    	   .set_index("dump_time") \
-    	   .assign(group_name=lambda df: df["group_name"].astype('category'),
+           .set_index("dump_time") \
+           .assign(group_name=lambda df: df["group_name"].astype('category'),
                    parent_id=lambda df: df["parent_id"].astype('category'))
 
     time_points = zip(df.index.hour, df.index.minute)
@@ -85,26 +85,29 @@ def predict_tomorrow(past_data):
     where the indexs are timestamps of the day and columns are locations
     Parameters
     ----------
-    day_dict: Dictionary
+    past_data: pandas.DataFrama
         a dictionary of dataframes of density data where the keys are days of the week
     Returns
     -------
     pandas.DataFrame
         Dataframe containing predicted counts for 96 tomorrow's timepoints
     """
-    
+
     results, locs = [], []
     for group in np.unique(past_data["group_name"]):
         locs.append(group)
         group_data = past_data[past_data["group_name"] == group]
         group_data = group_data[["client_count", "time_point"]]
-        group_result = group_data.groupby("time_point").mean()  # average counts by time for each location
-        group_result = np.divide(group_result, FULL_CAP_DATA[group])  # convert capacity count to percentage
+
+        # average counts by time for each location
+        group_result = group_data.groupby("time_point").mean()
+        # convert capacity count to percentage
+        group_result = np.divide(group_result, FULL_CAP_DATA[group])
         results.append(group_result.transpose())
     result = pd.concat(results)  # combine the data for all locations
     result.index = locs
     result = result.transpose()  # make time points indexes and locations columns
-    
+
     old_indexes = result.index
     new_indexes = []
 
@@ -119,6 +122,5 @@ def predict_tomorrow(past_data):
 
     result.index = new_indexes
     result = result.sort_index()
-    
-    return result
 
+    return result
