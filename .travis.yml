@@ -32,6 +32,6 @@ before_deploy:
 
 deploy:
   provider: script
-  script: "./scripts/deploy.sh"
+  script: chmod +x ./deploy.sh && ./deploy.sh
   on:
     branch: deploy
