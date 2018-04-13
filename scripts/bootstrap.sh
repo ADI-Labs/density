@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
-createuser --superuser adicu
-createdb -E UTF8 -T template0 -O adicu local_density
-psql -d local_density <<EOL
-ALTER ROLE adicu WITH PASSWORD 'password';
+createuser --superuser adi
+createdb -E UTF8 -T template0 -O adi density
+psql -d density <<EOL
+ALTER ROLE adi WITH PASSWORD 'password';
 EOL
-psql local_density < scripts/dump.sql
+psql density < scripts/dump.sql
 
 echo
 echo
