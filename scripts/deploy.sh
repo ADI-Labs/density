@@ -1,6 +1,6 @@
 #!/bin/sh
 
-ssh -T travis@adicu.com <<'ENDSSH'
+ssh -T travis@adicu.com -o StrictHostKeyChecking=no <<'ENDSSH'
 echo   "=================================="
 echo   "Deployment Starting"
 echo   "----------------------------------"
