@@ -197,4 +197,3 @@ def time_is_in_interval(time, interval):
             return False
         else:
             return True
-

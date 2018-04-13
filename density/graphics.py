@@ -1,25 +1,22 @@
-from bokeh.plotting import figure, output_file, show
 from bokeh.embed import components
-
-import pandas as pd
-
-from pandas import PeriodIndex, DataFrame, Series
+from bokeh.plotting import figure
 
 PANTONE_292 = (105, 179, 231)
 
 def create_all_buildings(df):
     """
-    Generates html/javascript code for graphs of all buildings 
+    Generates html/javascript code for graphs of all buildings
 
-    :param df: DataFrame that contains predictions of traffic for each building over 24 hour period
-    :return: tuple of script and div of plot prediction for all buildings 
+    :param df: DataFrame that contains predictions of traffic
+    for each building over 24 hour period
+    :return: tuple of script and div of plot prediction for all buildings
     :rtype: tuple of string, string
     """
-    
+
     building_divs = {}
 
     #  building = index of row (String)
-    #  predictions = Series of columns with predictions 
+    #  predictions = Series of columns with predictions
 
     for building, predictions in df.iterrows():
         #  create plot prediction for each building and add to dictionary
@@ -43,7 +40,7 @@ def create_prediction_plot(time, prediction):
     :rtype: bokeh Figure
     """
 
-    p = figure(x_range=time, y_range=(0, 100), tools = "wheel_zoom",
+    p = figure(x_range=time, y_range=(0, 100), tools="wheel_zoom",
                plot_width=1800, plot_height=600, sizing_mode="scale_width")
 
     #  set format for x axis

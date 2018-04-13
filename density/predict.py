@@ -4,7 +4,8 @@ import numpy as np
 import pandas as pd
 import psycopg2
 
-conn = psycopg2.connect(dbname="local_density", user="adicu", password="password")
+conn = psycopg2.connect(dbname="local_density",
+                        user="adicu", password="password")
 
 SELECT = """
     SELECT d.client_count, d.dump_time,
@@ -64,8 +65,8 @@ def db_to_pandas(cursor):
     day_of_week = tomorrow.weekday()
     week_of_year = tomorrow.isocalendar()[1]
     query = ' WHERE extract(WEEK from d.dump_time) = '
-            '{} AND extract(DOW from d.dump_time) = '
-            '{}'.format(week_of_year, day_of_week)
+    '{} AND extract(DOW from d.dump_time) = '
+    '{}'.format(week_of_year, day_of_week)
     cursor.execute(SELECT + query)
     raw_data = cursor.fetchall()
     df = pd.DataFrame(raw_data) \
@@ -75,18 +76,20 @@ def db_to_pandas(cursor):
 
     time_points = zip(df.index.hour, df.index.minute)
     time_points = ["{}:{}".format(x[0], x[1]) for x in time_points]
-    df["time_point"] = time_points # get time of the day (HH:mm) for a given timestamp
+    # get time of the day (HH:mm) for a given timestamp
+    df["time_point"] = time_points
 
     return df
 
 
 def predict_tomorrow(past_data):
-    """Return a dataframes of predicted counts for tomorrow 
+    """Return a dataframes of predicted counts for tomorrow
     where the indexs are timestamps of the day and columns are locations
     Parameters
     ----------
     past_data: pandas.DataFrama
-        a dictionary of dataframes of density data where the keys are days of the week
+        a dictionary of dataframes of density data where the keys are
+        days of the week
     Returns
     -------
     pandas.DataFrame
@@ -106,7 +109,7 @@ def predict_tomorrow(past_data):
         results.append(group_result.transpose())
     result = pd.concat(results)  # combine the data for all locations
     result.index = locs
-    result = result.transpose()  # make time points indexes and locations columns
+    result = result.transpose()  # time points indexes and locations columns
 
     old_indexes = result.index
     new_indexes = []
