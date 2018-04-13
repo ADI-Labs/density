@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-createuser --superuser adicu
-createdb -E UTF8 -T template0 -O adicu local_density
+createuser --superuser adi
+createdb -E UTF8 -T template0 -O adi local_density
 psql -d local_density <<EOL
 ALTER ROLE adicu WITH PASSWORD 'password';
 EOL
