@@ -23,7 +23,8 @@ def create_all_buildings(df):
 
     for building, predictions in df.iterrows():
         #  create plot prediction for each building and add to dictionary
-        building_divs[building] = create_prediction_plot(predictions.index.tolist()[::4], predictions[::4]*100)
+        building_divs[building] = create_prediction_plot(
+            predictions.index.tolist()[::4], predictions[::4] * 100)
 
     #  create script and div from dictionary
     script, div = components(building_divs)
@@ -31,24 +32,15 @@ def create_all_buildings(df):
     return (script, div)
 
 
-def phony_data():
-
-    d = {'1' : pd.Series([1, 2, 3, 4, 5, 1], index=['lerner 1', 'lerner 2', 'lerner 3', 'butler 1', 'butler 2', 'butler 3']),
-        '2' : pd.Series([2, 4, 3, 4, 5, 2], index=['lerner 1', 'lerner 2', 'lerner 3', 'butler 1', 'butler 2', 'butler 3']),
-        '3' : pd.Series([3, 6, 3, 4, 5, 3], index=['lerner 1', 'lerner 2', 'lerner 3', 'butler 1', 'butler 2', 'butler 3']),
-        '4' : pd.Series([4, 8, 3, 4, 5, 4], index=['lerner 1', 'lerner 2', 'lerner 3', 'butler 1', 'butler 2', 'butler 3']), }
-
-    return pd.DataFrame(d)
-
-
 def create_prediction_plot(time, prediction):
     """
-    Create prediction plot for one building  
+    Create prediction plot for one building
 
     :param time: pandas Index object with time of next 24 hours
-    :param prediction: pandas Series object with predictions corresponding to next 24 hours
-    :return: bokeh Figure that with plot prediction of one building 
-    :rtype: bokeh Figure 
+    :param prediction: pandas Series object with predictions corresponding
+    to next 24 hours
+    :return: bokeh Figure that with plot prediction of one building
+    :rtype: bokeh Figure
     """
 
     p = figure(x_range=time, y_range=(0, 100), tools = "wheel_zoom",
