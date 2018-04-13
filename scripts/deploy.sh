@@ -1,6 +1,6 @@
 #!/bin/sh
 
-ssh travis@adicu.com <<'ENDSSH'
+ssh -T travis@adicu.com <<'ENDSSH'
 echo   "=================================="
 echo   "Deployment Starting"
 echo   "----------------------------------"
