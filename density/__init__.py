@@ -9,13 +9,13 @@ import httplib2
 from oauth2client.client import flow_from_clientsecrets
 import psycopg2
 import psycopg2.extras
-import psycopg2.pool
 from bokeh.resources import CDN
+import psycopg2.pool
 
-from . import graphics
 from . import db
-from .predict import db_to_pandas, predict_tomorrow
+from . import graphics
 from .config import config, ISO8601Encoder
+from .predict import db_to_pandas, predict_tomorrow
 from .data import FULL_CAP_DATA
 
 
