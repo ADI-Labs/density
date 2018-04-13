@@ -4,10 +4,10 @@ import json
 import re
 import traceback
 
+from bokeh.resources import CDN
 from flask import Flask, g, jsonify, render_template, request
 import httplib2
 from oauth2client.client import flow_from_clientsecrets
-from bokeh.resources import CDN
 import psycopg2
 import psycopg2.extras
 import psycopg2.pool
