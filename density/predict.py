@@ -2,7 +2,6 @@ import datetime
 
 import numpy as np
 import pandas as pd
-import psycopg2
 
 
 SELECT = """
@@ -63,8 +62,8 @@ def db_to_pandas(cursor):
     day_of_week = tomorrow.weekday()
     week_of_year = tomorrow.isocalendar()[1]
     query = ' WHERE extract(WEEK from d.dump_time) = ' + \
-    '{} AND extract(DOW from d.dump_time) = '.format(week_of_year) + \
-    '{}'.format(day_of_week)
+            '{} AND extract(DOW from d.dump_time) = '.format(week_of_year) + \
+            '{}'.format(day_of_week)
     print('\n' + query)
     cursor.execute(SELECT + query)
     raw_data = cursor.fetchall()
