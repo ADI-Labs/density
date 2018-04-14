@@ -29,9 +29,12 @@ script:
 before_deploy:
 - openssl aes-256-cbc -K $encrypted_fff8e3f0e23f_key -iv $encrypted_fff8e3f0e23f_iv
   -in .ci/id_rsa.enc -out .ci/id_rsa -d
+- eval "$(ssh-agent -s)"
+- chmod 600 $TRAVIS_BUILD_DIR/.ci/id_rsa
+- ssh-add $TRAVIS_BUILD_DIR/.ci/id_rsa
 
 deploy:
   provider: script
-  script: chmod +x ./scripts/deploy.sh && ./scripts/deploy.sh yes
+  script: ./scripts/deploy.sh yes
   on:
     branch: deploy
