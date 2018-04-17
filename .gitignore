@@ -24,4 +24,5 @@ vagrant
 .ipynb_checkpoints
 *.sql
 *.sh
+!client_secrets.json
 
