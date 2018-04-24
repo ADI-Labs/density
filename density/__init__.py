@@ -16,7 +16,7 @@ from . import db, librarytimes
 from . import graphics
 from .config import config, ISO8601Encoder
 from .data import FULL_CAP_DATA
-from .predict import db_to_pandas, predict_tomorrow
+from .predict import db_to_pandas, predict_today
 
 
 app = Flask(__name__)
@@ -409,7 +409,7 @@ def map():
 def predict():
     # loading data from current database connection
     data = db_to_pandas(g.cursor)
-    tmrw_pred = predict_tomorrow(data)
+    tmrw_pred = predict_today(data)
 
     script, divs = graphics.create_all_buildings(tmrw_pred.transpose())
     return render_template('predict.html', divs=divs,

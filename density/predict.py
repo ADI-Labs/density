@@ -58,9 +58,9 @@ def db_to_pandas(cursor):
     pandas.DataFrame
         Density data in a Dataframe
     """
-    tomorrow = datetime.datetime.today() + datetime.timedelta(days=1)
-    day_of_week = tomorrow.weekday()
-    week_of_year = tomorrow.isocalendar()[1]
+    today = datetime.datetime.today()
+    day_of_week = today.weekday()
+    week_of_year = today.isocalendar()[1]
     query = ' WHERE extract(WEEK from d.dump_time) = ' + \
             '{} AND extract(DOW from d.dump_time) = '.format(week_of_year) + \
             '{}'.format(day_of_week)
@@ -80,8 +80,8 @@ def db_to_pandas(cursor):
     return df
 
 
-def predict_tomorrow(past_data):
-    """Return a dataframes of predicted counts for tomorrow
+def predict_today(past_data):
+    """Return a dataframes of predicted counts for today
     where the indexs are timestamps of the day and columns are locations
     Parameters
     ----------
@@ -91,7 +91,7 @@ def predict_tomorrow(past_data):
     Returns
     -------
     pandas.DataFrame
-        Dataframe containing predicted counts for 96 tomorrow's timepoints
+        Dataframe containing predicted counts for 96 today's timepoints
     """
 
     results, locs = [], []
