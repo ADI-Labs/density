@@ -22,9 +22,9 @@ def create_all_buildings(df):
     for building, predictions in df.iterrows():
         #  create plot prediction for each building and add to dictionary
         mins = np.asarray([time.split(':')[1] for time in predictions.index])
-        entries_to_use = np.where(mins == '0')[0]
+        hours = np.where(mins == '0')[0]
         building_divs[building] = create_prediction_plot(
-            predictions.index[entries_to_use].tolist(), predictions.iloc[entries_to_use] * 100)  # every 4th so the plots only include whole hours
+            predictions.index[hours].tolist(), predictions.iloc[hours] * 100)
 
     #  create script and div from dictionary
     script, div = components(building_divs)
