@@ -162,7 +162,7 @@ def dict_for_time():
 def get_opening_time(current_time, interval):
     # get closing time
     if (time_is_in_interval(current_time, interval)):
-        #if the library is open 24/7
+        # if the library is open 24/7
         if (interval[0][0] == 0) and (interval[0][1] == 2400):
             output = " (Opens 24 hrs) "
 
