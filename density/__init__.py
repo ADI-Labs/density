@@ -389,10 +389,11 @@ def capacity():
     cur_data = db.get_latest_data(g.cursor)
     last_updated = cur_data[0]['dump_time'].strftime("%B %d %Y, %I:%M %p")
     locations = annotate_fullness_percentage(cur_data)
-    #times = {'Lerner 1' : 1200, 'Lerner 2' : 1300}
+    # times = {'Lerner 1' : 1200, 'Lerner 2' : 1300}
     times = librarytimes.dict_for_time()
     return render_template(
-        'capacity.html', locations=locations, last_updated=last_updated, times=times)
+        'capacity.html', locations=locations,
+        last_updated=last_updated, times=times)
 
 
 @app.route('/map')
