@@ -409,9 +409,10 @@ def map():
 def predict():
     # loading data from current database connection
     data = db_to_pandas(g.cursor)
-    tmrw_pred = predict_today(data)
+    today_pred = predict_today(data)
+    print(today_pred.transpose())
 
-    script, divs = graphics.create_all_buildings(tmrw_pred.transpose())
+    script, divs = graphics.create_all_buildings(today_pred.transpose())
     return render_template('predict.html', divs=divs,
                            script=script, css_script=CDN.render_js())
 
