@@ -7,7 +7,7 @@
     <div class="container">
         <ul class="list-group">
             {% for location in locations %}
-            <li class="list-group-item"><h4>{{ location['group_name'] }}</h4>
+            <li class="list-group-item"><h4>{{ location['group_name'] }}<span class="opening-time">{{times[location['group_name']]}}</span></h4>
                 <div class="progress">
                     {% if location['percent_full'] <= 2 %}
                         <div class="progress-bar progress-bar-info progress-bar-striped active"
@@ -30,6 +30,11 @@
         </ul>
     </div>
     <div class="update">Last updated {{ last_updated }}</div>
+    <div class="update"> 
+        <span class="opening-time">
+        * Library Opening and Closing Times may vary during Finals Week and University Holidays
+        </span>
+    </div>
 </div>
 <div class="thanksContainer">
     <div class="container">
