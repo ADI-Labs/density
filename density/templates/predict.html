@@ -7,13 +7,16 @@
 {{ css_script|safe }}
 {{ script|safe }}
 
+<div>
+  <h3>Below are the predicted capacity of each building for tomorrow:</h3>
+</div>
+
 
 <div class="listContainer">
   <ul class="list-group">
     {% for location_name, d in divs.items() %}
     <li class="list-predict-item"><h4>{{location_name}}</h4>
       <div class='graph'>
-        <p>this is a work in progress :(</p>
         {{ d|safe }}
       </div>
     </li>
