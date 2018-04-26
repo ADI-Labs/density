@@ -49,13 +49,13 @@ def create_prediction_plot(time, prediction):
     p.xaxis.axis_line_color = PANTONE_292
     p.xaxis.major_label_text_color = PANTONE_292
     p.xaxis.axis_label_text_font_size = "18pt"
-    p.xaxis.major_label_text_font_size = "15pt"
+    p.xaxis.major_label_text_font_size = "10pt"
 
     #  set format for y axis
     p.yaxis.axis_label = "Predicted Capacity"
     p.yaxis.axis_line_color = PANTONE_292
     p.yaxis.axis_label_text_font_size = "18pt"
-    p.yaxis.major_label_text_font_size = "15pt"
+    p.yaxis.major_label_text_font_size = "10pt"
     p.yaxis.major_label_text_color = PANTONE_292
     p.yaxis.major_label_orientation = "vertical"
     p.yaxis.axis_line_width = 3
