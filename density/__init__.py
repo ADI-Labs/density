@@ -6,6 +6,7 @@ import traceback
 
 from bokeh.resources import CDN
 from flask import Flask, g, jsonify, render_template, request
+from flask_caching import Cache
 import httplib2
 from oauth2client.client import flow_from_clientsecrets
 import psycopg2
