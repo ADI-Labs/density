@@ -16,9 +16,6 @@ def create_all_buildings(df):
 
     building_divs = {}
 
-    #  building = index of row (String)
-    #  predictions = Series of columns with predictions
-
     for building, predictions in df.iterrows():
         #  create plot prediction for each building and add to dictionary
         mins = np.asarray([time.split(':')[1] for time in predictions.index])
@@ -61,9 +58,5 @@ def create_prediction_plot(time, prediction):
 
     #  add a line renderer
     p.vbar(x=time, top=prediction, width=0.3)
-    # p.line(time, prediction, line_width=0.59)
 
-    #  return plot for one building
     return p
-
-# create_all_buildings(phony_data())

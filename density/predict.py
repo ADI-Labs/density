@@ -42,16 +42,16 @@ FULL_CAP_DATA = {
 def db_to_pandas(cursor):
     """ Return occupancy data as pandas dataframe
     column dtypes:
+        building_name: string
         group_id: int64
         group_name: category
-        parent_id: int64
-        parent_name: category
+        parent_id: category
         client_count: int64
         time_point: string
     index: DateTimeIndex -- dump_time
     Parameters
     ----------
-    conn: psycopg2.extensions.connection
+    cursor: cursor for our DB
         Connection to db
     Returns
     -------
@@ -61,20 +61,23 @@ def db_to_pandas(cursor):
     today = datetime.datetime.today()
     day_of_week = today.weekday()
     week_of_year = today.isocalendar()[1]
+
+    # construct SQL query to fetch only the data we need
     query = ' WHERE extract(WEEK from d.dump_time) = ' + \
             '{} AND extract(DOW from d.dump_time) = '.format(week_of_year) + \
             '{}'.format(day_of_week)
-    print('\n' + query)
     cursor.execute(SELECT + query)
     raw_data = cursor.fetchall()
+
+    # convert fetched data to a pandas dataframe
     df = pd.DataFrame(raw_data) \
            .set_index("dump_time") \
            .assign(group_name=lambda df: df["group_name"].astype('category'),
                    parent_id=lambda df: df["parent_id"].astype('category'))
 
+    # add a new time point column to the datafram
     time_points = zip(df.index.hour, df.index.minute)
     time_points = ["{}:{}".format(x[0], x[1]) for x in time_points]
-    # get time of the day (HH:mm) for a given timestamp
     df["time_point"] = time_points
 
     return df
@@ -95,6 +98,7 @@ def predict_today(past_data):
     """
 
     results, locs = [], []
+
     for group in np.unique(past_data["group_name"]):
         locs.append(group)
         group_data = past_data[past_data["group_name"] == group]
@@ -102,9 +106,12 @@ def predict_today(past_data):
 
         # average counts by time for each location
         group_result = group_data.groupby("time_point").mean()
+
         # convert capacity count to percentage
         group_result = np.divide(group_result, FULL_CAP_DATA[group])
+
         results.append(group_result.transpose())
+
     result = pd.concat(results)  # combine the data for all locations
     result.index = locs
     result = result.transpose()  # time points indexes and locations columns
