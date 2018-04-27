@@ -6,6 +6,7 @@ import traceback
 
 from bokeh.resources import CDN
 from flask import Flask, g, jsonify, render_template, request
+from flask_caching import Cache
 import httplib2
 from oauth2client.client import flow_from_clientsecrets
 import psycopg2
@@ -422,7 +423,9 @@ def predict():
         tmrw_pred = predict_tomorrow(data)
         cache.set('predictionTomorrow', tmrw_pred, timeout=5 * 60)
 
-    script, divs = graphics.create_all_buildings(tmrw_pred.transpose())
+    # make plots from predictions
+    script, divs = graphics.create_all_buildings(today_pred.transpose())
+
     return render_template('predict.html', divs=divs,
                            script=script, css_script=CDN.render_js())
 
