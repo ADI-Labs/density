@@ -81,7 +81,7 @@ docker build -t density .
 docker run --net=host -d density
 ```
 
-To deploy new changes or features remotely, first push your changes to the master branch and check that it builds on Travis CI. Afterwards push your changes to the deploy branch. 
+To deploy new changes or features on the server, first push your changes to the master branch and check that it builds on Travis CI. Afterwards push your changes to the deploy branch. 
 
 ### Project Layout
 
