@@ -409,7 +409,6 @@ def map():
 
 
 @app.route('/predict')
-@cache.cached(timeout=10800)
 def predict():
     # loading data from current database connection
     data = cache.get('predictData')
