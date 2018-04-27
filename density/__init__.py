@@ -18,6 +18,7 @@ from . import graphics
 from .config import config, ISO8601Encoder
 from .data import FULL_CAP_DATA
 from .predict import db_to_pandas, predict_today
+from flask_caching import Cache
 
 
 app = Flask(__name__)

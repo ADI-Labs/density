@@ -16,6 +16,8 @@ pytz = "*"
 pandas = "*"
 bokeh = "*"
 matplotlib = "*"
+flask-cache = "*"
+flask-caching = "*"
 
 
 [dev-packages]
