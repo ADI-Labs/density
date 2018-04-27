@@ -21,6 +21,7 @@ from .predict import db_to_pandas, predict_today
 
 app = Flask(__name__)
 
+cache = Cache(app,config={'CACHE_TYPE': 'simple'})
 # change the default JSON encoder to handle datetime's properly
 app.json_encoder = ISO8601Encoder
 
@@ -406,6 +407,7 @@ def map():
 
 
 @app.route('/predict')
+@cache.cached(timeout=10800)
 def predict():
     # loading data from current database connection
     data = db_to_pandas(g.cursor)
