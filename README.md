@@ -81,6 +81,8 @@ docker build -t density .
 docker run --net=host -d density
 ```
 
+To deploy new changes or features, first push your changes to the master branch and check that it builds on Travis CI. Afterwards push your changes to the deploy branch. 
+
 ### Project Layout
 
 ```
@@ -103,6 +105,7 @@ docker run --net=host -d density
 ├── README.md
 ├── scripts
 │   ├── bootstrap.sh    -- Set-up PostgreSQL logic and `.env`
+│   ├── drop.sql        -- Drop database
 │   ├── dump.sql        -- Dump of database for development
 │   ├── schema.sql      -- Database schema (for reference)
 │   └── vagrant.sh      -- Script to setup Vagrant
