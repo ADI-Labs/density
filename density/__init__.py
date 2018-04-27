@@ -411,7 +411,7 @@ def map():
 def predict():
     # loading data from current database connection
     data = cache.get('predictData')
-    print(data)
+
     if data is None:
         data = db_to_pandas(g.cursor)
         cache.set('predictData', data, timeout=10800)
@@ -419,7 +419,7 @@ def predict():
     # make predictions based on fetched data
 
     today_pred = cache.get('predictToday')
-    print(today_pred)
+
     if today_pred is None:
         today_pred = predict_today(data)
         cache.set('predictToday', today_pred, timeout=10800)
