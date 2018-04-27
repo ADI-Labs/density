@@ -90,10 +90,12 @@ docker run --net=host -d density
 │   ├── config.py       -- Load configuration from `.env` file
 │   ├── data.py         -- Raw data for rooms
 │   ├── db.py           -- Handle all database access
+│   ├── graphics.py     -- Build graphs for predictions
 │   ├── __init__.py     -- Bulk of the app logic
-│   ├── predict.py      -- WIP (unused) file for predictions
-│   ├── static/         -- static assets for Flask
-│   ├── templates       -- Jinja2 templates for Flask
+│   ├── librarytimes.py -- Handle building hour display
+│   ├── predict.py      -- Predictions for current day
+│   ├── static/         -- Static assets for Flask
+│   ├── templates/      -- Jinja2 templates for Flask
 │   └── tests/          -- various tests
 ├── Dockerfile
 ├── Pipfile             -- List of Python dependencies
@@ -101,9 +103,9 @@ docker run --net=host -d density
 ├── README.md
 ├── scripts
 │   ├── bootstrap.sh    -- Set-up PostgreSQL logic and `.env`
-│   ├── dump.sql        -- dump of database for development
-│   ├── schema.sql      -- database schema (for reference)
-│   └── vagrant.sh      -- script to setup Vagrant
+│   ├── dump.sql        -- Dump of database for development
+│   ├── schema.sql      -- Database schema (for reference)
+│   └── vagrant.sh      -- Script to setup Vagrant
 ├── setup.cfg           -- Setup for CI
 └── Vagrantfile
 ```
