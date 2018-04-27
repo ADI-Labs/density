@@ -3,6 +3,9 @@ density/.cache
 .coverage
 .cache
 
+.ci/id_rsa
+.pytest_cache
+
 lib-cov
 *.seed
 *.log
@@ -21,4 +24,5 @@ vagrant
 .ipynb_checkpoints
 *.sql
 *.sh
+!client_secrets.json
 

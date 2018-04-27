@@ -13,75 +13,78 @@ SELECT = """
     JOIN buildings b ON b.id = r.building_id"""
 
 FULL_CAP_DATA = {
-    'Architectural and Fine Arts Library 1': 22,
-    'Architectural and Fine Arts Library 2': 272,
-    'Architectural and Fine Arts Library 3': 133,
-    'Butler Library 2': 573,
-    'Butler Library 3': 413,
-    'Butler Library 4': 346,
-    'Butler Library 301': 282,
-    'Butler Library 5': 157,
-    'Butler Library 6': 220,
-    'Butler Library stk': 80,
-    "JJ's Place": 129,
-    'John Jay Dining Hall': 200,
-    'Lehman Library 2': 178,
-    'Lehman Library 3': 570,
-    'Lerner 1': 138,
-    'Lerner 2': 224,
-    'Lerner 3': 248,
-    'Lerner 4': 243,
-    'Lerner 5': 206,
-    'Roone Arledge Auditorium': 497,
-    'Science and Engineering Library': 154,
-    'Starr East Asian Library': 197,
-    'Uris/Watson Library': 992,
+    'Architectural and Fine Arts Library 1': 27,
+    'Architectural and Fine Arts Library 2': 362,
+    'Architectural and Fine Arts Library 3': 220,
+    'Butler Library 2': 729,
+    'Butler Library 3': 438,
+    'Butler Library 4': 414,
+    'Butler Library 301': 292,
+    'Butler Library 5': 236,
+    'Butler Library 6': 255,
+    'Butler Library stk': 245,
+    "JJ's Place": 185,
+    'John Jay Dining Hall': 319,
+    'Lehman Library 2': 213,
+    'Lehman Library 3': 700,
+    'Lerner 1': 168,
+    'Lerner 2': 362,
+    'Lerner 3': 357,
+    'Lerner 4': 354,
+    'Lerner 5': 373,
+    'Roone Arledge Auditorium': 923,
+    'Science and Engineering Library': 234,
+    'Starr East Asian Library': 257,
+    'Uris/Watson Library': 1046,
 }
 
 
 def db_to_pandas(cursor):
     """ Return occupancy data as pandas dataframe
     column dtypes:
+        building_name: string
         group_id: int64
         group_name: category
-        parent_id: int64
-        parent_name: category
+        parent_id: category
         client_count: int64
         time_point: string
     index: DateTimeIndex -- dump_time
     Parameters
     ----------
-    conn: psycopg2.extensions.connection
+    cursor: cursor for our DB
         Connection to db
     Returns
     -------
     pandas.DataFrame
         Density data in a Dataframe
     """
-    tomorrow = datetime.datetime.today() + datetime.timedelta(days=1)
-    day_of_week = tomorrow.weekday()
-    week_of_year = tomorrow.isocalendar()[1]
+    today = datetime.datetime.today()
+    day_of_week = today.weekday()
+    week_of_year = today.isocalendar()[1]
+
+    # construct SQL query to fetch only the data we need
     query = ' WHERE extract(WEEK from d.dump_time) = ' + \
             '{} AND extract(DOW from d.dump_time) = '.format(week_of_year) + \
             '{}'.format(day_of_week)
-    print('\n' + query)
     cursor.execute(SELECT + query)
     raw_data = cursor.fetchall()
+
+    # convert fetched data to a pandas dataframe
     df = pd.DataFrame(raw_data) \
            .set_index("dump_time") \
            .assign(group_name=lambda df: df["group_name"].astype('category'),
                    parent_id=lambda df: df["parent_id"].astype('category'))
 
+    # add a new time point column to the datafram
     time_points = zip(df.index.hour, df.index.minute)
     time_points = ["{}:{}".format(x[0], x[1]) for x in time_points]
-    # get time of the day (HH:mm) for a given timestamp
     df["time_point"] = time_points
 
     return df
 
 
-def predict_tomorrow(past_data):
-    """Return a dataframes of predicted counts for tomorrow
+def predict_today(past_data):
+    """Return a dataframes of predicted counts for today
     where the indexs are timestamps of the day and columns are locations
     Parameters
     ----------
@@ -91,10 +94,11 @@ def predict_tomorrow(past_data):
     Returns
     -------
     pandas.DataFrame
-        Dataframe containing predicted counts for 96 tomorrow's timepoints
+        Dataframe containing predicted counts for 96 today's timepoints
     """
 
     results, locs = [], []
+
     for group in np.unique(past_data["group_name"]):
         locs.append(group)
         group_data = past_data[past_data["group_name"] == group]
@@ -102,9 +106,12 @@ def predict_tomorrow(past_data):
 
         # average counts by time for each location
         group_result = group_data.groupby("time_point").mean()
+
         # convert capacity count to percentage
         group_result = np.divide(group_result, FULL_CAP_DATA[group])
+
         results.append(group_result.transpose())
+
     result = pd.concat(results)  # combine the data for all locations
     result.index = locs
     result = result.transpose()  # time points indexes and locations columns

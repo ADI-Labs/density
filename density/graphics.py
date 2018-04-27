@@ -1,5 +1,6 @@
 from bokeh.embed import components
 from bokeh.plotting import figure
+import numpy as np
 
 PANTONE_292 = (105, 179, 231)
 
@@ -15,13 +16,12 @@ def create_all_buildings(df):
 
     building_divs = {}
 
-    #  building = index of row (String)
-    #  predictions = Series of columns with predictions
-
     for building, predictions in df.iterrows():
         #  create plot prediction for each building and add to dictionary
+        mins = np.asarray([time.split(':')[1] for time in predictions.index])
+        hours = np.where(mins == '0')[0]
         building_divs[building] = create_prediction_plot(
-            predictions.index.tolist()[::4], predictions[::4] * 100)
+            predictions.index[hours].tolist(), predictions.iloc[hours] * 100)
 
     #  create script and div from dictionary
     script, div = components(building_divs)
@@ -33,9 +33,9 @@ def create_prediction_plot(time, prediction):
     """
     Create prediction plot for one building
 
-    :param time: pandas Index object with time of next 24 hours
+    :param time: pandas Index object with time of today's 24 hours
     :param prediction: pandas Series object with predictions corresponding
-    to next 24 hours
+    to today's 24 hours
     :return: bokeh Figure that with plot prediction of one building
     :rtype: bokeh Figure
     """
@@ -59,9 +59,5 @@ def create_prediction_plot(time, prediction):
 
     #  add a line renderer
     p.vbar(x=time, top=prediction, width=0.3)
-    # p.line(time, prediction, line_width=0.59)
 
-    #  return plot for one building
     return p
-
-# create_all_buildings(phony_data())
