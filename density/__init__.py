@@ -11,18 +11,17 @@ from oauth2client.client import flow_from_clientsecrets
 import psycopg2
 import psycopg2.extras
 import psycopg2.pool
+from werkzeug.contrib.cache import SimpleCache
 
 from . import db, librarytimes
 from . import graphics
 from .config import config, ISO8601Encoder
 from .data import FULL_CAP_DATA
 from .predict import db_to_pandas, predict_tomorrow
-from flask_caching import Cache
 
 
 app = Flask(__name__)
-
-cache = Cache(app,config={'CACHE_TYPE': 'simple'})
+cache = SimpleCache()
 # change the default JSON encoder to handle datetime's properly
 app.json_encoder = ISO8601Encoder
 
@@ -408,12 +407,20 @@ def map():
 
 
 @app.route('/predict')
-@cache.cached(timeout=10800)
 def predict():
     # loading data from current database connection
-    data = db_to_pandas(g.cursor)
-    tmrw_pred = predict_tomorrow(data)
+    data = cache.get('predictionData')
+    print(data)
 
+    if data is None:
+        data = db_to_pandas(g.cursor)
+        cache.set('predictionData', data, timeout=5 * 60)
+
+    tmrw_pred = cache.get('predictionTomorrow')
+    print(tmrw_pred)
+    if tmrw_pred is None:
+        tmrw_pred = predict_tomorrow(data)
+        cache.set('predictionTomorrow', tmrw_pred, timeout=5 * 60)
 
     script, divs = graphics.create_all_buildings(tmrw_pred.transpose())
     return render_template('predict.html', divs=divs,

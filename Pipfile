@@ -18,6 +18,7 @@ bokeh = "*"
 matplotlib = "*"
 flask-cache = "*"
 flask-caching = "*"
+werkzeug = "*"
 
 
 [dev-packages]
