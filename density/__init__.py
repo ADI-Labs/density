@@ -414,7 +414,7 @@ def predict():
 
     if data is None:
         data = db_to_pandas(g.cursor)
-        cache.set('predictData', data, timeout=10800)
+        cache.set('predictData', data, timeout=10600)
 
     # make predictions based on fetched data
 
@@ -422,7 +422,7 @@ def predict():
 
     if today_pred is None:
         today_pred = predict_today(data)
-        cache.set('predictToday', today_pred, timeout=10800)
+        cache.set('predictToday', today_pred, timeout=10600)
 
     # make plots from predictions
     script = cache.get('predictScript')
@@ -430,8 +430,8 @@ def predict():
 
     if script is None:
         script, divs = graphics.create_all_buildings(today_pred.transpose())
-        cache.set('predictScript', script, timeout=10800)
-        cache.set('predictDivs', divs, timeout=10800)
+        cache.set('predictScript', script, timeout=10600)
+        cache.set('predictDivs', divs, timeout=10600)
 
     return render_template('predict.html', divs=divs,
                            script=script, css_script=CDN.render_js())
