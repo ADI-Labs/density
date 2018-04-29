@@ -11,7 +11,7 @@ from oauth2client.client import flow_from_clientsecrets
 import psycopg2
 import psycopg2.extras
 import psycopg2.pool
-#from werkzeug.contrib.cache import SimpleCache
+# from werkzeug.contrib.cache import SimpleCache
 
 from . import db, librarytimes
 from . import graphics
@@ -22,7 +22,7 @@ from .predict import db_to_pandas, predict_today
 
 app = Flask(__name__)
 
-cache = SimpleCache()
+# cache = SimpleCache()
 # change the default JSON encoder to handle datetime's properly
 app.json_encoder = ISO8601Encoder
 
@@ -436,7 +436,6 @@ def predict():
     data = db_to_pandas(g.cursor)
     today_pred = predict_today(data)
     script, divs = graphics.create_all_buildings(today_pred.transpose())
-    
     return render_template('predict.html', divs=divs,
                            script=script, css_script=CDN.render_js())
 
