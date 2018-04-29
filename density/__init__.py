@@ -11,7 +11,7 @@ from oauth2client.client import flow_from_clientsecrets
 import psycopg2
 import psycopg2.extras
 import psycopg2.pool
-from werkzeug.contrib.cache import SimpleCache
+#from werkzeug.contrib.cache import SimpleCache
 
 from . import db, librarytimes
 from . import graphics
@@ -410,7 +410,7 @@ def map():
 @app.route('/predict')
 def predict():
     # loading data from current database connection
-    data = cache.get('predictData')
+    '''data = cache.get('predictData')
 
     if data is None:
         data = db_to_pandas(g.cursor)
@@ -432,7 +432,11 @@ def predict():
         script, divs = graphics.create_all_buildings(today_pred.transpose())
         cache.set('predictScript', script, timeout=10600)
         cache.set('predictDivs', divs, timeout=10600)
-
+    '''
+    data = db_to_pandas(g.cursor)
+    today_pred = predict_today(data)
+    script, divs = graphics.create_all_buildings(today_pred.transpose())
+    
     return render_template('predict.html', divs=divs,
                            script=script, css_script=CDN.render_js())
 
