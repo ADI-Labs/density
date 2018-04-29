@@ -87,13 +87,13 @@ OPENING_TIME_SATURDAY = {
     'Butler Library 3': [[0, 2400]],
     'Butler Library 4': [[0, 2400]],
     'Butler Library 301': [[0, 2400]],
-    'Butler Library 5': [1100, 1800],
-    'Butler Library 6': [1100, 1800],
-    'Butler Library stk': [1100, 1800],
+    'Butler Library 5': [[1100, 1800]],
+    'Butler Library 6': [[1100, 1800]],
+    'Butler Library stk': [[1100, 1800]],
     "JJ's Place": [[1200, 2400], [0, 1000]],
     'John Jay Dining Hall': [],
-    'Lehman Library 2': [1000, 1800],
-    'Lehman Library 3': [1000, 1800],
+    'Lehman Library 2': [[1000, 1800]],
+    'Lehman Library 3': [[1000, 1800]],
     'Lerner 1': [[800, 2400], [0, 300]],
     'Lerner 2': [[800, 2400], [0, 300]],
     'Lerner 3': [[800, 2400], [0, 300]],
@@ -113,9 +113,9 @@ OPENING_TIME_SUNDAY = {
     'Butler Library 3': [[0, 2400]],
     'Butler Library 4': [[0, 2400]],
     'Butler Library 301': [[0, 2400]],
-    'Butler Library 5': [1200, 2300],
-    'Butler Library 6': [1200, 2300],
-    'Butler Library stk': [1200, 2300],
+    'Butler Library 5': [[1200, 2300]],
+    'Butler Library 6': [[1200, 2300]],
+    'Butler Library stk': [[1200, 2300]],
     "JJ's Place": [[1200, 2400], [0, 1000]],
     'John Jay Dining Hall': [[930, 2100]],
     'Lehman Library 2': [[1100, 2300]],
@@ -188,6 +188,7 @@ def get_opening_time(current_time, interval):
 
 
 def time_is_in_interval(time, interval):
+    print(interval)
     if len(interval) == 0:
         return False
     elif len(interval) == 1:
