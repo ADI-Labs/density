@@ -188,6 +188,9 @@ def get_opening_time(current_time, interval):
 
 
 def time_is_in_interval(time, interval):
+    """
+    add comment here
+    """
     if len(interval) == 0:
         return False
     elif len(interval) == 1:
