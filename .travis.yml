@@ -16,7 +16,7 @@ addons:
 install:
 - "./scripts/bootstrap.sh"
 - pip install -U pipenv
-- pipenv install --dev
+- pipenv install --dev --ignore-pipfile
 
 before_script:
 - psql --version
@@ -37,4 +37,4 @@ deploy:
   provider: script
   script: ./scripts/deploy.sh yes
   on:
-    branch: deploy
+    branch: master

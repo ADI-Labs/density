@@ -4,6 +4,7 @@ MAINTAINER ADI <infrastructure@adicu.com>
 RUN pip install -U pipenv
 
 WORKDIR /density
+COPY ./Pipfile ./Pipfile
 COPY ./Pipfile.lock ./Pipfile.lock
 RUN pipenv install --ignore-pipfile --deploy
 
