@@ -7,6 +7,7 @@ PANTONE_292 = (105, 179, 231)
 def create_all_buildings(df):
     """
     Generates html/javascript code for graphs of all buildings
+
     :param df: DataFrame that contains predictions of traffic
     for each building over 24 hour period
     :return: tuple of script and div of plot prediction for all buildings
@@ -31,6 +32,7 @@ def create_all_buildings(df):
 def create_prediction_plot(time, prediction):
     """
     Create prediction plot for one building
+
     :param time: pandas Index object with time of today's 24 hours
     :param prediction: pandas Series object with predictions corresponding
     to today's 24 hours
@@ -47,7 +49,6 @@ def create_prediction_plot(time, prediction):
     p.xaxis.axis_line_color = PANTONE_292
     p.xaxis.major_label_text_color = PANTONE_292
     p.xaxis.axis_label_text_font_size = "18pt"
-    
     #  set format for y axis
     p.yaxis.axis_label = "Predicted Capacity"
     p.yaxis.axis_line_color = PANTONE_292

@@ -6,7 +6,6 @@ import traceback
 
 from bokeh.resources import CDN
 from flask import Flask, g, jsonify, render_template, request
-from flask_caching import Cache
 import httplib2
 from oauth2client.client import flow_from_clientsecrets
 import psycopg2
@@ -18,10 +17,11 @@ from . import db, librarytimes
 from . import graphics
 from .config import config, ISO8601Encoder
 from .data import FULL_CAP_DATA
-from .predict import db_to_pandas, predict_tomorrow
+from .predict import db_to_pandas, predict_today
 
 
 app = Flask(__name__)
+
 cache = SimpleCache()
 # change the default JSON encoder to handle datetime's properly
 app.json_encoder = ISO8601Encoder
@@ -410,22 +410,33 @@ def map():
 @app.route('/predict')
 def predict():
     # loading data from current database connection
-    data = cache.get('predictionData')
-    print(data)
+    data = cache.get('predictData')
 
     if data is None:
         data = db_to_pandas(g.cursor)
-        cache.set('predictionData', data, timeout=5 * 60)
+        cache.set('predictData', data, timeout=10600)
 
-    tmrw_pred = cache.get('predictionTomorrow')
-    print(tmrw_pred)
-    if tmrw_pred is None:
-        tmrw_pred = predict_tomorrow(data)
-        cache.set('predictionTomorrow', tmrw_pred, timeout=5 * 60)
+    # make predictions based on fetched data
+
+    today_pred = cache.get('predictToday')
+
+    if today_pred is None:
+        today_pred = predict_today(data)
+        cache.set('predictToday', today_pred, timeout=10600)
 
     # make plots from predictions
-    script, divs = graphics.create_all_buildings(today_pred.transpose())
+    script = cache.get('predictScript')
+    divs = cache.get('predictDivs')
 
+    if script is None:
+        script, divs = graphics.create_all_buildings(today_pred.transpose())
+        cache.set('predictScript', script, timeout=10600)
+        cache.set('predictDivs', divs, timeout=10600)
+    '''
+    data = db_to_pandas(g.cursor)
+    today_pred = predict_today(data)
+    script, divs = graphics.create_all_buildings(today_pred.transpose())
+    '''
     return render_template('predict.html', divs=divs,
                            script=script, css_script=CDN.render_js())
 

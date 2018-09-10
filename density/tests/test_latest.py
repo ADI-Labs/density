@@ -95,5 +95,5 @@ def test_annotate_fullness_percentage():
 
     assert original == data     # did not edit original
 
-    data[0]["percent_full"] = 22
+    data[0]["percent_full"] = 18
     assert annotated == data
