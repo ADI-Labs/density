@@ -3,6 +3,7 @@ density/.cache
 .pytest_cache
 .coverage
 .cache
+.vagrant
 
 .ci/id_rsa
 .pytest_cache

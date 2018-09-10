@@ -10,13 +10,13 @@ apt-get update
 apt-get install --yes postgresql-9.6
 
 if [ ! -d "/opt/anaconda" ]; then
-    wget --quiet --no-clobber https://repo.continuum.io/miniconda/Miniconda3-4.3.30-Linux-x86_64.sh
-    bash Miniconda3-4.3.30-Linux-x86_64.sh -b -p "/opt/anaconda"
+    wget --quiet --no-clobber https://repo.continuum.io/miniconda/Miniconda3-4.5.11-Linux-x86_64.sh
+    bash Miniconda3-4.5.11-Linux-x86_64.sh -b -p "/opt/anaconda"
     echo 'export PATH="/opt/anaconda/bin:$PATH"' >> /home/vagrant/.bashrc
 fi
 
 export PATH="/opt/anaconda/bin:$PATH"
-conda install --yes python=3.6.3 pip virtualenv
+conda install --yes python=3.6.6 pip virtualenv
 pip install -U pipenv
 chown -R vagrant:vagrant /opt/anaconda
 
