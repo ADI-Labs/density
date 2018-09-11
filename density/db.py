@@ -196,18 +196,51 @@ def insert_density_data(cursor, data):
             .astimezone(pytz.timezone("US/Eastern"))
             .replace(tzinfo=None))  # drop timezone info for Postgres
 
+    # TODO: do a schema migration to make this data normalization moot
+    parent_ids = {
+        101: 84,        # Lerner
+        109: 79,        # Lehman Library
+        115: 103,       # Butler
+        117: 103,       # Butler 301
+        124: 146,       # Avery
+        153: 75,        # John Jay
+        2: 2,           # Uris,
+        97: 62,         # East Asian Library
+        99: 15,         # NoCo
+    }
+    ids = {
+        100: 145,      # Science and Engineering Library
+        102: 150,      # Lerner 1
+        103: 151,      # Lerner 2
+        104: 152,      # Lerner 3
+        105: 153,      # Lerner 4
+        106: 154,      # Lerner 5
+        107: 85,       # Roone Arledge Auditorium
+        110: 139,      # Lehman Library 2
+        111: 140,      # Lehman Library 3
+        116: 130,      # Butler Library 2
+        117: 131,      # Butler Library 3
+        118: 171,      # Butler Library 301
+        119: 132,      # Butler Library 4
+        120: 133,      # Butler Library 5
+        121: 134,      # Butler Library 6
+        122: 138,      # Butler Library stk
+        125: 147,      # Architectural and Fine Arts Library 1
+        126: 148,      # Architectural and Fine Arts Library 2
+        127: 149,      # Architectural and Fine Arts Library 3
+        155: 125,      # John Jay Dining Hall
+        192: 155,      # JJ's Place
+        96: 23,        # Uris/Watson Library
+        98: 144,       # Starr East Asian Library
+    }
+
     for key, value in data.items():
         group = {
-            "id": int(key),
+            "id": ids[int(key)],
             "name": value["name"],
-            "parent_id": int(value["parent_id"])
+            "parent_id": parent_ids[int(value["parent_id"])]
         }
         client_count = int(value["client_count"])
-
-        # Data normalization issue on CUIT's side
-        if group["parent_id"] == 131 and group["name"] == "Butler Library 301":
-            group["parent_id"] = 103
-
         if groups[group["id"]] != group:
             raise RuntimeError(f"Invalid group found: {group}")
 
