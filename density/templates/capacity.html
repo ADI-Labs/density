@@ -5,7 +5,15 @@
         <img class="app_store" src="{{ url_for('static', filename='img/app_store_badge.svg')}}">
     </a> -->
 
-    <input type="text" id="search" onkeyup="searchLocations()">
+    <div class="wrap">
+        <div class="searchContainer">
+            <input type="text" class="searchTerm" placeholder="What are you looking for?" id="search" onkeyup="searchLocations()">
+            <button type="submit" class="searchButton">
+                <i class="fa fa-search"></i>
+            </button>
+        </div>
+    </div>
+
 
     <div class="container">
         <ul class="list-group">
