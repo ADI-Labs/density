@@ -18,7 +18,10 @@
     <div class="container">
         <ul class="list-group">
             {% for location in locations %}
-              <li class="list-group-item" data-name="{{ location['group_name'] }}">
+              <li class="list-group-item" data-name="{{ location['group_name'] }}" 
+                                          data-nickname="{{ auxdata[location['group_name']]['nickname'] }}"
+                                          data-location-type="{{ auxdata[location['group_name']]['type'] }}"
+                                          data-open-now="{{ auxdata[location['group_name']]['open'] }}">
                 <h4>{{ location['group_name'] }}<span class="opening-time">{{times[location['group_name']]}}</span></h4>
                   <div class="progress">
                       {% if location['percent_full'] <= 2 %}
@@ -60,7 +63,8 @@
     var li = document.getElementsByTagName('li');
     for (i = 0; i < li.length; i++) {
       var name = li[i].getAttribute('data-name').toLowerCase();
-      if (!name.includes(searchQuery)) li[i].style.display = "none";
+      var nickname = li[i].getAttribute('data-nickname').toLowerCase();
+      if (!name.includes(searchQuery) && !nickname.includes(searchQuery)) li[i].style.display = "none";
       else li[i].style.display = "block";
     }
   }

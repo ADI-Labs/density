@@ -139,6 +139,14 @@ OPENING_TIME = [OPENING_TIME_WEEKDAY,
                 OPENING_TIME_SATURDAY,
                 OPENING_TIME_SUNDAY, ]
 
+def is_open(group_name):
+    # get library opening times according to today's day in a week
+    today = datetime.datetime.today()
+    weekday = today.weekday()
+    library_times = OPENING_TIME[weekday]
+    current_time = (datetime.datetime.now().hour * 100) + \
+                   (datetime.datetime.now().minute)
+    return time_is_in_interval(current_time, library_times[group_name])
 
 def dict_for_time():
     # get library opening times according to today's day in a week
