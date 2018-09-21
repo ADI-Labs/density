@@ -168,38 +168,44 @@ body{
 .searchTerm {
   float: left;
   width: 100%;
-  border: 2.5px solid #dcd8d8;
+  border: 2px solid #a5a2a2;
   padding: 5px;
-  height: 28px;
+  padding-left: 20px;
+  height: 32px;
   border-radius: 60px;
   outline: none;
   color: #9DBFAF;
+  background-color:transparent;
 }
 
 .searchTerm:focus{
   border: 3px solid #2285c6;
-  color: #00B4CC;
+  color: #2285c6;
+  background-color: white;
+  font-size: 15px;
 }
 
 .searchButton {
   position: absolute;  
-  right: -50px;
-  width: 40px;
-  height: 36px;
-  border: 1px solid #00B4CC;
-  background: #00B4CC;
+  right: 18px;
+  top: 4px;
+  width: 30px;
+  border: none;
+  background: transparent;
   text-align: center;
-  color: #fff;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 20px;
+  color: #c5c2c2;
+  font-size: medium;
+}
+
+.searchButton:focus {
+  color: #a5a2a2;
 }
 
 
 .wrap{
-  width: 82%;
-  position: absolute;
-  top: 6.8%;
+  width: 65%;
+  position: relative;
+  margin-top: 18px;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -269,6 +275,7 @@ width: 100%;
 
 .list-group {
     margin-bottom: 0;
+    margin-top: 80px;
 }
 
 .list-group-item {
