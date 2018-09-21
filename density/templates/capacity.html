@@ -10,7 +10,7 @@
     <div class="container">
         <ul class="list-group">
             {% for location in locations %}
-              <li class="list-group-item" x>
+              <li class="list-group-item" data-name="{{ location['group_name'] }}">
                 <h4>{{ location['group_name'] }}<span class="opening-time">{{times[location['group_name']]}}</span></h4>
                   <div class="progress">
                       {% if location['percent_full'] <= 2 %}
