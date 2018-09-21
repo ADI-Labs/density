@@ -162,7 +162,11 @@ body{
 
 .search {
   width: 100%;
-  position: relative
+  position: relative;
+}
+
+.searchContainer {
+  position: relative;
 }
 
 .searchTerm {
@@ -175,6 +179,7 @@ body{
   border-radius: 60px;
   outline: none;
   color: #9DBFAF;
+  margin: 0px auto 30px auto;
   background-color:transparent;
 }
 
@@ -275,7 +280,7 @@ width: 100%;
 
 .list-group {
     margin-bottom: 0;
-    margin-top: 80px;
+    margin-top: 0;
 }
 
 .list-group-item {
