@@ -152,6 +152,58 @@ p {
     padding: 30px 50px 30px 50px;
 }
 
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+body{
+  background: #f2dede;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.search {
+  width: 100%;
+  position: relative
+}
+
+.searchTerm {
+  float: left;
+  width: 100%;
+  border: 2.5px solid #dcd8d8;
+  padding: 5px;
+  height: 28px;
+  border-radius: 60px;
+  outline: none;
+  color: #9DBFAF;
+}
+
+.searchTerm:focus{
+  border: 3px solid #2285c6;
+  color: #00B4CC;
+}
+
+.searchButton {
+  position: absolute;  
+  right: -50px;
+  width: 40px;
+  height: 36px;
+  border: 1px solid #00B4CC;
+  background: #00B4CC;
+  text-align: center;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+
+.wrap{
+  width: 82%;
+  position: absolute;
+  top: 6.8%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 #mapContainer {
     width: 100%;
     padding: 25px 0;
