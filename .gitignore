@@ -28,3 +28,5 @@ vagrant
 *.sql
 !client_secrets.json
 
+density/dump.sql
+density/dump1.sql

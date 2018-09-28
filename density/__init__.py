@@ -17,7 +17,7 @@ from . import db, librarytimes
 from . import graphics
 from .config import config, ISO8601Encoder
 from .data import FULL_CAP_DATA
-from .predict import db_to_pandas, predict_today
+from .predict import db_to_pandas, predict_today, categorize_data, show_data
 
 
 app = Flask(__name__)
@@ -406,6 +406,14 @@ def map():
     # Render template has an SVG image whose colors are changed by % full
     return render_template('map.html', locations=locations)
 
+@app.route('/show')
+def show():
+
+    f = open('output.txt','w')
+    print(show_data(categorize_data(g.cursor)), file=f)
+    f.close()
+
+    return 'Data successfully uploaded.', 200
 
 @app.route('/predict')
 def predict():

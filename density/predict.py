@@ -96,21 +96,26 @@ def predict_today(past_data):
     pandas.DataFrame
         Dataframe containing predicted counts for 96 today's timepoints
     """
-
     results, locs = [], []
-
+    
     for group in np.unique(past_data["group_name"]):
         locs.append(group)
+
+        # gets all rows for unique 'group'
         group_data = past_data[past_data["group_name"] == group]
+
+        # get only client count and time point for each 'group' for all 4 years
         group_data = group_data[["client_count", "time_point"]]
 
         # average counts by time for each location
         group_result = group_data.groupby("time_point").mean()
-
+         
         # convert capacity count to percentage
         group_result = np.divide(group_result, FULL_CAP_DATA[group])
 
         results.append(group_result.transpose())
+
+        break
 
     result = pd.concat(results)  # combine the data for all locations
     result.index = locs
@@ -132,3 +137,42 @@ def predict_today(past_data):
     result = result.sort_index()
 
     return result
+
+# takes a pandas dataframe 
+# 
+def categorize_data(cursor):
+
+    # date format 2014-07-04
+    # construct SQL query to fetch only the data we need
+    query = " WHERE d.dump_time BETWEEN '2014-07-04 ' AND '2014-07-10 ' AND group_id = 130"
+    cursor.execute(SELECT + query)
+    raw_data = cursor.fetchall()
+
+    # convert fetched data to a pandas dataframe
+    df = pd.DataFrame(raw_data) \
+           .set_index("dump_time") \
+           .assign(group_name=lambda df: df["group_name"].astype('category'),
+                   parent_id=lambda df: df["parent_id"].astype('category'))
+
+    # add a new time point column to the datafram
+    time_points = zip(df.index.hour, df.index.minute)
+    time_points = ["{}:{}".format(x[0], x[1]) for x in time_points]
+    df["time_point"] = time_points
+
+    return df
+
+def show_data(selected_data):
+    
+    client_count = []
+    name = []
+    for date in selected_data.index.tolist():
+        if str(date.time())[0:5] == '17:30':
+            # list.append(selected_data.loc[date])
+            print('client count upcoming')
+            client_count.append(selected_data.loc[date]['client_count'])
+            print(selected_data.loc[date]['client_count'])
+            print('client count done')
+            name.append(date)
+    
+    #have a list of pandas series with data and name 
+    return (client_count, name)
