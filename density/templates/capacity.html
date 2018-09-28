@@ -15,12 +15,18 @@
     </div>
 
     <div class="container">
-        <div id="myBtnContainer">
-            <button class="btn" onclick="filterSelection('all')"> Show all</button>
-            <button class="btn" onclick="filterSelection('cars')"> Cars</button>
-            <button class="btn" onclick="filterSelection('animals')"> Animals</button>
-            <button class="btn" onclick="filterSelection('fruits')"> Fruits</button>
-            <button class="btn" onclick="filterSelection('colors')"> Colors</button>
+        <div id="locationBtnContainer">
+            <input type="radio" name="location-filter" value="library" onclick = "searchLocations()"> Library<br>
+            <input type="radio" name="location-filter" value="center" onclick = "searchLocations()"> Student Center<br>
+            <input type="radio" name="location-filter" value="dining" onclick = "searchLocations()"> Dining Hall <br>
+            <input type="radio" name="location-filter" value="" onclick = "searchLocations()"> Any <br>
+        </div>
+
+        <div id="openBtnContainer">
+            <input type="radio" name="open-filter" value="True" onclick = "searchLocations()"> Open Now<br>
+            <input type="radio" name="open-filter" value="False" onclick = "searchLocations()"> Closed <br>
+            <input type="radio" name="open-filter" value="" onclick = "searchLocations()"> Any
+            
         </div>
     </div>
 
@@ -73,6 +79,23 @@
     var searchQuery = document.getElementById('search').value.toLowerCase();
     var locationFilter = '';
     var openFilter = '';
+
+    var locationBtns = document.getElementsByName('location-filter');
+  
+    for(var i = 0; i < locationBtns.length; i++){
+      if(locationBtns[i].checked){
+        locationFilter = locationBtns[i].value;
+       }
+     }
+
+    var openBtns = document.getElementsByName('open-filter');
+  
+    for(var i = 0; i < openBtns.length; i++){
+      if(openBtns[i].checked){
+        openFilter = openBtns[i].value;
+       }
+     }
+
 
     for (i = 0; i < li.length; i++) {
       var name = li[i].getAttribute('data-name').toLowerCase();
