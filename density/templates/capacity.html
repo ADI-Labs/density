@@ -15,18 +15,20 @@
     </div>
 
     <div class="container">
-        <div id="locationBtnContainer">
-            <input type="radio" name="location-filter" value="library" onclick = "searchLocations()"> Library<br>
-            <input type="radio" name="location-filter" value="center" onclick = "searchLocations()"> Student Center<br>
-            <input type="radio" name="location-filter" value="dining" onclick = "searchLocations()"> Dining Hall <br>
-            <input type="radio" name="location-filter" value="" onclick = "searchLocations()"> Any <br>
-        </div>
+        <div class = "btnContainer">
+          <div id="locationBtnContainer" align="left">
+              <input type="radio"  name="location-filter" id="library" value="library" onclick = "searchLocations()"/> <label for="library"> Library </label>
+              <input type="radio"  name="location-filter" id="center" value="center" onclick = "searchLocations()"/> <label for="center"> Student Center </label>
+              <input type="radio"  name="location-filter" id="dining" value="dining" onclick = "searchLocations()"/> <label for="dining"> Dining Hall </label>
+              
+          </div>
 
-        <div id="openBtnContainer">
-            <input type="radio" name="open-filter" value="True" onclick = "searchLocations()"> Open Now<br>
-            <input type="radio" name="open-filter" value="False" onclick = "searchLocations()"> Closed <br>
-            <input type="radio" name="open-filter" value="" onclick = "searchLocations()"> Any
-            
+          <div id="openBtnContainer" align="right">
+              <input type="radio" class="filterTab" name="open-filter" value="True" onclick = "searchLocations()"> <label for="open"> Open Now </label>
+              <input type="radio" class="filterTab" name="open-filter" value="False" onclick = "searchLocations()"> <label for="closed">Closed </label>
+              
+              
+          </div>
         </div>
     </div>
 

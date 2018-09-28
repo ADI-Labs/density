@@ -217,6 +217,109 @@ body{
   transform: translate(-50%, -50%);
 }
 
+
+/*
+    Starts CSS Format for Radio Buttons
+*/
+.btnContainer{
+    display:inline-block;
+    width: 100%;
+
+}
+
+/*.locationBtnContainer{
+    display: inline-block;
+    width: 100%;
+}
+
+
+
+.openBtnContainer{
+    display: inline-block;
+    width: 100%;
+}
+*/
+
+#locationBtnContainer{
+    display:inline;
+    width: 50%;
+   
+    padding: 0 10px;
+    position: relative;
+    float: left;
+}
+
+#openBtnContainer{
+    display: inline;
+    width: 50%;
+   
+    padding: 0 10px;
+    position: relative;
+    text-align: right;
+    float: right;
+}
+
+/*input[name="location-filter"] {
+
+    visibility:hidden;
+    
+    &: hover{
+        background-color: #eee;
+    }
+    
+}*/
+
+.btnContainer input{
+    visibility:hidden;
+}
+
+.btnContainer label{
+    cursor: pointer;
+    color: grey;
+    font-family: 'Lato', sans-serif;
+    font-weight: normal;
+}
+
+.btnContainer label:hover{
+    color: #2385c6;
+}
+
+
+/*input{
+  position: absolute;
+  left: -99999em;
+  top: -99999em;
+
+    & + label {
+        cursor: pointer;
+        float: left;
+        border: 1px solid #aaa;
+        border-bottom: 0;
+        background-color: #fff;
+        margin-right: -1px;
+        padding: .5em 1em;
+        position: relative;
+        
+     &:hover {
+       background-color: #eee;
+     }
+    }
+
+    &:checked + label {
+        box-shadow: 0 3px 0 -1px #fff,
+       inset 0 5px 0 -1px #13CD4A;
+        background-color: #fff;
+     border-color: #428bca;
+        z-index: 1;
+    }
+}*/
+
+
+
+
+
+
+
 #mapContainer {
     width: 100%;
     padding: 25px 0;
