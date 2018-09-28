@@ -181,6 +181,8 @@ body{
   color: #9DBFAF;
   margin: 0px auto 30px auto;
   background-color:transparent;
+  font-family: 'Lato', sans-serif;
+
 }
 
 .searchTerm:focus{
