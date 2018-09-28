@@ -69,13 +69,25 @@
 </div>
 <script type="text/javascript">
   function searchLocations() {
-    var searchQuery = document.getElementById('search').value.toLowerCase();
     var li = document.getElementsByTagName('li');
+    var searchQuery = document.getElementById('search').value.toLowerCase();
+    var locationFilter = '';
+    var openFilter = '';
+
     for (i = 0; i < li.length; i++) {
       var name = li[i].getAttribute('data-name').toLowerCase();
       var nickname = li[i].getAttribute('data-nickname').toLowerCase();
-      if (!name.includes(searchQuery) && !nickname.includes(searchQuery)) li[i].style.display = "none";
-      else li[i].style.display = "block";
+      var locationType = li[i].getAttribute('data-location-type');
+      var openNow = li[i].getAttribute('data-open-now');
+
+      if ((!name.includes(searchQuery) && !nickname.includes(searchQuery)) ||
+          (locationFilter != '' && locationFilter != locationType) ||
+          (openFilter != '' && openFilter != openNow)) {
+        li[i].style.display = 'none';
+      }
+      else {
+        li[i].style.display = 'block';
+      }
     }
   }
 </script>
