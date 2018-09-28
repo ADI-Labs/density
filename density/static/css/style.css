@@ -284,6 +284,10 @@ body{
     color: #2385c6;
 }
 
+.btnContainer input:checked + label{
+    color: #2385c6;
+}
+
 
 /*input{
   position: absolute;
