@@ -20,14 +20,13 @@
               <input type="radio"  name="location-filter" id="library" value="library" onclick = "searchLocations()"/> <label for="library"> Library </label>
               <input type="radio"  name="location-filter" id="center" value="center" onclick = "searchLocations()"/> <label for="center"> Student Center </label>
               <input type="radio"  name="location-filter" id="dining" value="dining" onclick = "searchLocations()"/> <label for="dining"> Dining Hall </label>
-              
+              <button class="clear" onclick="clearFilter('location-filter')">(x)</button>
           </div>
 
           <div id="openBtnContainer" align="right">
               <input type="radio" class="filterTab" name="open-filter" id="open" value="True" onclick = "searchLocations()"/> <label for="open"> Open Now </label>
               <input type="radio" class="filterTab" name="open-filter" id="closed" value="False" onclick = "searchLocations()"/> <label for="closed">Closed </label>
-              
-              
+              <button class="clear" onclick="clearFilter('open-filter')">(x)</button>
           </div>
         </div>
     </div>
@@ -114,6 +113,13 @@
         li[i].style.display = 'block';
       }
     }
+  }
+  
+  function clearFilter(name) {
+    var ele = document.getElementsByName(name);
+    for(var i=0; i<ele.length; i++)
+      ele[i].checked = false;
+    searchLocations();
   }
 </script>
 

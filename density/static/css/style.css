@@ -225,7 +225,19 @@ body{
     display:inline-block;
     width: 100%;
     margin: 0px auto 18px auto;
+    padding: 0 20px;
+}
 
+button.clear {
+    border: none;
+    background: none;
+    color: #a5a2a2;
+    outline: 0;
+    padding: 0;
+}
+
+button.clear:hover {
+    color: #2385c6;
 }
 
 /*.locationBtnContainer{
@@ -271,7 +283,7 @@ body{
 }*/
 
 .btnContainer input{
-    visibility:hidden;
+    display: none;
 }
 
 .btnContainer label{
@@ -279,6 +291,7 @@ body{
     color: #a5a2a2;
     font-family: 'Lato', sans-serif;
     font-weight: normal;
+    margin-right: 15px;
 }
 
 .btnContainer label:hover{
