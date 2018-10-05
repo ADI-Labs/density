@@ -410,6 +410,9 @@ def map():
 
 @app.route('/predict')
 def predict():
+    auxdata = locationauxdata.get_location_aux_data()
+    # times = {'Lerner 1' : 1200, 'Lerner 2' : 1300}
+    times = librarytimes.dict_for_time()
     # loading data from current database connection
     data = cache.get('predictData')
 
@@ -439,7 +442,8 @@ def predict():
     script, divs = graphics.create_all_buildings(today_pred.transpose())
     '''
     return render_template('predict.html', divs=divs,
-                           script=script, css_script=CDN.render_js())
+                           script=script, css_script=CDN.render_js(),
+                           times = times, auxdata = auxdata)
 
 
 @app.route('/upload', methods=['POST'])
