@@ -303,41 +303,6 @@ button.clear:hover {
 }
 
 
-/*input{
-  position: absolute;
-  left: -99999em;
-  top: -99999em;
-
-    & + label {
-        cursor: pointer;
-        float: left;
-        border: 1px solid #aaa;
-        border-bottom: 0;
-        background-color: #fff;
-        margin-right: -1px;
-        padding: .5em 1em;
-        position: relative;
-        
-     &:hover {
-       background-color: #eee;
-     }
-    }
-
-    &:checked + label {
-        box-shadow: 0 3px 0 -1px #fff,
-       inset 0 5px 0 -1px #13CD4A;
-        background-color: #fff;
-     border-color: #428bca;
-        z-index: 1;
-    }
-}*/
-
-
-
-
-
-
-
 #mapContainer {
     width: 100%;
     padding: 25px 0;
@@ -595,5 +560,27 @@ img {
     .update {
         padding: 10px;
     }
+
+    .btnContainer{
+        width: 100%;
+        margin: 1px auto 4px auto;
+    }
+
+    #locationBtnContainer{
+        display:inline;
+        width: 100%;
+        padding: 0 10px;
+        position: relative;
+        text-align: center;
+    }
+
+    #openBtnContainer{
+        display: inline;
+        width: 100%;
+        padding: 0 10px;
+        position: relative;
+        text-align: center;
+    }
+
 }
 
