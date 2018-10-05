@@ -572,9 +572,24 @@ img {
         padding: 15px 20px;
     }
 
+    .navContainer {
+        padding: 1rem 0rem;
+        font-weight: 300;
+        font-size: 0px;
+        /*
+        Removes space between inline-block items. In this case,
+        the space between the navItems.
+        https://css-tricks.com/fighting-the-space-between-inline-block-elements/
+        */
+        background-color: #468fcc;
+        text-align: center;
+    }
+
     .navItem {
         padding-left: 15px;
         padding-right: 15px;
+        padding-top: 5px;
+        padding-bottom: 5px;
     }
 
     .update {
