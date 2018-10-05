@@ -179,7 +179,7 @@ body{
   border-radius: 60px;
   outline: none;
   color: #9DBFAF;
-  margin: 0px auto 30px auto;
+  margin: 0px auto 18px auto;
   background-color:transparent;
   font-family: 'Lato', sans-serif;
 
@@ -224,6 +224,7 @@ body{
 .btnContainer{
     display:inline-block;
     width: 100%;
+    margin: 0px auto 18px auto;
 
 }
 
@@ -275,7 +276,7 @@ body{
 
 .btnContainer label{
     cursor: pointer;
-    color: grey;
+    color: #a5a2a2;
     font-family: 'Lato', sans-serif;
     font-weight: normal;
 }
