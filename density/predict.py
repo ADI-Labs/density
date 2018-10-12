@@ -154,6 +154,7 @@ def multi_predict_today(cluster1, cluster2, cluster3):
     """
     results, locs = [], []
     std = []
+
     
     for group in np.unique(cluster1["group_name"]):
         locs.append(group)
@@ -168,17 +169,32 @@ def multi_predict_today(cluster1, cluster2, cluster3):
         group_data2 = group_data2[["client_count", "time_point"]]
         group_data3 = group_data3[["client_count", "time_point"]]
 
-        # average counts by time for each location
-        group_result1 = group_data.groupby("time_point").mean()
-        group_result2 = group_data.groupby("time_point").mean()
-        group_result3 = group_data.groupby("time_point").mean()
-         
+        # get all stds for every 15 min per location 
+        group_result_std1 = group_data1.groupby("time_point").std()
+        group_result_std2 = group_data2.groupby("time_point").std()
+        group_result_std3 = group_data3.groupby("time_point").std()
+
+        
+        std = [group_result_std1["client_count"].mean(), group_result_std2["client_count"].mean(), group_result_std3["client_count"].mean()]
+        print(std)
+        min_pos = std.index(min(std))
+        print(min_pos)
+        if min_pos == 0:
+            group_result = group_data1.groupby("time_point").mean()
+            print("Using cluster 1")
+        elif min_pos == 1:
+            group_result = group_data2.groupby("time_point").mean()
+            print("Using cluster 2")
+        else:
+            group_result = group_data3.groupby("time_point").mean()
+            print("Using cluster 3")
+        
         # convert capacity count to percentage 
         # pass in whichever group result has the lower std
-        group_result = to_percentage(group_result1, group)
+        group_result = to_percentage(group_result, group)
 
         results.append(group_result.transpose())
-
+        
 
     result = pd.concat(results)  # combine the data for all locations
     result.index = locs
@@ -202,10 +218,10 @@ def multi_predict_today(cluster1, cluster2, cluster3):
 
     return result
 
-def to_percentage(group, name)
+def to_percentage(group, name):
     return np.divide(group, FULL_CAP_DATA[name])
 
-def categorize_data(cursor):
+def categorize_data(cursor, cluster):
 
     """ Return data as pandas dataframe
 
@@ -226,29 +242,29 @@ def categorize_data(cursor):
     
     # date format 2014-07-04
     # construct SQL query to fetch only the data we need
-    query = " WHERE d.dump_time BETWEEN '2014-07-04 ' AND '2014-07-10 ' AND group_id = 130"
+    queryNot = " WHERE d.dump_time BETWEEN '2014-07-04 ' AND '2014-07-10 ' AND group_id = 130"
 
     # cluster 1 -> get all datapoints for same day for 4 years
-    query1 = ' WHERE extract(WEEK from d.dump_time) = ' + \
+    query = ' WHERE extract(WEEK from d.dump_time) = ' + \
             '{} AND extract(DOW from d.dump_time) = '.format(week_of_year) + \
             '{}'.format(day_of_week) 
 
     # cluster 2 -> get all data points for same date week ahead for 4 years
-    query2 = ' WHERE (extract(WEEK from d.dump_time) = ' + \
+    query1 = ' WHERE (extract(WEEK from d.dump_time) = ' + \
             '{} AND extract(DOW from d.dump_time) = '.format(week_of_year) + \
             '{})'.format(day_of_week) + ' OR (extract(WEEK from d.dump_time) = ' + \
             '{}'.format(week_of_year + 1) + \
             ' AND extract(DOW from d.dump_time) = {}) '.format(day_of_week)
 
     # cluster 3 -> get all data points for same date week before for 4 years
-    query3 = ' WHERE (extract(WEEK from d.dump_time) = ' + \
+    query2 = ' WHERE (extract(WEEK from d.dump_time) = ' + \
             '{} AND extract(DOW from d.dump_time) = '.format(week_of_year) + \
             '{})'.format(day_of_week) + ' OR (extract(WEEK from d.dump_time) = ' + \
             '{}'.format(week_of_year - 1) + \
             ' AND extract(DOW from d.dump_time) = {}) '.format(day_of_week)
     
-    # cluster 4 -> get all data point for same date week before 
-    query4 = ' WHERE (extract(WEEK from d.dump_time) = ' + \
+    # cluster 4 -> get all data point for same date week before week after 
+    query3 = ' WHERE (extract(WEEK from d.dump_time) = ' + \
             '{} AND extract(DOW from d.dump_time) = '.format(week_of_year) + \
             '{})'.format(day_of_week) + ' OR (extract(WEEK from d.dump_time) = ' + \
             '{}'.format(week_of_year + 1) + \
@@ -257,8 +273,16 @@ def categorize_data(cursor):
             '{}'.format(week_of_year - 1) + \
             ' AND extract(DOW from d.dump_time) = {})'.format(day_of_week) 
 
+    if cluster == 1:
+        cursor.execute(SELECT + query1)
+        print("trying query1")
+    elif cluster == 2:
+        cursor.execute(SELECT + query2)
+        print("trying query2")
+    else:
+        cursor.execute(SELECT + query3)
+        print("trying query3")
 
-    cursor.execute(SELECT + query4)
     raw_data = cursor.fetchall()
 
     # convert fetched data to a pandas dataframe

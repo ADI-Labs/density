@@ -17,7 +17,7 @@ from . import db, librarytimes
 from . import graphics
 from .config import config, ISO8601Encoder
 from .data import FULL_CAP_DATA
-from .predict import db_to_pandas, predict_today, categorize_data, show_data
+from .predict import db_to_pandas, predict_today, categorize_data, show_data, multi_predict_today
 
 
 app = Flask(__name__)
@@ -410,10 +410,12 @@ def map():
 def show():
     
     # load
-    data = categorize_data(g.cursor)
+    data1 = categorize_data(g.cursor, 1)
+    data2 = categorize_data(g.cursor, 2)
+    data3 = categorize_data(g.cursor, 3)
 
     # predict
-    today_pred = predict_today(data)
+    today_pred = multi_predict_today(data1, data2, data3)
 
     # display
     script, divs = graphics.create_all_buildings(today_pred.transpose())
