@@ -408,12 +408,19 @@ def map():
 
 @app.route('/show')
 def show():
+    
+    # load
+    data = categorize_data(g.cursor)
 
-    f = open('output.txt','w')
-    print(show_data(categorize_data(g.cursor)), file=f)
-    f.close()
+    # predict
+    today_pred = predict_today(data)
 
-    return 'Data successfully uploaded.', 200
+    # display
+    script, divs = graphics.create_all_buildings(today_pred.transpose())
+
+    return render_template('predict.html', divs=divs,
+                           script=script, css_script=CDN.render_js())
+
 
 @app.route('/predict')
 def predict():
