@@ -18,13 +18,25 @@ from . import graphics
 from .config import config, ISO8601Encoder
 from .data import FULL_CAP_DATA
 from .predict import db_to_pandas, predict_today, categorize_data, show_data, multi_predict_today
+from apscheduler.schedulers.background import BackgroundScheduler
 
 
 app = Flask(__name__)
 
 cache = SimpleCache()
+predictionCache = SimpleCache()
 # change the default JSON encoder to handle datetime's properly
 app.json_encoder = ISO8601Encoder
+scheduler = BackgroundScheduler()
+job = scheduler.add_job(make_predictions(predictionCache), 'interval', minutes=60)
+scheduler.start()
+
+def make_predictions(prediction_cache):
+    #Today = timestamp conversion
+    if prediction_cache["Today"]:
+        return None
+    else:
+        prediction_cache["Today"] = predict_today(data)
 
 CU_EMAIL_REGEX = r"^(?P<uni>[a-z\d]+)@.*(columbia|barnard)\.edu$"
 request_date_format = '%Y-%m-%d'
