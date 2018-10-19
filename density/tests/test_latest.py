@@ -17,7 +17,7 @@ def test_latest_data(app, auth_header):
 
 
 def test_latest_group_data(app, auth_header):
-    resp = app.get("/latest/group/148", headers=auth_header)
+    resp = app.get("/latest/group/126", headers=auth_header)
     body = json.loads(resp.data.decode())
 
     assert resp.status_code == 200
@@ -25,12 +25,12 @@ def test_latest_group_data(app, auth_header):
     assert body["data"][0]["building_name"] == "Avery"
     assert body["data"][0]["group_name"] == (
         "Architectural and Fine Arts Library 2")
-    assert body["data"][0]["parent_id"] == 146
-    assert body["data"][0]["group_id"] == 148
+    assert body["data"][0]["parent_id"] == 124
+    assert body["data"][0]["group_id"] == 126
 
 
 def test_latest_building_data(app, auth_header):
-    resp = app.get("/latest/building/103", headers=auth_header)
+    resp = app.get("/latest/building/115", headers=auth_header)
     body = json.loads(resp.data.decode())
 
     assert resp.status_code == 200
@@ -43,7 +43,7 @@ def test_latest_building_data(app, auth_header):
 
 
 def test_window_group_data(app, auth_header):
-    resp = app.get('/window/2014-10-21T19:45:00/2014-10-21T20:15:00/group/144',
+    resp = app.get('/window/2014-10-21T19:45:00/2014-10-21T20:15:00/group/98',
                    headers=auth_header)
     body = json.loads(resp.data.decode())
 
@@ -62,7 +62,7 @@ def test_window_group_data(app, auth_header):
 
 
 def test_window_building_data(app, auth_header):
-    app_query = '/window/2014-10-21T19:45:00/2014-10-21T20:15:00/building/15'
+    app_query = '/window/2014-10-21T19:45:00/2014-10-21T20:15:00/building/99'
     resp = app.get(app_query, headers=auth_header)
     body = json.loads(resp.data.decode())
 

@@ -198,6 +198,11 @@ def insert_density_data(cursor, data):
 
 
     for key, value in data.items():
+        if value['parent_id'] == "117":
+            assert value['name'] == 'Butler Library 301'
+            value['parent_id'] = '115'
+
+
         group = {
             "id": int(key),
             "name": value["name"],

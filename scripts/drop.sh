@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-sudo -u postgres dropdb nycodex
+sudo -u postgres dropdb density
