@@ -157,64 +157,63 @@ p {
 
 body{
   /* background: #f2dede; */
-  font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .search {
-  width: 100%;
-  position: relative;
+    width: 100%;
+    position: relative;
 }
 
 .searchContainer {
-  position: relative;
+    position: relative;
 }
 
 .searchTerm {
-  float: left;
-  width: 100%;
-  border: 2px solid #a5a2a2;
-  padding: 5px;
-  padding-left: 20px;
-  height: 32px;
-  border-radius: 60px;
-  outline: none;
-  color: #9DBFAF;
-  margin: 0px auto 18px auto;
-  background-color:transparent;
-  font-family: 'Lato', sans-serif;
-
+    float: left;
+    width: 100%;
+    border: 2px solid #a5a2a2;
+    padding: 5px;
+    padding-left: 20px;
+    height: 32px;
+    border-radius: 60px;
+    outline: none;
+    color: #9DBFAF;
+    margin: 0px auto 18px auto;
+    background-color:transparent;
+    font-family: 'Lato', sans-serif;
 }
 
 .searchTerm:focus{
-  border: 3px solid #2285c6;
-  color: #2285c6;
-  background-color: white;
-  font-size: 15px;
+    border: 3px solid #2285c6;
+    color: #2285c6;
+    background-color: white;
+    font-size: 15px;
 }
 
 .searchButton {
-  position: absolute;  
-  right: 18px;
-  top: 4px;
-  width: 30px;
-  border: none;
-  background: transparent;
-  text-align: center;
-  color: #c5c2c2;
-  font-size: medium;
+    position: absolute;  
+    right: 18px;
+    top: 4px;
+    width: 30px;
+    border: none;
+    background: transparent;
+    text-align: center;
+    color: #c5c2c2;
+    font-size: medium;
 }
 
 .searchButton:focus {
-  color: #a5a2a2;
+    color: #a5a2a2;
 }
 
 
 .wrap{
-  width: 65%;
-  position: relative;
-  margin-top: 18px;
-  left: 50%;
-  transform: translate(-50%, -50%);
+    width: 65%;
+    position: relative;
+    margin-top: 18px;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 
@@ -240,22 +239,8 @@ button.clear:hover {
     color: #2385c6;
 }
 
-/*.locationBtnContainer{
-    display: inline-block;
-    width: 100%;
-}
-
-
-
-.openBtnContainer{
-    display: inline-block;
-    width: 100%;
-}
-*/
-
 #locationBtnContainer{
     display:inline;
-   
     padding: 0 10px;
     position: relative;
     float: left;
@@ -269,16 +254,6 @@ button.clear:hover {
     text-align: right;
     float: right;
 }
-
-/*input[name="location-filter"] {
-
-    visibility:hidden;
-    
-    &: hover{
-        background-color: #eee;
-    }
-    
-}*/
 
 .btnContainer input{
     display: none;
@@ -331,7 +306,7 @@ button.clear:hover {
 }
 
 .graph{
-width: 100%;
+    width: 100%;
     margin: 0 auto; 
 }
 
@@ -445,7 +420,7 @@ img {
     text-align: center;
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 666px) {
     .logoContainer {
         padding: 10px;
     }
@@ -582,25 +557,12 @@ img {
     }
 
     .btnContainer{
-        width: 100%;
         margin: 1px auto 4px auto;
     }
 
-    #locationBtnContainer{
-        display:inline;
-        width: 100%;
-        padding: 0 10px;
-        position: relative;
+    #locationBtnContainer, #openBtnContainer{
         text-align: center;
-    }
-
-    #openBtnContainer{
-        display: inline;
         width: 100%;
-        padding: 0 10px;
-        position: relative;
-        text-align: center;
     }
 
 }
-

@@ -9,38 +9,13 @@
 
 <div class="container">
   <div class="col-12"  style="text-align:center;">
-    <h4 style="margin-top: 30px;">Below is the predicted capacity of each building for today.<br><br></h4>
+    <h4 style="margin: 30px 0;">Below is the predicted capacity of each building for today.</h4>
   </div>
 </div>
 
-<div class="container">
-        <div class="searchContainer">
-            <input type="text" class="searchTerm" id="search" onkeyup="searchLocations()" autocomplete= "off">
-            <button type="submit" class="searchButton">
-                <i class="fa fa-search"></i>
-            </button>
-        </div>
-    </div>
+{% include 'search.html' %}
 
-    <div class="container">
-        <div class = "btnContainer">
-          <div id="locationBtnContainer" align="left">
-              <input type="radio"  name="location-filter" id="library" value="library" onclick = "searchLocations()"/> <label for="library"> Library </label>
-              <input type="radio"  name="location-filter" id="center" value="center" onclick = "searchLocations()"/> <label for="center"> Student Center </label>
-              <input type="radio"  name="location-filter" id="dining" value="dining" onclick = "searchLocations()"/> <label for="dining"> Dining Hall </label>
-              <button class="clear" onclick="clearFilter('location-filter')">(x)</button>
-          </div>
-
-          <div id="openBtnContainer" align="right">
-              <input type="radio" class="filterTab" name="open-filter" id="open" value="True" onclick = "searchLocations()"/> <label for="open"> Open Now </label>
-              <input type="radio" class="filterTab" name="open-filter" id="closed" value="False" onclick = "searchLocations()"/> <label for="closed">Closed </label>
-              <button class="clear" onclick="clearFilter('open-filter')">(x)</button>
-          </div>
-        </div>
-    </div>
-
-
-<div class="listContainer">
+<div class="listContainer" style="padding-top: 0;">
   <ul class="list-group">
     {% for location_name, d in divs.items() %}
     <li class="list-group-item" data-name="{{ location_name }}" 
@@ -55,52 +30,5 @@
     {% endfor %}
   </ul>
 </div>
-<script type="text/javascript">
-  function searchLocations() {
-    var li = document.getElementsByTagName('li');
-    var searchQuery = document.getElementById('search').value.toLowerCase();
-    var locationFilter = '';
-    var openFilter = '';
 
-    var locationBtns = document.getElementsByName('location-filter');
-  
-    for(var i = 0; i < locationBtns.length; i++){
-      if(locationBtns[i].checked){
-        locationFilter = locationBtns[i].value;
-       }
-     }
-
-    var openBtns = document.getElementsByName('open-filter');
-  
-    for(var i = 0; i < openBtns.length; i++){
-      if(openBtns[i].checked){
-        openFilter = openBtns[i].value;
-       }
-     }
-
-
-    for (i = 0; i < li.length; i++) {
-      var name = li[i].getAttribute('data-name').toLowerCase();
-      var nickname = li[i].getAttribute('data-nickname').toLowerCase();
-      var locationType = li[i].getAttribute('data-location-type');
-      var openNow = li[i].getAttribute('data-open-now');
-
-      if ((!name.includes(searchQuery) && !nickname.includes(searchQuery)) ||
-          (locationFilter != '' && locationFilter != locationType) ||
-          (openFilter != '' && openFilter != openNow)) {
-        li[i].style.display = 'none';
-      }
-      else {
-        li[i].style.display = 'block';
-      }
-    }
-  }
-  
-  function clearFilter(name) {
-    var ele = document.getElementsByName(name);
-    for(var i=0; i<ele.length; i++)
-      ele[i].checked = false;
-    searchLocations();
-  }
-</script>
 {% endblock %}
