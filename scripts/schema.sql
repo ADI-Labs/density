@@ -26,7 +26,6 @@ CREATE TABLE density_data (
 );
 
 CREATE INDEX ON density_data (group_id, dump_time);
-CREATE INDEX ON density_data (parent_id);
 CREATE TABLE oauth_data (
     uni  TEXT NOT NULL,
     code VARCHAR(64) NOT NULL,
@@ -34,36 +33,36 @@ CREATE TABLE oauth_data (
 );
 
 INSERT INTO buildings (id, name) VALUES
-    (103, 'Butler'),
-    (146, 'Avery'),
-    (15,  'Northwest Corner Building'),
-    (2,   'Uris'),
-    (62,  'East Asian Library'),
-    (75,  'John Jay'),
-    (79,  'Lehman Library'),
-    (84,  'Lerner');
+    (117, 'Butler'),
+    (124, 'Avery'),
+    (99, 'Northwest Corner Building'),
+    (2, 'Uris'),
+    (97, 'East Asian Library'),
+    (153, 'John Jay'),
+    (109, 'Lehman Library'),
+    (101, 'Lerner');
 
 INSERT INTO routers (id, name, building_id) VALUES
-    (152, 'Lerner 3', 84),
-    (150, 'Lerner 1', 84),
-    (155, 'JJ''s Place', 75),
-    (130, 'Butler Library 2', 103),
-    (148, 'Architectural and Fine Arts Library 2', 146),
-    (134, 'Butler Library 6', 103),
-    (144, 'Starr East Asian Library', 62),
-    (151, 'Lerner 2', 84),
-    (85,  'Roone Arledge Auditorium', 84),
-    (133, 'Butler Library 5', 103),
-    (140, 'Lehman Library 3', 79),
-    (171, 'Butler Library 301', 103),
-    (153, 'Lerner 4', 84),
-    (145, 'Science and Engineering Library', 15),
-    (149, 'Architectural and Fine Arts Library 3', 146),
-    (139, 'Lehman Library 2', 79),
-    (154, 'Lerner 5', 84),
-    (131, 'Butler Library 3', 103),
-    (125, 'John Jay Dining Hall', 75),
-    (138, 'Butler Library stk', 103),
-    (132, 'Butler Library 4', 103),
-    (23,  'Uris/Watson Library',  2),
-    (147, 'Architectural and Fine Arts Library 1', 146);
+    (104, 'Lerner 3', 101),
+    (102, 'Lerner 1', 101),
+    (192, 'JJ''s Place', 153),
+    (116, 'Butler Library 2', 117),
+    (126, 'Architectural and Fine Arts Library 2', 124),
+    (121, 'Butler Library 6', 117),
+    (98, 'Starr East Asian Library', 97),
+    (103, 'Lerner 2', 101),
+    (107, 'Roone Arledge Auditorium', 101),
+    (120, 'Butler Library 5', 117),
+    (111, 'Lehman Library 3', 109),
+    (118, 'Butler Library 301', 117),
+    (105, 'Lerner 4', 101),
+    (100, 'Science and Engineering Library', 99),
+    (127, 'Architectural and Fine Arts Library 3', 124),
+    (110, 'Lehman Library 2', 109),
+    (106, 'Lerner 5', 101),
+    (117, 'Butler Library 3', 117),
+    (155, 'John Jay Dining Hall', 153),
+    (122, 'Butler Library stk', 117),
+    (119, 'Butler Library 4', 117),
+    (96, 'Uris/Watson Library', 2),
+    (125, 'Architectural and Fine Arts Library 1', 124);
