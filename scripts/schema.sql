@@ -33,7 +33,7 @@ CREATE TABLE oauth_data (
 );
 
 INSERT INTO buildings (id, name) VALUES
-    (117, 'Butler'),
+    (115, 'Butler'),
     (124, 'Avery'),
     (99, 'Northwest Corner Building'),
     (2, 'Uris'),
