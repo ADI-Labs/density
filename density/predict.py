@@ -277,8 +277,8 @@ def categorize_data(cursor, cluster):
         Density data in a Dataframe
     """
 
-    #today = datetime.datetime.today()
-    today = time
+    today = datetime.datetime.today()
+    #today = time
 
     # PostgreSQL's days do not match Python's
     if (today.weekday() + 1 == 7):
