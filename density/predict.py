@@ -278,7 +278,7 @@ def categorize_data(cursor, cluster):
     """
 
     today = datetime.datetime.today()
-    #today = time
+    # today = time
 
     # PostgreSQL's days do not match Python's
     if (today.weekday() + 1 == 7):
