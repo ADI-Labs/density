@@ -23,6 +23,15 @@
                                 data-location-type="{{ auxdata[location_name]['type'] }}"
                                 data-open-now="{{ auxdata[location_name]['open'] }}">
       <h4>{{location_name}}</h4>
+      <select class="day-picker">
+        <option value="0">Sun</option>
+        <option value="1">Mon</option>
+        <option value="2">Tues</option>
+        <option value="3">Wed</option>
+        <option value="4">Thurs</option>
+        <option value="5">Fri</option>
+        <option valu="6">Sat</option>
+      </select>
       <div class='graph'>
         {{ d|safe }}
       </div>
@@ -31,4 +40,7 @@
   </ul>
 </div>
 
+{% endblock %}
+{% block scripts %}
+    <script src="{{ url_for('static', filename='js/predict.js') }}"></script>
 {% endblock %}

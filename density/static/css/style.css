@@ -275,6 +275,15 @@ button.clear:hover {
     color: #2385c6;
 }
 
+select.day-picker {
+    margin-left: 24px;
+    border-color: #2285c6;
+    border-radius: 4px;
+    padding: 2px 8px;
+    color: #2285c6;
+    outline: none;
+    border-width: 2px;
+}
 
 #mapContainer {
     width: 100%;
@@ -349,6 +358,10 @@ button.clear:hover {
     border: 0;
     margin-bottom: 30px;
     padding: 15px 30px;
+}
+
+.list-group-item h4 {
+    display: inline-block;
 }
 
 .progress {
@@ -564,5 +577,9 @@ img {
         text-align: center;
         width: 100%;
     }
-
+    select.day-picker {
+        margin-left: 0;
+        margin-bottom: 10px;
+        padding: 0;
+    }
 }
