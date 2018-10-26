@@ -1,6 +1,6 @@
 from bokeh.embed import components
 from bokeh.plotting import figure
-from bokeh.models import Range1d
+from bokeh.models import HoverTool, ColumnDataSource
 import numpy as np
 import pandas
 
@@ -63,9 +63,21 @@ def create_prediction_plot(time, prediction):
     p.yaxis.major_label_orientation = "vertical"
     p.yaxis.axis_line_width = 3
 
-    
+    # use ColumnDataSource to parse in data to enable tooltips
+    source = ColumnDataSource(data={
+    'time'      : time,
+    'capacity'    : prediction,
+    })
 
     #  add a line renderer
-    p.line(x=time, y=prediction)
+    p.line(x='time', y='capacity', source = source)
+
+    p.add_tools(HoverTool(
+    tooltips=[
+        ( 'capacity', '@capacity %'  ),
+    ],
+    # display a tooltip whenever the cursor is vertically in line with a glyph
+    mode='vline'
+    ))
 
     return p
