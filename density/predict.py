@@ -262,7 +262,7 @@ def multi_predict(cluster,
 def to_percentage(group, name):
     return np.divide(group, FULL_CAP_DATA[name])
 
-def categorize_data(cursor, cluster):
+def categorize_data(cursor, cluster, time):
 
     """ Return data as pandas dataframe
 
@@ -277,8 +277,8 @@ def categorize_data(cursor, cluster):
         Density data in a Dataframe
     """
 
-    today = datetime.datetime.today()
-    #today = time
+    #today = datetime.datetime.today()
+    today = time
 
     # PostgreSQL's days do not match Python's
     if (today.weekday() + 1 == 7):

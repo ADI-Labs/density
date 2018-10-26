@@ -31,13 +31,53 @@ predictionCache = SimpleCache()
 # change the default JSON encoder to handle datetime's properly
 app.json_encoder = ISO8601Encoder
 scheduler = BackgroundScheduler()
-job = scheduler.add_job(sample_test, 'cron', day_of_week='sun',
-                        hour=6, minute=30, end_date='2020-05-30')
+#job = scheduler.add_job(sample_test, 'cron', day_of_week='sun',
+                        #hour=6, minute=30, end_date='2020-05-30')
 scheduler.start()
 job = scheduler.add_job(sample_test, 'interval', minutes = 1)
 
 def sample_test():
     print("This is a test of apscheduler")
+    # load data for every cluster
+    for i in range(1,8):
+        date = datetime.datetime.today()
+        date += datetime.timedelta(days=i)
+        data = categorize_data(g.cursor, 0, date)
+        data1 = categorize_data(g.cursor, 1, date)
+        data2 = categorize_data(g.cursor, 2, date)
+        data3 = categorize_data(g.cursor, 3, date)
+        data4 = categorize_data(g.cursor, 4, date)
+        data5 = categorize_data(g.cursor, 5, date)
+        data6 = categorize_data(g.cursor, 6, date)
+
+    # make predictions using all clusters
+        today_pred = multi_predict(data, data1, data2,
+                                     data3, data4, data5, data6)
+
+    # display data
+        print(today_pred)
+        script, divs = graphics.create_all_buildings(today_pred.transpose())
+        if (i == 1):
+            predictionCache.set('monday_script', script, timeout=0)
+            predictionCache.set('monday_div', divs, timeout=0)
+        if (i == 2):
+            predictionCache.set('tuesday_script', script, timeout=0)
+            predictionCache.set('tuesday_div', divs, timeout=0)
+        if (i == 3):
+            predictionCache.set('wednesday_script', script, timeout=0)
+            predictionCache.set('wednesday_div', divs, timeout=0)
+        if (i == 4):
+            predictionCache.set('thursday_script', script, timeout=0)
+            predictionCache.set('thursday_div', divs, timeout=0)
+        if (i == 5):
+            predictionCache.set('friday_script', script, timeout=0)
+            predictionCache.set('friday_div', divs, timeout=0)
+        if (i == 6):
+            predictionCache.set('saturday_script', script, timeout=0)
+            predictionCache.set('saturday_div', divs, timeout=0)
+        if (i == 7):
+            predictionCache.set('sunday_script', script, timeout=0)
+            predictionCache.set('sunday_div', divs, timeout=0)
 
 def make_predictions(prediction_cache):
 
@@ -432,24 +472,53 @@ def map():
 @app.route('/new_predict')
 def new_predict():
 
-    # load data for every cluster
-    data = categorize_data(g.cursor, 0)
-    data1 = categorize_data(g.cursor, 1)
-    data2 = categorize_data(g.cursor, 2)
-    data3 = categorize_data(g.cursor, 3)
-    data4 = categorize_data(g.cursor, 4)
-    data5 = categorize_data(g.cursor, 5)
-    data6 = categorize_data(g.cursor, 6)
+    auxdata = locationauxdata.get_location_aux_data()
+    times = librarytimes.dict_for_time()
+    for i in range(1,8):
+        date = datetime.datetime.today()
+        date += datetime.timedelta(days=i)
+        data = categorize_data(g.cursor, 0, date)
+        data1 = categorize_data(g.cursor, 1, date)
+        data2 = categorize_data(g.cursor, 2, date)
+        data3 = categorize_data(g.cursor, 3, date)
+        data4 = categorize_data(g.cursor, 4, date)
+        data5 = categorize_data(g.cursor, 5, date)
+        data6 = categorize_data(g.cursor, 6, date)
 
     # make predictions using all clusters
-    today_pred = multi_predict_today(data, data1, data2,
+        today_pred = multi_predict(data, data1, data2,
                                      data3, data4, data5, data6)
 
     # display data
-    script, divs = graphics.create_all_buildings(today_pred.transpose())
+        print(today_pred)
+        script, divs = graphics.create_all_buildings(today_pred.transpose())
+        if (i == 1):
+            predictionCache.set('monday_script', script, timeout=0)
+            predictionCache.set('monday_div', divs, timeout=0)
+        if (i == 2):
+            predictionCache.set('tuesday_script', script, timeout=0)
+            predictionCache.set('tuesday_div', divs, timeout=0)
+        if (i == 3):
+            predictionCache.set('wednesday_script', script, timeout=0)
+            predictionCache.set('wednesday_div', divs, timeout=0)
+        if (i == 4):
+            predictionCache.set('thursday_script', script, timeout=0)
+            predictionCache.set('thursday_div', divs, timeout=0)
+        if (i == 5):
+            predictionCache.set('friday_script', script, timeout=0)
+            predictionCache.set('friday_div', divs, timeout=0)
+        if (i == 6):
+            predictionCache.set('saturday_script', script, timeout=0)
+            predictionCache.set('saturday_div', divs, timeout=0)
+        if (i == 7):
+            predictionCache.set('sunday_script', script, timeout=0)
+            predictionCache.set('sunday_div', divs, timeout=0)
+            
+    divs = predictionCache.get('monday_div')
+    script = predictionCache.get('monday_script')
 
     return render_template('predict.html', divs=divs,
-                           script=script, css_script=CDN.render_js())
+                           script=script, css_script=CDN.render_js(), times=times, auxdata=auxdata)
 
 
 @app.route('/predict')
@@ -472,6 +541,7 @@ def predict():
         cache.set('predictToday', today_pred, timeout=10600)
 
     # make plots from predictions
+    print(today_pred)
     script = cache.get('predictScript')
     divs = cache.get('predictDivs')
 
