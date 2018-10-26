@@ -203,7 +203,10 @@ def multi_predict(cluster,
         group_data_mean5 = group_data5.groupby("time_point").mean()
         group_data_mean6 = group_data6.groupby("time_point").mean()
 
-        temp_df = group_result_std.copy()
+        # print(group_data.index)
+        temp_df = group_result_std.copy(deep=True)
+        #print(temp_df.index)
+
 
         # for every row, use the row with the lowest std from all clusters
         for x in range(len(group_result_std.index)):
@@ -277,8 +280,13 @@ def categorize_data(cursor, cluster, time):
         Density data in a Dataframe
     """
 
+<<<<<<< HEAD
     #today = datetime.datetime.today()
     today = time
+=======
+    today = datetime.datetime.today()
+    # today = time
+>>>>>>> a363c6c16b9b94feae9fd56ff97d806f8a5d5927
 
     # PostgreSQL's days do not match Python's
     if (today.weekday() + 1 == 7):
@@ -384,10 +392,11 @@ def categorize_data(cursor, cluster, time):
            .set_index("dump_time") \
            .assign(group_name=lambda df: df["group_name"].astype('category'),
                    parent_id=lambda df: df["parent_id"].astype('category'))
-
+    print(df.index)
     # add a new time point column to the datafram
     time_points = zip(df.index.hour, df.index.minute)
-    time_points = ["{}:{}".format(x[0], x[1]) for x in time_points]
+
+    time_points = ["{}:{:02d}".format(x[0], x[1]) for x in time_points]
     df["time_point"] = time_points
 
     return df
