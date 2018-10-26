@@ -39,4 +39,49 @@ $(document).ready(function() {
   }
 });
 
+function searchLocations() {
+  var li = document.getElementsByTagName('li');
+  var searchQuery = document.getElementById('search').value.toLowerCase();
+  var locationFilter = '';
+  var openFilter = '';
 
+  var locationBtns = document.getElementsByName('location-filter');
+
+  for(var i = 0; i < locationBtns.length; i++){
+    if(locationBtns[i].checked){
+      locationFilter = locationBtns[i].value;
+     }
+   }
+
+  var openBtns = document.getElementsByName('open-filter');
+
+  for(var i = 0; i < openBtns.length; i++){
+    if(openBtns[i].checked){
+      openFilter = openBtns[i].value;
+     }
+   }
+
+
+  for (i = 0; i < li.length; i++) {
+    var name = li[i].getAttribute('data-name').toLowerCase();
+    var nickname = li[i].getAttribute('data-nickname').toLowerCase();
+    var locationType = li[i].getAttribute('data-location-type');
+    var openNow = li[i].getAttribute('data-open-now');
+
+    if ((!name.includes(searchQuery) && !nickname.includes(searchQuery)) ||
+        (locationFilter != '' && locationFilter != locationType) ||
+        (openFilter != '' && openFilter != openNow)) {
+      li[i].style.display = 'none';
+    }
+    else {
+      li[i].style.display = 'block';
+    }
+  }
+}
+
+function clearFilter(name) {
+  var ele = document.getElementsByName(name);
+  for(var i=0; i<ele.length; i++)
+    ele[i].checked = false;
+  searchLocations();
+}

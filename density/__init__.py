@@ -13,11 +13,11 @@ import psycopg2.extras
 import psycopg2.pool
 from werkzeug.contrib.cache import SimpleCache
 
-from . import db, librarytimes
+from . import db, librarytimes, locationauxdata
 from . import graphics
 from .config import config, ISO8601Encoder
 from .data import FULL_CAP_DATA
-from .predict import categorize_data, multi_predict_today
+from .predict import categorize_data, multi_predict
 from .predict import db_to_pandas, predict_today
 from apscheduler.schedulers.background import BackgroundScheduler
 
@@ -32,8 +32,6 @@ scheduler = BackgroundScheduler()
 job = scheduler.add_job(sample_test, 'cron', day_of_week='sun',
                         hour=6, minute=30, end_date='2020-05-30')
 scheduler.start()
-job = scheduler.add_job(sample_test, 'interval', minutes = 1)
-
 
 def make_predictions():
     data = categorize_data(g.cursor, 0)
@@ -65,6 +63,9 @@ def make_predictions():
     predictionCache.set('Friday', fri_prediction, timeout=0)
     predictionCache.set('Saturday', sat_prediction, timeout=0)
     predictionCache.set('Sunday', sun_prediction, timeout=0)
+
+def sample_test():
+    print("This is a test of apscheduler")
 
 CU_EMAIL_REGEX = r"^(?P<uni>[a-z\d]+)@.*(columbia|barnard)\.edu$"
 request_date_format = '%Y-%m-%d'
@@ -431,11 +432,12 @@ def capacity():
     cur_data = db.get_latest_data(g.cursor)
     last_updated = cur_data[0]['dump_time'].strftime("%B %d %Y, %I:%M %p")
     locations = annotate_fullness_percentage(cur_data)
+    auxdata = locationauxdata.get_location_aux_data()
     # times = {'Lerner 1' : 1200, 'Lerner 2' : 1300}
     times = librarytimes.dict_for_time()
     return render_template(
         'capacity.html', locations=locations,
-        last_updated=last_updated, times=times)
+        last_updated=last_updated, times=times, auxdata=auxdata)
 
 
 @app.route('/map')
@@ -448,6 +450,8 @@ def map():
 
 @app.route('/new_predict')
 def new_predict():
+    auxdata = locationauxdata.get_location_aux_data()
+    times = librarytimes.dict_for_time()
 
     # load data for every cluster
     data = categorize_data(g.cursor, 0)
@@ -459,18 +463,21 @@ def new_predict():
     data6 = categorize_data(g.cursor, 6)
 
     # make predictions using all clusters
-    today_pred = multi_predict_today(data, data1, data2,
-                                    data3, data4, data5, data6)
+    today_pred = multi_predict(data, data1, data2,
+                               data3, data4, data5, data6)
 
     # display data
     script, divs = graphics.create_all_buildings(today_pred.transpose())
 
     return render_template('predict.html', divs=divs,
-                           script=script, css_script=CDN.render_js())
+                           script=script, css_script=CDN.render_js(),
+                           times=times, auxdata=auxdata)
 
 
 @app.route('/predict')
 def predict():
+    auxdata = locationauxdata.get_location_aux_data()
+    times = librarytimes.dict_for_time()
     # loading data from current database connection
     data = cache.get('predictData')
 
@@ -500,7 +507,8 @@ def predict():
     script, divs = graphics.create_all_buildings(today_pred.transpose())
     '''
     return render_template('predict.html', divs=divs,
-                           script=script, css_script=CDN.render_js())
+                           script=script, css_script=CDN.render_js(),
+                           times=times, auxdata=auxdata)
 
 
 @app.route('/upload', methods=['POST'])

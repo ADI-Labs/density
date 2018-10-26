@@ -127,6 +127,8 @@ def predict_today(past_data):
         leading, trailing = splited[0], splited[1]
         if len(leading) == 1:
             leading = "0" + leading
+        if trailing == "0":
+            trailing = "00"
         new_index = "{}:{}".format(leading, trailing)
         new_indexes.append(new_index)
 
@@ -135,13 +137,13 @@ def predict_today(past_data):
 
     return result
 
-def multi_predict_today(cluster,
-                        cluster1,
-                        cluster2,
-                        cluster3,
-                        cluster4,
-                        cluster5,
-                        cluster6):
+def multi_predict(cluster,
+                  cluster1,
+                  cluster2,
+                  cluster3,
+                  cluster4,
+                  cluster5,
+                  cluster6):
     """Return a dataframe of predicted counts for today
     where the indeces are timestamps of the day and columns are locations
     Parameters
@@ -276,6 +278,7 @@ def categorize_data(cursor, cluster):
     """
 
     today = datetime.datetime.today()
+    # today = time
 
     # PostgreSQL's days do not match Python's
     if (today.weekday() + 1 == 7):
@@ -388,3 +391,17 @@ def categorize_data(cursor, cluster):
     df["time_point"] = time_points
 
     return df
+
+
+
+def predict_date(date):
+
+
+    # load data for every cluster
+    data = categorize_data(g.cursor, 0)
+    data1 = categorize_data(g.cursor, 1)
+    data2 = categorize_data(g.cursor, 2)
+    data3 = categorize_data(g.cursor, 3)
+    data4 = categorize_data(g.cursor, 4)
+    data5 = categorize_data(g.cursor, 5)
+    data6 = categorize_data(g.cursor, 6)
