@@ -21,32 +21,51 @@ from .predict import categorize_data, multi_predict
 from .predict import db_to_pandas, predict_today
 from apscheduler.schedulers.background import BackgroundScheduler
 
-
 app = Flask(__name__)
 
 def sample_test():
     print("This is a test of apscheduler")
+
 cache = SimpleCache()
 predictionCache = SimpleCache()
-# change the default JSON encoder to handle datetime's properly
-app.json_encoder = ISO8601Encoder
 scheduler = BackgroundScheduler()
 job = scheduler.add_job(sample_test, 'cron', day_of_week='sun',
                         hour=6, minute=30, end_date='2020-05-30')
 scheduler.start()
-job = scheduler.add_job(sample_test, 'interval', minutes = 1)
+
+def make_predictions():
+    data = categorize_data(g.cursor, 0)
+    data1 = categorize_data(g.cursor, 1)
+    data2 = categorize_data(g.cursor, 2)
+    data3 = categorize_data(g.cursor, 3)
+    data4 = categorize_data(g.cursor, 4)
+    data5 = categorize_data(g.cursor, 5)
+    data6 = categorize_data(g.cursor, 6)
+    current_data = db_to_pandas(g.cursor)
+    mon_prediction = multi_predict_today(data, data1, data2,
+                                    data3, data4, data5, data6, 0)
+    tue_prediction = multi_predict_today(data, data1, data2,
+                                    data3, data4, data5, data6, 1)
+    wed_prediction = multi_predict_today(data, data1, data2,
+                                    data3, data4, data5, data6, 2)
+    thu_prediction = multi_predict_today(data, data1, data2,
+                                    data3, data4, data5, data6, 3)
+    fri_prediction = multi_predict_today(data, data1, data2,
+                                    data3, data4, data5, data6, 4)
+    sat_prediction = multi_predict_today(data, data1, data2,
+                                    data3, data4, data5, data6, 5)
+    sun_prediction = multi_predict_today(data, data1, data2,
+                                    data3, data4, data5, data6, 6)
+    predictionCache.set('Monday', mon_prediction, timeout=0)
+    predictionCache.set('Tuesday', tue_prediction, timeout=0)
+    predictionCache.set('Wednesday', wed_prediction, timeout=0)
+    predictionCache.set('Thursday', thu_prediction, timeout=0)
+    predictionCache.set('Friday', fri_prediction, timeout=0)
+    predictionCache.set('Saturday', sat_prediction, timeout=0)
+    predictionCache.set('Sunday', sun_prediction, timeout=0)
 
 def sample_test():
     print("This is a test of apscheduler")
-
-def make_predictions(prediction_cache):
-
-
-    # Today = timestamp conversion
-    if prediction_cache["Today"]:
-        return None
-    else:
-        prediction_cache["Today"] = predict_today(data)
 
 CU_EMAIL_REGEX = r"^(?P<uni>[a-z\d]+)@.*(columbia|barnard)\.edu$"
 request_date_format = '%Y-%m-%d'
