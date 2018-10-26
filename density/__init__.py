@@ -17,7 +17,7 @@ from . import db, librarytimes
 from . import graphics
 from .config import config, ISO8601Encoder
 from .data import FULL_CAP_DATA
-from .predict import db_to_pandas, predict_today, categorize_data, show_data, multi_predict_today
+from .predict import db_to_pandas, predict_today, categorize_data, multi_predict_today
 
 
 app = Flask(__name__)
@@ -406,18 +406,22 @@ def map():
     # Render template has an SVG image whose colors are changed by % full
     return render_template('map.html', locations=locations)
 
-@app.route('/show')
-def show():
+@app.route('/new_predict')
+def new_predict():
     
-    # load
+    # load data for every cluster
+    data = categorize_data(g.cursor, 0)
     data1 = categorize_data(g.cursor, 1)
     data2 = categorize_data(g.cursor, 2)
     data3 = categorize_data(g.cursor, 3)
+    data4 = categorize_data(g.cursor, 4)
+    data5 = categorize_data(g.cursor, 5)
+    data6 = categorize_data(g.cursor, 6)
 
-    # predict
-    today_pred = multi_predict_today(data1, data2, data3)
+    # make predictions using all clusters
+    today_pred = multi_predict_today(data, data1, data2, data3, data4, data5, data6)
 
-    # display
+    # display data
     script, divs = graphics.create_all_buildings(today_pred.transpose())
 
     return render_template('predict.html', divs=divs,
