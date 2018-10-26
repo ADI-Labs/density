@@ -19,33 +19,24 @@ from .config import config, ISO8601Encoder
 from .data import FULL_CAP_DATA
 from .predict import categorize_data, multi_predict_today
 from .predict import db_to_pandas, predict_today
+from apscheduler.schedulers.background import BackgroundScheduler
 
 app = Flask(__name__)
 
 def sample_test():
     print("This is a test of apscheduler")
+
 cache = SimpleCache()
 predictionCache = SimpleCache()
-# change the default JSON encoder to handle datetime's properly
-app.json_encoder = ISO8601Encoder
 scheduler = BackgroundScheduler()
 job = scheduler.add_job(sample_test, 'cron', day_of_week='sun',
                         hour=6, minute=30, end_date='2020-05-30')
 scheduler.start()
-#job = scheduler.add_job(sample_test, 'interval', minutes = 1)
-
-def sample_test():
-    print("This is a test of apscheduler")
-
-def make_predictions(prediction_cache):
+job = scheduler.add_job(sample_test, 'interval', minutes = 1)
 
 
-    # Today = timestamp conversion
-    if prediction_cache["Today"]:
-        return None
-    else:
-        prediction_cache["Today"] = predict_today(data)
->>>>>>> d09f1909bc92b4665a206bc0eb6e58125f51ca5f
+#def make_predictions():
+/#    predictionCache.set('Monday',)
 
 CU_EMAIL_REGEX = r"^(?P<uni>[a-z\d]+)@.*(columbia|barnard)\.edu$"
 request_date_format = '%Y-%m-%d'
