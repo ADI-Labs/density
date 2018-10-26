@@ -431,6 +431,7 @@ def map():
 
 @app.route('/new_predict')
 def new_predict():
+
     auxdata = locationauxdata.get_location_aux_data()
     times = librarytimes.dict_for_time()
 
@@ -477,7 +478,7 @@ def predict():
     # make plots from predictions
     script = cache.get('predictScript')
     divs = cache.get('predictDivs')
-
+    print(today_pred.transpose().head())
     if script is None:
         script, divs = graphics.create_all_buildings(today_pred.transpose())
         cache.set('predictScript', script, timeout=10600)
@@ -487,6 +488,7 @@ def predict():
     today_pred = predict_today(data)
     script, divs = graphics.create_all_buildings(today_pred.transpose())
     '''
+    
     return render_template('predict.html', divs=divs,
                            script=script, css_script=CDN.render_js(),
                            times=times, auxdata=auxdata)
