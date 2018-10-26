@@ -46,8 +46,10 @@ def create_prediction_plot(time, prediction):
     # timeInterval = ["00:00", "06:00", "12:00", "18:00", "23:00"]
 
     p = figure(x_axis_type="datetime", y_range=(0, 100), 
-               tools='pan,wheel_zoom,xbox_select,reset', toolbar_location="right", 
-               toolbar_sticky=False,plot_width=1800, plot_height=600, sizing_mode="scale_width")
+               tools='pan,wheel_zoom,reset', toolbar_location="right", active_drag="pan", active_scroll="wheel_zoom",
+               toolbar_sticky=False, sizing_mode="stretch_both")
+    p.toolbar.logo = None
+    p.toolbar_location = None
 
 
     #  set format for x axis

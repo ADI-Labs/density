@@ -317,6 +317,7 @@ select.day-picker {
 .graph{
     width: 100%;
     margin: 0 auto; 
+    height: 350px;
 }
 
 .graphImg{
@@ -450,6 +451,10 @@ img {
         padding: 0 15px;
     }
 
+    .graph {
+        height: 250px;
+    }
+
     #nav-api {
         display: none;
     }
@@ -578,6 +583,7 @@ img {
         width: 100%;
     }
     select.day-picker {
+        display: block;
         margin-left: 0;
         margin-bottom: 10px;
         padding: 0;
