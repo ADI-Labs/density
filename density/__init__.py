@@ -19,6 +19,8 @@ from .config import config, ISO8601Encoder
 from .data import FULL_CAP_DATA
 from .predict import categorize_data, multi_predict_today
 from .predict import db_to_pandas, predict_today
+from apscheduler.schedulers.background import BackgroundScheduler
+
 
 app = Flask(__name__)
 
@@ -32,7 +34,7 @@ scheduler = BackgroundScheduler()
 job = scheduler.add_job(sample_test, 'cron', day_of_week='sun',
                         hour=6, minute=30, end_date='2020-05-30')
 scheduler.start()
-#job = scheduler.add_job(sample_test, 'interval', minutes = 1)
+job = scheduler.add_job(sample_test, 'interval', minutes = 1)
 
 def sample_test():
     print("This is a test of apscheduler")
