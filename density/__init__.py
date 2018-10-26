@@ -17,9 +17,8 @@ from . import db, librarytimes
 from . import graphics
 from .config import config, ISO8601Encoder
 from .data import FULL_CAP_DATA
-from .predict import db_to_pandas, predict_today, categorize_data, show_data, multi_predict_today
-from apscheduler.schedulers.background import BackgroundScheduler
-import pytz
+from .predict import categorize_data, multi_predict_today
+from .predict import db_to_pandas, predict_today
 
 app = Flask(__name__)
 
@@ -30,10 +29,23 @@ predictionCache = SimpleCache()
 # change the default JSON encoder to handle datetime's properly
 app.json_encoder = ISO8601Encoder
 scheduler = BackgroundScheduler()
-job = scheduler.add_job(sample_test, 'cron', day_of_week = 'fri', hour = 7, minute=00, end_date='2020-05-30')
+job = scheduler.add_job(sample_test, 'cron', day_of_week='sun',
+                        hour=6, minute=30, end_date='2020-05-30')
 scheduler.start()
 #job = scheduler.add_job(sample_test, 'interval', minutes = 1)
 
+def sample_test():
+    print("This is a test of apscheduler")
+
+def make_predictions(prediction_cache):
+
+
+    # Today = timestamp conversion
+    if prediction_cache["Today"]:
+        return None
+    else:
+        prediction_cache["Today"] = predict_today(data)
+>>>>>>> d09f1909bc92b4665a206bc0eb6e58125f51ca5f
 
 CU_EMAIL_REGEX = r"^(?P<uni>[a-z\d]+)@.*(columbia|barnard)\.edu$"
 request_date_format = '%Y-%m-%d'
@@ -415,18 +427,23 @@ def map():
     # Render template has an SVG image whose colors are changed by % full
     return render_template('map.html', locations=locations)
 
-@app.route('/show')
-def show():
-    
-    # load
+@app.route('/new_predict')
+def new_predict():
+
+    # load data for every cluster
+    data = categorize_data(g.cursor, 0)
     data1 = categorize_data(g.cursor, 1)
     data2 = categorize_data(g.cursor, 2)
     data3 = categorize_data(g.cursor, 3)
+    data4 = categorize_data(g.cursor, 4)
+    data5 = categorize_data(g.cursor, 5)
+    data6 = categorize_data(g.cursor, 6)
 
-    # predict
-    today_pred = multi_predict_today(data1, data2, data3)
+    # make predictions using all clusters
+    today_pred = multi_predict_today(data, data1, data2,
+                                    data3, data4, data5, data6)
 
-    # display
+    # display data
     script, divs = graphics.create_all_buildings(today_pred.transpose())
 
     return render_template('predict.html', divs=divs,
