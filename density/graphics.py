@@ -20,12 +20,12 @@ def create_all_buildings(df):
 
     for building, predictions in df.iterrows():
         #  create plot prediction for each building and add to dictionary
-        mins = np.asarray([time.split(':')[1] for time in predictions.index])
-        hours = np.where(mins == "00")[0]
-        timelist = pandas.to_datetime(predictions.index[hours])
+        # mins = np.asarray([time.split(':')[1] for time in predictions.index])
+        # hours = np.where(mins == "00")[0]
+        time = pandas.to_datetime(predictions.index)
 
         building_divs[building] = create_prediction_plot(
-            timelist, predictions.iloc[hours] * 100)
+            time, predictions.iloc[0:predictions.size] * 100)
 
     #  create script and div from dictionary
     script, div = components(building_divs)
@@ -43,7 +43,6 @@ def create_prediction_plot(time, prediction):
     :return: bokeh Figure that with plot prediction of one building
     :rtype: bokeh Figure
     """
-    # timeInterval = ["00:00", "06:00", "12:00", "18:00", "23:00"]
 
     p = figure(x_axis_type="datetime", y_range=(0, 100), 
                tools='pan,wheel_zoom,xbox_select,reset', toolbar_location="right", 
@@ -67,6 +66,6 @@ def create_prediction_plot(time, prediction):
     
 
     #  add a line renderer
-    p.line(x=time, y=prediction,alpha=0.5)
+    p.line(x=time, y=prediction)
 
     return p
