@@ -45,7 +45,6 @@ def make_predictions(prediction_cache):
         return None
     else:
         prediction_cache["Today"] = predict_today(data)
->>>>>>> d09f1909bc92b4665a206bc0eb6e58125f51ca5f
 
 CU_EMAIL_REGEX = r"^(?P<uni>[a-z\d]+)@.*(columbia|barnard)\.edu$"
 request_date_format = '%Y-%m-%d'
@@ -441,7 +440,7 @@ def new_predict():
 
     # make predictions using all clusters
     today_pred = multi_predict_today(data, data1, data2,
-                                    data3, data4, data5, data6)
+                                     data3, data4, data5, data6)
 
     # display data
     script, divs = graphics.create_all_buildings(today_pred.transpose())
