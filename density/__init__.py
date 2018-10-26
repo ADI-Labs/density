@@ -411,7 +411,6 @@ def map():
 @app.route('/predict')
 def predict():
     auxdata = locationauxdata.get_location_aux_data()
-    # times = {'Lerner 1' : 1200, 'Lerner 2' : 1300}
     times = librarytimes.dict_for_time()
     # loading data from current database connection
     data = cache.get('predictData')
