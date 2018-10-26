@@ -1,6 +1,8 @@
 from bokeh.embed import components
 from bokeh.plotting import figure
+from bokeh.models import Range1d
 import numpy as np
+import pandas
 
 PANTONE_292 = (105, 179, 231)
 
@@ -19,9 +21,11 @@ def create_all_buildings(df):
     for building, predictions in df.iterrows():
         #  create plot prediction for each building and add to dictionary
         mins = np.asarray([time.split(':')[1] for time in predictions.index])
-        hours = np.where(mins == '0')[0]
+        hours = np.where(mins == "00")[0]
+        timelist = pandas.to_datetime(predictions.index[hours])
+
         building_divs[building] = create_prediction_plot(
-            predictions.index[hours].tolist(), predictions.iloc[hours] * 100)
+            timelist, predictions.iloc[hours] * 100)
 
     #  create script and div from dictionary
     script, div = components(building_divs)
@@ -39,25 +43,30 @@ def create_prediction_plot(time, prediction):
     :return: bokeh Figure that with plot prediction of one building
     :rtype: bokeh Figure
     """
+    # timeInterval = ["00:00", "06:00", "12:00", "18:00", "23:00"]
 
-    p = figure(x_range=time, y_range=(0, 100), tools="wheel_zoom",
-               plot_width=1800, plot_height=600, sizing_mode="scale_width")
+    p = figure(x_axis_type="datetime", y_range=(0, 100), 
+               tools='pan,wheel_zoom,xbox_select,reset', toolbar_location="right", 
+               toolbar_sticky=False,plot_width=1800, plot_height=600, sizing_mode="scale_width")
+
 
     #  set format for x axis
     p.xaxis.axis_label = "Time of Day"
     p.xaxis.axis_line_width = 3
     p.xaxis.axis_line_color = PANTONE_292
     p.xaxis.major_label_text_color = PANTONE_292
-    p.xaxis.axis_label_text_font_size = "18pt"
+    p.xaxis.axis_label_text_font_size = "13pt"
     #  set format for y axis
     p.yaxis.axis_label = "Predicted Capacity"
     p.yaxis.axis_line_color = PANTONE_292
-    p.yaxis.axis_label_text_font_size = "18pt"
+    p.yaxis.axis_label_text_font_size = "13pt"
     p.yaxis.major_label_text_color = PANTONE_292
     p.yaxis.major_label_orientation = "vertical"
     p.yaxis.axis_line_width = 3
 
+    
+
     #  add a line renderer
-    p.vbar(x=time, top=prediction, width=0.3)
+    p.line(x=time, y=prediction,alpha=0.5)
 
     return p

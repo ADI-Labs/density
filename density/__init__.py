@@ -443,7 +443,7 @@ def predict():
     '''
     return render_template('predict.html', divs=divs,
                            script=script, css_script=CDN.render_js(),
-                           times = times, auxdata = auxdata)
+                           times=times, auxdata=auxdata)
 
 
 @app.route('/upload', methods=['POST'])

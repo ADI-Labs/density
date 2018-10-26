@@ -125,6 +125,8 @@ def predict_today(past_data):
         leading, trailing = splited[0], splited[1]
         if len(leading) == 1:
             leading = "0" + leading
+        if trailing == "0":
+            trailing = "00"
         new_index = "{}:{}".format(leading, trailing)
         new_indexes.append(new_index)
 
