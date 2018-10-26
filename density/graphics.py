@@ -76,7 +76,7 @@ def create_prediction_plot(time, prediction):
 
     p.add_tools(HoverTool(
     tooltips=[
-        ( 'capacity', '@capacity %'  ),
+        ( 'capacity', '<span style="color: black;">@capacity % </span>'),
     ],
     # display a tooltip whenever the cursor is vertically in line with a glyph
     mode='vline'
