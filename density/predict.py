@@ -62,7 +62,6 @@ def db_to_pandas(cursor):
     day_of_week = today.weekday()
     week_of_year = today.isocalendar()[1]
 
-
     # construct SQL query to fetch only the data we need
     query = ' WHERE extract(WEEK from d.dump_time) = ' + \
             '{} AND extract(DOW from d.dump_time) = '.format(week_of_year) + \
@@ -83,7 +82,6 @@ def db_to_pandas(cursor):
 
     return df
 
-
 def predict_today(past_data):
     """Return a dataframes of predicted counts for today
     where the indexs are timestamps of the day and columns are locations
@@ -98,8 +96,7 @@ def predict_today(past_data):
         Dataframe containing predicted counts for 96 today's timepoints
     """
     results, locs = [], []
-    std = []
-    
+
     for group in np.unique(past_data["group_name"]):
         locs.append(group)
 
@@ -111,21 +108,19 @@ def predict_today(past_data):
 
         # average counts by time for each location
         group_result = group_data.groupby("time_point").mean()
-         
+
         # convert capacity count to percentage
         group_result = np.divide(group_result, FULL_CAP_DATA[group])
 
         results.append(group_result.transpose())
 
-
     result = pd.concat(results)  # combine the data for all locations
     result.index = locs
     result = result.transpose()  # time points indexes and locations columns
 
-
     old_indexes = result.index
     new_indexes = []
-    
+
     # make sure all time index has the same string format
     for index in old_indexes:
         splited = index.split(":")
@@ -140,7 +135,13 @@ def predict_today(past_data):
 
     return result
 
-def multi_predict_today(cluster, cluster1, cluster2, cluster3, cluster4, cluster5, cluster6):
+def multi_predict_today(cluster,
+                        cluster1,
+                        cluster2,
+                        cluster3,
+                        cluster4,
+                        cluster5,
+                        cluster6):
     """Return a dataframe of predicted counts for today
     where the indeces are timestamps of the day and columns are locations
     Parameters
@@ -160,12 +161,11 @@ def multi_predict_today(cluster, cluster1, cluster2, cluster3, cluster4, cluster
         Dataframe containing predicted counts for 96 today's timepoints
     """
     results, locs = [], []
-    std = []
 
     for group in np.unique(cluster1["group_name"]):
         locs.append(group)
 
-        # gets all rows for unique 'group' for every cluster 
+        # gets all rows for unique 'group' for every cluster
         group_data = cluster[cluster["group_name"] == group]
         group_data1 = cluster1[cluster1["group_name"] == group]
         group_data2 = cluster2[cluster2["group_name"] == group]
@@ -174,7 +174,7 @@ def multi_predict_today(cluster, cluster1, cluster2, cluster3, cluster4, cluster
         group_data5 = cluster5[cluster5["group_name"] == group]
         group_data6 = cluster6[cluster6["group_name"] == group]
 
-        # get only client count and time point for each 'group' 
+        # get only client count and time point for each 'group'
         group_data = group_data[["client_count", "time_point"]]
         group_data1 = group_data1[["client_count", "time_point"]]
         group_data2 = group_data2[["client_count", "time_point"]]
@@ -183,7 +183,7 @@ def multi_predict_today(cluster, cluster1, cluster2, cluster3, cluster4, cluster
         group_data5 = group_data5[["client_count", "time_point"]]
         group_data6 = group_data6[["client_count", "time_point"]]
 
-        # get all stds for every 15 min per location 
+        # get all stds for every 15 min per location
         group_result_std = group_data.groupby("time_point").std()
         group_result_std1 = group_data1.groupby("time_point").std()
         group_result_std2 = group_data2.groupby("time_point").std()
@@ -192,7 +192,7 @@ def multi_predict_today(cluster, cluster1, cluster2, cluster3, cluster4, cluster
         group_result_std5 = group_data5.groupby("time_point").std()
         group_result_std6 = group_data6.groupby("time_point").std()
 
-        #calculate all the means but only select the rows with the smaller std
+        # calculate all the means but only select the rows with the smaller std
         group_data_mean = group_data.groupby("time_point").mean()
         group_data_mean1 = group_data1.groupby("time_point").mean()
         group_data_mean2 = group_data2.groupby("time_point").mean()
@@ -219,25 +219,20 @@ def multi_predict_today(cluster, cluster1, cluster2, cluster3, cluster4, cluster
 
             elif min_pos == 1:
                 temp_df.iloc[x] = group_data_mean1.iloc[x]
-                
             elif min_pos == 2:
                 temp_df.iloc[x] = group_data_mean2.iloc[x]
-                
             elif min_pos == 3:
                 temp_df.iloc[x] = group_data_mean3.iloc[x]
-                
             elif min_pos == 4:
                 temp_df.iloc[x] = group_data_mean4.iloc[x]
-                
             elif min_pos == 5:
                 temp_df.iloc[x] = group_data_mean5.iloc[x]
-                
             elif min_pos == 6:
                 temp_df.iloc[x] = group_data_mean6.iloc[x]
 
         group_result = temp_df
 
-        # convert capacity count to percentage 
+        # convert capacity count to percentage
         group_result = to_percentage(group_result, group)
         results.append(group_result.transpose())
 
@@ -247,7 +242,7 @@ def multi_predict_today(cluster, cluster1, cluster2, cluster3, cluster4, cluster
 
     old_indexes = result.index
     new_indexes = []
-    
+
     # make sure all time index has the same string format
     for index in old_indexes:
         splited = index.split(":")
@@ -282,8 +277,8 @@ def categorize_data(cursor, cluster):
 
     today = datetime.datetime.today()
 
-    # PostgreSQL's days do not match Python's 
-    if (today.weekday()+1 == 7):
+    # PostgreSQL's days do not match Python's
+    if (today.weekday() + 1 == 7):
         day_of_week = 0
     else:
         day_of_week = today.weekday() + 1
@@ -292,67 +287,77 @@ def categorize_data(cursor, cluster):
     # cluster 0 -> all datapoints for same day for 4 years
     query = ' WHERE extract(WEEK from d.dump_time) = ' + \
             '{} AND extract(DOW from d.dump_time) = '.format(week_of_year) + \
-            '{}'.format(day_of_week) 
+            '{}'.format(day_of_week)
 
     # cluster 1 -> all data points for same day and week ahead for 4 years
     query1 = ' WHERE (extract(WEEK from d.dump_time) = ' + \
-            '{} AND extract(DOW from d.dump_time) = '.format(week_of_year) + \
-            '{})'.format(day_of_week) + ' OR (extract(WEEK from d.dump_time) = ' + \
-            '{}'.format(week_of_year + 1) + \
-            ' AND extract(DOW from d.dump_time) = {}) '.format(day_of_week)
+             '{} AND extract(DOW from d.dump_time) = '.format(week_of_year) + \
+             '{})'.format(day_of_week) + \
+             ' OR (extract(WEEK from d.dump_time) = ' + \
+             '{}'.format(week_of_year + 1) + \
+             ' AND extract(DOW from d.dump_time) = {}) '.format(day_of_week)
 
     # cluster 2 -> all data points for same date and week before for 4 years
     query2 = ' WHERE (extract(WEEK from d.dump_time) = ' + \
-            '{} AND extract(DOW from d.dump_time) = '.format(week_of_year) + \
-            '{})'.format(day_of_week) + ' OR (extract(WEEK from d.dump_time) = ' + \
-            '{}'.format(week_of_year - 1) + \
-            ' AND extract(DOW from d.dump_time) = {}) '.format(day_of_week)
-    
-    # cluster 3 -> all data point for same date, week before, and week after 
+             '{} AND extract(DOW from d.dump_time) = '.format(week_of_year) + \
+             '{})'.format(day_of_week) + \
+             ' OR (extract(WEEK from d.dump_time) = ' + \
+             '{}'.format(week_of_year - 1) + \
+             ' AND extract(DOW from d.dump_time) = {}) '.format(day_of_week)
+
+    # cluster 3 -> all data point for same date, week before, and week after
     query3 = ' WHERE (extract(WEEK from d.dump_time) = ' + \
-            '{} AND extract(DOW from d.dump_time) = '.format(week_of_year) + \
-            '{})'.format(day_of_week) + ' OR (extract(WEEK from d.dump_time) = ' + \
-            '{}'.format(week_of_year + 1) + \
-            ' AND extract(DOW from d.dump_time) = {}) '.format(day_of_week) + \
-            ' OR (extract(WEEK from d.dump_time) = ' + \
-            '{}'.format(week_of_year - 1) + \
-            ' AND extract(DOW from d.dump_time) = {})'.format(day_of_week) 
+             '{} AND extract(DOW from d.dump_time) = '.format(week_of_year) + \
+             '{})'.format(day_of_week) + \
+             ' OR (extract(WEEK from d.dump_time) = ' + \
+             '{}'.format(week_of_year + 1) + \
+             ' AND extract(DOW from d.dump_time) = {}) '.format(day_of_week) +\
+             ' OR (extract(WEEK from d.dump_time) = ' + \
+             '{}'.format(week_of_year - 1) + \
+             ' AND extract(DOW from d.dump_time) = {})'.format(day_of_week)
 
-    # cluster 4 -> get all data point for same date, week before, and 2 weeks before
+    # cluster 4 -> get all data point for same date, week before,
+    # and 2 weeks before
     query4 = ' WHERE (extract(WEEK from d.dump_time) = ' + \
-            '{} AND extract(DOW from d.dump_time) = '.format(week_of_year) + \
-            '{})'.format(day_of_week) + ' OR (extract(WEEK from d.dump_time) = ' + \
-            '{}'.format(week_of_year - 1) + \
-            ' AND extract(DOW from d.dump_time) = {}) '.format(day_of_week) + \
-            ' OR (extract(WEEK from d.dump_time) = ' + \
-            '{}'.format(week_of_year - 2) + \
-            ' AND extract(DOW from d.dump_time) = {})'.format(day_of_week) 
-    
-    # cluster 5 -> get all data point for same date, week after, and 2 weeks after
-    query5 = ' WHERE (extract(WEEK from d.dump_time) = ' + \
-            '{} AND extract(DOW from d.dump_time) = '.format(week_of_year) + \
-            '{})'.format(day_of_week) + ' OR (extract(WEEK from d.dump_time) = ' + \
-            '{}'.format(week_of_year + 1) + \
-            ' AND extract(DOW from d.dump_time) = {}) '.format(day_of_week) + \
-            ' OR (extract(WEEK from d.dump_time) = ' + \
-            '{}'.format(week_of_year + 2) + \
-            ' AND extract(DOW from d.dump_time) = {})'.format(day_of_week) 
+             '{} AND extract(DOW from d.dump_time) = '.format(week_of_year) + \
+             '{})'.format(day_of_week) + \
+             ' OR (extract(WEEK from d.dump_time) = ' + \
+             '{}'.format(week_of_year - 1) + \
+             ' AND extract(DOW from d.dump_time) = {}) '.format(day_of_week) +\
+             ' OR (extract(WEEK from d.dump_time) = ' + \
+             '{}'.format(week_of_year - 2) + \
+             ' AND extract(DOW from d.dump_time) = {})'.format(day_of_week)
 
-    # cluster 6 -> get all data point for same date, week before, and 2 weeks before,
-    # week after, and two weeks after
+    # cluster 5 -> get all data point for same date, week after,
+    # and 2 weeks after
+    query5 = ' WHERE (extract(WEEK from d.dump_time) = ' + \
+             '{} AND extract(DOW from d.dump_time) = '.format(week_of_year) + \
+             '{})'.format(day_of_week) + \
+             ' OR (extract(WEEK from d.dump_time) = ' + \
+             '{}'.format(week_of_year + 1) + \
+             ' AND extract(DOW from d.dump_time) = {}) '.format(day_of_week) +\
+             ' OR (extract(WEEK from d.dump_time) = ' + \
+             '{}'.format(week_of_year + 2) + \
+             ' AND extract(DOW from d.dump_time) = {})'.format(day_of_week)
+
+    # cluster 6 -> get all data point for same date, week before,
+    # and 2 weeks before, week after, and two weeks after
     query6 = ' WHERE (extract(WEEK from d.dump_time) = ' + \
-            '{} AND extract(DOW from d.dump_time) = '.format(week_of_year) + \
-            '{})'.format(day_of_week) + ' OR (extract(WEEK from d.dump_time) = ' + \
-            '{}'.format(week_of_year - 1) + \
-            ' AND extract(DOW from d.dump_time) = {}) '.format(day_of_week) + \
-            ' OR (extract(WEEK from d.dump_time) = ' + \
-            '{}'.format(week_of_year - 2) + \
-            ' AND extract(DOW from d.dump_time) = {})'.format(day_of_week) + \
-            ' OR (extract(WEEK from d.dump_time) = {}'.format(week_of_year + 1) + \
-            ' AND extract(DOW from d.dump_time) = {}) '.format(day_of_week) + \
-            ' OR (extract(WEEK from d.dump_time) = {}'.format(week_of_year + 2) + \
-            ' AND extract(DOW from d.dump_time) = {}) '.format(day_of_week) 
-    
+             '{} AND extract(DOW from d.dump_time) = '.format(week_of_year) + \
+             '{})'.format(day_of_week) + \
+             ' OR (extract(WEEK from d.dump_time) = ' + \
+             '{}'.format(week_of_year - 1) + \
+             ' AND extract(DOW from d.dump_time) = {}) '.format(day_of_week) +\
+             ' OR (extract(WEEK from d.dump_time) = ' + \
+             '{}'.format(week_of_year - 2) + \
+             ' AND extract(DOW from d.dump_time) = {})'.format(day_of_week) + \
+             ' OR (extract(WEEK from d.dump_time) = ' +\
+             '{}'.format(week_of_year + 1) +\
+             ' AND extract(DOW from d.dump_time) = {}) '.format(day_of_week) +\
+             ' OR (extract(WEEK from d.dump_time) = ' +\
+             '{}'.format(week_of_year + 2) +\
+             ' AND extract(DOW from d.dump_time) = {}) '.format(day_of_week)
+
     # retrieve data from database using selected cluster
     if cluster == 0:
         cursor.execute(SELECT + query)
@@ -383,7 +388,3 @@ def categorize_data(cursor, cluster):
     df["time_point"] = time_points
 
     return df
-
-
-
-    

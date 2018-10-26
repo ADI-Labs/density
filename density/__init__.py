@@ -17,8 +17,8 @@ from . import db, librarytimes
 from . import graphics
 from .config import config, ISO8601Encoder
 from .data import FULL_CAP_DATA
-from .predict import db_to_pandas, predict_today, categorize_data, multi_predict_today
-
+from .predict import categorize_data, multi_predict_today
+from .predict import db_to_pandas, predict_today
 
 app = Flask(__name__)
 
@@ -27,14 +27,17 @@ predictionCache = SimpleCache()
 # change the default JSON encoder to handle datetime's properly
 app.json_encoder = ISO8601Encoder
 scheduler = BackgroundScheduler()
-job = scheduler.add_job(sample_test, 'cron', day_of_week='sun', hour=6, minute=30, end_date='2020-05-30')
+job = scheduler.add_job(sample_test, 'cron', day_of_week='sun',
+                        hour=6, minute=30, end_date='2020-05-30')
 scheduler.start()
 
 def sample_test():
     print("This is a test of apscheduler")
-    
+
 def make_predictions(prediction_cache):
-    #Today = timestamp conversion
+
+
+    # Today = timestamp conversion
     if prediction_cache["Today"]:
         return None
     else:
@@ -422,7 +425,7 @@ def map():
 
 @app.route('/new_predict')
 def new_predict():
-    
+
     # load data for every cluster
     data = categorize_data(g.cursor, 0)
     data1 = categorize_data(g.cursor, 1)
@@ -433,7 +436,8 @@ def new_predict():
     data6 = categorize_data(g.cursor, 6)
 
     # make predictions using all clusters
-    today_pred = multi_predict_today(data, data1, data2, data3, data4, data5, data6)
+    today_pred = multi_predict_today(data, data1, data2,
+                                    data3, data4, data5, data6)
 
     # display data
     script, divs = graphics.create_all_buildings(today_pred.transpose())
