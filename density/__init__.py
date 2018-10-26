@@ -431,6 +431,8 @@ def map():
 
 @app.route('/new_predict')
 def new_predict():
+    auxdata = locationauxdata.get_location_aux_data()
+    times = librarytimes.dict_for_time()
 
     # load data for every cluster
     data = categorize_data(g.cursor, 0)
@@ -442,14 +444,15 @@ def new_predict():
     data6 = categorize_data(g.cursor, 6)
 
     # make predictions using all clusters
-    today_pred = multi_predict_today(data, data1, data2,
-                                     data3, data4, data5, data6)
+    today_pred = multi_predict(data, data1, data2,
+                               data3, data4, data5, data6)
 
     # display data
     script, divs = graphics.create_all_buildings(today_pred.transpose())
 
     return render_template('predict.html', divs=divs,
-                           script=script, css_script=CDN.render_js())
+                           script=script, css_script=CDN.render_js(),
+                           times=times, auxdata=auxdata)
 
 
 @app.route('/predict')
