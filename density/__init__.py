@@ -17,7 +17,7 @@ from . import db, librarytimes, locationauxdata
 from . import graphics
 from .config import config, ISO8601Encoder
 from .data import FULL_CAP_DATA
-from .predict import categorize_data, multi_predict_today
+from .predict import categorize_data, multi_predict
 from .predict import db_to_pandas, predict_today
 
 app = Flask(__name__)
