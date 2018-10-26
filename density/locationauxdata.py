@@ -67,7 +67,7 @@ LOCATION_AUX_DATA = {
         'type': 'center'
     },
     'Lerner 3': {
-        'nickname': '',
+        'nickname': 'Ferris',
         'type': 'center'
     },
     'Lerner 4': {
