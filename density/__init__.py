@@ -23,8 +23,22 @@ from .predict import db_to_pandas, predict_today, categorize_data, multi_predict
 app = Flask(__name__)
 
 cache = SimpleCache()
+predictionCache = SimpleCache()
 # change the default JSON encoder to handle datetime's properly
 app.json_encoder = ISO8601Encoder
+scheduler = BackgroundScheduler()
+job = scheduler.add_job(sample_test, 'cron', day_of_week='sun', hour=6, minute=30, end_date='2020-05-30')
+scheduler.start()
+
+def sample_test():
+    print("This is a test of apscheduler")
+    
+def make_predictions(prediction_cache):
+    #Today = timestamp conversion
+    if prediction_cache["Today"]:
+        return None
+    else:
+        prediction_cache["Today"] = predict_today(data)
 
 CU_EMAIL_REGEX = r"^(?P<uni>[a-z\d]+)@.*(columbia|barnard)\.edu$"
 request_date_format = '%Y-%m-%d'
