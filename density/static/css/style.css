@@ -152,6 +152,139 @@ p {
     padding: 30px 50px 30px 50px;
 }
 
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+body{
+  /* background: #f2dede; */
+    font-family: 'Open Sans', sans-serif;
+}
+
+.search {
+    width: 100%;
+    position: relative;
+}
+
+.searchContainer {
+    position: relative;
+}
+
+.searchTerm {
+    float: left;
+    width: 100%;
+    border: 2px solid #a5a2a2;
+    padding: 5px;
+    padding-left: 20px;
+    height: 32px;
+    border-radius: 60px;
+    outline: none;
+    color: #9DBFAF;
+    margin: 0px auto 18px auto;
+    background-color:transparent;
+    font-family: 'Lato', sans-serif;
+}
+
+.searchTerm:focus{
+    border: 3px solid #2285c6;
+    color: #2285c6;
+    background-color: white;
+    font-size: 15px;
+}
+
+.searchButton {
+    position: absolute;  
+    right: 18px;
+    top: 4px;
+    width: 30px;
+    border: none;
+    background: transparent;
+    text-align: center;
+    color: #c5c2c2;
+    font-size: medium;
+}
+
+.searchButton:focus {
+    color: #a5a2a2;
+}
+
+
+.wrap{
+    width: 65%;
+    position: relative;
+    margin-top: 18px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/*
+    Starts CSS Format for Radio Buttons
+*/
+.btnContainer{
+    display:inline-block;
+    width: 100%;
+    margin: 0px auto 18px auto;
+    padding: 0 20px;
+}
+
+button.clear {
+    border: none;
+    background: none;
+    color: #a5a2a2;
+    outline: 0;
+    padding: 0;
+}
+
+button.clear:hover {
+    color: #2385c6;
+}
+
+#locationBtnContainer{
+    display:inline;
+    padding: 0 10px;
+    position: relative;
+    float: left;
+}
+
+#openBtnContainer{
+    display: inline;
+   
+    padding: 0 10px;
+    position: relative;
+    text-align: right;
+    float: right;
+}
+
+.btnContainer input{
+    display: none;
+}
+
+.btnContainer label{
+    cursor: pointer;
+    color: #a5a2a2;
+    font-family: 'Lato', sans-serif;
+    font-weight: normal;
+    margin-right: 15px;
+}
+
+.btnContainer label:hover{
+    color: #2385c6;
+}
+
+.btnContainer input:checked + label{
+    color: #2385c6;
+}
+
+select.day-picker {
+    margin-left: 24px;
+    border-color: #2285c6;
+    border-radius: 4px;
+    padding: 2px 8px;
+    color: #2285c6;
+    outline: none;
+    border-width: 2px;
+}
+
 #mapContainer {
     width: 100%;
     padding: 25px 0;
@@ -182,8 +315,9 @@ p {
 }
 
 .graph{
-width: 100%;
+    width: 100%;
     margin: 0 auto; 
+    height: 350px;
 }
 
 .graphImg{
@@ -217,6 +351,7 @@ width: 100%;
 
 .list-group {
     margin-bottom: 0;
+    margin-top: 0;
 }
 
 .list-group-item {
@@ -224,6 +359,10 @@ width: 100%;
     border: 0;
     margin-bottom: 30px;
     padding: 15px 30px;
+}
+
+.list-group-item h4 {
+    display: inline-block;
 }
 
 .progress {
@@ -295,9 +434,37 @@ img {
     text-align: center;
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 666px) {
     .logoContainer {
         padding: 10px;
+    }
+
+    .searchTerm {
+        margin-bottom: 10px;
+    }
+
+    .searchButton {
+        right: 33px;
+    }
+
+    .searchContainer {
+        padding: 0 15px;
+    }
+
+    .graph {
+        height: 250px;
+    }
+
+    #nav-api {
+        display: none;
+    }
+
+    h4 {
+        font-size: 16px;
+    }
+
+    .btnContainer label {
+        margin-right: 5px;
     }
 
     .textContainer {
@@ -385,13 +552,40 @@ img {
         padding: 15px 20px;
     }
 
+    .navContainer {
+        padding: 1rem 0rem;
+        font-weight: 300;
+        font-size: 0px;
+        /*
+        Removes space between inline-block items. In this case,
+        the space between the navItems.
+        https://css-tricks.com/fighting-the-space-between-inline-block-elements/
+        */
+        background-color: #468fcc;
+        text-align: center;
+    }
+
     .navItem {
-        padding-left: 15px;
-        padding-right: 15px;
+        padding: 5px 8px;
+        font-size: 14px;
     }
 
     .update {
         padding: 10px;
     }
-}
 
+    .btnContainer{
+        margin: 1px auto 4px auto;
+    }
+
+    #locationBtnContainer, #openBtnContainer{
+        text-align: center;
+        width: 100%;
+    }
+    select.day-picker {
+        display: block;
+        margin-left: 0;
+        margin-bottom: 10px;
+        padding: 0;
+    }
+}
