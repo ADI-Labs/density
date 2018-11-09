@@ -580,3 +580,11 @@ def upload():
             Please contact someone in ADI for more details.', 500
 
     return 'Data successfully uploaded.', 200
+"""
+@app.route('/feedback', methods =['POST'])
+def upload_feedback(building_id, feedback_percentage, current_percentage):
+    current_devices = db.get_latest_building_data(g.cursor, building_id)
+    updated_percentage = current_percentage * (100 / (100 - feedback_percentage))
+    db.insert_updated_data_to_feedback_table(g.cursor, building_id, updated_percentage)
+    return 'Feedback successfully uploaded.', 200
+"""
