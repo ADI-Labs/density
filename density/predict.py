@@ -184,6 +184,8 @@ def multi_predict(cluster,
         group_data4 = group_data4[["client_count", "time_point"]]
         group_data5 = group_data5[["client_count", "time_point"]]
         group_data6 = group_data6[["client_count", "time_point"]]
+        
+
 
         # get all stds for every 15 min per location
         group_result_std = group_data.groupby("time_point").std()
@@ -193,6 +195,7 @@ def multi_predict(cluster,
         group_result_std4 = group_data4.groupby("time_point").std()
         group_result_std5 = group_data5.groupby("time_point").std()
         group_result_std6 = group_data6.groupby("time_point").std()
+        print(group_result_std)
 
         # calculate all the means but only select the rows with the smaller std
         group_data_mean = group_data.groupby("time_point").mean()
@@ -279,14 +282,9 @@ def categorize_data(cursor, cluster, time):
     pandas.DataFrame
         Density data in a Dataframe
     """
-
-<<<<<<< HEAD
     #today = datetime.datetime.today()
     today = time
-=======
-    today = datetime.datetime.today()
-    # today = time
->>>>>>> a363c6c16b9b94feae9fd56ff97d806f8a5d5927
+
 
     # PostgreSQL's days do not match Python's
     if (today.weekday() + 1 == 7):
@@ -392,7 +390,7 @@ def categorize_data(cursor, cluster, time):
            .set_index("dump_time") \
            .assign(group_name=lambda df: df["group_name"].astype('category'),
                    parent_id=lambda df: df["parent_id"].astype('category'))
-    print(df.index)
+    #print(df.index)
     # add a new time point column to the datafram
     time_points = zip(df.index.hour, df.index.minute)
 

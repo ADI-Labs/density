@@ -23,90 +23,6 @@ from apscheduler.schedulers.background import BackgroundScheduler
 
 app = Flask(__name__)
 
-def sample_test():
-    print("This is a test of apscheduler")
-
-cache = SimpleCache()
-predictionCache = SimpleCache()
-scheduler = BackgroundScheduler()
-#job = scheduler.add_job(sample_test, 'cron', day_of_week='sun',
-                        #hour=6, minute=30, end_date='2020-05-30')
-scheduler.start()
-
-def make_predictions():
-    data = categorize_data(g.cursor, 0)
-    data1 = categorize_data(g.cursor, 1)
-    data2 = categorize_data(g.cursor, 2)
-    data3 = categorize_data(g.cursor, 3)
-    data4 = categorize_data(g.cursor, 4)
-    data5 = categorize_data(g.cursor, 5)
-    data6 = categorize_data(g.cursor, 6)
-    current_data = db_to_pandas(g.cursor)
-    mon_prediction = multi_predict_today(data, data1, data2,
-                                    data3, data4, data5, data6, 0)
-    tue_prediction = multi_predict_today(data, data1, data2,
-                                    data3, data4, data5, data6, 1)
-    wed_prediction = multi_predict_today(data, data1, data2,
-                                    data3, data4, data5, data6, 2)
-    thu_prediction = multi_predict_today(data, data1, data2,
-                                    data3, data4, data5, data6, 3)
-    fri_prediction = multi_predict_today(data, data1, data2,
-                                    data3, data4, data5, data6, 4)
-    sat_prediction = multi_predict_today(data, data1, data2,
-                                    data3, data4, data5, data6, 5)
-    sun_prediction = multi_predict_today(data, data1, data2,
-                                    data3, data4, data5, data6, 6)
-    predictionCache.set('Monday', mon_prediction, timeout=0)
-    predictionCache.set('Tuesday', tue_prediction, timeout=0)
-    predictionCache.set('Wednesday', wed_prediction, timeout=0)
-    predictionCache.set('Thursday', thu_prediction, timeout=0)
-    predictionCache.set('Friday', fri_prediction, timeout=0)
-    predictionCache.set('Saturday', sat_prediction, timeout=0)
-    predictionCache.set('Sunday', sun_prediction, timeout=0)
-
-def sample_test():
-    print("This is a test of apscheduler")
-    # load data for every cluster
-    for i in range(1,8):
-        date = datetime.datetime.today()
-        date += datetime.timedelta(days=i)
-        data = categorize_data(g.cursor, 0, date)
-        data1 = categorize_data(g.cursor, 1, date)
-        data2 = categorize_data(g.cursor, 2, date)
-        data3 = categorize_data(g.cursor, 3, date)
-        data4 = categorize_data(g.cursor, 4, date)
-        data5 = categorize_data(g.cursor, 5, date)
-        data6 = categorize_data(g.cursor, 6, date)
-
-    # make predictions using all clusters
-        today_pred = multi_predict(data, data1, data2,
-                                     data3, data4, data5, data6)
-
-    # display data
-        print(today_pred)
-        script, divs = graphics.create_all_buildings(today_pred.transpose())
-        if (i == 1):
-            predictionCache.set('monday_script', script, timeout=0)
-            predictionCache.set('monday_div', divs, timeout=0)
-        if (i == 2):
-            predictionCache.set('tuesday_script', script, timeout=0)
-            predictionCache.set('tuesday_div', divs, timeout=0)
-        if (i == 3):
-            predictionCache.set('wednesday_script', script, timeout=0)
-            predictionCache.set('wednesday_div', divs, timeout=0)
-        if (i == 4):
-            predictionCache.set('thursday_script', script, timeout=0)
-            predictionCache.set('thursday_div', divs, timeout=0)
-        if (i == 5):
-            predictionCache.set('friday_script', script, timeout=0)
-            predictionCache.set('friday_div', divs, timeout=0)
-        if (i == 6):
-            predictionCache.set('saturday_script', script, timeout=0)
-            predictionCache.set('saturday_div', divs, timeout=0)
-        if (i == 7):
-            predictionCache.set('sunday_script', script, timeout=0)
-            predictionCache.set('sunday_div', divs, timeout=0)
-
 CU_EMAIL_REGEX = r"^(?P<uni>[a-z\d]+)@.*(columbia|barnard)\.edu$"
 request_date_format = '%Y-%m-%d'
 
@@ -115,12 +31,80 @@ pg_pool = psycopg2.pool.SimpleConnectionPool(
     minconn=5, maxconn=20, dsn=config["DB_URI"])
 
 
+def sample_test():
+    with app.app_context():
+        g.pg_conn = pg_pool.getconn()
+        g.cursor = g.pg_conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
+        g.start_time = datetime.datetime.now() 
+    
+        print("This is a test of apscheduler")
+        for i in range(1,2):
+            date = datetime.datetime.today()
+            date += datetime.timedelta(days=i)
+            print(date)
+            data = categorize_data(g.cursor, 0, date)
+            data1 = categorize_data(g.cursor, 1, date)
+            data2 = categorize_data(g.cursor, 2, date)
+            data3 = categorize_data(g.cursor, 3, date)
+            data4 = categorize_data(g.cursor, 4, date)
+            data5 = categorize_data(g.cursor, 5, date)
+            data6 = categorize_data(g.cursor, 6, date)
+
+        # make predictions using all clusters
+            today_pred = multi_predict(data, data1, data2,
+                                         data3, data4, data5, data6)
+
+        # display data
+            #print(today_pred)
+            script, divs = graphics.create_all_buildings(today_pred.transpose())
+            if (i == 1):
+                predictionCache.set('monday_script', script, timeout=0)
+                predictionCache.set('monday_div', divs, timeout=0)
+            if (i == 2):
+                predictionCache.set('tuesday_script', script, timeout=0)
+                predictionCache.set('tuesday_div', divs, timeout=0)
+            if (i == 3):
+                predictionCache.set('wednesday_script', script, timeout=0)
+                predictionCache.set('wednesday_div', divs, timeout=0)
+            if (i == 4):
+                predictionCache.set('thursday_script', script, timeout=0)
+                predictionCache.set('thursday_div', divs, timeout=0)
+            if (i == 5):
+                predictionCache.set('friday_script', script, timeout=0)
+                predictionCache.set('friday_div', divs, timeout=0)
+            if (i == 6):
+                predictionCache.set('saturday_script', script, timeout=0)
+                predictionCache.set('saturday_div', divs, timeout=0)
+            if (i == 7):
+                predictionCache.set('sunday_script', script, timeout=0)
+                predictionCache.set('sunday_div', divs, timeout=0)
+
+@app.before_first_request
+def initialize():
+    sample_test()
+    apsched = BackgroundScheduler()
+    apsched.start()
+    apsched.add_job(sample_test,  'interval', seconds=60)
+
+
 @app.before_request
 def get_connections():
     """ Get connections from the Postgres pool. """
     g.pg_conn = pg_pool.getconn()
     g.cursor = g.pg_conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
     g.start_time = datetime.datetime.now()
+    
+    
+
+cache = SimpleCache()
+predictionCache = SimpleCache()
+# app.scheduler = BackgroundScheduler()
+# job = app.scheduler.add_job(sample_test, 'interval', seconds=10)
+# app.scheduler.start()
+    # within this block, current_app points to app.
+    
+
+
 
 
 def return_connections():
@@ -493,45 +477,45 @@ def new_predict():
 
     auxdata = locationauxdata.get_location_aux_data()
     times = librarytimes.dict_for_time()
-    for i in range(1,8):
-        date = datetime.datetime.today()
-        date += datetime.timedelta(days=i)
-        data = categorize_data(g.cursor, 0, date)
-        data1 = categorize_data(g.cursor, 1, date)
-        data2 = categorize_data(g.cursor, 2, date)
-        data3 = categorize_data(g.cursor, 3, date)
-        data4 = categorize_data(g.cursor, 4, date)
-        data5 = categorize_data(g.cursor, 5, date)
-        data6 = categorize_data(g.cursor, 6, date)
+    # for i in range(1,8):
+    #     date = datetime.datetime.today()
+    #     date += datetime.timedelta(days=i)
+    #     data = categorize_data(g.cursor, 0, date)
+    #     data1 = categorize_data(g.cursor, 1, date)
+    #     data2 = categorize_data(g.cursor, 2, date)
+    #     data3 = categorize_data(g.cursor, 3, date)
+    #     data4 = categorize_data(g.cursor, 4, date)
+    #     data5 = categorize_data(g.cursor, 5, date)
+    #     data6 = categorize_data(g.cursor, 6, date)
 
-    # make predictions using all clusters
-        today_pred = multi_predict(data, data1, data2,
-                                     data3, data4, data5, data6)
+    # # make predictions using all clusters
+    #     today_pred = multi_predict(data, data1, data2,
+    #                                  data3, data4, data5, data6)
 
-    # display data
-        print(today_pred)
-        script, divs = graphics.create_all_buildings(today_pred.transpose())
-        if (i == 1):
-            predictionCache.set('monday_script', script, timeout=0)
-            predictionCache.set('monday_div', divs, timeout=0)
-        if (i == 2):
-            predictionCache.set('tuesday_script', script, timeout=0)
-            predictionCache.set('tuesday_div', divs, timeout=0)
-        if (i == 3):
-            predictionCache.set('wednesday_script', script, timeout=0)
-            predictionCache.set('wednesday_div', divs, timeout=0)
-        if (i == 4):
-            predictionCache.set('thursday_script', script, timeout=0)
-            predictionCache.set('thursday_div', divs, timeout=0)
-        if (i == 5):
-            predictionCache.set('friday_script', script, timeout=0)
-            predictionCache.set('friday_div', divs, timeout=0)
-        if (i == 6):
-            predictionCache.set('saturday_script', script, timeout=0)
-            predictionCache.set('saturday_div', divs, timeout=0)
-        if (i == 7):
-            predictionCache.set('sunday_script', script, timeout=0)
-            predictionCache.set('sunday_div', divs, timeout=0)
+    # # display data
+    #     print(today_pred)
+    #     script, divs = graphics.create_all_buildings(today_pred.transpose())
+    #     if (i == 1):
+    #         predictionCache.set('monday_script', script, timeout=0)
+    #         predictionCache.set('monday_div', divs, timeout=0)
+    #     if (i == 2):
+    #         predictionCache.set('tuesday_script', script, timeout=0)
+    #         predictionCache.set('tuesday_div', divs, timeout=0)
+    #     if (i == 3):
+    #         predictionCache.set('wednesday_script', script, timeout=0)
+    #         predictionCache.set('wednesday_div', divs, timeout=0)
+    #     if (i == 4):
+    #         predictionCache.set('thursday_script', script, timeout=0)
+    #         predictionCache.set('thursday_div', divs, timeout=0)
+    #     if (i == 5):
+    #         predictionCache.set('friday_script', script, timeout=0)
+    #         predictionCache.set('friday_div', divs, timeout=0)
+    #     if (i == 6):
+    #         predictionCache.set('saturday_script', script, timeout=0)
+    #         predictionCache.set('saturday_div', divs, timeout=0)
+    #     if (i == 7):
+    #         predictionCache.set('sunday_script', script, timeout=0)
+    #         predictionCache.set('sunday_div', divs, timeout=0)
             
     divs = predictionCache.get('monday_div')
     script = predictionCache.get('monday_script')
