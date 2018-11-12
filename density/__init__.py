@@ -38,10 +38,9 @@ def sample_test():
         g.start_time = datetime.datetime.now() 
     
         print("This is a test of apscheduler")
-        for i in range(1,2):
+        for i in range(1,8):
             date = datetime.datetime.today()
             date += datetime.timedelta(days=i)
-            print(date)
             data = categorize_data(g.cursor, 0, date)
             data1 = categorize_data(g.cursor, 1, date)
             data2 = categorize_data(g.cursor, 2, date)
@@ -84,7 +83,7 @@ def initialize():
     sample_test()
     apsched = BackgroundScheduler()
     apsched.start()
-    apsched.add_job(sample_test,  'interval', seconds=60)
+    apsched.add_job(sample_test,  'interval', seconds=10)
 
 
 @app.before_request
@@ -461,7 +460,7 @@ def capacity():
     times = librarytimes.dict_for_time()
     return render_template(
         'capacity.html', locations=locations,
-        last_updated=last_updated, times=times, auxdata=auxdata)
+        last_updated=last_updated, times=times, auxdata=auxdata, today='hi')
 
 
 @app.route('/map')
@@ -475,6 +474,9 @@ def map():
 @app.route('/new_predict')
 def new_predict():
 
+    today = datetime.datetime.today().weekday() + 1
+    if today > 6:
+        today = 0
     auxdata = locationauxdata.get_location_aux_data()
     times = librarytimes.dict_for_time()
     # for i in range(1,8):
@@ -517,12 +519,12 @@ def new_predict():
     #         predictionCache.set('sunday_script', script, timeout=0)
     #         predictionCache.set('sunday_div', divs, timeout=0)
             
-    divs = predictionCache.get('monday_div')
-    script = predictionCache.get('monday_script')
+    divs = [predictionCache.get('sunday_div'), predictionCache.get('monday_div'), predictionCache.get('tuesday_div'), predictionCache.get('wednesday_div'), predictionCache.get('thursday_div'), predictionCache.get('friday_div'), predictionCache.get('saturday_div')]
+    script = [predictionCache.get('sunday_script'), predictionCache.get('monday_script'), predictionCache.get('tuesday_script'), predictionCache.get('wednesday_script'), predictionCache.get('thursday_script'), predictionCache.get('friday_script'), predictionCache.get('saturday_script')]
 
-    return render_template('predict.html', divs=divs,
+    return render_template('predict.html', divs=json.dumps(divs),
                            script=script, css_script=CDN.render_js(),
-                           times=times, auxdata=auxdata)
+                           times=times, auxdata=auxdata, today=today)
 
 
 @app.route('/predict')
