@@ -582,3 +582,18 @@ def upload():
             Please contact someone in ADI for more details.', 500
 
     return 'Data successfully uploaded.', 200
+
+"""
+@app.route('/feedback/<building_id>/<feedack_percentage>/<current_percentage>', methods =['POST'])
+def upload_feedback(building_id, feedback_percentage, current_percentage):
+    #May not need this variable
+    current_devices = db.get_latest_building_data(g.cursor, building_id)
+    updated_percentage = current_percentage * (100 / (100 - feedback_percentage))
+    try:
+        db.insert_updated_data_to_feedback_table(g.cursor, building_id, updated_percentage)
+    except Exception as e:
+        print (e)
+        return 'Invalid insertion of user feedback'
+
+    return 'User feedback successfully uploaded.', 200
+"""
