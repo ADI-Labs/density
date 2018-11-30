@@ -30,7 +30,7 @@ def create_all_buildings(df):
 
     #  create script and div from dictionary
     script, div = components(building_divs)
-
+    print(div)
     return (script, div)
 
 

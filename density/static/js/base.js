@@ -85,3 +85,7 @@ function clearFilter(name) {
     ele[i].checked = false;
   searchLocations();
 }
+
+function retrieveDataOnClick(group_id, client_count, button_response) {
+  
+}
