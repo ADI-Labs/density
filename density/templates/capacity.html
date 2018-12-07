@@ -14,7 +14,7 @@
                                           data-location-type="{{ auxdata[location['group_name']]['type'] }}"
                                           data-open-now="{{ auxdata[location['group_name']]['open'] }}">
                 <h4>{{ location['group_name'] }}<span class="opening-time">{{times[location['group_name']]}}</span></h4>
-                  <button class="feedback-button" onclick="openFeedback('{{ location['group_name'] }}', '{{ location['percent_full'] }}')">Feedback</button>
+                  <button class="feedback-button" onclick="openFeedback('{{ location['group_name'] }}', '{{ location['group_id'] }}', '{{ location['percent_full'] }}')">Feedback</button>
                   <div class="progress">
                       {% if location['percent_full'] <= 2 %}
                           <div class="progress-bar progress-bar-info progress-bar-striped active"
@@ -65,6 +65,7 @@
     <i>Ex: &#34;Lower&#34; means our number is too high and should be lower (the location is less crowded than our prediction).</i> 
     <button id="send-feedback" onclick="sendFeedback()">Submit</button>
   </p>
+  <section id="feedback-thanks" style="display: none;">Thank you!</section>
 </div>
 
 {% endblock %}
