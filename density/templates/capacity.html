@@ -12,6 +12,7 @@
                                           data-location-type="{{ auxdata[location['group_name']]['type'] }}"
                                           data-open-now="{{ auxdata[location['group_name']]['open'] }}">
                 <h4>{{ location['group_name'] }}<span class="opening-time">{{times[location['group_name']]}}</span></h4>
+                  <button class="feedback-button" onclick="openFeedback('{{ location['group_name'] }}', '{{ location['percent_full'] }}')">Feedback</button>
                   <div class="progress">
                       {% if location['percent_full'] <= 2 %}
                           <div class="progress-bar progress-bar-info progress-bar-striped active"
@@ -21,8 +22,6 @@
                              {{ location['percent_full'] }}%
                           </div>
                       {% else %}
-
-                        <button onclick="retrieveDataOnClick(1,1,1)"></button>
 
                           <div class="progress-bar progress-bar-info progress-bar-striped active"
                              role="progressbar" aria-valuenow="{{location['percent_full']}}"
@@ -49,17 +48,16 @@
         </h4>
     </div>
 </div>
-<<<<<<< HEAD
 <div id="feedback" style="display: none;">
   <h2>Feedback</h2>
   <div id="close" onclick="closeFeedback()">x</div>
-  <p>We use your feedback to help improve the accuracy of our predictions. How would you rate our current data on the <span id="building" class="blue"></span>, which states that it is <span id="percentage" class="blue"></span> full?</p>
+  <p>We use your feedback to help improve the accuracy of our predictions. How would you rate our current data on the <span id="building" class="blue"></span>, which states that it is <span id="percentage" class="blue"></span><span class="blue">%</span> full?</p>
   <div>
-    <div><input type="radio" name="capacity" value="" id="r1"><label for="r1">Very Low</label></div>
-    <div><input type="radio" name="capacity" value="" id="r2"><label for="r2">Low</label></div>
-    <div><input type="radio" name="capacity" value="" id="r3"><label for="r3">Perfect</label></div>
-    <div><input type="radio" name="capacity" value="" id="r4"><label for="r4">High</label></div>
-    <div><input type="radio" name="capacity" value="" id="r5"><label for="r5">Very High</label></div>
+    <div><input type="radio" name="capacity" value="0" id="r1"><label for="r1">Very Low</label></div>
+    <div><input type="radio" name="capacity" value="1" id="r2"><label for="r2">Low</label></div>
+    <div><input type="radio" name="capacity" value="2" id="r3"><label for="r3">Perfect</label></div>
+    <div><input type="radio" name="capacity" value="3" id="r4"><label for="r4">High</label></div>
+    <div><input type="radio" name="capacity" value="4" id="r5"><label for="r5">Very High</label></div>
   </div>
   <p class="flex">
     <i>Ex: &#34;Low&#34; means our number is too low and it is actually more crowded.</i> 
@@ -67,8 +65,6 @@
   </p>
 </div>
 
-=======
->>>>>>> 945ac5de19c77bb0f2a89b8bde29ef45bb0384b9
 {% endblock %}
 
 {% block scripts %}
