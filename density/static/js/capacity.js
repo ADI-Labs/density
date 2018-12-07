@@ -14,19 +14,21 @@ function retrieveDataOnClick(group_id, percentage, button_response) {
   };
 
 function closeFeedback() {
+	$('#feedback-thanks').fadeOut('slow');
 	var radio_buttons = $("input[name='capacity']");
 	for (var i = 0; i < radio_buttons.length; i++) {
 		radio_buttons[i].checked = false;
 	}
 	$('#feedback').hide();
 }
-function openFeedback(name, percent) {
+function openFeedback(name, id, percent) {
 	$('#feedback #building').html(name);
+	$('#feedback #building').attr("data-id", id);
 	$('#feedback #percentage').html(percent);
 	$('#feedback').show();
 }
 function sendFeedback() {
-	var group_id = $('#feedback #building').html();
+	var group_id = $('#feedback #building').attr("data-id");
 	var percentage = $('#feedback #percentage').html();
 	var button_response = $("input[name='capacity']:checked").val();
 	if (button_response == undefined) {
@@ -34,5 +36,6 @@ function sendFeedback() {
 		return;
 	}
 	retrieveDataOnClick(group_id, percentage, button_response);
-	closeFeedback();
+	$('#feedback-thanks').show();
+	setTimeout(closeFeedback, 1500);
 }
