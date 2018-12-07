@@ -195,7 +195,6 @@ def multi_predict(cluster,
         group_result_std4 = group_data4.groupby("time_point").std()
         group_result_std5 = group_data5.groupby("time_point").std()
         group_result_std6 = group_data6.groupby("time_point").std()
-        print(group_result_std)
 
         # calculate all the means but only select the rows with the smaller std
         group_data_mean = group_data.groupby("time_point").mean()

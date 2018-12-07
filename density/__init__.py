@@ -38,7 +38,7 @@ def sample_test():
         g.start_time = datetime.datetime.now() 
     
         print("This is a test of apscheduler")
-        for i in range(1,8):
+        for i in range(1,2):
             date = datetime.datetime.today()
             date += datetime.timedelta(days=i)
             data = categorize_data(g.cursor, 0, date)
@@ -453,11 +453,13 @@ def get_window_building_data(start_time, end_time, parent_id):
 def capacity():
     """Render and show capacity page"""
     cur_data = db.get_latest_data(g.cursor)
+    
     last_updated = cur_data[0]['dump_time'].strftime("%B %d %Y, %I:%M %p")
     locations = annotate_fullness_percentage(cur_data)
     auxdata = locationauxdata.get_location_aux_data()
     # times = {'Lerner 1' : 1200, 'Lerner 2' : 1300}
     times = librarytimes.dict_for_time()
+    print(locations)
     return render_template(
         'capacity.html', locations=locations,
         last_updated=last_updated, times=times, auxdata=auxdata, today='hi')
@@ -526,7 +528,6 @@ def new_predict():
                            script=script, css_script=CDN.render_js(),
                            times=times, auxdata=auxdata, today=today)
 
-
 @app.route('/predict')
 def predict():
     auxdata = locationauxdata.get_location_aux_data()
@@ -547,10 +548,8 @@ def predict():
         cache.set('predictToday', today_pred, timeout=10600)
 
     # make plots from predictions
-    print(today_pred)
     script = cache.get('predictScript')
     divs = cache.get('predictDivs')
-    print(today_pred.transpose().head())
     if script is None:
         script, divs = graphics.create_all_buildings(today_pred.transpose())
         cache.set('predictScript', script, timeout=10600)
@@ -582,3 +581,21 @@ def upload():
             Please contact someone in ADI for more details.', 500
 
     return 'Data successfully uploaded.', 200
+
+
+
+@app.route('/feedback/<building_id>/<feedback_percentage>/<current_percentage>', methods =['POST'])
+def upload_feedback(building_id, feedback_percentage, current_percentage):
+    #May not need this variable
+    #current_devices = db.get_latest_building_data(g.cursor, building_id)
+    #updated_percentage = current_percentage * (100 / (100 - feedback_percentage))
+
+    print('POST request sucessful')
+    try:
+        #db.insert_updated_data_to_feedback_table(g.cursor, building_id, updated_percentage)
+        print('hi')
+    except Exception as e:
+        print (e)
+        return 'Invalid insertion of user feedback'
+
+    return 'User feedback successfully uploaded.', 200

@@ -85,3 +85,6 @@ function clearFilter(name) {
     ele[i].checked = false;
   searchLocations();
 }
+
+
+
