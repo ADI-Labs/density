@@ -6,7 +6,7 @@ $(document).ready(function() {
 
 //  '/feedback/<building_id>/<feedack_percentage>/<current_percentage>', methods =['POST'])
 function retrieveDataOnClick(group_id, percentage, button_response) {   
-    PERCENTAGES = [20,10,0,10,20]
+    PERCENTAGES = [20,10,0,-10,-20]
     feedack_percentage = PERCENTAGES[button_response]
     console.log(group_id + " // " + feedack_percentage + " // " + percentage);
     $.post("/feedback/" + group_id + "/" + feedack_percentage + "/" + percentage, {
