@@ -13,7 +13,8 @@ import psycopg2.extras
 import psycopg2.pool
 from werkzeug.contrib.cache import SimpleCache
 
-from . import db, librarytimes, locationauxdata
+from . import librarytimes, locationauxdata
+from. import db
 from . import graphics
 from .config import config, ISO8601Encoder
 from .data import FULL_CAP_DATA
@@ -83,7 +84,7 @@ def initialize():
     sample_test()
     apsched = BackgroundScheduler()
     apsched.start()
-    apsched.add_job(sample_test,  'interval', seconds=10)
+    apsched.add_job(sample_test,  'interval', seconds=1000)
 
 
 @app.before_request
@@ -473,97 +474,20 @@ def map():
     # Render template has an SVG image whose colors are changed by % full
     return render_template('map.html', locations=locations)
 
-@app.route('/new_predict')
-def new_predict():
+@app.route('/predict')
+def predict():
 
     today = datetime.datetime.today().weekday() + 1
     if today > 6:
         today = 0
     auxdata = locationauxdata.get_location_aux_data()
     times = librarytimes.dict_for_time()
-    # for i in range(1,8):
-    #     date = datetime.datetime.today()
-    #     date += datetime.timedelta(days=i)
-    #     data = categorize_data(g.cursor, 0, date)
-    #     data1 = categorize_data(g.cursor, 1, date)
-    #     data2 = categorize_data(g.cursor, 2, date)
-    #     data3 = categorize_data(g.cursor, 3, date)
-    #     data4 = categorize_data(g.cursor, 4, date)
-    #     data5 = categorize_data(g.cursor, 5, date)
-    #     data6 = categorize_data(g.cursor, 6, date)
-
-    # # make predictions using all clusters
-    #     today_pred = multi_predict(data, data1, data2,
-    #                                  data3, data4, data5, data6)
-
-    # # display data
-    #     print(today_pred)
-    #     script, divs = graphics.create_all_buildings(today_pred.transpose())
-    #     if (i == 1):
-    #         predictionCache.set('monday_script', script, timeout=0)
-    #         predictionCache.set('monday_div', divs, timeout=0)
-    #     if (i == 2):
-    #         predictionCache.set('tuesday_script', script, timeout=0)
-    #         predictionCache.set('tuesday_div', divs, timeout=0)
-    #     if (i == 3):
-    #         predictionCache.set('wednesday_script', script, timeout=0)
-    #         predictionCache.set('wednesday_div', divs, timeout=0)
-    #     if (i == 4):
-    #         predictionCache.set('thursday_script', script, timeout=0)
-    #         predictionCache.set('thursday_div', divs, timeout=0)
-    #     if (i == 5):
-    #         predictionCache.set('friday_script', script, timeout=0)
-    #         predictionCache.set('friday_div', divs, timeout=0)
-    #     if (i == 6):
-    #         predictionCache.set('saturday_script', script, timeout=0)
-    #         predictionCache.set('saturday_div', divs, timeout=0)
-    #     if (i == 7):
-    #         predictionCache.set('sunday_script', script, timeout=0)
-    #         predictionCache.set('sunday_div', divs, timeout=0)
-            
-    divs = [predictionCache.get('sunday_div'), predictionCache.get('monday_div'), predictionCache.get('tuesday_div'), predictionCache.get('wednesday_div'), predictionCache.get('thursday_div'), predictionCache.get('friday_div'), predictionCache.get('saturday_div')]
-    script = [predictionCache.get('sunday_script'), predictionCache.get('monday_script'), predictionCache.get('tuesday_script'), predictionCache.get('wednesday_script'), predictionCache.get('thursday_script'), predictionCache.get('friday_script'), predictionCache.get('saturday_script')]
+    divs = predictionCache.get('monday_div')
+    script = predictionCache.get('monday_script')
 
     return render_template('predict.html', divs=json.dumps(divs),
                            script=script, css_script=CDN.render_js(),
                            times=times, auxdata=auxdata, today=today)
-
-@app.route('/predict')
-def predict():
-    auxdata = locationauxdata.get_location_aux_data()
-    times = librarytimes.dict_for_time()
-    # loading data from current database connection
-    data = cache.get('predictData')
-
-    if data is None:
-        data = db_to_pandas(g.cursor)
-        cache.set('predictData', data, timeout=10600)
-
-    # make predictions based on fetched data
-
-    today_pred = cache.get('predictToday')
-
-    if today_pred is None:
-        today_pred = predict_today(data)
-        cache.set('predictToday', today_pred, timeout=10600)
-
-    # make plots from predictions
-    script = cache.get('predictScript')
-    divs = cache.get('predictDivs')
-    if script is None:
-        script, divs = graphics.create_all_buildings(today_pred.transpose())
-        cache.set('predictScript', script, timeout=10600)
-        cache.set('predictDivs', divs, timeout=10600)
-    '''
-    data = db_to_pandas(g.cursor)
-    today_pred = predict_today(data)
-    script, divs = graphics.create_all_buildings(today_pred.transpose())
-    '''
-    
-    return render_template('predict.html', divs=divs,
-                           script=script, css_script=CDN.render_js(),
-                           times=times, auxdata=auxdata)
-
 
 @app.route('/upload', methods=['POST'])
 def upload():
@@ -584,16 +508,16 @@ def upload():
 
 
 
-@app.route('/feedback/<building_id>/<feedback_percentage>/<current_percentage>', methods =['POST'])
-def upload_feedback(building_id, feedback_percentage, current_percentage):
+@app.route('/feedback/<group_id>/<feedback_percentage>/<current_percentage>', methods =['POST'])
+def upload_feedback(group_id, feedback_percentage, current_percentage):
     #May not need this variable
     #current_devices = db.get_latest_building_data(g.cursor, building_id)
-    #updated_percentage = current_percentage * (100 / (100 - feedback_percentage))
+    updated_percentage = int(current_percentage) * (100 / (100 - float(feedback_percentage)))
 
     print('POST request sucessful')
     try:
-        #db.insert_updated_data_to_feedback_table(g.cursor, building_id, updated_percentage)
-        print('hi')
+        #db.insert_updated_data_to_feedback_table(g.cursor, group_id, updated_percentage)
+        print('Sucess!')
     except Exception as e:
         print (e)
         return 'Invalid insertion of user feedback'
