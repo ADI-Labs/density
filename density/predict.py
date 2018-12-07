@@ -397,17 +397,3 @@ def categorize_data(cursor, cluster, time):
     df["time_point"] = time_points
 
     return df
-
-
-
-def predict_date(date):
-
-
-    # load data for every cluster
-    data = categorize_data(g.cursor, 0)
-    data1 = categorize_data(g.cursor, 1)
-    data2 = categorize_data(g.cursor, 2)
-    data3 = categorize_data(g.cursor, 3)
-    data4 = categorize_data(g.cursor, 4)
-    data5 = categorize_data(g.cursor, 5)
-    data6 = categorize_data(g.cursor, 6)
