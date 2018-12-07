@@ -14,7 +14,7 @@ import psycopg2.pool
 from werkzeug.contrib.cache import SimpleCache
 
 from . import librarytimes, locationauxdata
-import db
+from. import db
 from . import graphics
 from .config import config, ISO8601Encoder
 from .data import FULL_CAP_DATA
@@ -84,7 +84,7 @@ def initialize():
     sample_test()
     apsched = BackgroundScheduler()
     apsched.start()
-    apsched.add_job(sample_test,  'interval', seconds=10)
+    apsched.add_job(sample_test,  'interval', seconds=1000)
 
 
 @app.before_request
@@ -512,11 +512,12 @@ def upload():
 def upload_feedback(group_id, feedback_percentage, current_percentage):
     #May not need this variable
     #current_devices = db.get_latest_building_data(g.cursor, building_id)
-    updated_percentage = current_percentage * (100 / (100 - feedback_percentage))
+    updated_percentage = int(current_percentage) * (100 / (100 - float(feedback_percentage)))
 
     print('POST request sucessful')
     try:
-        db.insert_updated_data_to_feedback_table(g.cursor, group_id, updated_percentage)
+        #db.insert_updated_data_to_feedback_table(g.cursor, group_id, updated_percentage)
+        print('Sucess!')
     except Exception as e:
         print (e)
         return 'Invalid insertion of user feedback'
