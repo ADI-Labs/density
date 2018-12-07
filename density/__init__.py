@@ -516,7 +516,7 @@ def upload_feedback(group_id, feedback_percentage, current_percentage):
 
     print('POST request sucessful')
     try:
-        #db.insert_updated_data_to_feedback_table(g.cursor, group_id, updated_percentage)
+        db.insert_updated_data_to_feedback_table(g.cursor, group_id, updated_percentage)
         print('Sucess!')
     except Exception as e:
         print (e)
