@@ -83,6 +83,19 @@ ALTER TABLE public.routers OWNER TO adi;
 -- Data for Name: buildings; Type: TABLE DATA; Schema: public; Owner: adi
 --
 
+--
+-- Name: feedback_data; Type: TABLE; Schema: public; Owner: adi; Tablespace: 
+--
+
+CREATE TABLE feedback_data(
+    id                  INTEGER NOT NULL,
+    building_id         INTEGER NOT NULL,
+    percentage_change   INTEGER NOT NULL,
+    raw_count           INTEGER NOT NULL
+);
+
+ALTER TABLE public.feedback_data OWNER TO adi;
+
 COPY buildings (id, name) FROM stdin;
 103	Butler
 146	Avery
