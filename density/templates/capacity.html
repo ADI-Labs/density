@@ -21,6 +21,9 @@
                              {{ location['percent_full'] }}%
                           </div>
                       {% else %}
+
+                        <button onclick="retrieveDataOnClick(1,1,1)"></button>
+
                           <div class="progress-bar progress-bar-info progress-bar-striped active"
                              role="progressbar" aria-valuenow="{{location['percent_full']}}"
                              aria-valuemin="0" aria-valuemax="100"
@@ -46,8 +49,8 @@
         </h4>
     </div>
 </div>
-
 {% endblock %}
+
 {% block scripts %}
     <script src="{{ url_for('static', filename='js/capacity.js') }}"></script>
 {% endblock %}

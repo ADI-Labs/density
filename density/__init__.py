@@ -580,13 +580,16 @@ def upload():
 
 
 
-@app.route('/feedback/<building_id>/<feedack_percentage>/<current_percentage>', methods =['POST'])
+@app.route('/feedback/<building_id>/<feedback_percentage>/<current_percentage>', methods =['POST'])
 def upload_feedback(building_id, feedback_percentage, current_percentage):
     #May not need this variable
-    current_devices = db.get_latest_building_data(g.cursor, building_id)
-    updated_percentage = current_percentage * (100 / (100 - feedback_percentage))
+    #current_devices = db.get_latest_building_data(g.cursor, building_id)
+    #updated_percentage = current_percentage * (100 / (100 - feedback_percentage))
+
+    print('POST request sucessful')
     try:
-        db.insert_updated_data_to_feedback_table(g.cursor, building_id, updated_percentage)
+        #db.insert_updated_data_to_feedback_table(g.cursor, building_id, updated_percentage)
+        print('hi')
     except Exception as e:
         print (e)
         return 'Invalid insertion of user feedback'

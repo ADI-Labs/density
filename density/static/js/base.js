@@ -86,9 +86,5 @@ function clearFilter(name) {
   searchLocations();
 }
 
-//  '/feedback/<building_id>/<feedack_percentage>/<current_percentage>', methods =['POST'])
-function retrieveDataOnClick(group_id, client_count, percentage, button_response) {
-  $.post( "/feedback/" + group_id + "/" + button_response + "/" + percentage, {
-    javascript_data: data 
-});
-}
+
+
