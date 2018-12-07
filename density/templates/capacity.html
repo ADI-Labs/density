@@ -2,6 +2,8 @@
 {% block body %}
 <div class="listContainer">
 
+    <h3>Please leave feedback to help improve our predictions!</h3>
+
     {% include 'search.html' %}
 
     <div class="container">
@@ -49,18 +51,18 @@
     </div>
 </div>
 <div id="feedback" style="display: none;">
-  <h2>Feedback</h2>
+  <h2>Feedback<br><span><i>We use your feedback to help improve the accuracy of our predictions.</i></span></h2>
   <div id="close" onclick="closeFeedback()">x</div>
-  <p>We use your feedback to help improve the accuracy of our predictions. How would you rate our current data on the <span id="building" class="blue"></span>, which states that it is <span id="percentage" class="blue"></span><span class="blue">%</span> full?</p>
+  <p>Is our prediction that <span id="building" class="blue"></span> is <span id="percentage" class="blue"></span><span class="blue">%</span> full accurate? The percentage should be:</p>
   <div>
-    <div><input type="radio" name="capacity" value="0" id="r1"><label for="r1">Very Low</label></div>
-    <div><input type="radio" name="capacity" value="1" id="r2"><label for="r2">Low</label></div>
+    <div><input type="radio" name="capacity" value="0" id="r1"><label for="r1">Much Lower</label></div>
+    <div><input type="radio" name="capacity" value="1" id="r2"><label for="r2">Lower</label></div>
     <div><input type="radio" name="capacity" value="2" id="r3"><label for="r3">Perfect</label></div>
-    <div><input type="radio" name="capacity" value="3" id="r4"><label for="r4">High</label></div>
-    <div><input type="radio" name="capacity" value="4" id="r5"><label for="r5">Very High</label></div>
+    <div><input type="radio" name="capacity" value="3" id="r4"><label for="r4">Higher</label></div>
+    <div><input type="radio" name="capacity" value="4" id="r5"><label for="r5">Much Higher</label></div>
   </div>
   <p class="flex">
-    <i>Ex: &#34;Low&#34; means our number is too low and it is actually more crowded.</i> 
+    <i>Ex: &#34;Lower&#34; means our number is too high and should be lower (the location is less crowded than our prediction).</i> 
     <button id="send-feedback" onclick="sendFeedback()">Submit</button>
   </p>
 </div>

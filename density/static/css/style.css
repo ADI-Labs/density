@@ -78,6 +78,13 @@ p {
     font-size: 16px;
 }
 
+h3 {
+    text-align: center;
+    font-size: 14px;
+    margin: 0 0 15px 0;
+    color: #f9735e;
+}
+
 .about {
     font-size: 18px;
     color: #000000;
@@ -449,9 +456,16 @@ img {
     margin-top: -200px;
     margin-left: -250px;
     background: white;
+    font-family: 'Lato', sans-serif;
 }
 #feedback h2 {
-    margin: 0 0 15px 0;
+    margin: 0 0 30px 0;
+}
+#feedback h2 span {
+    display: block;
+    font-size: 14px;
+    font-weight: 300;
+    margin-top: 8px;
 }
 #feedback p {
     margin: 0;
