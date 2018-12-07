@@ -256,9 +256,9 @@ def insert_density_data(cursor, data):
 def insert_updated_data_to_feedback_table(cursor, group_id, updated_percentage):
     print(group_id)
     data = get_latest_group_data(cursor, group_id)
-    raw_count = data['client_count']
+    raw_count = data[0]['client_count']
     #print(raw_count)
-    query = "INSERT INTO feedback_data (group_id, raw_count, percentage_change) VALUES (int(group_id),  \
+    query = "INSERT INTO feedback_data (group_id, raw_count, percentage_change) VALUES (group_id,  \
             raw_count,updated_percentage );"
     cursor.execute(query)
     return "Sucess"
