@@ -38,6 +38,7 @@ def sample_test():
         g.cursor = g.pg_conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
         g.start_time = datetime.datetime.now() 
     
+        print("This is a test of apscheduler")
         for i in range(1,2):
             date = datetime.datetime.today()
             date += datetime.timedelta(days=i)
@@ -83,7 +84,7 @@ def initialize():
     sample_test()
     apsched = BackgroundScheduler()
     apsched.start()
-    apsched.add_job(sample_test,  'interval', seconds=60)
+    apsched.add_job(sample_test,  'interval', seconds=10)
 
 
 @app.before_request
@@ -462,7 +463,7 @@ def capacity():
     print(locations)
     return render_template(
         'capacity.html', locations=locations,
-        last_updated=last_updated, times=times, auxdata=auxdata)
+        last_updated=last_updated, times=times, auxdata=auxdata, today='hi')
 
 
 @app.route('/map')
@@ -476,14 +477,17 @@ def map():
 @app.route('/predict')
 def predict():
 
+    today = datetime.datetime.today().weekday() + 1
+    if today > 6:
+        today = 0
     auxdata = locationauxdata.get_location_aux_data()
     times = librarytimes.dict_for_time()
     divs = predictionCache.get('monday_div')
     script = predictionCache.get('monday_script')
 
-    return render_template('predict.html', divs=divs,
+    return render_template('predict.html', divs=json.dumps(divs),
                            script=script, css_script=CDN.render_js(),
-                           times=times, auxdata=auxdata)
+                           times=times, auxdata=auxdata, today=today)
 
 @app.route('/upload', methods=['POST'])
 def upload():

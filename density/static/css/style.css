@@ -434,6 +434,77 @@ img {
     text-align: center;
 }
 
+.blue {
+    color: #4084c1;
+}
+
+#feedback {
+    position: fixed;
+    width: 500px;
+    box-shadow: 2px 2px 10px black;
+    padding: 25px;
+    display: block;
+    top: 50%;
+    left: 50%;
+    margin-top: -200px;
+    margin-left: -250px;
+    background: white;
+}
+#feedback h2 {
+    margin: 0 0 15px 0;
+}
+#feedback p {
+    margin: 0;
+    font-size: 14px;
+    color: black;
+}
+#feedback>div {
+    text-align: center;
+    margin: 30px 0;
+}
+#feedback>div>div {
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    width: 80px;
+}
+#feedback label {
+    padding: 10px 0 0;
+    font-size: 12px;
+    font-weight: normal;
+}
+button#send-feedback {
+    margin-left: 15px;
+    padding: 0 30px;
+    background: #2285c6;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+button#send-feedback:hover {
+    background: #468fcc;
+}
+button.feedback-button {
+    float: right;
+    margin-left: 15px;
+    margin-top: 10px;
+    border: none;
+    background: none;
+    color: #2285c6;
+}
+.flex {
+    display: flex;
+}
+#feedback #close {
+    position: absolute;
+    top: 0;
+    right: 30px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
 @media screen and (max-width: 666px) {
     .logoContainer {
         padding: 10px;
@@ -587,5 +658,20 @@ img {
         margin-left: 0;
         margin-bottom: 10px;
         padding: 0;
+    }
+    .list-group-item h4 {
+        width: 100%;
+    }
+    div#feedback {
+        width: 100%;
+        margin: 0 auto;
+        left: 0;
+        top: 0;
+    }
+    #feedback>div>div {
+        width: 60px;
+    }
+    button.feedback-button {
+        margin-top: 0;
     }
 }
