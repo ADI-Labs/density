@@ -46,6 +46,22 @@
         </h4>
     </div>
 </div>
+<div id="feedback" style="display: none;">
+  <h2>Feedback</h2>
+  <div id="close" onclick="closeFeedback()">x</div>
+  <p>We use your feedback to help improve the accuracy of our predictions. How would you rate our current data on the <span id="building" class="blue"></span>, which states that it is <span id="percentage" class="blue"></span> full?</p>
+  <div>
+    <div><input type="radio" name="capacity" value="" id="r1"><label for="r1">Very Low</label></div>
+    <div><input type="radio" name="capacity" value="" id="r2"><label for="r2">Low</label></div>
+    <div><input type="radio" name="capacity" value="" id="r3"><label for="r3">Perfect</label></div>
+    <div><input type="radio" name="capacity" value="" id="r4"><label for="r4">High</label></div>
+    <div><input type="radio" name="capacity" value="" id="r5"><label for="r5">Very High</label></div>
+  </div>
+  <p class="flex">
+    <i>Ex: &#34;Low&#34; means our number is too low and it is actually more crowded.</i> 
+    <button id="send-feedback" onclick="sendFeedback()">Submit</button>
+  </p>
+</div>
 
 {% endblock %}
 {% block scripts %}
