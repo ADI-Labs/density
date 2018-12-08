@@ -79,12 +79,12 @@ def sample_test():
                 predictionCache.set('sunday_script', script, timeout=0)
                 predictionCache.set('sunday_div', divs, timeout=0)
 
-@app.before_first_request
-def initialize():
-    sample_test()
-    apsched = BackgroundScheduler()
-    apsched.start()
-    apsched.add_job(sample_test,  'interval', seconds=1000)
+# @app.before_first_request
+# def initialize():
+#     sample_test()
+#     apsched = BackgroundScheduler()
+#     apsched.start()
+#     apsched.add_job(sample_test,  'interval', seconds=1000)
 
 
 @app.before_request
@@ -198,7 +198,6 @@ def annotate_fullness_percentage(data):
     for row in data:
         capacity = FULL_CAP_DATA[row["group_name"]]
         percent = (100 * row["client_count"]) // capacity
-
         copy = dict(**row)
         copy["percent_full"] = min(100, percent)
         groups.append(copy)
@@ -512,9 +511,8 @@ def upload():
 def upload_feedback(group_id, feedback_percentage, current_percentage):
     #May not need this variable
     #current_devices = db.get_latest_building_data(g.cursor, building_id)
-    updated_percentage = int(current_percentage) * (100 / (100 - float(feedback_percentage)))
-
-    print('POST request sucessful')
+    updated_percentage = int(current_percentage )+ int(feedback_percentage);
+    group_id = int(group_id)
     try:
         db.insert_updated_data_to_feedback_table(g.cursor, group_id, updated_percentage)
         print('Sucess!')

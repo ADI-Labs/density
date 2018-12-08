@@ -35,7 +35,8 @@ function sendFeedback() {
 		alert('Please select an option.');
 		return;
 	}
-	retrieveDataOnClick(group_id, percentage, button_response);
+	
+retrieveDataOnClick(group_id, percentage, button_response);
 	$('#feedback-thanks').show();
-	setTimeout(closeFeedback, 1500);
+	setTimeout(closeFeedback, 600);
 }
