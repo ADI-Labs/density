@@ -15,6 +15,7 @@ bokeh = "*"
 matplotlib = "*"
 werkzeug = "*"
 apscheduler = "*"
+sklearn = "*"
 
 [dev-packages]
 "flake8" = "*"

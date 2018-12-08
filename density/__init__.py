@@ -13,7 +13,7 @@ import psycopg2.extras
 import psycopg2.pool
 from werkzeug.contrib.cache import SimpleCache
 
-from . import db, librarytimes, locationauxdata
+from . import db, librarytimes, locationauxdata, regression
 from . import graphics
 from .config import config, ISO8601Encoder
 from .data import FULL_CAP_DATA
@@ -78,12 +78,32 @@ def sample_test():
                 predictionCache.set('sunday_script', script, timeout=0)
                 predictionCache.set('sunday_div', divs, timeout=0)
 
-@app.before_first_request
-def initialize():
-    sample_test()
-    apsched = BackgroundScheduler()
-    apsched.start()
-    apsched.add_job(sample_test,  'interval', seconds=10)
+# @app.before_first_request
+# def initialize():
+    # sample_test()
+    # apsched = BackgroundScheduler()
+    # apsched.start()
+    #apsched.add_job(sample_test,  'interval', seconds=10)
+
+def get_percentage_dict(cursor):
+    '''
+    Sets the cache for all regression models for percentages according
+    to user feedback
+
+    For Debugging, go to regression.build_reg_model(df) and change return
+    value to model.coef_ ; Then, un-comment the print statement at the end
+
+    param: cursor
+    '''
+    # get all distinct values for group_id as a list
+    query = "SELECT DISTINCT group_id FROM feedback_data"
+    cursor.execute(query)
+    group_ids = [id['group_id'] for id in cursor.fetchall()]
+    # iterate through all groups to build regression models
+    for group_id in group_ids:
+        df = regression.get_feedback_data(cursor, group_id)
+        regModelCache.set(group_id, regression.build_reg_model(df))
+        # print(regression.build_reg_model(df))
 
 
 @app.before_request
@@ -92,11 +112,11 @@ def get_connections():
     g.pg_conn = pg_pool.getconn()
     g.cursor = g.pg_conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
     g.start_time = datetime.datetime.now()
-    
-    
+    get_percentage_dict(g.cursor)
 
 cache = SimpleCache()
 predictionCache = SimpleCache()
+regModelCache = SimpleCache()
 # app.scheduler = BackgroundScheduler()
 # job = app.scheduler.add_job(sample_test, 'interval', seconds=10)
 # app.scheduler.start()
@@ -461,7 +481,6 @@ def capacity():
     return render_template(
         'capacity.html', locations=locations,
         last_updated=last_updated, times=times, auxdata=auxdata, today='hi')
-
 
 @app.route('/map')
 def map():
