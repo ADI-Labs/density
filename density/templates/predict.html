@@ -5,7 +5,7 @@
   rel="stylesheet" type="text/css">
 <script src="http://cdn.pydata.org/bokeh/release/bokeh-0.11.1.min.js"></script>
 {{ css_script|safe }}
-{{ script[today]|safe }}
+{{ script|safe }}
 
 <div class="container">
   <div class="col-12"  style="text-align:center;">
@@ -18,7 +18,7 @@
 
 <div class="listContainer" style="padding-top: 0;">
   <ul class="list-group">
-    {% for location_name, d in divs[today].items() %}
+    {% for location_name, d in divs.items() %}
     <li class="list-group-item" data-name="{{ location_name }}" 
                                 data-nickname="{{ auxdata[location_name]['nickname'] }}"
                                 data-location-type="{{ auxdata[location_name]['type'] }}"

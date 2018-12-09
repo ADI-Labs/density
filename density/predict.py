@@ -262,6 +262,7 @@ def multi_predict(cluster,
     result.index = new_indexes
     result = result.sort_index()
 
+    print(result)
     return result
 
 def to_percentage(group, name):

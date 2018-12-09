@@ -70,6 +70,15 @@ def get_latest_building_data(cursor, parent_id):
     cursor.execute(query, [parent_id])
     return cursor.fetchall()
 
+def migrate_dump_time(cursor):
+    query = SELECT+";"
+    cursor.execute(query)
+    while True:
+        r = cursor.fetchone()
+        if(r == None):
+            break
+        if(r['dump_time'].minute is not 0 and r['dump_time'].minute is not 15 and r['dump_time'].minute is not 30 and r['dump_time'].minute is not 45):
+            print(r['dump_time'].minute)
 
 def get_window_based_on_group(cursor, group_id, start_time, end_time, offset):
     """
@@ -181,7 +190,6 @@ def get_uni_for_code(cursor, code):
     if result is not None:
         return result['uni']
 
-
 def insert_density_data(cursor, data):
     # Check integrity of data
     cursor.execute("""
@@ -260,5 +268,5 @@ def insert_updated_data_to_feedback_table(cursor, group_id, updated_percentage):
 
     query = "INSERT INTO feedback_data (group_id, raw_count, percentage_change) VALUES ("+str(group_id)+","+str(raw_count)+","+str(updated_percentage)+");"
     cursor.execute(query)
-    
+
     return "Sucess"

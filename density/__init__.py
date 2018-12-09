@@ -17,7 +17,7 @@ from . import librarytimes, locationauxdata
 from. import db
 from . import graphics
 from .config import config, ISO8601Encoder
-from .data import FULL_CAP_DATA
+from .data import FULL_CAP_DATA, resize_full_cap_data
 from .predict import categorize_data, multi_predict
 from .predict import db_to_pandas, predict_today
 from apscheduler.schedulers.background import BackgroundScheduler
@@ -31,6 +31,8 @@ request_date_format = '%Y-%m-%d'
 pg_pool = psycopg2.pool.SimpleConnectionPool(
     minconn=5, maxconn=20, dsn=config["DB_URI"])
 
+### TODO cchange full_cap_data, change day for the prediction to current day, make sure prediction calculations are made with the right data
+## TODO: 
 
 def sample_test():
     with app.app_context():
@@ -41,7 +43,7 @@ def sample_test():
         print("This is a test of apscheduler")
         for i in range(1,2):
             date = datetime.datetime.today()
-            date += datetime.timedelta(days=i)
+            date += datetime.timedelta(days=-31)
             data = categorize_data(g.cursor, 0, date)
             data1 = categorize_data(g.cursor, 1, date)
             data2 = categorize_data(g.cursor, 2, date)
@@ -49,11 +51,11 @@ def sample_test():
             data4 = categorize_data(g.cursor, 4, date)
             data5 = categorize_data(g.cursor, 5, date)
             data6 = categorize_data(g.cursor, 6, date)
-
+            print(data)
         # make predictions using all clusters
             today_pred = multi_predict(data, data1, data2,
                                          data3, data4, data5, data6)
-
+            print(today_pred)
         # display data
             #print(today_pred)
             script, divs = graphics.create_all_buildings(today_pred.transpose())
@@ -79,12 +81,13 @@ def sample_test():
                 predictionCache.set('sunday_script', script, timeout=0)
                 predictionCache.set('sunday_div', divs, timeout=0)
 
-# @app.before_first_request
-# def initialize():
-#     sample_test()
-#     apsched = BackgroundScheduler()
-#     apsched.start()
-#     apsched.add_job(sample_test,  'interval', seconds=1000)
+@app.before_first_request
+def initialize():
+    resize_full_cap_data()
+    sample_test()
+    apsched = BackgroundScheduler()
+    apsched.start()
+    apsched.add_job(sample_test,  'interval', seconds=1000)
 
 
 @app.before_request
@@ -195,6 +198,7 @@ def annotate_fullness_percentage(data):
     :rtype: list of dictionaries
     """
     groups = []
+    print(FULL_CAP_DATA)
     for row in data:
         capacity = FULL_CAP_DATA[row["group_name"]]
         percent = (100 * row["client_count"]) // capacity
@@ -452,6 +456,7 @@ def get_window_building_data(start_time, end_time, parent_id):
 @app.route('/')
 def capacity():
     """Render and show capacity page"""
+    #db.migrate_dump_time(g.cursor)
     cur_data = db.get_latest_data(g.cursor)
     
     last_updated = cur_data[0]['dump_time'].strftime("%B %d %Y, %I:%M %p")
@@ -484,7 +489,7 @@ def predict():
     divs = predictionCache.get('monday_div')
     script = predictionCache.get('monday_script')
 
-    return render_template('predict.html', divs=json.dumps(divs),
+    return render_template('predict.html', divs=divs,
                            script=script, css_script=CDN.render_js(),
                            times=times, auxdata=auxdata, today=today)
 
@@ -515,7 +520,6 @@ def upload_feedback(group_id, feedback_percentage, current_percentage):
     group_id = int(group_id)
     try:
         db.insert_updated_data_to_feedback_table(g.cursor, group_id, updated_percentage)
-        print('Sucess!')
     except Exception as e:
         print (e)
         return 'Invalid insertion of user feedback'

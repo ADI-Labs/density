@@ -1,4 +1,4 @@
-FULL_CAP_DATA = {
+FULL_CAP_DATA_MAX_HISTORY = {
     'Architectural and Fine Arts Library 1': 27,
     'Architectural and Fine Arts Library 2': 362,
     'Architectural and Fine Arts Library 3': 220,
@@ -21,5 +21,11 @@ FULL_CAP_DATA = {
     'Roone Arledge Auditorium': 923,
     'Science and Engineering Library': 234,
     'Starr East Asian Library': 257,
-    'Uris/Watson Library': 1046,
+    'Uris/Watson Library': 1046
 }
+
+FULL_CAP_DATA = {}
+
+def resize_full_cap_data():
+    for key, value in FULL_CAP_DATA_MAX_HISTORY.items():
+        FULL_CAP_DATA[key] = int(value*0.90)
