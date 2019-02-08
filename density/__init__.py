@@ -18,7 +18,7 @@ from. import db
 from . import graphics
 from .config import config, ISO8601Encoder
 from .data import FULL_CAP_DATA, resize_full_cap_data
-from .predict import categorize_data, multi_predict
+from .predict import categorize_data, new_categorize_data, multi_predict, new_multi_predict
 from .predict import db_to_pandas, predict_today
 from apscheduler.schedulers.background import BackgroundScheduler
 
@@ -34,16 +34,146 @@ pg_pool = psycopg2.pool.SimpleConnectionPool(
 ### TODO cchange full_cap_data, change day for the prediction to current day, make sure prediction calculations are made with the right data
 ## TODO: 
 
-def sample_test():
+def cache_prediction_graphs():
     with app.app_context():
         g.pg_conn = pg_pool.getconn()
         g.cursor = g.pg_conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
         g.start_time = datetime.datetime.now() 
-    
-        print("This is a test of apscheduler")
-        for i in range(1,2):
-            date = datetime.datetime.today()
-            date += datetime.timedelta(days=-31)
+        SUNDAY = 0 # as defined by datetime
+        SATURDAY = 6 # as defined by datetime
+        date = datetime.datetime.today()
+        day_of_week = date.weekday()
+        week_of_year = date.isocalendar()[1]
+
+        if ( day_of_week + 1 == 7):
+            day_of_week = 0
+        else:
+            day_of_week = day_of_week + 1
+
+        print("day of week (0-Sunday): " + str(day_of_week))
+        print("week of year: " + str(week_of_year))
+
+        # number_clusters = 7
+        # week_delta = 2
+        # day_deltas = [5]
+        # day_of_week = SATURDAY
+        for i in range(1,2): #TODO: cache all 7 days of the week and display on the front-end as dropdown menu
+            
+            # date += datetime.timedelta(days=i)
+
+            # time_clusters = []
+            # weeks = []
+            # days = []
+
+            # for weeks_back in range(-week_delta, 1):
+            #     for weeks_forward in range(0, week_delta + 1):
+            #         print("here")
+            #         forward = weeks_forward
+            #         back = weeks_back
+            #         weeks = []
+            #         days = []
+
+            #         if(day_of_week == SUNDAY):
+
+            #             # add for this week_of_year
+            #             weeks.append(week_of_year)
+            #             days.append(day_of_week)
+            #             weeks.append(week_of_year-1)
+            #             days.append(SATURDAY)
+
+            #             #add for the weeks ahead
+            #             while(forward > 0):
+            #                 weeks.append(week_of_year + forward)
+            #                 days.append(day_of_week)
+            #                 weeks.append(week_of_year - 1 + forward)
+            #                 days.append(SATURDAY)
+            #                 forward -= 1
+
+            #             #add for the weeks before
+            #             while(back < 0):
+            #                 weeks.append(week_of_year + back)
+            #                 days.append(day_of_week)
+            #                 weeks.append(week_of_year - 1 + back)
+            #                 days.append(SATURDAY)
+            #                 back += 1
+            #             #data = new_categorize_data(g.cursor, date, weeks, days)
+            #             weeks = []
+            #             days = []
+
+            #             weeks.append(week_of_year)
+            #             days.append(day_of_week)
+
+            #             #add for the weeks ahead
+            #             while(forward > 0):
+            #                 weeks.append(week_of_year + forward)
+            #                 days.append(day_of_week)
+            #                 forward -= 1
+
+            #             #add for the weeks before
+            #             while(back < 0):
+            #                 weeks.append(week_of_year + back)
+            #                 days.append(day_of_week)
+            #                 back += 1
+            #             #data = new_categorize_data(g.cursor, date, weeks, days)
+
+
+            #         elif(day_of_week == SATURDAY):
+            #             weeks.append(week_of_year)
+            #             days.append(day_of_week)
+            #             weeks.append(week_of_year + 1)
+            #             days.append(SUNDAY)
+
+            #             #add for the weeks ahead
+            #             while(forward > 0):
+            #                 weeks.append(week_of_year + forward)
+            #                 days.append(day_of_week)
+            #                 weeks.append(week_of_year + 1 + forward)
+            #                 days.append(SUNDAY)
+            #                 forward -= 1
+
+            #             #add for the weeks before
+            #             while(back < 0):
+            #                 weeks.append(week_of_year + back)
+            #                 days.append(day_of_week)
+            #                 weeks.append(week_of_year + 1 + back)
+            #                 days.append(SUNDAY)
+            #                 back += 1
+            #             #data = new_categorize_data(g.cursor, date, weeks, days)
+            #             weeks = []
+            #             days = []
+
+            #             weeks.append(week_of_year)
+            #             days.append(day_of_week)
+            #             while(forward > 0):
+            #                 weeks.append(week_of_year + forward)
+            #                 days.append(day_of_week)
+            #                 forward -= 1
+
+            #             #add for the weeks before
+            #             while(back < 0):
+            #                 weeks.append(week_of_year + back)
+            #                 days.append(day_of_week)
+            #                 back += 1
+            #             #data = new_categorize_data(g.cursor, date, weeks, days)
+
+            #         print(weeks)
+            #         print(days)  
+            #         #data = new_categorize_data(g.cursor, date, weeks, days)
+            #         #time_clusters.append(data)
+
+
+            # for i in range(0, number_clusters): 
+            #     data = categorize_data(g.cursor, i, date)
+            #     time_clusters.append(data)
+
+            # # for elem in time_clusters:
+            # #     print("NEW CLUSTER !!!!!!!!!!!!!!!")
+            # #     print(elem )
+
+            
+            # new_today_pred = new_multi_predict(time_clusters)
+
+
             data = categorize_data(g.cursor, 0, date)
             data1 = categorize_data(g.cursor, 1, date)
             data2 = categorize_data(g.cursor, 2, date)
@@ -51,11 +181,12 @@ def sample_test():
             data4 = categorize_data(g.cursor, 4, date)
             data5 = categorize_data(g.cursor, 5, date)
             data6 = categorize_data(g.cursor, 6, date)
-            print(data)
+            
+
         # make predictions using all clusters
             today_pred = multi_predict(data, data1, data2,
                                          data3, data4, data5, data6)
-            print(today_pred)
+
         # display data
             #print(today_pred)
             script, divs = graphics.create_all_buildings(today_pred.transpose())
@@ -84,10 +215,10 @@ def sample_test():
 @app.before_first_request
 def initialize():
     resize_full_cap_data()
-    sample_test()
+    cache_prediction_graphs()
     apsched = BackgroundScheduler()
     apsched.start()
-    apsched.add_job(sample_test,  'interval', seconds=1000)
+    apsched.add_job(cache_prediction_graphs,  'interval', seconds=1000)
 
 
 @app.before_request
@@ -198,7 +329,6 @@ def annotate_fullness_percentage(data):
     :rtype: list of dictionaries
     """
     groups = []
-    print(FULL_CAP_DATA)
     for row in data:
         capacity = FULL_CAP_DATA[row["group_name"]]
         percent = (100 * row["client_count"]) // capacity
@@ -480,10 +610,10 @@ def map():
 
 @app.route('/predict')
 def predict():
-
     today = datetime.datetime.today().weekday() + 1
     if today > 6:
         today = 0
+
     auxdata = locationauxdata.get_location_aux_data()
     times = librarytimes.dict_for_time()
     divs = predictionCache.get('monday_div')
