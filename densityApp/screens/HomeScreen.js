@@ -1,4 +1,6 @@
 import React from 'react';
+import {SearchBar} from 'react-native-elements';
+
 import {
   Image,
   Platform,
@@ -19,10 +21,48 @@ export default class HomeScreen extends React.Component {
 
   render() {
     return (
+
+
+
+
       <View style={styles.container}>
-        <View style={{ justifyContent: "center", alignItems: "center", backgroundColor: "blue", height: 100 }}>
-          <Text>Hello world!</Text>
-        </View>
+       			<View style={{
+				height: 170,
+				backgroundColor: '#2185C6',
+				alignItems: 'center'
+			}}>
+			<View style={{
+				height: 80,
+				paddingTop: 30,
+				justifyContent: 'center',
+				alignItems: 'center',
+				backgroundColor: '#2185C6'	
+			}}>
+			<Image source={require('../assets/images/logo2.png')} resizeMode={'center'} />
+			</View>
+			<View style={{
+				width:'90%',
+				paddingTop: 10,
+				alignItems: 'center',	
+				justifyContent: 'center'
+			}}>		
+
+			<SearchBar
+			placeholder="search by building"
+			onChangeText={this.updateSearch}
+			placeholderTextColor='#C1C1C1'
+			value={""}
+			platform="ios"
+			containerStyle={{backgroundColor:'#2185C6'}}
+			inputStyle={{backgroundColor: 'white'}}
+			inputContainerStyle={{backgroundColor: 'white'}}
+			leftIconContainerStyle={{backgroundColor: 'white'}}
+			rightIconContainerStyle={{backgroundColor: 'white'}}
+			/>
+			</View>
+			</View>
+			
+			
         <View style={styles.body}>
           {/* Cards go here */}
         </View>
