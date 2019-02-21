@@ -14,6 +14,20 @@ import { WebBrowser } from 'expo';
 
 import { MonoText } from '../components/StyledText';
 
+class MyButton extends React.Component {
+  setNativeProps = (nativeProps) => {
+    this._root.setNativeProps(nativeProps);
+  }
+
+  render(){
+    return (
+      <View ref = {component => this._root = component} {...this.props}>
+        <Text style = {{ fontSize: 14, color: 'white', fontWeight: '80'}}>{this.props.label}</Text>
+      </View>
+    )
+  }
+}
+
 export default class HomeScreen extends React.Component {
   static navigationOptions = {
     header: null,
@@ -32,7 +46,7 @@ export default class HomeScreen extends React.Component {
     return (
       <View style={styles.container}>
        			<View style={{
-				height: 170,
+				height: 190,
 				backgroundColor: '#2185C6',
 				alignItems: 'center'
 			}}>
@@ -41,16 +55,21 @@ export default class HomeScreen extends React.Component {
 				paddingTop: 30,
 				justifyContent: 'center',
 				alignItems: 'center',
-				backgroundColor: '#2185C6'	
+				backgroundColor: '#2185C6'
 			}}>
 			<Image source={require('../assets/images/logo2.png')} resizeMode={'center'} />
 			</View>
 			<View style={{
 				width:'90%',
 				paddingTop: 10,
-				alignItems: 'center',	
+				alignItems: 'center',
 				justifyContent: 'center'
+
 			}}>		
+
+		
+
+
 			<SearchBar
     			placeholder="search by building"
     			onChangeText={this.updateSearch}
@@ -65,9 +84,44 @@ export default class HomeScreen extends React.Component {
           cancelButtonProps={{color:'white'}}
 			/>
 			</View>
-			</View>
-			
-			
+      <View style={{
+        flex: 1,
+        fontSize: 2,
+        textAlign: 'center',
+        flexDirection: 'row',
+        justifyContent: 'space-evenly',
+				height:18,
+        backgroundColor: '#2185C6',
+				alignItems: 'center',
+			}}>
+      <View style = {{flex: 1, paddingLeft: 30,}}>
+      <TouchableOpacity>
+        <MyButton label = "dining hall"/>
+      </TouchableOpacity>
+      </View>
+      <View style = {{flex: 1, paddingLeft: 10,}}>
+      <TouchableOpacity>
+        <MyButton label = "library"/>
+      </TouchableOpacity>
+      </View>
+      <View style = {{flex: 1,}}>
+      <TouchableOpacity>
+        <MyButton label = "student center"/>
+      </TouchableOpacity>
+      </View>
+      <View style = {{flex: 1, paddingLeft: 30,}}>
+      <TouchableOpacity>
+        <MyButton label = "open now"/>
+      </TouchableOpacity>
+      </View>
+      <View style = {{flex: 1, paddingLeft: 10, paddingRight: 0,}}>
+      <TouchableOpacity>
+        <MyButton label = "closed"/>
+      </TouchableOpacity>
+      </View>
+      </View>
+      </View>
+
         <View style={styles.body}>
           {/* Cards go here */}
         </View>
