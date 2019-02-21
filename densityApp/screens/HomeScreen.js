@@ -19,12 +19,17 @@ export default class HomeScreen extends React.Component {
     header: null,
   };
 
+   state = {
+    search: '',
+   };
+
+  updateSearch = search => {
+    this.setState({ search });
+  };
+
   render() {
+    const { search } = this.state;
     return (
-
-
-
-
       <View style={styles.container}>
        			<View style={{
 				height: 170,
@@ -46,18 +51,18 @@ export default class HomeScreen extends React.Component {
 				alignItems: 'center',	
 				justifyContent: 'center'
 			}}>		
-
 			<SearchBar
-			placeholder="search by building"
-			onChangeText={this.updateSearch}
-			placeholderTextColor='#C1C1C1'
-			value={""}
-			platform="ios"
-			containerStyle={{backgroundColor:'#2185C6'}}
-			inputStyle={{backgroundColor: 'white'}}
-			inputContainerStyle={{backgroundColor: 'white'}}
-			leftIconContainerStyle={{backgroundColor: 'white'}}
-			rightIconContainerStyle={{backgroundColor: 'white'}}
+    			placeholder="search by building"
+    			onChangeText={this.updateSearch}
+    			placeholderTextColor='#C1C1C1'
+    			value={search}
+    			platform="ios"
+    			containerStyle={{backgroundColor:'#2185C6'}}
+    			inputStyle={{backgroundColor: 'white'}}
+    			inputContainerStyle={{backgroundColor: 'white'}}
+    			leftIconContainerStyle={{backgroundColor: 'white'}}
+    			rightIconContainerStyle={{backgroundColor: 'white'}}
+          cancelButtonProps={{color:'white'}}
 			/>
 			</View>
 			</View>
@@ -73,6 +78,7 @@ export default class HomeScreen extends React.Component {
           </Text>
         </View>
       </View>
+      
     );
   }
 }
