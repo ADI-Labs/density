@@ -22,7 +22,7 @@ class MyButton extends React.Component {
   render(){
     return (
       <View ref = {component => this._root = component} {...this.props}>
-        <Text style = {{ fontSize: 14, color: 'white', fontWeight: '80'}}>{this.props.label}</Text>
+        <Text style = {{ fontSize: 14, color: 'white', textAlign:'center', fontWeight: '80'}}>{this.props.label}</Text>
       </View>
     )
   }
@@ -46,29 +46,26 @@ export default class HomeScreen extends React.Component {
     return (
       <View style={styles.container}>
        			<View style={{
-				height: 190,
+				height: 210,
 				backgroundColor: '#2185C6',
 				alignItems: 'center'
 			}}>
-			<View style={{
-				height: 80,
-				paddingTop: 30,
-				justifyContent: 'center',
-				alignItems: 'center',
-				backgroundColor: '#2185C6'
-			}}>
-			<Image source={require('../assets/images/logo2.png')} resizeMode={'center'} />
-			</View>
+    		<View style={{
+    				height: 80,
+    				paddingTop: 30,
+    				justifyContent: 'center',
+    				alignItems: 'center',
+    				backgroundColor: '#2185C6'
+    			}}>
+			   <Image source={require('../assets/images/logo2.png')} resizeMode={'center'} />
+			 </View>
 			<View style={{
 				width:'90%',
 				paddingTop: 10,
 				alignItems: 'center',
 				justifyContent: 'center'
 
-			}}>		
-
-		
-
+			}}>
 
 			<SearchBar
     			placeholder="search by building"
@@ -85,6 +82,7 @@ export default class HomeScreen extends React.Component {
 			/>
 			</View>
       <View style={{
+        width:'90%',
         flex: 1,
         fontSize: 2,
         textAlign: 'center',
@@ -92,29 +90,28 @@ export default class HomeScreen extends React.Component {
         justifyContent: 'space-evenly',
 				height:18,
         backgroundColor: '#2185C6',
-				alignItems: 'center',
 			}}>
-      <View style = {{flex: 1, paddingLeft: 30,}}>
+      <View style = {{flex: 1}}>
       <TouchableOpacity>
         <MyButton label = "dining hall"/>
       </TouchableOpacity>
       </View>
-      <View style = {{flex: 1, paddingLeft: 10,}}>
+      <View style = {{flex: 1}}>
       <TouchableOpacity>
-        <MyButton label = "library"/>
+        <MyButton label = "library" />
       </TouchableOpacity>
       </View>
-      <View style = {{flex: 1,}}>
+      <View style = {{flex: 1}} >
       <TouchableOpacity>
         <MyButton label = "student center"/>
       </TouchableOpacity>
       </View>
-      <View style = {{flex: 1, paddingLeft: 30,}}>
+      <View style = {{flex: 1}}>
       <TouchableOpacity>
         <MyButton label = "open now"/>
       </TouchableOpacity>
       </View>
-      <View style = {{flex: 1, paddingLeft: 10, paddingRight: 0,}}>
+      <View style = {{flex: 1}}>
       <TouchableOpacity>
         <MyButton label = "closed"/>
       </TouchableOpacity>
@@ -132,7 +129,7 @@ export default class HomeScreen extends React.Component {
           </Text>
         </View>
       </View>
-      
+
     );
   }
 }
