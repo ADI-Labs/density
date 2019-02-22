@@ -31,8 +31,8 @@ request_date_format = '%Y-%m-%d'
 pg_pool = psycopg2.pool.SimpleConnectionPool(
     minconn=5, maxconn=20, dsn=config["DB_URI"])
 
-### TODO cchange full_cap_data, change day for the prediction to current day, make sure prediction calculations are made with the right data
-## TODO: 
+cache = SimpleCache()
+predictionCache = SimpleCache()
 
 def cache_prediction_graphs():
     with app.app_context():
@@ -53,164 +53,22 @@ def cache_prediction_graphs():
         print("day of week (0-Sunday): " + str(day_of_week))
         print("week of year: " + str(week_of_year))
 
-        # number_clusters = 7
-        # week_delta = 2
-        # day_deltas = [5]
-        # day_of_week = SATURDAY
-        for i in range(1,2): #TODO: cache all 7 days of the week and display on the front-end as dropdown menu
-            
-            # date += datetime.timedelta(days=i)
-
-            # time_clusters = []
-            # weeks = []
-            # days = []
-
-            # for weeks_back in range(-week_delta, 1):
-            #     for weeks_forward in range(0, week_delta + 1):
-            #         print("here")
-            #         forward = weeks_forward
-            #         back = weeks_back
-            #         weeks = []
-            #         days = []
-
-            #         if(day_of_week == SUNDAY):
-
-            #             # add for this week_of_year
-            #             weeks.append(week_of_year)
-            #             days.append(day_of_week)
-            #             weeks.append(week_of_year-1)
-            #             days.append(SATURDAY)
-
-            #             #add for the weeks ahead
-            #             while(forward > 0):
-            #                 weeks.append(week_of_year + forward)
-            #                 days.append(day_of_week)
-            #                 weeks.append(week_of_year - 1 + forward)
-            #                 days.append(SATURDAY)
-            #                 forward -= 1
-
-            #             #add for the weeks before
-            #             while(back < 0):
-            #                 weeks.append(week_of_year + back)
-            #                 days.append(day_of_week)
-            #                 weeks.append(week_of_year - 1 + back)
-            #                 days.append(SATURDAY)
-            #                 back += 1
-            #             #data = new_categorize_data(g.cursor, date, weeks, days)
-            #             weeks = []
-            #             days = []
-
-            #             weeks.append(week_of_year)
-            #             days.append(day_of_week)
-
-            #             #add for the weeks ahead
-            #             while(forward > 0):
-            #                 weeks.append(week_of_year + forward)
-            #                 days.append(day_of_week)
-            #                 forward -= 1
-
-            #             #add for the weeks before
-            #             while(back < 0):
-            #                 weeks.append(week_of_year + back)
-            #                 days.append(day_of_week)
-            #                 back += 1
-            #             #data = new_categorize_data(g.cursor, date, weeks, days)
-
-
-            #         elif(day_of_week == SATURDAY):
-            #             weeks.append(week_of_year)
-            #             days.append(day_of_week)
-            #             weeks.append(week_of_year + 1)
-            #             days.append(SUNDAY)
-
-            #             #add for the weeks ahead
-            #             while(forward > 0):
-            #                 weeks.append(week_of_year + forward)
-            #                 days.append(day_of_week)
-            #                 weeks.append(week_of_year + 1 + forward)
-            #                 days.append(SUNDAY)
-            #                 forward -= 1
-
-            #             #add for the weeks before
-            #             while(back < 0):
-            #                 weeks.append(week_of_year + back)
-            #                 days.append(day_of_week)
-            #                 weeks.append(week_of_year + 1 + back)
-            #                 days.append(SUNDAY)
-            #                 back += 1
-            #             #data = new_categorize_data(g.cursor, date, weeks, days)
-            #             weeks = []
-            #             days = []
-
-            #             weeks.append(week_of_year)
-            #             days.append(day_of_week)
-            #             while(forward > 0):
-            #                 weeks.append(week_of_year + forward)
-            #                 days.append(day_of_week)
-            #                 forward -= 1
-
-            #             #add for the weeks before
-            #             while(back < 0):
-            #                 weeks.append(week_of_year + back)
-            #                 days.append(day_of_week)
-            #                 back += 1
-            #             #data = new_categorize_data(g.cursor, date, weeks, days)
-
-            #         print(weeks)
-            #         print(days)  
-            #         #data = new_categorize_data(g.cursor, date, weeks, days)
-            #         #time_clusters.append(data)
-
-
-            # for i in range(0, number_clusters): 
-            #     data = categorize_data(g.cursor, i, date)
-            #     time_clusters.append(data)
-
-            # # for elem in time_clusters:
-            # #     print("NEW CLUSTER !!!!!!!!!!!!!!!")
-            # #     print(elem )
-
-            
-            # new_today_pred = new_multi_predict(time_clusters)
-
-
-            data = categorize_data(g.cursor, 0, date)
-            data1 = categorize_data(g.cursor, 1, date)
-            data2 = categorize_data(g.cursor, 2, date)
-            data3 = categorize_data(g.cursor, 3, date)
-            data4 = categorize_data(g.cursor, 4, date)
-            data5 = categorize_data(g.cursor, 5, date)
-            data6 = categorize_data(g.cursor, 6, date)
+        data = categorize_data(g.cursor, 0, date)
+        data1 = categorize_data(g.cursor, 1, date)
+        data2 = categorize_data(g.cursor, 2, date)
+        data3 = categorize_data(g.cursor, 3, date)
+        data4 = categorize_data(g.cursor, 4, date)
+        data5 = categorize_data(g.cursor, 5, date)
+        data6 = categorize_data(g.cursor, 6, date)
             
 
         # make predictions using all clusters
-            today_pred = multi_predict(data, data1, data2,
+        today_pred = multi_predict(data, data1, data2,
                                          data3, data4, data5, data6)
 
-        # display data
-            #print(today_pred)
-            script, divs = graphics.create_all_buildings(today_pred.transpose())
-            if (i == 1):
-                predictionCache.set('monday_script', script, timeout=0)
-                predictionCache.set('monday_div', divs, timeout=0)
-            if (i == 2):
-                predictionCache.set('tuesday_script', script, timeout=0)
-                predictionCache.set('tuesday_div', divs, timeout=0)
-            if (i == 3):
-                predictionCache.set('wednesday_script', script, timeout=0)
-                predictionCache.set('wednesday_div', divs, timeout=0)
-            if (i == 4):
-                predictionCache.set('thursday_script', script, timeout=0)
-                predictionCache.set('thursday_div', divs, timeout=0)
-            if (i == 5):
-                predictionCache.set('friday_script', script, timeout=0)
-                predictionCache.set('friday_div', divs, timeout=0)
-            if (i == 6):
-                predictionCache.set('saturday_script', script, timeout=0)
-                predictionCache.set('saturday_div', divs, timeout=0)
-            if (i == 7):
-                predictionCache.set('sunday_script', script, timeout=0)
-                predictionCache.set('sunday_div', divs, timeout=0)
+        script, divs = graphics.create_all_buildings(today_pred.transpose())
+        predictionCache.set('monday_script', script, timeout=0)
+        predictionCache.set('monday_div', divs, timeout=0)
 
 @app.before_first_request
 def initialize():
@@ -227,19 +85,6 @@ def get_connections():
     g.pg_conn = pg_pool.getconn()
     g.cursor = g.pg_conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
     g.start_time = datetime.datetime.now()
-    
-    
-
-cache = SimpleCache()
-predictionCache = SimpleCache()
-# app.scheduler = BackgroundScheduler()
-# job = app.scheduler.add_job(sample_test, 'interval', seconds=10)
-# app.scheduler.start()
-    # within this block, current_app points to app.
-    
-
-
-
 
 def return_connections():
     """ Return the connection to the Postgres connection pool. """

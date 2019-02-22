@@ -15,6 +15,14 @@ import { WebBrowser } from 'expo';
 
 import { MonoText } from '../components/StyledText';
 
+import Svg,{
+    Circle,
+    Ellipse,
+    G,
+    TSpan,
+    TextPath,
+} from 'react-native-svg';
+
 class MyButton extends React.Component {
   setNativeProps = (nativeProps) => {
     this._root.setNativeProps(nativeProps);
