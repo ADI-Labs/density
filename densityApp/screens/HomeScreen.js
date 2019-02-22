@@ -1,5 +1,6 @@
 import React from 'react';
 import {SearchBar} from 'react-native-elements';
+import HomeCard from '../components/HomeCard.js';
 
 import {
   Image,
@@ -119,15 +120,20 @@ export default class HomeScreen extends React.Component {
       </View>
       </View>
 
-        <View style={styles.body}>
-          {/* Cards go here */}
-        </View>
-        <View>
-          <Text style={ styles.footer }>
-            Last updated:{"\n"}
-            Maintained by ADI Labs{"\n"}
-          </Text>
-        </View>
+        <ScrollView>
+          <View style={styles.body}>
+            <HomeCard building={'Architectural and Fine Arts Library 1'} closeTime={'9pm'} percentFull={31}></HomeCard>
+            <HomeCard building={'Lerner 5'} closeTime={'1am'} percentFull={70}></HomeCard>
+            <HomeCard building={'JJ\'s Place'} closeTime={'4am'} percentFull={3}></HomeCard>
+          </View>
+          <View>
+            <Text style={ styles.footer }>
+              Last updated:{"\n"}
+              Maintained by ADI Labs{"\n"}
+            </Text>
+          </View>
+        </ScrollView>
+
       </View>
 
     );
