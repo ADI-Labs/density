@@ -45,6 +45,7 @@ export default class APICall extends React.Component {
 	 	}
 
     componentDidMount(){
+        //Need to replace this with API for predictions
   	 		return fetch('https://density.adicu.com/latest?auth_token=JCAhr3xirjnP0O3dEKjTiCLX_uaQCJJ2TWtyMLpjRgNVqhzQuYJEK78-HbBgGCa7')
   	 			.then((response) => response.json())
   	 			.then((responseJson) => {
