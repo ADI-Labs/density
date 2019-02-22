@@ -132,6 +132,8 @@ export default class APICall extends React.Component {
 				<ScrollView>
 					<View style={styles.body}>
 						<PredictCard building={'Architectural and Fine Arts Library 1'}></PredictCard>
+						<PredictCard building={'Lerner 5'}></PredictCard>
+						<PredictCard building={'JJ\'s Place'}></PredictCard>
 					</View>
 					<View>
 						<Text style={ styles.footer }>
