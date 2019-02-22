@@ -9,6 +9,7 @@ import {
   StyleSheet,
   Text,
   TouchableOpacity,
+  ActivityIndicator,
   View,
 } from 'react-native';
 import { WebBrowser } from 'expo';
@@ -30,6 +31,28 @@ class MyButton extends React.Component {
 }
 
 export default class HomeScreen extends React.Component {
+  constructor(props){
+ 		 super(props);
+	 		this.state = {isLoading : true}
+	 	}
+
+    componentDidMount(){
+  	 		return fetch('https://density.adicu.com/latest?auth_token=JCAhr3xirjnP0O3dEKjTiCLX_uaQCJJ2TWtyMLpjRgNVqhzQuYJEK78-HbBgGCa7')
+  	 			.then((response) => response.json())
+  	 			.then((responseJson) => {
+
+  	 				this.setState({
+  	 					isLoading: false,
+  	 					dataSource: responseJson.data,
+  	 				}, function(){
+
+  	 				});
+  	 			})
+  	 			.catch((error) => {
+  	 				console.error(error);
+  	 			});
+  	}
+
   static navigationOptions = {
     header: null,
   };
@@ -44,6 +67,13 @@ export default class HomeScreen extends React.Component {
 
   render() {
     const { search } = this.state;
+    if(this.state.isLoading){
+	 			return (
+	 				<View style = {{flex: 1, padding: 20}}>
+	 					<ActivityIndicator/>
+	 					</View>
+	 			)
+	 		}
     return (
       <View style={styles.container}>
        			<View style={{
@@ -122,9 +152,9 @@ export default class HomeScreen extends React.Component {
 
         <ScrollView>
           <View style={styles.body}>
-            <HomeCard building={'Architectural and Fine Arts Library 1'} closeTime={'9pm'} percentFull={31}></HomeCard>
-            <HomeCard building={'Lerner 5'} closeTime={'1am'} percentFull={70}></HomeCard>
-            <HomeCard building={'JJ\'s Place'} closeTime={'4am'} percentFull={3}></HomeCard>
+            <HomeCard building={'Architectural and Fine Arts Library 1'} closeTime={'9pm'} percentFull={this.state.dataSource[0].percent_full}></HomeCard>
+            <HomeCard building={'Lerner 5'} closeTime={'1am'} percentFull={this.state.dataSource[18].percent_full}></HomeCard>
+            <HomeCard building={'JJ\'s Place'} closeTime={'4am'} percentFull={this.state.dataSource[10].percent_full}></HomeCard>
           </View>
           <View>
             <Text style={ styles.footer }>
