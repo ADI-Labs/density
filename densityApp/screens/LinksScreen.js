@@ -1,6 +1,6 @@
 import React from 'react';
 import {SearchBar} from 'react-native-elements';
-import HomeCard from '../components/HomeCard.js';
+import PredictCard from '../components/PredictCard.js';
 import {
   Image,
   Platform,
@@ -14,6 +14,14 @@ import {
 import { WebBrowser } from 'expo';
 
 import { MonoText } from '../components/StyledText';
+
+import Svg,{
+    Circle,
+    Ellipse,
+    G,
+    TSpan,
+    TextPath,
+} from 'react-native-svg';
 
 class MyButton extends React.Component {
   setNativeProps = (nativeProps) => {
