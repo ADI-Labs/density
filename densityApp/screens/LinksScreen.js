@@ -161,9 +161,9 @@ export default class APICall extends React.Component {
 
 				<ScrollView>
 					<View style={styles.body}>
-						<HomeCard building={'Architectural and Fine Arts Library 1'} closeTime={'10pm'} percentFull={this.state.dataSource[0].percent_full}></HomeCard>
-						<HomeCard building={'Lerner 5'} closeTime={'1am'} percentFull={this.state.dataSource[18].percent_full}></HomeCard>
-						<HomeCard building={'JJ\'s Place'} closeTime={'4am'} percentFull={this.state.dataSource[10].percent_full}></HomeCard>
+						<PredictCard building={'Architectural and Fine Arts Library 1'}></PredictCard>
+						<PredictCard building={'Lerner 5'}></PredictCard>
+						<PredictCard building={'JJ\'s Place'}></PredictCard>
 					</View>
 					<View>
 						<Text style={ styles.footer }>
