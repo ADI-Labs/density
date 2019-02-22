@@ -1,7 +1,7 @@
 import React from 'react';
 //import { FlatList, ActivityIndicator, Text, View } from 'react-native';
 import {SearchBar} from 'react-native-elements';
-import HomeCard from '../components/HomeCard.js';
+import PredictCard from '../components/PredictCard.js';
 import {
   Image,
   Platform,
@@ -131,9 +131,7 @@ export default class APICall extends React.Component {
 
 				<ScrollView>
 					<View style={styles.body}>
-						<HomeCard building={'Architectural and Fine Arts Library 1'} closeTime={'9pm'} percentFull={31}></HomeCard>
-						<HomeCard building={'Lerner 5'} closeTime={'1am'} percentFull={70}></HomeCard>
-						<HomeCard building={'JJ\'s Place'} closeTime={'4am'} percentFull={3}></HomeCard>
+						<PredictCard building={'Architectural and Fine Arts Library 1'}></PredictCard>
 					</View>
 					<View>
 						<Text style={ styles.footer }>
