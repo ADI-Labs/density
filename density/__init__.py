@@ -458,10 +458,10 @@ def predict():
     today = datetime.datetime.today().weekday() + 1
     if today > 6:
         today = 0
-
+    today = 0
     auxdata = locationauxdata.get_location_aux_data()
     times = librarytimes.dict_for_time()
-    divs = predictionCache.get('monday_div')
+    divs[0] = predictionCache.get('monday_div')
     script = predictionCache.get('monday_script')
 
     return render_template('predict.html', divs=divs,

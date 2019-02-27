@@ -18,7 +18,7 @@
 
 <div class="listContainer" style="padding-top: 0;">
   <ul class="list-group">
-    {% for location_name, d in divs.items() %}
+    {% for location_name, d in divs[today].items() %}
     <li class="list-group-item" data-name="{{ location_name }}" 
                                 data-nickname="{{ auxdata[location_name]['nickname'] }}"
                                 data-location-type="{{ auxdata[location_name]['type'] }}"
@@ -31,12 +31,6 @@
     {% endfor %}
   </ul>
 </div>
-
-<script type="text/javascript">
-  console.log('hi');
-  var divs = '{{divs}}';
-  console.log(divs);
-</script>
 
 {% endblock %}
 {% block scripts %}
