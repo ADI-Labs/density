@@ -17,50 +17,98 @@ from . import librarytimes, locationauxdata
 from. import db
 from . import graphics
 from .config import config, ISO8601Encoder
-from .data import FULL_CAP_DATA, resize_full_cap_data
-from .predict import categorize_data, new_categorize_data, multi_predict, new_multi_predict
+from .data import FULL_CAP_DATA, resize_full_cap_data, COMBINATIONS
+from .predict import categorize_data, get_query, new_categorize_data, multi_predict, new_multi_predict
 from .predict import db_to_pandas, predict_today
 from apscheduler.schedulers.background import BackgroundScheduler
 
 app = Flask(__name__)
 
 CU_EMAIL_REGEX = r"^(?P<uni>[a-z\d]+)@.*(columbia|barnard)\.edu$"
-request_date_format = '%Y-%m-%d'
+
+# multiply each building's max capcity by this
+PERCENTAGE_FULL_CAP_DATA = 0.9
+
+REQUEST_DATE_FORMAT = '%Y-%m-%d'
+
+# Cache deletes elements after this many seconds
+CACHE_DEFAULT_TIMEOUT_SECONDS = 8*24*60*60
+
+# Cache Predictions data for this many days
+CACHE_PREDICTIONS_DATA_DAYS = 7
+
+# max week_delta for clusters in predictions algorithm
+MAX_WEEKS_PREDICTION_CLUSTERS = 6
 
 # create a pool of postgres connections
-pg_pool = psycopg2.pool.SimpleConnectionPool(
+# ThreadedConnectionPool may be used in several threads, as occurs in cache_prediction_graphs()
+pg_pool = psycopg2.pool.ThreadedConnectionPool(
     minconn=5, maxconn=20, dsn=config["DB_URI"])
 
-cache = SimpleCache()
-predictionCache = SimpleCache()
+# Create a cache to store Bokeh prediction graphs
+# and prediction graphs raw data. Every element is
+# deleted after CACHE_DEFAULT_TIMEOUT_SECONDS
+server_cache = SimpleCache(default_timeout=CACHE_DEFAULT_TIMEOUT_SECONDS)
+print("Cache initialized with default_timeout: " + str(CACHE_DEFAULT_TIMEOUT_SECONDS))
 
-def cache_prediction_graphs():
+def cache_prediction_graphs(days=CACHE_PREDICTIONS_DATA_DAYS):
+    """
+        Called by apscheduler to cache predictions' Bokeh data and raw data
+        All error checking needs to be done inside function since it is called
+        from a BackgroundScheduler
+        :param int days: number of days to cache predictions data for
+        :return: error msg
+        :rtype: int
+    """
+
+    # so the app scheduler process still uses the same postgres pool
+    # (pg_pool) as the parent process
     with app.app_context():
+
+        """
+        PostgreSQL's timestamp: Sunday = 0, Saturday = 6, 
+        First week = 1 if it has more than 3 days, First week = 0 if it has less than 3 days 
+        Python's datetime.weekday(): Monday = 0, Sunday = 6, 
+        datetime.isocalendar()[1]: First week = 1 if it has more than 3 days 
+        """
+        date = datetime.datetime.today()
+        week_of_year = date.isocalendar()[1]
+        day_of_week = date.weekday()
+
+        # Adjust day_of_week from (Monday = 0, Sunday = 6) to (Sunday = 0, Saturday = 6)
+        if (day_of_week + 1 == 7):
+            day_of_week = 0
+        else:
+            day_of_week = day_of_week + 1
+
+        print(".....................................................................")
+        print("Caching prediction Bokeh graphs for the next "+str(days)+" days")
+        print("day_of_week (Sunday = 0, Saturday = 6): " + str(day_of_week))
+        print("week_of_year: " + str(week_of_year))
+        print("MAX_WEEKS_PREDICTION_CLUSTERS: "+ str(MAX_WEEKS_PREDICTION_CLUSTERS))
+        print("\nThis will take a while")
+        print(".....................................................................")
+
+        #handle pool connection
         g.pg_conn = pg_pool.getconn()
         g.cursor = g.pg_conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
         g.start_time = datetime.datetime.now() 
-        SUNDAY = 0 # as defined by datetime
-        SATURDAY = 6 # as defined by datetime
-        date = datetime.datetime.today()
-        day_of_week = date.weekday()
-        week_of_year = date.isocalendar()[1]
 
-        if ( day_of_week + 1 == 7):
-            day_of_week = 0
-        else:
-            day_of_week = day_of_week + 1
+        # Iterate through all weeks 0-MAX_WEEKS_PREDICTION_CLUSTERS, both back and forward
+        # for each weeks_back, weeks_forward
+        for i in range(MAX_WEEKS_PREDICTION_CLUSTERS):
+            for j in range(MAX_WEEKS_PREDICTION_CLUSTERS):
 
-        print("day of week (0-Sunday): " + str(day_of_week))
-        print("week of year: " + str(week_of_year))
+                # for each cluster in COMBINATIONS[date.weekday()] get query and fetch data
+                for cluster in range(len(COMBINATIONS[date.weekday()])):
 
-        data = categorize_data(g.cursor, 0, date)
-        data1 = categorize_data(g.cursor, 1, date)
-        data2 = categorize_data(g.cursor, 2, date)
-        data3 = categorize_data(g.cursor, 3, date)
-        data4 = categorize_data(g.cursor, 4, date)
-        data5 = categorize_data(g.cursor, 5, date)
-        data6 = categorize_data(g.cursor, 6, date)
-            
+                    # combination is int array with week_days to cluster together
+                    combination = COMBINATIONS[date.weekday()][cluster]
+                    
+                    query = get_query(combination, week_of_year, day_of_week, i, j)
+                    print(query)
+                    data = categorize_data(g.cursor, query)
+                    print(data)
 
         # make predictions using all clusters
         today_pred = multi_predict(data, data1, data2,
@@ -68,48 +116,67 @@ def cache_prediction_graphs():
 
         script, divs = graphics.create_all_buildings(today_pred.transpose())
         script = script.replace('<script type="text/javascript">', "").replace('</script>', "")
-        predictionCache.set('monday_script', script, timeout=0)
-        predictionCache.set('monday_div', divs, timeout=0)
+        server_cache.set('monday_script', script, timeout=0)
+        server_cache.set('monday_div', divs, timeout=0)
 
-        date = datetime.datetime.today()
-        date += datetime.timedelta(days=1)
-        day_of_week = date.weekday()
-        week_of_year = date.isocalendar()[1]
+        # date = datetime.datetime.today()
+        # date += datetime.timedelta(days=1)
+        # day_of_week = date.weekday()
+        # week_of_year = date.isocalendar()[1]
 
-        if ( day_of_week + 1 == 7):
-            day_of_week = 0
-        else:
-            day_of_week = day_of_week + 1
+        # if ( day_of_week + 1 == 7):
+        #     day_of_week = 0
+        # else:
+        #     day_of_week = day_of_week + 1
 
-        print("day of week (0-Sunday): " + str(day_of_week))
-        print("week of year: " + str(week_of_year))
+        # print("day of week (0-Sunday): " + str(day_of_week))
+        # print("week of year: " + str(week_of_year))
 
-        data = categorize_data(g.cursor, 0, date)
-        data1 = categorize_data(g.cursor, 1, date)
-        data2 = categorize_data(g.cursor, 2, date)
-        data3 = categorize_data(g.cursor, 3, date)
-        data4 = categorize_data(g.cursor, 4, date)
-        data5 = categorize_data(g.cursor, 5, date)
-        data6 = categorize_data(g.cursor, 6, date)
+        # data = categorize_data(g.cursor, 0, date)
+        # data1 = categorize_data(g.cursor, 1, date)
+        # data2 = categorize_data(g.cursor, 2, date)
+        # data3 = categorize_data(g.cursor, 3, date)
+        # data4 = categorize_data(g.cursor, 4, date)
+        # data5 = categorize_data(g.cursor, 5, date)
+        # data6 = categorize_data(g.cursor, 6, date)
             
 
-        # make predictions using all clusters
-        today_pred = multi_predict(data, data1, data2,
-                                         data3, data4, data5, data6)
+        # # make predictions using all clusters
+        # today_pred = multi_predict(data, data1, data2,
+        #                                  data3, data4, data5, data6)
 
-        script, divs = graphics.create_all_buildings(today_pred.transpose())
-        script = script.replace('<script type="text/javascript">', "").replace('</script>', "")
-        predictionCache.set('tuesday_script', script, timeout=0)
+        # script, divs = graphics.create_all_buildings(today_pred.transpose())
+        # script = script.replace('<script type="text/javascript">', "").replace('</script>', "")
+        # server_cache.set('tuesday_script', script, timeout=0)
 
-        predictionCache.set('tuesday_div', divs, timeout=0)
+        # server_cache.set('tuesday_div', divs, timeout=0)
 
+    return "0"
+
+# When we deploy to server, we need to call 
+# home page once so it will load predictions' data onto server's cache
+# TODO: poor solution - resolve this (probably when we add regression models from feedback)
 @app.before_first_request
 def initialize():
-    resize_full_cap_data()
-    cache_prediction_graphs()
+    """
+        Loads predictions' Bokeh and raw data onto cache and initializes BackgroundScheduler
+        Runs right before processing the first request made to Flask app
+        TODO: Load predictions' raw data onto cache
+    """
+     # FULL_CAP_DATA each value changed to PERCENTAGE_FULL_CAP_DATA * value
+    err_msg = resize_full_cap_data(PERCENTAGE_FULL_CAP_DATA)
+    if(err_msg != "0"):
+        print("resize_full_cap_data() failed and returned: " + err_msg)
+    
+    # done first so we can handle those predictions' requests
+    err_msg = cache_prediction_graphs(CACHE_PREDICTIONS_DATA_DAYS)
+    if(err_msg != "0"):
+        print("cache_prediction_graphs failed and returned: " + err_msg)
+
+
     apsched = BackgroundScheduler()
     apsched.start()
-    apsched.add_job(cache_prediction_graphs,  'interval', seconds=1000)
+    apsched.add_job(cache_prediction_graphs,  'interval', seconds=1, max_instances=1)
 
 
 @app.before_request
@@ -134,7 +201,7 @@ def unsafe_date(*keys):
             for dt in keys:
                 arg_date = request.view_args.get(dt)
                 try:
-                    datetime.datetime.strptime(arg_date, request_date_format)
+                    datetime.datetime.strptime(arg_date, REQUEST_DATE_FORMAT)
                 except ValueError:
                     return jsonify(
                         error=("Invalid datetime format, "
@@ -504,8 +571,8 @@ def predict():
     auxdata = locationauxdata.get_location_aux_data()
     times = librarytimes.dict_for_time()
     divs = []
-    divs.append(predictionCache.get('monday_div'))
-    divs.append(predictionCache.get('tuesday_div'))
+    divs.append(server_cache.get('monday_div'))
+    divs.append(server_cache.get('tuesday_div'))
     for elem in divs:
         for location_name, d in divs[today].items():
             divs[today][location_name] = divs[today][location_name][1:]
@@ -514,8 +581,8 @@ def predict():
 
     today = 0
     script = []
-    script.append(predictionCache.get('monday_script'))
-    script.append(predictionCache.get('tuesday_script'))
+    script.append(server_cache.get('monday_script'))
+    script.append(server_cache.get('tuesday_script'))
 
     return render_template('predict.html', divs=divs,
                            script=script, css_script=CDN.render_js(),

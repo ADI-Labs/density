@@ -2,7 +2,7 @@ import datetime
 
 import numpy as np
 import pandas as pd
-from .data import FULL_CAP_DATA
+from .data import FULL_CAP_DATA, COMBINATIONS
 
 SELECT = """
     SELECT d.client_count, d.dump_time,
@@ -347,52 +347,48 @@ def normalize_dump_times(raw_data):
 
     return raw_data
 
-def get_query(time, weeks_of_year, days_of_year):
+def get_query(combination, week_of_year, day_of_week, week_delta_back, week_delta_forward):
 
-    today = time
+    if not combination:
+        combination = [day_of_week] # default 
 
+    if(week_of_year > 53 or week_of_year < 0):
+        return "ERROR: week_of_year parameter must be 0-53. week_of_year = "+str(week_of_year)
 
-    # PostgreSQL's days do not match Python's
-    if (today.weekday() + 1 == 7):
-        day_of_week = 0
-    else:
-        day_of_week = today.weekday() + 1
-    week_of_year = today.isocalendar()[1]
+    if(day_of_week > 6 or day_of_week < 0):
+        return "ERROR: day_of_week parameter must be 0-6. day_of_week = "+str(day_of_week)
+
+    if(week_delta_back < 0):
+        week_delta_back = 0 # default
+
+    if(week_delta_forward < 0):
+        week_delta_forward = 0 # default
+
 
     query = ' WHERE extract(WEEK from d.dump_time) = ' + \
             '{} AND extract(DOW from d.dump_time) = '.format(week_of_year) + \
             '{}'.format(day_of_week)
 
-def new_categorize_data(cursor, time, week_delta, week_sign, day_delta, day_sign):
+    for week_delta in range(week_delta_back+1):
+        for elem in combination:
+            if(day_of_week != elem or ((day_of_week == elem) and (week_delta != 0) )):
+                query += \
+                 ' OR (extract(WEEK from d.dump_time) = ' + \
+                 '{}'.format(week_of_year - week_delta) + \
+                 ' AND extract(DOW from d.dump_time) = {}) '.format(elem)
 
-    today = time
+    for week_delta in range(week_delta_forward+1):
+        for elem in combination:
+            if(week_delta != 0):
+                query += \
+                 ' OR (extract(WEEK from d.dump_time) = ' + \
+                 '{}'.format(week_of_year + week_delta) + \
+                 ' AND extract(DOW from d.dump_time) = {}) '.format(elem)
 
-
-    # PostgreSQL's days do not match Python's
-    if (today.weekday() + 1 == 7):
-        day_of_week = 0
-    else:
-        day_of_week = today.weekday() + 1
-    week_of_year = today.isocalendar()[1]
-
-    query = ' WHERE extract(WEEK from d.dump_time) = ' + \
-            '{} AND extract(DOW from d.dump_time) = '.format(week_of_year) + \
-            '{}'.format(day_of_week)
-
-    i = 0
-    while(i < week_delta):
-        query = query + \
-             ' OR (extract(WEEK from d.dump_time) = ' + \
-             '{}'.format(week_of_year - i) + \
-             ' AND extract(DOW from d.dump_time) = {}) '.format(day_of_week) 
+    return query
 
 
-
-
-
-
-
-def categorize_data(cursor, cluster, time):
+def categorize_data(cursor, query):
 
     """ Return data as pandas dataframe
 
@@ -407,121 +403,8 @@ def categorize_data(cursor, cluster, time):
         Density data in a Dataframe
     """
 
-    today = time
-
-
-    # PostgreSQL's days do not match Python's
-    if (today.weekday() + 1 == 7):
-        day_of_week = 0
-    else:
-        day_of_week = today.weekday() + 1
-    week_of_year = today.isocalendar()[1]
-
-    # cluster 0 -> all datapoints for same day for 4 years
-    query = ' WHERE extract(WEEK from d.dump_time) = ' + \
-            '{} AND extract(DOW from d.dump_time) = '.format(week_of_year) + \
-            '{}'.format(day_of_week)
-
-    
-
-    # cluster 1 -> all data points for same day and week ahead for 4 years
-    query1 = ' WHERE (extract(WEEK from d.dump_time) = ' + \
-             '{} AND extract(DOW from d.dump_time) = '.format(week_of_year) + \
-             '{})'.format(day_of_week) + \
-             ' OR (extract(WEEK from d.dump_time) = ' + \
-             '{}'.format(week_of_year + 1) + \
-             ' AND extract(DOW from d.dump_time) = {}) '.format(day_of_week)
-
-    # cluster 2 -> all data points for same date and week before for 4 years
-    query2 = ' WHERE (extract(WEEK from d.dump_time) = ' + \
-             '{} AND extract(DOW from d.dump_time) = '.format(week_of_year) + \
-             '{})'.format(day_of_week) + \
-             ' OR (extract(WEEK from d.dump_time) = ' + \
-             '{}'.format(week_of_year - 1) + \
-             ' AND extract(DOW from d.dump_time) = {}) '.format(day_of_week)
-
-    # cluster 3 -> all data point for same date, week before, and week after
-    query3 = ' WHERE (extract(WEEK from d.dump_time) = ' + \
-             '{} AND extract(DOW from d.dump_time) = '.format(week_of_year) + \
-             '{})'.format(day_of_week) + \
-             ' OR (extract(WEEK from d.dump_time) = ' + \
-             '{}'.format(week_of_year + 1) + \
-             ' AND extract(DOW from d.dump_time) = {}) '.format(day_of_week) +\
-             ' OR (extract(WEEK from d.dump_time) = ' + \
-             '{}'.format(week_of_year - 1) + \
-             ' AND extract(DOW from d.dump_time) = {})'.format(day_of_week)
-
-    # cluster 4 -> get all data point for same date, week before,
-    # and 2 weeks before
-    query4 = ' WHERE (extract(WEEK from d.dump_time) = ' + \
-             '{} AND extract(DOW from d.dump_time) = '.format(week_of_year) + \
-             '{})'.format(day_of_week) + \
-             ' OR (extract(WEEK from d.dump_time) = ' + \
-             '{}'.format(week_of_year - 1) + \
-             ' AND extract(DOW from d.dump_time) = {}) '.format(day_of_week) +\
-             ' OR (extract(WEEK from d.dump_time) = ' + \
-             '{}'.format(week_of_year - 2) + \
-             ' AND extract(DOW from d.dump_time) = {})'.format(day_of_week)
-
-    # cluster 5 -> get all data point for same date, week after,
-    # and 2 weeks after
-    query5 = ' WHERE (extract(WEEK from d.dump_time) = ' + \
-             '{} AND extract(DOW from d.dump_time) = '.format(week_of_year) + \
-             '{})'.format(day_of_week) + \
-             ' OR (extract(WEEK from d.dump_time) = ' + \
-             '{}'.format(week_of_year + 1) + \
-             ' AND extract(DOW from d.dump_time) = {}) '.format(day_of_week) +\
-             ' OR (extract(WEEK from d.dump_time) = ' + \
-             '{}'.format(week_of_year + 2) + \
-             ' AND extract(DOW from d.dump_time) = {})'.format(day_of_week)
-
-    # cluster 6 -> get all data point for same date, week before,
-    # and 2 weeks before, week after, and two weeks after
-    query6 = ' WHERE (extract(WEEK from d.dump_time) = ' + \
-             '{} AND extract(DOW from d.dump_time) = '.format(week_of_year) + \
-             '{})'.format(day_of_week) + \
-             ' OR (extract(WEEK from d.dump_time) = ' + \
-             '{}'.format(week_of_year - 1) + \
-             ' AND extract(DOW from d.dump_time) = {}) '.format(day_of_week) +\
-             ' OR (extract(WEEK from d.dump_time) = ' + \
-             '{}'.format(week_of_year - 2) + \
-             ' AND extract(DOW from d.dump_time) = {})'.format(day_of_week) + \
-             ' OR (extract(WEEK from d.dump_time) = ' +\
-             '{}'.format(week_of_year + 1) +\
-             ' AND extract(DOW from d.dump_time) = {}) '.format(day_of_week) +\
-             ' OR (extract(WEEK from d.dump_time) = ' +\
-             '{}'.format(week_of_year + 2) +\
-             ' AND extract(DOW from d.dump_time) = {}) '.format(day_of_week)
-
-    print(SELECT + query)
-    print("new query")
-    print(query1)
-    print("new query")
-    print(query2)
-    print("new query")
-    print(query3)
-    print("new query")
-    print(query4)
-    print("new query")
-    print(query5)
-    print("new query")
-    print(query6)
-    print("new query")
     # retrieve data from database using selected cluster
-    if cluster == 0:
-        cursor.execute(SELECT + query)
-    elif cluster == 1:
-        cursor.execute(SELECT + query1)
-    elif cluster == 2:
-        cursor.execute(SELECT + query2)
-    elif cluster == 3:
-        cursor.execute(SELECT + query3)
-    elif cluster == 4:
-        cursor.execute(SELECT + query4)
-    elif cluster == 5:
-        cursor.execute(SELECT + query5)
-    else:
-        cursor.execute(SELECT + query6)
+    cursor.execute(SELECT + query)
 
     raw_data = cursor.fetchall()
     raw_data = normalize_dump_times(raw_data)
