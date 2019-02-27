@@ -43,7 +43,7 @@ export default class HomeScreen extends React.Component {
 
   	 				this.setState({
   	 					isLoading: false,
-  	 					dataSource: responseJson.data,
+  	 					dataSource: responseJson.data
   	 				}, function(){
 
   	 				});
@@ -65,6 +65,27 @@ export default class HomeScreen extends React.Component {
     this.setState({ search });
   };
 
+  mapBuildings(){
+    const building_data = this.state.dataSource;
+    const building_cards = [];
+    var dict = {
+      125: "Opens at 9AM",
+      126: "Opens at 9AM",
+      127: "Opens at 9AM",
+      116: "Opens 24 hrs",
+      117: "Opens 24 hrs",
+      118: "Opens 24 hrs",
+      119: "Opens 24 hrs",
+      120: "Opens at 9AM",
+      121: "Opens at 9AM",
+      122: "Opens at 9AM"
+    }
+    for (let i = 0; i < building_data.length; i++){
+      building_cards.push(<HomeCard building={building_data[i].group_name}
+      closeTime={building_data[i].client_count} percentFull={building_data[i].percent_full}></HomeCard>)
+    }
+    return building_cards;
+  }
   render() {
     const { search } = this.state;
     if(this.state.isLoading){
@@ -152,9 +173,7 @@ export default class HomeScreen extends React.Component {
 
         <ScrollView>
           <View style={styles.body}>
-            <HomeCard building={'Architectural and Fine Arts Library 1'} closeTime={'9pm'} percentFull={this.state.dataSource[0].percent_full}></HomeCard>
-            <HomeCard building={'Lerner 5'} closeTime={'1am'} percentFull={this.state.dataSource[18].percent_full}></HomeCard>
-            <HomeCard building={'JJ\'s Place'} closeTime={'4am'} percentFull={this.state.dataSource[10].percent_full}></HomeCard>
+            {this.mapBuildings()}
           </View>
           <View>
             <Text style={ styles.footer }>
