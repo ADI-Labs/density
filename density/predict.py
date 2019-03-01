@@ -1,5 +1,5 @@
 import datetime
-
+import psycopg2
 import numpy as np
 import pandas as pd
 from .data import FULL_CAP_DATA, COMBINATIONS
@@ -111,32 +111,55 @@ def predict_today(past_data):
 
     return result
 
-def new_multi_predict(clusters):
+def predict_from_dataframe(clusters):
 
-    
-
+    print(".....................................................................")
+    print(".....................................................................")
+    print(".....................................................................")
+    print("PREDICT FROM DataFrame")
     results, locs = [], []
 
-    for group in np.unique(cluster1["group_name"]):
+    print("clusters[0]\n\n\n")
+    print(clusters[0])
+    print("clusters[0][group_name]\n\n\n")
+    print(clusters[0]["group_name"])
+
+    # for each unique building found in clusters[0]["group_name"]. That is, each unique graph to be created
+    for group in np.unique(clusters[0]["group_name"]):
 
         locs.append(group)
-
         deviations = []
         means = []
 
+        # for every cluster 
         for elem in clusters:
 
+            # Select only this building for all clusters and all times
             group_data = elem[elem["group_name"] == group]
+
+            # Get rid of all other columns except client_count and time_point
             group_data = group_data[["client_count", "time_point"]]
-            deviations.append(group_data.groupby("time_point").std())
-            means.append(group_data.groupby("time_point").mean())
+            print("group_data\n\n\n")
+            print(group_data)
+            group_data = group_data.groupby("time_point")
+            print("group_data\n\n\n")
+            for key, item in group_data:
+                print(key)
+                print(group_data.get_group(key), "\n\n")
 
-        group_result_std = deviations[0]
+            deviations.append(group_data.std())
+            print("deviations\n\n\n")
+            print(deviations[-1])
+            means.append(group_data.mean())
+            print("mean\n\n\n")
+            print(means[-1])
 
-        temp_df = group_result_std.copy(deep=True)
+        group_std = deviations[-1]
 
-        # for every row, use the row with the lowest std from all clusters
-        for x in range(len(group_result_std.index)):
+        temp_df = group_std.copy(deep=True)
+
+        # for every row (that is, for every time_point ) use the row with the lowest std from all clusters
+        for x in range(len(group_std.index)):
             tempList = [group_result_std.iloc[x][0],
                         group_result_std1.iloc[x][0],
                         group_result_std2.iloc[x][0],
@@ -168,6 +191,9 @@ def new_multi_predict(clusters):
         group_result = to_percentage(group_result, group)
         results.append(group_result.transpose())
 
+    print(results)
+    print("RESULTSSSSS")
+    print(locs)
     result = pd.concat(results)  # combine the data for all locations
     result.index = locs
     result = result.transpose()  # time points indexes and locations columns
@@ -191,19 +217,13 @@ def new_multi_predict(clusters):
     return result
 
 
-def multi_predict(cluster,
-                  cluster1,
-                  cluster2,
-                  cluster3,
-                  cluster4,
-                  cluster5,
-                  cluster6):
+def multi_predict(cluster, cluster1, cluster2, cluster3, cluster4, cluster5, cluster6):
     """Return a dataframe of predicted counts for today
     where the indeces are timestamps of the day and columns are locations
     Parameters
     ----------
-    cluster: pandas.DataFrame
-        a dictionary of dataframes of density data where the keys are
+    clusters: pandas.DataFrame
+        a list of dictionary of dataframes of density data where the keys are
         days of the week
     .
     .
@@ -216,6 +236,9 @@ def multi_predict(cluster,
     pandas.DataFrame
         Dataframe containing predicted counts for 96 today's timepoints
     """
+    print(".....................................................................")
+    print(".....................................................................")
+    print(".....................................................................")
     results, locs = [], []
 
     for group in np.unique(cluster1["group_name"]):
@@ -262,8 +285,8 @@ def multi_predict(cluster,
         # print(group_data.index)
         temp_df = group_result_std.copy(deep=True)
         #print(temp_df.index)
-        print("group_result_std")
-        print(group_result_std)
+        # print("group_result_std")
+        # print(group_result_std)
         # for every row, use the row with the lowest std from all clusters
         for x in range(len(group_result_std.index)):
             tempList = [group_result_std.iloc[x][0],
@@ -274,6 +297,8 @@ def multi_predict(cluster,
                         group_result_std5.iloc[x][0],
                         group_result_std6.iloc[x][0]]
 
+            print(tempList)
+            print("MEAN LIST")
             min_pos = tempList.index(min(tempList))
             if min_pos == 0:
                 temp_df.iloc[x] = group_data_mean.iloc[x]
@@ -296,7 +321,10 @@ def multi_predict(cluster,
         # convert capacity count to percentage
         group_result = to_percentage(group_result, group)
         results.append(group_result.transpose())
-
+    # print("RESULTSSSSS")
+    # print(results)
+    # print("RESULTSSSSS")
+    # print(locs)
     result = pd.concat(results)  # combine the data for all locations
     result.index = locs
     result = result.transpose()  # time points indexes and locations columns
@@ -348,37 +376,63 @@ def normalize_dump_times(raw_data):
     return raw_data
 
 def get_query(combination, week_of_year, day_of_week, week_delta_back, week_delta_forward):
+    """ Get query to execute and fetch data for predictions. one query returned = one cluster
+
+    Parameters
+    ----------
+    combination: int list with days_of_week to cluster together
+    week_of_year: int 0-53
+    day_of_week: int 0 (Sunday) - 6 (Saturday)
+    week_delta_back: int number of weeks back to include in cluster
+    week_delta_forward: int number of weeks forward to include in cluster
+
+    Returns
+    -------
+    str
+        query to execute: cursor.execute(SELECT+query)
+    """
 
     if not combination:
+        print("ERROR: combination is empty. Set to [day_of_week]")
         combination = [day_of_week] # default 
 
+    # can't continue if week_of_year or day_of_week are invalid
     if(week_of_year > 53 or week_of_year < 0):
         return "ERROR: week_of_year parameter must be 0-53. week_of_year = "+str(week_of_year)
-
     if(day_of_week > 6 or day_of_week < 0):
         return "ERROR: day_of_week parameter must be 0-6. day_of_week = "+str(day_of_week)
 
     if(week_delta_back < 0):
+        print("ERROR: week_delta_back must be positive. Set to 0")
         week_delta_back = 0 # default
 
     if(week_delta_forward < 0):
+        print("ERROR: week_delta_forward must be positive. Set to 0")
         week_delta_forward = 0 # default
 
-
+    # adds the basic query
     query = ' WHERE extract(WEEK from d.dump_time) = ' + \
             '{} AND extract(DOW from d.dump_time) = '.format(week_of_year) + \
             '{}'.format(day_of_week)
 
+    # for each week back
     for week_delta in range(week_delta_back+1):
+
+        # elem is each cluster combination of days_of_weel
         for elem in combination:
-            if(day_of_week != elem or ((day_of_week == elem) and (week_delta != 0) )):
+
+            # make sure we don't add the day and week already added at the beginning of query
+            if(day_of_week != elem or ((day_of_week == elem) and (week_delta != 0))):
                 query += \
                  ' OR (extract(WEEK from d.dump_time) = ' + \
                  '{}'.format(week_of_year - week_delta) + \
                  ' AND extract(DOW from d.dump_time) = {}) '.format(elem)
 
+    # for each week forward
     for week_delta in range(week_delta_forward+1):
         for elem in combination:
+
+            # only add for week_delta > 0 so we don't add the same ones again
             if(week_delta != 0):
                 query += \
                  ' OR (extract(WEEK from d.dump_time) = ' + \
@@ -397,16 +451,23 @@ def categorize_data(cursor, query):
     ----------
     cursor: cursor for our DB
         Connection to db
+    query: str
+        query to execute w/o SELECT
     Returns
     -------
     pandas.DataFrame
         Density data in a Dataframe
     """
+    try:
+        # retrieve data from database using selected cluster
+        cursor.execute(SELECT+query)
 
-    # retrieve data from database using selected cluster
-    cursor.execute(SELECT + query)
+    except (psycopg2.ProgrammingError, psycopg2.InternalError) as e:
+        return "ERROR: cursor.execute failed. "+str(e)+" \nQuery: "+query
 
     raw_data = cursor.fetchall()
+    if not raw_data:
+        return "ERROR : cursor.fetchall() did not return any data"
     raw_data = normalize_dump_times(raw_data)
 
     # convert fetched data to a pandas dataframe
@@ -414,11 +475,15 @@ def categorize_data(cursor, query):
            .set_index("dump_time") \
            .assign(group_name=lambda df: df["group_name"].astype('category'),
                    parent_id=lambda df: df["parent_id"].astype('category'))
-    #print(df.index)
-    # add a new time point column to the datafram
+
+    # add a new time point column to the dataframe
     time_points = zip(df.index.hour, df.index.minute)
     
     time_points = ["{}:{:02d}".format(x[0], x[1]) for x in time_points]
     df["time_point"] = time_points
+
+    # To print ALL of the dataframe uncomment this 
+    # with pd.option_context('display.max_rows', None, 'display.max_columns', None):
+    #     print(df)
 
     return df

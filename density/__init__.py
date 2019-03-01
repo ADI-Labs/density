@@ -18,7 +18,7 @@ from. import db
 from . import graphics
 from .config import config, ISO8601Encoder
 from .data import FULL_CAP_DATA, resize_full_cap_data, COMBINATIONS
-from .predict import categorize_data, get_query, new_categorize_data, multi_predict, new_multi_predict
+from .predict import categorize_data, get_query, multi_predict, predict_from_dataframe
 from .predict import db_to_pandas, predict_today
 from apscheduler.schedulers.background import BackgroundScheduler
 
@@ -38,7 +38,8 @@ CACHE_DEFAULT_TIMEOUT_SECONDS = 8*24*60*60
 CACHE_PREDICTIONS_DATA_DAYS = 7
 
 # max week_delta for clusters in predictions algorithm
-MAX_WEEKS_PREDICTION_CLUSTERS = 6
+MAX_WEEKS_PREDICTION_CLUSTERS = 2
+
 
 # create a pool of postgres connections
 # ThreadedConnectionPool may be used in several threads, as occurs in cache_prediction_graphs()
@@ -81,6 +82,16 @@ def cache_prediction_graphs(days=CACHE_PREDICTIONS_DATA_DAYS):
         else:
             day_of_week = day_of_week + 1
 
+        if(week_of_year > 53 or week_of_year < 0):
+            print("ERROR: week_of_year is not between 0-53. week_of_year = "+str(week_of_year))
+            print("Aborting predictions calculation... No data in cache was changed")
+            return -1
+
+        if(day_of_week > 6 or day_of_week < 0):
+            print("ERROR: day_of_week is not between 0-6. day_of_week = "+str(day_of_week))
+            print("Aborting predictions calculation... No data in cache was changed")
+            return -1
+
         print(".....................................................................")
         print("Caching prediction Bokeh graphs for the next "+str(days)+" days")
         print("day_of_week (Sunday = 0, Saturday = 6): " + str(day_of_week))
@@ -94,25 +105,84 @@ def cache_prediction_graphs(days=CACHE_PREDICTIONS_DATA_DAYS):
         g.cursor = g.pg_conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
         g.start_time = datetime.datetime.now() 
 
+        combinations_day_of_week = COMBINATIONS[date.weekday()]
+        if not combinations_day_of_week:
+            print("ERROR COMBINATIONS[date.weekday()] is empty. date.weekday(): "+ str(date.weekday()))
+            combinations_day_of_week = COMBINATIONS[0] # default - Monday
+            print("combinations_day_of_week set to "+str(combinations_day_of_week))
+
+        print("Trying clusters... "+str(combinations_day_of_week))
+        print("For "+str(MAX_WEEKS_PREDICTION_CLUSTERS)+" weeks back and forward")
+        print("Total clusters: "+str(MAX_WEEKS_PREDICTION_CLUSTERS*MAX_WEEKS_PREDICTION_CLUSTERS*len(combinations_day_of_week)))
+ 
+        # to store all str queries returned by get_query()
+        queries = []
+
+        # to store pandas.core.frame.DataFrame returned by categorize_data()
+        dataframes = []
+
         # Iterate through all weeks 0-MAX_WEEKS_PREDICTION_CLUSTERS, both back and forward
         # for each weeks_back, weeks_forward
         for i in range(MAX_WEEKS_PREDICTION_CLUSTERS):
+
             for j in range(MAX_WEEKS_PREDICTION_CLUSTERS):
 
                 # for each cluster in COMBINATIONS[date.weekday()] get query and fetch data
-                for cluster in range(len(COMBINATIONS[date.weekday()])):
+                for cluster in range(len(combinations_day_of_week)):
 
                     # combination is int array with week_days to cluster together
-                    combination = COMBINATIONS[date.weekday()][cluster]
-                    
-                    query = get_query(combination, week_of_year, day_of_week, i, j)
-                    print(query)
-                    data = categorize_data(g.cursor, query)
-                    print(data)
+                    combination = combinations_day_of_week[cluster]
+                    if not combination:
+                        print("ERROR COMBINATIONS[date.weekday()][cluster] is empty. cluster = "+ str(cluster))
+                        combination = [day_of_week] # default 
+                        print("combination set to "+str(combination))
 
+                    # returns query  for specific cluster
+                    query = get_query(combination, week_of_year, day_of_week, i, j)
+                    if("ERROR" in query):
+                        print("get_query returned ERROR")
+                        # set to default query
+                        query = ' WHERE extract(WEEK from d.dump_time) = ' + \
+                                '{} AND extract(DOW from d.dump_time) = '.format(week_of_year) + \
+                                '{}'.format(day_of_week)
+
+                    queries.append(query)
+        
+        # default in case queries is empty
+        if not queries:
+            query = ' WHERE extract(WEEK from d.dump_time) = ' + \
+                                '{} AND extract(DOW from d.dump_time) = '.format(week_of_year) + \
+                                '{}'.format(day_of_week)
+            queries = [query]
+        
+        print("Number of queries prepared to fetch: "+str(len(queries)))
+        print("Fetching data from queries........")
+
+        for query in queries:
+            data = categorize_data(g.cursor, query)
+            if(type(data) == 'str'):
+                print(data)
+            else:
+                dataframes.append(data)
+
+        print("Successfully fetched "+str(len(dataframes))+" queries and converted to pandas dataframes")
+
+        if not dataframes:
+            print("ERROR: No pandas DataFrame returned by categorize_data()")
+            print("Aborting predictions calculation... No data in cache was changed")
+            return -1
+
+        data1 = dataframes[0]
+        data2 = dataframes[1]
+        data3 = dataframes[2]
+        data4 = dataframes[3]
+        data5 = dataframes[4]
+        data6 = dataframes[5]
+        data = dataframes[6]
+
+        today_pred = multi_predict(data1, data2, data3,data4,data5,data6, data)
         # make predictions using all clusters
-        today_pred = multi_predict(data, data1, data2,
-                                         data3, data4, data5, data6)
+        today_pred = predict_from_dataframe(dataframes)
 
         script, divs = graphics.create_all_buildings(today_pred.transpose())
         script = script.replace('<script type="text/javascript">', "").replace('</script>', "")
@@ -151,7 +221,7 @@ def cache_prediction_graphs(days=CACHE_PREDICTIONS_DATA_DAYS):
 
         # server_cache.set('tuesday_div', divs, timeout=0)
 
-    return "0"
+    return 0
 
 # When we deploy to server, we need to call 
 # home page once so it will load predictions' data onto server's cache
