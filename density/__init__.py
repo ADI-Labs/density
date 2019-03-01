@@ -323,11 +323,15 @@ def authorization_required(func):
                 response.status_code = 401  # unauthorized
                 return response
 
+       #Temporarily commented out to test API Calls in the local environment
+       #Need to uncomment before deployment.
+        """
         uni = db.get_uni_for_code(g.cursor, token)
         if not uni:
             response = jsonify(error="No authorization token provided")
             response.status_code = 401  # unauthorized
             return response
+        """
 
         # TODO: Some logging right here. We can log which user is using what.
         return func(*args, **kwargs)
@@ -451,12 +455,20 @@ def get_latest_data():
     Gets latest dump of data for all endpoints.
     :return: Latest JSON
     :rtype: flask.Response
+    Modified to output open/closing time for all the buildings
     """
     fetched_data = db.get_latest_data(g.cursor)
 
     # Add percentage_full
     fetched_data = annotate_fullness_percentage(fetched_data)
 
+    #Dictionary containing opening/closing time for all buildings
+    open_close_data = librarytimes.dict_for_time()
+
+    #Iterates through each building, adding open_close_time key with the
+    #appropriate value from open_close_data
+    for val in fetched_data:
+        val['open_close_time'] = open_close_data[val['group_name']]
     return jsonify(data=fetched_data)
 
 
