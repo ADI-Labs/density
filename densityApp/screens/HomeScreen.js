@@ -23,27 +23,41 @@ class MyButton extends React.Component {
   render(){
     return (
       <View ref = {component => this._root = component} {...this.props}>
-        <Text style = {{ fontSize: 14, color: 'white', textAlign:'center', fontWeight: '80'}}>{this.props.label}</Text>
+        <Text style = {{ fontSize: 14, color: 'white', textAlign:'center', fontWeight: "100" }}>{this.props.label}</Text>
       </View>
     )
   }
 }
 
 export default class HomeScreen extends React.Component {
-  static navigationOptions = {
-    header: null,
-  };
+  constructor(props) {
+    super();
+    this.onSearchChange = this.onSearchChange.bind(this);
+    this.state = {
+      search: "",
+      searchResults: [
+        ["Architectural and Fine Arts Library 1", "block"],
+        ["Lerner 5", "block"],
+        ["JJ\'s Place", "block"]
+      ]
+    }
+  }
 
-   state = {
-    search: '',
-   };
-
-  updateSearch = search => {
-    this.setState({ search });
-  };
+  onSearchChange(text) {
+    this.setState({search: text});
+    this.state.searchResults.forEach((kv) => {
+      if(kv[0] == text) {
+        kv[1] = "block";
+      } else {
+        kv[1] = "none";
+      }
+    });
+  }
 
   render() {
-    const { search } = this.state;
+    const search = this.state.search;
+    const searchResults = this.state.searchResults;
+
     return (
       <View style={styles.container}>
        			<View style={{
@@ -70,7 +84,7 @@ export default class HomeScreen extends React.Component {
 
 			<SearchBar
     			placeholder="search by building"
-    			onChangeText={this.updateSearch}
+    			onChangeText={this.onSearchChange}
     			placeholderTextColor='#C1C1C1'
     			value={search}
     			platform="ios"
@@ -119,12 +133,11 @@ export default class HomeScreen extends React.Component {
       </View>
       </View>
       </View>
-
         <ScrollView>
           <View style={styles.body}>
-            <HomeCard building={'Architectural and Fine Arts Library 1'} closeTime={'9pm'} percentFull={31}></HomeCard>
-            <HomeCard building={'Lerner 5'} closeTime={'1am'} percentFull={70}></HomeCard>
-            <HomeCard building={'JJ\'s Place'} closeTime={'4am'} percentFull={3}></HomeCard>
+            <HomeCard building={'Architectural and Fine Arts Library 1'} closeTime={'9pm'} percentFull={31} inSearch={searchResults[0][1]}></HomeCard>
+            <HomeCard building={'Lerner 5'} closeTime={'1am'} percentFull={70} inSearch={searchResults[1][1]}></HomeCard>
+            <HomeCard building={'JJ\'s Place'} closeTime={'4am'} percentFull={3} inSearch={searchResults[2][1]}></HomeCard>
           </View>
           <View>
             <Text style={ styles.footer }>

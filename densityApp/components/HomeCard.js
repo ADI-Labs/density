@@ -3,16 +3,22 @@ import { StyleSheet, Text, View } from 'react-native';
 import PropTypes from 'prop-types';
 
 class HomeCard extends Component {
-	static propTypes = {
-	    building: PropTypes.string.isRequired,
-	    closeTime: PropTypes.string.isRequired,
-	    percentFull: PropTypes.number.isRequired,
-	  }
+	constructor(props) {
+		super(props);
+		// this.handleSearchChange = this.handleSearchChange.bind(this);
+	}
 
-	render = () => {
+	static propTypes = {
+		building: PropTypes.string.isRequired,
+		closeTime: PropTypes.string.isRequired,
+		percentFull: PropTypes.number.isRequired,
+	}
+
+  render = () => {
     	const { building, closeTime, percentFull } = this.props;
+    	const inSearch = this.props.inSearch;
 	    return (
-	    	<View style={styles.card}>
+	    	<View style={styles.card} style={{display: inSearch }}>
 	    		<View style={{flex: 1}}>
 	    			<Text>{building}</Text>
 		    		<Text style={{color:'#f9725e'}}>(closes at {closeTime})</Text>
@@ -31,7 +37,7 @@ const styles = StyleSheet.create({
 		backgroundColor: '#fff',
 		padding: 15,
 		marginBottom: 15,
-		flexDirection: 'row'
+		flexDirection: 'row',
 	},
 	percent: {
 		fontSize: 24
