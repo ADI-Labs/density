@@ -10,6 +10,7 @@ import {
   TouchableOpacity,
   ActivityIndicator,
   View,
+  TextInput
 } from 'react-native';
 import { WebBrowser } from 'expo';
 
@@ -22,6 +23,8 @@ import Svg,{
     TSpan,
     TextPath,
 } from 'react-native-svg';
+
+import ModalSelector from 'react-native-modal-selector';
 
 class MyButton extends React.Component {
   setNativeProps = (nativeProps) => {
@@ -41,7 +44,11 @@ export default class APICall extends React.Component {
 
   constructor(props){
  		 super(props);
-	 		this.state = {isLoading : true}
+	 		this.state = {
+	 			isLoading : true,
+				search: '',
+				datePicker: '3/1/2019' // Initialize the date displayed on the prediction graphs as today's date.
+			}
 	 	}
 
     componentDidMount(){
@@ -66,15 +73,52 @@ export default class APICall extends React.Component {
 		header: null,
 	};
 
-	 state = {
-		search: '',
-	 };
-
 	updateSearch = search => {
 		this.setState({ search });
 	};
 
+	// Variable for holding all data of all buildings for some number of days
+  	data = {
+  		"Building 1" : {
+  			"3/1/2019": [["01:30",60], ["12:30",90], ["18:30",80]],
+  			"3/2/2019": [["01:30",30], ["12:30",60], ["18:30",40]]
+  		},
+  		"Building 2": {
+  			"3/1/2019": [["01:30",60], ["12:30",90], ["18:30",80]],
+  			"3/2/2019": [["01:30",30], ["12:30",60], ["18:30",40]]
+  		},
+  		"Building 3": {
+  			"3/1/2019": [["01:30",60], ["12:30",90], ["18:30",80]],
+  			"3/2/2019": [["01:30",30], ["12:30",60], ["18:30",40]]
+  		},
+  	};
+
+  	// Helper method that parses date string of the form "mm/dd/yyyy" into array holding int values of [M, D, Y]
+  	parseDate(date) {
+  		var temp = date.split("/");
+  		return [parseInt(temp[0]), parseInt(temp[1]), parseInt(temp[2])];
+  	}
+
 	render() {
+		// Generate the dates for the date picker by looking at which dates are present in our data.
+		pickerItems = [];
+		for (var buildingKey in this.data) {
+			let index = 0;
+			for (var dateKey in this.data[buildingKey]) {
+				pickerItems.push({key: index++, label: dateKey})
+			}
+			break;
+		}
+
+		// Extract capacity data for each building for a given date and create PredictCard components to display.
+		charts = [];
+		var dateArr = this.parseDate(this.state.datePicker);
+		for (var key in this.data) {
+			var building = key;
+			var points = this.data[key][this.state.datePicker]; // Get the current day's data points for this given building
+			charts.push(<PredictCard building={key} year={dateArr[2]} month={dateArr[0]} date={dateArr[1]} data={points}></PredictCard>);
+		}
+
 		const { search } = this.state;
     if(this.state.isLoading){
 	 			return (
@@ -83,6 +127,7 @@ export default class APICall extends React.Component {
 	 					</View>
 	 			)
 	 		}
+
 		return (
 			<View style={styles.container}>
 						<View style={{
@@ -97,7 +142,7 @@ export default class APICall extends React.Component {
 						alignItems: 'center',
 						backgroundColor: '#2185C6'
 					}}>
-				 <Image source={require('../assets/images/logo2.png')} resizeMode={'center'} />
+			   <Image source={require('../assets/images/logo2.png')} resizeMode={'center'} />
 			 </View>
 			<View style={{
 				width:'90%',
@@ -160,10 +205,21 @@ export default class APICall extends React.Component {
 			</View>
 
 				<ScrollView>
+		            <ModalSelector
+	                    data={pickerItems}
+	                    initValue={this.state.datePicker}
+	                    onChange={(option)=>{ this.setState({datePicker: option.label})}}
+	                    style={styles.datePickerWrap}>
+	                    
+	                    <TextInput
+	                        style={styles.datePicker}
+	                        editable={false}
+	                        placeholder={'Select date.'}
+	                        value={'Viewing predictions for: ' + this.state.datePicker} />
+	                        
+	                </ModalSelector>
 					<View style={styles.body}>
-						<PredictCard building={'Architectural and Fine Arts Library 1'}></PredictCard>
-						<PredictCard building={'Lerner 5'}></PredictCard>
-						<PredictCard building={'JJ\'s Place'}></PredictCard>
+						{ charts }
 					</View>
 					<View>
 						<Text style={ styles.footer }>
@@ -279,4 +335,13 @@ export default class APICall extends React.Component {
 		fontSize: 14,
 		color: '#2e78b7',
 	},
+	datePickerWrap: {
+		backgroundColor: '#e2e2e2',
+		paddingHorizontal: 15,
+		paddingTop: 15
+	},
+	datePicker: {
+		backgroundColor: 'white',
+		borderWidth:1, borderColor:'#ccc', padding:15, height:30
+	}
 	});
