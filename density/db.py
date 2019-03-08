@@ -270,3 +270,8 @@ def insert_updated_data_to_feedback_table(cursor, group_id, updated_percentage):
     cursor.execute(query)
 
     return "Sucess"
+
+def insert_user_email(cursor, user_email):
+    query = "INSERT INTO user_data (user_email) VALUES (%s);"
+    cursor.execute(query, user_email)
+    return "Success"
