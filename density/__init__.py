@@ -702,3 +702,20 @@ def upload_feedback(group_id, feedback_percentage, current_percentage):
         return 'Invalid insertion of user feedback'
 
     return 'User feedback successfully uploaded.', 200
+
+@app.route('/signup', methods = ['GET', 'POST'])
+#Gets user email data from the App and posts it to the database
+#Needs to have the dump.sql file with new user_data table in it to test it locally
+def register_user():
+    #Parse json data received from the App and extract user email
+    data = request.get_json()
+    dataDict = dict(data)
+    user_email = dataDict["user"]["email"]
+    try:
+        db.insert_user_email(g.cursor, [user_email])
+
+    except Exception as e:
+        print (e)
+        return 'Failed to insert user email data'
+
+    return 'User email successfully uploaded', 200
