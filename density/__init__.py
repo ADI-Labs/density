@@ -239,14 +239,21 @@ def initialize():
         print("resize_full_cap_data() failed and returned: " + err_msg)
     
     # done first so we can handle those predictions' requests
-    err_msg = cache_prediction_graphs(CACHE_PREDICTIONS_DATA_DAYS)
+    
+    """
+        cache_prediction_graphs commented out for now for testing other features
+    """
+    #err_msg = cache_prediction_graphs(CACHE_PREDICTIONS_DATA_DAYS)
     if(err_msg != "0"):
         print("cache_prediction_graphs failed and returned: " + err_msg)
 
 
     apsched = BackgroundScheduler()
     apsched.start()
-    apsched.add_job(cache_prediction_graphs,  'interval', seconds=1, max_instances=1)
+    """
+        cache_prediction_graphs commented out for now for testing other features
+    """
+    #apsched.add_job(cache_prediction_graphs,  'interval', seconds=1, max_instances=1)
 
 
 @app.before_request
