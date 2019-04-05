@@ -34,7 +34,7 @@ class MyButton extends React.Component {
   render(){
     return (
       <View ref = {component => this._root = component} {...this.props}>
-        <Text style = {{ fontSize: 14, color: 'white', textAlign:'center', fontWeight: '80'}}>{this.props.label}</Text>
+        <Text style = {{ fontSize: 14, color: 'white', textAlign:'center', fontWeight: '100'}}>{this.props.label}</Text>
       </View>
     )
   }

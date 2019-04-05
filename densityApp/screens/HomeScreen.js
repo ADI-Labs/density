@@ -82,17 +82,29 @@ export default class HomeScreen extends React.Component {
     return building_cards;
   }
 
-  onSearchChange(text) {
-    this.setState({search: text});
+
+  onSearchChange(searchQuery) {
+    this.setState({search: searchQuery});
+    searchQuery = searchQuery.toLowerCase();
+    var locationFilter = '';
+    var openFilter = '';
+
     this.state.searchResults.forEach((kv) => {
-      if(kv[0] == text) {
-        kv[1] = "block";
-      } else {
+
+
+      var name = kv[0].toLowerCase();
+      var nickname = kv[0].toLowerCase(); // Same as name for fake data
+      var locationType = ""; // Empty for fake data
+      var openNow = ""; // Empty for fake data
+
+      if((!name.includes(searchQuery) && !nickname.includes(searchQuery)) ||
+          (locationFilter != '' && locationFilter != locationType) ||
+          (openFilter != '' && openFilter != openNow)) {
         kv[1] = "none";
+      } else {
+        kv[1] = "block";
       }
     });
-
-    console.log(this.state.searchResults);
   }
 
   render() {
