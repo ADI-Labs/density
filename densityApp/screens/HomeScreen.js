@@ -24,7 +24,7 @@ class MyButton extends React.Component {
   render(){
     return (
       <View ref = {component => this._root = component} {...this.props}>
-        <Text style = {{ fontSize: 14, color: 'white', textAlign:'center', fontWeight: '80'}}>{this.props.label}</Text>
+        <Text style = {{ fontSize: 14, color: 'white', textAlign:'center', fontWeight: "100" }}>{this.props.label}</Text>
       </View>
     )
   }
@@ -33,61 +33,84 @@ class MyButton extends React.Component {
 export default class HomeScreen extends React.Component {
   constructor(props){
  		 super(props);
-	 		this.state = {isLoading : true}
-	 	}
-
-    componentDidMount(){
-  	 		return fetch('https://density.adicu.com/latest?auth_token=JCAhr3xirjnP0O3dEKjTiCLX_uaQCJJ2TWtyMLpjRgNVqhzQuYJEK78-HbBgGCa7')
-  	 			.then((response) => response.json())
-  	 			.then((responseJson) => {
-
-  	 				this.setState({
-  	 					isLoading: false,
-  	 					dataSource: responseJson.data
-  	 				}, function(){
-
-  	 				});
-  	 			})
-  	 			.catch((error) => {
-  	 				console.error(error);
-  	 			});
-  	}
+ 		 this.onSearchChange = this.onSearchChange.bind(this);
+ 		 this.state = {
+       isLoading: true,
+       search: "",
+       searchResults: []
+     }
+   }
 
   static navigationOptions = {
     header: null,
   };
 
-   state = {
-    search: '',
-   };
+  componentDidMount(){
+      return fetch('https://density.adicu.com/latest?auth_token=JCAhr3xirjnP0O3dEKjTiCLX_uaQCJJ2TWtyMLpjRgNVqhzQuYJEK78-HbBgGCa7')
+        .then((response) => response.json())
+        .then((responseJson) => {
+          this.setState({
+            isLoading: false,
+            dataSource: responseJson.data
+          }, function(){
 
-  updateSearch = search => {
-    this.setState({ search });
-  };
+          });
+        })
+        .catch((error) => {
+          console.error(error);
+        });
+  }
 
   mapBuildings(){
     const building_data = this.state.dataSource;
+
+    for (let i = 0; i < building_data.length; i++) {
+      this.state.searchResults.push([building_data[i].group_name, "block"]);
+    }
+
     const building_cards = [];
-    var dict = {
-      125: "Opens at 9AM",
-      126: "Opens at 9AM",
-      127: "Opens at 9AM",
-      116: "Opens 24 hrs",
-      117: "Opens 24 hrs",
-      118: "Opens 24 hrs",
-      119: "Opens 24 hrs",
-      120: "Opens at 9AM",
-      121: "Opens at 9AM",
-      122: "Opens at 9AM"
+
+    for (let i = 0; i < building_data.length; i++) {
+      building_cards.push(<HomeCard key={i}
+                                    name={building_data[i].group_name}
+                                    closeTime={building_data[i].dump_time}
+                                    percentFull={building_data[i].percent_full}
+                                    inSearch={this.state.searchResults[i][1]}></HomeCard>)
+
     }
-    for (let i = 0; i < building_data.length; i++){
-      building_cards.push(<HomeCard building={building_data[i].group_name}
-      closeTime={building_data[i].client_count} percentFull={building_data[i].percent_full}></HomeCard>)
-    }
+
     return building_cards;
   }
+
+
+  onSearchChange(searchQuery) {
+    this.setState({search: searchQuery});
+    searchQuery = searchQuery.toLowerCase();
+    var locationFilter = '';
+    var openFilter = '';
+
+    this.state.searchResults.forEach((kv) => {
+
+
+      var name = kv[0].toLowerCase();
+      var nickname = kv[0].toLowerCase(); // Same as name for fake data
+      var locationType = ""; // Empty for fake data
+      var openNow = ""; // Empty for fake data
+
+      if((!name.includes(searchQuery) && !nickname.includes(searchQuery)) ||
+          (locationFilter != '' && locationFilter != locationType) ||
+          (openFilter != '' && openFilter != openNow)) {
+        kv[1] = "none";
+      } else {
+        kv[1] = "block";
+      }
+    });
+  }
+
   render() {
-    const { search } = this.state;
+    const search = this.state.search;
+    // const searchResults = this.state.searchResults;
+
     if(this.state.isLoading){
 	 			return (
 	 				<View style = {{flex: 1, padding: 20}}>
@@ -95,6 +118,7 @@ export default class HomeScreen extends React.Component {
 	 					</View>
 	 			)
 	 		}
+
     return (
       <View style={styles.container}>
        			<View style={{
@@ -121,7 +145,7 @@ export default class HomeScreen extends React.Component {
 
 			<SearchBar
     			placeholder="search by building"
-    			onChangeText={this.updateSearch}
+    			onChangeText={this.onSearchChange}
     			placeholderTextColor='#C1C1C1'
     			value={search}
     			platform="ios"
@@ -170,7 +194,6 @@ export default class HomeScreen extends React.Component {
       </View>
       </View>
       </View>
-
         <ScrollView>
           <View style={styles.body}>
             {this.mapBuildings()}
