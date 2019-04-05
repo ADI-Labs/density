@@ -33,10 +33,15 @@ class MyButton extends React.Component {
 export default class HomeScreen extends React.Component {
   constructor(props){
  		 super(props);
+ 		 this.onLocationChange = this.onLocationChange.bind(this);
+ 		 this.onOpenChange = this.onOpenChange.bind(this);
  		 this.onSearchChange = this.onSearchChange.bind(this);
+ 		 this.updateDisplay = this.updateDisplay.bind(this);
  		 this.state = {
        isLoading: true,
        search: "",
+       location:  "",
+       open: "",
        searchResults: []
      }
    }
@@ -65,7 +70,9 @@ export default class HomeScreen extends React.Component {
     const building_data = this.state.dataSource;
 
     for (let i = 0; i < building_data.length; i++) {
-      this.state.searchResults.push([building_data[i].group_name, "block"]);
+      this.state.searchResults.push(
+          [building_data[i].group_name, "library", "open", "block"]
+      );
     }
 
     const building_cards = [];
@@ -75,41 +82,54 @@ export default class HomeScreen extends React.Component {
                                     name={building_data[i].group_name}
                                     closeTime={building_data[i].dump_time}
                                     percentFull={building_data[i].percent_full}
-                                    inSearch={this.state.searchResults[i][1]}></HomeCard>)
+                                    inSearch={this.state.searchResults[i][3]}></HomeCard>)
 
     }
 
     return building_cards;
   }
 
+  onLocationChange(locationFilter) {
+    this.setState({location: locationFilter});
+    this.updateDisplay();
+  }
+
+  onOpenChange(openFilter) {
+    this.setState({open: openFilter});
+    this.updateDisplay();
+  }
 
   onSearchChange(searchQuery) {
     this.setState({search: searchQuery});
-    searchQuery = searchQuery.toLowerCase();
-    var locationFilter = '';
-    var openFilter = '';
+    this.updateDisplay();
+  }
+
+  updateDisplay() {
+    var searchQuery = this.state.search.toLowerCase();
+    var locationFilter = this.state.location;
+    var openFilter = this.state.open;
 
     this.state.searchResults.forEach((kv) => {
 
-
       var name = kv[0].toLowerCase();
       var nickname = kv[0].toLowerCase(); // Same as name for fake data
-      var locationType = ""; // Empty for fake data
-      var openNow = ""; // Empty for fake data
+      var locationType = kv[1]; // Always library for fake data
+      var openNow = kv[2]; // Always open for fake data
 
       if((!name.includes(searchQuery) && !nickname.includes(searchQuery)) ||
           (locationFilter != '' && locationFilter != locationType) ||
           (openFilter != '' && openFilter != openNow)) {
-        kv[1] = "none";
+        kv[3] = "none";
       } else {
-        kv[1] = "block";
+        kv[3] = "block";
       }
     });
   }
 
   render() {
     const search = this.state.search;
-    // const searchResults = this.state.searchResults;
+    const locationType = this.state.location;
+    const isOpen = this.state.open;
 
     if(this.state.isLoading){
 	 			return (
@@ -168,27 +188,27 @@ export default class HomeScreen extends React.Component {
         backgroundColor: '#2185C6',
 			}}>
       <View style = {{flex: 1}}>
-      <TouchableOpacity>
+      <TouchableOpacity onPress={this.onLocationChange.bind(this, "dining hall")} >
         <MyButton label = "dining hall"/>
       </TouchableOpacity>
       </View>
       <View style = {{flex: 1}}>
-      <TouchableOpacity>
-        <MyButton label = "library" />
+      <TouchableOpacity onPress={this.onLocationChange.bind(this, "library")} >
+        <MyButton label = "library"/>
       </TouchableOpacity>
       </View>
       <View style = {{flex: 1}} >
-      <TouchableOpacity>
+      <TouchableOpacity onPress={this.onLocationChange.bind(this, "student center")} >
         <MyButton label = "student center"/>
       </TouchableOpacity>
       </View>
-      <View style = {{flex: 1}}>
-      <TouchableOpacity>
-        <MyButton label = "open now"/>
+      <View style = {{flex: 1}} >
+      <TouchableOpacity onPress={this.onOpenChange.bind(this, "open")} >
+        <MyButton label = "open"/>
       </TouchableOpacity>
       </View>
       <View style = {{flex: 1}}>
-      <TouchableOpacity>
+      <TouchableOpacity onPress={this.onOpenChange.bind(this, "closed")} >
         <MyButton label = "closed"/>
       </TouchableOpacity>
       </View>

@@ -5,7 +5,6 @@ import PropTypes from 'prop-types';
 class HomeCard extends Component {
 	constructor(props) {
 		super(props);
-		// this.handleSearchChange = this.handleSearchChange.bind(this);
 	}
 
 	static propTypes = {
