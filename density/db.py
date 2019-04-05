@@ -301,3 +301,14 @@ def update_fav_library(cursor, email, library):
     query = "UPDATE user_data SET fav_library = %s WHERE user_email = %s;"
     cursor.execute(query, [library, email])
     return "Success"
+
+def update_token(cursor, email, token):
+    """
+    updates user's notification token
+    :param str email: User email from /signup endpoint
+    :param str token: From mobile app LogInScreen.js
+    """
+
+    query = "UPDATE user_data SET token = %s WHERE user_email = %s;"
+    cursor.execute(query, [token, email])
+    return "Success"

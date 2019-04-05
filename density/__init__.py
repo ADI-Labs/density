@@ -710,7 +710,7 @@ def upload_feedback(group_id, feedback_percentage, current_percentage):
 
     return 'User feedback successfully uploaded.', 200
 
-@app.route('/signup', methods = ['GET', 'POST'])
+@app.route('/users/signup', methods = ['GET', 'POST'])
 def register_user():
     #Gets user email data from the App and posts it to the database
     #Needs to have the dump.sql file with new user_data table in it to test it locally
@@ -757,3 +757,24 @@ def register_user():
         return 'Successfully registered user with preferences', 200
     else:
         return 'User registration unsuccessful', 200
+
+#API endpoint for registering push notification token unique to each user
+@app.route('/users/push-token', methods = ['GET', 'POST'])
+def register_user_token():
+    data = request.get_json()
+    dataDict = dict(data)
+    token = dataDict["token"]
+    user_email = dataDict["user_email"]
+    token_register_success = False
+
+    try:
+        db.update_token(g.cursor, user_email, token)
+        token_register_success = True
+    except Exception as e:
+        print (e)
+        return 'Failed to add notification token for the user'
+
+    if token_register_success:
+        return 'Successfully registered notification token for the user', 200
+    else:
+        return 'Failed to add token', 200
