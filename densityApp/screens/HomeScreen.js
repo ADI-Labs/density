@@ -9,6 +9,7 @@ import {
   StyleSheet,
   Text,
   TouchableOpacity,
+  ActivityIndicator,
   View,
 } from 'react-native';
 import { WebBrowser } from 'expo';
@@ -30,17 +31,55 @@ class MyButton extends React.Component {
 }
 
 export default class HomeScreen extends React.Component {
-  constructor(props) {
-    super();
-    this.onSearchChange = this.onSearchChange.bind(this);
-    this.state = {
-      search: "",
-      searchResults: [
-        ["Architectural and Fine Arts Library 1", "block"],
-        ["Lerner 5", "block"],
-        ["JJ\'s Place", "block"]
-      ]
+  constructor(props){
+ 		 super(props);
+ 		 this.onSearchChange = this.onSearchChange.bind(this);
+ 		 this.state = {
+       isLoading: true,
+       search: "",
+       searchResults: []
+     }
+   }
+
+  static navigationOptions = {
+    header: null,
+  };
+
+  componentDidMount(){
+      return fetch('https://density.adicu.com/latest?auth_token=JCAhr3xirjnP0O3dEKjTiCLX_uaQCJJ2TWtyMLpjRgNVqhzQuYJEK78-HbBgGCa7')
+        .then((response) => response.json())
+        .then((responseJson) => {
+          this.setState({
+            isLoading: false,
+            dataSource: responseJson.data
+          }, function(){
+
+          });
+        })
+        .catch((error) => {
+          console.error(error);
+        });
+  }
+
+  mapBuildings(){
+    const building_data = this.state.dataSource;
+
+    for (let i = 0; i < building_data.length; i++) {
+      this.state.searchResults.push([building_data[i].group_name, "block"]);
     }
+
+    const building_cards = [];
+
+    for (let i = 0; i < building_data.length; i++) {
+      building_cards.push(<HomeCard key={i}
+                                    name={building_data[i].group_name}
+                                    closeTime={building_data[i].dump_time}
+                                    percentFull={building_data[i].percent_full}
+                                    inSearch={this.state.searchResults[i][1]}></HomeCard>)
+
+    }
+
+    return building_cards;
   }
 
   onSearchChange(text) {
@@ -52,11 +91,21 @@ export default class HomeScreen extends React.Component {
         kv[1] = "none";
       }
     });
+
+    console.log(this.state.searchResults);
   }
 
   render() {
     const search = this.state.search;
-    const searchResults = this.state.searchResults;
+    // const searchResults = this.state.searchResults;
+
+    if(this.state.isLoading){
+	 			return (
+	 				<View style = {{flex: 1, padding: 20}}>
+	 					<ActivityIndicator/>
+	 					</View>
+	 			)
+	 		}
 
     return (
       <View style={styles.container}>
@@ -135,9 +184,7 @@ export default class HomeScreen extends React.Component {
       </View>
         <ScrollView>
           <View style={styles.body}>
-            <HomeCard building={'Architectural and Fine Arts Library 1'} closeTime={'9pm'} percentFull={31} inSearch={searchResults[0][1]}></HomeCard>
-            <HomeCard building={'Lerner 5'} closeTime={'1am'} percentFull={70} inSearch={searchResults[1][1]}></HomeCard>
-            <HomeCard building={'JJ\'s Place'} closeTime={'4am'} percentFull={3} inSearch={searchResults[2][1]}></HomeCard>
+            {this.mapBuildings()}
           </View>
           <View>
             <Text style={ styles.footer }>

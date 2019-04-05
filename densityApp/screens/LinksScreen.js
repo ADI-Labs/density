@@ -1,7 +1,6 @@
 import React from 'react';
-//import { FlatList, ActivityIndicator, Text, View } from 'react-native';
 import {SearchBar} from 'react-native-elements';
-import HomeCard from '../components/HomeCard.js';
+import PredictCard from '../components/PredictCard.js';
 import {
   Image,
   Platform,
@@ -9,11 +8,23 @@ import {
   StyleSheet,
   Text,
   TouchableOpacity,
+  ActivityIndicator,
   View,
+  TextInput
 } from 'react-native';
 import { WebBrowser } from 'expo';
 
 import { MonoText } from '../components/StyledText';
+
+import Svg,{
+    Circle,
+    Ellipse,
+    G,
+    TSpan,
+    TextPath,
+} from 'react-native-svg';
+
+import ModalSelector from 'react-native-modal-selector';
 
 class MyButton extends React.Component {
   setNativeProps = (nativeProps) => {
@@ -31,20 +42,92 @@ class MyButton extends React.Component {
 
 export default class APICall extends React.Component {
 
+  constructor(props){
+ 		 super(props);
+	 		this.state = {
+	 			isLoading : true,
+				search: '',
+				datePicker: '3/1/2019' // Initialize the date displayed on the prediction graphs as today's date.
+			}
+	 	}
+
+    componentDidMount(){
+        //Need to replace this with API for predictions
+  	 		return fetch('https://density.adicu.com/latest?auth_token=JCAhr3xirjnP0O3dEKjTiCLX_uaQCJJ2TWtyMLpjRgNVqhzQuYJEK78-HbBgGCa7')
+  	 			.then((response) => response.json())
+  	 			.then((responseJson) => {
+
+  	 				this.setState({
+  	 					isLoading: false,
+  	 					dataSource: responseJson.data,
+  	 				}, function(){
+
+  	 				});
+  	 			})
+  	 			.catch((error) => {
+  	 				console.error(error);
+  	 			});
+  	}
+
 	static navigationOptions = {
 		header: null,
 	};
-
-	 state = {
-		search: '',
-	 };
 
 	updateSearch = search => {
 		this.setState({ search });
 	};
 
+	// Variable for holding all data of all buildings for some number of days
+  	data = {
+  		"Building 1" : {
+  			"3/1/2019": [["01:30",60], ["12:30",90], ["18:30",80]],
+  			"3/2/2019": [["01:30",30], ["12:30",60], ["18:30",40]]
+  		},
+  		"Building 2": {
+  			"3/1/2019": [["01:30",60], ["12:30",90], ["18:30",80]],
+  			"3/2/2019": [["01:30",30], ["12:30",60], ["18:30",40]]
+  		},
+  		"Building 3": {
+  			"3/1/2019": [["01:30",60], ["12:30",90], ["18:30",80]],
+  			"3/2/2019": [["01:30",30], ["12:30",60], ["18:30",40]]
+  		},
+  	};
+
+  	// Helper method that parses date string of the form "mm/dd/yyyy" into array holding int values of [M, D, Y]
+  	parseDate(date) {
+  		var temp = date.split("/");
+  		return [parseInt(temp[0]), parseInt(temp[1]), parseInt(temp[2])];
+  	}
+
 	render() {
+		// Generate the dates for the date picker by looking at which dates are present in our data.
+		pickerItems = [];
+		for (var buildingKey in this.data) {
+			let index = 0;
+			for (var dateKey in this.data[buildingKey]) {
+				pickerItems.push({key: index++, label: dateKey})
+			}
+			break;
+		}
+
+		// Extract capacity data for each building for a given date and create PredictCard components to display.
+		charts = [];
+		var dateArr = this.parseDate(this.state.datePicker);
+		for (var key in this.data) {
+			var building = key;
+			var points = this.data[key][this.state.datePicker]; // Get the current day's data points for this given building
+			charts.push(<PredictCard building={key} year={dateArr[2]} month={dateArr[0]} date={dateArr[1]} data={points}></PredictCard>);
+		}
+
 		const { search } = this.state;
+    if(this.state.isLoading){
+	 			return (
+	 				<View style = {{flex: 1, padding: 20}}>
+	 					<ActivityIndicator/>
+	 					</View>
+	 			)
+	 		}
+
 		return (
 			<View style={styles.container}>
 						<View style={{
@@ -59,7 +142,7 @@ export default class APICall extends React.Component {
 						alignItems: 'center',
 						backgroundColor: '#2185C6'
 					}}>
-				 <Image source={require('../assets/images/logo2.png')} resizeMode={'center'} />
+			   <Image source={require('../assets/images/logo2.png')} resizeMode={'center'} />
 			 </View>
 			<View style={{
 				width:'90%',
@@ -122,10 +205,21 @@ export default class APICall extends React.Component {
 			</View>
 
 				<ScrollView>
+		            <ModalSelector
+	                    data={pickerItems}
+	                    initValue={this.state.datePicker}
+	                    onChange={(option)=>{ this.setState({datePicker: option.label})}}
+	                    style={styles.datePickerWrap}>
+	                    
+	                    <TextInput
+	                        style={styles.datePicker}
+	                        editable={false}
+	                        placeholder={'Select date.'}
+	                        value={'Viewing predictions for: ' + this.state.datePicker} />
+	                        
+	                </ModalSelector>
 					<View style={styles.body}>
-						<HomeCard building={'Architectural and Fine Arts Library 1'} closeTime={'9pm'} percentFull={31}></HomeCard>
-						<HomeCard building={'Lerner 5'} closeTime={'1am'} percentFull={70}></HomeCard>
-						<HomeCard building={'JJ\'s Place'} closeTime={'4am'} percentFull={3}></HomeCard>
+						{ charts }
 					</View>
 					<View>
 						<Text style={ styles.footer }>
@@ -139,51 +233,6 @@ export default class APICall extends React.Component {
 
 		);
 	}
-	///////////////////
-	// EXAMPLE OF HOW TO FETCH FROM HOME PAGE API density
-	////////////////////
-	// 	constructor(props){
-	// 		super(props);
-	// 		this.state = {isLoading : true}
-	// 	}
-	//
-	// 	componentDidMount(){
-	// 		return fetch('https://density.adicu.com/latest?auth_token=JCAhr3xirjnP0O3dEKjTiCLX_uaQCJJ2TWtyMLpjRgNVqhzQuYJEK78-HbBgGCa7')
-	// 			.then((response) => response.json())
-	// 			.then((responseJson) => {
-	//
-	// 				this.setState({
-	// 					isLoading: false,
-	// 					dataSource: responseJson.data,
-	// 				}, function(){
-	//
-	// 				});
-	// 			})
-	// 			.catch((error) => {
-	// 				console.error(error);
-	// 			});
-	// 	}
-	// 	render() {
-	//
-	// 		if(this.state.isLoading){
-	// 			return (
-	// 				<View style = {{flex: 1, padding: 20}}>
-	// 					<ActivityIndicator/>
-	// 					</View>
-	// 			)
-	// 		}
-	//
-	// 		return(
-	// 			<View style={{flex: 1, paddingTop: 20}}>
-	// 				<FlatList
-	// 					data = {this.state.dataSource}
-	// 					renderItem = {({item}) => <Text>{item.building_name}, {item.client_count}, {item.percent_full}</Text>}
-	// 					KeyExtractor = {({id}, index) => id}
-	// 					/>
-	// 					</View>
-	// 		);
-	// 	}
-	// }
 	}
 
 	const styles = StyleSheet.create({
@@ -286,4 +335,13 @@ export default class APICall extends React.Component {
 		fontSize: 14,
 		color: '#2e78b7',
 	},
+	datePickerWrap: {
+		backgroundColor: '#e2e2e2',
+		paddingHorizontal: 15,
+		paddingTop: 15
+	},
+	datePicker: {
+		backgroundColor: 'white',
+		borderWidth:1, borderColor:'#ccc', padding:15, height:30
+	}
 	});

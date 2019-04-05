@@ -9,18 +9,20 @@ class HomeCard extends Component {
 	}
 
 	static propTypes = {
-		building: PropTypes.string.isRequired,
+		name: PropTypes.string.isRequired,
 		closeTime: PropTypes.string.isRequired,
 		percentFull: PropTypes.number.isRequired,
 	}
 
   render = () => {
-    	const { building, closeTime, percentFull } = this.props;
+    	const name = this.props.name;
+    	const closeTime = this.props.closeTime;
+    	const percentFull = this.props.percentFull;
     	const inSearch = this.props.inSearch;
 	    return (
 	    	<View style={styles.card} style={{display: inSearch }}>
 	    		<View style={{flex: 1}}>
-	    			<Text>{building}</Text>
+	    			<Text>{name}</Text>
 		    		<Text style={{color:'#f9725e'}}>(closes at {closeTime})</Text>
 	    		</View>
 	    		<View style={{justifyContent: 'center', alignItems: 'center'}}>
