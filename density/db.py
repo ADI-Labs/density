@@ -260,7 +260,7 @@ def insert_density_data(cursor, data):
         VALUES (%s, %s, %s)
     ;"""
     cursor.executemany(query, rows)
-   
+
 def insert_updated_data_to_feedback_table(cursor, group_id, updated_percentage):
     # to get the raw_count currently displaying to user
     data = get_latest_group_data(cursor, group_id)
@@ -271,7 +271,33 @@ def insert_updated_data_to_feedback_table(cursor, group_id, updated_percentage):
 
     return "Sucess"
 
-def insert_user_email(cursor, user_email):
-    query = "INSERT INTO user_data (user_email) VALUES (%s);"
-    cursor.execute(query, user_email)
+def insert_user_email(cursor, email):
+    """
+    adds a new user as a row in user_data table
+    :param str email: User email from /signup endpoint
+    """
+    query = "INSERT INTO user_data (user_email, fav_dininghall, fav_library) VALUES (%s, NULL, NULL);"
+    cursor.execute(query, [email])
+    return "Success"
+
+def update_fav_dininghall(cursor, email, dininghall):
+    """
+    updates user's favorite dininghall
+    :param str email: User email from /signup endpoint
+    :param str dininghall: User's favorite dininghall from /signup endpoint
+    """
+
+    query = "UPDATE user_data SET fav_dininghall = %s WHERE user_email = %s;"
+    cursor.execute(query, [dininghall, email])
+    return "Success"
+
+def update_fav_library(cursor, email, library):
+    """
+    updates user's favorite library
+    :param str email: User email from /signup endpoint
+    :param str library: User's favorite library from /signup endpoint
+    """
+
+    query = "UPDATE user_data SET fav_library = %s WHERE user_email = %s;"
+    cursor.execute(query, [library, email])
     return "Success"
