@@ -19,14 +19,16 @@ class HomeCard extends Component {
     	const percentFull = this.props.percentFull;
     	const inSearch = this.props.inSearch;
 	    return (
-	    	<View style={styles.card} style={{display: inSearch }}>
-	    		<View style={{flex: 1}}>
-	    			<Text>{name}</Text>
-		    		<Text style={{color:'#f9725e'}}>(closes at {closeTime})</Text>
-	    		</View>
-	    		<View style={{justifyContent: 'center', alignItems: 'center'}}>
-	    			<Text style={{color: '#2185C6'}}><Text style={styles.percent}>{percentFull}%</Text> full</Text>
-	    		</View>
+	    	<View style={{display: inSearch }}>
+		    	<View style={styles.card}>
+		    		<View style={{flex: 1}}>
+		    			<Text>{name}</Text>
+			    		<Text style={{color:'#f9725e'}}>(closes at {closeTime})</Text>
+		    		</View>
+		    		<View style={{justifyContent: 'center', alignItems: 'center'}}>
+		    			<Text style={{color: '#2185C6'}}><Text style={styles.percent}>{percentFull}%</Text> full</Text>
+		    		</View>
+		    	</View>
 	    	</View>
 	    );
 	}
