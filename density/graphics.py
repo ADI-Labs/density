@@ -10,18 +10,19 @@ def create_all_buildings(df):
     """
     Generates html/javascript code for graphs of all buildings
 
-    :param df: DataFrame that contains predictions of traffic
+    Parameters
+    ----------
+    df: DataFrame that contains predictions of traffic
     for each building over 24 hour period
-    :return: tuple of script and div of plot prediction for all buildings
-    :rtype: tuple of string, string
+    Returns
+    -------
+    tuple of string, string: script and div of plot prediction for all buildings
     """
 
     building_divs = {}
 
+    # predictions is df with index time_point and value prediction percentage
     for building, predictions in df.iterrows():
-        #  create plot prediction for each building and add to dictionary
-        # mins = np.asarray([time.split(':')[1] for time in predictions.index])
-        # hours = np.where(mins == "00")[0]
         
         time = pandas.to_datetime(predictions.index)
 
@@ -30,21 +31,24 @@ def create_all_buildings(df):
 
     #  create script and div from dictionary
     script, div = components(building_divs)
-    print(div)
+
     return (script, div)
 
 
 def create_prediction_plot(time, prediction):
     """
-    Create prediction plot for one building
+        Create prediction plot for one building
 
-    :param time: pandas Index object with time of today's 24 hours
-    :param prediction: pandas Series object with predictions corresponding
+    Parameters
+    ----------
+    time: pandas Index object with time of today's 24 hours
+    prediction: pandas Series object with predictions corresponding
     to today's 24 hours
-    :return: bokeh Figure that with plot prediction of one building
-    :rtype: bokeh Figure
-    """
 
+    Returns
+    -------
+    bokeh Figure: plot prediction of one building
+    """
     p = figure(x_axis_type="datetime", y_range=(0, 100), 
                tools='pan,wheel_zoom,reset', toolbar_location="right", active_drag="pan", active_scroll="wheel_zoom",
                toolbar_sticky=False, sizing_mode="stretch_both")

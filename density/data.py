@@ -5,8 +5,8 @@ FULL_CAP_DATA_MAX_HISTORY = {
     'Architectural and Fine Arts Library 3': 220,
     'Butler Library 2': 729,
     'Butler Library 3': 438,
-    'Butler Library 4': 414,
     'Butler Library 301': 292,
+    'Butler Library 4': 414,
     'Butler Library 5': 236,
     'Butler Library 6': 255,
     'Butler Library stk': 245,
@@ -50,9 +50,12 @@ COMBINATIONS.append([[0], [6,0], [5,0], [5,6,0]]) # Sunday
 def resize_full_cap_data(percentage):
     """
         Resizes dict FULL_CAP_DATA used as global variable for all buildings' max capacity
-        :param int percentage: percentage to multiply each FULL_CAP_DATA value by
-        :return: error message
-        :rtype: str
+        Parameters
+        ----------
+        int percentage: percentage to multiply each FULL_CAP_DATA value by
+        Returns
+        -------
+        str error message
     """
     if (percentage < 0 or percentage > 1):
         return "parameter must be between 0 and 1"

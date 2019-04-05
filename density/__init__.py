@@ -12,21 +12,21 @@ import psycopg2
 import psycopg2.extras
 import psycopg2.pool
 from werkzeug.contrib.cache import SimpleCache
+import pytz
 
 from . import librarytimes, locationauxdata
 from. import db
 from . import graphics
 from .config import config, ISO8601Encoder
 from .data import FULL_CAP_DATA, resize_full_cap_data, COMBINATIONS
-from .predict import categorize_data, get_query, multi_predict, predict_from_dataframe
-from .predict import db_to_pandas, predict_today
+from .predict import categorize_data, get_db_queries, predict_from_dataframes
 from apscheduler.schedulers.background import BackgroundScheduler
 
 app = Flask(__name__)
 
 CU_EMAIL_REGEX = r"^(?P<uni>[a-z\d]+)@.*(columbia|barnard)\.edu$"
 
-# multiply each building's max capcity by this
+# multiply each building's max capacity by this
 PERCENTAGE_FULL_CAP_DATA = 0.9
 
 REQUEST_DATE_FORMAT = '%Y-%m-%d'
@@ -37,12 +37,14 @@ CACHE_DEFAULT_TIMEOUT_SECONDS = 8*24*60*60
 # Cache Predictions data for this many days
 CACHE_PREDICTIONS_DATA_DAYS = 7
 
-# max week_delta for clusters in predictions algorithm
-MAX_WEEKS_PREDICTION_CLUSTERS = 2
+# max number of weeks to go back and forward to get clusters in predictions algorithm
+MAX_WEEK_DELTA_PREDICTIONS = 1
 
+# number of seconds for BackgroundScheduler to wait to call cache_prediction_data() 
+INTERVAL_CACHE_PREDICTION_DATA = 10
 
 # create a pool of postgres connections
-# ThreadedConnectionPool may be used in several threads, as occurs in cache_prediction_graphs()
+# ThreadedConnectionPool may be used in several threads, as occurs in cache_prediction_data()
 pg_pool = psycopg2.pool.ThreadedConnectionPool(
     minconn=5, maxconn=20, dsn=config["DB_URI"])
 
@@ -52,18 +54,27 @@ pg_pool = psycopg2.pool.ThreadedConnectionPool(
 server_cache = SimpleCache(default_timeout=CACHE_DEFAULT_TIMEOUT_SECONDS)
 print("Cache initialized with default_timeout: " + str(CACHE_DEFAULT_TIMEOUT_SECONDS))
 
-def cache_prediction_graphs(days=CACHE_PREDICTIONS_DATA_DAYS):
+# FULL_CAP_DATA each value changed to PERCENTAGE_FULL_CAP_DATA * value
+err_msg = resize_full_cap_data(PERCENTAGE_FULL_CAP_DATA)
+if(err_msg != "0"):
+    print("resize_full_cap_data() failed and returned: " + err_msg)
+
+# initialize BackgroundScheduler
+apsched = BackgroundScheduler()
+apsched.start()
+print("BackgroundScheduler initialized")
+
+def cache_prediction_data(days=CACHE_PREDICTIONS_DATA_DAYS):
     """
         Called by apscheduler to cache predictions' Bokeh data and raw data
-        All error checking needs to be done inside function since it is called
-        from a BackgroundScheduler
+        Runs in a separate thread
+        All error checking needs to be done inside function since it is called from a BackgroundScheduler
         :param int days: number of days to cache predictions data for
-        :return: error msg
-        :rtype: int
+        :return: int error_code: -1: error , 0: no error
     """
 
-    # so the app scheduler process still uses the same postgres pool
-    # (pg_pool) as the parent process
+    # Run the function using the flask app_context
+    # so the app scheduler process still uses the same postgres pool (pg_pool) as the parent process
     with app.app_context():
 
         """
@@ -72,7 +83,7 @@ def cache_prediction_graphs(days=CACHE_PREDICTIONS_DATA_DAYS):
         Python's datetime.weekday(): Monday = 0, Sunday = 6, 
         datetime.isocalendar()[1]: First week = 1 if it has more than 3 days 
         """
-        date = datetime.datetime.today()
+        date = datetime.datetime.now(pytz.timezone('US/Eastern'))
         week_of_year = date.isocalendar()[1]
         day_of_week = date.weekday()
 
@@ -93,18 +104,19 @@ def cache_prediction_graphs(days=CACHE_PREDICTIONS_DATA_DAYS):
             return -1
 
         print(".....................................................................")
+        print(".....................................................................")
         print("Caching prediction Bokeh graphs for the next "+str(days)+" days")
         print("day_of_week (Sunday = 0, Saturday = 6): " + str(day_of_week))
         print("week_of_year: " + str(week_of_year))
-        print("MAX_WEEKS_PREDICTION_CLUSTERS: "+ str(MAX_WEEKS_PREDICTION_CLUSTERS))
-        print("\nThis will take a while")
-        print(".....................................................................")
-
+        print("MAX_WEEK_DELTA_PREDICTIONS: "+ str(MAX_WEEK_DELTA_PREDICTIONS))
+        print("\nThis will take a while.........")
+        
         #handle pool connection
         g.pg_conn = pg_pool.getconn()
         g.cursor = g.pg_conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
         g.start_time = datetime.datetime.now() 
 
+        # int arrays date.weekday() combinations, each int is day_of_week to combine in cluster
         combinations_day_of_week = COMBINATIONS[date.weekday()]
         if not combinations_day_of_week:
             print("ERROR COMBINATIONS[date.weekday()] is empty. date.weekday(): "+ str(date.weekday()))
@@ -112,41 +124,11 @@ def cache_prediction_graphs(days=CACHE_PREDICTIONS_DATA_DAYS):
             print("combinations_day_of_week set to "+str(combinations_day_of_week))
 
         print("Trying clusters... "+str(combinations_day_of_week))
-        print("For "+str(MAX_WEEKS_PREDICTION_CLUSTERS)+" weeks back and forward")
-        print("Total clusters: "+str(MAX_WEEKS_PREDICTION_CLUSTERS*MAX_WEEKS_PREDICTION_CLUSTERS*len(combinations_day_of_week)))
+        print("For "+str(MAX_WEEK_DELTA_PREDICTIONS)+" weeks back and forward")
+        print("Total clusters: "+str(MAX_WEEK_DELTA_PREDICTIONS*MAX_WEEK_DELTA_PREDICTIONS*len(combinations_day_of_week)))
  
-        # to store all str queries returned by get_query()
-        queries = []
-
-        # to store pandas.core.frame.DataFrame returned by categorize_data()
-        dataframes = []
-
-        # Iterate through all weeks 0-MAX_WEEKS_PREDICTION_CLUSTERS, both back and forward
-        # for each weeks_back, weeks_forward
-        for i in range(MAX_WEEKS_PREDICTION_CLUSTERS):
-
-            for j in range(MAX_WEEKS_PREDICTION_CLUSTERS):
-
-                # for each cluster in COMBINATIONS[date.weekday()] get query and fetch data
-                for cluster in range(len(combinations_day_of_week)):
-
-                    # combination is int array with week_days to cluster together
-                    combination = combinations_day_of_week[cluster]
-                    if not combination:
-                        print("ERROR COMBINATIONS[date.weekday()][cluster] is empty. cluster = "+ str(cluster))
-                        combination = [day_of_week] # default 
-                        print("combination set to "+str(combination))
-
-                    # returns query  for specific cluster
-                    query = get_query(combination, week_of_year, day_of_week, i, j)
-                    if("ERROR" in query):
-                        print("get_query returned ERROR")
-                        # set to default query
-                        query = ' WHERE extract(WEEK from d.dump_time) = ' + \
-                                '{} AND extract(DOW from d.dump_time) = '.format(week_of_year) + \
-                                '{}'.format(day_of_week)
-
-                    queries.append(query)
+        # to store all queries to execute in categorize_data
+        queries = get_db_queries(day_of_week, week_of_year, MAX_WEEK_DELTA_PREDICTIONS, combinations_day_of_week)
         
         # default in case queries is empty
         if not queries:
@@ -158,6 +140,9 @@ def cache_prediction_graphs(days=CACHE_PREDICTIONS_DATA_DAYS):
         print("Number of queries prepared to fetch: "+str(len(queries)))
         print("Fetching data from queries........")
 
+        # to store pandas.core.frame.DataFrame returned by categorize_data()
+        dataframes = []
+
         for query in queries:
             data = categorize_data(g.cursor, query)
             if(type(data) == 'str'):
@@ -168,64 +153,34 @@ def cache_prediction_graphs(days=CACHE_PREDICTIONS_DATA_DAYS):
         print("Successfully fetched "+str(len(dataframes))+" queries and converted to pandas dataframes")
 
         if not dataframes:
-            print("ERROR: No pandas DataFrame returned by categorize_data()")
+            print("ERROR: No pandas DataFrame returned by categorize_data() for any query")
             print("Aborting predictions calculation... No data in cache was changed")
             return -1
 
-        data1 = dataframes[0]
-        data2 = dataframes[1]
-        data3 = dataframes[2]
-        data4 = dataframes[3]
-        data5 = dataframes[4]
-        data6 = dataframes[5]
-        data = dataframes[6]
-
-        today_pred = multi_predict(data1, data2, data3,data4,data5,data6, data)
         # make predictions using all clusters
-        today_pred = predict_from_dataframe(dataframes)
+        today_pred = predict_from_dataframes(dataframes)
+        if(type(today_pred) == "str"):
+            print("ERROR: predict_from_dataframes() returned error: ")
+            print(today_pred)
+            print("Aborting predictions calculation... No data in cache was changed")
+            return -1
 
+        # returns script and divs with all graphs for one day, to be cached
         script, divs = graphics.create_all_buildings(today_pred.transpose())
         script = script.replace('<script type="text/javascript">', "").replace('</script>', "")
+
         server_cache.set('monday_script', script, timeout=0)
         server_cache.set('monday_div', divs, timeout=0)
 
-        # date = datetime.datetime.today()
-        # date += datetime.timedelta(days=1)
-        # day_of_week = date.weekday()
-        # week_of_year = date.isocalendar()[1]
-
-        # if ( day_of_week + 1 == 7):
-        #     day_of_week = 0
-        # else:
-        #     day_of_week = day_of_week + 1
-
-        # print("day of week (0-Sunday): " + str(day_of_week))
-        # print("week of year: " + str(week_of_year))
-
-        # data = categorize_data(g.cursor, 0, date)
-        # data1 = categorize_data(g.cursor, 1, date)
-        # data2 = categorize_data(g.cursor, 2, date)
-        # data3 = categorize_data(g.cursor, 3, date)
-        # data4 = categorize_data(g.cursor, 4, date)
-        # data5 = categorize_data(g.cursor, 5, date)
-        # data6 = categorize_data(g.cursor, 6, date)
-            
-
-        # # make predictions using all clusters
-        # today_pred = multi_predict(data, data1, data2,
-        #                                  data3, data4, data5, data6)
-
-        # script, divs = graphics.create_all_buildings(today_pred.transpose())
-        # script = script.replace('<script type="text/javascript">', "").replace('</script>', "")
-        # server_cache.set('tuesday_script', script, timeout=0)
-
-        # server_cache.set('tuesday_div', divs, timeout=0)
-
     return 0
+
+# add job to cache predictions Bokeh and raw data every week
+apsched.add_job(cache_prediction_data, 'interval', seconds=INTERVAL_CACHE_PREDICTION_DATA, max_instances=1)
+print("Added job to BackgroundScheduler: cache_prediction_data() every "+str(INTERVAL_CACHE_PREDICTION_DATA)+" seconds")
 
 # When we deploy to server, we need to call 
 # home page once so it will load predictions' data onto server's cache
-# TODO: poor solution - resolve this (probably when we add regression models from feedback)
+# TODO: poor solution - resolve this by rendering 404 not found if not loaded yet
 @app.before_first_request
 def initialize():
     """
@@ -233,20 +188,15 @@ def initialize():
         Runs right before processing the first request made to Flask app
         TODO: Load predictions' raw data onto cache
     """
-     # FULL_CAP_DATA each value changed to PERCENTAGE_FULL_CAP_DATA * value
-    err_msg = resize_full_cap_data(PERCENTAGE_FULL_CAP_DATA)
-    if(err_msg != "0"):
-        print("resize_full_cap_data() failed and returned: " + err_msg)
+    
     
     # done first so we can handle those predictions' requests
-    err_msg = cache_prediction_graphs(CACHE_PREDICTIONS_DATA_DAYS)
-    if(err_msg != "0"):
-        print("cache_prediction_graphs failed and returned: " + err_msg)
+    err_msg = cache_prediction_data(CACHE_PREDICTIONS_DATA_DAYS)
+    # if(err_msg != "0"):
+    #     print("cache_prediction_data failed and returned: " + err_msg)
 
 
-    apsched = BackgroundScheduler()
-    apsched.start()
-    apsched.add_job(cache_prediction_graphs,  'interval', seconds=1, max_instances=1)
+    
 
 
 @app.before_request
