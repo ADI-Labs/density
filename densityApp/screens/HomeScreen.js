@@ -12,9 +12,49 @@ import {
   ActivityIndicator,
   View,
 } from 'react-native';
-import { WebBrowser } from 'expo';
+import { WebBrowser, Notifications } from 'expo';
 
 import { MonoText } from '../components/StyledText';
+
+
+const PUSH_ENDPOINT = 'https://density.adicu.com/users/push-token';
+//Creates a token for a given user and stores it in the db
+async function registerForPushNotificationsAsync(user_email) {
+  const { status: existingStatus } = await Expo.Permissions.getAsync(
+    Expo.Permissions.NOTIFICATIONS
+  );
+  let finalStatus = existingStatus;
+
+  // only ask if permissions have not already been determined, because
+  // iOS won't necessarily prompt the user a second time.
+  if (existingStatus !== 'granted') {
+    // Android remote notification permissions are granted during the app
+    // install, so this will only ask on iOS
+    const { status } = await Expo.Permissions.askAsync(Expo.Permissions.NOTIFICATIONS);
+    finalStatus = status;
+  }
+
+  // Stop here if the user did not grant permissions
+  if (finalStatus !== 'granted') {
+    return;
+  }
+
+  // Get the token that uniquely identifies this device
+  let token = await Expo.Notifications.getExpoPushTokenAsync();
+
+  // POST the token to your backend server from where you can retrieve it to send push notifications.
+  return fetch(PUSH_ENDPOINT, {
+    method: 'POST',
+    headers: {
+      Accept: 'application/json',
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      token: token,
+      user_email: user_email,
+    }),
+  });
+}
 
 class MyButton extends React.Component {
   setNativeProps = (nativeProps) => {
@@ -43,7 +83,8 @@ export default class HomeScreen extends React.Component {
        location:  "",
        open: "",
        searchResults: [],
-       ready: 0 // used as read-write lock
+       ready: 0, // used as read-write lock
+       notification: {}
      }
    }
 
@@ -52,6 +93,14 @@ export default class HomeScreen extends React.Component {
   };
 
   componentDidMount(){
+      registerForPushNotificationsAsync("mark@columbia.edu");
+
+    // Handle notifications that are received or selected while the app
+    // is open. If the app was closed and then opened by tapping the
+    // notification (rather than just tapping the app icon to open it),
+    // this function will fire on the next tick after the app starts
+    // with the notification data.
+      this._notificationSubscription = Notifications.addListener(this._handleNotification);
       return fetch('https://density.adicu.com/latest?auth_token=JCAhr3xirjnP0O3dEKjTiCLX_uaQCJJ2TWtyMLpjRgNVqhzQuYJEK78-HbBgGCa7')
         .then((response) => response.json())
         .then((responseJson) => {
@@ -66,6 +115,10 @@ export default class HomeScreen extends React.Component {
           console.error(error);
         });
   }
+
+  _handleNotification = (notification) => {
+    this.setState({notification: notification});
+  };
 
   mapBuildings(){
     const building_data = this.state.dataSource;
@@ -238,6 +291,10 @@ export default class HomeScreen extends React.Component {
               Last updated:{"\n"}
               Maintained by ADI Labs{"\n"}
             </Text>
+          </View>
+          <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+            <Text>Origin: {this.state.notification.origin}</Text>
+            <Text>Data: {JSON.stringify(this.state.notification.data)}</Text>
           </View>
         </ScrollView>
 
