@@ -11,10 +11,17 @@ import {
   ActivityIndicator,
   View,
   Button,
+  AsyncStorage,
 } from 'react-native';
 import { WebBrowser } from 'expo';
 import { MonoText } from '../components/StyledText';
 import * as Expo from 'expo';
+import MainTabNavigator from '../navigation/MainTabNavigator';
+import LoginStack from '../navigation/MainTabNavigator';
+import HomeStack from '../navigation/MainTabNavigator';
+import LinksStack from '../navigation/MainTabNavigator';
+import SettingsStack from '../navigation/MainTabNavigator';
+import { createStackNavigator, createBottomTabNavigator } from 'react-navigation';
 
 const PUSH_ENDPOINT = 'https://density.adicu.com/users/push-token';
 
@@ -56,6 +63,25 @@ async function registerForPushNotificationsAsync(user_email) {
   });
 }
 
+
+_storeData = async () => {
+  try {
+    await AsyncStorage.setItem('loggedIn', '0');
+    console.log("worked");
+  } catch (error) {
+  }
+}
+
+_retrieveData = async () => {
+  try {
+    const value = await AsyncStorage.getItem('loggedIn');
+    if (value !== null) {
+      return parseInt(value,10);
+    }
+  } catch (error) {
+  }
+}
+
 export default class LoginScreen extends React.Component {
 
   static navigationOptions = {
@@ -64,7 +90,7 @@ export default class LoginScreen extends React.Component {
 
     constructor(props) {
         super(props)
-        this.state = {signedIn: false, name: "", photoUrl: ""}
+        this.state = {signedIn: false, name: "", photoUrl: "",}
     }
 
     signIn = async () => {
@@ -90,13 +116,14 @@ export default class LoginScreen extends React.Component {
     }
   }
 
+
   render() {
 
     return (
 
       <View style={styles.container}>
        			<View style={{
-				height: 120,
+				height: 100,
 				backgroundColor: '#2185C6',
 				alignItems: 'center'
 			}}>
@@ -111,11 +138,8 @@ export default class LoginScreen extends React.Component {
 			   <Image source={require('../assets/images/logo2.png')} resizeMode={'center'} />
 			 </View>
 			<View style={{
-				width:'90%',
-				paddingTop: 10,
 				alignItems: 'center',
 				justifyContent: 'center'
-
 			}}>
 
         {this.state.signedIn ? (
@@ -134,21 +158,49 @@ export default class LoginScreen extends React.Component {
 
 const LoginPage = props => {
   return (
-    <View>
-      <Text style={styles.header}>Sign In With Google</Text>
-      <Button title="Sign in with Google" onPress={() => props.signIn()} />
+    <View style={{
+            paddingTop: '30%',
+            justifyContent: 'center',
+            alignItems: 'center',
+          }}>
+    <Text style={{color: '#2185C6', fontSize: 25, fontWeight: 'bold'}}>
+        Welcome to the Density App!
+    </Text>
+    <Text style={{color: '#2185C6', paddingTop: 50, fontSize: 15, fontWeight: 'bold'}}>
+       Register with your Columbia Account:
+    </Text>
+
+      <TouchableOpacity onPress={() => {props.signIn();}}>
+
+      <Image source={require('../assets/images/google_signin.png')} resizeMode={'center'} />
+    </TouchableOpacity>
     </View>
   )
 }
 
 const LoggedInPage = props => {
+   _storeData();
   return (
     <View style={styles.container}>
       <Text style={styles.header}>Welcome:{props.name}</Text>
       <Image style={styles.image} source={{ uri: props.photoUrl }} />
+      
+      <TouchableOpacity onPress={() => {_retrieveData(); createBottomTabNavigator(0 ? {
+  LoginStack,
+  HomeStack,
+  LinksStack,
+  SettingsStack,
+}:{LoginStack,})}}>
+
+      <Image source={require('../assets/images/google_signin.png')} resizeMode={'center'} />
+    </TouchableOpacity>
+
+
     </View>
   )
 }
+
+
 
 const styles = StyleSheet.create({
   container: {
