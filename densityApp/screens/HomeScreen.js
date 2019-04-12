@@ -42,7 +42,8 @@ export default class HomeScreen extends React.Component {
        search: "",
        location:  "",
        open: "",
-       searchResults: []
+       searchResults: [],
+       ready: 0 // used as read-write lock
      }
    }
 
@@ -90,46 +91,60 @@ export default class HomeScreen extends React.Component {
   }
 
   onLocationChange(locationFilter) {
-    this.setState({location: locationFilter});
-    this.updateDisplay();
+    this.setState({location: locationFilter, ready: this.state.ready + 1}, this.updateDisplay);
   }
 
   onOpenChange(openFilter) {
-    this.setState({open: openFilter});
-    this.updateDisplay();
+    this.setState({open: openFilter, ready: this.state.ready + 1}, this.updateDisplay);
   }
 
   onSearchChange(searchQuery) {
-    this.setState({search: searchQuery});
-    this.updateDisplay();
+    this.setState({search: searchQuery, ready: this.state.ready + 1}, this.updateDisplay);
   }
 
   updateDisplay() {
-    var searchQuery = this.state.search.toLowerCase();
-    var locationFilter = this.state.location;
-    var openFilter = this.state.open;
 
-    this.state.searchResults.forEach((kv) => {
+    var ready;
 
-      var name = kv[0].toLowerCase();
-      var nickname = kv[0].toLowerCase(); // Same as name for fake data
-      var locationType = kv[1]; // Always library for fake data
-      var openNow = kv[2]; // Always open for fake data
+    while (true) {
+      ready = this.state.ready;
 
-      if((!name.includes(searchQuery) && !nickname.includes(searchQuery)) ||
-          (locationFilter != '' && locationFilter != locationType) ||
-          (openFilter != '' && openFilter != openNow)) {
-        kv[3] = "none";
-      } else {
-        kv[3] = "block";
+      //console.log("Search: " + this.state.search);
+      //console.log("Location: " + this.state.location);
+      //console.log("Open: " + this.state.open);
+      //console.log("Open: " + this.state.ready);
+      var searchQuery = this.state.search;
+      var locationFilter = this.state.location;
+      var openFilter = this.state.open;
+
+      this.state.searchResults.forEach((kv) => {
+
+        var name = kv[0].toLowerCase();
+        var nickname = kv[0].toLowerCase(); // Same as name for fake data
+        var locationType = kv[1]; // Always library for fake data
+        var openNow = kv[2]; // Always open for fake data
+
+        if ((!name.includes(searchQuery) && !nickname.includes(searchQuery)) ||
+            (locationFilter != '' && locationFilter != locationType) ||
+            (openFilter != '' && openFilter != openNow)) {
+          kv[3] = "none";
+        } else {
+          kv[3] = "block";
+        }
+      });
+
+      if (ready == this.state.ready) {
+        console.log("Fully updated");
+        break;
       }
-    });
+    }
   }
 
   render() {
     const search = this.state.search;
     const locationType = this.state.location;
     const isOpen = this.state.open;
+    const isLoading = this.state.isLoading;
 
     if(this.state.isLoading){
 	 			return (
