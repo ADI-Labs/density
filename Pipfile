@@ -6,13 +6,13 @@ name = "pypi"
 [packages]
 flask = "*"
 "oauth2client" = "*"
-psycopg2 = "*"
 "httplib2" = "*"
 pandas = "*"
 bokeh = "*"
 werkzeug = "*"
 apscheduler = "*"
 psycopg2-binary = "*"
+exponent_server_sdk = "*"
 
 [dev-packages]
 "flake8" = "*"

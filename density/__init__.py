@@ -21,6 +21,9 @@ from .data import FULL_CAP_DATA, resize_full_cap_data, COMBINATIONS
 from .predict import categorize_data, get_query, multi_predict, predict_from_dataframe
 from .predict import db_to_pandas, predict_today
 from apscheduler.schedulers.background import BackgroundScheduler
+import exponent_server_sdk as push_notification
+from requests.exceptions import ConnectionError
+from requests.exceptions import HTTPError
 
 app = Flask(__name__)
 
@@ -728,35 +731,35 @@ def register_user():
     fav_dininghall = dataDict["favorite_dininghall"]
     fav_library = dataDict["favorite_library"]
 
-    register_success = False
-    update_dininghall_success = False
-    update_library_success = False
+    #register_success = False
+    #update_dininghall_success = False
+    #update_library_success = False
 
     try:
         db.insert_user_email(g.cursor, user_email)
-        register_success = True
+        #register_success = True
     except Exception as e:
         print (e)
         return 'Failed to register a new user'
 
     try:
         db.update_fav_dininghall(g.cursor, user_email, fav_dininghall)
-        update_dininghall_success = True
+        #update_dininghall_success = True
     except Exception as e:
         print (e)
         return 'Failed to set favorite dininghall'
 
     try:
         db.update_fav_library(g.cursor, user_email, fav_library)
-        update_library_success = True
+        #update_library_success = True
     except Exception as e:
         print (e)
         return 'Failed to set favorite dininghall'
 
-    if register_success and update_dininghall_success and update_library_success:
-        return 'Successfully registered user with preferences', 200
-    else:
-        return 'User registration unsuccessful', 200
+    #if register_success and update_dininghall_success and update_library_success:
+    return 'Successfully registered user with preferences', 200
+    #else:
+        #return 'User registration unsuccessful', 200
 
 #API endpoint for registering push notification token unique to each user
 @app.route('/users/push-token', methods = ['GET', 'POST'])
@@ -765,16 +768,62 @@ def register_user_token():
     dataDict = dict(data)
     token = dataDict["token"]
     user_email = dataDict["user_email"]
-    token_register_success = False
+    #token_register_success = False
 
     try:
         db.update_token(g.cursor, user_email, token)
-        token_register_success = True
+        #token_register_success = True
     except Exception as e:
         print (e)
         return 'Failed to add notification token for the user'
 
-    if token_register_success:
-        return 'Successfully registered notification token for the user', 200
-    else:
-        return 'Failed to add token', 200
+    #if token_register_success:
+    #    return 'Successfully registered notification token for the user', 200
+    #else:
+    return 'Successfully registered notification token for the user', 200
+
+#Function to send a push notification containing message to a device corresponding
+#to the token.
+def send_push_message(token, message, extra=None):
+    try:
+        response = push_notification.PushClient().publish(
+            push_notification.PushMessage(to=token,
+                        body=message,
+                        data=extra))
+    except push_notification.PushServerError as exc:
+        # Encountered some likely formatting/validation error.
+        rollbar.report_exc_info(
+            extra_data={
+                'token': token,
+                'message': message,
+                'extra': extra,
+                'errors': exc.errors,
+                'response_data': exc.response_data,
+            })
+        raise
+    except (ConnectionError, HTTPError) as exc:
+        # Encountered some Connection or HTTP error - retry a few times in
+        # case it is transient.
+        rollbar.report_exc_info(
+            extra_data={'token': token, 'message': message, 'extra': extra})
+        raise self.retry(exc=exc)
+
+    try:
+        # We got a response back, but we don't know whether it's an error yet.
+        # This call raises errors so we can handle them with normal exception
+        # flows.
+        response.validate_response()
+    except push_notification.DeviceNotRegisteredError:
+        # Mark the push token as inactive
+        from notifications.models import PushToken
+        PushToken.objects.filter(token=token).update(active=False)
+    except push_notification.PushResponseError as exc:
+        # Encountered some other per-notification error.
+        rollbar.report_exc_info(
+            extra_data={
+                'token': token,
+                'message': message,
+                'extra': extra,
+                'push_response': exc.push_response._asdict(),
+            })
+        raise self.retry(exc=exc)
