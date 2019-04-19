@@ -73,17 +73,14 @@ class MyButton extends React.Component {
 export default class HomeScreen extends React.Component {
   constructor(props){
  		 super(props);
- 		 this.onLocationChange = this.onLocationChange.bind(this);
+ 		 this.onLocationTypeChange = this.onLocationTypeChange.bind(this);
  		 this.onOpenChange = this.onOpenChange.bind(this);
  		 this.onSearchChange = this.onSearchChange.bind(this);
- 		 this.updateDisplay = this.updateDisplay.bind(this);
  		 this.state = {
        isLoading: true,
        search: "",
-       location:  "",
+       locationType:  "",
        open: "",
-       searchResults: [],
-       ready: 0, // used as read-write lock
        notification: {}
      }
    }
@@ -123,82 +120,36 @@ export default class HomeScreen extends React.Component {
   mapBuildings(){
     const building_data = this.state.dataSource;
 
-    for (let i = 0; i < building_data.length; i++) {
-      this.state.searchResults.push(
-          [building_data[i].group_name, "library", "open", "block"]
-      );
-    }
-
     const building_cards = [];
 
     for (let i = 0; i < building_data.length; i++) {
       building_cards.push(<HomeCard key={i}
-                                    name={building_data[i].group_name}
+                                    name ={building_data[i].group_name}
+                                    nickname={building_data[i].group_name}
+                                    locationType="library"
                                     closeTime={building_data[i].dump_time}
                                     percentFull={building_data[i].percent_full}
-                                    inSearch={this.state.searchResults[i][3]}></HomeCard>)
-
+                                    searchQuery={this.state.search}
+                                    locationFilter={this.state.locationType}
+                                    openFilter={this.state.open}>Home</HomeCard>);
     }
 
     return building_cards;
   }
 
-  onLocationChange(locationFilter) {
-    this.setState({location: locationFilter, ready: this.state.ready + 1}, this.updateDisplay);
+  onLocationTypeChange(locationFilter) {
+    this.setState({locationType: locationFilter});
   }
 
   onOpenChange(openFilter) {
-    this.setState({open: openFilter, ready: this.state.ready + 1}, this.updateDisplay);
+    this.setState({open: openFilter});
   }
 
   onSearchChange(searchQuery) {
-    this.setState({search: searchQuery, ready: this.state.ready + 1}, this.updateDisplay);
-  }
-
-  updateDisplay() {
-
-    var ready;
-
-    while (true) {
-      ready = this.state.ready;
-
-      //console.log("Search: " + this.state.search);
-      //console.log("Location: " + this.state.location);
-      //console.log("Open: " + this.state.open);
-      //console.log("Open: " + this.state.ready);
-      var searchQuery = this.state.search;
-      var locationFilter = this.state.location;
-      var openFilter = this.state.open;
-
-      this.state.searchResults.forEach((kv) => {
-
-        var name = kv[0].toLowerCase();
-        var nickname = kv[0].toLowerCase(); // Same as name for fake data
-        var locationType = kv[1]; // Always library for fake data
-        var openNow = kv[2]; // Always open for fake data
-
-        if ((!name.includes(searchQuery) && !nickname.includes(searchQuery)) ||
-            (locationFilter != '' && locationFilter != locationType) ||
-            (openFilter != '' && openFilter != openNow)) {
-          kv[3] = "none";
-        } else {
-          kv[3] = "block";
-        }
-      });
-
-      if (ready == this.state.ready) {
-        console.log("Fully updated");
-        break;
-      }
-    }
+    this.setState({search: searchQuery});
   }
 
   render() {
-    const search = this.state.search;
-    const locationType = this.state.location;
-    const isOpen = this.state.open;
-    const isLoading = this.state.isLoading;
-
     if(this.state.isLoading){
 	 			return (
 	 				<View style = {{flex: 1, padding: 20}}>
@@ -235,7 +186,7 @@ export default class HomeScreen extends React.Component {
     			placeholder="search by building"
     			onChangeText={this.onSearchChange}
     			placeholderTextColor='#C1C1C1'
-    			value={search}
+    			value={this.state.search}
     			platform="ios"
     			containerStyle={{backgroundColor:'#2185C6'}}
     			inputStyle={{backgroundColor: 'white'}}
@@ -256,17 +207,17 @@ export default class HomeScreen extends React.Component {
         backgroundColor: '#2185C6',
 			}}>
       <View style = {{flex: 1}}>
-      <TouchableOpacity onPress={this.onLocationChange.bind(this, "dining hall")} >
+      <TouchableOpacity onPress={this.onLocationTypeChange.bind(this, "dining hall")} >
         <MyButton label = "dining hall"/>
       </TouchableOpacity>
       </View>
       <View style = {{flex: 1}}>
-      <TouchableOpacity onPress={this.onLocationChange.bind(this, "library")} >
+      <TouchableOpacity onPress={this.onLocationTypeChange.bind(this, "library")} >
         <MyButton label = "library"/>
       </TouchableOpacity>
       </View>
       <View style = {{flex: 1}} >
-      <TouchableOpacity onPress={this.onLocationChange.bind(this, "student center")} >
+      <TouchableOpacity onPress={this.onLocationTypeChange.bind(this, "student center")} >
         <MyButton label = "student center"/>
       </TouchableOpacity>
       </View>
