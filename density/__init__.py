@@ -171,8 +171,16 @@ def cache_prediction_data(days=CACHE_PREDICTIONS_DATA_DAYS):
 
         server_cache.set('monday_script', script, timeout=0)
         server_cache.set('monday_div', divs, timeout=0)
+        server_cache.set('today_pred', today_pred, timeout=0)
 
     return 0
+
+def check_percent_diff():
+    data = annotate_fullness_percentage(db.get_latest_data(g.cursor))
+
+    pred = annotate_fullness_percentage(server_cache.get('today_pred'))
+    # TODO: need to fix the way we parse the cached prediction data, then compute the diff in percentage
+
 
 # add job to cache predictions Bokeh and raw data every week
 apsched.add_job(cache_prediction_data, 'interval', seconds=INTERVAL_CACHE_PREDICTION_DATA, max_instances=1)
