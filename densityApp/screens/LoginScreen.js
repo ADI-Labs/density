@@ -16,11 +16,6 @@ import {
 import { WebBrowser } from 'expo';
 import { MonoText } from '../components/StyledText';
 import * as Expo from 'expo';
-import MainTabNavigator from '../navigation/MainTabNavigator';
-import LoginStack from '../navigation/MainTabNavigator';
-import HomeStack from '../navigation/MainTabNavigator';
-import LinksStack from '../navigation/MainTabNavigator';
-import SettingsStack from '../navigation/MainTabNavigator';
 import { createStackNavigator, createBottomTabNavigator } from 'react-navigation';
 
 const PUSH_ENDPOINT = 'https://density.adicu.com/users/push-token';
@@ -66,21 +61,11 @@ async function registerForPushNotificationsAsync(user_email) {
 
 _storeData = async () => {
   try {
-    await AsyncStorage.setItem('loggedIn', '0');
-    console.log("worked");
+    await AsyncStorage.setItem('loggedIn', '1');
   } catch (error) {
   }
 }
 
-_retrieveData = async () => {
-  try {
-    const value = await AsyncStorage.getItem('loggedIn');
-    if (value !== null) {
-      return parseInt(value,10);
-    }
-  } catch (error) {
-  }
-}
 
 export default class LoginScreen extends React.Component {
 
@@ -90,10 +75,11 @@ export default class LoginScreen extends React.Component {
 
     constructor(props) {
         super(props)
-        this.state = {signedIn: false, name: "", photoUrl: "",}
-    }
+        this.state = {signedIn: false, name: "", photoUrl: ""}
+    };
 
-    signIn = async () => {
+
+  signIn = async () => {
     try {
       const result = await Expo.Google.logInAsync({
         iosClientId: "87562248901-1u80sukceh55jmu08dofb93u6njovh0g.apps.googleusercontent.com",
@@ -101,19 +87,21 @@ export default class LoginScreen extends React.Component {
       })
 
             if (result.type === "success") {
+
         this.setState({
           signedIn: true,
           name: result.user.name,
           photoUrl: result.user.photoUrl
         })
+        _storeData();
+        this.props.navigation.navigate('Main');
         console.log(this.state.name)
       } else {
         console.log("cancelled")
       }
-
     } catch (e) {
       console.log("error", e)
-    }
+    } 
   }
 
 
@@ -141,13 +129,7 @@ export default class LoginScreen extends React.Component {
 				alignItems: 'center',
 				justifyContent: 'center'
 			}}>
-
-        {this.state.signedIn ? (
-          <LoggedInPage name={this.state.name} photoUrl={this.state.photoUrl} />
-        ) : (
-          <LoginPage signIn={this.signIn} />
-        )}
-
+          <LoginPage signIn={this.signIn} />   
       </View>
       </View>
       </View>
@@ -169,37 +151,12 @@ const LoginPage = props => {
     <Text style={{color: '#2185C6', paddingTop: 50, fontSize: 15, fontWeight: 'bold'}}>
        Register with your Columbia Account:
     </Text>
-
       <TouchableOpacity onPress={() => {props.signIn();}}>
-
       <Image source={require('../assets/images/google_signin.png')} resizeMode={'center'} />
     </TouchableOpacity>
     </View>
   )
 }
-
-const LoggedInPage = props => {
-   _storeData();
-  return (
-    <View style={styles.container}>
-      <Text style={styles.header}>Welcome:{props.name}</Text>
-      <Image style={styles.image} source={{ uri: props.photoUrl }} />
-      
-      <TouchableOpacity onPress={() => {_retrieveData(); createBottomTabNavigator(0 ? {
-  LoginStack,
-  HomeStack,
-  LinksStack,
-  SettingsStack,
-}:{LoginStack,})}}>
-
-      <Image source={require('../assets/images/google_signin.png')} resizeMode={'center'} />
-    </TouchableOpacity>
-
-
-    </View>
-  )
-}
-
 
 
 const styles = StyleSheet.create({

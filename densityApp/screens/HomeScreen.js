@@ -2,6 +2,7 @@ import React from 'react';
 import {SearchBar} from 'react-native-elements';
 import HomeCard from '../components/HomeCard.js';
 
+
 import {
   Image,
   Platform,

@@ -78,15 +78,11 @@ SettingsStack.navigationOptions = {
 };
 
 
-_storeData();
-_retrieveData();
 
-export default createBottomTabNavigator(1 ? {
-  LoginStack,
+export default createBottomTabNavigator({
   HomeStack,
   LinksStack,
-  SettingsStack,
-}:{LoginStack,});
+  SettingsStack});
 
 
 
