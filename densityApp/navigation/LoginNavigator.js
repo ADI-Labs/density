@@ -26,7 +26,7 @@ LoginStack.navigationOptions = {
 };
 
 
-export default createStackNavigator(
+export default createBottomTabNavigator(
 {
   LoginStack
 });
