@@ -9,6 +9,7 @@ import SettingsScreen from '../screens/SettingsScreen';
 import LoginScreen from '../screens/LoginScreen';
 
 
+
 const LoginStack = createStackNavigator({
   Login: LoginScreen,
 });
@@ -56,7 +57,7 @@ LinksStack.navigationOptions = {
   tabBarLabel: 'Predictions',
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
-      focused={focused}
+      focused={focused}z  
       name={Platform.OS === 'ios' ? 'ios-stats' : 'md-stats'}
     />
   ),
@@ -76,9 +77,15 @@ SettingsStack.navigationOptions = {
   ),
 };
 
+
+
 export default createBottomTabNavigator({
-  LoginStack,
   HomeStack,
   LinksStack,
-  SettingsStack,
-});
+  SettingsStack});
+
+
+
+
+
+

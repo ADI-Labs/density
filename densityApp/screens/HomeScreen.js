@@ -2,6 +2,7 @@ import React from 'react';
 import {SearchBar} from 'react-native-elements';
 import HomeCard from '../components/HomeCard.js';
 
+
 import {
   Image,
   Platform,
@@ -167,7 +168,7 @@ export default class HomeScreen extends React.Component {
 			}}>
     		<View style={{
     				height: 80,
-    				paddingTop: 30,
+    				paddingTop: '9%',
     				justifyContent: 'center',
     				alignItems: 'center',
     				backgroundColor: '#2185C6'

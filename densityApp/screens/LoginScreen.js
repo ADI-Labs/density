@@ -11,10 +11,12 @@ import {
   ActivityIndicator,
   View,
   Button,
+  AsyncStorage,
 } from 'react-native';
 import { WebBrowser } from 'expo';
 import { MonoText } from '../components/StyledText';
 import * as Expo from 'expo';
+import { createStackNavigator, createBottomTabNavigator } from 'react-navigation';
 
 const PUSH_ENDPOINT = 'https://density.adicu.com/users/push-token';
 
@@ -56,6 +58,15 @@ async function registerForPushNotificationsAsync(user_email) {
   });
 }
 
+
+_storeData = async () => {
+  try {
+    await AsyncStorage.setItem('loggedIn', '1');
+  } catch (error) {
+  }
+}
+
+
 export default class LoginScreen extends React.Component {
 
   static navigationOptions = {
@@ -65,9 +76,10 @@ export default class LoginScreen extends React.Component {
     constructor(props) {
         super(props)
         this.state = {signedIn: false, name: "", photoUrl: ""}
-    }
+    };
 
-    signIn = async () => {
+
+  signIn = async () => {
     try {
       const result = await Expo.Google.logInAsync({
         iosClientId: "87562248901-1u80sukceh55jmu08dofb93u6njovh0g.apps.googleusercontent.com",
@@ -75,35 +87,38 @@ export default class LoginScreen extends React.Component {
       })
 
             if (result.type === "success") {
+
         this.setState({
           signedIn: true,
           name: result.user.name,
           photoUrl: result.user.photoUrl
         })
+        _storeData();
+        this.props.navigation.navigate('Main');
         console.log(this.state.name)
       } else {
         console.log("cancelled")
       }
-
     } catch (e) {
       console.log("error", e)
-    }
+    } 
   }
+
 
   render() {
 
     return (
 
       <View style={styles.container}>
-       			<View style={{
-				height: 120,
+     <View style={{
+				height: 100,
 				backgroundColor: '#2185C6',
 				alignItems: 'center'
 			}}>
 
     	<View style={{
     				height: 80,
-    				paddingTop: 30,
+    				paddingTop: '9%',
     				justifyContent: 'center',
     				alignItems: 'center',
     				backgroundColor: '#2185C6'
@@ -111,19 +126,10 @@ export default class LoginScreen extends React.Component {
 			   <Image source={require('../assets/images/logo2.png')} resizeMode={'center'} />
 			 </View>
 			<View style={{
-				width:'90%',
-				paddingTop: 10,
 				alignItems: 'center',
 				justifyContent: 'center'
-
 			}}>
-
-        {this.state.signedIn ? (
-          <LoggedInPage name={this.state.name} photoUrl={this.state.photoUrl} />
-        ) : (
-          <LoginPage signIn={this.signIn} />
-        )}
-
+          <LoginPage signIn={this.signIn} />   
       </View>
       </View>
       </View>
@@ -134,21 +140,24 @@ export default class LoginScreen extends React.Component {
 
 const LoginPage = props => {
   return (
-    <View>
-      <Text style={styles.header}>Sign In With Google</Text>
-      <Button title="Sign in with Google" onPress={() => props.signIn()} />
+    <View style={{
+            paddingTop: '30%',
+            justifyContent: 'center',
+            alignItems: 'center',
+          }}>
+    <Text style={{color: '#2185C6', fontSize: 25, fontWeight: 'bold'}}>
+        Welcome to the Density App!
+    </Text>
+    <Text style={{color: '#2185C6', paddingTop: 50, fontSize: 15, fontWeight: 'bold'}}>
+       Register with your Columbia Account:
+    </Text>
+      <TouchableOpacity onPress={() => {props.signIn();}}>
+      <Image source={require('../assets/images/google_signin.png')} resizeMode={'center'} />
+    </TouchableOpacity>
     </View>
   )
 }
 
-const LoggedInPage = props => {
-  return (
-    <View style={styles.container}>
-      <Text style={styles.header}>Welcome:{props.name}</Text>
-      <Image style={styles.image} source={{ uri: props.photoUrl }} />
-    </View>
-  )
-}
 
 const styles = StyleSheet.create({
   container: {
