@@ -118,7 +118,7 @@ export default class LoginScreen extends React.Component {
 
     	<View style={{
     				height: 80,
-    				paddingTop: 30,
+    				paddingTop: '9%',
     				justifyContent: 'center',
     				alignItems: 'center',
     				backgroundColor: '#2185C6'
