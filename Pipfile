@@ -6,6 +6,7 @@ name = "pypi"
 [packages]
 flask = "*"
 "oauth2client" = "*"
+psycopg2 = "*"
 "httplib2" = "*"
 pandas = "*"
 bokeh = "*"
