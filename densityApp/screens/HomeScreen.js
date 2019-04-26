@@ -73,9 +73,6 @@ class MyButton extends React.Component {
 export default class HomeScreen extends React.Component {
   constructor(props){
  		 super(props);
- 		 this.onLocationTypeChange = this.onLocationTypeChange.bind(this);
- 		 this.onOpenChange = this.onOpenChange.bind(this);
- 		 this.onSearchChange = this.onSearchChange.bind(this);
  		 this.state = {
        isLoading: true,
        search: "",
@@ -131,10 +128,14 @@ export default class HomeScreen extends React.Component {
                                     percentFull={building_data[i].percent_full}
                                     searchQuery={this.state.search}
                                     locationFilter={this.state.locationType}
-                                    openFilter={this.state.open}>Home</HomeCard>);
+                                    openFilter={this.state.open}></HomeCard>);
     }
 
     return building_cards;
+  }
+
+  onSearchChange(searchQuery) {
+    this.setState({search: searchQuery});
   }
 
   onLocationTypeChange(locationFilter) {
@@ -143,10 +144,6 @@ export default class HomeScreen extends React.Component {
 
   onOpenChange(openFilter) {
     this.setState({open: openFilter});
-  }
-
-  onSearchChange(searchQuery) {
-    this.setState({search: searchQuery});
   }
 
   render() {
@@ -183,8 +180,8 @@ export default class HomeScreen extends React.Component {
 			}}>
 
 			<SearchBar
-    			placeholder="search by building"
-    			onChangeText={this.onSearchChange}
+    			placeholder="search by building"ß
+    			onChangeText={this.onSearchChange.bind(this)}
     			placeholderTextColor='#C1C1C1'
     			value={this.state.search}
     			platform="ios"

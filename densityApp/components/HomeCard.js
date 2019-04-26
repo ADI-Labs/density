@@ -10,25 +10,22 @@ class HomeCard extends Component {
 
 	static propTypes = {
 		name: PropTypes.string.isRequired,
+    nickname: PropTypes.string.isRequired,
+    locationType: PropTypes.string.isRequired,
 		closeTime: PropTypes.string.isRequired,
 		percentFull: PropTypes.number.isRequired,
-
-
+    searchQuery: PropTypes.string.isRequired,
+    locationFilter: PropTypes.string.isRequired,
+    openFilter: PropTypes.string.isRequired,
 	};
 
 	componentDidUpdate(prevProps) {
-	  if(this.props.name == "Lerner 1") {
-	    console.log("searchQuery: " + this.props.searchQuery + "\n"
-          + "locationFilter: " + this.props.locationFilter + "\n"
-          + "openFilter: " + this.props.openFilter + "\n");
-    }
-
 	  if(this.props.searchQuery != prevProps.searchQuery
         || this.props.locationFilter != prevProps.locationFilter
         || this.props.openFilter != prevProps.openFilter) {
-      var searchQuery = this.props.searchQuery;
-      var locationFilter = this.props.locationFilter;
-      var openFilter = this.props.openFilter;
+      var searchQuery = this.props.searchQuery.toLowerCase();
+      var locationFilter = this.props.locationFilter.toLowerCase();
+      var openFilter = this.props.openFilter.toLowerCase();
 
       var name = this.props.name.toLowerCase();
       var nickname = this.props.name.toLowerCase(); // Same as name for fake data
