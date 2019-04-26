@@ -48,6 +48,7 @@ INTERVAL_CACHE_PREDICTION_DATA = 10
 pg_pool = psycopg2.pool.ThreadedConnectionPool(
     minconn=5, maxconn=20, dsn=config["DB_URI"])
 
+
 # Create a cache to store Bokeh prediction graphs
 # and prediction graphs raw data. Every element is
 # deleted after CACHE_DEFAULT_TIMEOUT_SECONDS
@@ -58,6 +59,7 @@ print("Cache initialized with default_timeout: " + str(CACHE_DEFAULT_TIMEOUT_SEC
 err_msg = resize_full_cap_data(PERCENTAGE_FULL_CAP_DATA)
 if(err_msg != "0"):
     print("resize_full_cap_data() failed and returned: " + err_msg)
+
 
 # initialize BackgroundScheduler
 apsched = BackgroundScheduler()
@@ -174,6 +176,7 @@ def cache_prediction_data(days=CACHE_PREDICTIONS_DATA_DAYS):
         server_cache.set('today_pred', today_pred, timeout=0)
 
     return 0
+
 
 def check_percent_diff():
     data = annotate_fullness_percentage(db.get_latest_data(g.cursor))
@@ -598,6 +601,7 @@ def predict():
     today = 0
     auxdata = locationauxdata.get_location_aux_data()
     times = librarytimes.dict_for_time()
+
     divs = []
     divs.append(server_cache.get('monday_div'))
     divs.append(server_cache.get('tuesday_div'))
@@ -611,6 +615,7 @@ def predict():
     script = []
     script.append(server_cache.get('monday_script'))
     script.append(server_cache.get('tuesday_script'))
+
 
     return render_template('predict.html', divs=divs,
                            script=script, css_script=CDN.render_js(),

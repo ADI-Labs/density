@@ -2,7 +2,9 @@ import datetime
 import psycopg2
 import numpy as np
 import pandas as pd
+
 from .data import FULL_CAP_DATA, COMBINATIONS
+
 
 SELECT = """
     SELECT d.client_count, d.dump_time,
@@ -13,6 +15,8 @@ SELECT = """
     JOIN buildings b ON b.id = r.building_id"""
 
 MAX_STD = 1000
+
+
 
 def predict_from_dataframes(clusters):
     """ 
