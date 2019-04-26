@@ -1,8 +1,10 @@
 import datetime
-
+import psycopg2
 import numpy as np
 import pandas as pd
-from .data import FULL_CAP_DATA
+
+from .data import FULL_CAP_DATA, COMBINATIONS
+
 
 SELECT = """
     SELECT d.client_count, d.dump_time,
@@ -12,164 +14,115 @@ SELECT = """
     JOIN routers r ON r.id = d.group_id
     JOIN buildings b ON b.id = r.building_id"""
 
+MAX_STD = 1000
 
-def db_to_pandas(cursor):
-    """ Return occupancy data as pandas dataframe
-    column dtypes:
-        building_name: string
-        group_id: int64
-        group_name: category
-        parent_id: category
-        client_count: int64
-        time_point: string
-    index: DateTimeIndex -- dump_time
+
+
+def predict_from_dataframes(clusters):
+    """ 
+        Calculate predictions for one day for each time_point for each building given clusters
+
     Parameters
     ----------
-    cursor: cursor for our DB
-        Connection to db
+    list clusters: list of pandas.core.frame.DataFrame, each with all client_counts for each cluster
+
     Returns
     -------
-    pandas.DataFrame
-        Density data in a Dataframe
+    pandas.core.frame.DataFrame results: dataframe with mean prediction for corresponding index time_point and column group_name
     """
-    today = datetime.datetime.today()
-    day_of_week = today.weekday()
-    week_of_year = today.isocalendar()[1]
 
-    # construct SQL query to fetch only the data we need
-    query = ' WHERE extract(WEEK from d.dump_time) = ' + \
-            '{} AND extract(DOW from d.dump_time) = '.format(week_of_year) + \
-            '{}'.format(day_of_week)
-    cursor.execute(SELECT + query)
-    raw_data = cursor.fetchall()
+    results = []
 
-    # convert fetched data to a pandas dataframe
-    df = pd.DataFrame(raw_data) \
-           .set_index("dump_time") \
-           .assign(group_name=lambda df: df["group_name"].astype('category'),
-                   parent_id=lambda df: df["parent_id"].astype('category'))
+    if not clusters:
+        return "Clusters parameter passed empty"
 
-    # add a new time point column to the datafram
-    time_points = zip(df.index.hour, df.index.minute)
-    time_points = ["{}:{}".format(x[0], x[1]) for x in time_points]
-    df["time_point"] = time_points
+    # list of strings with each unique group_name
+    group_names = list(FULL_CAP_DATA.keys())
 
-    return df
+    indeces_to_del = []
+    # Check that each cluster has the same unique group_names
+    for cluster_index in range(len(clusters)):
 
-def predict_today(past_data):
-    """Return a dataframes of predicted counts for today
-    where the indexs are timestamps of the day and columns are locations
-    Parameters
-    ----------
-    past_data: pandas.DataFrama
-        a dictionary of dataframes of density data where the keys are
-        days of the week
-    Returns
-    -------
-    pandas.DataFrame
-        Dataframe containing predicted counts for 96 today's timepoints
-    """
-    results, locs = [], []
+        # list with all unique group_names found in this cluster
+        cluster_group_names = np.unique(clusters[cluster_index]["group_name"])
 
-    for group in np.unique(past_data["group_name"]):
-        locs.append(group)
+        # iterate through all group_names in this cluster and compare to group_names in FULL_CAP_DATA
+        for group_index in range(len(cluster_group_names)):
 
-        # gets all rows for unique 'group'
-        group_data = past_data[past_data["group_name"] == group]
+            # if the group_names don't match, delete the cluster
+            if(group_names[group_index] != cluster_group_names[group_index]):
+                indeces_to_del.append(cluster_index)
+                print("Expected group name: "+str(group_names[group_index])+" but got: "+str(cluster_group_names[group_index]))
+                print("Removed cluster with index "+str(cluster_index)+" from available clusters")
 
-        # get only client count and time point for each 'group' for all 4 years
-        group_data = group_data[["client_count", "time_point"]]
+    for i in indeces_to_del:
+        del clusters[i]
 
-        # average counts by time for each location
-        group_result = group_data.groupby("time_point").mean()
+    if not clusters:
+        return "Clusters parameter is empty after removing cluster(s) due to non-expected group_name"
 
-        # convert capacity count to percentage
+    # for each unique group_name (str with building name) found in cluster_template. That is, each unique graph to be created
+    for group in group_names:
+
+        # list of tables (one per cluster)
+        # key: time_point  
+        # value: standard deviation of the set composed by all client_counts at that time_point in the cluster
+        deviations = []
+
+        # same as deviations but with the mean of each set
+        means = []
+
+        for cluster in clusters:
+
+            # Select only this building for all clusters and all times
+            group_data = cluster[cluster["group_name"] == group]
+            # Get rid of all other columns except client_count and time_point
+            group_data = group_data[["client_count", "time_point"]]
+            # key: time_point
+            # item: list of client_counts
+            group_data = group_data.groupby("time_point")
+            
+            # Dismiss cluster if it is empty
+            if(len(group_data.groups.keys()) != 0):
+                deviations.append(group_data.std())
+                means.append(group_data.mean())
+
+        if not deviations:
+            return "deviations is empty, probably because no data could be groupby(time_point)"
+
+        deviations_template = deviations[0]
+
+        group_result = deviations_template.copy(deep=True)
+
+        # for every row in deviations_template (that is, for every time_point)  (every dataframe in deviations
+        # should have the same number of time_points)
+        for time_point_index in range(len(deviations_template.index)):
+            
+            # time_point (type str) for row time_point_index in deviations_template
+            time_point = deviations_template.iloc[time_point_index].name
+
+            min_std = MAX_STD
+            cluster_with_min_std = 0
+            
+            for i in range(len(deviations)):
+
+                row = deviations[i].iloc[time_point_index]
+                # make sure row in deviation refers to same time_point as row in deviations_template
+                if(row.name == time_point):
+                    std_for_time_point = row[0]
+                    if(std_for_time_point <= min_std):
+                        min_std = std_for_time_point
+                        cluster_with_min_std = i    
+
+            group_result.iloc[time_point_index] = means[cluster_with_min_std].iloc[time_point_index]
+
+        # convert client_count to percentage
         group_result = np.divide(group_result, FULL_CAP_DATA[group])
 
         results.append(group_result.transpose())
-
+  
     result = pd.concat(results)  # combine the data for all locations
-    result.index = locs
-    result = result.transpose()  # time points indexes and locations columns
-
-    old_indexes = result.index
-    new_indexes = []
-
-    # make sure all time index has the same string format
-    for index in old_indexes:
-        splited = index.split(":")
-        leading, trailing = splited[0], splited[1]
-        if len(leading) == 1:
-            leading = "0" + leading
-        if trailing == "0":
-            trailing = "00"
-        new_index = "{}:{}".format(leading, trailing)
-        new_indexes.append(new_index)
-
-    result.index = new_indexes
-    result = result.sort_index()
-
-    return result
-
-def new_multi_predict(clusters):
-
-    
-
-    results, locs = [], []
-
-    for group in np.unique(cluster1["group_name"]):
-
-        locs.append(group)
-
-        deviations = []
-        means = []
-
-        for elem in clusters:
-
-            group_data = elem[elem["group_name"] == group]
-            group_data = group_data[["client_count", "time_point"]]
-            deviations.append(group_data.groupby("time_point").std())
-            means.append(group_data.groupby("time_point").mean())
-
-        group_result_std = deviations[0]
-
-        temp_df = group_result_std.copy(deep=True)
-
-        # for every row, use the row with the lowest std from all clusters
-        for x in range(len(group_result_std.index)):
-            tempList = [group_result_std.iloc[x][0],
-                        group_result_std1.iloc[x][0],
-                        group_result_std2.iloc[x][0],
-                        group_result_std3.iloc[x][0],
-                        group_result_std4.iloc[x][0],
-                        group_result_std5.iloc[x][0],
-                        group_result_std6.iloc[x][0]]
-
-            min_pos = tempList.index(min(tempList))
-            if min_pos == 0:
-                temp_df.iloc[x] = group_data_mean.iloc[x]
-
-            elif min_pos == 1:
-                temp_df.iloc[x] = group_data_mean1.iloc[x]
-            elif min_pos == 2:
-                temp_df.iloc[x] = group_data_mean2.iloc[x]
-            elif min_pos == 3:
-                temp_df.iloc[x] = group_data_mean3.iloc[x]
-            elif min_pos == 4:
-                temp_df.iloc[x] = group_data_mean4.iloc[x]
-            elif min_pos == 5:
-                temp_df.iloc[x] = group_data_mean5.iloc[x]
-            elif min_pos == 6:
-                temp_df.iloc[x] = group_data_mean6.iloc[x]
-
-        group_result = temp_df
-
-        # convert capacity count to percentage
-        group_result = to_percentage(group_result, group)
-        results.append(group_result.transpose())
-
-    result = pd.concat(results)  # combine the data for all locations
-    result.index = locs
+    result.index = group_names
     result = result.transpose()  # time points indexes and locations columns
 
     old_indexes = result.index
@@ -187,140 +140,7 @@ def new_multi_predict(clusters):
     result.index = new_indexes
     result = result.sort_index()
 
-    print(result)
     return result
-
-
-def multi_predict(cluster,
-                  cluster1,
-                  cluster2,
-                  cluster3,
-                  cluster4,
-                  cluster5,
-                  cluster6):
-    """Return a dataframe of predicted counts for today
-    where the indeces are timestamps of the day and columns are locations
-    Parameters
-    ----------
-    cluster: pandas.DataFrame
-        a dictionary of dataframes of density data where the keys are
-        days of the week
-    .
-    .
-    .
-    cluster n: pandas.DataFrame
-        a dictionary of dataframes of density data where the keys are
-        days of the week
-    Returns
-    -------
-    pandas.DataFrame
-        Dataframe containing predicted counts for 96 today's timepoints
-    """
-    results, locs = [], []
-
-    for group in np.unique(cluster1["group_name"]):
-        locs.append(group)
-
-        # gets all rows for unique 'group' for every cluster
-        group_data = cluster[cluster["group_name"] == group]
-        group_data1 = cluster1[cluster1["group_name"] == group]
-        group_data2 = cluster2[cluster2["group_name"] == group]
-        group_data3 = cluster3[cluster3["group_name"] == group]
-        group_data4 = cluster4[cluster4["group_name"] == group]
-        group_data5 = cluster5[cluster5["group_name"] == group]
-        group_data6 = cluster6[cluster6["group_name"] == group]
-
-        # get only client count and time point for each 'group'
-        group_data = group_data[["client_count", "time_point"]]
-        group_data1 = group_data1[["client_count", "time_point"]]
-        group_data2 = group_data2[["client_count", "time_point"]]
-        group_data3 = group_data3[["client_count", "time_point"]]
-        group_data4 = group_data4[["client_count", "time_point"]]
-        group_data5 = group_data5[["client_count", "time_point"]]
-        group_data6 = group_data6[["client_count", "time_point"]]
-        
-
-
-        # get all stds for every 15 min per location
-        group_result_std = group_data.groupby("time_point").std()
-        group_result_std1 = group_data1.groupby("time_point").std()
-        group_result_std2 = group_data2.groupby("time_point").std()
-        group_result_std3 = group_data3.groupby("time_point").std()
-        group_result_std4 = group_data4.groupby("time_point").std()
-        group_result_std5 = group_data5.groupby("time_point").std()
-        group_result_std6 = group_data6.groupby("time_point").std()
-
-        # calculate all the means but only select the rows with the smaller std
-        group_data_mean = group_data.groupby("time_point").mean()
-        group_data_mean1 = group_data1.groupby("time_point").mean()
-        group_data_mean2 = group_data2.groupby("time_point").mean()
-        group_data_mean3 = group_data3.groupby("time_point").mean()
-        group_data_mean4 = group_data4.groupby("time_point").mean()
-        group_data_mean5 = group_data5.groupby("time_point").mean()
-        group_data_mean6 = group_data6.groupby("time_point").mean()
-
-        # print(group_data.index)
-        temp_df = group_result_std.copy(deep=True)
-        #print(temp_df.index)
-        print("group_result_std")
-        print(group_result_std)
-        # for every row, use the row with the lowest std from all clusters
-        for x in range(len(group_result_std.index)):
-            tempList = [group_result_std.iloc[x][0],
-                        group_result_std1.iloc[x][0],
-                        group_result_std2.iloc[x][0],
-                        group_result_std3.iloc[x][0],
-                        group_result_std4.iloc[x][0],
-                        group_result_std5.iloc[x][0],
-                        group_result_std6.iloc[x][0]]
-
-            min_pos = tempList.index(min(tempList))
-            if min_pos == 0:
-                temp_df.iloc[x] = group_data_mean.iloc[x]
-
-            elif min_pos == 1:
-                temp_df.iloc[x] = group_data_mean1.iloc[x]
-            elif min_pos == 2:
-                temp_df.iloc[x] = group_data_mean2.iloc[x]
-            elif min_pos == 3:
-                temp_df.iloc[x] = group_data_mean3.iloc[x]
-            elif min_pos == 4:
-                temp_df.iloc[x] = group_data_mean4.iloc[x]
-            elif min_pos == 5:
-                temp_df.iloc[x] = group_data_mean5.iloc[x]
-            elif min_pos == 6:
-                temp_df.iloc[x] = group_data_mean6.iloc[x]
-
-        group_result = temp_df
-
-        # convert capacity count to percentage
-        group_result = to_percentage(group_result, group)
-        results.append(group_result.transpose())
-
-    result = pd.concat(results)  # combine the data for all locations
-    result.index = locs
-    result = result.transpose()  # time points indexes and locations columns
-
-    old_indexes = result.index
-    new_indexes = []
-
-    # make sure all time index has the same string format
-    for index in old_indexes:
-        splited = index.split(":")
-        leading, trailing = splited[0], splited[1]
-        if len(leading) == 1:
-            leading = "0" + leading
-        new_index = "{}:{}".format(leading, trailing)
-        new_indexes.append(new_index)
-
-    result.index = new_indexes
-    result = result.sort_index()
-
-    print(result)
-    return result
-
-def to_percentage(group, name):
-    return np.divide(group, FULL_CAP_DATA[name])
 
 def normalize_dump_times(raw_data):
     """ Return a list of dicts of each data point in db
@@ -347,183 +167,149 @@ def normalize_dump_times(raw_data):
 
     return raw_data
 
-def get_query(time, weeks_of_year, days_of_year):
+def get_query(combination, week_of_year, day_of_week, week_delta_back, week_delta_forward):
+    """ 
+        Get query to execute and fetch data for predictions. one query returned = one cluster
 
-    today = time
+    Parameters
+    ----------
+    int[] combination: list with days_of_week to cluster together
+    int week_of_year: int 0-53
+    int day_of_week: 0 (Sunday) - 6 (Saturday)
+    int week_delta_back: number of weeks back to include in cluster
+    int week_delta_forward: number of weeks forward to include in cluster
 
+    Returns
+    -------
+    str query: to execute cursor.execute(SELECT+query)
+    """
 
-    # PostgreSQL's days do not match Python's
-    if (today.weekday() + 1 == 7):
-        day_of_week = 0
-    else:
-        day_of_week = today.weekday() + 1
-    week_of_year = today.isocalendar()[1]
+    if not combination:
+        print("ERROR: combination is empty. Set to [day_of_week]")
+        combination = [day_of_week] # default 
 
+    # can't continue if week_of_year or day_of_week are invalid
+    if(week_of_year > 53 or week_of_year < 0):
+        return "ERROR: week_of_year parameter must be 0-53. week_of_year = "+str(week_of_year)
+    if(day_of_week > 6 or day_of_week < 0):
+        return "ERROR: day_of_week parameter must be 0-6. day_of_week = "+str(day_of_week)
+
+    if(week_delta_back < 0):
+        print("ERROR: week_delta_back must be positive. Set to 0")
+        week_delta_back = 0 # default
+
+    if(week_delta_forward < 0):
+        print("ERROR: week_delta_forward must be positive. Set to 0")
+        week_delta_forward = 0 # default
+
+    # adds the basic query
     query = ' WHERE extract(WEEK from d.dump_time) = ' + \
             '{} AND extract(DOW from d.dump_time) = '.format(week_of_year) + \
             '{}'.format(day_of_week)
 
-def new_categorize_data(cursor, time, week_delta, week_sign, day_delta, day_sign):
+    # for each week back
+    for week_delta in range(week_delta_back+1):
 
-    today = time
+        # elem is each cluster combination of days_of_weel
+        for elem in combination:
 
+            # make sure we don't add the day and week already added at the beginning of query
+            if(day_of_week != elem or ((day_of_week == elem) and (week_delta != 0))):
+                query += \
+                 ' OR (extract(WEEK from d.dump_time) = ' + \
+                 '{}'.format(week_of_year - week_delta) + \
+                 ' AND extract(DOW from d.dump_time) = {}) '.format(elem)
 
-    # PostgreSQL's days do not match Python's
-    if (today.weekday() + 1 == 7):
-        day_of_week = 0
-    else:
-        day_of_week = today.weekday() + 1
-    week_of_year = today.isocalendar()[1]
+    # for each week forward
+    for week_delta in range(week_delta_forward+1):
+        for elem in combination:
 
-    query = ' WHERE extract(WEEK from d.dump_time) = ' + \
-            '{} AND extract(DOW from d.dump_time) = '.format(week_of_year) + \
-            '{}'.format(day_of_week)
+            # only add for week_delta > 0 so we don't add the same ones again
+            if(week_delta != 0):
+                query += \
+                 ' OR (extract(WEEK from d.dump_time) = ' + \
+                 '{}'.format(week_of_year + week_delta) + \
+                 ' AND extract(DOW from d.dump_time) = {}) '.format(elem)
 
-    i = 0
-    while(i < week_delta):
-        query = query + \
-             ' OR (extract(WEEK from d.dump_time) = ' + \
-             '{}'.format(week_of_year - i) + \
-             ' AND extract(DOW from d.dump_time) = {}) '.format(day_of_week) 
+    return query
 
+def get_db_queries(day_of_week, week_of_year, max_week_delta, combinations_day_of_week):
+    '''
+        Gets the db queries to execute to get data for each cluster
+        Clusters are formed combining days_of_week for every week_delta < max_week_delta
+        One cluster per combination of days_of_week found in combinations_day_of_week
+        
+        Parameters
+        ----------
+            int day_of_week: 0 (Sunday) - 6 (Saturday)
+            int week_of_year: 0-53
+            int max_week_delta: number of weeks to go back and forward from current week to form clusters
+            int[][] combinations_day_of_week: each int array contains days_of_week to combine to form cluster
+        Returns
+        ---------
+            str[] queries: list of queries to execute
+    '''
+    queries = []
 
+    # Iterate through all weeks 0-max_week_delta, both back and forward
+    for i in range(max_week_delta):
 
+        for j in range(max_week_delta):
 
+            # for each combination in combinations_day_of_week: get query and fetch data
+            for cluster in range(len(combinations_day_of_week)):
 
+                # combination is int array with week_days to cluster together
+                combination = combinations_day_of_week[cluster]
+                if not combination:
+                    print("ERROR combinations_day_of_week[cluster] is empty. cluster = " + str(cluster))
+                    combination = [day_of_week] # default 
+                    print("combination set to: "+str(combination))
+                    
+                # returns query  for specific cluster
+                query = get_query(combination, week_of_year, day_of_week, i, j)
+                if("ERROR" in query):
+                    print("get_query returned ERROR: "+query)
+                    # set to default query
+                    query = ' WHERE extract(WEEK from d.dump_time) = ' + \
+                            '{} AND extract(DOW from d.dump_time) = '.format(week_of_year) + \
+                            '{}'.format(day_of_week)
+                    print("query set to: "+query)
 
+                queries.append(query)
 
-def categorize_data(cursor, cluster, time):
+    return queries
 
-    """ Return data as pandas dataframe
+def categorize_data(cursor, query):
 
-    index: DateTimeIndex -- dump_time
+    """ 
+        Return data as pandas dataframe
+
+        index: DateTimeIndex -- dump_time
+    
     Parameters
     ----------
     cursor: cursor for our DB
         Connection to db
+    query: str
+        query to execute w/o SELECT
+    
     Returns
     -------
     pandas.DataFrame
         Density data in a Dataframe
     """
-
-    today = time
-
-
-    # PostgreSQL's days do not match Python's
-    if (today.weekday() + 1 == 7):
-        day_of_week = 0
-    else:
-        day_of_week = today.weekday() + 1
-    week_of_year = today.isocalendar()[1]
-
-    # cluster 0 -> all datapoints for same day for 4 years
-    query = ' WHERE extract(WEEK from d.dump_time) = ' + \
-            '{} AND extract(DOW from d.dump_time) = '.format(week_of_year) + \
-            '{}'.format(day_of_week)
-
     
+    try:
+        # retrieve data from database using selected cluster
+        cursor.execute(SELECT+query)
 
-    # cluster 1 -> all data points for same day and week ahead for 4 years
-    query1 = ' WHERE (extract(WEEK from d.dump_time) = ' + \
-             '{} AND extract(DOW from d.dump_time) = '.format(week_of_year) + \
-             '{})'.format(day_of_week) + \
-             ' OR (extract(WEEK from d.dump_time) = ' + \
-             '{}'.format(week_of_year + 1) + \
-             ' AND extract(DOW from d.dump_time) = {}) '.format(day_of_week)
-
-    # cluster 2 -> all data points for same date and week before for 4 years
-    query2 = ' WHERE (extract(WEEK from d.dump_time) = ' + \
-             '{} AND extract(DOW from d.dump_time) = '.format(week_of_year) + \
-             '{})'.format(day_of_week) + \
-             ' OR (extract(WEEK from d.dump_time) = ' + \
-             '{}'.format(week_of_year - 1) + \
-             ' AND extract(DOW from d.dump_time) = {}) '.format(day_of_week)
-
-    # cluster 3 -> all data point for same date, week before, and week after
-    query3 = ' WHERE (extract(WEEK from d.dump_time) = ' + \
-             '{} AND extract(DOW from d.dump_time) = '.format(week_of_year) + \
-             '{})'.format(day_of_week) + \
-             ' OR (extract(WEEK from d.dump_time) = ' + \
-             '{}'.format(week_of_year + 1) + \
-             ' AND extract(DOW from d.dump_time) = {}) '.format(day_of_week) +\
-             ' OR (extract(WEEK from d.dump_time) = ' + \
-             '{}'.format(week_of_year - 1) + \
-             ' AND extract(DOW from d.dump_time) = {})'.format(day_of_week)
-
-    # cluster 4 -> get all data point for same date, week before,
-    # and 2 weeks before
-    query4 = ' WHERE (extract(WEEK from d.dump_time) = ' + \
-             '{} AND extract(DOW from d.dump_time) = '.format(week_of_year) + \
-             '{})'.format(day_of_week) + \
-             ' OR (extract(WEEK from d.dump_time) = ' + \
-             '{}'.format(week_of_year - 1) + \
-             ' AND extract(DOW from d.dump_time) = {}) '.format(day_of_week) +\
-             ' OR (extract(WEEK from d.dump_time) = ' + \
-             '{}'.format(week_of_year - 2) + \
-             ' AND extract(DOW from d.dump_time) = {})'.format(day_of_week)
-
-    # cluster 5 -> get all data point for same date, week after,
-    # and 2 weeks after
-    query5 = ' WHERE (extract(WEEK from d.dump_time) = ' + \
-             '{} AND extract(DOW from d.dump_time) = '.format(week_of_year) + \
-             '{})'.format(day_of_week) + \
-             ' OR (extract(WEEK from d.dump_time) = ' + \
-             '{}'.format(week_of_year + 1) + \
-             ' AND extract(DOW from d.dump_time) = {}) '.format(day_of_week) +\
-             ' OR (extract(WEEK from d.dump_time) = ' + \
-             '{}'.format(week_of_year + 2) + \
-             ' AND extract(DOW from d.dump_time) = {})'.format(day_of_week)
-
-    # cluster 6 -> get all data point for same date, week before,
-    # and 2 weeks before, week after, and two weeks after
-    query6 = ' WHERE (extract(WEEK from d.dump_time) = ' + \
-             '{} AND extract(DOW from d.dump_time) = '.format(week_of_year) + \
-             '{})'.format(day_of_week) + \
-             ' OR (extract(WEEK from d.dump_time) = ' + \
-             '{}'.format(week_of_year - 1) + \
-             ' AND extract(DOW from d.dump_time) = {}) '.format(day_of_week) +\
-             ' OR (extract(WEEK from d.dump_time) = ' + \
-             '{}'.format(week_of_year - 2) + \
-             ' AND extract(DOW from d.dump_time) = {})'.format(day_of_week) + \
-             ' OR (extract(WEEK from d.dump_time) = ' +\
-             '{}'.format(week_of_year + 1) +\
-             ' AND extract(DOW from d.dump_time) = {}) '.format(day_of_week) +\
-             ' OR (extract(WEEK from d.dump_time) = ' +\
-             '{}'.format(week_of_year + 2) +\
-             ' AND extract(DOW from d.dump_time) = {}) '.format(day_of_week)
-
-    print(SELECT + query)
-    print("new query")
-    print(query1)
-    print("new query")
-    print(query2)
-    print("new query")
-    print(query3)
-    print("new query")
-    print(query4)
-    print("new query")
-    print(query5)
-    print("new query")
-    print(query6)
-    print("new query")
-    # retrieve data from database using selected cluster
-    if cluster == 0:
-        cursor.execute(SELECT + query)
-    elif cluster == 1:
-        cursor.execute(SELECT + query1)
-    elif cluster == 2:
-        cursor.execute(SELECT + query2)
-    elif cluster == 3:
-        cursor.execute(SELECT + query3)
-    elif cluster == 4:
-        cursor.execute(SELECT + query4)
-    elif cluster == 5:
-        cursor.execute(SELECT + query5)
-    else:
-        cursor.execute(SELECT + query6)
+    except (psycopg2.ProgrammingError, psycopg2.InternalError) as e:
+        return "ERROR: cursor.execute failed. "+str(e)+" \nQuery: "+query
 
     raw_data = cursor.fetchall()
+    if not raw_data:
+        return "ERROR : cursor.fetchall() did not return any data"
     raw_data = normalize_dump_times(raw_data)
 
     # convert fetched data to a pandas dataframe
@@ -531,11 +317,15 @@ def categorize_data(cursor, cluster, time):
            .set_index("dump_time") \
            .assign(group_name=lambda df: df["group_name"].astype('category'),
                    parent_id=lambda df: df["parent_id"].astype('category'))
-    #print(df.index)
-    # add a new time point column to the datafram
+
+    # add a new time point column to the dataframe
     time_points = zip(df.index.hour, df.index.minute)
     
     time_points = ["{}:{:02d}".format(x[0], x[1]) for x in time_points]
     df["time_point"] = time_points
+
+    # To print ALL of the dataframe uncomment this 
+    # with pd.option_context('display.max_rows', None, 'display.max_columns', None):
+    #     print(df)
 
     return df

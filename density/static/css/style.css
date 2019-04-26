@@ -246,11 +246,34 @@ button.clear:hover {
     color: #2385c6;
 }
 
+button.day_of_week {
+    border: none;
+    background: none;
+    color: #a5a2a2;
+    outline: 0;
+    padding: 0;
+}
+
+button.day_of_week:hover {
+    color: #2385c6;
+}
+
 #locationBtnContainer{
     display:inline;
     padding: 0 10px;
     position: relative;
     float: left;
+}
+
+#divDaySelect{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 20%;
+    right: 15%;
+    display:inline;
+    padding: 0;
+    float: right;
+    z-index: 1000;
 }
 
 #openBtnContainer{
@@ -282,14 +305,14 @@ button.clear:hover {
     color: #2385c6;
 }
 
-select.day-picker {
-    margin-left: 24px;
+.day-picker {
+    margin-left: 15px;
     border-color: #2285c6;
-    border-radius: 4px;
+    border-radius: 6px;
     padding: 2px 8px;
     color: #2285c6;
     outline: none;
-    border-width: 2px;
+    border-width: 4px;
 }
 
 #mapContainer {

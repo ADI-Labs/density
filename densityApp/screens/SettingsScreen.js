@@ -95,15 +95,22 @@ export default class SettingsScreen extends React.Component {
   	];
     return (
     	<View style={styles.container}>
-    		<View style={{
+    		     <View style={{
+				height: 100,
+				backgroundColor: '#2185C6',
+				alignItems: 'center'
+			}}>
+
+    	<View style={{
     				height: 80,
-    				paddingVertical: 55,
+    				paddingTop: '7%',
     				justifyContent: 'center',
     				alignItems: 'center',
     				backgroundColor: '#2185C6'
     			}}>
-			   	<Image source={require('../assets/images/logo2.png')} resizeMode={'center'} />
-			</View>
+			   <Image source={require('../assets/images/logo2.png')} resizeMode={'center'} />
+			 </View>
+			 </View>
 			<ScrollView>
 	          <View style={styles.body}>
 

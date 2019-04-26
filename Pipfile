@@ -5,16 +5,14 @@ name = "pypi"
 
 [packages]
 flask = "*"
-"psycopg2" = "*"
-gunicorn = "*"
-pytz = "*"
 "oauth2client" = "*"
+psycopg2 = "*"
 "httplib2" = "*"
 pandas = "*"
 bokeh = "*"
-matplotlib = "*"
 werkzeug = "*"
 apscheduler = "*"
+psycopg2-binary = "*"
 
 [dev-packages]
 "flake8" = "*"

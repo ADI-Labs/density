@@ -5,7 +5,11 @@
   rel="stylesheet" type="text/css">
 <script src="http://cdn.pydata.org/bokeh/release/bokeh-0.11.1.min.js"></script>
 {{ css_script|safe }}
-{{ script|safe }}
+
+<script type="text/javascript" id = "graphs_id">
+{{ script[0]|safe }}
+</script>
+
 
 <div class="container">
   <div class="col-12"  style="text-align:center;">
@@ -14,6 +18,21 @@
 </div>
 
 {% include 'search.html' %}
+
+    
+<div id="divDaySelect">
+    <label for="day-select">Choose a day to graph:</label>
+
+    <select id = "day-select" onChange = "myFunction()" class="day-picker">
+        <option value="Monday">Monday</option>
+        <option value="Tuesday">Tuesday</option>
+        <option value="Wednesday">Wednesday</option>
+        <option value="Thursday">Thursday</option>
+        <option value="Friday">Friday</option>
+        <option value="Saturday">Saturday</option>
+        <option value="Sunday">Sunday</option>
+    </select>
+</div>
 
 
 <div class="listContainer" style="padding-top: 0;">
@@ -24,13 +43,36 @@
                                 data-location-type="{{ auxdata[location_name]['type'] }}"
                                 data-open-now="{{ auxdata[location_name]['open'] }}">
       <h4>{{location_name}}</h4>
-      <div class='graph'>
+      <div class='graph' id="{{location_name}}">
         {{ d|safe }}
       </div>
     </li>
     {% endfor %}
   </ul>
 </div>
+
+<script langauge="javascript">
+    
+     
+    function myFunction() {
+            console.log("heyy");
+            
+            {% for location_name, d in divs[1].items() %}
+              if('{{location_name}}'.includes("&#39")){
+                var js_location_name = '{{location_name}}'.replace('&#39', "'");
+                var inner = '{{d|safe}}';
+                document.getElementById("JJ's Place").innerHTML = inner;
+              }
+              else{
+                var inner = '{{d|safe}}';
+              // console.log("hello he said - '"' hi im ignacio '"' And so he lived")
+                document.getElementById('{{location_name}}').innerHTML = inner;
+              }
+            {% endfor %}
+            {{script[1]|safe}}
+
+          }
+        </script>
 
 {% endblock %}
 {% block scripts %}
