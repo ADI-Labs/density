@@ -190,10 +190,24 @@ def cache_prediction_data(days=CACHE_PREDICTIONS_DATA_DAYS):
 
 
 def check_percent_diff():
+    """
+    Calculates difference in percent fullness between the prediction and live data
+    of all groups and adds them to the data in the key 'percent_diff'. The original 
+    data is not modified.
+    """
     data = annotate_fullness_percentage(db.get_latest_data(g.cursor))
-
     pred = annotate_fullness_percentage(server_cache.get('today_pred'))
-    # TODO: need to fix the way we parse the cached prediction data, then compute the diff in percentage
+    data_with_diffs = []
+    for row in data:
+        copy = dict(**row)
+        this_percent = row["percent_full"]
+        predicted_percent = 0
+        for group in pred:
+            if group["group_name"] == row["group_name"]:
+                predicted_percent = group["percent_full"]
+        copy["percent_diff"] = abs(this_percent - predicted_percent)
+        data_with_diffs.append(copy)
+    return data_with_diffs
 
 
 # add job to cache predictions Bokeh and raw data every week
