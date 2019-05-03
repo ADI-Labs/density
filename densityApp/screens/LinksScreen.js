@@ -47,13 +47,13 @@ export default class APICall extends React.Component {
 	 		this.state = {
 	 			isLoading : true,
 				search: '',
-				datePicker: '3/1/2019' // Initialize the date displayed on the prediction graphs as today's date.
+				datePicker: '5/3/2019' // Initialize the date displayed on the prediction graphs as today's date.
 			}
 	 	}
 
     componentDidMount(){
         //Need to replace this with API for predictions
-  	 		return fetch('https://density.adicu.com/latest?auth_token=JCAhr3xirjnP0O3dEKjTiCLX_uaQCJJ2TWtyMLpjRgNVqhzQuYJEK78-HbBgGCa7')
+  	 		return fetch('http://160.39.175.250:80/predict_latest')
   	 			.then((response) => response.json())
   	 			.then((responseJson) => {
 
@@ -92,7 +92,7 @@ export default class APICall extends React.Component {
   			"3/2/2019": [["01:30",30], ["12:30",60], ["18:30",40]]
   		},
   	};
-
+    //data = this.state.dataSource;
   	// Helper method that parses date string of the form "mm/dd/yyyy" into array holding int values of [M, D, Y]
   	parseDate(date) {
   		var temp = date.split("/");
@@ -102,9 +102,9 @@ export default class APICall extends React.Component {
 	render() {
 		// Generate the dates for the date picker by looking at which dates are present in our data.
 		pickerItems = [];
-		for (var buildingKey in this.data) {
+		for (var buildingKey in this.state.dataSource) {
 			let index = 0;
-			for (var dateKey in this.data[buildingKey]) {
+			for (var dateKey in this.state.dataSource[buildingKey]) {
 				pickerItems.push({key: index++, label: dateKey})
 			}
 			break;
@@ -113,9 +113,9 @@ export default class APICall extends React.Component {
 		// Extract capacity data for each building for a given date and create PredictCard components to display.
 		charts = [];
 		var dateArr = this.parseDate(this.state.datePicker);
-		for (var key in this.data) {
+		for (var key in this.state.dataSource) {
 			var building = key;
-			var points = this.data[key][this.state.datePicker]; // Get the current day's data points for this given building
+			var points = this.state.dataSource[key][this.state.datePicker]; // Get the current day's data points for this given building
 			charts.push(<PredictCard building={key} year={dateArr[2]} month={dateArr[0]} date={dateArr[1]} data={points}></PredictCard>);
 		}
 
@@ -210,13 +210,13 @@ export default class APICall extends React.Component {
 	                    initValue={this.state.datePicker}
 	                    onChange={(option)=>{ this.setState({datePicker: option.label})}}
 	                    style={styles.datePickerWrap}>
-	                    
+
 	                    <TextInput
 	                        style={styles.datePicker}
 	                        editable={false}
-	                        placeholder={'Select date.'}
-	                        value={'Viewing predictions for: ' + this.state.datePicker} />
-	                        
+	                        placeholder="Select Date: "
+	                        value={"Viewing predictions for: " + this.state.datePicker} />
+
 	                </ModalSelector>
 					<View style={styles.body}>
 						{ charts }
@@ -342,6 +342,7 @@ export default class APICall extends React.Component {
 	},
 	datePicker: {
 		backgroundColor: 'white',
-		borderWidth:1, borderColor:'#ccc', padding:15, height:30
+    color: 'black',
+		borderWidth:1, borderColor:'#ccc', paddingHorizontal:15 , height:30
 	}
 	});
