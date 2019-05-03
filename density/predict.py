@@ -5,7 +5,6 @@ import pandas as pd
 
 from .data import FULL_CAP_DATA, COMBINATIONS
 
-
 SELECT = """
     SELECT d.client_count, d.dump_time,
            r.id AS group_id, r.name AS group_name,
@@ -15,6 +14,7 @@ SELECT = """
     JOIN buildings b ON b.id = r.building_id"""
 
 MAX_STD = 1000
+
 
 
 
@@ -60,6 +60,7 @@ def predict_from_dataframes(clusters):
 
     if not clusters:
         return "Clusters parameter is empty after removing cluster(s) due to non-expected group_name"
+
 
     # for each unique group_name (str with building name) found in cluster_template. That is, each unique graph to be created
     for group in group_names:
@@ -168,6 +169,7 @@ def normalize_dump_times(raw_data):
     return raw_data
 
 def get_query(combination, week_of_year, day_of_week, week_delta_back, week_delta_forward):
+
     """ 
         Get query to execute and fetch data for predictions. one query returned = one cluster
 
@@ -293,13 +295,12 @@ def categorize_data(cursor, query):
         Connection to db
     query: str
         query to execute w/o SELECT
-    
+
     Returns
     -------
     pandas.DataFrame
         Density data in a Dataframe
     """
-    
     try:
         # retrieve data from database using selected cluster
         cursor.execute(SELECT+query)

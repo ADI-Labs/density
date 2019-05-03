@@ -13,6 +13,7 @@ bokeh = "*"
 werkzeug = "*"
 apscheduler = "*"
 psycopg2-binary = "*"
+exponent_server_sdk = "*"
 
 [dev-packages]
 "flake8" = "*"

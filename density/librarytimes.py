@@ -166,6 +166,13 @@ def dict_for_time():
 
     return message
 
+def dict_for_location_type():
+    message = {}
+    for group_name in library_times.keys():
+        print(group_name)
+        if(group_name == "JJ's Place" or group_name == "John Jay Dining Hall" or group_name == "Lerner 3"):
+            message[group_name] = "dining"
+
 
 def get_opening_time(current_time, interval):
     # get closing time

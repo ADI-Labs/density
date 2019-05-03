@@ -15,18 +15,24 @@ from werkzeug.contrib.cache import SimpleCache
 import pytz
 
 from . import librarytimes, locationauxdata
-from. import db
+from . import db
 from . import graphics
 from .config import config, ISO8601Encoder
 from .data import FULL_CAP_DATA, resize_full_cap_data, COMBINATIONS
+
 from .predict import categorize_data, get_db_queries, predict_from_dataframes
+
+from .locationauxdata import LOCATION_AUX_DATA
 from apscheduler.schedulers.background import BackgroundScheduler
+import exponent_server_sdk as push_notification
+from requests.exceptions import ConnectionError
+from requests.exceptions import HTTPError
 
 app = Flask(__name__)
 
 CU_EMAIL_REGEX = r"^(?P<uni>[a-z\d]+)@.*(columbia|barnard)\.edu$"
 
-# multiply each building's max capacity by this
+# multiply each building's max capcity by this
 PERCENTAGE_FULL_CAP_DATA = 0.9
 
 REQUEST_DATE_FORMAT = '%Y-%m-%d'
@@ -86,6 +92,7 @@ def cache_prediction_data(days=CACHE_PREDICTIONS_DATA_DAYS):
         datetime.isocalendar()[1]: First week = 1 if it has more than 3 days 
         """
         date = datetime.datetime.now(pytz.timezone('US/Eastern'))
+
         week_of_year = date.isocalendar()[1]
         day_of_week = date.weekday()
 
@@ -106,6 +113,7 @@ def cache_prediction_data(days=CACHE_PREDICTIONS_DATA_DAYS):
             return -1
 
         print(".....................................................................")
+
         print(".....................................................................")
         print("Caching prediction Bokeh graphs for the next "+str(days)+" days")
         print("day_of_week (Sunday = 0, Saturday = 6): " + str(day_of_week))
@@ -119,6 +127,7 @@ def cache_prediction_data(days=CACHE_PREDICTIONS_DATA_DAYS):
         g.start_time = datetime.datetime.now() 
 
         # int arrays date.weekday() combinations, each int is day_of_week to combine in cluster
+
         combinations_day_of_week = COMBINATIONS[date.weekday()]
         if not combinations_day_of_week:
             print("ERROR COMBINATIONS[date.weekday()] is empty. date.weekday(): "+ str(date.weekday()))
@@ -126,18 +135,21 @@ def cache_prediction_data(days=CACHE_PREDICTIONS_DATA_DAYS):
             print("combinations_day_of_week set to "+str(combinations_day_of_week))
 
         print("Trying clusters... "+str(combinations_day_of_week))
+
         print("For "+str(MAX_WEEK_DELTA_PREDICTIONS)+" weeks back and forward")
         print("Total clusters: "+str(MAX_WEEK_DELTA_PREDICTIONS*MAX_WEEK_DELTA_PREDICTIONS*len(combinations_day_of_week)))
  
         # to store all queries to execute in categorize_data
         queries = get_db_queries(day_of_week, week_of_year, MAX_WEEK_DELTA_PREDICTIONS, combinations_day_of_week)
         
+
         # default in case queries is empty
         if not queries:
             query = ' WHERE extract(WEEK from d.dump_time) = ' + \
                                 '{} AND extract(DOW from d.dump_time) = '.format(week_of_year) + \
                                 '{}'.format(day_of_week)
             queries = [query]
+
         
         print("Number of queries prepared to fetch: "+str(len(queries)))
         print("Fetching data from queries........")
@@ -159,6 +171,7 @@ def cache_prediction_data(days=CACHE_PREDICTIONS_DATA_DAYS):
             print("Aborting predictions calculation... No data in cache was changed")
             return -1
 
+        #print(dataframes)
         # make predictions using all clusters
         today_pred = predict_from_dataframes(dataframes)
         if(type(today_pred) == "str"):
@@ -170,7 +183,12 @@ def cache_prediction_data(days=CACHE_PREDICTIONS_DATA_DAYS):
         # returns script and divs with all graphs for one day, to be cached
         script, divs = graphics.create_all_buildings(today_pred.transpose())
         script = script.replace('<script type="text/javascript">', "").replace('</script>', "")
-
+        # print("HELLOOOOOOOPOPOPOOOOOO")
+        # print(today_pred)
+        # print(type(today_pred))
+        # for column in today_pred:
+        #     print(today_pred[column].name)
+        #     print(type(today_pred[column]))
         server_cache.set('monday_script', script, timeout=0)
         server_cache.set('monday_div', divs, timeout=0)
         server_cache.set('today_pred', today_pred, timeout=0)
@@ -179,10 +197,24 @@ def cache_prediction_data(days=CACHE_PREDICTIONS_DATA_DAYS):
 
 
 def check_percent_diff():
+    """
+    Calculates difference in percent fullness between the prediction and live data
+    of all groups and adds them to the data in the key 'percent_diff'. The original 
+    data is not modified.
+    """
     data = annotate_fullness_percentage(db.get_latest_data(g.cursor))
-
     pred = annotate_fullness_percentage(server_cache.get('today_pred'))
-    # TODO: need to fix the way we parse the cached prediction data, then compute the diff in percentage
+    data_with_diffs = []
+    for row in data:
+        copy = dict(**row)
+        this_percent = row["percent_full"]
+        predicted_percent = 0
+        for group in pred:
+            if group["group_name"] == row["group_name"]:
+                predicted_percent = group["percent_full"]
+        copy["percent_diff"] = abs(this_percent - predicted_percent)
+        data_with_diffs.append(copy)
+    return data_with_diffs
 
 
 # add job to cache predictions Bokeh and raw data every week
@@ -192,6 +224,7 @@ print("Added job to BackgroundScheduler: cache_prediction_data() every "+str(INT
 # When we deploy to server, we need to call 
 # home page once so it will load predictions' data onto server's cache
 # TODO: poor solution - resolve this by rendering 404 not found if not loaded yet
+
 @app.before_first_request
 def initialize():
     """
@@ -199,15 +232,12 @@ def initialize():
         Runs right before processing the first request made to Flask app
         TODO: Load predictions' raw data onto cache
     """
-    
-    
     # done first so we can handle those predictions' requests
     err_msg = cache_prediction_data(CACHE_PREDICTIONS_DATA_DAYS)
     # if(err_msg != "0"):
     #     print("cache_prediction_data failed and returned: " + err_msg)
 
 
-    
 
 
 @app.before_request
@@ -284,11 +314,15 @@ def authorization_required(func):
                 response.status_code = 401  # unauthorized
                 return response
 
+       #Temporarily commented out to test API Calls in the local environment
+       #Need to uncomment before deployment.
+        """
         uni = db.get_uni_for_code(g.cursor, token)
         if not uni:
             response = jsonify(error="No authorization token provided")
             response.status_code = 401  # unauthorized
             return response
+        """
 
         # TODO: Some logging right here. We can log which user is using what.
         return func(*args, **kwargs)
@@ -412,12 +446,21 @@ def get_latest_data():
     Gets latest dump of data for all endpoints.
     :return: Latest JSON
     :rtype: flask.Response
+    Modified to output open/closing time for all the buildings
     """
     fetched_data = db.get_latest_data(g.cursor)
 
     # Add percentage_full
     fetched_data = annotate_fullness_percentage(fetched_data)
 
+    #Dictionary containing opening/closing time for all buildings
+    open_close_data = librarytimes.dict_for_time()
+    #Iterates through each building, adding open_close_time key with the
+    #appropriate value from open_close_data
+    for val in fetched_data:
+        val['open_close_time'] = open_close_data[val['group_name']]
+        val['location_type'] = LOCATION_AUX_DATA[val['group_name']]['type']
+        val['nickname'] = LOCATION_AUX_DATA[val['group_name']]['nickname']
     return jsonify(data=fetched_data)
 
 
@@ -564,7 +607,7 @@ def capacity():
     """Render and show capacity page"""
 
     cur_data = db.get_latest_data(g.cursor)
-    
+
     last_updated = cur_data[0]['dump_time'].strftime("%B %d %Y, %I:%M %p")
     locations = annotate_fullness_percentage(cur_data)
     auxdata = locationauxdata.get_location_aux_data()
@@ -608,7 +651,7 @@ def predict():
     for elem in divs:
         for location_name, d in divs[today].items():
             divs[today][location_name] = divs[today][location_name][1:]
-            
+
         today = today + 1
 
     today = 0
@@ -653,3 +696,140 @@ def upload_feedback(group_id, feedback_percentage, current_percentage):
         return 'Invalid insertion of user feedback'
 
     return 'User feedback successfully uploaded.', 200
+
+@app.route('/predict_latest', methods = ['GET', 'POST'])
+def predict_latest():
+
+    today_pred = server_cache.get('today_pred')
+    predict_data = {}
+    
+    for column in today_pred:
+        times = []
+        series = today_pred[column]
+        for index_val, series_val in series.iteritems():
+            append = [index_val, series_val]
+            times.append(append)
+        predict_data[today_pred[column].name] = {}
+        predict_data[today_pred[column].name]['3/5/2019'] = times
+
+    return jsonify(predict_data)
+    
+
+
+
+
+
+@app.route('/users/signup', methods = ['GET', 'POST'])
+def register_user():
+    #Gets user email data from the App and posts it to the database
+    #Needs to have the dump.sql file with new user_data table in it to test it locally
+    data = request.get_json()
+    dataDict = dict(data)
+    """
+    Assumes json format =
+    {
+      "email" : "xxx@columbia.edu",
+      "favorite_dininghall" : "John Jay",
+      "favorite_library" : "Butler 3"
+     }
+    """
+    user_email = dataDict["email"]
+    fav_dininghall = dataDict["favorite_dininghall"]
+    fav_library = dataDict["favorite_library"]
+
+    #register_success = False
+    #update_dininghall_success = False
+    #update_library_success = False
+
+    try:
+        db.insert_user_email(g.cursor, user_email)
+        #register_success = True
+    except Exception as e:
+        print (e)
+        return 'Failed to register a new user'
+
+    try:
+        db.update_fav_dininghall(g.cursor, user_email, fav_dininghall)
+        #update_dininghall_success = True
+    except Exception as e:
+        print (e)
+        return 'Failed to set favorite dininghall'
+
+    try:
+        db.update_fav_library(g.cursor, user_email, fav_library)
+        #update_library_success = True
+    except Exception as e:
+        print (e)
+        return 'Failed to set favorite dininghall'
+
+    #if register_success and update_dininghall_success and update_library_success:
+    return 'Successfully registered user with preferences', 200
+    #else:
+        #return 'User registration unsuccessful', 200
+
+#API endpoint for registering push notification token unique to each user
+@app.route('/users/push-token', methods = ['GET', 'POST'])
+def register_user_token():
+    data = request.get_json()
+    dataDict = dict(data)
+    token = dataDict["token"]
+    user_email = dataDict["user_email"]
+    #token_register_success = False
+
+    try:
+        db.update_token(g.cursor, user_email, token)
+        #token_register_success = True
+    except Exception as e:
+        print (e)
+        return 'Failed to add notification token for the user'
+
+    #if token_register_success:
+    #    return 'Successfully registered notification token for the user', 200
+    #else:
+    return 'Successfully registered notification token for the user', 200
+
+#Function to send a push notification containing message to a device corresponding
+#to the token.
+def send_push_message(token, message, extra=None):
+    try:
+        response = push_notification.PushClient().publish(
+            push_notification.PushMessage(to=token,
+                        body=message,
+                        data=extra))
+    except push_notification.PushServerError as exc:
+        # Encountered some likely formatting/validation error.
+        rollbar.report_exc_info(
+            extra_data={
+                'token': token,
+                'message': message,
+                'extra': extra,
+                'errors': exc.errors,
+                'response_data': exc.response_data,
+            })
+        raise
+    except (ConnectionError, HTTPError) as exc:
+        # Encountered some Connection or HTTP error - retry a few times in
+        # case it is transient.
+        rollbar.report_exc_info(
+            extra_data={'token': token, 'message': message, 'extra': extra})
+        raise self.retry(exc=exc)
+
+    try:
+        # We got a response back, but we don't know whether it's an error yet.
+        # This call raises errors so we can handle them with normal exception
+        # flows.
+        response.validate_response()
+    except push_notification.DeviceNotRegisteredError:
+        # Mark the push token as inactive
+        from notifications.models import PushToken
+        PushToken.objects.filter(token=token).update(active=False)
+    except push_notification.PushResponseError as exc:
+        # Encountered some other per-notification error.
+        rollbar.report_exc_info(
+            extra_data={
+                'token': token,
+                'message': message,
+                'extra': extra,
+                'push_response': exc.push_response._asdict(),
+            })
+        raise self.retry(exc=exc)

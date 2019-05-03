@@ -50,12 +50,14 @@ COMBINATIONS.append([[0], [6,0], [5,0], [5,6,0]]) # Sunday
 def resize_full_cap_data(percentage):
     """
         Resizes dict FULL_CAP_DATA used as global variable for all buildings' max capacity
+
         Parameters
         ----------
         int percentage: percentage to multiply each FULL_CAP_DATA value by
         Returns
         -------
         str error message
+
     """
     if (percentage < 0 or percentage > 1):
         return "parameter must be between 0 and 1"
