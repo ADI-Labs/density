@@ -61,7 +61,7 @@ async function registerForPushNotificationsAsync(user_email) {
 
 _storeData = async () => {
   try {
-    await AsyncStorage.setItem('loggedIn', '1');
+    await AsyncStorage.setItem('logedIn', '1');
   } catch (error) {
   }
 }
@@ -101,7 +101,7 @@ export default class LoginScreen extends React.Component {
       }
     } catch (e) {
       console.log("error", e)
-    } 
+    }
   }
 
 
@@ -129,7 +129,7 @@ export default class LoginScreen extends React.Component {
 				alignItems: 'center',
 				justifyContent: 'center'
 			}}>
-          <LoginPage signIn={this.signIn} />   
+          <LoginPage signIn={this.signIn} />
       </View>
       </View>
       </View>

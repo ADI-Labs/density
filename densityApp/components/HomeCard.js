@@ -48,7 +48,7 @@ class HomeCard extends Component {
 		    	<View style={styles.card}>
 		    		<View style={{flex: 1}}>
 		    			<Text>{this.props.name}</Text>
-			    		<Text style={{color:'#f9725e'}}>(closes at {this.props.closeTime})</Text>
+			    		<Text style={{color:'#f9725e'}}>{this.props.closeTime}</Text>
 		    		</View>
 		    		<View style={{justifyContent: 'center', alignItems: 'center'}}>
 		    			<Text style={{color: '#2185C6'}}><Text style={styles.percent}>{this.props.percentFull}%</Text> full</Text>
@@ -57,7 +57,7 @@ class HomeCard extends Component {
 	    	</View>
 	    );
 	}
-}	
+}
 
 const styles = StyleSheet.create({
 	card: {

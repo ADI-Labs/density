@@ -96,7 +96,7 @@ export default class HomeScreen extends React.Component {
     // this function will fire on the next tick after the app starts
     // with the notification data.
       this._notificationSubscription = Notifications.addListener(this._handleNotification);
-      return fetch('https://density.adicu.com/latest?auth_token=JCAhr3xirjnP0O3dEKjTiCLX_uaQCJJ2TWtyMLpjRgNVqhzQuYJEK78-HbBgGCa7')
+      return fetch('http://160.39.175.250:80/latest?auth_token=JCAhr3xirjnP0O3dEKjTiCLX_uaQCJJ2TWtyMLpjRgNVqhzQuYJEK78-HbBgGCa7')
         .then((response) => response.json())
         .then((responseJson) => {
           this.setState({
@@ -123,9 +123,9 @@ export default class HomeScreen extends React.Component {
     for (let i = 0; i < building_data.length; i++) {
       building_cards.push(<HomeCard key={i}
                                     name ={building_data[i].group_name}
-                                    nickname={building_data[i].group_name}
-                                    locationType="library"
-                                    closeTime={building_data[i].dump_time}
+                                    nickname={building_data[i].nickname}
+                                    locationType={building_data[i].location_type}
+                                    closeTime={building_data[i].open_close_time}
                                     percentFull={building_data[i].percent_full}
                                     searchQuery={this.state.search}
                                     locationFilter={this.state.locationType}
@@ -205,7 +205,7 @@ export default class HomeScreen extends React.Component {
         backgroundColor: '#2185C6',
 			}}>
       <View style = {{flex: 1}}>
-      <TouchableOpacity onPress={this.onLocationTypeChange.bind(this, "dining hall")} >
+      <TouchableOpacity onPress={this.onLocationTypeChange.bind(this, "dining")} >
         <MyButton label = "dining hall"/>
       </TouchableOpacity>
       </View>
@@ -215,7 +215,7 @@ export default class HomeScreen extends React.Component {
       </TouchableOpacity>
       </View>
       <View style = {{flex: 1}} >
-      <TouchableOpacity onPress={this.onLocationTypeChange.bind(this, "student center")} >
+      <TouchableOpacity onPress={this.onLocationTypeChange.bind(this, "center")} >
         <MyButton label = "student center"/>
       </TouchableOpacity>
       </View>
