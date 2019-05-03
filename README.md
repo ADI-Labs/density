@@ -112,3 +112,17 @@ To deploy new changes or features on the server, first push your changes to the 
 ├── setup.cfg           -- Setup for CI
 └── Vagrantfile
 ```
+
+## Mobile
+
+We're in the process of developing an app that uses the Density API. It displays the same information about available space as the website and also provides users the option to set personal preferences (e.g. study time) through accounts accessible through their university email. The app is written in React Native, and it can be ported to Android without needing to change too much). The essential functionality of the app is in place now, and the IOS version will be released once some final bugs are addressed.
+
+The app is divided into 3 pages: home, predictions, and settings. Home prompts the user to log in and then shows the same information as the Density homepage, and predictions shows the same information as the predictions page on the website. Settings lets users enter a preferred dining hall and library and visiting time for each.
+
+### App Structure
+
+All app-related material is found in /densityApp. Most of the custom code is in /densityApp/screen and /densityApp/components. App.js is just the entrypoint, and the rest is configuration options or boilerplate.
+
+AuthLoadingScreen.js and LoginScreen.js handle the sign-in prompt. HomeScreen.js is the normal content of the home page (once the login pop-up has been dismissed). Link.js is the predictions page, and SettingsScreen.js is the settings page.
+
+Fresh library data comes from the APIs exposed by the server, which are called in componentDidMount() in HomeScreen.js. and LinkScreen.js. They are calling different APIs. The predictions page uses a API that just returns the prediction for each building; the home page uses an earlier API that returns several pieces of information about each building, such as its start and close times.
