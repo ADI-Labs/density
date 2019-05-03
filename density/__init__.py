@@ -15,13 +15,14 @@ from werkzeug.contrib.cache import SimpleCache
 import pytz
 
 from . import librarytimes, locationauxdata
-from. import db
+from . import db
 from . import graphics
 from .config import config, ISO8601Encoder
 from .data import FULL_CAP_DATA, resize_full_cap_data, COMBINATIONS
 
 from .predict import categorize_data, get_db_queries, predict_from_dataframes
 
+from .locationauxdata import LOCATION_AUX_DATA
 from apscheduler.schedulers.background import BackgroundScheduler
 import exponent_server_sdk as push_notification
 from requests.exceptions import ConnectionError
@@ -170,6 +171,7 @@ def cache_prediction_data(days=CACHE_PREDICTIONS_DATA_DAYS):
             print("Aborting predictions calculation... No data in cache was changed")
             return -1
 
+        #print(dataframes)
         # make predictions using all clusters
         today_pred = predict_from_dataframes(dataframes)
         if(type(today_pred) == "str"):
@@ -181,7 +183,8 @@ def cache_prediction_data(days=CACHE_PREDICTIONS_DATA_DAYS):
         # returns script and divs with all graphs for one day, to be cached
         script, divs = graphics.create_all_buildings(today_pred.transpose())
         script = script.replace('<script type="text/javascript">', "").replace('</script>', "")
-
+        print("HELLOOOOOOOPOPOPOOOOOO")
+        print(today_pred)
         server_cache.set('monday_script', script, timeout=0)
         server_cache.set('monday_div', divs, timeout=0)
         server_cache.set('today_pred', today_pred, timeout=0)
@@ -448,11 +451,12 @@ def get_latest_data():
 
     #Dictionary containing opening/closing time for all buildings
     open_close_data = librarytimes.dict_for_time()
-
     #Iterates through each building, adding open_close_time key with the
     #appropriate value from open_close_data
     for val in fetched_data:
         val['open_close_time'] = open_close_data[val['group_name']]
+        val['location_type'] = LOCATION_AUX_DATA[val['group_name']]['type']
+        val['nickname'] = LOCATION_AUX_DATA[val['group_name']]['nickname']
     return jsonify(data=fetched_data)
 
 
