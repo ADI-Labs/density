@@ -183,8 +183,12 @@ def cache_prediction_data(days=CACHE_PREDICTIONS_DATA_DAYS):
         # returns script and divs with all graphs for one day, to be cached
         script, divs = graphics.create_all_buildings(today_pred.transpose())
         script = script.replace('<script type="text/javascript">', "").replace('</script>', "")
-        print("HELLOOOOOOOPOPOPOOOOOO")
-        print(today_pred)
+        # print("HELLOOOOOOOPOPOPOOOOOO")
+        # print(today_pred)
+        # print(type(today_pred))
+        # for column in today_pred:
+        #     print(today_pred[column].name)
+        #     print(type(today_pred[column]))
         server_cache.set('monday_script', script, timeout=0)
         server_cache.set('monday_div', divs, timeout=0)
         server_cache.set('today_pred', today_pred, timeout=0)
@@ -678,6 +682,28 @@ def upload_feedback(group_id, feedback_percentage, current_percentage):
         return 'Invalid insertion of user feedback'
 
     return 'User feedback successfully uploaded.', 200
+
+@app.route('/predict_latest', methods = ['GET', 'POST'])
+def predict_latest():
+
+    today_pred = server_cache.get('today_pred')
+    predict_data = {}
+    
+    for column in today_pred:
+        times = []
+        series = today_pred[column]
+        for index_val, series_val in series.iteritems():
+            append = [index_val, series_val]
+            times.append(append)
+        predict_data[today_pred[column].name] = {}
+        predict_data[today_pred[column].name]['3/5/2019'] = times
+
+    return jsonify(predict_data)
+    
+
+
+
+
 
 @app.route('/users/signup', methods = ['GET', 'POST'])
 def register_user():

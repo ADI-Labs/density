@@ -53,7 +53,7 @@ export default class APICall extends React.Component {
 
     componentDidMount(){
         //Need to replace this with API for predictions
-  	 		return fetch('https://density.adicu.com/latest?auth_token=JCAhr3xirjnP0O3dEKjTiCLX_uaQCJJ2TWtyMLpjRgNVqhzQuYJEK78-HbBgGCa7')
+  	 		return fetch('http://160.39.175.250:80/latest_predict')
   	 			.then((response) => response.json())
   	 			.then((responseJson) => {
 
@@ -210,13 +210,13 @@ export default class APICall extends React.Component {
 	                    initValue={this.state.datePicker}
 	                    onChange={(option)=>{ this.setState({datePicker: option.label})}}
 	                    style={styles.datePickerWrap}>
-	                    
+
 	                    <TextInput
 	                        style={styles.datePicker}
 	                        editable={false}
 	                        placeholder={'Select date.'}
 	                        value={'Viewing predictions for: ' + this.state.datePicker} />
-	                        
+
 	                </ModalSelector>
 					<View style={styles.body}>
 						{ charts }
