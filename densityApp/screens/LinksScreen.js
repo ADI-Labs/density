@@ -102,8 +102,6 @@ export default class APICall extends React.Component {
 	render() {
 		// Generate the dates for the date picker by looking at which dates are present in our data.
 		pickerItems = [];
-    data2 = this.state.dataSource;
-    console.log(data2)
 		for (var buildingKey in this.state.dataSource) {
 			let index = 0;
 			for (var dateKey in this.state.dataSource[buildingKey]) {
@@ -216,8 +214,8 @@ export default class APICall extends React.Component {
 	                    <TextInput
 	                        style={styles.datePicker}
 	                        editable={false}
-	                        placeholder={'Select date.'}
-	                        value={'Viewing predictions for: ' + this.state.datePicker} />
+	                        placeholder="Select Date: "
+	                        value={"Viewing predictions for: " + this.state.datePicker} />
 
 	                </ModalSelector>
 					<View style={styles.body}>
@@ -344,6 +342,7 @@ export default class APICall extends React.Component {
 	},
 	datePicker: {
 		backgroundColor: 'white',
-		borderWidth:1, borderColor:'#ccc', padding:15, height:30
+    color: 'black',
+		borderWidth:1, borderColor:'#ccc', paddingHorizontal:15 , height:30
 	}
 	});
