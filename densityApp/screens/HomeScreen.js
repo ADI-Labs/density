@@ -96,7 +96,7 @@ export default class HomeScreen extends React.Component {
     // this function will fire on the next tick after the app starts
     // with the notification data.
       this._notificationSubscription = Notifications.addListener(this._handleNotification);
-      return fetch('http://160.39.175.250:80/latest?auth_token=JCAhr3xirjnP0O3dEKjTiCLX_uaQCJJ2TWtyMLpjRgNVqhzQuYJEK78-HbBgGCa7')
+      return fetch('http://160.39.146.163:80/latest?auth_token=JCAhr3xirjnP0O3dEKjTiCLX_uaQCJJ2TWtyMLpjRgNVqhzQuYJEK78-HbBgGCa7')
         .then((response) => response.json())
         .then((responseJson) => {
           this.setState({
