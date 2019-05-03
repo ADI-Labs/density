@@ -1,6 +1,6 @@
 import React from 'react';
 import { ExpoConfigView } from '@expo/samples';
-
+import { createStackNavigator, createBottomTabNavigator } from 'react-navigation';
 import {
   Image,
   Platform,
@@ -18,14 +18,15 @@ import { MonoText } from '../components/StyledText';
 
 import ModalSelector from 'react-native-modal-selector';
 
+
+
 export default class SettingsScreen extends React.Component {
 	constructor(props) {
         super(props);
-
         this.state = {
 	       isLoading: true,
         }
-    }
+    };
 
 	static navigationOptions = {
 		header: null,
@@ -47,6 +48,19 @@ export default class SettingsScreen extends React.Component {
         });
 	} 
 
+	_signOut = async () => {
+  try {
+    await AsyncStorage.setItem('logedIn', '0');
+  } catch (error) {
+  }
+
+
+}
+nav(){
+	    this.props.navigation.navigate('Auth');
+}
+
+
 	// mapLibraries() {
 	// 	const building_data = this.state.dataSource;
 	//     const libraries = [];
@@ -55,6 +69,9 @@ export default class SettingsScreen extends React.Component {
 	//     }
 	//     return libraries;
 	// }
+
+
+
 
   render() {
   	const diningHalls = [
@@ -195,8 +212,15 @@ export default class SettingsScreen extends React.Component {
 		                </ModalSelector>
 		    		</View>
 		    	</View>
-
+	          	<TouchableOpacity style={{
+            	backgroundColor: '#e2e2e2',
+            	justifyContent: 'center',
+            	alignItems: 'center',
+          		}} onPress={() => {this._signOut(); this.nav();}}>
+      			<Image source={require('../assets/images/sign_out.png')} resizeMode={'center'} />
+    			</TouchableOpacity>
 	          </View>
+
 	          <View>
 	            <Text style={ styles.footer }>
 	              Last updated:{"\n"}
@@ -222,7 +246,7 @@ const styles = StyleSheet.create({
   },
   footer: {
     backgroundColor: '#e2e2e2',
-    paddingTop: 15,
+    paddingTop: 0,
     paddingHorizontal: 15,
     lineHeight: 20,
     textAlign: "right",

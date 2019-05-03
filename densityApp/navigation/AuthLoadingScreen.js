@@ -20,12 +20,7 @@ _retrieveData = async () => {
   this.props.navigation.navigate(0 ? 'Main' : 'Auth');
 }
 
-_storeData = async () => {
-  try {
-    await AsyncStorage.setItem('loggedIn', '0');
-  } catch (error) {
-  }
-}
+
 
   render() {
     return (
